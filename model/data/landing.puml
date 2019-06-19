@@ -1,8 +1,5 @@
 @startuml class
 class ObservedLocation {
-  Observation sur site
-  (port, criée)
-..
     +id
     +program
     +startDateTime [1]
@@ -10,9 +7,6 @@ class ObservedLocation {
 }
 
 class Landing {
-  Débarquement d'un navire,
-  sur un site (port, criée)
-  ..
   +id
   +landingDateTime
 }

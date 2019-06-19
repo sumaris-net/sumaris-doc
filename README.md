@@ -1,2 +1,3 @@
-# sumaris-doc
-sumaris-doc
+# SUMARiS Documentation
+
+- [Class diagram](model/class.md)
