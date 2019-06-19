@@ -1,0 +1,19 @@
+@startsalt
+{
+  <b>Nouvelle observation
+  ..
+  {/ General | <b>Navires observés }
+  .
+  {[<&plus>]  | [<&trash>] | [<&magnifying-glass>]}
+
+  {#
+  # | Navire    | Date/Heure        | Etat
+  1 | SZ002     | 02/15/2019 11:01  | au port
+  2 | SZ003     | 02/15/2019 15;05  | en mer
+  }
+
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
+}
+@endsalt
