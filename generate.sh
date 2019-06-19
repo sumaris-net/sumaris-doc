@@ -9,17 +9,19 @@ rm -rf $BASEDIR/dist/*
 
 find . -name '*.puml' | while read FILE; do
     echo "Converting ${FILE}..."
-    mkdir -p `dirname ${BASEDIR}/dist/${FILE}`
+    FILE_DIR=`dirname ${BASEDIR}/${FILE}`
+    TARGET_DIR=`dirname ${BASEDIR}/dist/${FILE}`
+    mkdir -p ${TARGET_DIR}
 
     # SVG conversion
     FILE_SVG=${FILE//puml/svg}
-    cat $FILE | docker run --rm -i think/plantuml > $FILE_SVG
-    mv "${FILE_SVG}" "dist/${FILE_SVG}"
 
-    # PDF conversion
-    #FILE_PDF=${FILE//puml/pdf}
-    #docker run --rm -v $PWD:/diagrams productionwentdown/ubuntu-inkscape inkscape /diagrams/$FILE_SVG --export-area-page --without-gui --export-pdf=/diagrams/$FILE_PDF &> /dev/null
-    #mv "${FILE_PDF}" "dist/${FILE_PDF}"
+    java -jar lib/plantuml.jar -tsvg ${FILE}
+    if [[ -f "${FILE_DIR}/class.svg" ]]; then
+        mv "${FILE_DIR}/class.svg" "dist/${FILE_SVG}"
+    else
+        mv "${FILE_SVG}" "dist/${FILE_SVG}"
+    fi
 done
 
 echo "Done"
