@@ -1,0 +1,4 @@
+@startuml class
+class Landing
+
+@enduml
