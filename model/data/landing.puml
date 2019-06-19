@@ -1,4 +1,34 @@
 @startuml class
-class Landing
+class ObservedLocation {
+  Observation sur site
+  (port, criée)
+..
+    +id
+    +program
+    +startDateTime [1]
+    +endDateTime [0..1]
+}
+
+class Landing {
+  Débarquement d'un navire,
+  sur un site (port, criée)
+  ..
+  +id
+  +landingDateTime
+}
+
+class LandingMeasurement {
+}
+
+ObservedLocation "1" *-right- "0..*" Landing : contains
+ObservedLocation "1" --> "1..* observers" Person
+
+Landing "*" -up-> "1" Vessel
+Landing "1" *-- "0..*" LandingMeasurement
+
+package "referential" #DDDDDD {
+    Landing "*" --> "1" Location
+    ObservedLocation "*" --> "1" Location
+}
 
 @enduml

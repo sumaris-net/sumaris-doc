@@ -1,0 +1,11 @@
+@startuml class
+class Location {
+    +int id
+    +String label
+    +String name
+}
+
+enum LocationIds{
+    HARBOUR: 6
+}
+@enduml

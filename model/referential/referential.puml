@@ -1,0 +1,13 @@
+@startuml class
+class Status {
+    +int id
+    +String label
+    +String name
+}
+
+enum StatusEnum {
+    DISABLE: 0
+    ENABLE: 1
+    TEMPORARY: 2
+}
+@enduml
