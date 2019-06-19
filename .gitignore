@@ -1,3 +1,7 @@
-.idea
-model/**/*.svg
-model/**/*.pdf
+
+.vscode/
+.idea/
+
+
+#dist/**/*.svg
+#dist/**/*.pdf
