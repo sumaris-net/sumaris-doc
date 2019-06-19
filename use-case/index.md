@@ -4,7 +4,7 @@
 
 ### Observed Landing
 
-![observed-location](../dist/use-case/collect/observed-location.svg)
+![observed-location](../dist/use-case/collect/observed-location-uc.svg)
 
 ### Fill observed location
 
@@ -17,6 +17,7 @@
     * Date/heure de début de l'observation
     * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
     * Un ou plusieurs observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Commentaire (optionnel)
 
 ![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
@@ -29,7 +30,7 @@
 
 ### Landing
 
-![landing](../dist/use-case/collect/landing.svg)
+![landing](../dist/use-case/collect/landing-uc.svg)
 
 ### Fill landing data
 
@@ -37,11 +38,12 @@
 
 2. Il saisit :
 
-    * Le programme de collecte;
-    * Le navire observé
-    * Le lieu du débarquement;
-    * La date et l'heure du débarquement.
-    * Les observateurs (au moins un obligatoire)
+    * Le programme de collecte (invisible si le débarquement est rattaché à une observation);
+    * Le navire observé:
+    * Le lieu du débarquement (invisible si le débarquement est rattaché à une observation);
+    * La date et l'heure du débarquement (invisible si le débarquement est rattaché à une observation).
+    * Les observateurs (au moins un obligatoire) (invisible si le débarquement est rattaché à une observation)
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
