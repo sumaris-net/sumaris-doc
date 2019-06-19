@@ -1,14 +1,23 @@
-# Use Case
+# Cas d'utilisation fonctionnels
 
-## Data collecting
+ - [Administration des référentiels]()
+ - [Collecte des données]()
+    * [CU Saisir une observation au débarquement]()
+    * [CU Saisir un débarquement observé]()
 
-### Observed Landing
+## Administration des référentiels
+
+(à venir)
+
+## Collecte des données
+
+### CU "Saisir une observation au débarquement"
 
 ![observed-location](../dist/use-case/collect/observed-location-uc.svg)
 
-### Fill observed location
+#### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle observation.
+1. L'observateur demande la création d'une nouvelle observation au débarquement.
 
 2. Il saisit :
 
@@ -22,27 +31,21 @@
 
 ![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
 
-
-3. Il peut ensuite ajouter des navires
+3. Il peut ensuite ajouter/supprimer des navires observés :
 
 ![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
 
 
-### Landing
+### CU "Saisir un débarquement observé"
 
 ![landing](../dist/use-case/collect/landing-uc.svg)
 
-### Fill landing data
+#### Scénario principal
 
-1. L'observateur demande la création d'un nouveau débarquement.
+1. L'observateur demande la création d'un nouveau débarquement, rattaché à une observation sur site.
 
 2. Il saisit :
-
-    * Le programme de collecte (invisible si le débarquement est rattaché à une observation);
     * Le navire observé:
-    * Le lieu du débarquement (invisible si le débarquement est rattaché à une observation);
-    * La date et l'heure du débarquement (invisible si le débarquement est rattaché à une observation).
-    * Les observateurs (au moins un obligatoire) (invisible si le débarquement est rattaché à une observation)
     * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Un commentaire (optionnel)
 
@@ -52,3 +55,19 @@
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
+#### Variantes
+
+### Variante 1.a - Débarquement sans observation parente
+
+1. L'observateur demande la création d'un nouveau débarquement, sans
+   rattachement à une observation sur site (ex: collecte opportuniste)
+
+2. Il saisit :
+
+    * Le programme de collecte;
+    * Le navire observé:
+    * Le lieu du débarquement;
+    * La date et l'heure du débarquement.
+    * Les observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
+    * Un commentaire (optionnel)
