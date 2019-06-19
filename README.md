@@ -1,3 +1,3 @@
 # SUMARiS Documentation
 
-- [Class diagram](model/class.md)
+- [Class diagram](model/index_fr.md)(FR)
