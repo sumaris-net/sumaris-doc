@@ -4,7 +4,7 @@
 
 ### Observed Landing
 
-![landing](../dist/use-case/collect/landing.svg)
+![observed-location](../dist/use-case/collect/observed-location.svg)
 
 ### Fill observed location
 
@@ -17,6 +17,14 @@
     * La date et l'heure de l'observation
     * Les observateurs (au moins un obligatoire)
     * Un commentaire (optionnel)
+
+![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
+
+
+3. Il peut ensuite ajouter des navires
+
+![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
+
 
 ### Landing
 
@@ -37,9 +45,7 @@
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
 
-3. Il peut ensuite ajouter des navires
+3. Il peut ensuite saisir la capture débarquée :
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-vessels.svg)
-
-#### Screens
+![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
