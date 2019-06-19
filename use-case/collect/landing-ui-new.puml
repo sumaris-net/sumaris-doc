@@ -2,7 +2,7 @@
 {
   <b>Nouveau débarquement
   ..
-  {/ <b>General | Capture }
+  {/ <b>General | Capture débarquée }
   .
   Programme de collecte:    | { ^SIH-OBSDEB^ }
   Navire:                   | { ^FRA0001114^ | <&plus> }
