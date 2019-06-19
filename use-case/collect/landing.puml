@@ -6,8 +6,7 @@ actor observer
 actor supervisor
 
 rectangle landing {
-  observer -- (fill data)
-  (validate) .> (fill data) : include
-  (validate) -- supervisor
+  observer -- (fill landing)
+  (add photo or file) <. (fill landing) : include
 }
 @enduml

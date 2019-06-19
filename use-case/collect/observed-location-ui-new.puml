@@ -2,10 +2,9 @@
 {
   <b>Nouvelle observation
   ..
-  {/ <b>General | Capture }
+  {/ <b>General | Navires observés }
   .
   Programme de collecte:    | { ^SIH-OBSDEB^ }
-  Navire:                   | { ^FRA0001114^ | <&plus> }
   Lieu d'observation:       | { ^MA - Mahé Island^ }
   Date/Heure début:         | { ^01/02/2019^ | ^09:55^ }
   Date/Heure fin:           | { ^01/02/2019^ | ^09:55^ }

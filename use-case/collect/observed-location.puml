@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor observer
+actor supervisor
+
+rectangle "observed location" {
+  observer -- (fill observed location)
+  (fill observed location) .-> (fill landing) : call
+  (validate) .> (fill observed location) : include
+  (validate) -- supervisor
+}
+@enduml
