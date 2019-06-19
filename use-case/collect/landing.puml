@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor observer
+actor supervisor
+
+rectangle landing {
+  observer -- (fill data)
+  (validate) .> (fill data) : include
+  (validate) -- supervisor
+}
+@enduml
