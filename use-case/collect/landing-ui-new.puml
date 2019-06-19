@@ -9,8 +9,8 @@
   Lieu de débarquement:     | { ^MA - Mahé Island^ }
   Date/Heure débarquement:  | { ^01/02/2019^ | ^09:55^ }
   Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
-  Autres caractéristiques:  | { Nombre d'homme à bord (PMFM) : | "   1  " }
-  .                         | { PMFM #2 : | ^Valeur qualitative^ }
+  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
 
   .
   Commentaires              | { "commentaires       "}
