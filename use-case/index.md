@@ -38,6 +38,9 @@
 
 ### CU "Saisir un débarquement observé"
 
+Objectif :
+
+
 ![landing](../dist/use-case/collect/landing-uc.svg)
 
 #### Scénario principal
@@ -55,6 +58,8 @@
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
+4. L'utilisateur sauvegarde ses modifications
+
 #### Variantes
 
 ### Variante 1.a - Débarquement sans observation parente
@@ -71,3 +76,5 @@
     * Les observateurs (au moins un obligatoire)
     * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Un commentaire (optionnel)
+
+\[Retour au 3]
