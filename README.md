@@ -6,6 +6,9 @@
 
 - [Functional use case](use-case/index.md) (FR)
 
+## License
+
+All document and source code are under [License GPL v3](./LICENSE).
 
 ## How You Can Help
 
