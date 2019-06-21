@@ -1,0 +1,27 @@
+@startsalt
+{+
+  <b>Saisie des mensuration | [Fermer]
+  ..
+
+  {(X) Saisie par individu | () Saisie du nombre total d'individu }
+  {
+      .
+      Espèce commerciale:       | { ^MNZ - Baudroie  ^ | [X] Valeur par défaut }
+      Débarquement/Rejet:       | { [Landing]   | [<b>Discard] | [X] Conserver la valeur }
+      Taille (cm):              | { "          10.5  "  }
+
+      . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+      .
+
+    }
+
+    {#
+      # | <b>Espèce commerciale       | <b>Taille (cm)   | .
+      3 | MNZ- Baudroie               | 15.00            | <&trash>
+      2 | MNZ- Baudroie               | 15.00           | <&trash>
+      1 | NEP - Langoustine commune   | 77.50            | <&trash>
+    }
+
+
+}
+@endsalt

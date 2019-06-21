@@ -1,28 +1,80 @@
-# Use Case
+# Cas d'utilisation fonctionnels
 
-## Data collecting
+ - [Administration des référentiels]()
+ - [Collecte des données]()
+    * [CU Saisir une observation au débarquement]()
+    * [CU Saisir un débarquement observé]()
 
-### Observed Landing
+## Administration des référentiels
 
-![landing](../dist/use-case/collect/landing.svg)
+(à venir)
 
-### Fill data on landing
+## Collecte des données
 
-1. L'observateur demande la création d'un nouveau débarquement.
+### CU "Saisir une observation au débarquement"
+
+![observed-location](../dist/use-case/collect/observed-location-uc.svg)
+
+#### Scénario principal
+
+1. L'observateur demande la création d'une nouvelle observation au débarquement.
 
 2. Il saisit :
 
-    * Le programme de collecte;
-    * Le lieu du débarquement;
-    * La date et l'heure du débarquement.
-    * Les observateurs
+    * Programme de collecte;
+    * Lieu d'observation;
+    * Date/heure de début de l'observation
+    * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
+    * Un ou plusieurs observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
+    * Commentaire (optionnel)
+
+![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
+
+3. Il peut ensuite ajouter/supprimer des navires observés :
+
+![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
+
+
+### CU "Saisir un débarquement observé"
+
+Objectif :
+
+
+![landing](../dist/use-case/collect/landing-uc.svg)
+
+#### Scénario principal
+
+1. L'observateur demande la création d'un nouveau débarquement, rattaché à une observation sur site.
+
+2. Il saisit :
+    * Le navire observé:
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
 
-3. Il peut ensuite ajouter des navires
+3. Il peut ensuite saisir la capture débarquée :
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-vessels.svg)
+![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
-#### Screens
+4. L'utilisateur sauvegarde ses modifications
 
+#### Variantes
+
+### Variante 1.a - Débarquement sans observation parente
+
+1. L'observateur demande la création d'un nouveau débarquement, sans
+   rattachement à une observation sur site (ex: collecte opportuniste)
+
+2. Il saisit :
+
+    * Le programme de collecte;
+    * Le navire observé:
+    * Le lieu du débarquement;
+    * La date et l'heure du débarquement.
+    * Les observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme;
+    * Un commentaire (optionnel)
+
+\[Retour au 3]

@@ -1,0 +1,21 @@
+@startsalt
+{
+  <b>Navire FRA0001114 / Débarquement 02/15/2019 11:01
+  ..
+  {/ General | <b>Capture débarquée }
+  .
+  ATTENTION: écran à revoir
+  .
+  {[<&plus>]  | [<&trash>]}
+
+  {#
+  # | <b>Espèce commerciale         | <b>Poids Ech. (kg)   | <b> Ech. % | <b>NB indiv
+  1 | NEP - Langoustine commune     | 15.00             | <i>33.00 |
+  2 | NEP - Langoustine commune     | 77.50             | <i>5.00 |
+  }
+
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
+}
+@endsalt

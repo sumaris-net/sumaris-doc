@@ -1,14 +1,16 @@
 @startsalt
 {
-  <b>Nouvelle observation
+  <b>Nouveau débarquement
   ..
-  {/ <b>General | Navires observés }
+  {/ <b>General | Capture débarquée }
   .
   Programme de collecte:    | { ^SIH-OBSDEB^ }
-  Lieu d'observation:       | { ^MA - Mahé Island^ }
-  Date/Heure début:         | { ^01/02/2019^ | ^09:55^ }
-  Date/Heure fin:           | { ^01/02/2019^ | ^09:55^ }
+  Navire:                   | { ^FRA0001114^ | <&plus> }
+  Lieu de débarquement:     | { ^MA - Mahé Island^ }
+  Date/Heure débarquement:  | { ^01/02/2019^ | ^09:55^ }
   Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
+  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
 
   .
   Commentaires              | { "commentaires       "}

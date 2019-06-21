@@ -1,0 +1,31 @@
+@startsalt
+{+
+  <b>Saisie des mensuration | [Fermer]
+  ..
+
+  {(X) Saisie par individu | () Saisie du nombre d'individu }
+  {
+      .
+      Espèce commerciale:       | { ^MNZ - Baudroie  ^ | [X] Valeur par défaut }
+      <i>Espèce scientifique:      | { ^Lohius budegassa^ | [X] Conserver la valeur }
+      Débarquement/Rejet:       | { ^LAN - Landing   ^ | [X] Conserver la valeur }
+      Débarquement/Rejet:       | { [LAN - Landing]   | [<b>DIS - Discard] | [X] Conserver la valeur }
+      Sex:                      | { ^F - Femelle     ^ | [X] Conserver la valeur }
+      Maturité:                 | { ^M - Mature      ^ | [X] Conserver la valeur }
+      Taille (cm):              | { "          10.5  "  }
+
+      . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+      .
+
+    }
+
+    {#
+      # | <b>Espèce commerciale       |  <b>Sex          | <b>Maturité   | <b>Taille (cm)   | .
+      3 | MNZ- Baudroie               | F - Femel...    | M- Mature      | 15.00            | <&trash>
+      2 | MNZ- Baudroie                 | F - Femel...    | M- Mature     | 15.00           | <&trash>
+      1 | NEP - Langoustine commune    | F - Femel...    | I - Indéter...| 77.50            | <&trash>
+    }
+
+
+}
+@endsalt
