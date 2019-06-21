@@ -1,0 +1,21 @@
+@startuml
+
+class Parameter {
+    + isQualitative
+      +label = code
+      +name = nom du champs
+      +unit = unité
+}
+class QualitativeValue {
+  +label
+  +name
+  }
+
+Unit "1" -- "0..*" Pmfm
+Fraction "1" -- "0..*" Pmfm
+Matrix "1" -- "0..*" Pmfm
+Method "1" -- "0..*" Pmfm
+Parameter "1" -up- "0..*" Pmfm
+Parameter "1" *-right- "0..*" QualitativeValue : contains
+
+@enduml
