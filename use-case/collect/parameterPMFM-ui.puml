@@ -1,0 +1,12 @@
+@startsalt
+{
+  { <b>Parameter.name: | ^PMFM list^ }
+.
+{#
+<b>Qualitative_label | <b>Qualitative_name
+value 1 | value 1
+value 2 | value 2
+value 3 | value 3
+}
+}
+@endsalt
