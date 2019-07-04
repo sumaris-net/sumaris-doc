@@ -11,6 +11,10 @@
 
 ![location](../dist/model/referential/location.svg)
 
+### Paramètres collectés (PSFM)
+
+![pmfm](../dist/model/referential/pmfm.svg)
+
 ## Data
 
 ### Landing
