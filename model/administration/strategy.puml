@@ -1,0 +1,39 @@
+@startuml
+
+class Program {
+ +label
+ +name
+}
+
+Program "0..*" *-down-> "1" Strategy
+
+class Strategy {
+ +label
+ +name
+}
+
+Strategy  --> "0..*" TaxonGroup
+Strategy  --> "0..*" ReferenceTaxon
+Strategy  --> "0..*" Gear
+
+
+class PmfmStrategy {
+  +minValue [0..1] : double
+  +maxValue [0..1] : double
+  +defaultValue [0..1] : double
+  +acquisitionNumber: integer
+  +rankOrder: integer
+  +isMandatory : boolean
+  +signifFiguresNumber [0..1] : integer
+}
+
+
+Strategy "1" *--> "0..*" PmfmStrategy
+PmfmStrategy "0..*" -right-> "1" Pmfm
+PmfmStrategy "0..*" -left-> "1" AcquisitionLevel
+
+PmfmStrategy  --> "0..*" TaxonGroup
+PmfmStrategy  --> "0..*" ReferenceTaxon
+PmfmStrategy  --> "0..*" Gear
+
+@enduml

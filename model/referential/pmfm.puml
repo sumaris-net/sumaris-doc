@@ -1,21 +1,33 @@
 @startuml
 
-class Parameter {
-    + isQualitative
-      +label = code
-      +name = nom du champs
-      +unit = unité
+class Pmfm {
+  +label: string
+  +minValue [0..1] : double
+  +maxValue [0..1] : double
+  +defaultValue [0..1] : double
+  +maximumNumberDecimals [0..1] : integer
+  +signifFiguresNumber [0..1] : integer
 }
+
+class Parameter {
+  +isQualitative
+  +label = code
+  +name
+}
+
 class QualitativeValue {
   +label
   +name
-  }
+}
 
-Unit "1" -- "0..*" Pmfm
-Fraction "1" -- "0..*" Pmfm
-Matrix "1" -- "0..*" Pmfm
-Method "1" -- "0..*" Pmfm
-Parameter "1" -up- "0..*" Pmfm
-Parameter "1" *-right- "0..*" QualitativeValue : contains
+Method "1" <-down- "0..*" Pmfm
+Matrix "1" <-down- "0..*" Pmfm
+Fraction "1" <-down- "0..*" Pmfm
+QualitativeValue "0..*" <-down- "0..*" Pmfm
+Unit "1" <-down- "0..*" Pmfm
+Parameter "1" <-down- "0..*" Pmfm
+
+Matrix "1" -- "1..*" Fraction
+Parameter "1" *-- "0..*" QualitativeValue : contains
 
 @enduml

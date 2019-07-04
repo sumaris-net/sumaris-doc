@@ -1,0 +1,13 @@
+@startuml
+
+class Program {
+ +label
+ +name
+}
+
+Program *-right-> "0..*" Program2Department
+Program *-right-> "0..*" Program2Person
+Program "1" *-down- "0..*" Strategy
+
+
+@enduml
