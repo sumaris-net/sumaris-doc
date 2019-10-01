@@ -22,7 +22,6 @@
 2. Il saisit :
 
     * Programme de collecte;
-    * Le navire concerné par l'observation;
     * Lieu d'observation (cf. partie "Variantes");
     * Date/heure de début de l'observation
     * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
@@ -44,13 +43,6 @@ Projet SFA:
         * Ile
         * District
         * Lieu de débarquement
-    * Autres caractéristiques/paramètres
-        * Métiers observés
-        * Nombre d'hommes à bord
-        * Principale zone de pêche
-        * Gradient de distance à la côte
-        * Vent
-        * Courant
   
 (Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
 d'entrer l'effort)
@@ -65,20 +57,38 @@ Objectif :
 
 1. L'observateur demande la création d'un nouveau débarquement, rattaché à une observation sur site.
 
-2. Il saisit :
-    * Le navire observé:
+2. Il choisit :
+    * Le navire observé (parmis la liste des navires identifiés précédemment)
+
+3. Il saisie :
     * Les autres caractéristiques/paramètres, collectés pour le programme;
     * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
 
-3. Il peut ensuite saisir la capture débarquée :
+4. Il peut ensuite saisir la capture débarquée par métier :
+    * Nombre d'engin
+    * Nombre d'hameçons
+    * Temps passé à pêcher
+    * Profondeur minimum (m)
+    * Profondeur maximum (m)
+    * La capture
+    * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
-4. L'utilisateur sauvegarde ses modifications
+5. L'utilisateur sauvegarde ses modifications
 
 #### Variantes
+
+Projet SFA:
+    * Autres caractéristiques/paramètres
+        * Métiers observés
+        * Nombre d'hommes à bord
+        * Principale zone de pêche
+        * Gradient de distance à la côte
+        * Vent
+        * Courant
 
 ### Variante 1.a - Débarquement sans observation parente
 
