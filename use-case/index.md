@@ -72,12 +72,19 @@ Objectif :
     * Temps passé à pêcher
     * Profondeur minimum (m)
     * Profondeur maximum (m)
-    * La capture
+    * La capture (cf point 5)
     * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
-5. L'utilisateur sauvegarde ses modifications
+5. Il peut ensuite ajouter/supprimer des captures :
+    * Espèce
+    * Poids (kg)
+    * Nombre d'individus
+    * Type de packaging
+
+
+6. L'utilisateur sauvegarde ses modifications
 
 #### Variantes
 
