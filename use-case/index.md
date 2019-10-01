@@ -17,12 +17,13 @@
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle observation au débarquement.
+1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
 
 2. Il saisit :
 
     * Programme de collecte;
-    * Lieu d'observation;
+    * Le navire concerné par l'observation;
+    * Lieu d'observation (cf. partie "Variantes");
     * Date/heure de début de l'observation
     * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
     * Un ou plusieurs observateurs (au moins un obligatoire)
@@ -36,10 +37,27 @@
 ![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
 
 
+#### Variantes
+
+Projet SFA:
+    * Lieu d'observation
+        * Ile
+        * District
+        * Lieu de débarquement
+    * Autres caractéristiques/paramètres
+        * Métiers observés
+        * Nombre d'hommes à bord
+        * Principale zone de pêche
+        * Gradient de distance à la côte
+        * Vent
+        * Courant
+  
+(Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
+d'entrer l'effort)
+ 
 ### CU "Saisir un débarquement observé"
 
 Objectif :
-
 
 ![landing](../dist/use-case/collect/landing-uc.svg)
 
