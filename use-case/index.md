@@ -78,16 +78,15 @@ Objectif :
     * Un commentaire (optionnel)
     * La capture (cf point 5)
 
-#### Variantes
+#### Caractéristiques/parmètres SFA
 
-Projet SFA:
-    * Autres caractéristiques/paramètres;
-        * Métiers observés;
-        * Nombre d'hommes à bord;
-        * Principale zone de pêche;
-        * Gradient de distance à la côte;
-        * Vent;
-        * Courant;
+    * Autres caractéristiques/paramètres
+        * Métiers observés
+        * Nombre d'hommes à bord
+        * Principale zone de pêche
+        * Gradient de distance à la côte
+        * Vent
+        * Courant
 
 ### Variante 1.a - Débarquement sans observation parente
 
@@ -96,13 +95,13 @@ Projet SFA:
 
 2. Il saisit :
 
-    * Le programme de collecte;
-    * Le navire observé:
-    * Le lieu du débarquement;
-    * La date et l'heure du débarquement;
-    * Les observateurs (au moins un obligatoire);
-    * Les autres caractéristiques/paramètres, collectés pour le programme;
-    * Un commentaire (optionnel);
+    * Le programme de collecte
+    * Le navire observé
+    * Le lieu du débarquement
+    * La date et l'heure du débarquement
+    * Les observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme
+    * Un commentaire (optionnel)
 
 \[Retour au 3]
 
@@ -112,24 +111,25 @@ Projet SFA:
 
 5. Il peut ensuite ajouter/supprimer des captures:
     * Pour les captures individuelles :
-        * Espèce;
-        * Poids (kg);
-        * Nombre d'individus;
-        * Type de packaging;
-        * Préservation (champs obligatoire);
+        * Espèce
+        * Poids (kg)
+        * Nombre d'individus
+        * Type de packaging
+        * Préservation (champs obligatoire)
+        
     * Pour les captures en paquets : 
-        * Différencier les paquets homogènes (une seule espèce), 
-          des paquets hétérogènes (composition d'espèces);
+        * Différencier les paquets homogènes (une seule espèce),des paquets hétérogènes (composition d'espèces)
           (1 ligne par type de composition de paquets)
-        * Echantillonner de 1 à 6 paquets par type de paquet, puis ;
-          compléter par composition de paquet (tableau de regroupement) :
+        * Echantillonner de 1 à 6 paquets par type de paquet, puis compléter par composition de paquet (tableau de regroupement) :
             * Nombre total de paquets comptés par type de composition;
             * Ajouter les espèces qui composent le paquet (1 ligne = 1 espèce);
             * Ajouter le poids des paquets échantillons (1 colonne = 1 paquet échantillon);
-            * Ajouter la proportion (%) de présence de chaque espèce (ligne) par paquet (colonne);
-              La somme des pourcentage doit être égale à 100 %;
-                Si somme des % < 100 % : message Warning !
-                Si somme des % > 100 % : message erreur !
+            * Ajouter la proportion (%) de présence de chaque espèce (ligne) par paquet (colonne)
+            
+                * La somme des % = 100 % : OK
+                * Si somme des % < 100 % : message Warning
+                * Si somme des % > 100 % : message erreur
+                
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
             
 6. L'utilisateur sauvegarde ses modifications
