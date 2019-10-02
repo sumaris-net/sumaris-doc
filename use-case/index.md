@@ -24,12 +24,12 @@
 
 2. Il saisit :
 
-    * Programme de collecte;
-    * Lieu d'observation (cf. partie "Variantes");
-    * Date/heure de début de l'observation;
-    * Date/heure de fin (optionnel/invisible - suivant la configuration du programme).
-    * Un ou plusieurs observateurs (au moins un obligatoire).
-    * Les autres caractéristiques/paramètres, collectés pour le programme;
+    * Programme de collecte
+    * Lieu d'observation (cf. partie "Variantes")
+    * Date/heure de début de l'observation
+    * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
+    * Un ou plusieurs observateurs (au moins un obligatoire)
+    * Les autres caractéristiques/paramètres, collectés pour le programme
     * Commentaire (optionnel)
 
 ![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
