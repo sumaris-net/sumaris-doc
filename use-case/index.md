@@ -42,6 +42,7 @@
 #### Variantes
 
 Projet SFA : Lieu d'observation;
+
     * Ile
     * District
     * Lieu de débarquement
@@ -60,22 +61,22 @@ Objectif :
 1. L'observateur demande la création d'un nouveau débarquement, rattaché à une observation sur site.
 
 2. Il choisit :
-    * Le navire observé (parmi la liste des navires identifiés précédemment);
+    * Le navire observé (parmi la liste des navires identifiés précédemment)
 
 3. Il saisie :
-    * Les autres caractéristiques/paramètres, collectés pour le programme;
-    * Un commentaire (optionnel);
+    * Les autres caractéristiques/paramètres, collectés pour le programme
+    * Un commentaire (optionnel)
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
 
 4. Il peut ensuite saisir la capture débarquée par métier :
-    * Nombre d'engin;
-    * Nombre d'hameçons;
-    * Temps passé à pêcher;
-    * Profondeur minimum (m);
-    * Profondeur maximum (m);
-    * Un commentaire (optionnel);
-    * La capture (cf point 5);
+    * Nombre d'engin
+    * Nombre d'hameçons
+    * Temps passé à pêcher
+    * Profondeur minimum (m)
+    * Profondeur maximum (m)
+    * Un commentaire (optionnel)
+    * La capture (cf point 5)
 
 #### Variantes
 
