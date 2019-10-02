@@ -38,7 +38,7 @@
 
 #### Variantes
 
-Projet SFA:
+Projet SFA:;
     * Lieu d'observation;
         * Ile;
         * District;
