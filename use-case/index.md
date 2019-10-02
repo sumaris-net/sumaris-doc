@@ -41,7 +41,7 @@
 
 #### Variantes
 
-Projet SFA : Lieu d'observation
+Projet SFA : Lieu d'observation;
     * Ile
     * District
     * Lieu de débarquement
