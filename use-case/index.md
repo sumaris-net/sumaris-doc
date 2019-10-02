@@ -41,11 +41,10 @@
 
 #### Variantes
 
-Projet SFA :
-    * Lieu d'observation:
-        * Ile;
-        * District;
-        * Lieu de débarquement
+Projet SFA : Lieu d'observation
+    * Ile
+    * District
+    * Lieu de débarquement
   
 (Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
 d'entrer l'effort)
