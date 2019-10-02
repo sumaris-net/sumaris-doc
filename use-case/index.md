@@ -4,7 +4,10 @@
  - [Collecte des données]()
     * [CU Saisir une observation au débarquement]()
     * [CU Saisir un débarquement observé]()
-
+    * [CU Saisir des captures débarquées]()
+    * [CU Saisir des ventes]()
+    * [CU Saisir des dépenses]()
+    
 ## Administration des référentiels
 
 (à venir)
@@ -105,7 +108,7 @@ Projet SFA:
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
-### CU "Saisir les captures débarquées"
+### CU "Saisir des captures débarquées"
 
 5. Il peut ensuite ajouter/supprimer des captures:
     * Pour les captures individuelles :
@@ -131,9 +134,9 @@ Projet SFA:
             
 6. L'utilisateur sauvegarde ses modifications
 
-### CU "Saisir les ventes"
+### CU "Saisir des ventes"
 
 
-### CU "Saisir les dépenses"
+### CU "Saisir des dépenses"
 
 
