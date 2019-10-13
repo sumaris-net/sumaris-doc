@@ -162,8 +162,8 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
 ### CU "Saisir des dépenses"
 
 9. Il saisie :
-    
-       * Estimation des dépenses totale pour la marée
+
+       * Estimation des dépenses totales pour la marée
        * Le coût total des dépenses de la marée est calculé automatiquement en fonction des informations de dépenses détaillées :
         * Dépenses en fluides de fonctionnement :
           Pour chaque fluide : Carburant (le type de carburant est à préciser), huile de moteur, huile hydraulique, préciser :
