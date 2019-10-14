@@ -17,8 +17,9 @@
 ### CU "Saisir une observation au débarquement"
 
 ![observed-location](../dist/use-case/collect/observed-location-uc.svg)
-### Scénario principal
-#
+
+#### Scénario principal
+
 
 1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
 
@@ -68,16 +69,6 @@ Objectif :
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
 
-#### Caractéristiques/parmètres de collecte pour SFA ObsDeb
-
-    * Autres caractéristiques/paramètres
-        * Métiers observés
-        * Nombre d'hommes à bord
-        * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
-        * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
-        * Force du vent
-        * Force du courant
-
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
     * Paramètre propre à l'engin : Nombre d'hameçons ou longueur de filet ou nombre de casiers
@@ -87,12 +78,15 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
+#### Variantes
+
+##### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
 
 1. L'observateur demande la création d'une nouvelle marée, sans
    rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
    --> Si c'est fait, ce sera dans un programme différent avec une liste de parapètre différente (sûrement simplifiée)
    --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
+
 2. Il saisit :
 
     * Le programme de collecte
@@ -109,9 +103,19 @@ Objectif :
 
 ![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
 
+##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
+
+* Autres caractéristiques/paramètres
+    * Métiers observés
+    * Nombre d'hommes à bord
+    * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
+    * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
+    * Force du vent
+    * Force du courant
+
 ### CU "Saisir des captures débarquées"
 
-5. Il peut ensuite ajouter/supprimer des captures:
+1. Il peut ensuite ajouter/supprimer des captures:
     * Pour les captures individuelles :
         * Espèce (référentiel des espèces commerciales avec quelques variantes pour la SFA, mais pas d'arbre hiérarchisé comme dans SIH) 
         * Poids (kg)
@@ -135,59 +139,57 @@ Objectif :
                 
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
             
-6. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
+2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
 ### CU "Saisir des ventes"
 
 Les ventes sont automatiquement créées pour chaque capture individuelle et en paquet.
 
-7. Il peut ensuite ajouter/supprimer une vente.
+1. Il peut ensuite ajouter/supprimer une vente.
     
-       * Estimation du coût de revient de la vente totale
-       * Le coût de revient total de la vente est calculé automatiquement en fonction des informations saisient ci-dessous :
-        * Pour les captures individuelles :
-           * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
-                                            récolte de la mer, inconnu)
-           * Prix moyen estimé de l'espèce au poids (SR/kg)
-           * Prix moyen estimé de l'espèce par packaging (SR/packaging)
-           * Prix total estimé de l'espèce (SR = Roupie Seychellois)
-        * Pour les captures en paquets :
-           * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
-                                            récolte de la mer, inconnu)
-           * Prix moyen estimé de l'espèce par paquet (SR/packet)
-           * Prix total estimé de l'espèce (SR = Roupie Seychellois)
+   * Estimation du coût de revient de la vente totale
+   * Le coût de revient total de la vente est calculé automatiquement en fonction des informations saisient ci-dessous :
+    * Pour les captures individuelles :
+       * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
+                                        récolte de la mer, inconnu)
+       * Prix moyen estimé de l'espèce au poids (SR/kg)
+       * Prix moyen estimé de l'espèce par packaging (SR/packaging)
+       * Prix total estimé de l'espèce (SR = Roupie Seychellois)
+    * Pour les captures en paquets :
+       * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
+                                        récolte de la mer, inconnu)
+       * Prix moyen estimé de l'espèce par paquet (SR/packet)
+       * Prix total estimé de l'espèce (SR = Roupie Seychellois)
 
-8. L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses           
+2 L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses           
 
 ### CU "Saisir des dépenses"
 
-9. Il saisie :
+1. Il saisit :
 
-       * Estimation des dépenses totales pour la marée
-       * Le coût total des dépenses de la marée est calculé automatiquement en fonction des informations de dépenses détaillées :
-        * Dépenses en fluides de fonctionnement :
-          Pour chaque fluide : Carburant (le type de carburant est à préciser), huile de moteur, huile hydraulique, préciser :
-           * Volume utilisé pour la marée (l)
-           * Prix moyen par litre (SR/L)
-           * Prix total dépensé (SR = Roupie Seychellois)
-        * Dépenses en frais annexes  :
-           * Frais de débarquement (SR)
-           * Alimentation  (SR)
-           * Perte d'engin (SR)
-           * Autre (SR)
-           * Commentaire (optionnel)
-        * La glace utilisée :
-           * Quantité de glace 
-           * Unité (au kg ou par sac)
-           * Coût de la glace (SR = Roupie Seychellois)
-        * Appâts :
-           * Type d'appâts (3 types maximum)
-           * Nombre d'appâts 
-           * Unité pour compter les appâts (au kg, à l'unité, au sac ou au paquet)
-           * Coût des appâts
+   * Estimation des dépenses totales pour la marée
+   * Le coût total des dépenses de la marée est calculé automatiquement en fonction des informations de dépenses détaillées :
+    * Dépenses en fluides de fonctionnement :
+      Pour chaque fluide : Carburant (le type de carburant est à préciser), huile de moteur, huile hydraulique, préciser :
+       * Volume utilisé pour la marée (l)
+       * Prix moyen par litre (SR/L)
+       * Prix total dépensé (SR = Roupie Seychellois)
+    * Dépenses en frais annexes  :
+       * Frais de débarquement (SR)
+       * Alimentation  (SR)
+       * Perte d'engin (SR)
+       * Autre (SR)
+       * Commentaire (optionnel)
+    * La glace utilisée :
+       * Quantité de glace 
+       * Unité (au kg ou par sac)
+       * Coût de la glace (SR = Roupie Seychellois)
+    * Appâts :
+       * Type d'appâts (3 types maximum)
+       * Nombre d'appâts 
+       * Unité pour compter les appâts (au kg, à l'unité, au sac ou au paquet)
+       * Coût des appâts
 
-10. L'utilisateur sauvegarde ses modifications.
-
-\[Retour au 4]
+2. L'utilisateur sauvegarde ses modifications.
            
 ### CU "Weekly report"
