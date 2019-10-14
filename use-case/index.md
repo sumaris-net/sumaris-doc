@@ -61,9 +61,9 @@ Objectif :
     * Le navire observé (parmi la liste des navires identifiés précédemment)
 
 3. Il saisie :
-    * Date/heure de début de la marée (TIME OPTIONNEL ???)
-    * Date/heure de fin de la marée (TIME OPTIONNEL ???)
-    * Date/Heure de début de débarquement (TIME OPTIONNEL ???) = Date /Heure de la fin de la marée (CONFIRMATION SUR BESOIN ???)
+    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h)
+    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59)
+    * Date/Heure de début de débarquement (optionnel ; d'office indique la date/heure de la fin de la marée)
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
@@ -92,9 +92,9 @@ Objectif :
     * Le programme de collecte
     * Le navire observé
     * Le lieu du débarquement
-    * Date/heure de début de la marée (TIME OPTIONNEL ???)
-    * Date/heure de fin de la marée (TIME OPTIONNEL ???)
-    * Date/Heure de début de débarquement (TIME OPTIONNEL ???)
+    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h)
+    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59)
+    * Date/Heure de début de débarquement (optionnel ; d'office indique la date/heure de la fin de la marée)
     * Les observateurs (au moins un obligatoire)
     * Les autres caractéristiques/paramètres, collectés pour le programme
     * Un commentaire (optionnel)
@@ -114,6 +114,10 @@ Objectif :
     * Force du courant
 
 ### CU "Saisir des captures débarquées"
+
+Objectif :
+
+#### Scénario principal
 
 1. Il peut ensuite ajouter/supprimer des captures:
     * Pour les captures individuelles :
@@ -141,53 +145,61 @@ Objectif :
             
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
-### CU "Saisir des ventes"
+### CU "Saisir des ventes" (écran optionnel)
+
+Objectif :
+
+#### Scénario principal
 
 Les ventes sont automatiquement créées pour chaque capture individuelle et en paquet.
 
-1. Il peut ensuite ajouter/supprimer une vente.
+1. Il peut ensuite affecter un type de vente à une capture individuelle ou un paquet 
+   Et aussi catégoriser différent type de vente pour une même capture (en ajoutant/supprimant un type de vente)
     
-   * Estimation du coût de revient de la vente totale
+   * Estimation du coût de revient de la vente totale (optionnel si pas de détail)
    * Le coût de revient total de la vente est calculé automatiquement en fonction des informations saisient ci-dessous :
     * Pour les captures individuelles :
        * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
                                         récolte de la mer, inconnu)
-       * Prix moyen estimé de l'espèce au poids (SR/kg)
-       * Prix moyen estimé de l'espèce par packaging (SR/packaging)
-       * Prix total estimé de l'espèce (SR = Roupie Seychellois)
+       (2 éléments ci-dessous sont nécessaires pour que le 3em élément se calcule automatiquement)
+       * Prix moyen estimé de l'espèce au poids (devise/kg)
+       * ou Prix moyen estimé de l'espèce par packaging (devise/packaging)
+       * ou Prix total estimé de l'espèce (devise)
     * Pour les captures en paquets :
        * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
                                         récolte de la mer, inconnu)
-       * Prix moyen estimé de l'espèce par paquet (SR/packet)
-       * Prix total estimé de l'espèce (SR = Roupie Seychellois)
+       * Prix moyen estimé de l'espèce par paquet (devise/packet)
+       * ou Prix total estimé du paquet (devise)
 
 2 L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses           
 
-### CU "Saisir des dépenses"
+### CU "Saisir des dépenses" (écran optionnel)
 
-1. Il saisit :
+1. Il peut saisir:
 
    * Estimation des dépenses totales pour la marée
    * Le coût total des dépenses de la marée est calculé automatiquement en fonction des informations de dépenses détaillées :
     * Dépenses en fluides de fonctionnement :
       Pour chaque fluide : Carburant (le type de carburant est à préciser), huile de moteur, huile hydraulique, préciser :
-       * Volume utilisé pour la marée (l)
-       * Prix moyen par litre (SR/L)
-       * Prix total dépensé (SR = Roupie Seychellois)
+       (2 éléments ci-dessous sont nécessaires pour que le 3em élément se calcule automatiquement)
+       * Volume utilisé pour la marée (l) (optionnel)
+       * Prix moyen par litre (devise/L) (optionnel)
+       * Prix total dépensé (devise)  (optionnel)
+       
     * Dépenses en frais annexes  :
-       * Frais de débarquement (SR)
-       * Alimentation  (SR)
-       * Perte d'engin (SR)
-       * Autre (SR)
+       * Frais de débarquement (devise)
+       * Alimentation  (devise)
+       * Perte d'engin (devise)
+       * Autre (devise)
        * Commentaire (optionnel)
     * La glace utilisée :
        * Quantité de glace 
        * Unité (au kg ou par sac)
-       * Coût de la glace (SR = Roupie Seychellois)
+       * Coût de la glace (devise)
     * Appâts :
-       * Type d'appâts (3 types maximum)
+       * Type d'appâts (pas plus de 3 types maximum pour la SFA) --> représentation en tableau
        * Nombre d'appâts 
-       * Unité pour compter les appâts (au kg, à l'unité, au sac ou au paquet)
+       * Unité de conditionnement des appâts (au kg, à l'unité, au sac ou au paquet)
        * Coût des appâts
 
 2. L'utilisateur sauvegarde ses modifications.
