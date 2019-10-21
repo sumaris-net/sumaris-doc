@@ -5,13 +5,10 @@ Date:	October 19, 2019
 
 Copyright: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
-SUMARiS user guide Version V1.3 
-attached to SUMARiS Form V8.0
-attached to the entry software V0.17.6
-
 # Preample
 
 SUMARiS is an online entry tool for fisheries data. Developed by E-IS.
+![](./eis.png)
 
 This user guide has been delivered based on the database training session that took place in Lille, Tuesday 09 October 2018. During this training, scientists, observers and professional organisations learnt how to manipulate the database. 
 
@@ -53,9 +50,14 @@ SUMARiS manages different types of users. It supports several types of fisheries
 
 In your internet browser, enter https://www.sumaris.net and launch the application.
 If you were already using a previous version of SUMARiS, the update will automatically run when the application is launched.
+![](./welcome1.png)
+
+On the home page, you can choose your language of view:
+![](./welcome2.png)
 
 At the first start of the software, the authentication is requested by creating a user account, please enter a valid email address, and a secure password (with different types of characters; upper case, lower case, number, special character) and then validate it.
+![](./login.png)
 
-In this first online version, beware, we do not receive a confirmation email when we create the account. Each authenticated person will first have guest status, allowing them to view, but not to enter data.  The final status of each person must be validated by an administrator and is not automatic for the moment.
+![](./attention.png) In this first online version, beware, we do not receive a confirmation email when we create the account. Each authenticated person will first have guest status, allowing them to view, but not to enter data.  The final status of each person must be validated by an administrator and is not automatic for the moment.
 
 If the SUMARiS software is updated, please refresh the page in your browser (usually Ctrl+F5 or Ctrl+R) and ensure that is the most recent version (bottom left).
