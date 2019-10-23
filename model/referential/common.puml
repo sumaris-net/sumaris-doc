@@ -1,4 +1,5 @@
-@startuml class
+@startuml
+
 class Status {
     +int id
     +String label

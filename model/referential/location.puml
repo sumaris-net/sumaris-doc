@@ -1,4 +1,5 @@
-@startuml class
+@startuml
+
 class Location {
     +int id
     +String label

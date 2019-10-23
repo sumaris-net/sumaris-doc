@@ -5,15 +5,15 @@
 
 ### Base classes
 
-![common](../dist/model/referential/common.svg)
+![common](referential/common.svg)
 
 ### Location
 
-![location](../dist/model/referential/location.svg)
+![location](referential/location.svg)
 
 ### Paramètres collectés (PSFM)
 
-![pmfm](../dist/model/referential/pmfm.svg)
+![pmfm](referential/pmfm.svg)
 
 ## Data
 
@@ -23,4 +23,4 @@
 
 - Landing: Débarquement d'un navire, sur un site (port, criée)
 
-![landing](../dist/model/data/landing.svg)
+![landing](data/landing.svg)

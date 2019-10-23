@@ -16,7 +16,7 @@
 
 ### CU "Saisir une observation au débarquement"
 
-![observed-location](../dist/use-case/collect/observed-location-uc.svg)
+![observed-location](collect/observed-location-uc.svg)
 
 #### Scénario principal
 
@@ -33,7 +33,7 @@
     * Les autres caractéristiques/paramètres, collectés pour le programme
     * Commentaire (optionnel)
 
-![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
+![observed-location-ui-new](collect/observed-location-ui-new.svg)
 
 NB: Information technique :
     * Date/heure de saisie
@@ -42,7 +42,7 @@ NB: Information technique :
 
 Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
 
-![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
+![observed-location-ui-new](collect/observed-location-ui-vessels.svg)
   
 (Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
 d'entrer l'effort)
@@ -51,7 +51,7 @@ d'entrer l'effort)
 
 Objectif :
 
-![landing](../dist/use-case/collect/landing-uc.svg)
+![landing](collect/landing-uc.svg)
 
 #### Scénario principal
 
@@ -67,7 +67,7 @@ Objectif :
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
+![landing-ui-new](collect/landing-ui-new.svg)
 
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
@@ -101,7 +101,7 @@ Objectif :
 
 \[Retour au 3]
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
+![landing-ui-new](collect/landing-ui-samples.svg)
 
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 

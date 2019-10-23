@@ -13,7 +13,7 @@
 
 ### CU "Entering a sighting on landing"
 
-![observed-location](../dist/use-case/collect/observed-location-uc.svg)
+![observed-location](collect/observed-location-uc.svg)
 
 #### Main Scenario
 
@@ -29,11 +29,11 @@
     * Other characteristics / parameters, collected for the program;
     * Comment (optional)
 
-![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-new.svg)
+![observed-location-ui-new](collect/observed-location-ui-new.svg)
 
 3. He can then add/remove observed vessels :
 
-![observed-location-ui-new](../dist/use-case/collect/observed-location-ui-vessels.svg)
+![observed-location-ui-new](collect/observed-location-ui-vessels.svg)
 
 
 ### CU "Entering an observed landing"
@@ -41,7 +41,7 @@
 Goal :
 
 
-![landing](../dist/use-case/collect/landing-uc.svg)
+![landing](collect/landing-uc.svg)
 
 #### Main Scenario
 
@@ -52,11 +52,11 @@ Goal :
     * Other characteristics / parameters, collected for the program;
     * A comment (optional)
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-new.svg)
+![landing-ui-new](collect/landing-ui-new.svg)
 
 3. He can then enter the landed catch :
 
-![landing-ui-new](../dist/use-case/collect/landing-ui-samples.svg)
+![landing-ui-new](collect/landing-ui-samples.svg)
 
 4. The user saves his changes
 
