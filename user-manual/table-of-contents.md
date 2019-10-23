@@ -1,9 +1,10 @@
-Title:	Quick Start user's guide for SUMARiS web entry software
-Author: E-IS	
+<u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
 
-Date:	October 19, 2019 
+<u>Author</u>: E-IS	
 
-Copyright: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+<u>Date</u>:	October 19, 2019 
+
+<u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 ![](./cc-by-sa.png)
 
 SUMARiS user guide Version V1.3    
@@ -48,5 +49,5 @@ attached to the entry software V0.18.0
     * [Extraction values]()
     * [Extraction map]()
     * [EU RGPD standars on personal data]()
- - [Bugs, toubleshooting and enhancements]() 
- - [Summary of important points]()
+ - [Bugs, toubleshooting and enhancements](bugs-troubleshooting-enhancements/bugs-troubleshooting-enhancements) 
+ - [Summary of important points](summary-important-points/summary-important-points.md)
