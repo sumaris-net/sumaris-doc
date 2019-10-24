@@ -15,7 +15,7 @@ attached to the entry software V0.18.0
 # Table of contents
 
  - [Preample](preamble/preamble.md)
-    * [Minimum configuration]()
+    * [Minimum configuration](preamble/preamble.md#minimum-configuration)
     * [Software objectives]()
     * [Features]()
     * [Access to the SUMARiS software]()
@@ -33,7 +33,7 @@ attached to the entry software V0.18.0
     * [Gears screen]()
     * [Hauls screen]()
     * [Catches screen]()
-    * [Surviva tests screen]()
+    * [Survival tests screen]()
     * [Individual monitoring screen]()
     * [Releases screen]()
     * [Batch by species screen]()
