@@ -35,7 +35,7 @@ In the module, there are four types actions:
 
 ## Automatic filters
 
-By clicking on the <u>search button</u> <&magnifying-glass>, the filters panel opens.
+By clicking on the <u>search button</u> ![](./baseline_search_white_18dp1x.png), the filters panel opens.
 
 ![](./search-button.png)
 
