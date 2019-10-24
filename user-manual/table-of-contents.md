@@ -6,7 +6,7 @@
 
 <u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
-![](./cc-by-sa.PNG)
+![](cc-by-sa.png)
 
 SUMARiS user guide Version V1.3    
 attached to SUMARiS Form V8.0
