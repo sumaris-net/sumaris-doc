@@ -1,4 +1,6 @@
- <u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
+# Quick Start user's guide for SUMARiS web entry software
+
+<u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
 
 <u>Author</u>: E-IS	
 
