@@ -1,3 +1,5 @@
+# Quick Start user's guide for SUMARiS web entry software
+
 <u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
 
 <u>Author</u>: E-IS	
@@ -44,11 +46,11 @@ attached to the entry software V0.18.0
      * [Validation and qualification]()
      * []()
  - [Extractions](extraction/extraction.md)
-    * [Extraction module]()
+    * [Trips extraction module]()
     * [Automatic filters]()
+    * [Create an aggregation]()
+    * [Maps extraction module]()
     * [Extraction downloads]()
-    * [Extraction values]()
-    * [Extraction map]()
     * [EU RGPD standars on personal data]()
  - [Bugs, toubleshooting and enhancements](bugs-troubleshooting-enhancements/bugs-troubleshooting-enhancements.md) 
  - [Summary of important points](summary-important-points/summary-important-points.md)

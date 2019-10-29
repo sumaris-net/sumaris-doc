@@ -17,7 +17,7 @@ This documentation has been reduced to its maximum to help in efficiency for the
 
 This guide presents only a small part of the possibilities of the SUMARiS software and does not act as a complete user manual.
 
-- [Minimum configuration]()
+- [Minimum configuration](#minimum-configuration)
 - [Software objectives]()
 - [Features]()
 - [Access to the SUMARiS software]()
