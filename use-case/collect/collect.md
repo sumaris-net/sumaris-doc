@@ -18,7 +18,7 @@
 
 1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
 
-2. Il saisit :
+2. Il saisit : 
 
     * Programme de collecte
     * Lieu d'observation = Landing sites (Navigation optionnelle calculée par le logiciel : ile et district sont 2 niveaux de lieux qui servent surtout à faire la recherche du lieu d'observation dans SFA ObsDeb)
