@@ -8,6 +8,28 @@
     * [CU Saisir des ventes]()
     * [CU Saisir des dépenses]()
 
+## Administration des référentiels
+
+### Identification
+
+![login](./home/home-ui-login.svg)
+
+### Liste des référenciels
+
+![parameter](administration/parameter-ui.svg)
+
+### Liste des utilisateurs
+
+![user](administration/user-ui.svg)
+
+### Liste des navires
+
+![vessel](administration/vessel-ui.svg)
+
+### Configuration du serveur
+
+![configuration](administration/configuration-ui.svg)
+
 ## Collecte des données
 
 ### CU "Saisir une observation au débarquement"
@@ -18,7 +40,7 @@
 
 1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
 
-2. Il saisit :
+2. Il saisit : 
 
     * Programme de collecte
     * Lieu d'observation = Landing sites (Navigation optionnelle calculée par le logiciel : ile et district sont 2 niveaux de lieux qui servent surtout à faire la recherche du lieu d'observation dans SFA ObsDeb)
@@ -75,13 +97,15 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
+![landing-ui-effort](collect/trip/landing-ui-effort.svg)
+
 #### Variantes
 
 ##### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
 
 1. L'observateur demande la création d'une nouvelle marée, sans
    rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
-   --> Si c'est fait, ce sera dans un programme différent avec une liste de parapètre différente (sûrement simplifiée)
+   --> Si c'est fait, ce sera dans un programme différent avec une liste de paramètre différente (sûrement simplifiée)
    --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
 
 2. Il saisit :
