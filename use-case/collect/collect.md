@@ -145,7 +145,9 @@ Objectif :
             
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
-![landing-ui-new](trip/landing-ui-samples.svg)
+![landing-ui-samples](trip/landing-ui-samples.svg)
+
+![landing-ui-composition](trip/landing-ui-composition.svg)
 
 ### CU "Saisir des ventes" (écran optionnel)
 
