@@ -12,7 +12,7 @@
 
 ### CU "Saisir une observation au débarquement"
 
-![observed-location](./landing/observed-location-uc.svg)
+![observed-location](landing/observed-location-uc.svg)
 
 #### Scénario principal
 
@@ -28,18 +28,18 @@
     * Les autres caractéristiques/paramètres, collectés pour le programme
     * Commentaire (optionnel)
 
-![observed-location-ui-new](./landing/observed-location-ui-new.svg)
+![observed-location-ui-new](landing/observed-location-ui-new.svg)
 
 NB: Information technique :
     * Date/heure de saisie (automatique)
 
-![technical-information](./landing/observed-location-ui-technical-information.svg)
+![technical-information](landing/observed-location-ui-technical-information.svg)
 
 3. Il peut ensuite ajouter/supprimer des navires observés :
 
 Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
 
-![observed-location-ui-new](./landing/observed-location-ui-vessels.svg)
+![observed-location-ui-new](landing/observed-location-ui-vessels.svg)
   
 (Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
 d'entrer l'effort)
@@ -48,7 +48,7 @@ d'entrer l'effort)
 
 Objectif :
 
-![landing](./landing-uc.svg)
+![landing](trip/landing-uc.svg)
 
 #### Scénario principal
 
@@ -64,7 +64,7 @@ Objectif :
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
-![landing-ui-new](./landing-ui-new.svg)
+![landing-ui-new](trip/landing-ui-new.svg)
 
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
@@ -74,6 +74,8 @@ Objectif :
     * Profondeur maximum de l'engin (m)
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
+
+![landing-ui-effort](trip/landing-ui-effort.svg)
 
 #### Variantes
 
@@ -98,7 +100,7 @@ Objectif :
 
 \[Retour au 3]
 
-![landing-ui-new](./landing-ui-samples.svg)
+![landing-ui-new](trip/landing-ui-samples.svg)
 
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 
@@ -110,7 +112,7 @@ Objectif :
     * Force du vent
     * Force du courant
 
-![landing-ui-var3a](./landing-ui-var3a.svg)
+![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
 
 ### CU "Saisir des captures débarquées"

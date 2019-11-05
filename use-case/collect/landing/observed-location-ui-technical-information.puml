@@ -1,7 +1,8 @@
 @startsalt
 {+
-<&person> Recorder: Observer name
-<&clock> Last modification:
-on  dd/mm/aaaa  hh:mm
+<&person> Recorder: | <b>Observer name
+.                   | Organism name
+.. | ..
+<&calendar> Created on dd/mm/aaaa  hh:mm AM/PM
 }
 @endsalt

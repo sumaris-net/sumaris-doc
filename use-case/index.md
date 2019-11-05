@@ -48,7 +48,7 @@ d'entrer l'effort)
 
 Objectif :
 
-![landing](collect/landing-uc.svg)
+![landing](collect/trip/landing-uc.svg)
 
 #### Scénario principal
 
@@ -64,7 +64,7 @@ Objectif :
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
-![landing-ui-new](collect/landing-ui-new.svg)
+![landing-ui-new](collect/trip/landing-ui-new.svg)
 
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
@@ -98,7 +98,7 @@ Objectif :
 
 \[Retour au 3]
 
-![landing-ui-new](collect/landing-ui-samples.svg)
+![landing-ui-new](collect/trip/landing-ui-samples.svg)
 
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 
@@ -110,7 +110,7 @@ Objectif :
     * Force du vent
     * Force du courant
 
-![landing-ui-var3a](collect/landing-ui-var3a.svg)
+![landing-ui-var3a](collect/trip/landing-ui-var3a.svg)
 
 
 ### CU "Saisir des captures débarquées"

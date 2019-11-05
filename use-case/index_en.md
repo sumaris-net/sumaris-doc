@@ -41,7 +41,7 @@
 Goal :
 
 
-![landing](collect/landing-uc.svg)
+![landing](collect/trip/landing-uc.svg)
 
 #### Main Scenario
 
@@ -52,11 +52,11 @@ Goal :
     * Other characteristics / parameters, collected for the program;
     * A comment (optional)
 
-![landing-ui-new](collect/landing-ui-new.svg)
+![landing-ui-new](collect/trip/landing-ui-new.svg)
 
 3. He can then enter the landed catch :
 
-![landing-ui-new](collect/landing-ui-samples.svg)
+![landing-ui-new](collect/trip/landing-ui-samples.svg)
 
 4. The user saves his changes
 
