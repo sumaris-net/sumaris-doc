@@ -122,8 +122,6 @@ Objectif :
 
 \[Retour au 3]
 
-![landing-ui-new](collect/trip/landing-ui-samples.svg)
-
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 
 * Autres caractéristiques/paramètres
@@ -168,6 +166,8 @@ Objectif :
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
             
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
+
+![landing-ui-new](collect/trip/landing-ui-samples.svg)
 
 ### CU "Saisir des ventes" (écran optionnel)
 
