@@ -1,0 +1,25 @@
+@startsalt
+{
+  <b>Nouveau débarquement
+  ..
+  {/ <b>General | Capture débarquée }
+  .
+  Programme de collecte:    | { ^SIH-OBSDEB^ }
+  Navire:                   | { ^FRA0001114^ | <&plus> }
+  Lieu de débarquement:     | { ^MA - Mahé Island^ }
+  Date/Heure débarquement:  | { ^01/02/2019^ | ^09:55^ }
+  Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
+  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+  .                         | { Paramètre 3 (ex: Principale zone de pêche) : | ^Valeur qualitative^ }
+  .                         | { Paramètre 4 (ex: Gradient de distance à la côte): | ^Valeur qualitative^ }
+  .                         | { Paramètre 5 (ex: Force du vent) : | ^Valeur qualitative^ }
+  .                         | { Paramètre 6 (ex: Force du courant): | ^Valeur qualitative^ }
+  .
+  Commentaires              | { "commentaires       "}
+
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
+}
+@endsalt

@@ -1,0 +1,7 @@
+@startsalt
+{+
+<&person> Recorder: Observer name
+<&clock> Last modification:
+on  dd/mm/aaaa  hh:mm
+}
+@endsalt

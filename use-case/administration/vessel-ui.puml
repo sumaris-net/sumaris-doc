@@ -1,0 +1,15 @@
+@startsalt
+{
+  <b>Veesels
+  ..
+  {[<&plus>]  | [<&reload>] | [<&magnifying-glass>]}
+
+  {#
+  # | <b>Navire         | <b>Date/Heure        | <b>Etat
+  1 | FRA0001114     | 02/15/2019 11:01  | au port
+  2 | SZ003          | 02/15/2019 15:05  | en mer
+  }
+
+  -- | --
+}
+@endsalt

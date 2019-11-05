@@ -1,6 +1,6 @@
 @startsalt
 {
-  { <b>Parameter.name: | ^PMFM list^ }
+  { <b>Parameter.name: | ^PMFM list^ } | <&plus> | <&reload> | <&magnifying-glass>
 .
 {#
 <b>Qualitative_label | <b>Qualitative_name

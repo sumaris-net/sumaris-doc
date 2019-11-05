@@ -1,0 +1,12 @@
+@startsalt
+{
+<&plus> <&reload> <&magnifying-glass>
+.
+{#
+<&person> logo | <b>Nom | <b>Prénom | <b>Email | <b>Profil | <b>Etat | <b>Clé oublique | <b>Organisme
+logo 1 | name 1 | first name 1 | Email 1 | . | . | . | .
+logo 2 | name 2 | first name 2 | Email 2 | . | . | . | .
+logo 3 | name 3 | first name 3 | Email 3 | . | . | . | .
+}
+}
+@endsalt

@@ -1,0 +1,23 @@
+@startsalt
+{
+  <b>Menu.configruration
+  ..
+  Application name: | "name                              "
+  Description (home page): | "description                       "
+  .
+  <b>Options:
+  Menu > Logo (max width: 110px):    | "link with logo's image            " | <&x>
+  Menu > Logo (max width: 400px):    | "link with logo's image            " | <&x>
+  Home > Partners logos:     | "Partner1,Partner2,Partner3,etc.   " | <&x>
+  Default lat/lon format:    | "DDMM or other" | <&x>
+  Default Language :         | "en or fr" | <&x>
+  Home > Background images:  | "image1,image2,image3,etc.         " | <&x>
+  favicon:                   | "link with logo's image            " | <&x> | <&plus>
+  .
+   <b>Partners logo (home page):
+  .
+  -- | --
+
+  .                          | {<&reload> [Annuler] | [<&check> Sauvegarder]}
+}
+@endsalt

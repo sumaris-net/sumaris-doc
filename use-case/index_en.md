@@ -13,7 +13,7 @@
 
 ### CU "Entering a sighting on landing"
 
-![observed-location](collect/observed-location-uc.svg)
+![observed-location](collect/landing/observed-location-uc.svg)
 
 #### Main Scenario
 
@@ -29,11 +29,11 @@
     * Other characteristics / parameters, collected for the program;
     * Comment (optional)
 
-![observed-location-ui-new](collect/observed-location-ui-new.svg)
+![observed-location-ui-new](collect/landing/observed-location-ui-new.svg)
 
 3. He can then add/remove observed vessels :
 
-![observed-location-ui-new](collect/observed-location-ui-vessels.svg)
+![observed-location-ui-new](collect/landing/observed-location-ui-vessels.svg)
 
 
 ### CU "Entering an observed landing"
