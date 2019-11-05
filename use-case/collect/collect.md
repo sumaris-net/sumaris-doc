@@ -83,7 +83,7 @@ Objectif :
 
 1. L'observateur demande la création d'une nouvelle marée, sans
    rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
-   --> Si c'est fait, ce sera dans un programme différent avec une liste de parapètre différente (sûrement simplifiée)
+   --> Si c'est fait, ce sera dans un programme différent avec une liste de paramètre différente (sûrement simplifiée)
    --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
 
 2. Il saisit :

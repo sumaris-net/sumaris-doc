@@ -10,9 +10,9 @@
 
   {#
   # | <b>Metier         | <b>Engin   | <b> Nombre engin | <b>nombre hameçons-casiers/longueur filet | <b>Temps passé à pêcher (en jour de mer) | <b>Profondeur minimum de l'engin (m) | <b>Profondeur maximum de l'engin (m) | <b>Commentaire (optionnel) | <b>Capture débarquée par métier
-  1 | FIXABSX - Active trap for Vyey     | FIXA - Active trap             | 10 | . | 1 j 0 m | 25 | 30 | <&chat> | <&layers>
-  2 | GENLOS - Gillnets and entangling nets for Crevices     | GEN - Gillnets and antangling nets (not specified) | 1 | 20 | 1 j 0 m | 10 | 20 | <&chat> | <&layers>
-  3 | LLSKH - Longlines for Reken     | LL - Longlines (ot specified)     | 5 | 30 | 1 j 0 m | 25 | 40 | <&chat> | <&layers>
+  1 | FIXABSX - Active trap for Vyey     | FIXA - Active trap             | 10 | . | 1 j 0 m | 25 | 30 | <&comment-square> | <&layers>
+  2 | GENLOS - Gillnets and entangling nets for Crevices     | GEN - Gillnets and antangling nets (not specified) | 1 | 20 | 1 j 0 m | 10 | 20 | <&comment-square> | <&layers>
+  3 | LLSKH - Longlines for Reken     | LL - Longlines (ot specified)     | 5 | 30 | 1 j 0 m | 25 | 40 | <&comment-square> | <&layers>
   }
 
   -- | --
