@@ -34,7 +34,7 @@
 
 ### CU "Saisir une observation au débarquement"
 
-![observed-location](collect/landing/observed-location-uc.svg)
+![observed-location](landing/observed-location-uc.svg)
 
 #### Scénario principal
 
@@ -50,27 +50,29 @@
     * Les autres caractéristiques/paramètres, collectés pour le programme
     * Commentaire (optionnel)
 
-![observed-location-ui-new](collect/landing/observed-location-ui-new.svg)
+![observed-location-ui-new](landing/observed-location-ui-new.svg)
 
 NB: Information technique :
     * Date/heure de saisie (automatique)
 
-![technical-information](collect/landing/observed-location-ui-technical-information.svg)
+![technical-information](landing/observed-location-ui-technical-information.svg)
 
 3. Il peut ensuite ajouter/supprimer des navires observés :
 
 Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
+Pré-documentation des navires basée sur les précédentes observations sur le même lieu.
 
-![observed-location-ui-new](collect/landing/observed-location-ui-vessels.svg)
-  
-(Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
-d'entrer l'effort)
+![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
+ 
+Si saisie d'un nouveau navire :
+
+![observed-location-ui-new-vessels](landing/observed-location-ui-new-vessels.svg)
  
 ### CU "Saisir une marée (= fishing trip dans SFA ObsDeb)"
 
 Objectif :
 
-![landing](collect/trip/landing-uc.svg)
+![landing](trip/landing-uc.svg)
 
 #### Scénario principal
 
@@ -86,7 +88,7 @@ Objectif :
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
-![landing-ui-new](collect/trip/landing-ui-new.svg)
+![landing-ui-new](trip/landing-ui-new.svg)
 
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
@@ -97,28 +99,36 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-![landing-ui-effort](collect/trip/landing-ui-effort.svg)
+![landing-ui-effort](trip/landing-ui-effort.svg)
+
+5. Accés à la liste des métiers utilisés les 12 derniers mois
+
+![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
 #### Variantes
 
 ##### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
 
-1. L'observateur demande la création d'une nouvelle marée, sans
+L'observateur demande la création d'une nouvelle marée, sans
    rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
    --> Si c'est fait, ce sera dans un programme différent avec une liste de paramètre différente (sûrement simplifiée)
    --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
 
-2. Il saisit :
+1. Il saisit : (A REVOIR)
 
     * Le programme de collecte
     * Le navire observé
     * Le lieu du débarquement
-    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h)
-    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59)
-    * Date/Heure de début de débarquement (optionnel ; d'office indique la date/heure de la fin de la marée)
+    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h) A CONFIRMER
+    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59) A CONFIRMER
     * Les observateurs (au moins un obligatoire)
-    * Les autres caractéristiques/paramètres, collectés pour le programme
     * Un commentaire (optionnel)
+
+![landing-ui-var1a](trip/landing-ui-var1a.svg)
+
+2. L'observateur :
+    * choisit le navire observé (parmi la liste des navires identifiés précédemment) 
+    * demande la création d'une nouvelle marée
 
 \[Retour au 3]
 
@@ -132,8 +142,7 @@ Objectif :
     * Force du vent
     * Force du courant
 
-![landing-ui-var3a](collect/trip/landing-ui-var3a.svg)
-
+![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
 ### CU "Saisir des captures débarquées"
 
@@ -167,7 +176,7 @@ Objectif :
             
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
-![landing-ui-samples](collect/trip/landing-ui-samples.svg)
+![landing-ui-samples](trip/landing-ui-samples.svg)
 
 ![landing-ui-composition](trip/landing-ui-composition.svg)
 

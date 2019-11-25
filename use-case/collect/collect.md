@@ -127,9 +127,6 @@ L'observateur demande la création d'une nouvelle marée, sans
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
-(Le choix se pose de saisir une nouvelle observation ou de poursuivre sur cette observation et 
-d'entrer l'effort pour la marée)
-
 ### CU "Saisir des captures débarquées"
 
 Objectif :
