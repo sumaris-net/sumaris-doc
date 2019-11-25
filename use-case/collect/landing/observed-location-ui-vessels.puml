@@ -4,16 +4,16 @@
   ..
   {/ General | <b>Navires observés }
   .
-  {[<&plus>]  | [<&trash>] | [<&magnifying-glass>]}
+  {[<&plus>]  | [<&trash>] | [<&magnifying-glass>] | [Show the observed vessel from the last 12 month]}
 
   {#
-  # | <b>Navire         | <b>Date/Heure        | <b>Etat
-  1 | FRA0001114     | 02/15/2019 11:01  | au port
-  2 | SZ003          | 02/15/2019 15:05  | en mer
+  # | <b>Type de navire  | <b>Nom     | <b>Immatriculation | <b>Date/Heure validité début     | <b> Base port          | <b>Status
+  1 | Mini Mahe          | Ti Pikir   | SZ178              | 02/15/2019 11:01                 |  LS-LRT - La retraite  | au port
+  2 | Pirogue            | Saint Rock | SZ616              | 02/15/2019 15:05                 |  LS-PC - Pointe Conan  | en mer
   }
 
   -- | --
 
-  .                          | {[Annuler] | [Sauvegarder]}
+  . | {[Annuler] | [Sauvegarder]}
 }
 @endsalt
