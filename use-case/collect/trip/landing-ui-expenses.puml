@@ -4,7 +4,7 @@
   ..
   {/ General trip | Effort | Capture débarquée | Vente | <b>Dépenses }
   .
-  {Estimation des dépenses totales : <&arrow-circle-right> {+"           " } <&calculator> | {Coût total calculé  {<color:red> 354.0} Devise }}
+  {Estimation des dépenses totales (Devise) : <&arrow-circle-right> {+"           " } <&calculator> | {Coût total calculé  {<color:blue> 354.0} Devise }}
   -- | --
   <b>Détail des dépenses
   ..

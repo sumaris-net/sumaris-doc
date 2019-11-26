@@ -1,0 +1,41 @@
+@startsalt
+{
+  <b> Immat Navire - Lieu - Date fin marée - Métier
+  ..
+  {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
+  .
+  {Estimation des ventes (Devise) : <&arrow-circle-right> {+"           " } <&calculator> | {Coût total calculé  {<color:blue> 1987.0} Devise }}
+  -- | --
+  .
+  {/ <b>Vente par espèce | Vente par paquet }
+  .
+  {
+  <b>Détail des ventes par espèce
+  ..
+  {[<&plus>] | [<&minus>] | [<&layers>]}
+
+  {#
+  # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise)
+  1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0
+  2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0
+  }
+  }
+  .
+  -- | --
+  {/ Vente par espèce | <b>Vente par paquet }
+   .
+  {
+  <b>Détail des ventes par paquet
+  ..
+  {[<&plus>] | [<&minus>] | [<&layers>]}
+
+  {#
+  # | <b>ID | <b>Composition | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
+  1 | 1     | <&comment-square>              | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
+  }
+  }
+  .
+  -- | --
+  {{[Fermer et retour à l'observation] | [Saisir les dépenses]}}
+}
+@endsalt
