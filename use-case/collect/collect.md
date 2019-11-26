@@ -33,23 +33,23 @@
     * Les autres caractéristiques/paramètres, collectés pour le programme
     * Commentaire (optionnel)
 
-![observed-location-ui-new](landing/observed-location-ui-new.svg)
+    ![observed-location-ui-new](landing/observed-location-ui-new.svg)
 
-NB: Information technique :
-    * Date/heure de saisie (automatique)
+   NB: Information technique :
+       * Date/heure de saisie (automatique)
 
-![technical-information](landing/observed-location-ui-technical-information.svg)
+    ![technical-information](landing/observed-location-ui-technical-information.svg)
 
 3. Il peut ensuite ajouter/supprimer des navires observés :
 
-Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
-Pré-documentation des navires basée sur les précédentes observations sur le même lieu.
+    Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
+    Pré-documentation des navires basée sur les précédentes observations sur le même lieu.
 
-![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
+    ![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
  
-Si saisie d'un nouveau navire :
+    Si saisie d'un nouveau navire :
 
-![observed-location-ui-new-vessels](landing/observed-location-ui-new-vessels.svg)
+    ![observed-location-ui-new-vessels](landing/observed-location-ui-new-vessels.svg)
  
 ### CU "Saisir une marée (= fishing trip dans SFA ObsDeb)"
 
@@ -71,7 +71,7 @@ Objectif :
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
-![landing-ui-new](trip/landing-ui-new.svg)
+    ![landing-ui-new](trip/landing-ui-new.svg)
 
 4. Il peut ensuite saisir l'effort de pêche par métier :
     * Nombre d'engin
@@ -82,11 +82,11 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-![landing-ui-effort](trip/landing-ui-effort.svg)
+    ![landing-ui-effort](trip/landing-ui-effort.svg)
 
 5. Accés à la liste des métiers utilisés les 12 derniers mois
 
-![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
+    ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
 #### Variantes
 
@@ -107,7 +107,7 @@ L'observateur demande la création d'une nouvelle marée, sans
     * Les observateurs (au moins un obligatoire)
     * Un commentaire (optionnel)
 
-![landing-ui-var1a](trip/landing-ui-var1a.svg)
+    ![landing-ui-var1a](trip/landing-ui-var1a.svg)
 
 2. L'observateur :
     * choisit le navire observé (parmi la liste des navires identifiés précédemment) 
@@ -156,12 +156,14 @@ Objectif :
                 * Si somme des % > 100 % : message erreur
                 
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
-            
+
+    ![landing-ui-samples](trip/landing-ui-samples.svg)
+
+    L'utilisateur entre la composition par paquet
+
+    ![landing-ui-composition](trip/landing-ui-composition.svg)
+
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
-
-![landing-ui-samples](trip/landing-ui-samples.svg)
-
-![landing-ui-composition](trip/landing-ui-composition.svg)
 
 ### CU "Saisir des ventes" (écran optionnel)
 
