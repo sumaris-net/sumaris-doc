@@ -4,7 +4,7 @@
   ..
   [] Filtrer sur les métiers utilisés les 12 derniers mois
   .
-  {<&beaker> {+  "                              "    }<&sort-ascending>}
+  {<&beaker> <&arrow-circle-right> {+  "                              "    }<&sort-ascending>}
   .
   {
   {+
@@ -16,7 +16,7 @@
   GNCCGX - Encircling
   LHMEMP - Handlines
   LHPDPX - Handlines
-  }  <|- . -|> {+
+  }  <&arrow-thick-left> <&arrow-thick-right> {+
   AQUCUX - Acquaculture
   FIXSBSX - Static trap
   }

@@ -189,7 +189,9 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
        * Prix moyen estimé de l'espèce par paquet (devise/packet)
        * ou Prix total estimé du paquet (devise)
 
-2 L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses           
+2 L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses  
+
+![landing-ui-sales](trip/landing-ui-sales.svg)         
 
 ### CU "Saisir des dépenses" (écran optionnel)
 
@@ -221,5 +223,7 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
        * Coût des appâts
 
 2. L'utilisateur sauvegarde ses modifications.
+
+![landing-ui-expenses](trip/landing-ui-expenses.svg)   
            
 ### CU "Weekly report"

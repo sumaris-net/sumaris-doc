@@ -2,7 +2,7 @@
 {
   <b>Nouveau débarquement
   ..
-  {/ <b>General trip | Effort | Capture débarquée }
+  {/ <b>General trip | Effort | Capture débarquée | Vente | Dépenses }
   .
   Programme de collecte:    | { ^SIH-OBSDEB^ }
   Navire:                   | { ^FRA0001114^ | <&plus> }

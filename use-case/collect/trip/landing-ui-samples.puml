@@ -1,8 +1,8 @@
 @startsalt
 {
-  <b>Navire FRA0001114 / Lieu MA - Mahé Island / Débarquement 01/02/2019 23:59
+  <b> Immat Navire - Lieu - Date fin marée - Métier
   ..
-  {/ General trip | Effort | <b>Capture débarquée }
+  {/ General trip | Effort | <b>Capture débarquée | Vente | Dépenses }
   .
   {<&beaker> Filter by effort | { ^FIXABSX - Active trap for Vyey^ } | <&spreadsheet> | [Edit] | [New]}
   .
