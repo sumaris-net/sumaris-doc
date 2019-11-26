@@ -5,6 +5,9 @@
   {/ General trip | Effort | <b>Capture débarquée | Vente | Dépenses }
   .
   {<&beaker> Filter by effort | { ^FIXABSX - Active trap for Vyey^ } | <&spreadsheet> | [Edit] | [New]}
+  -- | --
+  .
+  {/ <b>Capture par espèce | Capture en paquet }
   .
   {
   <b>Capture débarquée par effort
@@ -18,6 +21,9 @@
   }
   .
   -- | --
+  .
+  {/ Capture par espèce | <b>Capture en paquet }
+  .
   {
   <b>packets saisis par effort
   {[<&plus>]  | [<&spreadsheet>] | [<&minus>]}
@@ -28,6 +34,7 @@
   }
   }
   .
+  -- | --
   {{[Fermer et retour à l'observation] | [Saisir la vente]}}
 }
 @endsalt

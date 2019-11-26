@@ -1,0 +1,22 @@
+@startsalt
+{
+  <b> Composition du paquet
+  -- | --
+  .
+  {
+  {Nombre de paquet : <&arrow-circle-right> {+"           " } <&calculator> | {Poids total des paquets calculé {+  " 484    "}}}
+  ..
+  {Poids de l'échantillon    : {+" 160  " } | {+" 59   " } | {+" 70   " } | {+" 136  " } | {+" 59   " } | {+"      " }}
+
+  {[<&plus>]  | [<&minus>]}
+  {#
+  # | <b>Espèce commerciale* | <b>% (Σ=100) | <b>% (Σ=100) | <b>% (Σ=100) | <b>% (Σ=100) | <b>% (Σ=100) | % | Poids (kg)*
+  1 | Albakor                | 90          | 50          | 35          | 49          | 25          | "      " | <b>241.03
+  2 | Anba lasann            | 10          | 50          | 65          | 51          | 75          | "      " | <color:blue><i>242.97
+  }
+  }
+  .
+  -- | --
+  {{[Fermer] | [Confirmer]}}
+}
+@endsalt

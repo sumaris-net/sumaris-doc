@@ -30,8 +30,8 @@
   {[<&plus>] | [<&minus>] | [<&layers>]}
 
   {#
-  # | <b>ID | <b>Composition | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
-  1 | 1     | <&comment-square>              | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
+  # | <b>ID | <b>Detail         | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
+  1 | 1     | <&comment-square> | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
   }
   }
   .
