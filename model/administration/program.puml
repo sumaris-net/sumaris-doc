@@ -10,5 +10,21 @@ Program *-right-> "0..*" Program2Department: "authorized departments"
 Program *-right-> "0..*" Program2Person: "authorized users"
 Program "1" *-down- "1..*" Strategy: contains
 
+package "referential" #DDDDDD {
+    class ProgramPrivilege {
+    }
+
+    enum ProgramPrivilegeEnum {
+        +MANAGER: 1
+        +OBSERVER: 2
+        +VIEWER: 3
+        +VALIDATOR: 4
+        +QUALIFIER: 5
+    }
+
+    Program2Department "*" --> "1..*" ProgramPrivilege: "access\n privileges"
+    Program2Person "*" --> "1..*" ProgramPrivilege: "access\n privileges"
+    ProgramPrivilegeEnum .left.> ProgramPrivilege: "is an\n identifier of"
+}
 
 @enduml
