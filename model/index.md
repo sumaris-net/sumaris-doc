@@ -7,15 +7,15 @@
 
 ![common](referential/common.svg)
 
-Each referential entity item have a numerical id as  identifier, a unique label (for code), a name and a full description. 
+Each referential entity item have a numerical id as identifier, a unique label (for code), a name and a full description. 
 
 ### Location
 
 ![location](referential/location.svg)
 
 A location can be:
-  - a territorial location (e.g. Country, port, harbour...)
-  - a fishing area, on any administrative spatial units at sea (e.g. FAO area, ICES division or sub-division, CGPM..)
+  - a territorial location (e.g. Country, harbour, auction...)
+  - a fishing area, on any administrative spatial unit at sea (e.g. FAO area, ICES division or sub-division, CGPM..)
 
 A location can have a spatial geometry (area, line, or point) that can be used by SUMARiS GIS capabilities.  
 
@@ -51,7 +51,7 @@ a PSFMU is an association of:
  - a Method: how to get the measure value;
  - a Unit (e.g meters, kilograms...)
 
-This class allow to define any kind of measure type, with the precision expected by all scientific purposes.
+This class allows to define any kind of measure type, with the precision expected by all scientific purposes.
 
 ### Program and strategies
 
@@ -61,12 +61,17 @@ Program is the entity that holds a data collection project (e.g. a scientific pr
 
  - A Program describe the project (label, name, description);  
    * Each program has one or more strategies; 
+   
+ - Forthcoming:
+   * Each program can manage access rights by users or departments
 
 ![strategy](administration/strategy.svg)
 
  - A Strategy holds one data collection protocol. Typically, it define all parameters (PSFMU) that should be collected.
-   * A strategy is applied on one or more period and on one or more locations.
    * Each collected parameters is collected inside a acquisition level (e.g. on Trip, on Operation, on Landing, ...)
+
+ - Forthcoming:
+    * A strategy is applied on one or more period and on one or more locations.
    
 This concept of program / strategies allow us to generate all the fields that user can fill in screens,
 and also all applied controls (min/max, type).
@@ -82,7 +87,7 @@ Each collected data has a root entity, linked to a program.
 - A root entity has some data quality attributes : 
   * A update date, to identify the exact version;
   * A recorder department and person;
-  * A quality flag (e.g. Good, Bad, OUt of stats, ...) used to exclude bad data of exports or map products; 
+  * A quality flag (e.g. Good, Bad, Out of stats, ...) used to exclude bad data on exports or map products; 
 
 ### Trip
 
