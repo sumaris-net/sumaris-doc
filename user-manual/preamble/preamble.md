@@ -11,7 +11,8 @@
 # Preample
 
 SUMARiS is an online entry tool for fisheries data. Developed by E-IS.
-![](./eis.png)
+
+![eis](./eis.png)
 
 This user guide has been delivered based on the database training session that took place in Lille, Tuesday 09 October 2018. During this training, scientists, observers and professional organisations learnt how to manipulate the database. 
 
@@ -19,10 +20,10 @@ This documentation has been reduced to its maximum to help in efficiency for the
 
 This guide presents only a small part of the possibilities of the SUMARiS software and does not act as a complete user manual.
 
-- [Minimum configuration](#minimum-configuration)
-- [Software objectives]()
-- [Features]()
-- [Access to the SUMARiS software]()
+- [Minimum configuration](#minimum_configuration)
+- [Software objectives](#Software_objectives)
+- [Features](#Features)
+- [Access to the SUMARiS software](#Access_to_the_SUMARiS_software)
 
 ## Minimum configuration
 

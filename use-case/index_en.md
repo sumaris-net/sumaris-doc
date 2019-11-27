@@ -1,17 +1,19 @@
 # Functional use cases
 
- - [Administration of referentials]()
- - [Collection of data]()
-    * [CU Entering a sighting on landing]()
-    * [CU Entering an observed landing]()
+Use-cases (UC) define the functional behavior of the SUAMRiS App, for any end-user.
 
-## Administration of referentials
+ - [Administration of referentials](#administration_of_referential)
+ - [Collection of data](#Collection_of_data)
+
+WARN: Work in progess. See [Use-cases in French](index.md) as latest documentation.
+
+## Administration of referential
 
 (ongoing)
 
 ## Collection of data
 
-### CU "Entering a sighting on landing"
+### UC - Entering a sighting on landing
 
 ![observed-location](collect/landing/observed-location-uc.svg)
 
@@ -36,7 +38,7 @@
 ![observed-location-ui-new](collect/landing/observed-location-ui-vessels.svg)
 
 
-### CU "Entering an observed landing"
+### UC - Entering an observed landing
 
 Goal :
 

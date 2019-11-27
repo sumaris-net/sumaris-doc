@@ -6,7 +6,7 @@
 
 - [Functional use case (FR)](use-case/index.md)
 
-- [User manual](user-manual/table-of-contents.md)
+- [User manual](user-manual/index.md)
 
 ## License
 

@@ -1,12 +1,11 @@
 # Cas d'utilisation fonctionnels
 
+Les cas d'utilisation visent à détailler précisémment comment le logiciel doit réagir,
+en fonction des interactions de l'utilisateur final.
+
+Table des matières :  
+
  - [Administration des référentiels](administration/administration.md)
  - [Collecte des données](collect/collect.md)
-    * [CU Saisir une observation au débarquement](collect/landing/landing.md)
-    * [CU Saisir une marée](collect/trip/trip.md)
-    * [CU Saisir des captures débarquées](collect/trip/catches.md)
-    * [CU Saisir des ventes](collect/trip/sales.md)
-    * [CU Saisir des dépenses](collect/trip/expenses.md)
-    * [CU Weekly report](collect/trip/weekly.md)
     
-
+ATTENTION: **en cours en rédaction**. Il se peut que certains paragraphes ne soient pas encore détaillés. 

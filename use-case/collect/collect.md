@@ -1,21 +1,18 @@
 # Cas d'utilisation fonctionnels
 
- - [Administration des référentiels](administration/administration.md)
- - [Collecte des données](collect/collect.md)
-    * [OBSDEB]()
-        * [CU Saisir une observation au débarquement]()
-        * [CU Saisir un débarquement observé]()
-        * [CU Saisir des captures débarquées]()
-        * [CU Saisir des ventes]()
-        * [CU Saisir des dépenses]()
-    * [AutoEchantillonage]()
-    * [Controle-Criee]()
-    * [Logbook]()
+ - [Administration des référentiels](../administration/administration.md)
+ - [Collecte des données](#Collecte des données)
+    * Observations au débarquement (ObdDeb) :
+        * [CU Saisir une observation au débarquement](#CU Saisir une observation au débarquement)
+        * [CU Saisir une marée observée au débarquement](#CU Saisir marée observée au débarquement)
+        * [CU Saisir des captures débarquées](#CU Saisir des captures débarquées)
+        * [CU Saisir des ventes](#CU Saisir des ventes)
+        * [CU Saisir des dépenses](#CU Saisir des dépenses)
 
 
 ## Collecte des données
 
-### CU "Saisir une observation au débarquement"
+### CU Saisir une observation au débarquement
 
 ![observed-location](landing/observed-location-uc.svg)
 
@@ -51,7 +48,7 @@
 
     ![observed-location-ui-new-vessels](landing/observed-location-ui-new-vessels.svg)
  
-### CU "Saisir une marée (= fishing trip dans SFA ObsDeb)"
+### CU Saisir marée observée au débarquement
 
 Objectif :
 
@@ -127,7 +124,7 @@ L'observateur demande la création d'une nouvelle marée, sans
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
-### CU "Saisir des captures débarquées"
+### CU Saisir des captures débarquées
 
 Objectif :
 
@@ -165,9 +162,10 @@ Objectif :
 
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
-### CU "Saisir des ventes" (écran optionnel)
+### CU Saisir des ventes
 
-Objectif :
+Note : Ecran optionel
+Objectif : 
 
 #### Scénario principal
 
@@ -195,7 +193,11 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
 
 ![landing-ui-sales](trip/landing-ui-sales.svg)         
 
-### CU "Saisir des dépenses" (écran optionnel)
+### CU Saisir des dépenses
+
+Note : Ecran optionel
+
+#### Scénario principal
 
 1. Il peut saisir:
 
@@ -228,4 +230,4 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
 
 ![landing-ui-expenses](trip/landing-ui-expenses.svg)   
            
-### CU "Weekly report"
+### CU Saisir un calendrier hebdomadaire
