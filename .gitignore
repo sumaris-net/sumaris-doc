@@ -2,6 +2,6 @@
 .vscode/
 .idea/
 
-
 #dist/**/*.svg
 #dist/**/*.pdf
+model/testdot.svg
