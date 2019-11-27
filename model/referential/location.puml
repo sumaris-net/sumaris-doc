@@ -1,12 +1,24 @@
 @startuml
 
 class Location {
-    +int id
-    +String label
-    +String name
+    +id: int
+    +label
+    +name
 }
 
-enum LocationIds{
+class LocationLevel
+{
+    +id: int
+    +label
+    +name
+}
+
+Location "0..*" -right-> "1" LocationLevel: "      "
+Location "0..*" --> "1" Status
+
+enum "LocationLevelIds  " {
+    COUNTRY: 1
     HARBOUR: 6
+    AUCTION: 7
 }
 @enduml

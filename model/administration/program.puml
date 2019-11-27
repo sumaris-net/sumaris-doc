@@ -1,13 +1,14 @@
 @startuml
 
 class Program {
+ +id
  +label
  +name
 }
 
-Program *-right-> "0..*" Program2Department
-Program *-right-> "0..*" Program2Person
-Program "1" *-down- "0..*" Strategy
+Program *-right-> "0..*" Program2Department: "authorized departments"
+Program *-right-> "0..*" Program2Person: "authorized users"
+Program "1" *-down- "1..*" Strategy: contains
 
 
 @enduml

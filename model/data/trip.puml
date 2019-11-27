@@ -1,0 +1,48 @@
+@startuml
+
+class Vessel {
+}
+
+class Trip {
+  +id
+  +program: Program
+  +departureDateTime
+  +departureLocation: Location
+  +returnDateTime
+  +returnLocation: Location
+}
+
+class PhysicalGear {
+    +id
+    +gear
+}
+
+class Operation {
+    +id
+    +startDateTime
+    +endDateTime
+}
+
+class VesselPosition {
+    +id
+    +dateTime
+    +latitude
+    +longitude
+}
+
+Trip "*" -up-> "1" Vessel
+Trip "1" *-right- "0..*" Operation
+Trip "1" *-right- "0..*" PhysicalGear : "     "
+Trip "1" --> "1..*\nobservers" Person
+
+Operation "1" *-- "0..*" OperationMeasurement
+Operation "0..*" -up-> "1" PhysicalGear
+Operation "0..1" *-down-> "2..*" VesselPosition
+
+PhysicalGear "1" *-down- "0..*" PhysicalGearMeasurement
+
+package "referential" #DDDDDD {
+    PhysicalGear "*" -right-> "1" Gear : "     "
+}
+
+@enduml

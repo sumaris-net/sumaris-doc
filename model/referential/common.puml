@@ -1,14 +1,34 @@
 @startuml
 
+interface ReferentialItem {
+    +id: Int
+    +label: String
+    +name: String
+    +description: String [0..1]
+    +comment: String [0..1]
+    +updateDate: Timestamp
+}
+
+interface ReferentialLevel {
+}
+
 class Status {
-    +int id
-    +String label
-    +String name
+    +id: int
+    +label: String
+    +name: String
 }
 
 enum StatusEnum {
-    DISABLE: 0
-    ENABLE: 1
-    TEMPORARY: 2
+   +DISABLE: 0
+   +ENABLE: 1
+   +TEMPORARY: 2
+   +DELETED: 3
 }
+
+ReferentialItem "0..*" --> "1" Status
+ReferentialItem "0..*" -right-> "0..1" ReferentialLevel: "           "
+
+Status <.left. StatusEnum: is an identifier of
+
+
 @enduml

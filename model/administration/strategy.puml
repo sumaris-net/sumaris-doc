@@ -1,8 +1,6 @@
 @startuml
 
 class Program {
- +label
- +name
 }
 
 Program "0..*" *-down-> "1" Strategy
@@ -29,7 +27,7 @@ class PmfmStrategy {
 
 
 Strategy "1" *--> "0..*" PmfmStrategy
-PmfmStrategy "0..*" -right-> "1" Pmfm
+PmfmStrategy "0..*" -right-> "1" Pmfm: "    "
 PmfmStrategy "0..*" -left-> "1" AcquisitionLevel
 
 PmfmStrategy  --> "0..*" TaxonGroup

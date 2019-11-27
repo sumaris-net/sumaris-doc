@@ -1,0 +1,24 @@
+@startuml
+
+interface RootData {
+    +id: Int
+    +program: Program
+    +updateDate: Timestamp
+    +recorderDepartment: Department
+    +recorderPerson: Person[0..1]
+}
+
+interface ChildData {
+}
+
+RootData "*" -left-> "0..1\n" Vessel: "     "
+RootData "1" --> "0..*\n" ChildData: "     "
+
+package "referential" #DDDDDD {
+    interface ReferentialItem {
+    }
+
+    RootData "1" -right-> "1..*\nobservers" Person: "                         "
+    RootData -right-> ReferentialItem: "use any"
+}
+@enduml
