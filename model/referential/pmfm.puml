@@ -10,8 +10,7 @@ class Pmfm {
 }
 
 class Parameter {
-  +isQualitative
-  +label = code
+  +label
   +name
 }
 
