@@ -28,7 +28,7 @@ enum StatusEnum {
 ReferentialItem "0..*" --> "1" Status
 ReferentialItem "0..*" -right-> "0..1" ReferentialLevel: "           "
 
-Status <.left. StatusEnum: is an identifier of
+Status <.left. StatusEnum: "is an identifier of"
 
 
 @enduml
