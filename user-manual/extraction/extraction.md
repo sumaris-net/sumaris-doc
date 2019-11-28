@@ -1,22 +1,21 @@
 # Quick Start user's guide for SUMARiS web entry software
 
-<u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
+<u>Title</u>: <b>Quick Start user's guide for SUMARiS web entry software</b> 
 
 <u>Author</u>: E-IS	
 
-<u>Date</u>:	October 19, 2019 
+<u>Date</u>: October 19, 2019 
 
 <u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
-# Table of contents
+# Extractions
 
- - [Extractions]()
-    * [Trips extraction module]()
-    * [Automatic filters]()
-    * [Create an aggregation]()
-    * [Maps extraction module]()
-    * [Extraction downloads]()
-    * [EU RGPD standars on personal data]()
+ - [Trips extraction module](#trips_extraction_module)
+ - [Automatic filters](#automatic_filters)
+ - [Create an aggregation](#create_an_aggregation)
+ - [Maps extraction module](#maps_extraction_module)
+ - [Extraction downloads](#extraction_downloads)
+ - [EU RGPD standars on personal data](#eu_rgpd_standars_on_personal_data)
 
 ## Trips extraction module
 
@@ -55,7 +54,7 @@ In the filters panel, it is possible to add or delete one or more search criteri
 Filters specified on high-level records affect low-level records for the same type of data. Thus, it is not necessary to repeat a filter on the HH table, which would have been previously specified for the
 TR table. Also, during several successive queries, remove the previously used filters if necessary for a given recording level.
 
-The automatic filter will allow to use the values  of the fields. The downward pointing triangles corresponding to dropdown lists are displayed near to the field titles - click again on the filter to edit
+The automatic filter will allow to use the values of the fields. The downward pointing triangles corresponding to dropdown lists are displayed near to the field titles - click again on the filter to edit
 the selected field.
 
 To redisplay all the records, just cancel all the filters.
@@ -179,15 +178,15 @@ Example of saved extraction:
 
 ![](./rgpd.png)
 
-Anonymisation   and   pseudonymisation   are   two   personal   data
+Anonymization and pseudonymization are two personal data
 protection techniques assessed under the General Data Protection
 Regulation (GDPR) of May 25, 2018. The first provides increased
 security and the second provides greater flexibility.
 
-As   part   of   the   extraction   of   SUMARiS   data,   the   identity  of   all
-vessels has been pseudonymized, ie it is always possible to identify an individual SHIP through his
-personal data. Indeed, the pseudonymisation consists of replacing one attribute with another within
-a   record;   here,   the   identity  of   the   ship.  The   aim   of   this   pseudonymisation   is  to   privilege   the
+As part of the extraction of SUMARiS data, the identity of all
+vessels has been anonymized, ie it is always possible to identify an individual SHIP through his
+personal data. Indeed, the pseudonymization consists of replacing one attribute with another within
+a record; here, the identity of the ship. The aim of this pseudonymization is to privilege the
 exploitability of data. Their uses therefore remain subject to strict use as defined in the SUMARiS
 project.
 

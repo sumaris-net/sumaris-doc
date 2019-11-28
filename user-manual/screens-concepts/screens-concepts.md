@@ -11,13 +11,12 @@
 
 # Screens concepts, various view
 
-- [Overall design of the entry interface]()
-- [Details of lateral headband]()
-- [Details of primary headband]()
-- [Details of secondary headband]()
-    * [The buttons]()
-    * [The tabs]()
-- [Details of the entry fields]()
+ - [Details of lateral headband](#details_of_lateral_headband)
+ - [Details of primary headband](#details_of_primary_headband)
+ - [Details of secondary headband](#details_of_secondary_headband)
+    * [The buttons](#the_buttons)
+    * [The tabs](#the_tabs)
+ - [Details of the entry fields](#details_of_the_entry_fields)
     
 ## Overall design of the entry interface
 
@@ -90,33 +89,42 @@ There are no tabs in the catch. Only the total catch weight of any species is re
 ## Details of the entry fields
 
 The entry field consists of several types of objects:
-- “Action” buttons: their goal is to close, reset or save the completed entry.
-- Drop-down lists: they allow you to select information from a list, such as vessel registration,
-- The check boxes: when checked, the line is selected. It is possible to select several lines
+
+ - “Action” buttons: their goal is to close, reset or save the completed entry.
+ - Drop-down lists: they allow you to select information from a list, such as vessel registration,
+ - The check boxes: when checked, the line is selected. It is possible to select several lines
 depending on the desired action.
+
 ![](./box.png)
-- The Yes/No spaces: the active value matchs the space where the pointer is visible.
+
+ - The Yes/No spaces: the active value matchs the space where the pointer is visible.
+
 ![](./yes-no.png)
-- Data groups are associated data, for example, date and time.
+
+ - Data groups are associated data, for example, date and time.
+ 
 ![](./date-time.png)
-- Some entry sheets take up space on the screen, so a scroll area is visible to the right of the
-capture area, to move up or down the screen. The mouse wheel can also be used to unroll the
-sheet.
-- When the number of data available for the same table is important, only a few lines are visible. However, it is possible to change the number of data to be displayed, or to move
-forward and backward in its data visualization using the arrows below: 
+
+ - Some entry sheets take up space on the screen, so a scroll area is visible to the right of the
+ capture area, to move up or down the screen. The mouse wheel can also be used to unroll the sheet.
+ 
+ - When the number of data available for the same table is important, only a few lines are visible.
+  However, it is possible to change the number of data to be displayed, or to move forward and backward in 
+  its data visualization using the arrows below:
+   
 ![](./nb-data.png)
-- Drop-down lists help to avoid errors and limit the entry time. They use data referentials.
+
+ - Drop-down lists help to avoid errors and limit the entry time. They use data referential. 
+ 
 ![](./drop-down-list_action-buttons.png)
 
-To select information from a drop-down list, use the keyboard arrows and enter it.
+   To select information from a drop-down list, use the keyboard arrows and enter it.
+   ![](./keyboard.png)
 
-![](./keyboard.png)
+   The information may also be entered but an error will be reported if the data have not been entered correctly.
+   
+   ![](./tab.png)
 
-The information may also be entered but an error will be reported if the data have not been entered
-correctly.
-
-![](./tab.png)
-
-To move from one  entry  field to the next  one, we should use the "tab" key on the
-keyboard. This key has two advantages: following the field entry order and moving the
-cursor in the correct place in the next field.
+   To move from one  entry  field to the next  one, we should use the "tab" key on the
+   keyboard. This key has two advantages: following the field entry order and moving the
+   cursor in the correct place in the next field.

@@ -9,19 +9,18 @@
 <u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
 
-# Table of contents
+## Entry progress / Screenshots
 
- - [Entry progress / Screenshot]()
-    * [Home page]()
-    * [Trips screen]()
-    * [Gears screen]()
-    * [Hauls screen]()
-    * [Catches screen]()
-    * [Survival tests screen]()
-    * [Individual monitoring screen]()
-    * [Releases screen]()
-    * [Batch by species screen]()
-    * [Individual measure screen]()
+ - [Home page](#home_page)
+ - [Trips screen](#trips_screen)
+ - [Gears screen](#gears_screen)
+ - [Hauls screen](#hauls_screen)
+ - [Catches screen](#catches_screen)
+ - [Survival tests screen](#survival_tests_screen)
+ - [Individual monitoring screen](#individual_monitoring_screen)
+ - [Releases screen](#releases_screen)
+ - [Batch by species screen](#batch_by_species_screen)
+ - [Individual measure screen](#individual_measure_screen)
 
 ## Home page
 

@@ -1,16 +1,13 @@
 # Cas d'utilisation fonctionnels
 
- - [Administration des référentiels](../administration/administration.md)
- - [Collecte des données](#Collecte des données)
-    * Observations au débarquement (ObdDeb) :
-        * [CU Saisir une observation au débarquement](#CU Saisir une observation au débarquement)
-        * [CU Saisir une marée observée au débarquement](#CU Saisir marée observée au débarquement)
-        * [CU Saisir des captures débarquées](#CU Saisir des captures débarquées)
-        * [CU Saisir des ventes](#CU Saisir des ventes)
-        * [CU Saisir des dépenses](#CU Saisir des dépenses)
-
-
 ## Collecte des données
+
+ - Observations au débarquement (ObdDeb) :
+    * [CU Saisir une observation au débarquement](#CU_Saisir_une_observation_au_débarquement)
+    * [CU Saisir une marée observée au débarquement](#CU_Saisir_marée_observée_au_débarquement)
+    * [CU Saisir des captures débarquées](#CU_Saisir_des_captures_débarquées)
+    * [CU Saisir des ventes](#CU_Saisir_des_ventes)
+    * [CU Saisir des dépenses](#CU_Saisir_des_dépenses)
 
 ### CU Saisir une observation au débarquement
 

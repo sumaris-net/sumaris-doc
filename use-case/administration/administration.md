@@ -1,20 +1,17 @@
 # Cas d'utilisation fonctionnels
 
- - [Administration des référentiels](administration/administration.md)
- - [Collecte des données](collect/collect.md)
-    * [CU Saisir une observation au débarquement]()
-    * [CU Saisir un débarquement observé]()
-    * [CU Saisir des captures débarquées]()
-    * [CU Saisir des ventes]()
-    * [CU Saisir des dépenses]()
-    
 ## Administration des référentiels
+
+ - [Liste des référentiels](#Liste_des_référentiels)
+ - [Liste des utilisateurs](#Liste_des_utilisateurs)
+ - [Liste des navires](#Liste_des_navires)
+ - [Configuration du serveur](#Configuration_du_serveur)
 
 ### Identification
 
 ![login](../home/home-ui-login.svg)
 
-### Liste des référenciels
+### Liste des référentiels
 
 ![parameter](./parameter-ui.svg)
 

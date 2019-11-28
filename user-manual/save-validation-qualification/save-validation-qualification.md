@@ -8,11 +8,10 @@
 
 <u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
-# Table of contents
+# Save, validation and qualification
 
- - [Save, validation and qualification]()
-     * [Save]()
-     * [Validation and qualification]()
+ - [Save](#save)
+ - [Validation and qualification](#validation_and_qualification)
 
 ## Save
 
