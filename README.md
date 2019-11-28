@@ -12,6 +12,6 @@
 
 All documents and source code are under [License GPL v3](./LICENSE), except user manual that use a CC-by-SA license.
 
-## Need more documentation ?
+## Links
 
-- See the official documentation web site: http://doc.e-is.pro/sumaris/
+ - SUMARiS technical web site: http://doc.e-is.pro/sumaris/
