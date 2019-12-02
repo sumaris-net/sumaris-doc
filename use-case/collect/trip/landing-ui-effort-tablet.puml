@@ -1,0 +1,20 @@
+@startsalt
+{
+  <b>Nouvel engin (intégrer le métier au niveau de l'effort ?)
+  ..
+  .
+  Code du metier*:    | { ^LLSKH - Longlines...^ }
+  Code de l'engin*:     | { ^LL - Longlines...^ | <&plus> }
+  Numéro de l'engin*:     | { " 3 " }
+  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'engin) : | "   5  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+  .
+  Commentaires              | { "commentaires       "}
+  .
+  Capture débarquée par métier |  |  {[<&layers> Entrer la capture]}
+
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
+}
+@endsalt

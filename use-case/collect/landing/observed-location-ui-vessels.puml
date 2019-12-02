@@ -4,7 +4,7 @@
   ..
   {/ General | <b>Navires observés }
   .
-  {[<&plus>]  | [<&trash>] | [<&magnifying-glass>] | [Show the observed vessel from the last 12 month]}
+  {[<&plus>]  | [<&trash>] | [<&magnifying-glass>] | [Montrer les navires observés les 12 derniers mois]}
 
   {#
   # | <b>Type de navire  | <b>Nom     | <b>Immatriculation | <b>Date/Heure validité début     | <b> Base port          | <b>Status

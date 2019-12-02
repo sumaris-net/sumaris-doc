@@ -76,9 +76,13 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-    ![landing-ui-effort](trip/landing-ui-effort.svg)
+   ![landing-ui-effort](trip/landing-ui-effort.svg)
 
-5. Accés à la liste des métiers utilisés les 12 derniers mois
+5. Pour ajouter un nouveau métier, appuyer sur +
+
+   ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
+
+6. Accés à la liste des métiers utilisés les 12 derniers mois
 
     ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
@@ -120,6 +124,11 @@ L'observateur demande la création d'une nouvelle marée, sans
     * Force du courant
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
+
+##### Variante 5.a - Caractéristiques/paramètres métiers pour SFA ObsDeb
+
+![landing-ui-var5a](trip/landing-ui-var5a.svg)
+
 
 ### CU Saisir des captures débarquées
 
