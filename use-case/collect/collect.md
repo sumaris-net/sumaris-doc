@@ -83,11 +83,11 @@ Objectif :
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-<u>Mode bureau : </u>
+<ins>Mode bureau : </ins>
     
 ![landing-ui-effort-desktop](trip/landing-ui-effort-desktop.svg)
     
-<u>Mode tablette :</u>
+<ins>Mode tablette : </ins>
     
 ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
 
