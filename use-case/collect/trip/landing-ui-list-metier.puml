@@ -1,21 +1,42 @@
 @startsalt
 {
-  <b>Metiers utilisés
+  <b>Nouveau débarquement
   ..
-  {<&magnifying-glass> {+  "  Rechercher un métier "    } }
+  {/ <b>General trip | Effort | Capture débarquée | Vente | Dépenses }
   .
+  Programme de collecte:    | { ^SIH-OBSDEB^ }
+  Navire:                   | { ^FRA0001114^ | <&plus> }
+  Lieu de débarquement de la marée*:     | { ^MA - Mahé Island^ }
+  Date/Heure début de marée:  | { ^01/02/2019^ | ^00:00^ }
+  Date/Heure fin de marée:  | { ^01/02/2019^ | ^23:59^ }
+  Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
+  ..
+  <b>Autres caractéristiques:
+  {+
+  Metiers :
+
+
   {
-    {+
-        AQUCUX - Acquaculture
-        FIXAEMP - Active
-        FIXALUB - Active trap
-        FIXSBSX - Static trap
-        GHTRAQ - Hoop/tangel
-        GNCCGX - Encircling
-        LHMEMP - Handlines
-        LHPDPX - Handlines
-    } |<&sort-ascending>
+    {<&magnifying-glass> {+  "  Rechercher un métier "    } }
+    .
+    {
+      {+
+      {*  Metier : Code - Nom
+      Metier : Code - Nom  | <b>Code       -       Nom  | AQUCUX - Acquaculture  | FIXAEMP - Active | LHMEMP - Handlines |  -  | [<&star> 12 derniers mois] | [<&plus>] }
+      } | <&sort-ascending>
+    }
   }
-  .| [<&star> 12 derniers mois] | [<&plus>]
+    }
+  Nombre d'homme à bord           | { "   1  " }
+  Principale zone de pêche        | { ^Valeur qualitative^ }
+  Gradient de distance à la côte  | { ^Valeur qualitative^ }
+  Force du vent                   | { ^Valeur qualitative^ }
+  Force du courant                | { ^Valeur qualitative^ }
+  .
+  Commentaires              | { "commentaires       "}
+
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
 }
 @endsalt

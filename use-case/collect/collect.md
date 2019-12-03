@@ -60,8 +60,7 @@ Objectif :
 
 3. Il saisie :
     * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h)
-    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59)
-    * Date/Heure de début de débarquement (optionnel ; d'office indique la date/heure de la fin de la marée)
+    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59 - correspond à la date/Heure de début de débarquement)
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
@@ -121,7 +120,8 @@ L'observateur demande la création d'une nouvelle marée, sans
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 
 * Autres caractéristiques/paramètres
-    * Métiers observés (possibilité de préciser s'il est principal ou secondaire) / possibilité d'en ajouter plusieurs
+    * Métiers observés (le 1er dans la liste est le principal, les autres sont secondaires) / possibilité d'en ajouter plusieurs
+    Pour la recherche de métier : ouverture d'une fenêtre pop-up en mode dynamique avec les métiers + une zone de recherche
     * Nombre d'hommes à bord
     * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
     * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
@@ -130,7 +130,7 @@ L'observateur demande la création d'une nouvelle marée, sans
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
-Ouverture de la Pop-up : accés à la liste des métiers utilisés les 12 derniers mois
+Ouverture de la liste de la combo métier :
 
 ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
