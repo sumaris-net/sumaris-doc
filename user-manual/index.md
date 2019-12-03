@@ -17,7 +17,7 @@ attached to the entry software V0.18.0
 # Table of contents
 
  - [Preample](preamble/preamble.md)
-    * [Minimum configuration](preamble/preamble.md#minimum_configuration)
+    * [Minimum configuration](preamble/preamble.md#Minimum_configuration)
     * [Software objectives](preamble/preamble.md#software_objectives)
     * [Features](preamble/preamble.md#features)
     * [Access to the SUMARiS software](preamble/preamble.md#access_to_the_sumaris_software)

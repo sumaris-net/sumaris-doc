@@ -67,24 +67,27 @@ Objectif :
 
     ![landing-ui-new](trip/landing-ui-new.svg)
 
-4. Il peut ensuite saisir l'effort de pêche par métier :
+4. Il peut ensuite saisir l'effort de pêche :
+        
+    * Code du métier
+    * Numéro du métier
     * Nombre d'engin
-    * Paramètre propre à l'engin : Nombre d'hameçons ou longueur de filet ou nombre de casiers
+    * Les autres caractéristiques d'effort propres à chaque métier/engin
+    * Paramètre propre à l'engin : 
+        * Nombre d'hameçons 
+        * longueur de filet 
+        * Nombre de casiers
     * Temps passé à pêcher (en jour de mer)
     * Profondeur minimum de l'engin (m)
     * Profondeur maximum de l'engin (m)
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
-   ![landing-ui-effort](trip/landing-ui-effort.svg)
-
-5. Pour ajouter un nouveau métier, appuyer sur +
-
-   ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
-
-6. Accés à la liste des métiers utilisés les 12 derniers mois
-
-    ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
+    Mode bureau : 
+    ![landing-ui-effort-desktop](trip/landing-ui-effort-desktop.svg)
+    
+    Mode tablette :
+    ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
 
 #### Variantes
 
@@ -116,7 +119,7 @@ L'observateur demande la création d'une nouvelle marée, sans
 ##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
 
 * Autres caractéristiques/paramètres
-    * Métiers observés
+    * Métiers observés (possibilité de préciser s'il est principal ou secondaire) / possibilité d'en ajouter plusieurs
     * Nombre d'hommes à bord
     * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
     * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
@@ -125,10 +128,11 @@ L'observateur demande la création d'une nouvelle marée, sans
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
-##### Variante 5.a - Caractéristiques/paramètres métiers pour SFA ObsDeb
+Ouverture de la Pop-up : accés à la liste des métiers utilisés les 12 derniers mois
 
-![landing-ui-var5a](trip/landing-ui-var5a.svg)
+![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
+\[Retour au 4]
 
 ### CU Saisir des captures débarquées
 

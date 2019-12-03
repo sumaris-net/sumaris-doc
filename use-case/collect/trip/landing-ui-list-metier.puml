@@ -1,25 +1,21 @@
 @startsalt
 {
-  <b>Metier(s) utilisé(s)
+  <b>Metiers utilisés
   ..
-  [] Filtrer sur les métiers utilisés les 12 derniers mois
-  .
-  {<&beaker> <&arrow-circle-right> {+  "                              "    }<&sort-ascending>}
+  {<&magnifying-glass> {+  "  Rechercher un métier "    } }
   .
   {
-  {+
-  AQUCUX - Acquaculture
-  FIXAEMP - Active
-  FIXALUB - Active trap
-  FIXSBSX - Static trap
-  GHTRAQ - Hoop/tangel
-  GNCCGX - Encircling
-  LHMEMP - Handlines
-  LHPDPX - Handlines
-  }  <&arrow-thick-left> <&arrow-thick-right> {+
-  AQUCUX - Acquaculture
-  FIXSBSX - Static trap
+    {+
+        AQUCUX - Acquaculture
+        FIXAEMP - Active
+        FIXALUB - Active trap
+        FIXSBSX - Static trap
+        GHTRAQ - Hoop/tangel
+        GNCCGX - Encircling
+        LHMEMP - Handlines
+        LHPDPX - Handlines
+    } |<&sort-ascending>
   }
-  }
+  .| [<&star> 12 derniers mois] | [<&plus>]
 }
 @endsalt

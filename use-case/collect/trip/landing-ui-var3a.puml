@@ -11,12 +11,16 @@
   Date/Heure fin de marée:  | { ^01/02/2019^ | ^23:59^ }
   Date/Heure débarquement:  | { ^01/02/2019^ | ^23:59^ }
   Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
-  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
-  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
-  .                         | { Paramètre 3 (ex: Principale zone de pêche) : | ^Valeur qualitative^ }
-  .                         | { Paramètre 4 (ex: Gradient de distance à la côte): | ^Valeur qualitative^ }
-  .                         | { Paramètre 5 (ex: Force du vent) : | ^Valeur qualitative^ }
-  .                         | { Paramètre 6 (ex: Force du courant): | ^Valeur qualitative^ }
+  ..
+  <b>Autres caractéristiques:
+  Metiers :                       | [] Filter on metiers used the last 12 mois
+  .                   | (<i>ouverture d'une fenêtre pop-up en mode dynamique avec les métiers + une zone de recherche)
+  .                               | { ^Metier #1^ | ^Principal / Secondaire^ | [<&plus>] | [<&x>]}
+  Nombre d'homme à bord           | { "   1  " }
+  Principale zone de pêche        | { ^Valeur qualitative^ }
+  Gradient de distance à la côte  | { ^Valeur qualitative^ }
+  Force du vent                   | { ^Valeur qualitative^ }
+  Force du courant                | { ^Valeur qualitative^ }
   .
   Commentaires              | { "commentaires       "}
 

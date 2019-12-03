@@ -1,13 +1,23 @@
 @startsalt
 {
-  <b>Nouvel engin (intégrer le métier au niveau de l'effort ?)
+  <b> Immat Navire - Lieu - Date fin marée
   ..
   .
-  Code du metier*:    | { ^LLSKH - Longlines...^ }
-  Code de l'engin*:     | { ^LL - Longlines...^ | <&plus> }
-  Numéro de l'engin*:     | { " 3 " }
-  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'engin) : | "   5  " }
-  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+  Code du metier*    | { ^LLSKH - Longlines...^ }
+  Numéro du métier*     | { " 3 " }
+  .
+  <b>Autres caractéristiques:
+  Nombre d'engin*     | { " 5 " }
+  .
+  Paramètre propre à l'engin :
+  <i>(le paramètre adapté s'affiche en fonction du type d'engin sélectionné)
+    * Nombre d'hameçons      | { " 10 " }
+    * Nombre de casiers      | { " 3 " }
+    * Longueur de filet (m)  | { " 30 " }
+  .
+  Temps passé à pêcher (en jour de mer) <i>(1 jour par défaut)  | { "  1  " | jour(s) | "  0  " | minute(s) }
+  Profondeur minimum de pêche de l'engin (m)  | { " 25 " }
+  Profondeur maximum de pêche de l'engin (m)  | { " 40 " }
   .
   Commentaires              | { "commentaires       "}
   .
@@ -15,6 +25,6 @@
 
   -- | --
 
-  .                          | {[Annuler] | [Sauvegarder]}
+  . | {[Annuler] | [Ajouter]}
 }
 @endsalt

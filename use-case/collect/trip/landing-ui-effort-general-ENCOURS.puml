@@ -1,0 +1,42 @@
+@startsalt
+{
+  <b> Caractérisation de l'effort
+  -- | --
+
+  {/<b>Navire | Engin | Metier}
+  .
+  Immatriculation du navire*:    | { ^FR0005...^ }
+  Nom du navire*:     | { " Ocean " }
+  Autres caractéristiques:  | { Paramètre 1 (ex: Puissance en W) : | "   5  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+  .
+  Commentaires              | { "commentaires       "}
+  .
+  Capture débarquée par métier |  |  {[<&layers> Entrer la capture]}
+  ..
+  {/Navire | <b>Engin | Metier}
+  .
+  Code de l'engin*:     | { ^LL - Longlines...^ | <&plus> }
+  Numéro de l'engin*:     | { " 3 " }
+  Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'engin) : | "   5  " }
+  .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+  .
+  Commentaires              | { "commentaires       "}
+  .
+  Capture débarquée par métier |  |  {[<&layers> Entrer la capture]}
+  ..
+    {/Navire | Engin | <b>Metier}
+    .
+    Code du metier*:    | { ^LLSKH - Longlines...^ }
+    Numéro du métier*:     | { " 3 " }
+    Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'engin) : | "   5  " }
+    .                         | { Paramètre 2 : | ^Valeur qualitative^ }
+    .
+    Commentaires              | { "commentaires       "}
+    .
+    Capture débarquée par métier |  |  {[<&layers> Entrer la capture]}
+  -- | --
+
+  .                          | {[Annuler] | [Sauvegarder]}
+}
+@endsalt
