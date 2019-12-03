@@ -126,7 +126,7 @@ L'observateur demande la création d'une nouvelle marée, sans
     * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
     * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
     * Force du vent
-    * Force du courant
+    * Force du courant 
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
