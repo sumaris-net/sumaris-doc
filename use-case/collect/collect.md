@@ -84,9 +84,11 @@ Objectif :
     * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
 
     Mode bureau : 
+    
     ![landing-ui-effort-desktop](trip/landing-ui-effort-desktop.svg)
     
     Mode tablette :
+    
     ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
 
 #### Variantes
