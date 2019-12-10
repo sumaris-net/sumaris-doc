@@ -166,17 +166,21 @@ Objectif :
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
 
     <ins>Mode bureau : </ins>
+    
     ![landing-ui-samples-desktop](trip/landing-ui-samples-desktop.svg)
     
     <ins>Mode tablette : </ins>
+    
     ![landing-ui-samples-tablet](trip/landing-ui-samples-tablet.svg)
 
     L'utilisateur entre la composition par paquet
 
     <ins>Mode bureau : </ins>
+    
     ![landing-ui-composition-desktop](trip/landing-ui-composition-desktop.svg)
 
     <ins>Mode tablette : </ins>
+    
     ![landing-ui-composition-tablet](trip/landing-ui-composition-tablet.svg)
    
 
@@ -212,9 +216,11 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses  
 
     <ins>Mode bureau : </ins>
+    
     ![landing-ui-sales-desktop](trip/landing-ui-sales-desktop.svg)     
 
     <ins>Mode tablette : </ins>
+    
     ![landing-ui-sales-tablet](trip/landing-ui-sales-tablet.svg)   
 
 ### CU Saisir des dépenses
