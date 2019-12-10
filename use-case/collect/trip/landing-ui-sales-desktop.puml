@@ -4,7 +4,7 @@
   ..
   {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
   .
-  {Estimation des ventes (Devise) : <&arrow-circle-right> {+"           " } <&calculator> | {Coût total calculé  {<color:blue> 1987.0} Devise }}
+  {Estimation des ventes (Devise) : <&arrow-circle-right> {+"           " } <&calculator> | {Coût total calculé  {"<color:blue> 1987.0"} Devise }}
   -- | --
   .
   {/ <b>Vente par espèce | Vente par paquet }

@@ -69,7 +69,6 @@ Objectif :
 4. Il peut ensuite saisir l'effort de pêche :
         
     * Code du métier
-    * Numéro du métier
     * Nombre d'engin
     * Les autres caractéristiques d'effort propres à chaque métier/engin
     * Paramètre propre à l'engin : 
@@ -166,11 +165,20 @@ Objectif :
                 
             * Le poids total (kg) de chaque espèce est calculé par composition de paquet
 
-    ![landing-ui-samples](trip/landing-ui-samples.svg)
+    <ins>Mode bureau : </ins>
+    ![landing-ui-samples-desktop](trip/landing-ui-samples-desktop.svg)
+    
+    <ins>Mode tablette : </ins>
+    ![landing-ui-samples-tablet](trip/landing-ui-samples-tablet.svg)
 
     L'utilisateur entre la composition par paquet
 
-    ![landing-ui-composition](trip/landing-ui-composition.svg)
+    <ins>Mode bureau : </ins>
+    ![landing-ui-composition-desktop](trip/landing-ui-composition-desktop.svg)
+
+    <ins>Mode tablette : </ins>
+    ![landing-ui-composition-tablet](trip/landing-ui-composition-tablet.svg)
+   
 
 2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
 
@@ -201,9 +209,13 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
        * Prix moyen estimé de l'espèce par paquet (devise/packet)
        * ou Prix total estimé du paquet (devise)
 
-2 L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses  
+2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses  
 
-![landing-ui-sales](trip/landing-ui-sales.svg)         
+    <ins>Mode bureau : </ins>
+    ![landing-ui-sales-desktop](trip/landing-ui-sales-desktop.svg)     
+
+    <ins>Mode tablette : </ins>
+    ![landing-ui-sales-tablet](trip/landing-ui-sales-tablet.svg)   
 
 ### CU Saisir des dépenses
 

@@ -2,7 +2,6 @@
 {+
   <b>Saisie des mensuration | [Fermer]
   ..
-
   {(X) Saisie par individu | () Saisie du nombre d'individu }
   {
       .
@@ -16,16 +15,12 @@
 
       . |  {[Valider (= Entrer)] | [Annuler la dernière]}
       .
-
     }
-
     {#
       # | <b>Espèce commerciale       |  <b>Sex          | <b>Maturité   | <b>Taille (cm)   | .
       3 | MNZ- Baudroie               | F - Femel...    | M- Mature      | 15.00            | <&trash>
       2 | MNZ- Baudroie                 | F - Femel...    | M- Mature     | 15.00           | <&trash>
       1 | NEP - Langoustine commune    | F - Femel...    | I - Indéter...| 77.50            | <&trash>
     }
-
-
 }
 @endsalt

@@ -1,0 +1,76 @@
+@startsalt
+{
+  <b> Immat Navire - Lieu - Date fin marée - Métier
+  ..
+  {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
+  .
+  {Estimation des ventes (Devise) : {+"           " } <&calculator> | {Coût total calculé  {"<color:blue> 1987.0"} Devise }}
+  -- | --
+  {+
+    <b>Saisie des ventes | [Fermer]
+    ..
+    {(X) Saisie par espèce | () Saisie par paquet }
+    {
+        .
+        Espèce commerciale:                   | { ^Albakor            ^ | [] Valeur par défaut }
+        <i>Espèce scientifique (optionnel):   | { ^<i>Thunnus alalunga^ | [] <i>Conserver la valeur }
+        Type de vente                   | { ^Market   ^ | [X] Conserver la valeur }     | %* | { " 100  " }
+        Poids Ech. (kg):                | { "          120.0  "  }
+        Nombre d'individus :            | { "          26  "  }
+        Packaging:                      | { ^Unit     ^ | [X] Conserver la valeur }
+        Prix moyen (Devise/kg)          | { "               7.0  "  }
+        Prix moyen (Devise/packaging)   | { "<color:blue><i>60.67 "  }
+        Prix total (Devise)             | { "<color:blue><i>182.0"  }
+        .
+        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+        -- | --
+        .
+    }
+  }
+    {
+  ..
+  .
+      {#
+          # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv    | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise)
+          3 | Albakor               | market               | 100.0 | <color:blue><i>120.0           | 26 | Unit         | 7.0 | <color:blue><i>60.67 | <color:blue><i>182.0
+          2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit         | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0
+          1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit         | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0
+      }
+    }
+  .
+  -- | --
+  .
+  {
+  ..
+  {+
+    <b>Saisie des ventes | [Fermer]
+    ..
+    {() Saisie par espèce | (X) Saisie par paquet }
+    {
+        .
+        Paquet          | { ^1            ^} <color:green><i>(i) Composition
+        Type de vente                   | { ^Fishmonger   ^ | [X] Conserver la valeur }
+        Nombre de paquets :            | { "          5  "  }
+        Poids (kg):                | { "          484.0  "  }
+        Prix moyen (Devise/packaging)   | { "20.0 "  }
+        Prix total (Devise)             | { "<color:blue><i>100.0"  }
+        .
+        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+        -- | --
+        .
+    }
+  }
+    {
+  ..
+  .
+}
+      {#
+          # | <b>ID | <b>Detail         | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
+          1 | 1     | <&comment-square> | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
+      }
+  }
+  .
+  -- | --
+  {{[Fermer et retour à l'observation] | [Saisir les dépenses]}}
+}
+@endsalt

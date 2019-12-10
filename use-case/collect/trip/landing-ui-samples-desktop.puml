@@ -14,9 +14,9 @@
   {[<&plus>]  | [<&sort-ascending>] | [<&minus>]}
 
   {#
-  # | <b>Espèce commerciale         | <b>Poids Ech. (kg)   | <b>NB indiv | <b>Packaging | <b>Effort
-  1 | Anba Iasann - PWT     | 200.0             | 45 | Unit | FIXABSX - Active trap for Vyey - FIXA - Active trap - 01/10/2019 00:00
-  2 | Barwa - LXN     | 26.0             | 3 | Unit | FIXABSX - Active trap for Vyey - FIXA - Active trap - 01/10/2019 00:00
+  # | <b>Espèce commerciale         | <b>Poids Ech. (kg)   | <b>NB indiv | <b>Packaging | <b>Preservation | <b>Presentation | <b>Cat Tri
+  1 | Anba Iasann - PWT     | 200.0             | 45 | Unit | Frais | Entier | Unsorted
+  2 | Barwa - LXN     | 26.0             | 3 | Unit | Frais | Entier | Unsorted
   }
   }
   .
@@ -29,8 +29,8 @@
   {[<&plus>]  | [<&spreadsheet>] | [<&minus>]}
 
   {#
-  # | <b>ID | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Effort* | <b>Composition | <b>Detail
-  1 | 1     | 5             | 484.0 | FIXABSX - Active trap for Vyey - FIXA - Active trap - 01/10/2019 00:00 | <&layers> | <&comment-square>
+  # | <b>ID | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Composition | <b>Detail
+  1 | 1     | 5             | 484.0 | <&layers> | <&comment-square>
   }
   }
   .

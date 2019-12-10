@@ -5,7 +5,8 @@
   {/ General trip | <b>Effort | Capture débarquée | Vente | Dépenses }
   .
   [] Filter on metiers used the last 12 mois
-  (<i>ouverture d'une fenêtre pop-up en mode dynamique avec les métiers + une zone de recherche)
+  (<i>Pur filtrer les métiers sir les 12 derniers mois, cliquer sur "+"
+  <i>une fenêtre pop-up s'ouvre alors en mode dynamique avec la liste des métiers)
   .
   {[<&plus>]  | [<&trash>]}
 

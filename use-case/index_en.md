@@ -58,7 +58,7 @@ Goal :
 
 3. He can then enter the landed catch :
 
-![landing-ui-new](collect/trip/landing-ui-samples.svg)
+![landing-ui-new](collect/trip/landing-ui-samples-desktop.svg)
 
 4. The user saves his changes
 
