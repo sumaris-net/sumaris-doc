@@ -9,6 +9,7 @@
   <b>Détail des dépenses
   ..
   .
+  {
     {/ <b>Fluides de fonctionnement | Frais annexes | Glace utilisée | Appâts }
   .
     {
@@ -17,31 +18,37 @@
     huile de moteur :   | { <&arrow-circle-right> {+"           " } <&calculator>} | {<&arrow-circle-right> {+"           " } <&calculator>} | {<&arrow-circle-right> {+"           " } <&calculator>}
     huile hydraulique : | { <&arrow-circle-right> {+"           " } <&calculator>} | {<&arrow-circle-right> {+"           " } <&calculator>} | {<&arrow-circle-right> {+"           " } <&calculator>}
     }
+  }
   .
   -- | --
   .
     {/ Fluides de fonctionnement | <b>Frais annexes | Glace utilisée | Appâts }
-
+   {
     Frais de débarquement | { <&arrow-circle-right> {+"           " } <&calculator>} | {Devise}
     Alimentation          | { <&arrow-circle-right> {+"           " } <&calculator>} | {Devise}
     Perte d'engin         | { <&arrow-circle-right> {+"           " } <&calculator>} | {Devise}
     Autre                 | { <&arrow-circle-right> {+"           " } <&calculator>} | {Devise}
     .
     Commentaires              | { "commentaires       "}
+  }
   .
   -- | --
   .
     {/ Fluides de fonctionnement | Frais annexes | <b>Glace utilisée | Appâts }
-
+    .
+  {
     {Quantité de glace | <&arrow-circle-right> {+"           " } <&calculator>}  | { ^Unité (au kg ou par sac)^ } | { Coût de la glace | <&arrow-circle-right> {+"           " } <&calculator> | Devise}
+  }
   .
   -- | --
   .
     {/ Fluides de fonctionnement | Frais annexes | Glace utilisée | <b>Appâts }
-
+    .
+   {
     { ^Type d'appât^ } | {Nombre d'appâts <&arrow-circle-right> {+"           " } <&calculator>} | { ^Unité de conditionnement (kg, unité, sac ou paquet)^ } | { Coût des appâts | <&arrow-circle-right> {+"           " } <&calculator> | Devise}
     { ^Type d'appât^ } | {Nombre d'appâts <&arrow-circle-right> {+"           " } <&calculator>} | { ^Unité de conditionnement (kg, unité, sac ou paquet)^ } | { Coût des appâts | <&arrow-circle-right> {+"           " } <&calculator> | Devise}
     { ^Type d'appât^ } | {Nombre d'appâts <&arrow-circle-right> {+"           " } <&calculator>} | { ^Unité de conditionnement (kg, unité, sac ou paquet)^ } | { Coût des appâts | <&arrow-circle-right> {+"           " } <&calculator> | Devise}
+  }
   .
   -- | --
   {{[Fermer et retour à l'observation] | [Enregistrer]}}
