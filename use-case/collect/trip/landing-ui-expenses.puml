@@ -46,7 +46,9 @@
     {/ Fluides de fonctionnement | Frais annexes | Glace utilisée | <b>Appâts }
     .
    {
-    { ^Type d'appât^ } | {Nombre d'appâts {+"           " } } | { ^Unité de conditionnement^ } | { Coût des appâts | {+"           " } | Devise} {[<&plus>] }
+    { ^Type d'appât^ } | {Nombre d'appâts {+"           " } } | { ^Unité de conditionnement^ }
+    . | { Coût des appâts | {+"           " } | Devise}
+    {[<&plus>] }
   }
   .
   -- | --
