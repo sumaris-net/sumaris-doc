@@ -24,10 +24,10 @@
   .
     {/ Fluides de fonctionnement | <b>Frais annexes | Glace utilisée | Appâts }
    {
-    Frais de débarquement | { {+"           " } } | {Devise}
-    Alimentation          | { {+"           " } } | {Devise}
-    Perte d'engin         | { {+"           " } } | {Devise}
-    Autre                 | { {+"           " } } | {Devise}
+    Frais de débarquement | {+"           " } | Devise
+    Alimentation          | {+"           " } | Devise
+    Perte d'engin         | {+"           " } | Devise
+    Autre                 | {+"           " } | Devise
     .
     Commentaires              | { "commentaires       "}
   }
@@ -37,8 +37,8 @@
     {/ Fluides de fonctionnement | Frais annexes | <b>Glace utilisée | Appâts }
     .
   {
-    {Quantité de glace | {+"           " } }  | { ^Unité (au kg ou par sac)^ }
-    { Coût de la glace | {+"           " }  | Devise}
+    Quantité de glace | {+"           " }  | ^Unité (au kg ou par sac)^
+    Coût de la glace | {+"           " }  | Devise
   }
   .
   -- | --
@@ -46,8 +46,8 @@
     {/ Fluides de fonctionnement | Frais annexes | Glace utilisée | <b>Appâts }
     .
    {
-    { ^Type d'appât^ } | {Nombre d'appâts {+"           " } } | { ^Unité de conditionnement^ }
-    . | { Coût des appâts | {+"           " } | Devise}
+    { ^Type d'appât^ } | Nombre d'appâts {+"           " } | ^Unité de conditionnement^
+    . | Coût des appâts | {+"           " } | Devise
     {[<&plus>] }
   }
   .
