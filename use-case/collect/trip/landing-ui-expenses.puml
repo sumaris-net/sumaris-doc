@@ -14,9 +14,9 @@
   .
     {
     .                   | {Volume (L)} | {Prix (Devise/L)} | {Prix total (Devise)}
-    { ^Carburant^ }     | { {+"           " } } | { {+"           " } <&calculator>} | { {+"           " } }
-    huile de moteur :   | { {+"           " } } | { {+"           " } <&calculator>} | { {+"           " } }
-    huile hydraulique : | { {+"           " } } | { {+"           " } <&calculator>} | { {+"           " } }
+    { ^Carburant^ }     | { {+"           " } } | { {+"           " } } | { {+"           " } }
+    huile de moteur :   | { {+"           " } } | { {+"           " } } | { {+"           " } }
+    huile hydraulique : | { {+"           " } } | { {+"           " } } | { {+"           " } }
     }
   }
   .
