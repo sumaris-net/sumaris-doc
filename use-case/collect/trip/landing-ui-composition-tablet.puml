@@ -16,7 +16,7 @@
   .
   Espèce commerciale*:       | { ^ Anba lasann ^ | [] Valeur par défaut }
   % (Σ=100) :               | { "    10    " }
-  . |  {[Ajouter (= Entrer)] | [Annuler la dernière]}
+  . |  {[Ajouter (= Entrer)] | [Annuler la dernière saisie]}
   .
       {#
         # | <b>Lot de paquets  | <b>Espèce commerciale  | <b>% (Σ=100) | .

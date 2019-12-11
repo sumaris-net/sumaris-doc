@@ -56,7 +56,7 @@
         Prix moyen (Devise/packaging)   | { "         20.0       "  }
         Prix total (Devise)             | { "<color:blue><i>100.0"  }
         .
-        . |  {[Ajouter (= Entrer)] | [Annuler la dernière]}
+        . |  {[Ajouter (= Entrer)] | [Annuler la dernière saisie]}
     }
   }
     {
