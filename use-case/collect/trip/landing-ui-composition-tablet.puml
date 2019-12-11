@@ -1,12 +1,12 @@
 @startsalt
 {
-  <b> Composition du paquet | [Fermer]
+  <b> Echantillonage des paquets | [Fermer]
   -- | --
   {(X) Saisie mode rafale  }
   {
     .
-    {Nombre de paquet : {+"   55 " } <&calculator> | {Poids total des paquets calculé {+  "<color:blue><i>527,10"}}}
-    {Nombre d'échantillon saisi : {+ "<color:blue><i>6" } | {<i>Valeur s'incrémente toute seule (6=valeur maximum par defaut pour SFA)} }
+    {ID Lot| " 2  " | Nombre de paquet : {"<color:blue><i>55 "} | {Poids total des paquets calculé { "<color:blue><i>527,10"}}}
+    {Nombre d'échantillon saisi : {"<color:blue><i>6"} | {<i>Valeur s'incrémente toute seule (6=valeur maximum par defaut pour SFA)} }
   }
 .
 ..
@@ -16,12 +16,12 @@
   .
   Espèce commerciale*:       | { ^ Anba lasann ^ | [] Valeur par défaut }
   % (Σ=100) :               | { "    10    " }
-  . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+  . |  {[Ajouter (= Entrer)] | [Annuler la dernière]}
   .
       {#
-        # | <b>Espèce commerciale  | <b>% (Σ=100) | .
-        2 | Anba lasann            | 10           | <&trash>
-        1 | Albakor                | 90           | <&trash>
+        # | <b>Lot de paquets  | <b>Espèce commerciale  | <b>% (Σ=100) | .
+        2 | Lot 2 - 55 paquets | Anba lasann            | 10           | <&trash>
+        1 | Lot 2 - 55 paquets | Albakor                | 90           | <&trash>
       } | {<color:red><i>Si la Σ n'est pas égal à 100 %,
       <color:red><i>alors il n'est as possible de valider l'échantillon }
   .
@@ -33,10 +33,10 @@
   {+
     <b>Poids estimé calculé par espèce pour le paquet (kg) :
     {#
-        # | <b>Espèce commerciale*  | <b>Poids (kg)*
-        1 | Albakor                 | <color:blue><i>241.03
-        2 | Anba lasann             | <color:blue><i>180.97
-        3 | Babonn Zonn             | <color:blue><i>105.10
+        # | <b>Lot de paquets  | <b>Espèce commerciale*  | <b>Poids (kg)*
+        1 | Lot 2 - 55 paquets | Albakor                 | <color:blue><i>241.03
+        2 | Lot 2 - 55 paquets | Anba lasann             | <color:blue><i>180.97
+        3 | Lot 2 - 55 paquets | Babonn Zonn             | <color:blue><i>105.10
     }
   }
 

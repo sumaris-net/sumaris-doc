@@ -10,52 +10,57 @@
   {+
     <b>Saisie des capture débarquée par effort | [Fermer]
     ..
-    {(X) Saisie par espèce | () Saisie par paquet }
+    {(X) <b>Saisie par espèce | () Saisie par paquet }
     {
         .
         Espèce commerciale:                   | { ^Albakor            ^ | [] Valeur par défaut }
         <i>Espèce scientifique (optionnel):   | { ^<i>Thunnus alalunga^ | [] <i>Conserver la valeur }
-        Poids Ech. (kg):                      | { "          120.0  "  }
-        Nombre d'individus :                  | { "          26  "  }
+        Poids Ech. (kg):                      | { "        20.0  "  }
+        Nombre d'individus :                  | { "         26   "  }
         Packaging:                | { ^Unit     ^ | [X] Conserver la valeur }
         Preservation:             | { ^Entier   ^ | [X] Conserver la valeur }
         Catégorie de tri:         | { ^Non-trié ^ | [X] Conserver la valeur }
         .
-        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
+        . |  {[Ajouter] | [Annuler la dernière]}
         -- | --
         .
     }
     {#
-        # | <b>Espèce commerciale   | <b>Poids Ech. (kg)   | <b>NB indiv | <b>Packaging | <b>Preservation | <b>Presentation | <b>Cat Tri | .
-        3 | Albakor                 | 120.0                | 26          | Unit         | Frais           | Entier          | Non-trié   | <&trash>
-        2 | Barwa - LXN             | 26.0                 | 3           | Unit         | Frais           | Entier          | Non-trié   | <&trash>
-        1 | Anba Iasann - PWT       | 200.0                | 45          | Unit         | Frais           | Entier          | Non-trié   | <&trash>
+        # | Metier                          | <b>Espèce commerciale   | <b>Poids Ech. (kg)   | <b>NB indiv | <b>Packaging | <b>Preservation | <b>Presentation | <b>Cat Tri | .
+        3 | FIXABSX - Active trap for Vyey  | Albakor                 | 20.0                 | 26          | Unit         | Frais           | Entier          | Non-trié   | <&trash>
+        2 | FIXABSX - Active trap for Vyey  | Barwa - LXN             | 26.0                 | 3           | Unit         | Frais           | Entier          | Non-trié   | <&trash>
+        1 | FIXABSX - Active trap for Vyey  | Anba Iasann - PWT       | 200.0                | 45          | Unit         | Frais           | Entier          | Non-trié   | <&trash>
     }
   }
   .
-  ..
+  -- | --
   {{[Fermer et retour à l'observation] | [Saisir la vente]}}
 
-  -- | --
+  == | ==
   .
   {+
     <b>Saisie des capture débarquée par effort | [Fermer]
     ..
-      {() Saisie par espèce | (X) Saisie par paquet }
-      {
+    {() Saisie par espèce | (X) <b>Saisie par paquet }
+    {
+        <b> Lot de paquets :
+        ..
         .
-        Nombre de paquet : | {"   55    "  |  [Détail de la composition] }
-        -- | --
-        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
-        .
-      }
-      {#
-         # | <b>ID | <b>Nombre de paquets*)   | <b> Poids (kg)*         | <b>Detail de la composition | .
-         1 | 1     | 55                       | <color:blue><i>527.10   | <&layers>                   | <&trash>
-      }
+        Nombre de paquets : | {"   55    "  |  [Composition des paquets échantillonnés] }
+        .. |..
+        . |  {[Ajouter] | [Annuler la dernière]}
+    }
   }
   .
-  ..
+  {
+    {#
+         # | Metier                          | <b>ID Lot*  | <b>Nombre de paquets*   | <b> Poids (kg)*         | <b>Composition des paquets | .
+         2 | FIXABSX - Active trap for Vyey  | Lot 2       | 55                      | <color:blue><i>527.10   | <&layers>                   | <&trash>
+         1 | FIXABSX - Active trap for Vyey  | Lot 1       | 20                      | <color:blue><i>256.30   | <&layers>                   | <&trash>
+    }
+  }
+  .
+  -- | --
   {{[Fermer et retour à l'observation] | [Saisir la vente]}}
 }
 @endsalt

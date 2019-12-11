@@ -4,27 +4,25 @@
   ..
   {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
   .
-  {Estimation des ventes (Devise) : {+"           " } <&calculator> | {Coût total calculé  {"<color:blue> 1987.0"} Devise }}
+  {Estimation des ventes (Devise) : {+"           " } | {Coût total calculé  {"<color:blue><i> 1987.0"} Devise }}
   -- | --
   {+
     <b>Saisie des ventes | [Fermer]
     ..
-    {(X) Saisie par espèce | () Saisie par paquet }
+    {(X) <b>Saisie par espèce | () Saisie par paquet }
     {
         .
         Espèce commerciale:                   | { ^Albakor            ^ | [] Valeur par défaut }
         <i>Espèce scientifique (optionnel):   | { ^<i>Thunnus alalunga^ | [] <i>Conserver la valeur }
-        Type de vente                   | { ^Market   ^ | [X] Conserver la valeur }     | %* | { " 100  " }
-        Poids Ech. (kg):                | { "          120.0  "  }
-        Nombre d'individus :            | { "          26  "  }
+        Type de vente                   | { ^Market   ^ | [X] Conserver la valeur } | Part (%)* | { "  100  " }
+        Poids Ech. (kg):                | { "     120.0          "  }
+        Nombre d'individus :            | { "      26            "  }
         Packaging:                      | { ^Unit     ^ | [X] Conserver la valeur }
         Prix moyen (Devise/kg)          | { "               7.0  "  }
-        Prix moyen (Devise/packaging)   | { "<color:blue><i>60.67 "  }
+        Prix moyen (Devise/packaging)   | { "<color:blue><i>60.67"  }
         Prix total (Devise)             | { "<color:blue><i>182.0"  }
         .
-        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
-        -- | --
-        .
+        . |  {[Ajouter (=Entrer)] | [Annuler la dernière]}
     }
   }
     {
@@ -37,27 +35,28 @@
           1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit         | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0
       }
     }
+    .
+    -- | --
+    {{[Fermer et retour à l'observation] | [Saisir les dépenses]}}
   .
-  -- | --
+  == | ==
   .
   {
   ..
   {+
     <b>Saisie des ventes | [Fermer]
     ..
-    {() Saisie par espèce | (X) Saisie par paquet }
+    {() Saisie par espèce | (X) <b>Saisie par paquet }
     {
         .
-        Paquet          | { ^1            ^} <color:green><i>(i) Composition
-        Type de vente                   | { ^Fishmonger   ^ | [X] Conserver la valeur }
-        Nombre de paquets :            | { "          5  "  }
-        Poids (kg):                | { "          484.0  "  }
-        Prix moyen (Devise/packaging)   | { "20.0 "  }
+        Lot de paquets          | { ^ Lot 2 - 55 paquets  ^ | <&info> <color:green><i> Ouverture d'une pop-up d'information sur la composition par espèce avec les poids }
+        Type de vente           | { ^Fishmonger   ^ | [X] Conserver la valeur }
+        Nombre de paquets :     | { "          5         "  }
+        Poids (kg):             | { "<color:blue><i>484.0"  }
+        Prix moyen (Devise/packaging)   | { "         20.0       "  }
         Prix total (Devise)             | { "<color:blue><i>100.0"  }
         .
-        . |  {[Valider (= Entrer)] | [Annuler la dernière]}
-        -- | --
-        .
+        . |  {[Ajouter (= Entrer)] | [Annuler la dernière]}
     }
   }
     {
@@ -65,8 +64,9 @@
   .
 }
       {#
-          # | <b>ID | <b>Detail         | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
-          1 | 1     | <&comment-square> | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
+          # | <b>Lot de paquets  | <b>Composition   | <b>Type de vente | <b>Nombre de paquets*) | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
+          2 | Lot 2 - 55 paquets | <&info>          | Fishmonger       | 5                      | 484.0           | 20.0                          | <color:blue><i>100.0
+          1 | Lot 1 - 26 paquets | <&info>          | Market           | 21                     | 484.0           | 12.0                          | <color:blue><i>252.0
       }
   }
   .
