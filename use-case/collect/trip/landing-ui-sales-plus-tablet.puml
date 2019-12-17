@@ -1,0 +1,78 @@
+@startsalt
+{
+  <b> Immat Navire - Lieu - Date fin marée - Métier
+  ..
+  {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
+  .
+  {Estimation des ventes (Devise) : {+"   2000,0     " } | {Coût total calculé  {"<color:blue><i> 1987.0"} Devise }}
+  -- | --
+  {+
+    <b>Saisie des ventes | [Fermer]
+    ..
+    {(X) <b>Saisie par espèce | () Saisie par paquet }
+    {
+        .
+        Espèce commerciale:                   | { ^Albakor                 ^ | [] Valeur par défaut }
+        <i>Espèce scientifique (optionnel):   | { ^<i>Thunnus alalunga     ^ | [] <i>Conserver la valeur }
+        Type de vente                   | { ^Market             ^ | [X] Conserver la valeur } | { ^Fishmonger         ^ | [<&plus>]}
+        Part (%)*                       | { "  40                " }                          | { "  60                "}
+        Poids Ech. (kg):                | { "     48.0           " }                          | { "     72.0           "}
+        Nombre d'individus :            | { "      10            " }                          | { "      16            "}
+        Packaging:                      | { ^Unit        ^ | [X] Conserver la valeur }           | { ^Unit        ^ }
+        Prix moyen (Devise/kg)          | { "               3.0  "  }                         | { "3.0                 " | <color:red><i>Prix modifiable }
+        Prix moyen (Devise/packaging)   | { "               60.67"  }                         | { "60.67               " | <color:red><i>Prix modifiable }
+        Prix total (Devise)             | { "<color:blue><i>144.0"  }                         | { "<color:blue><i>216.0"  }
+        .
+        . |  {[Ajouter (=Entrer)] | [Annuler la dernière]}
+    }
+  }
+    {
+  ..
+  .
+      {#
+          # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg)     | <b>NB indiv    | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging)  | <b>Prix total (Devise)
+          4 | Albakor               | Fishmonger           |  60.0 | <color:blue><i>72.0    | 10             | Unit         | 3.0                       | <color:blue><i>60.67              | <color:blue><i>216.0
+          3 | Albakor               | market               |  40.0 | <color:blue><i>48.0    | 16             | Unit         | 3.0                       | <color:blue><i>60.67              | <color:blue><i>144.0
+          2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0    | 3              | Unit         | 2.5                       | <color:blue><i>11.11              | <color:blue><i>500.0
+          1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0   | 45             | Unit         | 5.0                       | <color:blue><i>67.0               | <color:blue><i>335.0
+      }
+    }
+    .
+    -- | --
+    {{[Fermer et retour à l'observation] | [Saisir les dépenses]}}
+  .
+  == | ==
+  .
+  {
+  ..
+  {+
+    <b>Saisie des ventes | [Fermer]
+    ..
+    {() Saisie par espèce | (X) <b>Saisie par paquet }
+    {
+        .
+        Lot de paquets          | { ^ Lot 2 - 55 paquets  ^ | <&info> <color:green><i> Ouverture d'une pop-up d'information sur la composition par espèce avec les poids }
+        Type de vente           | { ^Fishmonger   ^ | [X] Conserver la valeur }
+        Nombre de paquets :     | { "          5         "  }
+        Poids (kg):             | { "<color:blue><i>484.0"  }
+        Prix moyen (Devise/packaging)   | { "         20.0       "  }
+        Prix total (Devise)             | { "<color:blue><i>100.0"  }
+        .
+        . |  {[Ajouter (= Entrer)] | [Annuler la dernière saisie]}
+    }
+  }
+    {
+  ..
+  .
+}
+      {#
+          # | <b>Lot de paquets  | <b>Composition   | <b>Type de vente | <b>Nombre de paquets*) | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
+          2 | Lot 2 - 55 paquets | <&info>          | Fishmonger       | 5                      | 484.0           | 20.0                          | <color:blue><i>100.0
+          1 | Lot 1 - 26 paquets | <&info>          | Market           | 21                     | 484.0           | 12.0                          | <color:blue><i>252.0
+      }
+  }
+  .
+  -- | --
+  {{[Fermer et retour à l'observation] | [Saisir les dépenses]}}
+}
+@endsalt

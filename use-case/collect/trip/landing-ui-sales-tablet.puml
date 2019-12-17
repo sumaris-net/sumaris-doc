@@ -4,7 +4,7 @@
   ..
   {/ General trip | Effort | Capture débarquée | <b>Vente | Dépenses }
   .
-  {Estimation des ventes (Devise) : {+"           " } | {Coût total calculé  {"<color:blue><i> 1987.0"} Devise }}
+  {Estimation des ventes (Devise) : {+"   2000,0     " } | {Coût total calculé  {"<color:blue><i> 1987.0"} Devise }}
   -- | --
   {+
     <b>Saisie des ventes | [Fermer]
@@ -14,7 +14,8 @@
         .
         Espèce commerciale:                   | { ^Albakor            ^ | [] Valeur par défaut }
         <i>Espèce scientifique (optionnel):   | { ^<i>Thunnus alalunga^ | [] <i>Conserver la valeur }
-        Type de vente                   | { ^Market   ^ | [X] Conserver la valeur } | Part (%)* | { "  100  " }
+        Type de vente                   | { ^Market   ^ | [X] Conserver la valeur | [<&plus>]}
+        Part (%)* | { "  100               " }
         Poids Ech. (kg):                | { "     120.0          "  }
         Nombre d'individus :            | { "      26            "  }
         Packaging:                      | { ^Unit     ^ | [X] Conserver la valeur }

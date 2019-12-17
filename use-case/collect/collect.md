@@ -223,6 +223,12 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
     
     ![landing-ui-sales-tablet](trip/landing-ui-sales-tablet.svg)   
 
+    Si plusieurs type de vente à saisir pour une même marée, alors, possibilité d'en ajouter :
+
+    <ins>Mode tablette : </ins>
+    
+    ![landing-ui-sales-plus-tablet](trip/landing-ui-sales-plus-tablet.svg)  
+
 ### CU Saisir des dépenses
 
 Note : Ecran optionel

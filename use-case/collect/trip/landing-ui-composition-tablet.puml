@@ -12,7 +12,7 @@
 ..
   {+
   <b>Ajouter un échantillon :
-  Poids de l'échantillon (kg):              | { "          160  "  }
+  Poids de l'échantillon (kg):              | { "          38  "  }
   .
   Espèce commerciale*:       | { ^ Anba lasann ^ | [] Valeur par défaut }
   % (Σ=100) :               | { "    10    " }
