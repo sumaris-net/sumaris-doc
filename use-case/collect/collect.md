@@ -257,7 +257,7 @@ Note : Ecran optionel
        * Unité (au kg ou par sac)
        * Coût de la glace (devise)
     * Appâts :
-       * Type d'appâts (pas plus de 3 types maximum pour la SFA) --> représentation en tableau
+       * Type d'appâts (pas plus de 3 types maximum pour la SFA)
        * Nombre d'appâts 
        * Unité de conditionnement des appâts (au kg, à l'unité, au sac ou au paquet)
        * Coût des appâts
