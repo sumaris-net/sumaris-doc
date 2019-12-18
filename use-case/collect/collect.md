@@ -267,3 +267,22 @@ Note : Ecran optionel
 ![landing-ui-expenses](trip/landing-ui-expenses.svg)   
            
 ### CU Saisir un calendrier hebdomadaire
+
+L'observateur demande la création d'une nouveau calendrier hebdomadaire
+
+1. Il saisit :
+
+    * Le programme de collecte
+    * Le navire observé
+    * Le lieu du débarquement
+    * Date/heure de début de la semaine (heure est d'office 00h00)
+    * Date/heure de fin de la semaine saisie automatiquement J+6 (heure est d'office 23h59)
+    * Les observateurs (au moins un obligatoire)
+    * Un commentaire (optionnel)
+
+![weekly-ui-new](trip/weekly-ui-new.svg)
+
+
+Création 
+
+![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)  

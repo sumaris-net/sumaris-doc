@@ -1,0 +1,41 @@
+@startsalt
+{
+  <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
+  ..
+  {/ <b>Information générale | Activités des navires }
+  .
+  {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>] | [<&x>]}}
+  .
+  {+
+    {<b>Activité du navire</b> | { "<color:blue><i>SZ190 - Ziblo"} {[<&plus>] | [<&minus>]}}
+    ..
+    {
+        Situation:   | { ^DP - Departing^ | [] Conserver la valeur }
+    }
+    .
+    {+
+        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]}
+
+        {
+            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
+            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
+        }
+        .
+        {
+            [Lundi      ]   | <&eye>
+            [<b>Mardi   ]   | [<&eye>]
+            [Mercredi   ]   | <&eye>
+            [Jeudi      ]   | <&eye>
+            [<b>Vendredi]   | [<&eye>]
+            [Samedi     ]   | <&eye>
+            [Dimanche   ]   | <&eye>
+        }
+        {. | {[Ajouter un métier (= Entrer)] | [Annuler la dernière]}}
+    }
+    .
+        {. |  {[Ajouter une situation (=Entrer)] | [Annuler la dernière]}}
+  }
+  .
+  {[Fermer et retour à l'observation]}
+}
+@endsalt

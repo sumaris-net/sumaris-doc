@@ -5,7 +5,7 @@
   {/ <b>General trip | Effort | Capture débarquée | Vente | Dépenses }
   .
   Programme de collecte*:    | { ^SIH-OBSDEB^ }
-  Navire*:                   | { ^FRA0001114^ | <&plus> }
+  Navire*:                   | { ^FRA0001114^ | [<&plus>] }
   Lieu de débarquement de la marée*:     | { ^MA - Mahé Island^ }
   Date/Heure début de marée:  | { ^01/02/2019^ | ^00:00^ }
   Date/Heure fin de marée:  | { ^01/02/2019^ | ^23:59^ }
