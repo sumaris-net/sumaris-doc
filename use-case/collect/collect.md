@@ -264,7 +264,7 @@ Note : Ecran optionel
 
 2. L'utilisateur sauvegarde ses modifications.
 
-![landing-ui-expenses](trip/landing-ui-expenses.svg)   
+![landing-ui-expenses](trip/landing-ui-expenses.svg)  
            
 ### CU Saisir un calendrier hebdomadaire
 
