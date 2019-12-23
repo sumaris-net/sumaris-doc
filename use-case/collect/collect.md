@@ -264,7 +264,7 @@ Note : Ecran optionel
 
 2. L'utilisateur sauvegarde ses modifications.
 
-![landing-ui-expenses](trip/landing-ui-expenses.svg)  
+    ![landing-ui-expenses](trip/landing-ui-expenses.svg)  
            
 ### CU Saisir un calendrier hebdomadaire
 
@@ -273,16 +273,34 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 1. Il saisit :
 
     * Le programme de collecte
-    * Le navire observé
+    * Le navire observé : entrer l'ensemble des navire observé sur le même lieu à la même date
     * Le lieu du débarquement
     * Date/heure de début de la semaine (heure est d'office 00h00)
     * Date/heure de fin de la semaine saisie automatiquement J+6 (heure est d'office 23h59)
     * Les observateurs (au moins un obligatoire)
     * Un commentaire (optionnel)
 
-![weekly-ui-new](trip/weekly-ui-new.svg)
+    ![weekly-ui-new](trip/weekly-ui-new.svg)
+
+2. Caractérisation des situations propres à chaque navire chaque jour de la semaine
+
+    <u>Association Métier / Situation</u>:
+    
+    g
+     
+    <u>Bouton oeil</u> :
+    Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la semaine 
+    pour chaque navire --> Oeil en gras (activé)
+    
+    <u>Recherche par critère</u> : les marées d'un navire qui a pratiqué un metier sont associées automatiquement
+    à l'activité correspondante pour un navire, à la même date.
+    à une date. 
+    Si la marée n'existe pas, elle peut être créée à partir d'ici
+    
+    ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)  
 
 
-Création 
+3. Caractérisation de l'activité des navires chaque jour de la semaine
 
-![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)  
+    ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)
+

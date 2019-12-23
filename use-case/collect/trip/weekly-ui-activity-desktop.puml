@@ -2,38 +2,43 @@
 {
   <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
   ..
-  {/ <b>Information générale | Activités des navires }
+  {/ Information générale | Situation des navires | <b>Activités des navires }
   .
-  {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>] | [<&x>]}}
+  {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>]}}
   .
   {+
-    {<b>Activité du navire</b> | { "<color:blue><i>SZ190 - Ziblo"} {[<&plus>] | [<&minus>]}}
-    ..
-    {
-        Situation:   | { ^DP - Departing^ | [] Conserver la valeur }
-    }
-    .
     {+
-        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]}
+        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
+
+        {
+            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
+            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
+        }
+        {Metier*:        | { ^METIER2 - Metier 2            ^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
 
         {
             [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
             <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
         }
         .
-        {
-            [Lundi      ]   | <&eye>
-            [<b>Mardi   ]   | [<&eye>]
-            [Mercredi   ]   | <&eye>
-            [Jeudi      ]   | <&eye>
-            [<b>Vendredi]   | [<&eye>]
-            [Samedi     ]   | <&eye>
-            [Dimanche   ]   | <&eye>
-        }
-        {. | {[Ajouter un métier (= Entrer)] | [Annuler la dernière]}}
     }
-    .
-        {. |  {[Ajouter une situation (=Entrer)] | [Annuler la dernière]}}
+        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
+  }
+  .
+  .
+  {<b>Navire :            | { ^Navire 2         ^ | [<&plus>]}}
+  .
+  {+
+    {+
+        {Metier*:        | { ^METIER1 - Metier 1^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
+
+        {
+            [Lundi     ] | [Mardi    ] | [Mercredi ] | [Jeudi    ] | [Vendredi ] | [Samedi  ] | [Dimanche]
+            [<&eye>]     | <&eye>     | [<&eye>]    | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
+        }
+        .
+    }
+        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
   }
   .
   {[Fermer et retour à l'observation]}

@@ -1,0 +1,199 @@
+@startsalt
+{
+  <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
+  ..
+  {/ Information générale | <b>Situation des navires | Activités des navires }
+  .
+  {SI
+      {
+      {+
+          <b>Liste navires:
+          {{ ^SZ190 - Ziblo         ^ | [<&x>]}}
+          .
+          .
+          .
+          {{ ^Vessel 2              ^ | [<&x>]}}
+          .
+          .
+          .
+          .
+          .
+          {{ ^Vessel 3              ^ | [<&x>]}}
+          .
+          .
+          .
+          .
+          .
+          {{ ^Vessel 4              ^ | [<&plus>] | [<&x>]}}
+          .
+          .
+          .
+          .
+          .
+          .
+      }
+      } |
+      {S-
+          {+
+            {
+                .
+                [Lundi     ] | [<b>Mardi   ] | [Mercredi   ] | [Jeudi     ] | [<b>Vendredi] | [Samedi    ] | [Dimanche   ]
+            }
+                {
+                    {+
+                        [NA      ] | <&collapse-right>
+                    } |
+                    {+
+                        [DP        ] | <&collapse-right>
+                    } |
+                    {+
+                        [NA       ] | <&collapse-right>
+                    } |
+                    {+
+                        [NA       ] | <&collapse-right>
+                    } |
+                    {+
+                        [LD      ] | <&collapse-right>
+                    } |
+                    {+
+                        [NC       ] | <&collapse-right>
+                    } |
+                    {+
+                        [NA       ] | <&collapse-right>
+                    } |
+                }
+          }
+          {+
+            ..
+            {
+                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
+            }
+                {
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                            {+
+                                [IN] | [BR] | [DP]
+                                [LD] | [NC] | [NA]
+                                [NS] | [DL] | [OUT]
+                            } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    }
+                }
+          }
+          {+
+            ..
+            {
+                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
+            }
+                {
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                            {+
+                                [IN] | [BR] | [DP]
+                                [LD] | [NC] | [NA]
+                                [NS] | [DL] | [OUT]
+                            } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    }
+                }
+          }
+          {+
+            ..
+            {
+                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
+            }
+                {
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                            {+
+                                [IN] | [BR] | [DP]
+                                [LD] | [NC] | [NA]
+                                [NS] | [DL] | [OUT]
+                            } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    } |
+                    {+
+                        [IN] | [BR] | [DP]
+                        [LD] | [NC] | [NA]
+                        [NS] | [DL] | [OUT]
+                    }
+                }
+          }
+      }
+  }
+  {{[Fermer et retour à l'observation] | [Saisir une activité]}}
+}
+@endsalt
