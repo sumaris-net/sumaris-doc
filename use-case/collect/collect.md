@@ -297,7 +297,6 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     
     ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)  
 
-
 3. Caractérisation de l'activité des navires chaque jour de la semaine
 
     ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)
