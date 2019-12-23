@@ -285,8 +285,6 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 2. Caractérisation des situations propres à chaque navire chaque jour de la semaine
 
     <u>Association Métier / Situation</u>:
-    
-    g
      
     <u>Bouton oeil</u> :
     Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la semaine 
