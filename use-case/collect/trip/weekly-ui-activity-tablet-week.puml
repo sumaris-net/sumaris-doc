@@ -3,30 +3,36 @@
   <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
   ..
   {/ Information générale | Situation des navires | <b>Activités des navires }
-  .| [Fermer]
-  {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>]}}
-  .
+  .| <&calendar> | [Fermer]
+    {
+        [Lundi - <i>NA ] | [Mardi - <i>IN] | [Mercredi - <i>LD] | [<b>Jeudi - <i>NS ] | [ Vendredi ] | [Samedi  ] | [Dimanche]
+    }
+
+    {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>]}}
+    {+
+        .|.|Fishing Trip
+        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| [<&eye>]
+
+        {Metier*:        | { ^METIER2 - Metier 2            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
+
+        .
+        {. |  {[Ajouter un navire] | [Annuler le navire]}}
+    }
+
   {+
+    {<b>Navire :            | { ^SZ190 - Ziblo         ^}}
+    .
     {+
         {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
 
-        {
-            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
-            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
-        }
         {Metier*:        | { ^METIER2 - Metier 2            ^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
-
-        {
-            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
-            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
-        }
         .
     }
-        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
+        {. |  {[Ajouter un navire] | [Annuler le navire]}}
   }
   .
   .
-  {<b>Navire :            | { ^Navire 2         ^ | [<&plus>]}}
+  {<b>Navire :            | { ^Navire 2         ^ }}| [<&plus>]
   .
   {+
     {+
@@ -38,7 +44,7 @@
         }
         .
     }
-        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
+        {. |  {[Ajouter un navire] | [Annuler le navire]}}
   }
   .
   {[Sauvegarder]}

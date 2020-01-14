@@ -4,196 +4,51 @@
   ..
   {/ Information générale | <b>Situation des navires | Activités des navires }
   .
-  {SI
+  {SI .| .| [Fermer]
       {
       {+
           <b>Liste navires:
+          .
+          .
           {{ ^SZ190 - Ziblo         ^ | [<&x>]}}
-          .
-          .
           .
           {{ ^Vessel 2              ^ | [<&x>]}}
           .
-          .
-          .
-          .
-          .
           {{ ^Vessel 3              ^ | [<&x>]}}
-          .
-          .
-          .
-          .
           .
           {{ ^Vessel 4              ^ | [<&plus>] | [<&x>]}}
           .
-          .
-          .
-          .
-          .
-          .
       }
       } |
-      {S-
+      {
           {+
             {
+                {[<b>Lundi       ]} | {[<b>Mardi       ]} | {[<b>Mercredi    ]} | {[<b>Jeudi       ]} | {[<b>Vendredi    ]} | {[Samedi      ]} | {[Dimanche    ]}
                 .
-                [Lundi     ] | [<b>Mardi   ] | [Mercredi   ] | [Jeudi     ] | [<b>Vendredi] | [Samedi    ] | [Dimanche   ]
+                .
+                { ^NA- boat not...^} | { ^IN- boat in ...^} | { ^LD- boat lan...^} | { ^NS- boat not...^} | { ^BR- break down ^} | { ^<i>Situation^} | { ^<i>Situation^}
             }
+          }
+          {+
+            ..
                 {
-                    {+
-                        [NA      ] | <&collapse-right>
-                    } |
-                    {+
-                        [DP        ] | <&collapse-right>
-                    } |
-                    {+
-                        [NA       ] | <&collapse-right>
-                    } |
-                    {+
-                        [NA       ] | <&collapse-right>
-                    } |
-                    {+
-                        [LD      ] | <&collapse-right>
-                    } |
-                    {+
-                        [NC       ] | <&collapse-right>
-                    } |
-                    {+
-                        [NA       ] | <&collapse-right>
-                    } |
+                    { ^DL- one day ...^} | { ^LD- boat lan...^} | { ^NA- boat not...^} | { ^NA- boat not...^} | { ^LD- boat lan...^} | { ^<i>Situation^} |  { ^<i>Situation^}
                 }
           }
           {+
             ..
-            {
-                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
-            }
                 {
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                            {+
-                                [IN] | [BR] | [DP]
-                                [LD] | [NC] | [NA]
-                                [NS] | [DL] | [OUT]
-                            } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    }
+                    { ^IN- boat in ...^} | { ^LD- boat lan...^} | { ^NA- boat not...^} | { ^OUT- boat out  ^} | { ^DL- one day ...^} | { ^<i>Situation^} |  { ^<i>Situation^}
                 }
           }
           {+
             ..
-            {
-                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
-            }
                 {
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                            {+
-                                [IN] | [BR] | [DP]
-                                [LD] | [NC] | [NA]
-                                [NS] | [DL] | [OUT]
-                            } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    }
-                }
-          }
-          {+
-            ..
-            {
-                [Lundi     ] | [   Mardi   ] | [Mercredi   ] | [Jeudi     ] | [   Vendredi] | [Samedi    ] | [Dimanche   ]
-            }
-                {
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                            {+
-                                [IN] | [BR] | [DP]
-                                [LD] | [NC] | [NA]
-                                [NS] | [DL] | [OUT]
-                            } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    } |
-                    {+
-                        [IN] | [BR] | [DP]
-                        [LD] | [NC] | [NA]
-                        [NS] | [DL] | [OUT]
-                    }
+                    { ^NA- boat not...^} | { ^DP- boat dep...^} | { ^OUT- boat out  ^} | { ^NA- boat not...^} | { ^LD- boat lan...^} | { ^<i>Situation^} |  { ^<i>Situation^}
                 }
           }
       }
   }
-  {{[Fermer et retour à l'observation] | [Saisir une activité]}}
+  {{[Sauvegarder] | [Saisir une activité]}}
 }
 @endsalt

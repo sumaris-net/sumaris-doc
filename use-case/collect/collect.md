@@ -273,7 +273,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 1. Il saisit :
 
     * Le programme de collecte
-    * Le navire observé : entrer l'ensemble des navire observé sur le même lieu à la même date
+    * Le navire observé : entrer l'ensemble des navires observés sur le même lieu à la même date
     * Le lieu du débarquement
     * Date/heure de début de la semaine (heure est d'office 00h00)
     * Date/heure de fin de la semaine saisie automatiquement J+6 (heure est d'office 23h59)
@@ -284,20 +284,69 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 
 2. Caractérisation des situations propres à chaque navire chaque jour de la semaine
 
+    La saisie s'effectue jour par jour : l'observateur chaque jour commence, sur un lieu donné à 
+    sélectionner la situation pour chaque navire présent et précédemment identifié.
+    
+    L'observateur est quasiment exaustif en terme d'identification des navires et de leur situation sur un lieu donné.
+    
+    Initiales des situations utilisées sur le formulaire terrain :
+    
+    * DP- boat departing that day
+    * IN- boat in at site
+    * LD- boat landed fish that day
+    * DL- one day trip (boat departed and landed same day)
+    * NA- boat not active
+    * OUT- boat out fishing
+    * BR- break down
+    * NS- boat not seen at site
+    * LS- Boat landed fish that day and was sample
+    * UR- boat under repair
+
     <u>Association Métier / Situation</u>:
-     
-    <u>Bouton oeil</u> :
-    Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la semaine 
-    pour chaque navire --> Oeil en gras (activé)
+    
+    <ins>Mode bureau : </ins>
+    
+    ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)
+    
+    <ins>Mode tablette : </ins>
+    
+    ![weekly-ui-situation-tablet](trip/weekly-ui-situation-tablet.svg)
+        
+    "Flèche Gauche" et "Flèche Droite" de chaque côté du jour de l'observation : Possibilité de revenir sur 
+    les jours antérieurs au jour d'observation pour consulter ou modifier une saisie précédente. 
+    Par contre, pas de possibilité de saisir en avance des jours postérieurs au jour de d'observation.
+        
+3. Caractérisation de l'activité des navires chaque jour de la semaine
+
+    Si un navire n'a pas de situation, on ne peut pas saisir d'activité.
+    
+    L'observateur n'est pas exaustif en terme d'identification des navires et des métiers sur un lieu donné.
+    
+    Par défaut, la joue effectif correspond au jour de la saisie. Il est possible de sélectionner 
+    l'affichage par jour ou semaine : cliquer sur le bouton calendrier en haut à droite.
+    
+    Un jour effectif est activé, alors qu'un jour qui n'a pas eu lieu reste inactif.
+    Si le suivi n'est pas fait un jour de la semaine effectif, le jour est tout de 
+    même actif, mais il n'y a pas de situation d'entrée.
     
     <u>Recherche par critère</u> : les marées d'un navire qui a pratiqué un metier sont associées automatiquement
     à l'activité correspondante pour un navire, à la même date.
-    à une date. 
     Si la marée n'existe pas, elle peut être créée à partir d'ici
     
-    ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)  
+    Bouton oeil : Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la 
+    semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
-3. Caractérisation de l'activité des navires chaque jour de la semaine
+    <ins>Mode bureau : </ins>
 
     ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)
+    
+    <ins>Mode tablette : </ins> affichage journalier
+    
+    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg)
+
+    <ins>Mode tablette : </ins> affichage hebdomadaire
+    
+    ![weekly-ui-activity-tablet_week](trip/weekly-ui-activity-tablet-week.svg)
+
+    
 

@@ -1,0 +1,46 @@
+@startsalt
+{
+  <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
+  ..
+  {/ Information générale | <b>Situation des navires | Activités des navires }
+  .
+  {SI .| .| .| [Fermer]
+      {
+      {+
+          <b>Liste navires:
+          .
+          {{ ^SZ190 - Ziblo         ^ | [<&x>]}}
+          .
+          {{ ^Vessel 2              ^ | [<&x>]}}
+          .
+          {{ ^Vessel 3              ^ | [<&x>]}}
+          .
+          {{ ^Vessel 4              ^ | [<&plus>] | [<&x>]}}
+          .
+      }
+      } |
+      <&caret-left> |
+      {
+            {
+                [<b>JEUDI - 2 février 2019                                       ]
+            }
+                {
+                        [DP   ] | [IN   ] | [LD   ] |  [DL   ] | [<b>NA] | [OUT  ] | [BR   ] | [NS   ] | [LS   ] | [UR   ]
+                }
+            .
+                {
+                        [<b>DP] | [IN   ] | [LD   ] |  [DL   ] | [NA   ] | [OUT  ] | [BR   ] | [NS   ] | [LS   ] | [UR   ]
+                }
+            .
+                {
+                        [DP   ] | [<b>IN] | [LD   ] |  [DL   ] | [NA   ] | [OUT  ] | [BR   ] | [NS   ] | [LS   ] | [UR   ]
+                }
+            .
+                {
+                        [DP   ] | [IN   ] | [LD   ] |  [DL   ] | [<b>NA] | [OUT  ] | [BR   ] | [NS   ] | [LS   ] | [UR   ]
+                }
+      } | <&caret-right>
+  }
+  {{[Sauvegarder] | [Saisir une activité]}}
+}
+@endsalt
