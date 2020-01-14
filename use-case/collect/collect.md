@@ -305,11 +305,9 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     <u>Association Métier / Situation</u>:
     
     <ins>Mode bureau : </ins>
-    
     ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)
     
     <ins>Mode tablette : </ins>
-    
     ![weekly-ui-situation-tablet](trip/weekly-ui-situation-tablet.svg)
         
     "Flèche Gauche" et "Flèche Droite" de chaque côté du jour de l'observation : Possibilité de revenir sur 
@@ -336,13 +334,13 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     Bouton oeil : Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la 
     semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
-    <ins>Mode bureau : </ins>
+    <ins>Mode bureau : </ins> A REVOIR
     ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg) 
     
-    <ins>Mode tablette : </ins> affichage journalier    
-    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg) 
+    <ins>Mode tablette : </ins> affichage journalier
+    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg)
 
-    <ins>Mode tablette : </ins> affichage hebdomadaire
+    <ins>Mode tablette : </ins> affichage hebdomadaire A REVOIR
     ![weekly-ui-activity-tablet_week](trip/weekly-ui-activity-tablet-week.svg) 
 
     

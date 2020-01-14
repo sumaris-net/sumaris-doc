@@ -4,35 +4,31 @@
   ..
   {/ Information générale | Situation des navires | <b>Activités des navires }
   .| <&calendar> | [Fermer]
-    {<b>Navire :            | { ^SZ190 - Ziblo         ^ }}
-      {
-        [<b>JEUDI - 2 février 2019          - <i>NS          ]
-      }
+  {{+
+    { <size:16><b>Navire :            | { ^<size:16>SZ190 - Ziblo                      ^ }}
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>NA- boat not active                     .}
+    {() Métiers pratiqués }
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>IN- boat in at site                          .}
+    {
+    {(X) Métiers pratiqués } .|Fishing Trip
 
-    {+
-        .|.|Fishing Trip
         {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| [<&eye>]
 
         {Metier*:        | { ^METIER2 - Metier 2            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
-
-        .
-        {. |  {[Ajouter un navire] | [Annuler le navire]}}
-  }
-  .
-  {<b>Navire :            | { ^Navire 2         ^ }}| [<&plus>]
-    {
-        [<b>JEUDI - 2 février 2019          - <i>DP          ]
     }
-    {+
-        .|.|Fishing Trip
+  } [<&x>]}
+  .
+  {{+
+
+  { <size:16><b>Navire :            | { ^<size:16>Navire 2                           ^ }}
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>DP- boat departing that day      .}
+  {
+    {(X) Métiers pratiqués } .|Fishing Trip
         {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| <&eye>
 
         {Metier*:        | { ^METIER3 - Metier 3            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
-        .
-    }
-    {. |  {[Ajouter un navire] | [Annuler le navire]}}
   }
-  }
+  } [<&plus>] | [<&x>]}
   .
   {[Sauvegarder]}
 }
