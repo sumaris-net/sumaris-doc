@@ -314,7 +314,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
         
     "Flèche Gauche" et "Flèche Droite" de chaque côté du jour de l'observation : Possibilité de revenir sur 
     les jours antérieurs au jour d'observation pour consulter ou modifier une saisie précédente. 
-    Par contre, pas de possibilité de saisir en avance des jours postérieurs au jour de d'observation.
+    Par contre, pas de possibilité de saisir en avance des jours postérieurs au jour de d'observation  .
         
 3. Caractérisation de l'activité des navires chaque jour de la semaine
 
@@ -337,16 +337,13 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
     <ins>Mode bureau : </ins>
-
-    ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg)
+    ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg) 
     
-    <ins>Mode tablette : </ins> affichage journalier
-    
-    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg)
+    <ins>Mode tablette : </ins> affichage journalier    
+    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg) 
 
     <ins>Mode tablette : </ins> affichage hebdomadaire
-    
-    ![weekly-ui-activity-tablet_week](trip/weekly-ui-activity-tablet-week.svg)
+    ![weekly-ui-activity-tablet_week](trip/weekly-ui-activity-tablet-week.svg) 
 
     
 
