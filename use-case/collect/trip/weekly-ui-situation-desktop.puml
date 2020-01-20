@@ -12,6 +12,7 @@
           .
           {{ ^SZ190 - Ziblo         ^ | [<&x>]}}
           .
+          .
           {{ ^Vessel 2              ^ | [<&x>]}}
           .
           {{ ^Vessel 3              ^ | [<&x>]}}
@@ -21,31 +22,18 @@
       }
       } |
       {
-          {+
-            {
-                {[<b>Lundi       ]} | {[<b>Mardi       ]} | {[<b>Mercredi    ]} | {[<b>Jeudi       ]} | {[<b>Vendredi    ]} | {[Samedi      ]} | {[Dimanche    ]}
-                .
-                .
-                { ^NA- boat not...^} | { ^IN- boat in ...^} | { ^LD- boat lan...^} | { ^NS- boat not...^} | { ^BR- break down ^} | { ^<i>Situation^} | { ^<i>Situation^}
-            }
-          }
-          {+
-            ..
-                {
-                    { ^DL- one day ...^} | { ^LD- boat lan...^} | { ^NA- boat not...^} | { ^NA- boat not...^} | { ^LD- boat lan...^} | { ^<i>Situation^} |  { ^<i>Situation^}
-                }
-          }
-          {+
-            ..
-                {
-                    { ^IN- boat in ...^} | { ^LD- boat lan...^} | { ^NA- boat not...^} | { ^OUT- boat out  ^} | { ^DL- one day ...^} | { ^<i>Situation^} |  { ^<i>Situation^}
-                }
-          }
-          {+
-            ..
-                {
-                    { ^NA- boat not...^} | { ^DP- boat dep...^} | { ^OUT- boat out  ^} | { ^NA- boat not...^} | { ^LD- boat lan...^} | { ^<i>Situation^} |  { ^<i>Situation^}
-                }
+          {
+            {[<b>Lundi       ]} | {[<b>Mardi       ]} | {[<b>Mercredi    ]} | {[<b>Jeudi       ]} | {[<b>Vendredi    ]} | {[Samedi      ]} | {[Dimanche    ]}
+            .
+            { ^NA-... ^ | {[<&plus>]}} | { ^<i>Situation^} | { ^LD-... ^| {[<&plus>]}} | { ^NA-... ^} | { ^<b>BR-... ^| {[<&plus>]}} | { ^<i>Situation^} | { ^<i>Situation^}
+            .           | .            | .                 | { ^IN-... ^  | {[<&plus>] | [<&x>]}}     | .                            | .                 | .
+            .
+            { ^DL-... ^| {[<&plus>]}} | { ^<i>Situation^} | { ^NA-... ^| {[<&plus>]}} | { ^NA-... ^| {[<&plus>]}} | { ^<b>LD-... ^| {[<&plus>]}} | { ^<i>Situation^} |  { ^<i>Situation^}
+            .
+            { ^IN-... ^| {[<&plus>]}} | { ^<i>Situation^} | { ^NA-... ^| {[<&plus>]}} | { ^OUT-...^| {[<&plus>]}} | { ^<b>DL-... ^| {[<&plus>]}} | { ^<i>Situation^} |  { ^<i>Situation^}
+            .
+            { ^NA-... ^| {[<&plus>]}} | { ^<i>Situation^} | { ^OUT-...^| {[<&plus>]}} | { ^NA-... ^| {[<&plus>]}} | { ^<b>LD-... ^| {[<&plus>]}} | { ^<i>Situation^} |  { ^<i>Situation^}
+            .
           }
       }
   }

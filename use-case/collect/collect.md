@@ -286,6 +286,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 
     La saisie s'effectue jour par jour : l'observateur chaque jour commence, sur un lieu donné à 
     sélectionner la situation pour chaque navire présent et précédemment identifié.
+    Les métiers s'affichent donc automatiquement. Il est cependant possible d'en ajouter des nouveaux.
     
     L'observateur est quasiment exaustif en terme d'identification des navires et de leur situation sur un lieu donné.
     
@@ -304,15 +305,24 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
 
     <u>Association Métier / Situation</u>:
     
+    Un même navire peut être observé dans différentes situations au cours de la même journée.
+    Un observateur peux ne pas effectuer d'observations au cours d'une journée (maladie, empêchement, etc.) ; 
+    dans ce cas, il ne saisie aucune situation.
+    
     <ins>Mode bureau : </ins>
     ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)
+            
+    En mode bureau, l'ensemble de la semaine est affichée. Le jour de l'observation est activé en gras.
+    Il est possible de modifier une saisie antérieure au jour d'observation. Par contre, il n'est pas possible d'anticiper
+    les situations des jours postérieurs au jour de d'observation.
     
     <ins>Mode tablette : </ins>
     ![weekly-ui-situation-tablet](trip/weekly-ui-situation-tablet.svg)
-        
-    "Flèche Gauche" et "Flèche Droite" de chaque côté du jour de l'observation : Possibilité de revenir sur 
-    les jours antérieurs au jour d'observation pour consulter ou modifier une saisie précédente. 
-    Par contre, pas de possibilité de saisir en avance des jours postérieurs au jour de d'observation  .
+            
+    En mode tablette, seul le jour d'observation est affiché. Cependant, la flèche "précédent" et la flèche "suivant" 
+    de chaque côté du jour de l'observation permet de revenir sur les jours antérieurs au jour d'observation pour 
+    consulter ou modifier une saisie précédente. Par contre, pas de possibilité de saisir en avance des jours postérieurs 
+    au jour de d'observation.
         
 3. Caractérisation de l'activité des navires chaque jour de la semaine
 
@@ -320,12 +330,12 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     
     L'observateur n'est pas exaustif en terme d'identification des navires et des métiers sur un lieu donné.
     
-    Par défaut, la joue effectif correspond au jour de la saisie. Il est possible de sélectionner 
+    Par défaut, le jour effectif correspond au jour de la saisie. Il est possible de sélectionner 
     l'affichage par jour ou semaine : cliquer sur le bouton calendrier en haut à droite.
     
     Un jour effectif est activé, alors qu'un jour qui n'a pas eu lieu reste inactif.
     Si le suivi n'est pas fait un jour de la semaine effectif, le jour est tout de 
-    même actif, mais il n'y a pas de situation d'entrée.
+    même actif, mais il n'y a pas de situation entrée.
     
     <u>Recherche par critère</u> : les marées d'un navire qui a pratiqué un metier sont associées automatiquement
     à l'activité correspondante pour un navire, à la même date.
