@@ -217,17 +217,17 @@ Les ventes sont automatiquement créées pour chaque capture individuelle et en 
 
     <ins>Mode bureau : </ins>
     
-    ![landing-ui-sales-desktop](trip/landing-ui-sales-desktop.svg)     
+    ![landing-ui-sales-desktop](sales-expenses/landing-ui-sales-desktop.svg)     
 
     <ins>Mode tablette : </ins>
     
-    ![landing-ui-sales-tablet](trip/landing-ui-sales-tablet.svg)   
+    ![landing-ui-sales-tablet](sales-expenses/landing-ui-sales-tablet.svg)   
 
     Si plusieurs type de vente à saisir pour une même marée, alors, possibilité d'en ajouter :
 
     <ins>Mode tablette : </ins>
     
-    ![landing-ui-sales-plus-tablet](trip/landing-ui-sales-plus-tablet.svg)  
+    ![landing-ui-sales-plus-tablet](sales-expenses/landing-ui-sales-plus-tablet.svg)  
 
 ### CU Saisir des dépenses
 
@@ -264,7 +264,7 @@ Note : Ecran optionel
 
 2. L'utilisateur sauvegarde ses modifications.
 
-    ![landing-ui-expenses](trip/landing-ui-expenses.svg)  
+    ![landing-ui-expenses](sales-expenses/landing-ui-expenses.svg)  
            
 ### CU Saisir un calendrier hebdomadaire
 
@@ -280,7 +280,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     * Les observateurs (au moins un obligatoire)
     * Un commentaire (optionnel)
 
-    ![weekly-ui-new](trip/weekly-ui-new.svg)
+    ![weekly-ui-new](weekly/weekly-ui-new.svg)
 
 2. Caractérisation des situations propres à chaque navire chaque jour de la semaine
 
@@ -310,14 +310,14 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     dans ce cas, il ne saisie aucune situation.
     
     <ins>Mode bureau : </ins>
-    ![weekly-ui-situation-desktop](trip/weekly-ui-situation-desktop.svg)
-            
+    ![weekly-ui-situation-desktop](weekly/weekly-ui-situation-desktop.svg)
+    
     En mode bureau, l'ensemble de la semaine est affichée. Le jour de l'observation est activé en gras.
     Il est possible de modifier une saisie antérieure au jour d'observation. Par contre, il n'est pas possible d'anticiper
     les situations des jours postérieurs au jour de d'observation.
     
     <ins>Mode tablette : </ins>
-    ![weekly-ui-situation-tablet](trip/weekly-ui-situation-tablet.svg)
+    ![weekly-ui-situation-tablet](weekly/weekly-ui-situation-tablet.svg) 
             
     En mode tablette, seul le jour d'observation est affiché. Cependant, la flèche "précédent" et la flèche "suivant" 
     de chaque côté du jour de l'observation permet de revenir sur les jours antérieurs au jour d'observation pour 
@@ -345,13 +345,13 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
     <ins>Mode bureau : </ins> A REVOIR
-    ![weekly-ui-activity-desktop](trip/weekly-ui-activity-desktop.svg) 
+    ![weekly-ui-activity-desktop](weekly/weekly-ui-activity-desktop.svg) 
     
     <ins>Mode tablette : </ins> affichage journalier
-    ![weekly-ui-activity-tablet-day](trip/weekly-ui-activity-tablet-day.svg)
+    ![weekly-ui-activity-tablet-day](weekly/weekly-ui-activity-tablet-day.svg)
 
     <ins>Mode tablette : </ins> affichage hebdomadaire A REVOIR
-    ![weekly-ui-activity-tablet_week](trip/weekly-ui-activity-tablet-week.svg) 
+    ![weekly-ui-activity-tablet_week](weekly/weekly-ui-activity-tablet-week.svg) 
 
     
 
