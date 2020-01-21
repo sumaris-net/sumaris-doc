@@ -3,44 +3,40 @@
   <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
   ..
   {/ Information générale | Situation des navires | <b>Activités des navires }
-  .| [Fermer]
-  {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>]}}
-  .
-  {+
-    {+
-        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
-
-        {
-            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
-            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
-        }
+  .| .| <&calendar> | [Fermer]
+  {<size:16><b>Navire :            | { ^<size:16>SZ190 - Ziblo         ^ }}
+{+
+      {
+        .
+        <b>Liste des métiers:
+        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&x>]}
         {Metier*:        | { ^METIER2 - Metier 2            ^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
-
-        {
-            [Lundi   ] | [<b>Mardi   ] | [Mercredi] | [Jeudi   ] | [<b>Vendredi] | [Samedi  ] | [Dimanche]
-            <&eye>     | [<&eye>]      | <&eye>     | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
-        }
+          .
+        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
+      } |
+      {
+        [Lundi 02- <i>NA ] | [Mardi 03        ] | [Mercredi 04- <i>LD] | [<b>Jeudi 05- <i>NA ] | [ Vendredi 06] | [Samedi 07 ]   | [Dimanche 08]
+        {[X] | [<&eye>]}   | {[ ] | <&eye>}     | {[ ] | <&eye>}       | {[X] | <&eye>}        | {[ ] | <&eye>} | {[ ] | <&eye>} | {[ ] | <&eye>}
+        {[ ] | <&eye>}     | {[ ] | [<&eye>]}   | {[X] | [<&eye>]}     | {[X] | [<&eye>]}      | {[ ] | <&eye>} | {[ ] | <&eye>} | {[ ] | <&eye>}
+        [Lundi 02- <i>DP ] | [Mardi 03        ] | [Mercredi 04- <i>IN] | [<b>Jeudi 05- <i>IN ] | [ Vendredi 06] | [Samedi 07 ]   | [Dimanche 08]
+        {[X] | <&eye>}     | {[X] | <&eye>}     | {[X] | [<&eye>]}     | {[X] | [<&eye>]}      | {[ ] | <&eye>} | {[ ] | <&eye>} | {[ ] | <&eye>}
+      }
+}
+.
+      {<size:16><b>Navire :            | { ^<size:16>Navire 2             ^ }}
+{+
+      {
         .
-    }
-        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
-  }
-  .
-  .
-  {<b>Navire :            | { ^Navire 2         ^ | [<&plus>]}}
-  .
-  {+
-    {+
-        {Metier*:        | { ^METIER1 - Metier 1^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
-
-        {
-            [Lundi     ] | [Mardi    ] | [Mercredi ] | [Jeudi    ] | [Vendredi ] | [Samedi  ] | [Dimanche]
-            [<&eye>]     | <&eye>     | [<&eye>]    | <&eye>     | [<&eye>]      | <&eye>     | <&eye>
-        }
-        .
-    }
-        {. |  {[Ajouter un navire] | [Annuler la dernière]}}
-  }
-  .
+        <b>Liste des métiers:
+        {Metier*:        | { ^METIER1 - Metier 1            ^             | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
+      } |
+      {
+        [Lundi 02- <i>NA ] | [Mardi 03        ] | [Mercredi 04- <i>LD] | [<b>Jeudi 05- <i>NA ] | [ Vendredi 06] | [Samedi 07 ]   | [Dimanche 08]
+        {[ ] | [<&eye>]}   | {[ ] | <&eye>}     | {[X] | [<&eye>]}     | {[X] | <&eye>}        | {[ ] | <&eye>} | {[ ] | <&eye>} | {[ ] | <&eye>}
+      }
+}
+      {. |  {[Ajouter un navire] | [Annuler le dernier]}}
+..
   {[Sauvegarder]}
 }
 @endsalt

@@ -6,9 +6,9 @@
   .| <&calendar> | [Fermer]
   {{+
     { <size:16><b>Navire :            | { ^<size:16>SZ190 - Ziblo                      ^ }}
-    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>NA- boat not active                     .}
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>NA- boat not active</b>                     .}
     {() Métiers pratiqués }
-    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>IN- boat in at site                          .}
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>IN- boat in at site</b>                          .}
     {
     {(X) Métiers pratiqués } .|Fishing Trip
 
@@ -21,7 +21,7 @@
   {{+
 
   { <size:16><b>Navire :            | { ^<size:16>Navire 2                           ^ }}
-    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>DP- boat departing that day      .}
+    {+<back:RoyalBlue>                                  <color:white><b>JEUDI</b>      - 2 février 2019 -    <b><i>DP- boat departing that day</b>      .}
   {
     {(X) Métiers pratiqués } .|Fishing Trip
         {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| <&eye>

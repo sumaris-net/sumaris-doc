@@ -11,6 +11,33 @@ WARN: Work in progess. See [Use-cases in French](index.md) as latest documentati
 
 (ongoing)
 
+oo
+
+o
+
+.jjj
+
+o
+.
+
+o
+
+.
+
+o
+.
+
+.
+o
+
+.
+
+o
+
+.
+
+o
+
 ## Collection of data
 
 ### UC - Entering a sighting on landing

@@ -1,26 +1,26 @@
 @startsalt
 {
-  <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
-  ..
-  {/ Information générale | Situation des navires | <b>Activités des navires }
-  .| <&calendar> | [Fermer]
-    {
-        [Lundi - <i>NA ] | [Mardi - <i>IN] | [Mercredi - <i>LD] | [<b>Jeudi - <i>NS ] | [ Vendredi ] | [Samedi  ] | [Dimanche]
-    }
-
-    {<b>Navire :            | { ^SZ190 - Ziblo         ^ | [<&plus>]}}
+    <b>Weekly report of activity 02/02/2019 00:00 - LS-AF - Anse Forban
+    ..
+    {/ Information générale | Situation des navires | <b>Activités des navires }
+    .| <&calendar> | [Fermer]
     {+
-        .|.|Fishing Trip
-        {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| [<&eye>]
+    { <size:16><b>Navire :            | { ^<size:16>SZ190 - Ziblo                      ^ }}
+       {
+            [Lundi - <i>NA ] | [Mardi - <i>IN] | [Mercredi - <i>LD] | [<b>Jeudi - <i>NS ] | [ Vendredi ] | [Samedi  ] | [Dimanche]
+        }
 
-        {Metier*:        | { ^METIER2 - Metier 2            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
+        {+
+            .|.|Fishing Trip
+            {Metier*:        | { ^FIXABSX - Active trap for Vyey^ } | [<&x>]} |.| [<&eye>]
 
-        .
-        {. |  {[Ajouter un navire] | [Annuler le navire]}}
+            {Metier*:        | { ^METIER2 - Metier 2            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
+
+            .
+            {. |  {[Ajouter un navire] | [Annuler le navire]}}
+        }
     }
-
   {+
-    {<b>Navire :            | { ^SZ190 - Ziblo         ^}}
     .
     {+
         {Metier*:        | { ^FIXABSX - Active trap for Vyey^ | [] Valeur par défaut }  | [<&plus>]| [<&x>]}
@@ -32,7 +32,7 @@
   }
   .
   .
-  {<b>Navire :            | { ^Navire 2         ^ }}| [<&plus>]
+  { <size:16><b>Navire :            | { ^<size:16>Navire 2                           ^ }}
   .
   {+
     {+

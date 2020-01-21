@@ -344,14 +344,18 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     Bouton oeil : Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la 
     semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
-    <ins>Mode bureau : </ins> A REVOIR
+    <ins>Mode bureau : </ins>
     ![weekly-ui-activity-desktop](weekly/weekly-ui-activity-desktop.svg) 
+    
+    Pour un même navire, autant de lignes situations sont crées atomatiquement, qu'il y a de situations 
+    pré-indiquées à l'étape précédente. L'observateur indique dans cet étape le(s) métier(s) observé(s) par 
+    navire et situation chaque jour de la semaine activé.
     
     <ins>Mode tablette : </ins> affichage journalier
     ![weekly-ui-activity-tablet-day](weekly/weekly-ui-activity-tablet-day.svg)
 
     <ins>Mode tablette : </ins> affichage hebdomadaire A REVOIR
-    ![weekly-ui-activity-tablet_week](weekly/weekly-ui-activity-tablet-week.svg) 
+    ![weekly-ui-activity-tablet_week](/weekly-ui-activity-tablet-week.svg) 
 
     
 
