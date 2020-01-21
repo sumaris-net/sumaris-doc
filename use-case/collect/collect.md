@@ -310,6 +310,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     dans ce cas, il ne saisie aucune situation.
     
     <ins>Mode bureau : </ins>
+    
     ![weekly-ui-situation-desktop](weekly/weekly-ui-situation-desktop.svg)
     
     En mode bureau, l'ensemble de la semaine est affichée. Le jour de l'observation est activé en gras.
@@ -317,6 +318,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     les situations des jours postérieurs au jour de d'observation.
     
     <ins>Mode tablette : </ins>
+    
     ![weekly-ui-situation-tablet](weekly/weekly-ui-situation-tablet.svg) 
             
     En mode tablette, seul le jour d'observation est affiché. Cependant, la flèche "précédent" et la flèche "suivant" 
@@ -345,6 +347,7 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
 
     <ins>Mode bureau : </ins>
+    
     ![weekly-ui-activity-desktop](weekly/weekly-ui-activity-desktop.svg) 
     
     Pour un même navire, autant de lignes situations sont crées atomatiquement, qu'il y a de situations 
@@ -352,9 +355,11 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     navire et situation chaque jour de la semaine activé.
     
     <ins>Mode tablette : </ins> affichage journalier
+    
     ![weekly-ui-activity-tablet-day](weekly/weekly-ui-activity-tablet-day.svg)
 
     <ins>Mode tablette : </ins> affichage hebdomadaire A REVOIR
+    
     ![weekly-ui-activity-tablet_week](/weekly-ui-activity-tablet-week.svg) 
 
     
