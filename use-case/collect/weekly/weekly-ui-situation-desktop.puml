@@ -37,6 +37,7 @@
           }
       }
   }
+  ..
   {{[Sauvegarder] | [Saisir une activité]}}
 }
 @endsalt

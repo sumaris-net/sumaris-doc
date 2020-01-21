@@ -46,7 +46,7 @@
     }
         {. |  {[Ajouter un navire] | [Annuler le navire]}}
   }
-  .
+  ..
   {[Sauvegarder]}
 }
 @endsalt

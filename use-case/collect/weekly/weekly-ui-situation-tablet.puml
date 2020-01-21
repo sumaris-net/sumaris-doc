@@ -46,6 +46,7 @@
                 } [<&plus>]}
       } | <&caret-right>
   }
+  ..
   {{[Sauvegarder] | [Saisir une activité]}}
 }
 @endsalt

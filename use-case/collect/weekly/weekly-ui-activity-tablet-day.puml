@@ -29,7 +29,7 @@
         {Metier*:        | { ^METIER3 - Metier 3            ^ }  | [<&plus>]| [<&x>]} |.| <&eye>
   }
   } [<&plus>] | [<&x>]}
-  .
+  ..
   {[Sauvegarder]}
 }
 @endsalt
