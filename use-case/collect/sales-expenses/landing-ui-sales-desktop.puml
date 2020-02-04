@@ -15,9 +15,9 @@
   {[<&plus>] | [<&minus>] | [<&layers>]}
 
   {#
-  # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise)
-  1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0
-  2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0
+  # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise)   | .
+  1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0   | [<&trash>]
+  2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0   | [<&trash>]
   }
   }
   .
@@ -30,8 +30,8 @@
   {[<&plus>] | [<&minus>] | [<&layers>]}
 
   {#
-  # | <b>ID | <b>Detail         | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
-  1 | 1     | <&comment-square> | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0
+  # | <b>ID | <b>Detail         | <b>Type de vente | <b>Nombre de paquets*)   | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)   | .
+  1 | 1     | <&comment-square> | Fishmonger       | 5             | 484.0 | 20.0 | <color:blue><i>100.0   | [<&trash>]
   }
   }
   .

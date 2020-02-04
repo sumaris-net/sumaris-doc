@@ -17,6 +17,8 @@
 
 1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
 
+    FAIRE AFFICHAGE DE BASE avec +
+
 2. Il saisit : 
 
     * Programme de collecte
@@ -30,10 +32,12 @@
     ![observed-location-ui-new](landing/observed-location-ui-new.svg)
 
    NB: Information technique :
-       * Date/heure de saisie (automatique)
+   * Date/heure de saisie (automatique)
+   * Position géographique (X,Y) où se situe l'observateur au moment de la saisie 
+   (un contrôle peut ainsi être fait sur le lieu de saisie des obsevrateurs)
 
     ![technical-information](landing/observed-location-ui-technical-information.svg)
-
+    
 3. Il peut ensuite ajouter/supprimer des navires observés :
 
     Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
@@ -41,9 +45,16 @@
 
     ![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
  
-    Si saisie d'un nouveau navire :
+    L'observateur peut :
+    * saisir un nouveau navire : bouton "+"
+        
+    ![observed-location-ui-vessels-new](landing/observed-location-ui-vessels-new.svg)
+    
+    * supprimer un navire identifié : bouton "poubelle"
+    * Chercher dans le registre : bouton "loupe"
+    * sélectionner les navires parmis la liste des navires observés les 12 derniers mois
 
-    ![observed-location-ui-new-vessels](landing/observed-location-ui-new-vessels.svg)
+    ![observed-location-ui-vessels-liste](landing/observed-location-ui-vessels-liste.svg)
  
 ### CU Saisir marée observée au débarquement
 
@@ -55,18 +66,22 @@ Objectif :
 
 1. L'observateur demande la création d'une nouvelle marée, rattaché à une observation sur site.
 
-2. Il choisit :
+2. Il choisit pour cette marée:
+    * Le programme de collecte : information obligatoire et déjà pré-rempli selon le choix fait 
+      précédemment
     * Le navire observé (parmi la liste des navires identifiés précédemment)
+    * Le lieu de débarquement : information obligatoire et déjà pré-rempli selon le choix fait 
+      précédemment
 
 3. Il saisie :
-    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h)
-    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59 - correspond à la date/Heure de début de débarquement)
+    * Date/heure de début de la marée (obligatoire ; si pas saisie, d'office indique date d'observation et 00h)
+    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59 - correspond à la date/Heure de début de marée)
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
     ![landing-ui-new](trip/landing-ui-new.svg)
 
-4. Il peut ensuite saisir l'effort de pêche :
+4. Il peut ensuite saisir l'effort de pêche pour le navire identifié :
         
     * Code du métier
     * Nombre d'engin
@@ -79,7 +94,7 @@ Objectif :
     * Profondeur minimum de l'engin (m)
     * Profondeur maximum de l'engin (m)
     * Un commentaire (optionnel)
-    * Il peut ensuite saisir la capture débarquée par métier (cf point 5)
+    * Il peut ensuite saisir la capture débarquée par métier pour chaque métier (cf point 5)
 
 <ins>Mode bureau : </ins>
     

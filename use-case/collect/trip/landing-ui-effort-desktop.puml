@@ -19,7 +19,7 @@
   }
   -- | --
 
-  {[Annuler] | [Sauvegarder]}
+  {[Sauvegarder] | [Saisir les efforts pour un autre navire]}
 }
 @endsalt
 

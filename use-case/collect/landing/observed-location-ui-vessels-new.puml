@@ -6,7 +6,7 @@
   .
 
   { "Type de navire*       "}
-  { "Nom du navire*        "} | { "Immatriculation*   "}
+  { "Nom du navire        "} | { "Immatriculation*   "}
   Date validité début:  | { ^01/02/2019^ }
   <&map-marker> Base port*:     | { ^MA - Mahé Island^ }
   { "Status*       "}

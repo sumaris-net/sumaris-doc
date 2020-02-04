@@ -30,10 +30,10 @@
   ..
   .
       {#
-          # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv    | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise)
-          3 | Albakor               | market               | 100.0 | <color:blue><i>120.0           | 26 | Unit         | 7.0 | <color:blue><i>60.67 | <color:blue><i>182.0
-          2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit         | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0
-          1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit         | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0
+          # | <b>Espèce commerciale | <b>Type de vente     | <b>%* | <b>Poids Ech. (kg) | <b>NB indiv    | <b>Packaging | <b>Prix moyen (Devise/kg) | <b>Prix moyen (Devise/packaging) | <b>Prix total (Devise) | .
+          3 | Albakor               | market               | 100.0 | <color:blue><i>120.0           | 26 | Unit         | 7.0 | <color:blue><i>60.67 | <color:blue><i>182.0    | [<&trash>]
+          2 | Barwa - LXN           | Hotel and Restaurant | 100.0 | <color:blue><i>26.0            | 3  | Unit         | 2.5 | <color:blue><i>11.11 | <color:blue><i>500.0    | [<&trash>]
+          1 | Anba Iasann - PWT     | market               | 100.0 | <color:blue><i>200.0           | 45 | Unit         | 5.0 | <color:blue><i>67.0  | <color:blue><i>335.0    | [<&trash>]
       }
     }
     .
@@ -65,9 +65,9 @@
   .
 }
       {#
-          # | <b>Lot de paquets  | <b>Composition   | <b>Type de vente | <b>Nombre de paquets*) | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise)
-          2 | Lot 2 - 55 paquets | <&info>          | Fishmonger       | 5                      | 484.0           | 20.0                          | <color:blue><i>100.0
-          1 | Lot 1 - 26 paquets | <&info>          | Market           | 21                     | 484.0           | 12.0                          | <color:blue><i>252.0
+          # | <b>Lot de paquets  | <b>Composition   | <b>Type de vente | <b>Nombre de paquets*) | <b> Poids (kg)* | <b>Prix moyen (Devise/paquet) | <b>Prix total (Devise) | .
+          2 | Lot 2 - 55 paquets | <&info>          | Fishmonger       | 5                      | 484.0           | 20.0                          | <color:blue><i>100.0   | [<&trash>]
+          1 | Lot 1 - 26 paquets | <&info>          | Market           | 21                     | 484.0           | 12.0                          | <color:blue><i>252.0   | [<&trash>]
       }
   }
   .

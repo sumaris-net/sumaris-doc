@@ -5,10 +5,10 @@
   {/ <b>General trip | Effort | Capture débarquée | Vente | Dépenses }
   .
   Programme de collecte*:    | { ^SIH-OBSDEB^ }
-  Navire*:                   | { ^FRA0001114^ | [<&plus>] }
+  Navire*:                   | { ^FRA0001114^ }
   Lieu de débarquement de la marée*:     | { ^MA - Mahé Island^ }
-  Date/Heure début de marée:  | { ^01/02/2019^ | ^00:00^ }
-  Date/Heure fin de marée:  | { ^01/02/2019^ | ^23:59^ }
+  Date/Heure début de marée:  | { ^_ _/_ _/_ _ _ _^ | ^00:00^ }
+  Date/Heure fin de marée:  | { ^_ _/_ _/_ _ _ _^ | ^23:59^ }
   Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
   Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
   .                         | { Paramètre 2 : | ^Valeur qualitative^ }
@@ -18,6 +18,6 @@
 
   -- | --
 
-  .                          | {[Annuler] | [Sauvegarder]}
+  .                          | {[Sauvegarder] | [Saisir les efforts]}
 }
 @endsalt

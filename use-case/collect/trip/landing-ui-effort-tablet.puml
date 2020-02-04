@@ -2,6 +2,7 @@
 {
   <b> Immat Navire - Lieu - Date fin marée
   ..
+  . | . | {[Nouveau navire] | [Terminer]}
   .
   Code du metier*    | { ^LLSKH - Longlines...^ }
   .
@@ -24,6 +25,6 @@
 
   -- | --
 
-  . | {[Annuler] | [Ajouter]}
+  . | {[Annuler] | [Ajouter un nouveau métier]}
 }
 @endsalt

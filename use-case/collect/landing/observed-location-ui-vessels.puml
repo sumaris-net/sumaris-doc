@@ -14,6 +14,6 @@
 
   -- | --
 
-  . | {[Annuler] | [Sauvegarder]}
+  {{[Sauvegarder] | [Saisir une marée observée au débarquement]}}
 }
 @endsalt

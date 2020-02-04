@@ -4,5 +4,6 @@
 .                   | Organism name
 .. | ..
 <&calendar> Created on dd/mm/aaaa  hh:mm AM/PM
+<&map> Input position: -4.704492, 55.475403
 }
 @endsalt
