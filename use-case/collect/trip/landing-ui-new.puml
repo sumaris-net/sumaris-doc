@@ -7,9 +7,9 @@
   Programme de collecte*:    | { ^SIH-OBSDEB^ }
   Navire*:                   | { ^FRA0001114^ }
   Lieu de débarquement de la marée*:     | { ^MA - Mahé Island^ }
-  Date/Heure début de marée:  | { ^_ _/_ _/_ _ _ _^ | ^00:00^ }
-  Date/Heure fin de marée:  | { ^_ _/_ _/_ _ _ _^ | ^23:59^ }
-  Observateurs :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
+  Date/Heure début de marée*:  | { ^_ _/_ _/_ _ _ _^ | ^_ _:_ _^ }
+  Date/Heure fin de marée*:  | { ^_ _/_ _/_ _ _ _^ | ^_ _:_ _^ }
+  Observateurs* :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
   Autres caractéristiques:  | { Paramètre 1 (ex: Nombre d'homme à bord) : | "   1  " }
   .                         | { Paramètre 2 : | ^Valeur qualitative^ }
 

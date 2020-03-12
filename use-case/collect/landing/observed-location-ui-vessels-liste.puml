@@ -10,14 +10,14 @@
   <b><u>Navires observés les 12 derniers mois
   .
       {#
-      # | <b>Type de navire  | <b>Nom        | <b>Immatriculation | <b>Date/Heure validité début     | <b> Base port           | <b>Status
-      1 | <b>Mini Mahe       | <b>Ti Pikir   | <b>SZ178           | <b>02/15/2019 11:01              |  <b>LS-LRT - La retraite| <b>au port
-      2 | <b>Pirogue         | <b>Saint Rock | <b>SZ616           | <b>02/15/2019 15:05              |  <b>LS-PC - Pointe Conan| <b>en mer
-      3 | Navires 3          | Nom 3         | Immat 3            | .                                |  .                      | .
-      4 | Navires 4          | Nom 4         | Immat 4            | .                                |  .                      | .
-      3 | Navires 5          | Nom 5         | Immat 5            | .                                |  .                      | .
-      3 | Navires 6          | Nom 6         | Immat 6            | .                                |  .                      | .
-      ... | ... |... |... |... |... |...
+      # |[ ]| <b>Type de navire  | <b>Nom        | <b>Immatriculation | <b>Date/Heure validité début     | <b> Base port           | <b>Status
+      1 |[ ]| Mini Mahe          | Ti Pikir      | SZ178              | 02/15/2019 11:01                 |  <LS-LRT - La retraite  | au port
+      2 |[ ]| Pirogue            | Saint Rock    | SZ616              | 02/15/2019 15:05                 |  LS-PC - Pointe Conan   | en mer
+      3 |[ ]| Navires 3          | Nom 3         | Immat 3            | .                                |  .                      | .
+      4 |[ ]| Navires 4          | Nom 4         | Immat 4            | .                                |  .                      | .
+      3 |[ ]| Navires 5          | Nom 5         | Immat 5            | .                                |  .                      | .
+      3 |[ ]| Navires 6          | Nom 6         | Immat 6            | .                                |  .                      | .
+      ...| ... | ... |... |... |... |... |...
       }
     ..
     {{[Valider]}}

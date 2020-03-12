@@ -13,11 +13,25 @@
 
 ![observed-location](landing/observed-location-uc.svg)
 
+Différenciation des donnees principales = donnée chapeau ou racine (observations, fishing trip, weekly report...) 
+de celles qui ne le sont pas (effort, capture...):
+* 1 observation = terme globale pour indiquer quel est l'observation sans précision
+* 1 programme = terme pour préciser quel est la raison de l'observation. Différents 
+      écrans sont disponibles selon les programmes
+
+Dans la page principale, un Menu est présent à gauche avec les différentes données chapeaux.
+Chaque type de données donne accès :
+* à une liste de données déjà saisies et 
+* à un bouton "+" permettant de saisir une nouvelle donnée
+
+In the Home page, Menu is present on the left of page with the different root data.
+Each type of data gives access to 
+* a list of data already entered and 
+* a "+" button for entering new data
+    
 #### Scénario principal
 
 1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
-
-    FAIRE AFFICHAGE DE BASE avec +
 
 2. Il saisit : 
 
@@ -34,7 +48,7 @@
    NB: Information technique :
    * Date/heure de saisie (automatique)
    * Position géographique (X,Y) où se situe l'observateur au moment de la saisie 
-   (un contrôle peut ainsi être fait sur le lieu de saisie des obsevrateurs)
+   (Cette information sera stockée, mais ne sera pas affichée systématiquement, sauf pour le status administrateurs)
 
     ![technical-information](landing/observed-location-ui-technical-information.svg)
     
@@ -51,8 +65,9 @@
     ![observed-location-ui-vessels-new](landing/observed-location-ui-vessels-new.svg)
     
     * supprimer un navire identifié : bouton "poubelle"
-    * Chercher dans le registre : bouton "loupe"
-    * sélectionner les navires parmis la liste des navires observés les 12 derniers mois
+    * Chercher dans le registre : bouton "loupe". Faire une recherche par le numéro d'immatriculation du navire. Le navire recherché vient s'ajouter à la liste
+    * Tous les navires de la liste des navires observés les 12 derniers mois sont apparents et désélectionnés par défaut. 
+      Ils peuvent tous être sélectionnés si nécessaire et les navires non présents seront désélectionnés un à un.
 
     ![observed-location-ui-vessels-liste](landing/observed-location-ui-vessels-liste.svg)
  
@@ -74,8 +89,10 @@ Objectif :
       précédemment
 
 3. Il saisie :
-    * Date/heure de début de la marée (obligatoire ; si pas saisie, d'office indique date d'observation et 00h)
-    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59 - correspond à la date/Heure de début de marée)
+    * Date/heure de début de la marée (obligatoire ; si pas saisi, sauvegarde impossible) 
+      (à terme, voir si pas saisi, possibilité d'indiquer d'office date d'observation et 00h)
+    * Date/heure de fin de la marée (obligatoire ; si pas saisi, sauvegarde impossible
+      (à terme, voir si pas saisi, possibilité d'indiquer d'office date de début de marée et 23h59)
     * Les autres caractéristiques/paramètres collectés pour le programme 
     * Un commentaire (optionnel)
 
@@ -107,13 +124,14 @@ Objectif :
 #### Variantes
 
 ##### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
+A REVOIR
 
 L'observateur demande la création d'une nouvelle marée, sans
    rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
    --> Si c'est fait, ce sera dans un programme différent avec une liste de paramètre différente (sûrement simplifiée)
    --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
 
-1. Il saisit : (A REVOIR)
+1. Il saisit :
 
     * Le programme de collecte
     * Le navire observé
@@ -145,6 +163,7 @@ L'observateur demande la création d'une nouvelle marée, sans
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
 Ouverture de la liste de la combo métier :
+(Une combo identique peut être créees pour une liste observateur)
 
 ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
@@ -373,9 +392,6 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     
     ![weekly-ui-activity-tablet-day](weekly/weekly-ui-activity-tablet-day.svg)
 
-    <ins>Mode tablette : </ins> affichage hebdomadaire A REVOIR
-    
-    ![weekly-ui-activity-tablet_week](/weekly-ui-activity-tablet-week.svg) 
 
     
 

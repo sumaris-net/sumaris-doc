@@ -4,26 +4,17 @@
   ..
   {/ <b>General trip | Effort | Capture débarquée | Vente | Dépenses }
   .
-  Programme de collecte*:    | { ^SIH-OBSDEB^ }
-  Navire*:                   | { ^FRA0001114^ | <&plus> }
+  Programme de collecte*:        | { ^SIH-OBSDEB^ }
+  Navire*:                       | { ^FRA0001114^ | <&plus> }
   Lieu de débarquement de la marée*:     | { ^MA - Mahé Island^ }
-  Date/Heure début de marée:  | { ^01/02/2019^ | ^00:00^ }
-  Date/Heure fin de marée:  | { ^01/02/2019^ | ^23:59^ }
-  Observateurs* :            | { ^Observateur #1^ | [<&plus>] | [<&x>]}
-  {+
-      Metiers* :
-      {
-        {<&magnifying-glass> {+  "  Rechercher un métier "    } }
-        .
-        {
-          {+
-          {*  Metier : Code - Nom
-          Metier : Code - Nom  | <b>Code       -       Nom  | AQUCUX - Acquaculture  | FIXAEMP - Active | LHMEMP - Handlines |  -  | [<&star> 12 derniers mois] | [<&plus>]
-          }
-          } | <&sort-ascending>
-        }
-      }
-  }
+  Date/Heure début de marée:     | { ^01/02/2019^ | ^00:00^ }
+  Date/Heure fin de marée:       | { ^01/02/2019^ | ^23:59^ }
+  Observateurs* :                | { ^Observateur #1^ | [<&plus>] | [<&x>]}
+  Metiers* :                     | {
+                                      <&magnifying-glass> {* Metier : Code - Nom
+                                      Metier : Code - Nom | <b>[12 derniers mois] | [<&plus>] | - | [X] <b>Code       -       Nom             <&sort-ascending> [<&check>] | [X] AQUCUX - Acquaculture  | [X] FIXAEMP - Active | [X] LHMEMP - Handlines
+                                      }
+                                   }
   ..
   <b>Autres caractéristiques:
   Nombre d'homme à bord           | { "   1  " }

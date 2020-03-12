@@ -5,7 +5,7 @@
   {/ General trip | <b>Effort | Capture débarquée | Vente | Dépenses }
   .
   [] Filter on metiers used the last 12 mois
-  (<i>Pur filtrer les métiers sir les 12 derniers mois, cliquer sur "+"
+  (<i>Pour filtrer les métiers sir les 12 derniers mois, cliquer sur "+"
   <i>une fenêtre pop-up s'ouvre alors en mode dynamique avec la liste des métiers)
   .
   {[<&plus>]  | [<&trash>]}
@@ -19,7 +19,7 @@
   }
   -- | --
 
-  {[Sauvegarder] | [Saisir les efforts pour un autre navire]}
+  {[Sauvegarder]}
 }
 @endsalt
 
