@@ -1,8 +1,8 @@
-# Cas d'utilisation fonctionnels
+# Functional use cases
 
-## Collecte des données
+## Data collection
 
- - Observations au débarquement (ObdDeb) :
+ - Observations on landing (ObdDeb) :
     * [CU Saisir une observation au débarquement](#CU_Saisir_une_observation_au_débarquement)
     * [CU Saisir une marée observée au débarquement](#CU_Saisir_marée_observée_au_débarquement)
     * [CU Saisir des captures débarquées](#CU_Saisir_des_captures_débarquées)
@@ -13,124 +13,124 @@
 
 ![observed-location](landing/observed-location-uc.svg)
 
-Différenciation des donnees principales = donnée chapeau ou racine (observations, fishing trip, weekly report...) 
-de celles qui ne le sont pas (effort, capture...):
-* 1 observation = terme globale pour indiquer quel est l'observation sans précision
-* 1 programme = terme pour préciser quel est la raison de l'observation. Différents 
-      écrans sont disponibles selon les programmes
+Differentiation of main data = root data (observations, fishing trip, weekly report ...)
+of those that are not (effort, capture ...):
+* 1 observation = global term to indicate which observation is unspecified
+* 1 program = term to specify what is the reason for the observation. Different screens are available 
+  depending on the programs
 
-Dans la page principale, un Menu est présent à gauche avec les différentes données chapeaux.
-Chaque type de données donne accès :
-* à une liste de données déjà saisies et 
-* à un bouton "+" permettant de saisir une nouvelle donnée
+In the Home page, a Menu is present on the left with the different root data.
+Each type of data gives access to 
+* a list of data already entered and 
+* a "+" button for entering new data
     
-#### Scénario principal
+#### Main scenario
 
-1. L'observateur demande la création d'une nouvelle observation au débarquement : bouton +
+1. The observer requests the creation of a new observation on landing: button
 
-2. Il saisit : 
+2. He enters:
 
-    * Programme de collecte
-    * Lieu d'observation = Landing sites (Navigation optionnelle calculée par le logiciel : ile et district sont 2 niveaux de lieux qui servent surtout à faire la recherche du lieu d'observation dans SFA ObsDeb)
-    * Date/heure de début de l'observation de tel ou tel navire
-    * Date/heure de fin (optionnel/invisible - suivant la configuration du programme)
-    * Un ou plusieurs observateurs (au moins un obligatoire)
-    * Les autres caractéristiques/paramètres, collectés pour le programme
-    * Commentaire (optionnel)
+    * Collection program
+    * Observation site = Landing sites (Optional navigation calculated by the software: island and district are 2 levels of places which are used above all to search for the place of observation in SFA ObsDeb)
+    * Date/time of observation's start of a particular vessel
+    * Date/time of observation's end (optional / invisible - depending on the program configuration)
+    * One or more observers (at least one mandatory)
+    * The other characteristics / parameters, collected for the program
+    * Comment (optional)
 
     ![observed-location-ui-new](landing/observed-location-ui-new.svg)
 
-   NB: Information technique :
-   * Date/heure de saisie (automatique)
-   * Position géographique (X,Y) où se situe l'observateur au moment de la saisie 
-   (Cette information sera stockée, mais ne sera pas affichée systématiquement, sauf pour le status administrateurs)
-
+   NB: Technical information :
+   * Date / time of entry (automatic)
+   * Geographic position (X, Y) where the observer is located at the time of entry
+   (This information will be stored, but will not be displayed systematically, except for the administrator status)
+   
     ![technical-information](landing/observed-location-ui-technical-information.svg)
     
-3. Il peut ensuite ajouter/supprimer des navires observés :
+3. He can then add / delete observed vessels:
 
-    Lister l'ensemble des navires à ré-appeler par la suite pour chaque marée.
-    Pré-documentation des navires basée sur les précédentes observations sur le même lieu.
+     List all the vessels to be re-called thereafter for each trip.
+     Pre-documentation of vessels based on previous observations at the same location.
 
     ![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
  
-    L'observateur peut :
-    * saisir un nouveau navire : bouton "+"
+    The observer can:
+    * enter a new vessel: "+" button
         
     ![observed-location-ui-vessels-new](landing/observed-location-ui-vessels-new.svg)
     
-    * supprimer un navire identifié : bouton "poubelle"
-    * Chercher dans le registre : bouton "loupe". Faire une recherche par le numéro d'immatriculation du navire. Le navire recherché vient s'ajouter à la liste
-    * Tous les navires de la liste des navires observés les 12 derniers mois sont apparents et désélectionnés par défaut. 
-      Ils peuvent tous être sélectionnés si nécessaire et les navires non présents seront désélectionnés un à un.
+    * delete an identified vessel: "trash" button
+    * Search in the register: "magnifying glass" button. Search by the vessel's registration number. The wanted vessel is added to the list
+    * All the vessels in the list of vessels observed in the last 12 months are visible and deselected by default.
+      They can all be selected if necessary and the vessels not present will be deselected one by one.
 
     ![observed-location-ui-vessels-liste](landing/observed-location-ui-vessels-liste.svg)
  
 ### CU Saisir marée observée au débarquement
 
-Objectif :
+Goal:
 
 ![landing](trip/landing-uc.svg)
 
-#### Scénario principal
+#### Main scenario
 
-1. L'observateur demande la création d'une nouvelle marée, rattaché à une observation sur site.
+1. The observer requests the creation of a new trip, attached to an observation on site.
 
-2. Il choisit pour cette marée:
-    * Le programme de collecte : information obligatoire et déjà pré-rempli selon le choix fait 
-      précédemment
-    * Le navire observé (parmi la liste des navires identifiés précédemment)
-    * Le lieu de débarquement : information obligatoire et déjà pré-rempli selon le choix fait 
-      précédemment
+2. He chooses for this trip:
+    * The collection program: mandatory information and already pre-filled according to the choice made
+      previously
+    * The vessel observed (from the list of vessels identified previously)
+    * Landing site: mandatory information and already pre-filled according to the choice made
+      previously
 
-3. Il saisie :
-    * Date/heure de début de la marée (obligatoire ; si pas saisi, sauvegarde impossible) 
-      (à terme, voir si pas saisi, possibilité d'indiquer d'office date d'observation et 00h)
-    * Date/heure de fin de la marée (obligatoire ; si pas saisi, sauvegarde impossible
-      (à terme, voir si pas saisi, possibilité d'indiquer d'office date de début de marée et 23h59)
-    * Les autres caractéristiques/paramètres collectés pour le programme 
-    * Un commentaire (optionnel)
+3. He entered:
+    * Date/time dos trip's start (mandatory; if not entered, save not possible) 
+      (ultimately, if not entered, possibility to automatically indicate observation date and 00h)
+    * Date/time of trip's end (mandatory; if not entered, save not possible)
+      (ultimately, if not entered, possibility to automatically indicate the start date of the tide and 11.59pm)
+    * The other characteristics / parameters collected for the program 
+    * A comment (optional)
 
     ![landing-ui-new](trip/landing-ui-new.svg)
 
-4. Il peut ensuite saisir l'effort de pêche pour le navire identifié :
+4. He can then enter the fishing effort for the identified vessel:
         
-    * Code du métier
-    * Nombre d'engin
-    * Les autres caractéristiques d'effort propres à chaque métier/engin
-    * Paramètre propre à l'engin : 
-        * Nombre d'hameçons 
-        * longueur de filet 
-        * Nombre de casiers
-    * Temps passé à pêcher (en jour de mer)
+    * Metier code
+    * Number of gear
+    * The other effort characteristics specific to each metier/gear
+    * Parameter specific to the gear: 
+        * Number of hooks 
+        * length of net 
+        * Number of lockers
+    * Time spent fishing  (en jour de mer)
     * Profondeur minimum de l'engin (m)
     * Profondeur maximum de l'engin (m)
     * Un commentaire (optionnel)
     * Il peut ensuite saisir la capture débarquée par métier pour chaque métier (cf point 5)
 
-<ins>Mode bureau : </ins>
+<ins>Desktop mode: </ins>
     
 ![landing-ui-effort-desktop](trip/landing-ui-effort-desktop.svg)
     
-<ins>Mode tablette : </ins>
+<ins>Tablet mode: </ins>
     
 ![landing-ui-effort-tablet](trip/landing-ui-effort-tablet.svg)
 
-#### Variantes
+#### Variants
 
-##### Variante 1.a - Marée sans observation parente (assez rare pour SFA) --> Autre programme différent d'ObsDeb
-A REVOIR
+##### Variant 1.a - Trip without parent observation (quite rare for SFA) -> Other program different from ObsDeb
+TO REVIEW
 
-L'observateur demande la création d'une nouvelle marée, sans
-   rattachement à une observation sur site (ex: collecte opportuniste, sans observation liée à la pêche artisanale)
-   --> Si c'est fait, ce sera dans un programme différent avec une liste de paramètre différente (sûrement simplifiée)
-   --> Retire tous les filtres présents dans la partie débarquement ObsDeb, cad ouvrir le choix à tous les types d'engin, de métiers, etc.
+The observer requests the creation of a new trip, without
+   attachment to on-site observation (e.g. opportunistic collection, without observation related to artisanal fishing)
+   -> If done, it will be in a different program with a different parameter list (surely simplified)
+   -> Remove all filters from the ObsDeb landing section, ie open the choice to all types of gears, metiers, etc.
 
-1. Il saisit :
+1. He enters :
 
-    * Le programme de collecte
-    * Le navire observé
-    * Le lieu du débarquement
+    * The collection program
+    * The vessel observed
+    * The landing sitet
     * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h) A CONFIRMER
     * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59) A CONFIRMER
     * Les observateurs (au moins un obligatoire)
