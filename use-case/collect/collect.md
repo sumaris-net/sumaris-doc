@@ -8,6 +8,7 @@
     * [CU Saisir des captures débarquées](#CU_Saisir_des_captures_débarquées)
     * [CU Saisir des ventes](#CU_Saisir_des_ventes)
     * [CU Saisir des dépenses](#CU_Saisir_des_dépenses)
+    * [CU Saisir un calendrier hebdomadaire](#CU_Saisir_un_calendrier_hebdomadaire)
 
 ### CU Saisir une observation au débarquement
 

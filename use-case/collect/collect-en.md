@@ -2,38 +2,41 @@
 
 ## Data collection
 
- - Observations on landing (ObdDeb) :
-    * [CU Saisir une observation au débarquement](#CU_Saisir_une_observation_au_débarquement)
-    * [CU Saisir une marée observée au débarquement](#CU_Saisir_marée_observée_au_débarquement)
-    * [CU Saisir des captures débarquées](#CU_Saisir_des_captures_débarquées)
-    * [CU Saisir des ventes](#CU_Saisir_des_ventes)
-    * [CU Saisir des dépenses](#CU_Saisir_des_dépenses)
+ * Observations on landing (ObdDeb) :
+    * [UC Input an observation on landing](#CU_Saisir_une_observation_au_débarquement)
+    * [UC Input of observed trip on landing](#CU_Saisir_marée_observée_au_débarquement)
+    * [UC Enter the landing catches](#CU_Saisir_des_captures_débarquées)
+    * [UC Enter sales](#CU_Saisir_des_ventes)
+    * [UC Enter the expenditures](#CU_Saisir_des_dépenses)
+    * [UC Enter a weekly report](#CU_Saisir_un_calendrier_hebdomadaire)
 
-### CU Saisir une observation au débarquement
+### UC Input an observation on landing
 
 ![observed-location](landing/observed-location-uc.svg)
 
 Differentiation of main data = root data (observations, fishing trip, weekly report ...)
 of those that are not (effort, capture ...):
-* 1 observation = global term to indicate which observation is unspecified
-* 1 program = term to specify what is the reason for the observation. Different screens are available 
-  depending on the programs
+* 1 observation = global term to indicate which is observation, without details. 
+* 1 program = term to specify what is the reason for the observation. Different screens are available depending on the 
+programs.
 
-In the Home page, a Menu is present on the left with the different root data.
-Each type of data gives access to 
-* a list of data already entered and 
+
+In the Home page, a Menu is present on the left hand side with the different root data. 
+Each type of data gives access to:
+* a list of data already entered and
 * a "+" button for entering new data
+
     
 #### Main scenario
 
-1. The observer requests the creation of a new observation on landing: button
+1. The observer requests the creation of a new observation on landing: button “+”
 
 2. He enters:
 
-    * Collection program
-    * Observation site = Landing sites (Optional navigation calculated by the software: island and district are 2 levels of places which are used above all to search for the place of observation in SFA ObsDeb)
-    * Date/time of observation's start of a particular vessel
-    * Date/time of observation's end (optional / invisible - depending on the program configuration)
+    * Data collection program
+    * Observation site = Landing sites (Optional navigation calculated by the software: island and district are 2 levels of places which are used above all to search for the place of observation in SFA ObsDeb program)
+    * Date/time of the start of the observation of a specific vessel
+    * Date/time of the end of the observation (optional / invisible - depending on the program configuration)
     * One or more observers (at least one mandatory)
     * The other characteristics / parameters, collected for the program
     * Comment (optional)
@@ -42,15 +45,15 @@ Each type of data gives access to
 
    NB: Technical information :
    * Date / time of entry (automatic)
-   * Geographic position (X, Y) where the observer is located at the time of entry
+   * Geographic position (X, Y) where the observer is located at the time of entry 
    (This information will be stored, but will not be displayed systematically, except for the administrator status)
    
     ![technical-information](landing/observed-location-ui-technical-information.svg)
     
 3. He can then add / delete observed vessels:
 
-     List all the vessels to be re-called thereafter for each trip.
-     Pre-documentation of vessels based on previous observations at the same location.
+     List all the vessels to be re-called thereafter for each trip. 
+     Pre-documentation of vessels based on previous observations on the same site.
 
     ![observed-location-ui-vessels](landing/observed-location-ui-vessels.svg)
  
@@ -60,15 +63,15 @@ Each type of data gives access to
     ![observed-location-ui-vessels-new](landing/observed-location-ui-vessels-new.svg)
     
     * delete an identified vessel: "trash" button
-    * Search in the register: "magnifying glass" button. Search by the vessel's registration number. The wanted vessel is added to the list
-    * All the vessels in the list of vessels observed in the last 12 months are visible and deselected by default.
-      They can all be selected if necessary and the vessels not present will be deselected one by one.
+    * Search in the register: "magnifying glass" button. Search by the vessel's registration number. The researched vessel is added to the list
+    * All the vessels, in the list of vessels observed in the last 12 months, are shown and deselected by default. 
+    They can all be selected if necessary and the vessels not present will be deselected one by one.
 
     ![observed-location-ui-vessels-liste](landing/observed-location-ui-vessels-liste.svg)
  
-### CU Saisir marée observée au débarquement
+### UC Input of observed trip on landing
 
-Goal:
+objective:
 
 ![landing](trip/landing-uc.svg)
 
@@ -77,18 +80,16 @@ Goal:
 1. The observer requests the creation of a new trip, attached to an observation on site.
 
 2. He chooses for this trip:
-    * The collection program: mandatory information and already pre-filled according to the choice made
-      previously
+    * The data collection program: mandatory information is already pre-filled according to the choice made previously
     * The vessel observed (from the list of vessels identified previously)
-    * Landing site: mandatory information and already pre-filled according to the choice made
-      previously
-
-3. He entered:
-    * Date/time dos trip's start (mandatory; if not entered, save not possible) 
-      (ultimately, if not entered, possibility to automatically indicate observation date and 00h)
-    * Date/time of trip's end (mandatory; if not entered, save not possible)
-      (ultimately, if not entered, possibility to automatically indicate the start date of the tide and 11.59pm)
-    * The other characteristics / parameters collected for the program 
+    * The landing site: mandatory information is already pre-filled according to the choice made previously
+   
+3. He enters:
+    * Date/time of the start of the trip (mandatory; if not entered, saving not possible) 
+    (ultimately, if not entered, possibility to automatically indicate observation date and time “00:00”)
+    * Date/time of the end of the trip (mandatory; if not entered, saving not possible) 
+    (ultimately, if not entered, possibility to automatically indicate the start date of the trip and 11.59pm)
+    * The other characteristics / parameters collected for the program
     * A comment (optional)
 
     ![landing-ui-new](trip/landing-ui-new.svg)
@@ -102,11 +103,11 @@ Goal:
         * Number of hooks 
         * length of net 
         * Number of lockers
-    * Time spent fishing  (en jour de mer)
-    * Profondeur minimum de l'engin (m)
-    * Profondeur maximum de l'engin (m)
-    * Un commentaire (optionnel)
-    * Il peut ensuite saisir la capture débarquée par métier pour chaque métier (cf point 5)
+    * Time spent fishing (days spent at sea)
+    * Minimum depth of the gear (m)
+    * Maximum depth of the gear (m)
+    * Comments (optional)
+    * He can then enters the catch landed by metier for each metier (cf point 5)
 
 <ins>Desktop mode: </ins>
     
@@ -121,205 +122,202 @@ Goal:
 ##### Variant 1.a - Trip without parent observation (quite rare for SFA) -> Other program different from ObsDeb
 TO REVIEW
 
-The observer requests the creation of a new trip, without
-   attachment to on-site observation (e.g. opportunistic collection, without observation related to artisanal fishing)
-   -> If done, it will be in a different program with a different parameter list (surely simplified)
-   -> Remove all filters from the ObsDeb landing section, ie open the choice to all types of gears, metiers, etc.
+The observer requests the creation of a new trip, without attachment to an on-site observation 
+(e.g. opportunistic collection, without observation related to artisanal fishing)
+   -> If it happens, it will be done in a different program with a different parameter list (surely simplified)
+   -> Remove all filters from the ObsDeb landing section, meaning opening the choice to all types of gears, metiers, etc.
 
 1. He enters :
 
-    * The collection program
-    * The vessel observed
-    * The landing sitet
-    * Date/heure de début de la marée (optionnel ; si pas saisie, d'office indique 00h) A CONFIRMER
-    * Date/heure de fin de la marée (optionnel ; si pas saisie, d'office indique 23h59) A CONFIRMER
-    * Les observateurs (au moins un obligatoire)
-    * Un commentaire (optionnel)
+    * The data collection program
+    * The observed vessel
+    * The landing site
+    * Date/hour of the start of the trip (optional ; if not entered, will show automatically  00:00) TO BE CONFIRMED
+    * Date/hour of the end of the trip (optional; if not entered, will show automatically  23:59) TO BE CONFIRMED
+    * The observers (at least one, compulsory)
+    * Comments (optional)
 
     ![landing-ui-var1a](trip/landing-ui-var1a.svg)
 
-2. L'observateur :
-    * choisit le navire observé (parmi la liste des navires identifiés précédemment) 
-    * demande la création d'une nouvelle marée
+2. The observer:
+    * Chooses the vessel observed (among the list of vessels precedently identified)
+    * Requests the creation of a new trip
 
-\[Retour au 3]
+\[Return to point 3]
 
-##### Variante 3.a - Caractéristiques/paramètres de collecte pour SFA ObsDeb
+##### Variant 3.a – Caracteristics/parameters of collection for SFA ObsDeb
 
-* Autres caractéristiques/paramètres
-    * Métiers observés (le 1er dans la liste est le principal, les autres sont secondaires) / possibilité d'en ajouter plusieurs
-    Pour la recherche de métier : ouverture d'une fenêtre pop-up en mode dynamique avec les métiers + une zone de recherche
-    * Nombre d'hommes à bord
-    * Principale zone de pêche (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
-    * Gradient de distance à la côte (optionnel car données rarement utilisées car mise sous silence des sites de pêche)
-    * Force du vent
-    * Force du courant 
+* Other caracteristics/parameters
+    * Observed metiers (the first in the list is the most important, the following ones are secondary) / possibility to add more. To seek a metier: a pop-up window opens in a dynamic mode with a presence of a search zone
+    * Number of men on board
+    * Principal fishing zone (optional as the data is rarely used because fishermen don’t like disclosing their fishing sites)
+    * Gradient of distances to the coast (optional as the data is rarely used because fishermen don’t like disclosing their fishing sites)  
+    * Force of the wind
+    * Force of the current
 
 ![landing-ui-var3a](trip/landing-ui-var3a.svg)
 
-Ouverture de la liste de la combo métier :
-(Une combo identique peut être créees pour une liste observateur)
+Opening of the combo list of metiers: 
+(An identical combo may be created for an observer list)
 
 ![landing-ui-list-metier](trip/landing-ui-list-metier.svg)
 
-\[Retour au 4]
+\[Return to point 4]
 
-### CU Saisir des captures débarquées
+### UC Enter the landing catches
 
-Objectif :
+Objective:
 
-#### Scénario principal
+#### Main scenario
 
-1. Il peut ensuite ajouter/supprimer des captures:
-    * Pour les captures individuelles :
-        * Espèce (référentiel des espèces commerciales avec quelques variantes pour la SFA, mais pas d'arbre hiérarchisé comme dans SIH) 
-        * Poids (kg)
-        * Nombre d'individus
-        * Type de packaging
-        * Type de préservation (champs obligatoire)
+1. He can then add/delete catches:
+    * For individual catches:
+        * Species (referential of commercial species with a few variations for the SFA but no hierarchy tree as in the SIH)
+        * Weigth (kg)
+        * Number of individuals
+        * Packaging type
+        * Preservation type (space compulsory)
         
-    * Pour les captures en paquets : 
-        * Différencier les paquets homogènes (une seule espèce),des paquets hétérogènes (composition de différentes espèces)
-          (1 ligne par type de composition de paquets)
-        * Echantillonner de 1 à 6 paquets par type de paquet, puis compléter par composition de paquet (tableau de regroupement) :
-          (Pas de règle de saisie)
-            * Nombre total de paquets comptés par type de composition;
-            * Ajouter les espèces qui composent le paquet (1 ligne = 1 espèce);
-            * Ajouter le poids des paquets échantillons (1 colonne = 1 paquet échantillon);
-            * Ajouter la proportion (%) de présence de chaque espèce (ligne) par paquet (colonne)
-            
-                * La somme des % = 100 % : OK
-                * Si somme des % < 100 % : message erreur
-                * Si somme des % > 100 % : message erreur
-                
-            * Le poids total (kg) de chaque espèce est calculé par composition de paquet
+    * For the catches in packets: 
+        * Differentiate the homogeneous packets (a single species) from the heterogeneous packets (composed of multiple species) (1 line for each distinct packet)
+        * Sample from 1 to 6 packets per type of packets, then complete with the composition of the packet (grouping table): (No rule for entering data)
 
-    <ins>Mode bureau : </ins>
+            * Total number of counted packets for each type of composition.
+            * Add the species which composed the packet ( l line = 1 species);
+            * Add the weigth of the sample packets ( 1 column = 1 sample packet);
+            * Add the percentage (%) of presence for each species (line) per packet (column)
+            
+                * The sum of  % = 100 % : OK
+                * If the sum of  % < 100 % : error message
+                * If the sum  % > 100 % : error message
+                
+            * The total weigth (kg) for each species is calculated per the composition of the packet
+
+    <ins>Desktop mode: </ins>
     
     ![landing-ui-samples-desktop](trip/landing-ui-samples-desktop.svg)
     
-    <ins>Mode tablette : </ins>
+    <ins>Tablet mode: </ins>
     
     ![landing-ui-samples-tablet](trip/landing-ui-samples-tablet.svg)
 
-    L'utilisateur entre la composition par paquet
+    The user enters the composition by packet
 
-    <ins>Mode bureau : </ins>
+    <ins>Desktop mode: </ins>
     
     ![landing-ui-composition-desktop](trip/landing-ui-composition-desktop.svg)
 
-    <ins>Mode tablette : </ins>
+    <ins>Tablet mode: </ins>
     
     ![landing-ui-composition-tablet](trip/landing-ui-composition-tablet.svg)
    
+2. The user saves his modification then can enter the sales
 
-2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie vente
+### UC Enter sales
 
-### CU Saisir des ventes
+Note: Optional screen
 
-Note : Ecran optionel
-Objectif : 
+Objective
 
-#### Scénario principal
+#### Main scenario
 
-Les ventes sont automatiquement créées pour chaque capture individuelle et en paquet.
+The sales are automatically created for each individual catch and by packets.
 
-1. Il peut ensuite affecter un type de vente à une capture individuelle ou un paquet 
-   Et aussi catégoriser différent type de vente pour une même capture (en ajoutant/supprimant un type de vente)
+1. It can then associate one type of sale to an individual catch or packet 
+   And also categorise different type of sales for a same  catch (by adding or deleting one type of sale)
     
-   * Estimation du coût de revient de la vente totale (optionnel si pas de détail)
-   * Le coût de revient total de la vente est calculé automatiquement en fonction des informations saisient ci-dessous :
-    * Pour les captures individuelles :
-       * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
-                                        récolte de la mer, inconnu)
-       (2 éléments ci-dessous sont nécessaires pour que le 3em élément se calcule automatiquement)
-       * Prix moyen estimé de l'espèce au poids (devise/kg)
-       * ou Prix moyen estimé de l'espèce par packaging (devise/packaging)
-       * ou Prix total estimé de l'espèce (devise)
-    * Pour les captures en paquets :
-       * Type de vente (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
-                                        récolte de la mer, inconnu)
-       * Prix moyen estimé de l'espèce par paquet (devise/packet)
-       * ou Prix total estimé du paquet (devise)
+    * Estimation of the gross profit of the total sale (optional if no details available)
+    * The total cost price of the sale is automatically calculated in relation to the information entered below
 
-2. L'utilisateur sauvegarde ses modifications puis peut saisir la partie dépenses  
+    * For the individual catches:
+        * Type of sale (= Disposition: bouyon, fishmonger, hotels and restaurants, markets, ocean fisheries, Public, centre de poisson impétueux,
+                                        récolte de la mer, inconnu)
+       (2 items below are necessary for the third one to calculate itself automatically)
+        * Estimated average price of the species by weigth (currency/kg)
+        * or estimated average price of the species per packaging (currency/packaging)
+        * or estimated total price of the species (currency)
+    * For the catches in packets:
+        * Type of sale (= Disposition : bouyon, poissonnier, hôtel et restaurant, marché, pêcheries océan, Publique, centre de poisson impétueux,
+                                        récolte de la mer, inconnu)
+        * Estimated average price of the species per packaging (currency/packaging)
+        * Or estimated total price per packet (currency)
 
-    <ins>Mode bureau : </ins>
+2. The user saves his modifications and then can enter the expenses:  
+
+    <ins>Desktop mode: </ins>
     
     ![landing-ui-sales-desktop](sales-expenses/landing-ui-sales-desktop.svg)     
 
-    <ins>Mode tablette : </ins>
+    <ins>Tablet mode: </ins>
     
     ![landing-ui-sales-tablet](sales-expenses/landing-ui-sales-tablet.svg)   
 
-    Si plusieurs type de vente à saisir pour une même marée, alors, possibilité d'en ajouter :
+    If more than one type of sale has to be entered per trip, then it is possible to add more:
 
-    <ins>Mode tablette : </ins>
+    <ins>Tablet mode: </ins>
     
     ![landing-ui-sales-plus-tablet](sales-expenses/landing-ui-sales-plus-tablet.svg)  
 
-### CU Saisir des dépenses
+### UC Enter the expenditures
 
-Note : Ecran optionel
+Note: optional screen
 
-#### Scénario principal
+#### Main scenario
 
-1. Il peut saisir:
+1. He can enter:
+    * Estimation of the total expenses for the trip
+     The total cost of the trip expenses is calculated automatically by taking the informations related to the detailed expenses:
+    * Expenses in fluids to operate:
+      For each fluid: Fuel (the type of fuel need to be entered), motor oil, hydraulic oil, please specify:
+       (2 items below are necessary for the third one to be calculated automatically)
+        * Volume used for the trip (l) (optional)
+        * Average price per litre (currency/L) (optional)
+        * Total price spent (currency) (optional)
+    * Expenditure of other related costs:
+        * Expenses of landing (currency)
+        * Food (currency)
+        * Loss of gear (currency)
+        * Other (currrency)
+        * Comments (optional)
+    * The ice used:
+        * Amount of ice
+        * Unit (per kg or per bag)
+        * Cost of the ice (currency) 
+    * Baits:
+        * Type of baits (no more than 3 types for the SFA)
+        * Number of baits
+        * Unit of packing of the baits ( by kg, per unit, per bag or per packet)
+        * Cost of the baits
 
-   * Estimation des dépenses totales pour la marée
-   * Le coût total des dépenses de la marée est calculé automatiquement en fonction des informations de dépenses détaillées :
-    * Dépenses en fluides de fonctionnement :
-      Pour chaque fluide : Carburant (le type de carburant est à préciser), huile de moteur, huile hydraulique, préciser :
-       (2 éléments ci-dessous sont nécessaires pour que le 3em élément se calcule automatiquement)
-       * Volume utilisé pour la marée (l) (optionnel)
-       * Prix moyen par litre (devise/L) (optionnel)
-       * Prix total dépensé (devise)  (optionnel)
-       
-    * Dépenses en frais annexes  :
-       * Frais de débarquement (devise)
-       * Alimentation  (devise)
-       * Perte d'engin (devise)
-       * Autre (devise)
-       * Commentaire (optionnel)
-    * La glace utilisée :
-       * Quantité de glace 
-       * Unité (au kg ou par sac)
-       * Coût de la glace (devise)
-    * Appâts :
-       * Type d'appâts (pas plus de 3 types maximum pour la SFA)
-       * Nombre d'appâts 
-       * Unité de conditionnement des appâts (au kg, à l'unité, au sac ou au paquet)
-       * Coût des appâts
-
-2. L'utilisateur sauvegarde ses modifications.
+2. The user saves his modifications.
 
     ![landing-ui-expenses](sales-expenses/landing-ui-expenses.svg)  
            
-### CU Saisir un calendrier hebdomadaire
+### UC Enter a weekly report
 
-L'observateur demande la création d'une nouveau calendrier hebdomadaire
+The observer asks for the creation of a new weekly report
 
-1. Il saisit :
+1. He enters:
 
-    * Le programme de collecte
-    * Le navire observé : entrer l'ensemble des navires observés sur le même lieu à la même date
-    * Le lieu du débarquement
-    * Date/heure de début de la semaine (heure est d'office 00h00)
-    * Date/heure de fin de la semaine saisie automatiquement J+6 (heure est d'office 23h59)
-    * Les observateurs (au moins un obligatoire)
-    * Un commentaire (optionnel)
+    * The programme of collection
+    * The vessel observed : enter all the vessels observed on the same site at the same date
+    * The landing site
+    * Date/time of the start of the week (hour is  automatically 00h00)
+    * Date/time of the end of the week automatically shows D+6 (the hour is automatically 23h59)
+    * The observers (at least one, compulsory)
+    * A comment (optional)
 
     ![weekly-ui-new](weekly/weekly-ui-new.svg)
 
-2. Caractérisation des situations propres à chaque navire chaque jour de la semaine
+2. Characterisation of the situations inherent to each vessel each day of the week
 
-    La saisie s'effectue jour par jour : l'observateur chaque jour commence, sur un lieu donné à 
-    sélectionner la situation pour chaque navire présent et précédemment identifié.
-    Les métiers s'affichent donc automatiquement. Il est cependant possible d'en ajouter des nouveaux.
+    The data is entered on a day to day basis: the observer starts each day by selecting the situation for each vessel 
+    present on a site and pre-identified. The metiers show up automatically. It is nevertheless possible to add some 
+    new ones.
     
-    L'observateur est quasiment exaustif en terme d'identification des navires et de leur situation sur un lieu donné.
+    The observer is pratically exhaustive concerning the identifications and the locations on a site of the vessels.
     
-    Initiales des situations utilisées sur le formulaire terrain :
+    Initials of the situations used on the field form:
     
     * DP- boat departing that day
     * IN- boat in at site
@@ -332,58 +330,57 @@ L'observateur demande la création d'une nouveau calendrier hebdomadaire
     * LS- Boat landed fish that day and was sample
     * UR- boat under repair
 
-    <u>Association Métier / Situation</u>:
+    <u>Association Metier/Situation</u>:
     
-    Un même navire peut être observé dans différentes situations au cours de la même journée.
-    Un observateur peux ne pas effectuer d'observations au cours d'une journée (maladie, empêchement, etc.) ; 
-    dans ce cas, il ne saisie aucune situation.
+    One same vessel can be observed for different situations during the same day.
+    UOne observer may not be able to do observation on a same day for various reason  (illness, empêchement, etc.) ; 
+    as a consequence he doesn’t enter any situation.
     
-    <ins>Mode bureau : </ins>
+    <ins>Desktop mode: </ins>
     
     ![weekly-ui-situation-desktop](weekly/weekly-ui-situation-desktop.svg)
     
-    En mode bureau, l'ensemble de la semaine est affichée. Le jour de l'observation est activé en gras.
-    Il est possible de modifier une saisie antérieure au jour d'observation. Par contre, il n'est pas possible d'anticiper
-    les situations des jours postérieurs au jour de d'observation.
+    In desktop mode, the entire week shows. The day of the observation shows in bold.
+    It is possible to change a previous data on the day of observation. On the other end, it is not possible to 
+    anticipate the situations for the days to come after the day of observation.
     
-    <ins>Mode tablette : </ins>
+    <ins>Tablet mode: </ins>
     
     ![weekly-ui-situation-tablet](weekly/weekly-ui-situation-tablet.svg) 
             
-    En mode tablette, seul le jour d'observation est affiché. Cependant, la flèche "précédent" et la flèche "suivant" 
-    de chaque côté du jour de l'observation permet de revenir sur les jours antérieurs au jour d'observation pour 
-    consulter ou modifier une saisie précédente. Par contre, pas de possibilité de saisir en avance des jours postérieurs 
-    au jour de d'observation.
+    In tablet mode, only the day of observation is shown. Nevertheless the arrow “previous” and the arrow “next” 
+    on each side of the observation allow to go back to the previous days before the day of observation to have 
+    a look or modify a data. But there isn’t any possibilities to enter ahead in the days to come after the 
+    observation day.
         
-3. Caractérisation de l'activité des navires chaque jour de la semaine
+3. Characterisation of the activity of vessels for each day of the week
 
-    Si un navire n'a pas de situation, on ne peut pas saisir d'activité.
+    If a vessel doesn’t have any situation, we cannot enter any activity.
     
-    L'observateur n'est pas exaustif en terme d'identification des navires et des métiers sur un lieu donné.
+    The observer isn’t exhaustive in terms of identification of the vessels and the metiers on a given place.
     
-    Par défaut, le jour effectif correspond au jour de la saisie. Il est possible de sélectionner 
-    l'affichage par jour ou semaine : cliquer sur le bouton calendrier en haut à droite.
+    By default, the effective day matches the day of entering the data. It is possible to select the showing 
+    by day or by week: click on the calendar day on the top hand right side.
     
-    Un jour effectif est activé, alors qu'un jour qui n'a pas eu lieu reste inactif.
-    Si le suivi n'est pas fait un jour de la semaine effectif, le jour est tout de 
-    même actif, mais il n'y a pas de situation entrée.
+    An effective day is activated but a day without any action stays inactive. 
+    If the data isn’t entered on the day of the week effective, the stay still stay active, 
+    but there isn’t any activity entered.
     
-    <u>Recherche par critère</u> : les marées d'un navire qui a pratiqué un metier sont associées automatiquement
-    à l'activité correspondante pour un navire, à la même date.
-    Si la marée n'existe pas, elle peut être créée à partir d'ici
+    <u>Research by criterias</u> : the trips of a vessel which has used a metier are associated automatically 
+    to the matching activity for a vessel, at the same date. 
+    If the trip is not existent, it can then be created at that time
     
-    Bouton oeil : Quand on affiche le calendrier d'activité, L'outil va rechercher toutes les marées de la 
-    semaine pour chaque navire --> Oeil en gras = activé, sinon inactif
+    Eye button: When we show the activity reprt, the tool will search all the trips of the week for each 
+    vessel --> Eye in bold = activated, if not unactivated
 
-    <ins>Mode bureau : </ins>
+    <ins>Desktop  mode: </ins>
     
     ![weekly-ui-activity-desktop](weekly/weekly-ui-activity-desktop.svg) 
     
-    Pour un même navire, autant de lignes situations sont crées atomatiquement, qu'il y a de situations 
-    pré-indiquées à l'étape précédente. L'observateur indique dans cet étape le(s) métier(s) observé(s) par 
-    navire et situation chaque jour de la semaine activé.
+    For a single vessel, as lines are automatically created as in the previous step. The observer indicates 
+    in that step the metier(s) observed per vessel and the situation for each day of the activated week.
     
-    <ins>Mode tablette : </ins> affichage journalier
+    <ins>Tablet mode: </ins> daily show
     
     ![weekly-ui-activity-tablet-day](weekly/weekly-ui-activity-tablet-day.svg)
 
