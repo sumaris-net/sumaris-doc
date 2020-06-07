@@ -10,7 +10,7 @@
     * [UC Enter the expenditures](#CU_Saisir_des_dépenses)
     * [UC Enter a weekly report](#CU_Saisir_un_calendrier_hebdomadaire)
 
-### UC Input an observation on landing
+### UC Input an observation on landing 
 
 ![observed-location](landing/observed-location-uc.svg)
 
