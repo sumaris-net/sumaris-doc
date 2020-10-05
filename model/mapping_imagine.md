@@ -54,4 +54,4 @@ Liste des évolutions de modèle nécessaires :
 
 Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.html?refid=_17_0_4_2_ece0350_1583488391537_540379_6549
 
-![pmfm_strategy](uploads/1ea5b77f841f702651541abff902d0b5/pmfm_strategy.jpg)
+![pmfm_strategy](http://www.ifremer.fr/allegro/allegro-uml/html/index_files/_12_5_1_eb50347_1207578735308_746618_4801.jpg)
