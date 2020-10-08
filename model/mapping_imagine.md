@@ -22,15 +22,18 @@ Les droits sont gérés au niveau de l'observation.
 
 ## Plans d'échantillonnage et lignes de plan
 
+Les stratégies sont reliées au programme SCHLERO.
+Les données seront par contre rattachées au programmes de collecte correspondants : BIO-PARAM-*.
+
 | Specs | Adagio |
 | ----- | ------ |
-| 3 programmes (SIH-BIO*) | strategy.program_fk |
+| programme (SCHLERO) | strategy.program_fk |
 | code (AAAA_BIO_XXXX) | strategy.name |
 | commentaire | strategy.description |
-| EOTP | strategy.project_code |
+| EOTP | strategy.analytic_reference |
 | laboratoire | strategy.department_fk |
-| zones de pêches | applied_strategy.location_fk (zones en mer / configurables) |
-| port de débarquement | applied_strategy.location_fk (zones à terre / port) |
+| zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
+| port de débarquement | applied_strategy.location_fk + program2location (zones à terre / port) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
@@ -43,13 +46,17 @@ Les droits sont gérés au niveau de l'observation.
 | début de la période | non stocké (min applied_period.start_date) |
 | fin de la période | non stocké (max applied_period.end_date) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date |
-| efforts sur le trimestre | applied_strategy.applied_period.frequency |
+| efforts sur le trimestre | applied_strategy.applied_period.acquisition_number |
+
+> Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
+
+> Lorsque les stratégies sont modifiées, mettre à jour PROGRAM.UPDATE_DATE
 
 Liste des évolutions de modèle nécessaires :
 - modifier PMFM_STRATEGY.PMFM_FK en nullable
 - ajouter les colonnes PMFM_STRATEGY.PARAMETER_FK, MATRIX_FK, FRACTION_FK, METHOD_FK en nullable
-- ajouter les colonnes STRATEGY.DEPARTMENT_FK, STRATEGY.PROJECT_CODE, APPLIED_PERIOD.FREQUENCY
-- ajouter un table de gestion de l'historique des modifications (date, comments, old_value, new_value, operation_type: add/del/mod, object_type, object_id)
+- ajouter les colonnes STRATEGY.ANALYTIC_REFERENCE, APPLIED_PERIOD.ACQUISITION_NUMBER
+- ajouter la table STRATEGY2DEPARTMENT : lien n-n avec program_privilège_fk (cf program2department)
 - [POD] modifier le service qui va chercher les PMFM applicables, pour, à partir de ces PMFM_STRATEGY, aller chercher (par requêtes) les PMFM qui correspondent
 
 Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.html?refid=_17_0_4_2_ece0350_1583488391537_540379_6549
