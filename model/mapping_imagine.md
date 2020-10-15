@@ -28,7 +28,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | Specs | Adagio |
 | ----- | ------ |
 | programme (SCHLERO) | strategy.program_fk |
-| code (AAAA_BIO_XXXX) | strategy.name |
+| code (AAAA_BIO_XXXX) | strategy.label + strategy.name |
 | commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy.department_fk |
