@@ -31,7 +31,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | code (AAAA_BIO_XXXX) | strategy.label + strategy.name |
 | commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
-| laboratoire | strategy.department_fk |
+| laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
 | port de débarquement | applied_strategy.location_fk + program2location (zones à terre / port) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
