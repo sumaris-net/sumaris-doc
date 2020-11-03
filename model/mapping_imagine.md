@@ -22,12 +22,12 @@ Les droits sont gérés au niveau de l'observation.
 
 ## Plans d'échantillonnage et lignes de plan
 
-Les stratégies sont reliées au programme SCHLERO.
-Les données seront par contre rattachées au programmes de collecte correspondants : BIO-PARAM-*.
+Les stratégies sont reliées au programme PARAM-BIO.
+Les données seront par contre rattachées au programmes de collecte correspondants : SIH-OBSVENTE, CAM-*.
 
 | Specs | Adagio |
 | ----- | ------ |
-| programme (SCHLERO) | strategy.program_fk |
+| programme (PARAM-BIO) | strategy.program_fk |
 | code (AAAA_BIO_XXXX) | strategy.label + strategy.name |
 | commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
