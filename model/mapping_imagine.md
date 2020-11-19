@@ -33,7 +33,6 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
-| port de débarquement | applied_strategy.location_fk + program2location (zones à terre / port) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
@@ -42,11 +41,10 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | - maturité (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - âge (pmfm) | pmfm_strategy.pmfm_fk |
 | - type de pièce calcifiée (liste de fractions) | pmfm_strategy.fraction_fk |
-| incrément de la taille | non stocké (inclus dans le pmfm) |
 | début de la période | non stocké (min applied_period.start_date) |
 | fin de la période | non stocké (max applied_period.end_date) |
-| trimestres de la période | applied_strategy.applied_period.start_date/end_date |
-| efforts sur le trimestre | applied_strategy.applied_period.acquisition_number |
+| trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
+| efforts sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
 
 > Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
 
