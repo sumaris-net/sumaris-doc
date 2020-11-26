@@ -6,8 +6,8 @@
 * [Fonctionnalités](#fonctionnalités)
   * [Point d'accès SparQL](#point-daccès-sparql)
     * [Triple store](#triple-store)
-    * [Recherche fédérée](#données-accessibles)
-    * [Synchronisation](#synchronization)
+    * [Recherche fédérée](#recherche-fédérée)
+    * [Synchronisation](#synchronisation)
   * [Conversion d'ontologies](#conversion-dontologies)
   * [Publication d'ontologies](#publication-dontologies)
   * [Publication de données](#publication-de-données)
@@ -20,8 +20,8 @@
     * [package `adapter`](#package-adapter)
     * [package `dao`](#package-dao)
     * [package `util`](#package-util)
-  * [Sécurité](#securité)
-  * [Condiguration](#configuration)
+  * [Sécurité](#sécurité)
+  * [Configuration](#configuration)
 
 ## Introduction
 
