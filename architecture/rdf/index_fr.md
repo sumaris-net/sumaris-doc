@@ -50,18 +50,18 @@ Les formats de réponse suivants sont possibles :
     | Text       | `text/plain`, `text/html`        | 
 
 > Un éditeur SparQL est disponible à l'adresse `<SERVER_URL>/sparql/ui` pour tester le point d'accès SparQL.
-> Des requêtes d'exemples y sont également accessibles.
+> Des requêtes d'exemples y sont également accessibles. ([démo](http://simm.e-is.pro/sparql/ui))
   
 Exemples de requêtes SparQL:
 - Requête `SELECT` (HTTP GET) avec un retour en `SparQL results XML` : 
   ```bash
-  curl -v -H 'Accept: application/sparql-results+xml' \
+  curl -H 'Accept: application/sparql-results+xml' \
     'http://simm.e-is.pro/sparql?query=PREFIX%20sar%3A%20%3Chttp%3A%2F%2Fsimm.e-is.pro%2Fontology%2Fschema%2F%3E%0APREFIX%20dwctax%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fontology%2Fvoc%2FTaxonName%23%3E%0APREFIX%20dwc%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fdwc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0ASELECT%20DISTINCT%20*%0AWHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20%3Ftype%20%3B%20%0A%20%20%20%20%20%20%20dwc%3AscientificName%20%3Flabel%20.%20%20%0A%7D%20LIMIT%2010'
   ```
   
-- Requête `CONSTRUCT` (HTTP POST) avec un retour en `TTL` : 
+- Requête `CONSTRUCT` (HTTP POST) avec un retour en `Turtle` : 
   ```bash
-  curl -v -H 'Accept: text/turtle' 'http://simm.e-is.pro/sparql' \
+  curl -H 'Accept: text/turtle' 'http://simm.e-is.pro/sparql' \
     --data-raw 'query=PREFIX%20sar%3A%20%3Chttp%3A%2F%2Fsimm.e-is.pro%2Fontology%2Fschema%2F%3E%0APREFIX%20dwctax%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fontology%2Fvoc%2FTaxonName%23%3E%0APREFIX%20dwc%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fdwc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0ACONSTRUCT%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20dwctax%3ATaxonName%20%3B%0A%09dwc%3AscientificName%20%3Flabel%20.%0A%7D%0AWHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20%3Ftype%20%3B%20%0A%20%20%20%20%20%20%20dwc%3AscientificName%20%3Flabel%20.%20%20%0A%7D%20LIMIT%2010'
   ```
 #### Données accessibles
@@ -92,8 +92,8 @@ Le SparQL endpoint permet l'accès :
    }
   }  
   ``` 
-  
-#### Synchronisation d'un TripleStore local 
+
+#### Synchronisation du Triple Store 
  
 Le module permet de mettre à jour automatiquement le tripletsore local (TDB2) :
 - A chaque re-démarrage du serveur
@@ -101,7 +101,32 @@ Le module permet de mettre à jour automatiquement le tripletsore local (TDB2) :
 
 Suivant du module (via une fichier de configuration) l'importation des données pourrat avoir depuis une BDD,
 des endpoints distants, des fichiers locaux, etc.     
-  
+
+### Conversion d'ontologies
+
+Le module offre une fonctionnalité de conversion, de n'importe quel format de modèle RDF, vers les formats supportés par le endpoint SparQL.
+
+Cette fonction est accessible depuis le chemin `<SERVER_URL>/ontology/convert`, avec les paramètres suivants :
+ - `uri`: l'URL du modèle à convertir;
+ - `sourceFormat` (optionnel) : le format du fichier source, nécessaire uniquement si aucun extension n'est présente; 
+    et si aucune négociatio de contenu n'est disponible sur l'URL;
+ - `format` (optionnel): le format de sortie attendu. Optionnel, si l'entete HTTP `Accept` définir les format de sortie 
+   attendus (négociation de contenu).
+
+Exemples de conversion:
+ - Convertir [FOAF](http://xmlns.com/foaf/spec/) en VOWL, via une déclaration explicite du format:
+   ```bash
+   curl 'http://simm.e-is.pro/ontology/convert?uri=http://xmlns.com/foaf/spec/&format=vowl'
+   ```
+ - Convertir [APT](http://id.eaufrance.fr/ddd/APT/2.1) (référentiel "Appellations Taxonomiques" du Sandre) en RDF/XML, en utilisant une entête HTTP:
+   ```bash
+   curl -H 'Accept: application/rdf+xml'  \
+     'http://simm.e-is.pro/ontology/convert?uri=http://owl.sandre.eaufrance.fr/apt/2.1/sandre_fmt_owl_apt.owl'
+   ```
+
+> L'outil de visusalition WebVowl est disponible à l'adresse `<SERVER_URL>/webvowl`, et exploite cette fonction de conversion,
+> afin de rendre visualisable n'importe quel modèle d'ointologie disponible sur le net. ([démo](http://simm.e-is.pro/webvowl))
+
 ### Ontologie d'un schéma BDD 
 
 Le module permet de publier sous forme d'ontologie, une schéma issu d'un modèle de données
