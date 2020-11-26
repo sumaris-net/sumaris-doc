@@ -1,5 +1,28 @@
 # Architecture > Module Web sémantique
 
+## Sommaire
+
+* [Introduction](#introduction)
+* [Fonctionnalités](#fonctionnalités)
+  * [Point d'accès SparQL](#point-daccès-sparql)
+    * [Triple store](#triple-store)
+    * [Recherche fédérée](#données-accessibles)
+    * [Synchronisation](#synchronization)
+  * [Conversion d'ontologies](#conversion-dontologies)
+  * [Publication d'ontologies](#publication-dontologies)
+  * [Publication de données](#publication-de-données)
+* [Implémentation technique](#implémentation-technique)
+  * [Libraries et frameworks](#libraries-et-frameworks)
+  * [Composants logiciels](#composants-logiciels)
+    * [package `http`](#package-http)
+    * [package `service`](#package-service)
+    * [package `loader`](#package-loader)
+    * [package `adapter`](#package-adapter)
+    * [package `dao`](#package-dao)
+    * [package `util`](#package-util)
+  * [Sécurité](#securité)
+  * [Condiguration](#configuration)
+
 ## Introduction
 
 Le module a pour objectif la diffusion de données dans un formalisme compatible avec les standards 
@@ -64,26 +87,28 @@ Exemples de requêtes SparQL:
   curl -H 'Accept: text/turtle' 'http://simm.e-is.pro/sparql' \
     --data-raw 'query=PREFIX%20sar%3A%20%3Chttp%3A%2F%2Fsimm.e-is.pro%2Fontology%2Fschema%2F%3E%0APREFIX%20dwctax%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fontology%2Fvoc%2FTaxonName%23%3E%0APREFIX%20dwc%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fdwc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0ACONSTRUCT%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20dwctax%3ATaxonName%20%3B%0A%09dwc%3AscientificName%20%3Flabel%20.%0A%7D%0AWHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20%3Ftype%20%3B%20%0A%20%20%20%20%20%20%20dwc%3AscientificName%20%3Flabel%20.%20%20%0A%7D%20LIMIT%2010'
   ```
-#### Données accessibles
+#### Triple store
 
-Le SparQL endpoint permet l'accès : 
-- Aux données d'un TripleStore local, utilisant Apache Jena TDB2.
+Le SparQL endpoint permet l'accès aux triplets stockés dans un "triple store" [Apache Jena TDB2](https://jena.apache.org/documentation/tdb2/).
 
-  Ce dataset peut-être, par exemple, chargée et mis à jour à partir :
-  * D'une ou plusieurs bases de données (ex: table de référentiels);
-  * De SparQL endpoints distants, via des requetes de type CONSTRUCT, stockés en fichiers;
-  * De fichier RDF locaux;
-  * etc.
+Ceci rend accessible des jeux de données (datasets) chargés et mis à jour. Plusieurs types de chargement sont possible :
+- Chargement depuis une ou plusieurs bases de données (ex: table de référentiels);
+- Chargement à interrogation de "SparQL endpoints" distants, via des requetes (de type `CONSTRUCT`) stockées en fichier;
+- Chargement depuis des fichiers RDF;
+- etc.
   
-  Chacune de ces sources de données est isolé dans un sous-ensemble, ce qui  
-  permet de les requéter indépendamment, par sous-ensemble, à partir d'une requête du type :
+Chaque jeu de données est isolé dans un sous-ensemble (dit "named graph"), pour permettre de les requéter indépendamment,
+par sous-ensemble, à partir d'une requête du type :
   ```
   SELECT ... 
-  FROM NAMED <URI>   <-- URI du sous-ensemble à requeter
+  FROM NAMED GRAPH <URI>   <-- URI du sous-ensemble à requeter
   WHERE ...`
   ```
-- Aux données d'autres endpoints (et leur jeux de données associés) via 
-  une requête SparQL **fédérée** du type :
+#### Recherche fédérée
+
+Il est possible de requêter des endpoints SparQL tiers, et d'interroger leur jeux de données.
+
+Exemple de requête SparQL **fédérée** :
   ```
   SELECT * FROM
   WHERE {
@@ -93,14 +118,23 @@ Le SparQL endpoint permet l'accès :
   }  
   ``` 
 
-#### Synchronisation du Triple Store 
+#### Synchronisation
  
-Le module permet de mettre à jour automatiquement le tripletsore local (TDB2) :
-- A chaque re-démarrage du serveur
-- Suivant une période données, par exemple toutes les nuits - TODO: NON implémenté
+Le module permet de mettre à jour automatiquement le triple store, notamment :
+ - A chaque re-démarrage du serveur;
+ - en cron - à une période données - **TODO: à implémenter**.
 
-Suivant du module (via une fichier de configuration) l'importation des données pourrat avoir depuis une BDD,
-des endpoints distants, des fichiers locaux, etc.     
+Le chargement des données peut se faire depuis plusieurs sources :
+ - depuis une ou plusieurs BDD;
+ - des endpoints SparQL distants,
+ - des fichiers locaux;
+ - etc.     
+
+L'importation via un fichier de configuration.
+
+TODO :
+ - implémneter le cron
+ - gérer la détection des mises à jour (import incrémental - nécessite une date de dernière mise à jour)  
 
 ### Conversion d'ontologies
 
@@ -127,9 +161,10 @@ Exemples de conversion:
 > L'outil de visusalition WebVowl est disponible à l'adresse `<SERVER_URL>/webvowl`, et exploite cette fonction de conversion,
 > afin de rendre visualisable n'importe quel modèle d'ointologie disponible sur le net. ([démo](http://simm.e-is.pro/webvowl))
 
-### Ontologie d'un schéma BDD 
+### Publication d'ontologies 
 
-Le module permet de publier sous forme d'ontologie, une schéma issu d'un modèle de données
+Le module permet de publier, sous forme d'ontologie, un modèle de données issu d'une BDD.
+
 Pour cela, le module autorise l'accès (HTTP GET) aux adresses suivantes :
 - `<SERVER_URL>/ontology/schema` : publication du schéma entier (Classes et attributs)
 - `<SERVER_URL>/ontology/schema/<CLASSE>` : publication d'une classe, de ses attributs, et de ses classes directement connectées;
@@ -162,13 +197,14 @@ Les formats de réponse suivants sont possibles :
 | Thrift     | `thrift`, `rt`, `trdf`        | `application/rdf+thrift`, `application/x-thrift`, `application/rdf+x-thrift`, `application/vnd.apache.thrift.binary` |
 | VOWL       | `vowl`                        | `application/webvowl+json`       |
 
-> Un outil graphique est disponible à l'adresse `<SERVER_URL>/ontology` pour construire et tester les
-> différents chemins, options et format possibles.
+> Un outil est disponible à l'adresse `<SERVER_URL>/ontology` pour construire et tester les
+> différents chemins, options et format possibles. ([démo](simm.e-is.pro/ontology))
+>
 > Une visualisation graphique d'ontologies y est également possible (en cliquant sur le bouton "View WebVowl") 
   
-### Accès aux données d'une BDD
+### Publication de données
 
-Le module permet d'accéder à des instances issues d'une base de données sous-jacente, pour des tables de référentiels.
+Le module permet d'accéder à des données d'une base de données sous-jacente, par exemple aux tables de référentiel.
 
 Pour cela, le module autorise l'accès (HTTP GET) aux adresses suivantes :
 - `<SERVER_URL>/ontology/data/<CLASSE>` : toutes les instances correspondante à la classe;
@@ -184,6 +220,10 @@ Exemples :
 - http://localhost:8080/ontology/data/TaxonName/15151
 - http://localhost:8080/ontology/data/TaxonName/15151.ttl
 - http://localhost:8080/ontology/data/TaxonName/15151?format=ttl
+
+> Un outil est disponible à l'adresse `<SERVER_URL>/ontology` pour construire et tester les
+> différents chemins, options et format possibles. ([démo](simm.e-is.pro/ontology))
+
 
 ## Implémentation technique
 
@@ -202,7 +242,8 @@ Voici les librairies et frameworks utilisés par l'implémentation du module :
   * Pour les conversions au format VOWL, utilisé par [WebVOWL](http://vowl.visualdataweb.org/webvowl.html) (outil visualisation graphique d'ontologies) ; 
 - [Spring Boot](https://spring.io/projects/spring-boot) :
   * Pour implémenter les points d'accès HTTP REST (GET ou POST), sous forme de Serlvet JEE;
-  * Déployable au sein d'un moteur Apache Tomcat, et/ou d'une autre application web utilisant Spring Boot.
+  * Déployable au sein d'un moteur Apache Tomcat, et/ou d'une autre application web utilisant Spring Boot;
+  * La gestion de la sécurité utilise Spring Security, pour contrôler les éventuels droits d'accès par authentificaiton.
 - [Apache Maven](https://maven.apache.org/) :
   * Pour la gestion des dépendances Java, la compilation et livraison du module;
   
@@ -331,6 +372,14 @@ Un package `util` (non représenté sur l'illustration des composants logiciels)
 - La correspondance entre les entêtes HTTP `Accept` (Content-Type) et les format Jena;
 - La conversion d'entité JPA (classes et instances de classes) en ontologie Jena ;
 - etc.  
+
+### Sécurité
+
+La gestion des droits d'accès peut se faire sur chaque endpoint REST, grâce à des annotations Java et Spring Security. 
+On peut ainsi limiter l'accès, au cas pas cas, par exemple pour autoriser uniquement certains profils d'utilisateur.
+
+Pour le moment, l'écriture dans le triplestore et dans la BDD n'étant pas implémenté, les endpoints en accessible à tous, 
+sans authentification.  
 
 ### Configuration
 

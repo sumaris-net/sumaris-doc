@@ -99,15 +99,16 @@ package "net.sumaris.core.rdf" {
     package http {
 
         class SparqlRestController {
-            The SparQL endpoint
+            The **SparQL endpoint**,
+            with content type negotiation
             ==
         }
         hide SparqlRestController methods
 
         class OntologyRestController {
-            Export a database entity model
-            into an ontology, and export
-            data as individual
+            * **Expose as an ontology** a conceptual model (e.g. used by DB);
+            * **Expose as individuals** a DB content (e.g. referential instances);
+            * Allow to **convert** any ontology to supported formats.
             ==
         }
 
