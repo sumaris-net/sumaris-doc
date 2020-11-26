@@ -17,13 +17,13 @@ du web sémantique.
 ### Point d'accès SparQL
 
 Le module rend accessible un "SparQL endpoint".
-Celui-ci réponds aux rêquetes HTTP (GET ou POST) envoyés au serveur sur le chemin `<SERVER_URL>/sparql` (par exemple `http://localhost:8080/sparql`).
-Ce endpoint est utilisable dans n'importe quel SparQL Editor, ou depuis une requete HTTP quelconque.
+Celui-ci répond aux requêtes HTTP (GET ou POST) envoyées au serveur sur le chemin `<SERVER_URL>/sparql` (par exemple `http://localhost:8080/sparql`).
+Ce endpoint est utilisable dans n'importe quel éditeur SparQL, ou depuis une requête HTTP quelconque.
 
-Le format de la réponse est détecté automatiquement, à partir de l'entête HTTP `Accept` de la requête, comme le prévoit l'usage de SparQL (content-type negociation).
+Le format de la réponse est détecté automatiquement, à partir de l'entête HTTP `Accept` de la requête, comme le prévoit l'usage de SparQL (Content-Type negociation).
 
 Les formats de réponse suivants sont possibles : 
-- Format spécifique SparQL (pour les requêtes de type `SELECT` et `ASK`) : 
+- Format spécifique SparQL, pour les requêtes de type `SELECT` et `ASK` : 
 
     | Format                | Header `Accept` (Content-Type)                                |
     | --------------------- | ------------------------------------------------------------- |
@@ -34,7 +34,7 @@ Les formats de réponse suivants sont possibles :
     | SparQL-results SSE    | `application/sparql-results+sse`                              | 
     | SparQL-results Thrift | `application/sparql-results+thrift`                           | 
 
-- Autres format RDF (pour les requêtes de type `CONSTRUCT` et `DESCRIBE`) :
+- Formats standards RDF, pour les requêtes de type `CONSTRUCT` et `DESCRIBE` :
 
     | Format     | Header `Accept` (Content-Type)                                              |
     | ---------- | --------------------------------------------------------------------------- |
@@ -52,7 +52,18 @@ Les formats de réponse suivants sont possibles :
 > Un éditeur SparQL est disponible à l'adresse `<SERVER_URL>/sparql/ui` pour tester le point d'accès SparQL.
 > Des requêtes d'exemples y sont également accessibles.
   
+Exemples de requêtes SparQL:
+- Requête `SELECT` (HTTP GET) avec un retour en `SparQL results XML` : 
+  ```bash
+  curl -v -H 'Accept: application/sparql-results+xml' \
+    'http://simm.e-is.pro/sparql?query=PREFIX%20sar%3A%20%3Chttp%3A%2F%2Fsimm.e-is.pro%2Fontology%2Fschema%2F%3E%0APREFIX%20dwctax%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fontology%2Fvoc%2FTaxonName%23%3E%0APREFIX%20dwc%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fdwc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0ASELECT%20DISTINCT%20*%0AWHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20%3Ftype%20%3B%20%0A%20%20%20%20%20%20%20dwc%3AscientificName%20%3Flabel%20.%20%20%0A%7D%20LIMIT%2010'
+  ```
   
+- Requête `CONSTRUCT` (HTTP POST) avec un retour en `TTL` : 
+  ```bash
+  curl -v -H 'Accept: text/turtle' 'http://simm.e-is.pro/sparql' \
+    --data-raw 'query=PREFIX%20sar%3A%20%3Chttp%3A%2F%2Fsimm.e-is.pro%2Fontology%2Fschema%2F%3E%0APREFIX%20dwctax%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fontology%2Fvoc%2FTaxonName%23%3E%0APREFIX%20dwc%3A%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fdwc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0ACONSTRUCT%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20dwctax%3ATaxonName%20%3B%0A%09dwc%3AscientificName%20%3Flabel%20.%0A%7D%0AWHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%20%3Ftype%20%3B%20%0A%20%20%20%20%20%20%20dwc%3AscientificName%20%3Flabel%20.%20%20%0A%7D%20LIMIT%2010'
+  ```
 #### Données accessibles
 
 Le SparQL endpoint permet l'accès : 
