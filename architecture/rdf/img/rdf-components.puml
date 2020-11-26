@@ -84,14 +84,17 @@ package "net.sumaris.core.rdf" {
         interface RdfDatasetService
 
         RdfDatasetService --> TDB2 : read/write\n(Jena queries)
-        RdfDatasetService o-down-> "0..*" INamedRdfLoader : visit\n model
+        RdfDatasetService o-down-> "0..*" INamedRdfLoader : run\n loader
     }
 
 
-    MnhnTaxonLoader -up-> RdfDatasetService : "register\nas loader"
-    SandreTaxonLoader -up-> RdfDatasetService : "register\nas loader"
+    MnhnTaxonLoader .up.> RdfDatasetService : "register\ninto"
+    SandreTaxonLoader .up.> RdfDatasetService : "register\ninto"
     RdfIndividualService o--> "0..*" IModelVisitor : "visit\nindividual"
     RdfSchemaService o--> "0..*" IModelVisitor : "visit\nmodel"
+    IModelVisitor .up.> RdfSchemaService : "register\ninto"
+    IModelVisitor .up.> RdfIndividualService : "register\ninto"
+
 
     package http {
 
