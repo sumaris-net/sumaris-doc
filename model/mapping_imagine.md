@@ -75,8 +75,8 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | saisisseurs | observed_location2person |
 | ligne de plan (AAAA_BIO_XXXX) | **PMFM ? observed_location.sampling_strata_reference ?** |
 | date de prélèvement (sans heure) | **observed_location.start_date_time + observed_location.end_date_time ?** |
-|  | landing.landing_date_time |
-|  | **sample.sample_date ?** |
+|  | **landing.landing_date_time ?** |
+|  | sample.sample_date |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | lieu d'observation | observed_location.location_fk |
@@ -100,5 +100,10 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 Liste des évolutions de modèle nécessaires :
 - ajouter la colonne SAMPLE.LANDING_FK en nullable
 - [POD] modifier le service qui va chercher les PMFM applicables, pour, à partir des PMFM_STRATEGY, aller chercher (par requêtes) les PMFM qui correspondent
+
+Modèle Adagio :
+- OBSERVED_LOCATION : http://www.ifremer.fr/allegro/allegro-uml/html/diagram/_17_0_4_2_7d60262_1389018854224_287800_6931.html
+- LANDING : http://www.ifremer.fr/allegro/allegro-uml/html/diagram/_15_5_1_eb50347_1225730050904_747257_7340.html
+- SAMPLE : http://www.ifremer.fr/allegro/allegro-uml/html/diagram/_12_5_1_eb50347_1207578736105_286575_6103.html
 
 Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.html?refid=_17_0_4_2_b9302e6_1589364467597_86385_4919
