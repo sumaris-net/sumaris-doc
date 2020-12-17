@@ -65,6 +65,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 
 | Specs | Adagio |
 | ----- | ------ |
+| **Observation** |  |
 | programme (**SIH-OBSVENTE ?**) | observed_location.program_fk |
 |  | landing.program_fk |
 |  | sample.program_fk |
@@ -73,19 +74,21 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 |  | sample.recorder_department_fk + recorder_person_fk |
 |  | sample_measurement.department_fk |
 | saisisseurs | observed_location2person |
-| ligne de plan (AAAA_BIO_XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
 | date de prélèvement (sans heure) | observed_location.start_date_time + observed_location.end_date_time |
 |  | landing.landing_date_time |
 |  | sample.sample_date |
-| navire | landing.vessel_fk |
-| numéro de trait | (uniquement pour les campagnes) |
 | lieu d'observation | observed_location.location_fk |
 |  | landing.landing_location_fk (seulement si lieu de type port) |
+| **Débarquement** |  |
+| ligne de plan (AAAA_BIO_XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
+| navire | landing.vessel_fk |
+| numéro de trait | (uniquement pour les campagnes) |
+| port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
 | zones de pêche | non stocké (issu de la stratégie) |
 | espèce cible | **sample.reference_taxon_fk** |
 | **présentation** | **?** |
 | commentaire | landing.comments |
-| mesures individuelles (pmfms de la stratégie) |  |
+| **Mesures individuelles** (pmfms de la stratégie) |  |
 | - code prélèvement (XBL071220MERLMER0001) | **sample.label** |
 | - code Morse (TitiX00032) | **sample_measurement.alphanumerical_value avec pmfm_fk = ?** |
 | - commentaire | sample.comments |
