@@ -73,26 +73,27 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 |  | sample.recorder_department_fk + recorder_person_fk |
 |  | sample_measurement.department_fk |
 | saisisseurs | observed_location2person |
-| ligne de plan (AAAA_BIO_XXXX) | **PMFM ? observed_location.sampling_strata_reference ?** |
-| date de prélèvement (sans heure) | **observed_location.start_date_time + observed_location.end_date_time ?** |
-|  | **landing.landing_date_time ?** |
+| ligne de plan (AAAA_BIO_XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
+| date de prélèvement (sans heure) | observed_location.start_date_time + observed_location.end_date_time |
+|  | landing.landing_date_time |
 |  | sample.sample_date |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | lieu d'observation | observed_location.location_fk |
 |  | landing.landing_location_fk (seulement si lieu de type port) |
 | zones de pêche | non stocké (issu de la stratégie) |
-| espèce cible | sample.reference_taxon_fk |
+| espèce cible | **sample.reference_taxon_fk** |
 | **présentation** | **?** |
-| commentaire | observed_location.comments |
+| commentaire | landing.comments |
 | mesures individuelles (pmfms de la stratégie) |  |
-| - code prélèvement (XBL071220MERLMER0001) | **sample.label ?** |
+| - code prélèvement (XBL071220MERLMER0001) | **sample.label** |
 | - code Morse (TitiX00032) | **sample_measurement.alphanumerical_value avec pmfm_fk = ?** |
 | - commentaire | sample.comments |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - autres (pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
 |  |  |
+|  | landing.rank_order = 1 |
 |  | sample.matrix_fk = 2 (individu) |
 
 > Lorsque les prélèvements sont modifiés, mettre à jour OBSERVED_LOCATION.UPDATE_DATE
