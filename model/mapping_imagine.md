@@ -27,8 +27,8 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | Specs | Adagio |
 | ----- | ------ |
 | programme (PARAM-BIO) | strategy.program_fk |
-| code (AAAA_BIO_XXXX) | strategy.label + strategy.name |
-| commentaire | strategy.description |
+| code (AAAA_BIO_XXXX) | strategy.label + strategy.name + strategy.description |
+| commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
@@ -54,6 +54,7 @@ Liste des évolutions de modèle nécessaires :
 - ajouter les colonnes PMFM_STRATEGY.PARAMETER_FK, MATRIX_FK, FRACTION_FK, METHOD_FK en nullable
 - ajouter les colonnes STRATEGY.ANALYTIC_REFERENCE, APPLIED_PERIOD.ACQUISITION_NUMBER
 - ajouter la table STRATEGY2DEPARTMENT : lien n-n avec program_privilège_fk (cf program2department)
+- ajouter la colonne STRATEGY.COMMENTS en nullable
 
 Modèle Adagio : http://www.ifremer.fr/allegro/allegro-uml/html/diagram/_12_5_1_eb50347_1207578735308_746618_4801.html
 
