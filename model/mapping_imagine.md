@@ -27,7 +27,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | Specs | Adagio |
 | ----- | ------ |
 | programme (PARAM-BIO) | strategy.program_fk |
-| code (AAAA_BIO_XXXX) | strategy.label + strategy.name + strategy.description |
+| code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description |
 | commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
@@ -81,7 +81,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
 | **Débarquement** |  |
-| ligne de plan (AAAA_BIO_XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
+| ligne de plan (AAAA-BIO-XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
