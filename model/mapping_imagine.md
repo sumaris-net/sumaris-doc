@@ -86,7 +86,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
 | zones de pêche | non stocké (issu de la stratégie) |
-| espèce cible | **sample.reference_taxon_fk** |
+| espèce cible | **sample.reference_taxon_fk** (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | **présentation** | **obsolète, à supprimer ?** |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
