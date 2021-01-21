@@ -43,7 +43,8 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | début de la période | non stocké (min applied_period.start_date) |
 | fin de la période | non stocké (max applied_period.end_date) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
-| efforts sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
+| effort planifié sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
+| effort réalisé sur le trimestre | nombre de landing avec landing_measurement.numerical_value = strategy.label et un landing_date_time entre applied_period.start_date et applied_period.end_date
 
 > Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
 
