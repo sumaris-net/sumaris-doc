@@ -44,7 +44,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | fin de la période | non stocké (max applied_period.end_date) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
 | effort planifié sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
-| effort réalisé sur le trimestre | nombre de landing avec landing_measurement.numerical_value = strategy.label et un landing_date_time entre applied_period.start_date et applied_period.end_date
+| effort réalisé sur le trimestre | nombre de landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
 
 > Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
 
@@ -82,17 +82,17 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
 | **Débarquement** |  |
-| ligne de plan (AAAA-BIO-XXXX) | **landing_measurement.alphanumerical_value avec pmfm_fk = ?** |
+| ligne de plan (AAAA-BIO-XXXX) | landing_measurement.alphanumerical_value avec pmfm_fk = ? |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
 | zones de pêche | non stocké (issu de la stratégie) |
-| espèce cible | **sample.reference_taxon_fk** (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
+| espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | **présentation** | **obsolète, à supprimer ?** |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (XBL071220MERLMER0001) | **sample.label** |
-| - code Morse (TitiX00032) | **sample_measurement.alphanumerical_value avec pmfm_fk = ?** |
+| - code prélèvement (XBL071220MERLMER0001) | sample.label |
+| - code Morse (TitiX00032) | sample_measurement.alphanumerical_value avec pmfm_fk = ? |
 | - commentaire | sample.comments |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
