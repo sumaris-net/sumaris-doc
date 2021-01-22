@@ -14,7 +14,7 @@ Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.
 
 Profiles et privilèges utilisés :
 - Administrateur de référentiel : profil Administrateur
-- Administrateur de programme : profil Administrateur avec privilège Administrateur sur un programme
+- Administrateur de programme : profil Superviseur (Super Utilisateur) avec privilège Administrateur sur un programme
 - Utilisateur : profile Utilisateur avec privilège Observateur sur une observation
 
 Les droits sont gérés au niveau de l'observation.
