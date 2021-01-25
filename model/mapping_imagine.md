@@ -28,7 +28,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | ----- | ------ |
 | programme (PARAM-BIO) | strategy.program_fk |
 | code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description |
-| commentaire | strategy.comments |
+| commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
