@@ -26,7 +26,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 
 | Specs | Adagio |
 | ----- | ------ |
-| programme (PARAM-BIO) | strategy.program_fk |
+| programme (SIH-PARAM-BIO) | strategy.program_fk |
 | code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description |
 | commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
@@ -67,7 +67,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | Specs | Adagio |
 | ----- | ------ |
 | **Observation** |  |
-| programme (**SIH-OBSVENTE ?**) | observed_location.program_fk |
+| programme (**SIH-PARAM-BIO**) | observed_location.program_fk |
 | *- recopié de observed_location* | landing.program_fk |
 | *- recopié de observed_location* | sample.program_fk |
 | saisisseur | observed_location.recorder_department_fk + recorder_person_fk |
