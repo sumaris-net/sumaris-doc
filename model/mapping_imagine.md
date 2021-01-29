@@ -27,7 +27,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | Specs | Adagio |
 | ----- | ------ |
 | programme (SIH-PARAM-BIO) | strategy.program_fk |
-| code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description |
+| code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (acquisition_level_fk=LANDING) |
 | commentaire | strategy.description |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
