@@ -34,6 +34,7 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
+| - code Morse (pmfm) | pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - sexe (pmfm) | pmfm_strategy.pmfm_fk |
@@ -90,8 +91,8 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
 | - code prélèvement (XBL071220MERLMER0001) | sample.label |
-| - code Morse (TitiX00032) | sample_measurement.alphanumerical_value avec pmfm_fk = ? |
 | - commentaire | sample.comments |
+| - code Morse (TitiX00032) | sample_measurement.alphanumerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - autres (pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
