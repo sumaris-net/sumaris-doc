@@ -13,9 +13,9 @@ Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.
 | Privilège | program_privilege : <br> Administrateur, Observateur, Consultation intégrale, Validateur, Qualificateur | program_privilege : <br> MANAGER, OBSERVER, VIEWER, VALIDATOR, QUALIFIER (surchargé par énumération) |
 
 Profiles et privilèges utilisés :
-- Administrateur de référentiel : profil Administrateur
-- Administrateur de programme : profil Superviseur (Super Utilisateur) avec privilège Administrateur sur un programme
-- Utilisateur : profile Utilisateur avec privilège Observateur sur une observation
+- Administrateur de référentiel : profil Administrateur (ALLEGRO_ADMINISTRATEUR)
+- Administrateur de programme : profil Superviseur (ALLEGRO_SUPER_UTILISATEUR) avec privilège Administrateur sur un programme
+- Utilisateur : profile Utilisateur (ALLEGRO_UTILISATEUR) avec privilège Observateur sur une observation
 
 Les droits sont gérés au niveau de l'observation.
 
