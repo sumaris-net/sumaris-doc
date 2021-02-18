@@ -37,9 +37,9 @@ Les données seront par contre rattachées au programmes de collecte corresponda
 | - code Morse (pmfm) | pmfm_strategy.pmfm_fk (ajouté automatiquement mais pas affiché) |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | pmfm_strategy.pmfm_fk |
-| - sexe (pmfm) | pmfm_strategy.pmfm_fk |
+| - sexe (pmfm) | pmfm_strategy.pmfm_fk (=196)|
 | - maturité (liste de pmfm) | pmfm_strategy.pmfm_fk |
-| - âge (pmfm) | pmfm_strategy.pmfm_fk |
+| - âge (pmfm) | pmfm_strategy.pmfm_fk (=2269)|
 | - type de pièce calcifiée (liste de fractions) | pmfm_strategy.fraction_fk |
 | Année | applied_strategy.applied_period.start_date : lié à la première zone de pêche. Il n'y a pas de persistance à proprement parler, c'est juste un affichage en prenant l'année du premier trimestre qu'on trouve (il y en a forcément au moins 1, sinon la ligne de plan ne peut pas être créée) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
