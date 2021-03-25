@@ -16,7 +16,7 @@ E souhaitée. il faut également créer deux tablespaces : **SIH2_SUMARIS_DATA**
 
 # Première mise en exploitation du volet Imagine
 ## Création de nouveaux objets en base de données
-Demander au guichet d'exploitation Harmonie de créer les objets suivant en base de données : 
+Demander au guichet d'exploitation Harmonie de créer les objets suivants en base de données : 
 ```sql
 insert into PROGRAM (CODE,NAME,DESCRIPTION,STATUS_FK,GEAR_CLASSIFICATION_FK,TAXON_GROUP_TYPE_FK) values ('SIH-PARAM-BIO','Programme d observation des paramètres biologiques','Programme d observation des paramètres biologiques',1,2);
 insert into PROGRAM2LOCATION_CLASSIF (PROGRAM_FK,LOCATION_CLASSIFICATION_FK) values ('SIH-PARAM-BIO',2);
@@ -29,6 +29,6 @@ insert into PMFM (PARAMETER_FK,LABEL,MATRIX_FK,FRACTION_FK,METHOD_FK,UNIT_FK,AGG
 ```
 
 ## Configuration du serveur
-Definition des configurations serveur via l'IHM du client web (menu **configuration serveur** accessible en tant qu'administrateur). C'est ici que l'on peut définir les images de fonds, logos, surcharge des enumérations.
+Définition des configurations serveur via l'IHM du client web (menu **configuration serveur** accessible en tant qu'administrateur). C'est ici que l'on peut définir les images de fonds, logos ou encore la surcharge des enumérations par exemple.
 
 NB : Il faudra dans tous les cas surcharger PMFM créer ci-dessus pour prendre en compte les bon ids dans la base Oracle.
