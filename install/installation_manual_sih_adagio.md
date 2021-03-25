@@ -31,4 +31,4 @@ insert into PMFM (PARAMETER_FK,LABEL,MATRIX_FK,FRACTION_FK,METHOD_FK,UNIT_FK,AGG
 ## Configuration du serveur
 Définition des configurations serveur via l'IHM du client web (menu **configuration serveur** accessible en tant qu'administrateur). C'est ici que l'on peut définir les images de fonds, logos ou encore la surcharge des enumérations par exemple.
 
-NB : Il faudra dans tous les cas surcharger PMFM créer ci-dessus pour prendre en compte les bon ids dans la base Oracle.
+NB : Il faudra dans tous les cas surcharger les PMFM créer ci-dessus pour prendre en compte les ids référencés dans la base Oracle.
