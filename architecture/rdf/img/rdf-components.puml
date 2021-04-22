@@ -1,0 +1,135 @@
+@startuml
+hide empty members
+
+together {
+    package DB <<Database>>  #lightblue {
+        class TAXON_NAME #EEE {
+            + ID: NUMBER(10)
+            + LABEL: VARCHAR2(40)
+        }
+        class DEPARTMENT #EEE {
+            + ID: NUMBER(10)
+            + LABEL: VARCHAR2(40)
+        }
+
+        hide TAXON_NAME circle
+        hide DEPARTMENT circle
+
+    }
+
+    package TDB2 <<Node>> #lightblue {
+        package "TDB2 Files" <<Folder>> #EEE {
+
+        }
+    }
+}
+
+together {
+    interface "Sandre" as sandreEndpoint #EEE {
+      http://id.eaufrance.fr/sparql
+    }
+    hide sandreEndpoint circle
+
+    interface "MNHN" as mnhnEndpoint #EEE {
+      http://taxref.mnhn.fr/sparql
+    }
+    hide mnhnEndpoint circle
+
+}
+
+package "net.sumaris.core.rdf" {
+
+    package adapter {
+        interface IModelVisitor {
+            + accept(model): boolean
+            + visitModel(model)
+            + visitClass(class)
+            + visitIndividual(instance)
+        }
+
+        class SandreEquivalences
+
+        SandreEquivalences -left-|> IModelVisitor
+    }
+
+    package dao {
+
+        interface EntitiesDao
+
+        EntitiesDao -down-> TAXON_NAME : read/write\n(SQL queries)
+        EntitiesDao -down-> DEPARTMENT : read/write\n(SQL queries)
+    }
+
+    package loader {
+        interface INamedRdfLoader
+
+        class MnhnTaxonLoader
+        class SandreTaxonLoader
+
+        MnhnTaxonLoader -right-|> INamedRdfLoader #blue;line.dotted
+        SandreTaxonLoader -left-|> INamedRdfLoader #blue;line.dotted
+
+        MnhnTaxonLoader --> mnhnEndpoint : read\n(SparQL queries)
+        SandreTaxonLoader --> sandreEndpoint : read\n(SparQL queries)
+    }
+
+    package service {
+        interface RdfSchemaService
+        RdfSchemaService --> dao : use
+
+        interface RdfIndividualService
+        RdfIndividualService --> EntitiesDao : use
+
+
+        interface RdfDatasetService
+
+        RdfDatasetService --> TDB2 : read/write\n(Jena queries)
+        RdfDatasetService o-down-> "0..*" INamedRdfLoader : run\n loader
+    }
+
+
+    MnhnTaxonLoader .up.> RdfDatasetService : "register\ninto"
+    SandreTaxonLoader .up.> RdfDatasetService : "register\ninto"
+    RdfIndividualService o--> "0..*" IModelVisitor : "visit\nindividual"
+    RdfSchemaService o--> "0..*" IModelVisitor : "visit\nmodel"
+    IModelVisitor .up.> RdfSchemaService : "register\ninto"
+    IModelVisitor .up.> RdfIndividualService : "register\ninto"
+
+
+    package http {
+
+        class SparqlRestController {
+            The **SparQL endpoint**,
+            with content type negotiation
+            ==
+        }
+        hide SparqlRestController methods
+
+        class OntologyRestController {
+            * **Expose as an ontology** a conceptual model (e.g. used by DB);
+            * **Expose as individuals** a DB content (e.g. referential instances);
+            * Allow to **convert** any ontology to supported formats.
+            ==
+        }
+
+        class VowlRestController {
+            Used by WebVOWL tool
+            ==
+        }
+
+        SparqlRestController --> RdfDatasetService : use
+        OntologyRestController --> RdfSchemaService : use
+        OntologyRestController --> RdfIndividualService : use
+    }
+
+}
+
+interface "Client HTTP request" as client #DDD
+hide client circle
+
+client --> SparqlRestController : /sparql
+client --> VowlRestController : /webowl
+client --> OntologyRestController : /ontology
+
+
+@enduml
