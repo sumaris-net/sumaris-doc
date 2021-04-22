@@ -1,5 +1,8 @@
 # Cas d'utilisation fonctionnels
 
+ - [Administration des référentiels](#Administration_des_référentiels)
+ - [Collecte des données](../collect/collect.md)
+
 ## Administration des référentiels
 
  - [Liste des référentiels](#Liste_des_référentiels)

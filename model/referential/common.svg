@@ -3,6 +3,51 @@ class ReferentialItem--><rect fill="#FEFECE" filter="url(#ftry905g2uu1n)" height
 class ReferentialLevel--><rect fill="#FEFECE" filter="url(#ftry905g2uu1n)" height="48" id="ReferentialLevel" style="stroke: #A80036; stroke-width: 1.5;" width="132" x="251.5" y="46.5"/><ellipse cx="266.5" cy="62.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M262.4219,58.2656 L262.4219,56.1094 L269.8125,56.1094 L269.8125,58.2656 L267.3438,58.2656 L267.3438,66.3438 L269.8125,66.3438 L269.8125,68.5 L262.4219,68.5 L262.4219,66.3438 L264.8906,66.3438 L264.8906,58.2656 L262.4219,58.2656 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="100" x="280.5" y="66.6543">ReferentialLevel</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="252.5" x2="382.5" y1="78.5" y2="78.5"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="252.5" x2="382.5" y1="86.5" y2="86.5"/><!--MD5=[e3d83ec5fd90ea9f3f2bfe265cb53458]
 class Status--><rect fill="#FEFECE" filter="url(#ftry905g2uu1n)" height="86.4141" id="Status" style="stroke: #A80036; stroke-width: 1.5;" width="100" x="38.5" y="200.5"/><ellipse cx="65.65" cy="216.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M68.6188,222.1406 Q68.0406,222.4375 67.4,222.5781 Q66.7594,222.7344 66.0563,222.7344 Q63.5563,222.7344 62.2281,221.0938 Q60.9156,219.4375 60.9156,216.3125 Q60.9156,213.1875 62.2281,211.5313 Q63.5563,209.875 66.0563,209.875 Q66.7594,209.875 67.4,210.0313 Q68.0563,210.1875 68.6188,210.4844 L68.6188,213.2031 Q67.9938,212.625 67.4,212.3594 Q66.8063,212.0781 66.1813,212.0781 Q64.8375,212.0781 64.15,213.1563 Q63.4625,214.2188 63.4625,216.3125 Q63.4625,218.4063 64.15,219.4844 Q64.8375,220.5469 66.1813,220.5469 Q66.8063,220.5469 67.4,220.2813 Q67.9938,220 68.6188,219.4219 L68.6188,222.1406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="82.35" y="220.6543">Status</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="39.5" x2="137.5" y1="232.5" y2="232.5"/><ellipse cx="49.5" cy="243.5" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="58.5" y="246.7104">id: int</text><ellipse cx="49.5" cy="256.3047" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="58.5" y="259.5151">label: String</text><ellipse cx="49.5" cy="269.1094" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="74" x="58.5" y="272.3198">name: String</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="39.5" x2="137.5" y1="278.9141" y2="278.9141"/><!--MD5=[79987c2ca11a8cc74db521dda9378541]
 class StatusEnum--><rect fill="#FEFECE" filter="url(#ftry905g2uu1n)" height="99.2188" id="StatusEnum" style="stroke: #A80036; stroke-width: 1.5;" width="108" x="280.5" y="194"/><ellipse cx="295.5" cy="210" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M299.6094,216 L291.8906,216 L291.8906,203.6094 L299.6094,203.6094 L299.6094,205.7656 L294.3438,205.7656 L294.3438,208.4375 L299.1094,208.4375 L299.1094,210.5938 L294.3438,210.5938 L294.3438,213.8438 L299.6094,213.8438 L299.6094,216 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="309.5" y="214.1543">StatusEnum</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="281.5" x2="387.5" y1="226" y2="226"/><ellipse cx="291.5" cy="237" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="300.5" y="240.2104">DISABLE: 0</text><ellipse cx="291.5" cy="249.8047" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="300.5" y="253.0151">ENABLE: 1</text><ellipse cx="291.5" cy="262.6094" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="300.5" y="265.8198">TEMPORARY: 2</text><ellipse cx="291.5" cy="275.4141" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="300.5" y="278.6245">DELETED: 3</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="281.5" x2="387.5" y1="285.2188" y2="285.2188"/><!--MD5=[52c2237435e54e5b69b8ba53b283003b]
-link ReferentialItem to Status--><path d="M88.5,133.4464 C88.5,153.7574 88.5,175.9439 88.5,195.0412 " fill="none" id="ReferentialItem-&gt;Status" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="88.5,200.3415,92.5,191.3415,88.5,195.3415,84.5,191.3415,88.5,200.3415" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="64.3141" y="152.7938">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="79.8625" y="189.3123">1</text><!--MD5=[ea2dbef82be4b29d8bc328a6b8129172]
-link ReferentialItem to ReferentialLevel--><path d="M171.1743,70.5 C195.8132,70.5 222.5878,70.5 246.4173,70.5 " fill="none" id="ReferentialItem-&gt;ReferentialLevel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="251.4558,70.5,242.4558,66.5,246.4558,70.5,242.4558,74.5,251.4558,70.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="0" x="233.25" y="63.5669"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="178.9731" y="83.2006">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="219.4075" y="83.3472">0..1</text><!--MD5=[96b55b4af83b694e74de66a581a23ce5]
-reverse link Status to StatusEnum--><path d="M143.9761,243.5 C184.7127,243.5 239.7686,243.5 280.221,243.5 " fill="none" id="Status&lt;-StatusEnum" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="138.5783,243.5,147.5783,247.5,143.5783,243.5,147.5783,239.5,138.5783,243.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="105" x="157" y="236.5669">is an identifier of</text></g></svg>
+link ReferentialItem to Status--><path d="M88.5,133.23 C88.5,153.61 88.5,175.94 88.5,195.07 " fill="none" id="ReferentialItem-&gt;Status" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="88.5,200.38,92.5,191.38,88.5,195.38,84.5,191.38,88.5,200.38" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="64.2422" y="152.995">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="79.8625" y="189.3569">1</text><!--MD5=[ea2dbef82be4b29d8bc328a6b8129172]
+link ReferentialItem to ReferentialLevel--><path d="M171.17,70.5 C195.81,70.5 222.59,70.5 246.42,70.5 " fill="none" id="ReferentialItem-&gt;ReferentialLevel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="251.46,70.5,242.46,66.5,246.46,70.5,242.46,74.5,251.46,70.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="0" x="233.25" y="63.5669"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="178.9685" y="83.2006">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="219.4121" y="83.3472">0..1</text><!--MD5=[96b55b4af83b694e74de66a581a23ce5]
+reverse link Status to StatusEnum--><path d="M143.98,243.5 C184.71,243.5 239.77,243.5 280.22,243.5 " fill="none" id="Status&lt;-StatusEnum" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="138.58,243.5,147.58,247.5,143.58,243.5,147.58,239.5,138.58,243.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="105" x="157" y="236.5669">is an identifier of</text><!--MD5=[9c90c26fc830ad42b36e4f9e8a5c5428]
+@startuml
+
+interface ReferentialItem {
+    +id: Int
+    +label: String
+    +name: String
+    +description: String [0..1]
+    +comment: String [0..1]
+    +updateDate: Timestamp
+}
+
+interface ReferentialLevel {
+}
+
+class Status {
+    +id: int
+    +label: String
+    +name: String
+}
+
+enum StatusEnum {
+   +DISABLE: 0
+   +ENABLE: 1
+   +TEMPORARY: 2
+   +DELETED: 3
+}
+
+ReferentialItem "0..*" - -> "1" Status
+ReferentialItem "0..*" -right-> "0..1" ReferentialLevel: "           "
+
+Status <.left. StatusEnum: "is an identifier of"
+
+
+@enduml
+
+PlantUML version 1.2019.12(Sun Nov 03 11:24:54 CET 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.10+9-Ubuntu-0ubuntu1.20.04
+Operating System: Linux
+Default Encoding: UTF-8
+Language: fr
+Country: CA
+--></g></svg>
