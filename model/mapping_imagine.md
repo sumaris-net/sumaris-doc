@@ -9,8 +9,8 @@ Spécifications : https://www.ifremer.fr/sih-resource-private/bargeo/UML/bargeo.
 | Specs | Adagio | Sumaris |
 | ----- | ------ | ------- |
 | Utilisateur | person (first_name, last_name, email, department_fk) | person (first_name, last_name, email, department_fk) |
-| Profil | user_profil : <br> ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR | user_profile : <br> ADMIN, USER, SUPERVISOR, GUEST (surchargé par énumération) |
-| Privilège | program_privilege : <br> Administrateur, Observateur, Consultation intégrale, Validateur, Qualificateur | program_privilege : <br> MANAGER, OBSERVER, VIEWER, VALIDATOR, QUALIFIER (surchargé par énumération) |
+| Profil | user_profil : <br/> ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR | user_profile : <br/> ADMIN, USER, SUPERVISOR, GUEST (surchargé par énumération) |
+| Privilège | program_privilege : <br/> Administrateur, Observateur, Consultation intégrale, Validateur, Qualificateur | program_privilege : <br/> MANAGER, OBSERVER, VIEWER, VALIDATOR, QUALIFIER (surchargé par énumération) |
 
 Profiles et privilèges utilisés :
 - Administrateur de référentiel : profil Administrateur (ALLEGRO_ADMINISTRATEUR)
