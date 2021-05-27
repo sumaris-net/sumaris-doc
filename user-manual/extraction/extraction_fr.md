@@ -11,8 +11,8 @@ Deux types d'informations peuvent être extraites :
     - Les données nationales des états membres du consortium SUMARiS, au format ICES c1.4, appelé "**Données brutes (ICES v1.4)**"
     - Les mêmes données au format FREE v1, appelé "**Données brutes (FREE v1)**",
     - Les mêmes données au format RDB v1.3, appelé "**Données brutes (RDB v1.3)**",
-    - Les données d'observations issues des campagnes SUMARis, exportées au format d'echange ICES v1.4, appelé "**Données brutes (SUMARiS v1.0)**",
-      avec les donnees des tests de survie dans le format personnalisé SUMARiS v1.0.
+    - Les données d'observations issues des campagnes SUMARiS, exportées au format d'échange ICES v1.4, appelé "**Données brutes (SUMARiS v1.0)**",
+      avec les données des tests de survie dans le format personnalisé SUMARiS v1.0.
 - Produits figés :
     - Produits issus d'un appel à données national, au format ICES v1.4, appelé "**Appel à données (ICES v1.4) / Données nationales des appels à données **"
     - Produits issus des données au format RDB v1.3, appelé "**Appel à données (RDB v1.3)**"
@@ -39,7 +39,7 @@ Pour ré-afficher toutes les lignes, annuler tous les filtres.
 
 Il est possible d'être plus précis pour définir les filtres. Pour cela il existe plusieurs opérateurs standards :
 
-> < signifie inférieur à
+> \< signifie inférieur à
 
 > <= signifie inférieur ou égal à
 
@@ -51,7 +51,7 @@ Il est possible d'être plus précis pour définir les filtres. Pour cela il exi
 
 > != signifie différent de
 
-> BETWEEN signifie entre **value 1** et **value 2**
+> BETWEEN signifie entre deux valeurs
 
 
 Le lien entre les critères sur la première ligne est automatiquement de type "et" : 
@@ -168,7 +168,7 @@ L'anonymisation et la pseudonymation sont deux méthodes de protection des donn�
 le Règlement Général de Protection des Données (RGPD) du 25 mai 2018. La première permet d'améliorer la sécurité, 
 la deuxième autorise une meilleure flexibilité. 
 
-Concernant les extractions des données SUMARiS, l'identité de l'ensemble des navire est pseudonymisée. 
+Concernant les extractions des données SUMARiS, l'identité de l'ensemble des navires est pseudonymisée. 
 C'est à dire qu'il est toujours possible d'identifier un navire individuel dans ses données personnelles.
 En effet la pseudonymisation consiste à remplacer un attribut par un autre dans un enregistrement, ici l'identité du navire.
 Le but de la pseudonymisation est de privilégier l'exploitabilité des données.

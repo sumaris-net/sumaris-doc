@@ -4,7 +4,7 @@
 
 Le formulaire principal contient quatre parties :
 
- - La partie gauche, le **bandeau latéral**, où l'utilisateur a accès à toutes les informations pour lesquelles il/elle a des droits 
+ - La partie gauche, le **bandeau latéral**, où l'utilisateur a accès à toutes les informations pour lesquelles il a des droits 
 (compte utilisateur, information sur les marées, etc.). 
    Sur tablette ce bandeau est caché, il faut faire un glisser depuis la gauche de l'écran vers la droite pour qu'il s'affiche.
  - Le haut (en bleu), le **premier bandeau** dans lequel l'utilisateur peut trouver des informations 
@@ -86,7 +86,7 @@ L'onglet actif est celui qui est souligné.
 ![](./drop-down-list_action-buttons_tab_fr.png)
 
 Pour sélectionner une valeur dans une liste déroulante, vous pouvez utiliser les flèches du clavier puis valider en appuyant sur entrée.
-Les champs peuvent également être remplis manuellement mais une erreur peut être signalée si les données n'ont pas été correctement saisie.
+Les éléments de la liste déroulante sont filtrés en fonction de ce que l'utilisateur saisi au clavier.
 
 - *Les boutons d'actions :* Leur objectif est de fermer, réinitialiser ou enregistrer la saisie.
 
@@ -95,10 +95,4 @@ saisir les champs dans l'ordre et placer le curseur au bon endroit dans le champ
 
 Certains onglets de saisie prennent un espace qui dépasse la taille de l'écran,
 dans ce cas une barre de défilement apparait à droite de la zone de saisie.
-
-Quand le nombre de champs est très important, seules quelques lignes sont visibles.
-Cependant, il est possible de changer le nombre de champs à afficher par page
-puis d'utiliser les flèches pour naviguer entre les pages :
-
-![](./nb-data_tab_fr.png)
 

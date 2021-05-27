@@ -14,7 +14,7 @@ SUMARiS user guide Version V1.3
 attached to SUMARiS Form V8.0
 attached to the entry software V0.18.0
 
-Download pdf : [FR](./sumaris-doc-fr.pdf) | [EN](./sumaris-doc-en.pdf)
+Download pdf : [FR](./sumaris-doc_fr.pdf) | [EN](./sumaris-doc_en.pdf)
 
 # Table of contents
 

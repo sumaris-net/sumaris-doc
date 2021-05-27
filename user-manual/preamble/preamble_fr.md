@@ -10,7 +10,7 @@ Ce guide ne présente qu'une petite partie des possibilités du logiciel SUMARiS
 
 ## Configuration minimum
 
-Le logiciel fonctionne sous Windows Microsoft 7/10 (Edition Famille, professionnel, et tablette) et sous linux avec les navigateurs web
+Le logiciel fonctionne sous Microsoft Windows (Toutes versions), linux et tablette Android avec les navigateurs web
 Mozilla Firefox, Chromium et Google Chrome.  
 Ces deux derniers navigateurs sont à privilégier pour optimiser les performances de SUMARiS.
 
@@ -36,7 +36,7 @@ le navigateur lorsque l'application est hors-ligne.
 
 SUMARiS gère différents types d'utilisateurs ainsi que différents types de données halieutiques :
 
-- Marées d'observations à bord de navire de pêche (marées, pêches, débarquements, rejets et échantillonnage biologique, fishing effort),  
+- Marées observées à bord de navire de pêche (marées, pêches, débarquements, rejets et échantillonnage biologique, effort de pêche),  
 - Marées dédiées aux tests de survie après la pêche, basé sur la méthode RAMP,
 - Marée destinée au repérage des poissons (Visuel ou électronique),
 - Des campagnes de recherches scientifiques.
@@ -64,5 +64,5 @@ des minuscules, des nombres et/ou des caractères spéciaux) puis validez.
 Chaque utilisateur authentifié a au départ un statut d'invité qui lui permet de voir mais pas de saisir de données.
 Le statut définitif doit être validé par un administrateur et n'est pas automatisé pour l'instant.
 
-Si le logiciel SUMARiS s'est mis à jour, merci d'actualiser la page dans votre navigateur (en utilisant l'un des raccourcis *Ctrl+F5* ou *Ctrl+R*) 
+Si le logiciel SUMARiS s'est mis à jour, merci d'actualiser la page dans votre navigateur (en utilisant l'un des raccourcis *Maj+F5* ou *Ctrl+R*) 
 et assurez-vous que vous avez la version la plus récente (en bas à gauche de votre écran).

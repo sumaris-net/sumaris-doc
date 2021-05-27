@@ -5,7 +5,7 @@ Merci de nous en tenir informé. Il est important de nous communiquer ces bugs a
 Les mises à jour seront disponible à l'ouverture du programme dans votre navigateur.
 
 Il est important de rapporter chaque écart pour que le logiciel soit corrigé et qu'une mise à jour soit mise en ligne.  
-Cliquez sur le bouton "À propos" disponible en bas à gauche de l'interface SUMARiS :
+Cliquez sur le bouton "À propos" disponibles en bas à gauche de l'interface SUMARiS :
 
 ![](./about_tab_fr.png)
 
