@@ -58,7 +58,7 @@ Les formats de réponse suivants sont possibles :
     | SparQL-results Thrift | `application/sparql-results+thrift`                           | 
 
 - Formats standards RDF, pour les requêtes de type `CONSTRUCT` et `DESCRIBE` :
-
+  
     | Format     | Header `Accept` (Content-Type)                                              |
     | ---------- | --------------------------------------------------------------------------- |
     | RDF/XML    | `application/rdf+xml`, `application/xml`, `text/xml`                        | 
@@ -72,7 +72,7 @@ Les formats de réponse suivants sont possibles :
     | Turtle     | `text/turtle`, `application/ttl` | 
     | Text       | `text/plain`, `text/html`        | 
 
-> Un éditeur SparQL est disponible à l'adresse `<SERVER_URL>/sparql/ui` pour tester le point d'accès SparQL.
+> Un éditeur SparQL est disponible à l'adresse `SERVER_URL/sparql/ui` pour tester le point d'accès SparQL.
 > Des requêtes d'exemples y sont également accessibles. ([démo](http://simm.e-is.pro/sparql/ui))
   
 Exemples de requêtes SparQL:
@@ -170,7 +170,7 @@ Pour cela, le module autorise l'accès (HTTP GET) aux adresses suivantes :
 - `<SERVER_URL>/ontology/schema/<CLASSE>` : publication d'une classe, de ses attributs, et de ses classes directement connectées;
 
 Le format de sortie dépend de la présence de l'entête HTTP `Accept`.
-Il est également possible de définir explictement : soit en ajoutant ``?format=<FORMAT>` au chemin, soit en ajoutant une extension.
+Il est également possible de définir explictement : soit en ajoutant `?format=FORMAT` au chemin, soit en ajoutant une extension.
 
 Exemples :
 - http://localhost:8080/ontology/schema
@@ -211,7 +211,7 @@ Pour cela, le module autorise l'accès (HTTP GET) aux adresses suivantes :
 - `<SERVER_URL>/ontology/data/<CLASSE>/<ID>` : une seule instances de classe;
 
 Il est possible de définir le format de sortie via une entête HTTP `Accept` dans la requete GET.
-Il est également possible de le définir explictement : soit en ajoutant ``?format=<FORMAT>` au chemin, soit en ajoutant une extension.
+Il est également possible de le définir explictement : soit en ajoutant `?format=<FORMAT>` au chemin, soit en ajoutant une extension.
 
 Exemples :
 - http://localhost:8080/ontology/data/TaxonName
