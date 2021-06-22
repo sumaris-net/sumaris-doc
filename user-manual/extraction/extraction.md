@@ -1,21 +1,4 @@
-# Quick Start user's guide for SUMARiS web entry software
-
-<u>Title</u>: <b>Quick Start user's guide for SUMARiS web entry software</b> 
-
-<u>Author</u>: E-IS	
-
-<u>Date</u>: October 19, 2019 
-
-<u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-
 # Extractions
-
- - [Trips extraction module](#trips_extraction_module)
- - [Automatic filters](#automatic_filters)
- - [Create an aggregation](#create_an_aggregation)
- - [Maps extraction module](#maps_extraction_module)
- - [Extraction downloads](#extraction_downloads)
- - [EU RGPD standars on personal data](#eu_rgpd_standars_on_personal_data)
 
 ## Trips extraction module
 
@@ -23,14 +6,14 @@ The extraction module is limited to the "supervisor" profiles.
 
 The "Extractions" section contains all the data collected as part of the SUMARiS project. Two types of information can be extracted:
 - Raw data collected (four formats are available):
-    * national data from SUMARiS consurtium member states, in ICES v1.4 format, called "<b>Raw data (ICES v1.4)</b>" / National data call data,
-    * the same data in FREE v1 format, called "<b>Raw data (FREE v1)</b>",
-    * the same data in RDB v1.3 format, called "<b>Raw data (RDB v1.3)</b>",
-    * at sea observation data from dedicated SUMARiS campaigns, exported in ICES v1.4 data exchange format, called "<b>Raw data (SUMARIS v1.0)</b>",with the survival test data , in the custom format SUMARiS v1.0.
+    * national data from SUMARiS consurtium member states, in ICES v1.4 format, called "**Raw data (ICES v1.4)**" / National data call data,
+    * the same data in FREE v1 format, called "**Raw data (FREE v1)**",
+    * the same data in RDB v1.3 format, called "**Raw data (RDB v1.3)**",
+    * at sea observation data from dedicated SUMARiS campaigns, exported in ICES v1.4 data exchange format, called "**Raw data (SUMARIS v1.0)**",with the survival test data , in the custom format SUMARiS v1.0.
 - Fixed product:
-    * product through national data call, in ICES v1.4 format, called "<b>Data Call / Fishing operations</b>",
-    * product through data in RDB v1.3 format, called "<b>Data call (RDB v1.3)</b>",
-    * product through SUMARiS collected data, called "<b>SUMARIS Collected Data</b>",
+    * product through national data call, in ICES v1.4 format, called "**Data Call / Fishing operations**",
+    * product through data in RDB v1.3 format, called "**Data call (RDB v1.3)**",
+    * product through SUMARiS collected data, called "**SUMARIS Collected Data**",
     * product through new aggregation created.
     
 ![](./aggregation1.png)
@@ -43,7 +26,7 @@ In the module, depending information concerned (raw data collected or fixed prod
 
 ## Automatic filters
 
-By clicking on the <u>filter button</u> ![](./baseline_filter_list_black_18dp.png), the filters panel opens.
+By clicking on the **filter button** ![](./baseline_filter_list_black_18dp.png), the filters panel opens.
 
 ![](./aggregation7.png)
 
@@ -68,13 +51,13 @@ available:
     >= means greater than or equal to
     =  means equal to
     != means different from
-    BETWEEN   means between <i>value 1</i>  and <i>value 2</i> 
+    BETWEEN   means between *value 1*  and *value 2* 
 
 The link between the criteria present on the first line is automatically of type "and": the records
 must satisfies all the selected criteria.
 
 The link between the criteria present on successive lines is automatically of type "or": the records
-must satisfies <u>either of</u> the selected criteria.
+must satisfies **either of** the selected criteria.
 
 It is also possible to filter the data from the active cell; in this case, the value used for the filter will
 be the same value of this cell. Only records that have the same value for the given field as the active
@@ -92,20 +75,22 @@ comma to separate the 2 desired values:
 
 ## Create an aggregation
 
-After selecting the dataset to extract, click on the <u>button "aggragte"</u> to create a new aggregation (spatial or not), the edition of extraction windows panel opens.
+After selecting the dataset to extract, click on the **button "aggregate"** to create a new aggregation (spatial or not), the edition of extraction windows panel opens.
 
 ![](./aggregation9.png)
 
-After selecting the fixed product to extract, click on the <u>Edit button</u> or click on the <u>button "aggregate"</u>, the edition of extraction windows panel opens.
+After selecting the fixed product to extract, click on the **Edit button** or click on the **button "aggregate"**, the edition of extraction windows panel opens.
 
 ![](./aggregation10.png)
 
 With each new aggregation created, a unique code (identifier) is automatically created. The user must define the name given to the aggregation created, define its visibility status (public, private, obsolete) and say whether it is (yes / no) a spatial aggregation. Then, it is necessary to define the stratification of this aggregation:
+
 - the time scale used (year, month, quarter)
 - the spatial scale used (area, statistical rectangle, square)
 - what graphical output do you wish to represent (vessel count, trip count, fishing count, station count)
 - to characterize the aggregation function used (sum, average)
-- on which technique the aggregation function applies (sampling type, landing country, wessel flag country, project, vessel lentgh class, vessel length class, catch registration, national metier, EU metier leve 5, EU metier level 6, gear type, trip code)
+- on which technique the aggregation function applies (sampling type, landing country, wessel flag country, project, vessel length class, 
+  catch registration, national metier, EU metier level 5, EU metier level 6, gear type, trip code)
 
 ![](./aggregation11.png)
 
@@ -163,7 +148,7 @@ All filtered data can be downloaded. To do this, click on the button          .
 To download all extractions, simply delete all specified filters.
 
 The following window opens, allowing to specify the path where to save the file, or to open the
-zipped file: ![](./download.png)
+zipped file: <!--![](./download.png)-->
 
 The files will be downloaded in .csv format by type of record (CL, HH, HL, SL, ST, TR) in a
 zipped file always named in this way:
@@ -190,6 +175,6 @@ a record; here, the identity of the ship. The aim of this pseudonymization is to
 exploitability of data. Their uses therefore remain subject to strict use as defined in the SUMARiS
 project.
 
-<b>The data must be reported anonymously and aggregated</b> into an aggregation query system grid
+**The data must be reported anonymously and aggregated** into an aggregation query system grid
 and concise spatial representation. Data must be provided as much as possible for craft groupings at
 metier level 6. 

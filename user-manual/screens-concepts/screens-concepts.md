@@ -1,34 +1,16 @@
-# Quick Start user's guide for SUMARiS web entry software
-
-<u>Title</u>:	 <b>Quick Start user's guide for SUMARiS web entry software</b> 
-
-<u>Author</u>: E-IS	
-
-<u>Date</u>:	October 19, 2019 
-
-<u>Copyright</u>: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-
-
 # Screens concepts, various view
-
- - [Details of lateral headband](#details_of_lateral_headband)
- - [Details of primary headband](#details_of_primary_headband)
- - [Details of secondary headband](#details_of_secondary_headband)
-    * [The buttons](#the_buttons)
-    * [The tabs](#the_tabs)
- - [Details of the entry fields](#details_of_the_entry_fields)
     
 ## Overall design of the entry interface
 
 The main form contains four parts:
--  The left side, the  <b>side band</b>, where the user can find all the information for which he/she has
+-  The left side, the  **side band**, where the user can find all the information for which he/she has
 rights (user account, trip information, etc...).
-- The high side (in blue), the <b>primary band</b>, which indicates at the user the progress of the entry
+- The high side (in blue), the **primary band**, which indicates at the user the progress of the entry
 (which vessel, which sea-trip, which haul).
-- The high side (greyed out), the <b>secondary band</b>, which allows the user to access different tools
+- The high side (greyed out), the **secondary band**, which allows the user to access different tools
 such as adding information, deleting information, searching for information, cancelling changes
 (going back), sorting out fields that are visible or not).
-- The lower part (white) is the <b>entry field</b>.
+- The lower part (white) is the **entry field**.
 
 ![](./bands.png)
 
@@ -50,40 +32,40 @@ information.
 
 ### The buttons
 
-Each <b>button</b> has a set of actions:
+Each **button** has a set of actions:
 
 ![](./buttons.png)
 
 ### The tabs
 
-Each <b>tab</b> shown depends on the information to be collected. Depending on the data collected, the
+Each **tab** shown depends on the information to be collected. Depending on the data collected, the
 user will be able to access the different entry sheets by clicking on the corresponding tab. 
 
-- <b>From a trip</b>, with <b>detailed</b> information, it is possible to enter or access information on <b>fishing
-gears</b> used during the trips, to operate <b>fishing operations</b>.
+- **From a trip**, with **detailed** information, it is possible to enter or access information on **fishing
+gears** used during the trips, to operate **fishing operations**.
 
 ![](./tabs.png)
 
-- <b>From a fishing operation</b>, with  <b>detailed</b>  information, it is possible to enter or access <b>catch</b> 
-information. <u>Note</u>: the total catch weight of any species is required to record fishing operation.
-<b>Importants</b>: 
+- **From a fishing operation**, with  **detailed**  information, it is possible to enter or access **catch** 
+information. **Note**: the total catch weight of any species is required to record fishing operation.
+**Importants**: 
      * When an information is missing, the symbol ![](./info.png) appears   in   front   of   the   tab   where informations are required.
      * The missing value in the appropriate tab is highlighted in red.
      * An astérisk * indicates that the field is mandatory and that information is required.
 
 ![](./important.png)
 
-Depending on whether the <b>fishing operation</b> is not sampled (sampling = <b>N</b>), whether it is sampled
-for   capture   (sampling   =  <b>C</b>)   or   for   survival   testing   (sampling   =  <b>S</b>),   different   sub-tabs   will   be
-available in the "<b>catch</b>" tab. A new entry area is then accessible along with another secondary band:
+Depending on whether the **fishing operation** is not sampled (sampling = **N**), whether it is sampled
+for   capture   (sampling   =  **C**)   or   for   survival   testing   (sampling   =  **S**),   different   sub-tabs   will   be
+available in the "**catch**" tab. A new entry area is then accessible along with another secondary band:
 
 ![](./other-bands.png)
 
-- <b>If sampling = C</b>:
-It is possible to enter or access specific information on the <b>Batch by species</b> and to enter <b>individual measures</b> information. 
-- <b>If sampling = S</b>:
-It is possible to capture or access specific <b>survival test</b> information, enter <b>individual monitoring</b> information and  information on <b>releases</b> of animal in the sea if necessary..
-- <b>If sampling = N</b>:
+- **If sampling = C**:
+It is possible to enter or access specific information on the **Batch by species** and to enter **individual measures** information. 
+- **If sampling = S**:
+It is possible to capture or access specific **survival test** information, enter **individual monitoring** information and  information on **releases** of animal in the sea if necessary..
+- **If sampling = N**:
 There are no tabs in the catch. Only the total catch weight of any species is required to record the fishing operation. 
 
 ## Details of the entry fields
