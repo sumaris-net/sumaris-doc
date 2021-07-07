@@ -90,9 +90,9 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (XBL071220MERLMER0001) | sample.label |
+| - code prélèvement (<AA><ESPECE><NUM>-<NUM>) | => En cours de discussion. Le pmfm sample_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - commentaire | sample.comments |
-| - code Morse (TitiX00032) | sample_measurement.alphanumerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - code Morse (TitiX00032) | => obsolète, supprimé
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - autres (pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
