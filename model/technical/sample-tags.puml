@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+class SampleTagDefinition {
+  Gestion des codes uniques de prélèvement,
+  pour le mode hors ligne ou l'impression d'étiquette.
+  Ex:
+  . prefix: '21LEUCOCIR001' (=label de la stratégie)
+  . device: 'AA' (code alpha de la tablette)
+  . sequence: 100 (valeur courante de la sequence)
+..
+    +id: int
+    +prefix: string [0..1]
+    +deviceLabel?: string [0..1]
+    +sequence: int
+    +creationDate: Date
+    +updateDate: Timestamp
+}
+
+SampleTagDefinition --> "1" Program
+SampleTagDefinition --> "0..1" Strategy
+SampleTagDefinition --> "1" Department : recorderDepartment
+SampleTagDefinition --> "0..1" Person : recorderPerson
+SampleTagDefinition -right-> "1" AcquisitionLevel
+
+Program "1" <-right- Strategy
+
+enum AcquisitionLevelEnum {
+    SAMPLE
+}
+
+AcquisitionLevel <.right. AcquisitionLevelEnum : use
+@enduml
