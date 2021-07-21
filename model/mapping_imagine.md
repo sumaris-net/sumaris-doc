@@ -34,7 +34,6 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
-| - code Morse (pmfm) | pmfm_strategy.pmfm_fk (ajouté automatiquement mais pas affiché) |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - sexe (pmfm) | pmfm_strategy.pmfm_fk (=196)|
