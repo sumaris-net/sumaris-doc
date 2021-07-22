@@ -27,7 +27,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | Specs | Adagio |
 | ----- | ------ |
 | programme (SIH-PARAM-BIO) | strategy.program_fk |
-| code (<AA><ESPECE><NUM>) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=359 ; acquisition_level_fk=LANDING) |
+| code (AAESPECENUM) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=359 ; acquisition_level_fk=LANDING) |
 | commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
@@ -81,7 +81,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
 | **Débarquement** |  |
-| ligne de plan (<AA><ESPECE><NUM>) | landing_measurement.alphanumerical_value avec pmfm_fk = 359 |
+| ligne de plan (AAESPECENUM) | landing_measurement.alphanumerical_value avec pmfm_fk = 359 |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
@@ -91,7 +91,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | pièces calcifiées | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (<AA><ESPECE><NUM>-<NUM>) | => En cours de discussion. Le pmfm tag_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = 1435 |
+| - code prélèvement (AAESPECENUM-NUM) | => En cours de discussion. Le pmfm tag_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = 1435 |
 | - présentation | pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
