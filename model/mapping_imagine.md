@@ -85,14 +85,14 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
-| métier | ? |
+| métier | => en cours de discussion |
 | zones de pêche | non stocké (issu de la stratégie) |
 | espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | pièces calcifiées | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (AAESPECENUM-NUM) | => En cours de discussion. Le pmfm tag_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = 1435 |
-| - présentation | pmfm_fk = 116 |
+| - code prélèvement (AAESPECENUM-NUM) | sample_measurement.numerical_value avec pmfm_fk = 1435 |
+| - présentation | sample_measurement.qualitative_value avec pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - sexe (liste de pmfm) | sample_measurement.qualitative_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
