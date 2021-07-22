@@ -27,15 +27,15 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | Specs | Adagio |
 | ----- | ------ |
 | programme (SIH-PARAM-BIO) | strategy.program_fk |
-| code (AAAA-BIO-XXXX) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (acquisition_level_fk=LANDING) |
+| code (<AA><ESPECE><NUM>) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=359 ; acquisition_level_fk=LANDING) |
 | commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
 | espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
-| - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - taille (liste de pmfm) | pmfm_strategy.pmfm_fk |
+| - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - sexe (pmfm) | pmfm_strategy.pmfm_fk (=196)|
 | - maturité (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - âge (pmfm) | pmfm_strategy.pmfm_fk (=2269)|
@@ -81,20 +81,24 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
 | **Débarquement** |  |
-| ligne de plan (AAAA-BIO-XXXX) | landing_measurement.alphanumerical_value avec pmfm_fk = ? |
+| ligne de plan (<AA><ESPECE><NUM>) | landing_measurement.alphanumerical_value avec pmfm_fk = 359 |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
+| métier | ? |
 | zones de pêche | non stocké (issu de la stratégie) |
 | espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
+| pièces calcifiées | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (<AA><ESPECE><NUM>-<NUM>) | => En cours de discussion. Le pmfm sample_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - commentaire | sample.comments |
-| - code Morse (TitiX00032) | => obsolète, supprimé
-| - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - code prélèvement (<AA><ESPECE><NUM>-<NUM>) | => En cours de discussion. Le pmfm tag_id est privilégié pour le stockage. sample_measurement.numerical_value avec pmfm_fk = 1435 |
+| - présentation | pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - sexe (liste de pmfm) | sample_measurement.qualitative_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - maturité (liste de pmfm) | sample_measurement.qualitative_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - autres (pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - commentaire | sample.comments |
 |  |  |
 |  | landing.rank_order = 1 |
 |  | sample.matrix_fk = 2 (individu) |
