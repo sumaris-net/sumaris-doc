@@ -43,7 +43,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | Année | applied_strategy.applied_period.start_date : lié à la première zone de pêche. Il n'y a pas de persistance à proprement parler, c'est juste un affichage en prenant l'année du premier trimestre qu'on trouve (il y en a forcément au moins 1, sinon la ligne de plan ne peut pas être créée) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
 | effort planifié sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
-| effort réalisé sur le trimestre | nombre de landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
+| effort réalisé sur le trimestre | nombre de sample avec sample_measurement.pmfm_fk = 1435 (=TAG_ID) lié à landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
 
 > Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
 
@@ -85,8 +85,8 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
-| métier | => en cours de discussion |
-| zones de pêche | non stocké (issu de la stratégie) |
+| métier | operation.gear_use_features.metier_fk |
+| zones de pêche | operation.gear_use_features.fishing_area.location_fk (zones en mer / configurables) |
 | espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | pièces calcifiées | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
