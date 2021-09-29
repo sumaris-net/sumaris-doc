@@ -85,8 +85,8 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
-| métier | => en cours de discussion |
-| zones de pêche | non stocké (issu de la stratégie) |
+| métier | gear_use_features.metier_fk |
+| zones de pêche | fishing_area.location_fk |
 | espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
 | pièces calcifiées | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
@@ -107,6 +107,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 
 Liste des évolutions de modèle nécessaires :
 - ajouter la colonne SAMPLE.LANDING_FK en nullable
+- ajouter les colonnes OBSERVED_LOCATION.CONTROL_DATE et OBSERVED_LOCATION.VALIDATION_DATE
 - [POD] modifier le service qui va chercher les PMFM applicables, pour, à partir des PMFM_STRATEGY, aller chercher (par requêtes) les PMFM qui correspondent
 
 Modèle Adagio :
