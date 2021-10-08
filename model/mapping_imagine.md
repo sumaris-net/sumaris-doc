@@ -21,7 +21,7 @@ Les droits sont gérés au niveau de l'observation.
 
 ## Plans d'échantillonnage et lignes de plan
 
-Les stratégies sont reliées au programme PARAM-BIO. Les données en criée ou achat labo seront rattachées à ce même programme.
+Les stratégies sont reliées au programme SIH-PARAM-BIO. Les données en criée ou achat labo seront rattachées à ce même programme.
 En revanche, les données acquises lors des campagnes seront rattachées aux programmes de collecte correspondants : CAM-*.
 
 | Specs | Adagio |
