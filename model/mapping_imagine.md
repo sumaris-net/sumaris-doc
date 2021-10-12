@@ -107,7 +107,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 
 Liste des évolutions de modèle nécessaires :
 - ajouter la colonne SAMPLE.LANDING_FK en nullable
-- ajouter les colonnes OBSERVED_LOCATION.OBSERVED_LOCATION_FK, OBSERVED_LOCATION.CONTROL_DATE et OBSERVED_LOCATION.VALIDATION_DATE
+- ajouter les colonnes OBSERVED_LOCATION.CONTROL_DATE et OBSERVED_LOCATION.VALIDATION_DATE
 - [POD] modifier le service qui va chercher les PMFM applicables, pour, à partir des PMFM_STRATEGY, aller chercher (par requêtes) les PMFM qui correspondent
 
 Modèle Adagio :
