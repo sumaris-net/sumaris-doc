@@ -51,7 +51,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 
 Liste des évolutions de modèle nécessaires :
 - modifier PMFM_STRATEGY.PMFM_FK en nullable
-- ajouter les colonnes PMFM_STRATEGY.PARAMETER_FK, MATRIX_FK, FRACTION_FK, METHOD_FK en nullable
+- ajouter la colonne PMFM_STRATEGY.FRACTION_FK en nullable
 - ajouter les colonnes STRATEGY.ANALYTIC_REFERENCE, APPLIED_PERIOD.ACQUISITION_NUMBER
 - ajouter la table STRATEGY2DEPARTMENT : lien n-n avec program_privilège_fk (cf program2department)
 - ajouter la colonne STRATEGY.COMMENTS en nullable
