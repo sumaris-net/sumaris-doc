@@ -32,7 +32,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
 | zones de pêches | applied_strategy.location_fk + program2location (zones en mer / configurables) |
-| espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk |
+| espèce cible | strategy.reference_taxon_strategy.reference_taxon_fk avec strategy.reference_taxon_strategy.priority_level = 1|
 | paramètres à mesurer | pmfm_strategy (acquisition_level_fk=SAMPLE) |
 | - taille (liste de pmfm) | pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | pmfm_strategy.pmfm_fk |
