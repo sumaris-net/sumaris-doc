@@ -26,7 +26,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 
 | Specs | Adagio |
 | ----- | ------ |
-| programme (SIH-PARAM-BIO) | strategy.program_fk |
+| programme (SIH-OBSBIO) | strategy.program_fk |
 | code (AAESPECENUM) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=2867 ; acquisition_level_fk=LANDING) |
 | commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
