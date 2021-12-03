@@ -89,10 +89,10 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | opération | operation.id avec fishing_trip_fk = landing.fishing_trip_fk  |
 | métier | gear_use_features.metier_fk avec operation_fk = operation.id |
 | zones de pêche | fishing_area.location_fk avec gear_use_features_fk = gear_use_features.metier_fk avec operation_fk = operation.id |
-| plan d'échantillonnage (zones de pêche, espèce cible, pièces calcifiées) | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
+| plan d'échantillonnage (zones de pêche, espèce cible, pièces calcifiées) | non stocké (issu de la stratégie) |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| espèce cible | sample.reference_taxon_fk avec fishing_operation_fk = operation.id |
+| individu | sample.reference_taxon_fk avec fishing_operation_fk = operation.id |
 | - code prélèvement (AAESPECENUM-NUM) | sample_measurement.alphanumerical_value avec pmfm_fk = 1435 |
 | - présentation | sample_measurement.qualitative_value_fk avec pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
