@@ -67,14 +67,14 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | Specs | Adagio |
 | ----- | ------ |
 | **Observation** |  |
-| programme (**SIH-PARAM-BIO**) | observed_location.program_fk |
+| programme (**SIH-OBSBIO**) | observed_location.program_fk |
 | *- recopié de observed_location* | landing.program_fk |
 | *- recopié de observed_location* | sample.program_fk |
 | saisisseur | observed_location.recorder_department_fk + recorder_person_fk |
 | *- recopié de observed_location* | landing.recorder_department_fk + recorder_person_fk |
 | *- recopié de observed_location* | sample.recorder_department_fk + recorder_person_fk |
 | *- recopié de observed_location* | sample_measurement.department_fk |
-| saisisseurs | observed_location2person |
+| observateurs | observed_location2person |
 | date de prélèvement (sans heure) | observed_location.start_date_time + observed_location.end_date_time |
 | *- recopié de observed_location* | landing.landing_date_time |
 | *- recopié de observed_location* | sample.sample_date |
@@ -85,19 +85,21 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
-| métier | gear_use_features.metier_fk |
-| zones de pêche | fishing_area.location_fk |
-| espèce cible | sample.reference_taxon_fk (par défault : strategy.reference_taxon_strategy.reference_taxon_fk) |
-| pièces calcifiées | non stocké (issu de la stratégie) |
+| marée | landing.fishing_trip_fk |
+| opération | operation.id avec fishing_trip_fk = landing.fishing_trip_fk  |
+| métier | gear_use_features.metier_fk avec operation_fk = operation.id |
+| zones de pêche | fishing_area.location_fk avec gear_use_features_fk = gear_use_features.metier_fk avec operation_fk = operation.id |
+| plan d'échantillonnage (zones de pêche, espèce cible, pièces calcifiées) | non stocké (issu de la stratégie) |
 | commentaire | landing.comments |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - code prélèvement (AAESPECENUM-NUM) | sample_measurement.numerical_value avec pmfm_fk = 1435 |
-| - présentation | sample_measurement.qualitative_value avec pmfm_fk = 116 |
+| espèce cible | sample.reference_taxon_fk avec fishing_operation_fk = operation.id |
+| - code prélèvement (AAESPECENUM-NUM) | sample_measurement.alphanumerical_value avec pmfm_fk = 1435 |
+| - présentation | sample_measurement.qualitative_value_fk avec pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - sexe (liste de pmfm) | sample_measurement.qualitative_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - maturité (liste de pmfm) | sample_measurement.qualitative_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - autres (pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - sexe (liste de pmfm) | sample_measurement.qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - maturité (liste de pmfm) | sample_measurement.qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - autres (liste de pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - commentaire | sample.comments |
 |  |  |
 |  | landing.rank_order = 1 |
