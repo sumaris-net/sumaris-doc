@@ -81,7 +81,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
 | **Débarquement** |  |
-| ligne de plan (AAESPECENUM) | landing_measurement.alphanumerical_value avec pmfm_fk = 359 |
+| ligne de plan (AAESPECENUM) | landing_measurement.alphanumerical_value avec pmfm_fk = 2867 |
 | navire | landing.vessel_fk |
 | numéro de trait | (uniquement pour les campagnes) |
 | port de débarquement | landing.landing_location_fk (lieux de type port uniquement) |
