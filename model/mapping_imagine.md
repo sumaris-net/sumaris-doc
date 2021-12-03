@@ -96,9 +96,9 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | - présentation | sample_measurement.qualitative_value_fk avec pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - poids (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - sexe (liste de pmfm) | sample_measurement.qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
+| - sexe (pmfm) | sample_measurement.qualitative_value_fk avec pmfm_fk = 196 |
 | - maturité (liste de pmfm) | sample_measurement.qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
-| - age (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = 2269 |
+| - âge (pmfm) | sample_measurement.numerical_value avec pmfm_fk = 2269 |
 | - autres (liste de pmfm) | sample_measurement.numerical_value/qualitative_value_fk avec pmfm_fk = pmfm_strategy.pmfm_fk |
 | - commentaire | sample.comments avec fishing_operation_fk = operation.id |
 |  | sample.matrix_fk = 2 (individu) |
