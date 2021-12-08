@@ -80,6 +80,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | *- recopié de observed_location* | sample.sample_date |
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
+| commentaire | observed_location.comnents
 | **Débarquement** |  |
 | ligne de plan (AAESPECENUM) | landing_measurement.alphanumerical_value avec pmfm_fk = 2867 |
 | navire | landing.vessel_fk |
