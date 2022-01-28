@@ -41,7 +41,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | - âge (pmfm) | pmfm_strategy.pmfm_fk (=2269)|
 | - type de pièce calcifiée (liste de fractions) | pmfm_strategy.fraction_fk |
 | Année | applied_strategy.applied_period.start_date : lié à la première zone de pêche. Il n'y a pas de persistance à proprement parler, c'est juste un affichage en prenant l'année du premier trimestre qu'on trouve (il y en a forcément au moins 1, sinon la ligne de plan ne peut pas être créée) |
-| trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche) |
+| trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche). - T1 : 01/01/20.. 00:00:00 - 31/03/20.. 23:59:59 - T2 : 01/04/20.. 00:00:00 - 30/06/20.. 23:59:59 - T3 : 01/07/20.. 00:00:00 - 30/09/20.. 23:59:59 - T4 : 01/10/20.. 00:00:00 - 31/12/20.. 23:59:59 |
 | effort planifié sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
 | effort réalisé sur le trimestre | nombre de landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
 
