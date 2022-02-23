@@ -93,7 +93,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | commentaire | landing.comments |
 | plan d'échantillonnage (zones de pêche, espèce cible, pièces calcifiées) | non stocké (issu de la stratégie) |
 | **Mesures individuelles** (pmfms de la stratégie) |  |
-| - Numéro ordre dans le tableau | sample.label (dernière partie du champ, le numéro après le #)|
+| - Numéro ordre dans le tableau | sample.label (dernière partie du champ, le numéro après le #) et m_sample.rank_order (c'est cette info qui est affichée)|
 | - code prélèvement (AAESPECENUM-NUM) | sample_measurement.alphanumerical_value avec pmfm_fk = 1435 |
 | - présentation | sample_measurement.qualitative_value_fk avec pmfm_fk = 116 |
 | - taille (liste de pmfm) | sample_measurement.numerical_value avec pmfm_fk = pmfm_strategy.pmfm_fk |
