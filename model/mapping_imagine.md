@@ -79,7 +79,7 @@ Les données de l'observation sont stockées dans OBSERVED_LOCATION et recopiée
 | *- recopié de observed_location* | landing.landing_date_time |
 | *- recopié de observed_location* | fishing_trip.departure_date_time + fishing_trip.return_date_time |
 | *- recopié de observed_location* | operation.start_date_time + operation.end_date_time |
-| *- recopié de observed_location* | gear_use_features.strat_date + gear_use_features.end_date |
+| *- recopié de observed_location* | gear_use_features.start_date + gear_use_features.end_date |
 | *- recopié de observed_location* | sample.sample_date |
 | lieu d'observation | observed_location.location_fk |
 | *- recopié de observed_location* | landing.landing_location_fk (seulement si lieu de type port) |
