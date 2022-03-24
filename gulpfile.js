@@ -145,25 +145,14 @@ function appCopyExternalResources() {
 }
 
 function appHtml() {
-  const enableUglify = false; // argv.release || argv.uglify || false;
+  const enableUglify = argv.release || argv.uglify || false;
   const pkg = parsePackage();
 
   log(colors.green('Processing HTML files...'));
 
   const htmlPaths = [...paths.src_html, '!src/layout/*.*', '!src/about.html'];
   const htmlFilter = filter(htmlPaths, {restore: true});
-
-  let uglifyDone = false;
-  const needUglify = (file) => {
-    const enable = !uglifyDone && enableUglify && file.path.endsWith('vendor.js');
-    if (enable) {
-      log(colors.green('Minify JS Files...'));
-      log(colors.grey('Minifying ' + colors.bold(file.path) + '... '));
-      file.path = file.path.replace('vendor.js', 'vendor.min.js');
-      uglifyDone = true;
-    }
-    return enable;
-  }
+  const minifiedFiles = [];
 
   // Process index.html
   return gulp.src(htmlPaths)
@@ -172,18 +161,28 @@ function appHtml() {
     .pipe(footer(fs.readFileSync('src/layout/footer.html', 'utf8'), {version: pkg.version}))
 
     // Concatenate JS and CSS files (using gulp-useref)
-    .pipe(useref())
+    //.pipe(useref())
     .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
 
-    // Process JS
-    .pipe(gulpif(needUglify, uglify(uglifyBaseOptions))) // Minify javascript files
+      // Minify JS files
+    .pipe(gulpif((file) => {
+      if (!enableUglify || !file.path.endsWith('.js') || file.path.endsWith('.min.js')) return false; // Skip
+      if (minifiedFiles.includes(file.path)) return false; // Skip: already exists
+
+      minifiedFiles.push(file.path);
+      log(colors.grey('Minifying ' + colors.bold(file.path) + '... '));
+
+      file.path = file.path.replace('.js', '.min.js');
+      return true;
+    }, uglify(uglifyBaseOptions)))
 
     // Process CSS
     .pipe(gulpif('*.css', csso())) // Minify any CSS sources
 
-    // Add version to file path
     .pipe(htmlFilter)
-    //.pipe(replace(/"(lib\/vendor)\.js"/g, '"$1.min.js"'))
+      // Use minified JS files
+    .pipe(gulpif(enableUglify,replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.min.js"')))
+      // Add version to JS files (to force the browser to refresh, after a new version)
     .pipe(replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.js?v=' + pkg.version + '"'))
     .pipe(replace(/"(css\/default)\.css"/g, '"$1.css" id="theme"'))
     .pipe(replace(/"(css\/[a-zA-Z0-9]+)\.css"/g, '"$1.css?v=' + pkg.version + '"'))
