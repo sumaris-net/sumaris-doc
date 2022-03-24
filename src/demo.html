@@ -1,0 +1,249 @@
+
+	<!-- header / footer (all slides) -->
+	<div id="hidden" style="display:none;">
+		<div id="header">
+			<div id="header-left"></div>
+			<div id="header-right"></div>
+			<div id="footer-left"></div>
+			<div id="footer-right"></div>
+		</div>
+	</div>
+
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<section data-markdown>
+				<textarea data-template>
+					# Démo [Reveal.js](https://revealjs.com/)
+
+					La démo utilise d'autres plugins utiles :<br/>
+					`Markdown`, `Math`, `HighLight`, `Chart`
+
+				</textarea>
+			</section>
+
+
+			<!-- Markdown -->
+			<section>
+				<section data-markdown data-separator-notes="^FAKE:">
+					<textarea data-template>
+						# Markdown
+
+						Ecrivez vos diapos directement au format [Markdown](https://www.markdownguide.org/basic-syntax).
+
+						Exemple :
+
+						```html
+						&lt;section data-markdown&gt;
+							&lt;textarea data-template&gt;
+								## Diapo 1
+								Un paragraphe avec un [lien](https://www.monnaie-libre.fr).
+								Note: Une note vue présentateur (touche `S`)
+								---
+								## Diapo 2
+								![image](images/logo-sumaris.png)
+							&lt;/textarea&gt;
+						&lt;/section&gt;
+						```
+
+						Résultat : cf diapo suivante
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Diapo 1
+						Un paragraphe avec un [lien](https://www.monnaie-libre.fr).
+						Note: Une note vue présentateur (touche `S`)
+						---
+						## Diapo 2
+						![image](images/logo_G1.png)
+					</textarea>
+				</section>
+				<section data-markdown="demo.md">
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						# Documentation
+
+						- [Guide de la syntaxe Markdown](https://www.markdownguide.org/basic-syntax)
+						- [Configuration du plugin Reveal.js Markdown](https://revealjs.com/markdown/)
+					</textarea>
+				</section>
+			</section>
+
+			<!-- Math -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						# Math
+
+						Insérez facilement vos formules mathématiques.
+
+						Exemple :
+
+						```html
+						&lt;section data-markdown&gt;
+						  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+						&lt;/section&gt;
+						```
+
+						Résultat :
+
+						`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
+
+						---
+						# Documentation
+
+						- [Guide la syntaxe katex](https://katex.org/)
+						- [Configuration du plugin Reveal.js Math](https://revealjs.com/math/)
+
+					</textarea>
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						# Highlights
+						La coloration syntaxique peut être utilisé, par exemple pour afficher du code.
+
+						Exemple :
+
+						```
+							&lt;section data-markdown&gt;
+							```js
+							if (array.length) {
+								console.debug("Hello World");
+							}
+							```
+							&lt;/section&gt;
+						```
+
+						Résultat :
+
+						```js
+							if (array.length) {
+								console.debug("Hello World");
+							}
+						```
+
+						---
+						# Language
+
+						La syntaxe est mise en surbrillance,<br/>
+						en fonction du language indiqué (`js`, `html`, etc.)
+
+						Si aucun language n'est précisé, il sera détecter automatiquement.
+
+					</textarea>
+				</section>
+			</section>
+
+			<!-- Chart -->
+			<section>
+				<section data-markdown>
+					<script type="text/template">
+						# Chart
+
+						Insérez des graphiques [Chart.js](https://www.chartjs.org/) dans vos diapos.
+
+						<div style="height:480px">
+							<canvas data-chart="line" >
+								<!--
+								{
+								 "data": {
+									"labels": ["January"," February"," March"," April"," May"," June"," July"],
+									"datasets":[
+									 {
+										"data":[65,59,80,81,56,55,40],
+										"label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+									 },
+									 {
+										"data":[28,48,40,19,86,27,90],
+										"label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+									 }
+									]
+								 }
+								}
+								-->
+							</canvas>
+						</div>
+
+						---
+
+						## Exemple de données et configuration JSON
+
+						Voici le code utilisé pour générer le graphique de la diapo précédente :
+
+						```html
+						<div style="height:480px">
+							<canvas data-chart="line" >
+								<!--
+								{
+								 "data": {
+									"labels": ["January"," February"," March"," April"," May"," June"," July"],
+									"datasets":[
+									 {
+										"data":[65,59,80,81,56,55,40],
+										"label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+									 },
+									 {
+										"data":[28,48,40,19,86,27,90],
+										"label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+									 }
+									]
+								 }
+								}
+								-->
+							</canvas>
+						</div>
+						```
+
+						---
+
+						## Exemple avec un fichier de données CSV et une configuration JSON
+
+						<div style="height:480px">
+							<canvas data-chart="bar" data-chart-src="data/demo-chart.csv">
+								<!--
+								{
+								"data" : {
+								"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+								},
+								"options": { "scales": { "x": { "stacked": true }, "y": { "stacked": true } } }
+								}
+								-->
+							</canvas>
+						</div>
+						---
+
+						Voici le code utilisé pour générer l'histogramme précédent :
+
+						```html
+						<div style="height:480px">
+							<canvas data-chart="bar" data-chart-src="chart/data.csv">
+								<!--
+								{
+								"data" : {
+								"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+								},
+								"options": { "scales": { "x": { "stacked": true }, "y": { "stacked": true } } }
+								}
+								-->
+							</canvas>
+						</div>
+						```
+
+						---
+						# Documentation
+
+						- [Documentation de Chart.js](https://www.chartjs.org/)
+						- [Documentation du plugin Reveal.js Chart](https://github.com/rajgoel/reveal.js-plugins/tree/master/chart) ([démo](https://rajgoel.github.io/reveal.js-demos/chart-demo.html#/))
+
+					</script>
+				</section>
+			</section>
+		</div>
+	</div>
