@@ -5,3 +5,4 @@
 #dist/**/*.svg
 #dist/**/*.pdf
 model/testdot.svg
+/dist/
