@@ -100,3 +100,7 @@
 .reveal blockquote p:last-child {
 	display: block !important;
 }
+
+.reveal p img {
+	background-color: white !important;
+}

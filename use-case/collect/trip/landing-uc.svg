@@ -2,26 +2,4 @@
 cluster landing--><rect fill="#FFFFFF" filter="url(#f14drlqdshsf36)" height="166" style="stroke: #000000; stroke-width: 1.5;" width="177" x="114" y="24"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="57" x="174" y="38.9951">landing</text><ellipse cx="202.3762" cy="74.0236" fill="#FEFECE" filter="url(#f14drlqdshsf36)" rx="50.3762" ry="14.5236" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="168.8762" y="78.6721">fill landing</text><ellipse cx="202.2526" cy="156.8505" fill="#FEFECE" filter="url(#f14drlqdshsf36)" rx="72.2526" ry="16.8505" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="146.2526" y="161.499">add photo or file</text><!--MD5=[1379db5318089dbdfabb53cc9a236c51]
 entity observer--><ellipse cx="36.5" cy="42.5" fill="#FEFECE" filter="url(#f14drlqdshsf36)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M36.5,50.5 L36.5,77.5 M23.5,58.5 L49.5,58.5 M36.5,77.5 L23.5,92.5 M36.5,77.5 L49.5,92.5 " fill="none" filter="url(#f14drlqdshsf36)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="6" y="112.4951">observer</text><!--MD5=[d3fefd2c8b48d530b86b38990ccbad19]
 link observer to fill landing--><path d="M67.2,74 C90.74,74 124.14,74 151.75,74 " fill="none" id="observer-fill landing" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[52944af65ce9c550c599b735f1ef865a]
-reverse link add photo or file to fill landing--><path d="M202.5,134.63 C202.5,120.04 202.5,101.41 202.5,88.68 " fill="none" id="add photo or file&lt;-fill landing" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="202.5,139.8,206.5,130.8,202.5,134.8,198.5,130.8,202.5,139.8" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="168.5" y="118.8169">include</text><!--MD5=[0b4c5bd083205a79366afd892bf16a91]
-@startuml
-left to right direction
-skinparam packageStyle rectangle
-
-actor observer
-
-rectangle landing {
-  observer - - (fill landing)
-  (add photo or file) <. (fill landing) : include
-}
-@enduml
-
-PlantUML version 1.2019.12(Sun Nov 03 11:24:54 CET 2019)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.11+9-Ubuntu-0ubuntu2.20.04
-Operating System: Linux
-Default Encoding: UTF-8
-Language: fr
-Country: CA
---></g></svg>
+reverse link add photo or file to fill landing--><path d="M202.5,134.63 C202.5,120.04 202.5,101.41 202.5,88.68 " fill="none" id="add photo or file&lt;-fill landing" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="202.5,139.8,206.5,130.8,202.5,134.8,198.5,130.8,202.5,139.8" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="168.5" y="118.8169">include</text></g></svg>

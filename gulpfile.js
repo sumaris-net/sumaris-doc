@@ -18,8 +18,8 @@ const gulp = require('gulp'),
   {argv} = require('yargs'),
   browserSync = require('browser-sync').create(),
   header = require('gulp-header'),
-  footer = require('gulp-footer')
-;
+  footer = require('gulp-footer'),
+  exec = require('gulp-exec');
 
 const uglifyBaseOptions = {
   toplevel: true,
@@ -44,29 +44,33 @@ const uglifyBaseOptions = {
    -- Serve
    --------------------------------------------------------------------------*/
 
+const folders = ['architecture', 'business-rules', 'model', 'projects', 'use-case', 'user-manual'];
+const folders_svg = ['architecture', 'model', 'projects', 'use-case'];
 const paths = {
-  resources: ['src/**/*.md', 'src/images*/**/*', 'src/data*/**/*', 'src/about.html'],
-  doc_md: ['user-manual*/**/*.md', 'architecture*/**/*.md', 'model*/**/*.md', 'use-case*/**/*.md'],
+  resources: ['src/images*/**/*', 'src/data*/**/*'],
+  src_md: folders.map(dir => dir + '*/**/*.*').concat('src/**/*.md'),
   src_html: ['src/**/*.html'],
   src_css: ['src/css/*.css'],
   src_js: ['src/**/*.js'],
-  src_layout: ['src/layout/*.html']
+  src_layout: ['src/layout/*.html'],
+  src_plantuml: folders_svg.map(dir => dir + '*/**/*.puml'),
+  src_svg: folders_svg.map(dir => dir + '*/**/*.svg')
 };
 
 function watch() {
 
   // Watch resources
-  gulp.watch(paths.resources, appCopyResources);
-
-  // Watch doc md
-  gulp.watch(paths.doc_md, appCopyDocResources);
+  gulp.watch(paths.resources.concat(paths.src_md), appCopyResources);
 
   // Watch JS + html
   gulp.watch([...paths.src_html, ...paths.src_js, ...paths.src_css, ...paths.src_layout], appHtml);
+
+  // Watch PUML files
+  gulp.watch(paths.src_plantuml, svg);
 }
 
 
-function serve(cb) {
+function serve(done) {
   // Launch browser
   browserSync.init({
     watch: true,
@@ -75,7 +79,7 @@ function serve(cb) {
       ignoreInitial: true
     }
   });
-  cb();
+  done();
 }
 
 /* --------------------------------------------------------------------------
@@ -96,19 +100,9 @@ function appCopyResources() {
 
   log(colors.green('Copy resources files...'));
   // Copy files to dist
-  return  gulp.src(paths.resources)
+  return  gulp.src(paths.resources.concat(paths.src_md))
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
-}
-
-
-function appCopyDocResources() {
-
-  log(colors.green('Copy md files...'));
-  // Copy files to dist
-  return  gulp.src(paths.doc_md)
-      .pipe(gulp.dest('dist'))
-      .pipe(browserSync.stream());
 }
 
 function appCopyExternalResources() {
@@ -137,6 +131,25 @@ function appCopyExternalResources() {
     ])
     .pipe(gulp.dest('dist/css'))
   );
+}
+function appGenerateSvg(done) {
+
+  log(colors.green('Generating SVG...'));
+  var options = {
+    continueOnError: false, // default = false, true means don't emit error event
+    pipeStdout: false, // default = false, true means stdout is written to file.contents
+  };
+  return gulp.src(folders_svg)
+      .pipe(exec((file) => `java -jar lib/plantuml.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
+      .on('end', done);
+}
+
+function appCopySvg() {
+
+  log(colors.green('Copy SVG files...'));
+  return  gulp.src(paths.src_svg)
+      .pipe(gulp.dest('dist'))
+      .pipe(browserSync.stream());
 }
 
 function appHtml() {
@@ -226,12 +239,14 @@ function help() {
    -- Define public tasks
    --------------------------------------------------------------------------*/
 
-const prepare = gulp.parallel(appCopyResources, appCopyDocResources, appCopyExternalResources);
-const compile = gulp.series(prepare, appHtml);
+const svg = gulp.series(appGenerateSvg, appCopySvg);
+const prepare = gulp.parallel(appCopyResources, appCopyExternalResources);
+const compile = gulp.series(prepare, gulp.parallel(appHtml, svg));
 const build = gulp.series(appClean, compile, appZip, buildSuccess);
 
 exports.help = help;
 exports.clean = appClean;
+exports.svg = svg;
 exports.build = build;
 exports.compile = compile;
 exports.serve =  gulp.series(compile, serve, watch)

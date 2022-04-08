@@ -1,4 +1,4 @@
-# Organisation des développements
+# Organisation des développements !
 ### Réunion du 08/04/2022
 
 > Présents :

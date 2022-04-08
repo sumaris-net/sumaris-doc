@@ -1,6 +1,12 @@
 #!/bin/bash
 
-PROJECT_DIR=`pwd`
+# Get to the root project
+if [[ "_" == "_${PROJECT_DIR}" ]]; then
+  SCRIPT_DIR=$(dirname $0)
+  PROJECT_DIR=$(cd "${SCRIPT_DIR}/.." && pwd)
+  export PROJECT_DIR
+fi;
+
 JAR_DIR="${PROJECT_DIR}/lib"
 JAR_FILE="${JAR_DIR}/plantuml.jar"
 JAR_VERSION="1.2019.12"
@@ -20,6 +26,6 @@ if  [[ ! -f "${JAR_FILE}" ]]; then
 fi;
 
 
-echo Converting all PlatUML files from `pwd` into SVG...
+echo "--- Converting all PlatUML files from `pwd` into SVG..."
 java -jar lib/plantuml.jar -tsvg "./**.puml" -charset UTF-8 -progress -duration
 echo "Done"

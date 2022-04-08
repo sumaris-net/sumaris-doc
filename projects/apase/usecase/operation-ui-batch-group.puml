@@ -1,0 +1,14 @@
+@startsalt
+{+
+  <b>Lots par espèce
+  ..
+
+    {#
+      [ <&plus> ] |  .              | .         | <b>Partie retenue  | . | . | . | <b>Partie rejetée | . | .
+      # | <b>Espèce commerciale     | <b>Chalut | <b>Poids total (kg))     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant. | <b>Poids total     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant.
+      3 | MNZ- Baudroie             | Babord    |  50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      2 | MNZ- Baudroie             | Babord    |  50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      1 | NEP - Langoustine commune | Tribord   |  50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+    }
+}
+@endsalt

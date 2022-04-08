@@ -4,40 +4,4 @@ class LocationLevel--><rect fill="#FEFECE" filter="url(#fzjepdbj2sjau)" height="
 class Status--><rect fill="#FEFECE" filter="url(#fzjepdbj2sjau)" height="32" id="Status" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="12" y="147"/><ellipse cx="27" cy="163" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M29.9688,168.6406 Q29.3906,168.9375 28.75,169.0781 Q28.1094,169.2344 27.4063,169.2344 Q24.9063,169.2344 23.5781,167.5938 Q22.2656,165.9375 22.2656,162.8125 Q22.2656,159.6875 23.5781,158.0313 Q24.9063,156.375 27.4063,156.375 Q28.1094,156.375 28.75,156.5313 Q29.4063,156.6875 29.9688,156.9844 L29.9688,159.7031 Q29.3438,159.125 28.75,158.8594 Q28.1563,158.5781 27.5313,158.5781 Q26.1875,158.5781 25.5,159.6563 Q24.8125,160.7188 24.8125,162.8125 Q24.8125,164.9063 25.5,165.9844 Q26.1875,167.0469 27.5313,167.0469 Q28.1563,167.0469 28.75,166.7813 Q29.3438,166.5 29.9688,165.9219 L29.9688,168.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="41" y="167.1543">Status</text><!--MD5=[90f649c4850263094a50bdd9e1e177e5]
 class LocationLevelIds  --><rect fill="#FEFECE" filter="url(#fzjepdbj2sjau)" height="78.4141" id="LocationLevelIds  " style="stroke: #A80036; stroke-width: 1.5;" width="142" x="302.5" y="8"/><ellipse cx="317.5" cy="24" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M321.6094,30 L313.8906,30 L313.8906,17.6094 L321.6094,17.6094 L321.6094,19.7656 L316.3438,19.7656 L316.3438,22.4375 L321.1094,22.4375 L321.1094,24.5938 L316.3438,24.5938 L316.3438,27.8438 L321.6094,27.8438 L321.6094,30 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="102" x="331.5" y="28.1543">LocationLevelIds</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="303.5" x2="443.5" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="308.5" y="54.2104">COUNTRY: 1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="69" x="308.5" y="67.0151">HARBOUR: 6</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="308.5" y="79.8198">AUCTION: 7</text><!--MD5=[b2caaabb79a9c659e0454ccb95dbaa0b]
 link Location to LocationLevel--><path d="M91.22,47 C108.08,47 127.8,47 146.25,47 " fill="none" id="Location-&gt;LocationLevel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="151.42,47,142.42,43,146.42,47,142.42,51,151.42,47" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="0" x="133.25" y="40.0669"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="98.8447" y="60.1018">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="135.466" y="43.0879">1</text><!--MD5=[39612909883ac0b0c2daeb3b9853e749]
-link Location to Status--><path d="M48.5,86.28 C48.5,104.71 48.5,126.09 48.5,141.42 " fill="none" id="Location-&gt;Status" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="48.5,146.77,52.5,137.77,48.5,141.77,44.5,137.77,48.5,146.77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="23.5234" y="106.363">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="39.175" y="135.9983">1</text><!--MD5=[eb1ca955bb933289e56aa0fa98ef57a5]
-@startuml
-hide empty members
-
-class Location {
-    +id: int
-    +label
-    +name
-}
-
-class LocationLevel
-{
-    +id: int
-    +label
-    +name
-}
-
-Location "0..*" -right-> "1" LocationLevel: "      "
-Location "0..*" - -> "1" Status
-
-enum "LocationLevelIds  " {
-    COUNTRY: 1
-    HARBOUR: 6
-    AUCTION: 7
-}
-@enduml
-
-PlantUML version 1.2019.12(Sun Nov 03 11:24:54 CET 2019)
-(GPL source distribution)
-Java Runtime: OpenJDK Runtime Environment
-JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.11+9-Ubuntu-0ubuntu2.20.04
-Operating System: Linux
-Default Encoding: UTF-8
-Language: fr
-Country: CA
---></g></svg>
+link Location to Status--><path d="M48.5,86.28 C48.5,104.71 48.5,126.09 48.5,141.42 " fill="none" id="Location-&gt;Status" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="48.5,146.77,52.5,137.77,48.5,141.77,44.5,137.77,48.5,146.77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="23.5234" y="106.363">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="39.175" y="135.9983">1</text></g></svg>
