@@ -9,7 +9,6 @@ const gulp = require('gulp'),
   lazypipe = require('lazypipe'),
   gulpif = require('gulp-if'),
   zip = require('gulp-zip'),
-  minifyCss = require('gulp-clean-css'),
   merge = require('merge2'),
   csso = require('gulp-csso'),
   replace = require('gulp-replace'),
@@ -20,7 +19,7 @@ const gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   header = require('gulp-header'),
   footer = require('gulp-footer')
-;const pkg = require("./package.json");
+;
 
 const uglifyBaseOptions = {
   toplevel: true,
@@ -46,7 +45,7 @@ const uglifyBaseOptions = {
    --------------------------------------------------------------------------*/
 
 const paths = {
-  resources: ['src/**/*.md', 'src/images*/**/*', 'src/data*/**/*'],
+  resources: ['src/**/*.md', 'src/images*/**/*', 'src/data*/**/*', 'src/about.html'],
   doc_md: ['user-manual*/**/*.md', 'architecture*/**/*.md', 'model*/**/*.md', 'use-case*/**/*.md'],
   src_html: ['src/**/*.html'],
   src_css: ['src/css/*.css'],
@@ -97,11 +96,7 @@ function appCopyResources() {
 
   log(colors.green('Copy resources files...'));
   // Copy files to dist
-  return  gulp.src([
-    'src/**/*.md',
-    'src/images*/**/*',
-    'src/data*/**/*'
-  ])
+  return  gulp.src(paths.resources)
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
 }

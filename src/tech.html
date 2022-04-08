@@ -2,12 +2,12 @@
 <div id="hidden" style="display:none;">
     <div id="header">
         <div id="header-left">
-            <p>Outil de collecte de données halieutiques > <b>Présentation technique</b></p>
+            <p><a href="./">Outil de collecte de données halieutiques</a> > <b>Présentation technique</b></p>
         </div>
         <div id="header-right">
-            <img src="images/logo/logo-ifremer.png">
-            <img src="images/logo/logo-eis.png">
-            <img src="images/logo/logo-sumaris-white_bg.png">
+            <img src="images/logo/logo-ifremer.png" alt="Ifremer">
+            <img src="images/logo/logo-eis.png" alt="E-IS">
+            <img src="images/logo/logo-sumaris-white_bg.png" alt="SUMARiS">
         </div>
         <div id="footer-left"></div>
         <div id="footer-right"></div>
@@ -27,35 +27,41 @@
 
                 [<i class="fab fa-github"></i> blavenie](https://www.github.com/blavenie)
                 |
-                [<i class="fab fa-github"></i> e-is.pro](https://www.e-is.pro)
+                [<i class="fab fa-globe"></i> e-is.pro](https://www.e-is.pro)
                 |
-                [<i class="fa fa-globe"></i> www.sumaris.net](https://www.sumaris.net)
+                [<i class="fa fa-globe"></i> sumaris.net](https://www.sumaris.net)
             </script>
         </section>
 
         <section data-markdown>
             <script type="text/template">
-            # Technologies
+                # Technologies
 
-            - **App** : Angular 12 / Ionic 5
+                - **App** : Angular 12 / Ionic 5
 
-              * Android, iOS ?
+                  * Web (saisie bureau)
+                  * Mobile : **Android** (iOS à tester)
 
-            - **Pod** :
+                - **Pod** (serveur) :
 
-              * Serveur : Java / Spring / Hibernate
+                  * Java / Spring-boot / Hibernate
 
-              * BDD: **Oracle**, PostgreSQL, HsqlDB
+                  * BDD : **Oracle** ou **PostgreSQL** ou HsqlDB
 
-              * **API ouverte** d'accès aux données : GraphQL
+                  * **API ouverte** d'accès aux données : GraphQL
 
-            ---
+                  * Déploiement :  Ansible ou **Docker**
 
-            # Liens
+                ---
 
-            - Code source :
-              * POD : https://gitlab.ifremer.fr/sih/sumaris/sumaris-pod
-              * APP : https://gitlab.ifremer.fr/sih/sumaris/sumaris-app
-        </script>
+                # Liens
+
+                - Source :
+                  * App : https://gitlab.ifremer.fr/sih/sumaris/sumaris-app
+                  * Pod : https://gitlab.ifremer.fr/sih/sumaris/sumaris-pod
+                - Documentation :
+                  * https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
+            </script>
+        </section>
     </div>
 </div>

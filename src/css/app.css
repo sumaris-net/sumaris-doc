@@ -1,11 +1,10 @@
 .slides img{
 	border: 0 !important;
 	background:none !important;
-	border: 0 !important;
 	box-shadow: none !important;
 }
 
-.slides menu-title {
+.slides .menu-title {
 	visibility: hidden;
 }
 
@@ -45,26 +44,26 @@
 
 #header-left {
 	position: absolute;
-	top: 0%;
-	left: 0%;
+	top: 0;
+	left: 0;
 	text-align: left;
 }
 #header-right {
 	position: absolute;
-	top: 0%;
-	right: 0%;
+	top: 0;
+	right: 0;
 	text-align: right;
 }
 #footer-left {
 	position: absolute;
-	bottom: 0%;
-	left: 0%;
+	bottom: 0;
+	left: 0;
 	text-align: left;
 }
 #footer-right {
 	position: absolute;
-	bottom: 0%;
-	right: 0%;
+	bottom: 0;
+	right: 0;
 	text-align: right;
 }
 
@@ -91,4 +90,13 @@
 	max-width: unset;
 	max-height: unset;
 	height: var(--header-height);
+}
+
+.reveal blockquote {
+	padding-inline-start: 16px;
+	text-align: left;
+}
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+	display: block !important;
 }
