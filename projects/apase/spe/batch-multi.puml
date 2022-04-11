@@ -1,0 +1,48 @@
+@startsalt
+{
+  <b>Lots par espèce
+
+  ..
+
+    {
+      Engin :  | [<b>Engin sélectif #1 (10) ] | [Engin standard #2]
+      Position engin :  | { [<b>Bâbord] | [Tribord] }
+      Poids total capture (kg) :  | "       "
+      Poids total rejet (kg) :  | "       "
+    }
+
+    {#
+      [ <&plus> ] |  .              | <b>Partie retenue  | . | . | . | <b>Partie rejetée | . | .
+      # | <b>Espèce commerciale     | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant. | <b>Poids total     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant.
+      3 | ^MNZ- Baudroie             ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      2 | ^MNZ- Baudroie             ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      1 | ^NEP - Langoustine commune ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+    }
+
+	..
+
+    { [<&plus> Ajouter un engin ] }
+
+    ..
+
+    {
+      Engin :  | [Engin sélectif #1 (10) ] | [<b>Engin standard #2]
+      Position engin :  | {[Bâbord] | [<b>Tribord]}
+      Poids total capture (kg) :  | "       "
+      Poids total rejet (kg) :  | "       "
+    }
+
+	{#
+      [ <&plus> ] |  .              | <b>Partie retenue  | . | . | . | <b>Partie rejetée | . | .
+      # | <b>Espèce commerciale     | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant. | <b>Poids total     |  <b>Nb indiv. total  | <b>Poids échant. | <b>Nb indiv échant.
+      3 | ^MNZ- Baudroie             ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      2 | ^MNZ- Baudroie             ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+      1 | ^NEP - Langoustine commune ^ |   50   |  .   |   10          | 4 | 25   |  .   |   5  | 2 .
+    }
+  ..
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt
