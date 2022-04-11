@@ -1,5 +1,9 @@
-# Collecte de données
-## Spécifications
+# Spécifications - Collecte de données
+
+
+Historique     |         |
+---------:|---------|
+11/04/2022| Création |
 
 ---
 
@@ -7,7 +11,7 @@
 
 Paramètres collectés :
 
-à définir
+à définir (à partir des formulaires papier)
 
 ---
 
@@ -54,10 +58,9 @@ Saisie du taux d'échantillonnage :
 - Soit saisie du X/Y
 ```
 
----
-
 
 ---
 ## Actions
 
-- Formulaire 
+- EIS: Saisie des lots : Voir la compatibilité avec le modèle de données
+- EIS: Maquettage dynamique des écrans
