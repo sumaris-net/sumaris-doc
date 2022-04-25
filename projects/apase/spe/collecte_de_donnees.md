@@ -1,9 +1,10 @@
 # Spécifications - Collecte de données
 
 
-Historique     |         |
----------:|---------|
-11/04/2022| Création |
+Historique|                                          |
+---------:|------------------------------------------|
+11/04/2022| Création                                 |
+25/04/2022| MAJ écrans OPE suite réunion du 25/04    |
 
 ---
 
@@ -24,20 +25,26 @@ L'utilisateur saisi :
 
 Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
 
----
-
-## Opération / Chalut jumeaux
-
-Propositon n°1 : Multi-tableaux (un par engin) 
-
-![collect](/projects/apase/spe/batch-multi.svg)
+- Action : QS - **Détailler les caractéristique**s (min, max, nb max décimales, etc.)
 
 ---
-## Opération / Chalut jumeaux
 
-Propositon n°2 : Un onglet par engin
+## Opération / Détails
+
+Chalut jumeaux
+
+![collect](/projects/apase/spe/operation.svg)
+
+---
+
+## Opération / Capture
+
+Chalut jumeau. Un onglet par engin
 
 ![collect](/projects/apase/spe/batch-tabs.svg)
+
+> - Les espèces saisies sur un engin, sont à recopier dans l'autre engin.
+>   Le poids par défaut est à zéro. 
 
 ---
 
@@ -62,5 +69,6 @@ Saisie du taux d'échantillonnage :
 ---
 ## Actions
 
+- QS : **Détailler les caractéristiques engins** (min, max, nb max décimales, etc.)
 - EIS: Saisie des lots : Voir la compatibilité avec le modèle de données
 - EIS: Maquettage dynamique des écrans

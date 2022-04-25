@@ -1,0 +1,35 @@
+@startsalt
+{
+
+  {/ <b> Détails | Capture }
+  ..
+
+    {
+      { Engin / espèce ciblée : | ^ OTT - Chalut jumeau à panneaux ^ | ^ Espèce cible ^ }
+
+      {
+        Début pêche : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin pêche : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+      }
+    }
+
+    <b>Caractéristiques :
+
+    {
+      . | Position de l'engin sélectif : { [<b>Bâbord] | [Tribord] }
+      . |Déroulement normal ? { [<b>Oui] | [Non] }
+    }
+
+    {
+        <b>Commentaire :
+
+        { "                                                                    "}
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt
