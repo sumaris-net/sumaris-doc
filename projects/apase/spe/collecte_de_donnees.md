@@ -25,7 +25,7 @@ L'utilisateur saisi :
 
 Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
 
-- Action : QS - **Détailler les caractéristique**s (min, max, nb max décimales, etc.)
+- ~~Action : QS - **Détailler les caractéristique**s (min, max, nb max décimales, etc.)~~
 
 ---
 
@@ -69,6 +69,8 @@ Saisie du taux d'échantillonnage :
 ---
 ## Actions
 
-- QS : **Détailler les caractéristiques engins** (min, max, nb max décimales, etc.)
-- EIS: Saisie des lots : Voir la compatibilité avec le modèle de données
-- EIS: Maquettage dynamique des écrans
+- Aglia: Fournit des **scans de bordereau** (pour servir de jeu de données de référence)  
+- EIS: Maquettage dynamique des écrans - en cours
+
+- ~~QS : **Détailler les caractéristiques engins** (min, max, nb max décimales, etc.)~~
+- ~~EIS: Saisie des lots : Voir la compatibilité avec le modèle de données~~
