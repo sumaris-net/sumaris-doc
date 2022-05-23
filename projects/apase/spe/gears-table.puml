@@ -1,0 +1,19 @@
+@startsalt
+{
+
+  {/  Détails | <b> Engins | Opérations  }
+
+
+	{#
+      [ <&plus> ] |  .              | .
+      # | <b>Engins     | <b>Libellé engin
+      1 | ^OTT- Chalut jumeaux             ^ | Chalut standard
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt

@@ -1,11 +1,11 @@
 # Spécifications - Collecte de données
 
 
-Historique|                                       |
----------:|---------------------------------------|
-11/04/2022| Création                              |
-25/04/2022| MAJ écrans OPE suite réunion du 25/04 |
-25/05/2022| MAJ réunion de suivi                  |
+Historique|                   |
+---------:|-------------------|
+11/04/2022| Création          |
+25/04/2022| MAJ écrans OPE    |
+25/05/2022| MAJ écrans engins |
 
 ---
 
@@ -18,14 +18,12 @@ Historique|                                       |
 
 ## Marée
 
-Paramètres collectés **(à valider)** :
-- Observateurs ? 
-- Vente ? (Lieu, type de vente, date de la vente)
-- Autres ? (ex: Nombre d'homme à bord)
+Paramètres collectés :
+- Observateurs
 
 ---
 
-## Engins (1/2)
+## Engins
 
 Pour les chaluts jumeaux, l'utilisateur saisi :
 - L'engin OTT avec les caractéristiques globales ;
@@ -39,14 +37,30 @@ Pour les chaluts jumeaux, l'utilisateur saisi :
 
 ---
 
-### Engin principal (parent)
+### Liste des engins
+![ui-gears](/projects/apase/spe/gears-table.svg)
+
+---
+
+### Engin OTT
 ![ui-gears](/projects/apase/spe/gear-parent.svg)
+
+---
+
+### Engin
+
+![ui-gears](/projects/apase/spe/gear-child.svg)
 
 ---
 
 ### Engin sélectif (fils)
 
-![ui-gears](/projects/apase/spe/gear-child.svg)
+Règle métier :
+- Si l'engin a été copié, avertir changement de libellé
+
+  "Vous avez modifié un engin, sans changer de libellé. Êtes-vous de vouloir continuer ? (Oui/Non)"
+ 
+  (priorité réalisation : mineure) 
 
 ---
 ## Opération / Détails

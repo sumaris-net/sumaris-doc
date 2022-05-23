@@ -2,16 +2,24 @@
 
 {
 
-  {/  Engin principal | <b>Engin selectif | Engin standard }
+    {
+        [Rechercher...]
+    }
+
   ..
     {
-      Engin ?? : | { ^ OTB - Chalut de fond ^ }
+      Engin : | { ^ OTT - Chalut de fond ^ } (non éditable)
       Libellé : | { "                       " }
     }
 
     <b>Caractéristiques :
 
     {
+      Longueur des bras (m) : { "                  " }
+      Longueur entremises (m) : { "                  " }
+      Type de gréement : { ^           ^  }
+      Type de panneaux : { ^           ^  }
+        .
         Maillage / Ailes supérieures (mm) : { "                  " }
         Maillage / Dos (mm) : { "                  " }
         Maillage / Ailes intérieures (mm) : { "                  "  }
@@ -29,7 +37,6 @@
         Nb mailles partie 2 : { "                  "  }
         Avec tablier : { [Oui] | [Non] }
 
-        .
         .
         Gréement / Grille à cailloux : { [Oui] | [Non] }
         Longueur corde de dos (m) : { "                  "  }

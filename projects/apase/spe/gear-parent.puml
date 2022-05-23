@@ -1,25 +1,24 @@
 @startsalt
 
 {
-
-  {/ <b> Engin principal | Engin selectif | Engin standard }
-  ..
+    ..
+    {
+        [Rechercher...]
+    }
 
     {
       Engin : | { ^ OTT - Chalut jumeau à panneaux ^ }
-      Libellé : | { "                  " }
+      Libellé : | { "                       " }
     }
 
-    <b>Caractéristiques :
+    <b>Sous-engins :
 
-    {
-      Longueur des bras (m) : { "                  " }
-      Longueur entremises (m) : { "                  " }
-      Type de gréement : { ^           ^  }
-      Type de panneaux : { ^           ^  }
-
-      <b>A valider
-      Présence d'un dispositif sélectif ? { [<b>Oui] | [Non] }
+    {#
+      [ <&plus> ] |  .              | .
+      # | <b>Libellé engin | <b>Maillage
+      1 | Chalut standard | .
+      2 | Chalut sélectif panneaux maille carrée | .
+      3 | Chalut sélectif T90 | .
     }
 
     {
@@ -31,7 +30,7 @@
   --
 
   {
-    [Annuler] | [Sauvegarder]
+    [Annuler] | [Valider]
   }
 }
 @endsalt
