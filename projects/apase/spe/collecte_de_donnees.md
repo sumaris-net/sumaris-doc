@@ -1,18 +1,19 @@
 # Spécifications - Collecte de données
 
 
-Historique|                                          |
----------:|------------------------------------------|
-11/04/2022| Création                                 |
-25/04/2022| MAJ écrans OPE suite réunion du 25/04    |
+Historique|                                       |
+---------:|---------------------------------------|
+11/04/2022| Création                              |
+25/04/2022| MAJ écrans OPE suite réunion du 25/04 |
+25/05/2022| MAJ réunion de suivi                  |
 
 ---
 
-## Documents fournis
+## Documents
 
 - Protocole [chalut simple]() et [chalut jumeaux]()  
 - Grille de saisie SUMARiS : [ods](/projects/apase/doc/apase-doc-grille_saisie_sumaris-v1.1.ods)
-- 
+
 ---
 
 ## Marée

@@ -90,8 +90,8 @@ Réunion hebdomadaire : <b>Lundi 10h</b>
 
 # Liens
 
+- Documentation projet APASE : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/apase
 - Anomalies et évolutions (GitLab) :<br/>
 https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
 - Forum : https://forum.sumaris.net
-- Documentation, manuel utilisateur :<br/>
-https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
+- Documentation générale (SUMARiS) : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
