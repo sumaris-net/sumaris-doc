@@ -1,11 +1,13 @@
 # Spécifications - Collecte de données
 
 
-Historique|                   |
----------:|-------------------|
-11/04/2022| Création          |
-25/04/2022| MAJ écrans OPE    |
-25/05/2022| MAJ écrans engins |
+|Historique|                                                                                               |
+|---------:|-----------------------------------------------------------------------------------------------|
+|11/04/2022| Création                                                                                      |
+|25/04/2022| Mise à jour écrans OPE                                                                                |
+|25/05/2022| - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations |
+
+**Prochaine réunion** de suivi : lundi 30/05/2022 à 10h. Visio
 
 ---
 
