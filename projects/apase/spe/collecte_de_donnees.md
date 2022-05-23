@@ -16,56 +16,61 @@ Historique|                   |
 
 ---
 
-## Marée
+## Marée / onglet Détails
 
-Paramètres collectés :
-- Observateurs
-
----
-
-## Engins
-
-Pour les chaluts jumeaux, l'utilisateur saisi :
-- L'engin OTT avec les caractéristiques globales ;
-- L'engin avec dispositif sélectif et ses caractéristiques propres ;
-- L'engin standard et ses caractéristiques propres ;
-
-> Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
-
-- ~~Action : QS - **Détailler les caractéristique**s (min, max, nb max décimales, etc.)~~
-- Action : QS - Fournir la **liste des codes engins** (OTB, OTT, etc.)
+cf écran SUMARiS
 
 ---
 
-### Liste des engins
+### Marée / onglet Engins
 ![ui-gears](/projects/apase/spe/gears-table.svg)
 
 ---
 
-### Engin OTT
+## Engin / Chaluts simple
+
+Type d'engin possible : OTB (pour le moment)
+
+> Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
+
+---
+
+## Engin / Chaluts jumeaux
+
+Pour les chaluts jumeaux (OTT), l'utilisateur saisi :
+- L'engin parent ;
+- Les sous-engins, avec leurs caractéristiques propres ;
+
+> Sur chaque engin (ou sous-engin), un libellé peut être saisi (texte libre), pour identifier l'engin facilement.
+
+---
+
+### Engin / Chaluts jumeaux
+
 ![ui-gears](/projects/apase/spe/gear-parent.svg)
 
 ---
 
-### Engin
+### Engin / Chaluts jumeaux / Sous-engins
 
 ![ui-gears](/projects/apase/spe/gear-child.svg)
 
 ---
 
-### Engin sélectif (fils)
+### Engin (tout type)
 
-Règle métier :
-- Si l'engin a été copié, avertir changement de libellé
-
-  "Vous avez modifié un engin, sans changer de libellé. Êtes-vous de vouloir continuer ? (Oui/Non)"
- 
-  (priorité réalisation : mineure) 
+> Règle(s) métier :
+> - Si l'engin a été copié, puis modifié, avertir l'utilisateur (priorité réalisation : mineure) :
+>
+>   ```text
+>   Vous avez modifié un engin, sans changer de libellé.
+>   Êtes-vous de vouloir continuer ? (Oui/Non)
+>   ```
 
 ---
 ## Opération / Détails
 
-Pour les chalut jumeaux :
+Pour les chaluts jumeaux :
 
 ![ui-operation](/projects/apase/spe/operation.svg)
 
@@ -73,31 +78,36 @@ Pour les chalut jumeaux :
 
 ## Opération / Capture
 
-Chalut jumeau. Un onglet par engin
+Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
 ![collect](/projects/apase/spe/batch-tabs.svg)
 
+> Règle(s) métier:
 > - Les espèces saisies sur un engin, sont à recopier dans l'autre engin.
 >   Le poids par défaut est à zéro. 
+> - (à confirmer) Recopier le taux d'échantillonnage, d'une ligne à l'autre ?
 
 ---
 
-## Lots - Règles métier
+## Mesures individuelles
 
-Contrôle poids:
-
-```text
-Somme poids élevés ~= Poids total capture
-
-Marge d'erreur x% (x en variable d'exploitation)
-Warning non bloquant  
-``` 
-
-Saisie du taux d'échantillonnage :
-```text
-- Soit rapport du poids
-- Soit saisie du X/Y
-```
+> Règle(s) métier :
+> - Contrôle poids:
+>
+> ```text
+> Somme poids élevés ~= Poids total capture
+> 
+> Marge d'erreur x% 
+> (x en variable d'exploitation)
+> Warning non bloquant  
+> ```
+> - Saisie du taux d'échantillonnage :
+> 
+> ```text
+> - Soit rapport du poids
+> - Soit saisie du taux 1/n
+> - + Saisie du sous-taux 1/n
+> ```
 
 
 ---
