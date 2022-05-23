@@ -1,0 +1,56 @@
+@startuml
+hide empty members
+
+enum ExtractionCategoryEnum {
+    LIVE
+    PRODUCT
+}
+enum LiveExtractionTypeEnum implements IExtractionType {
+    RDB
+    COST
+    FREE1
+    FREE2
+    PMFM_TRIP
+    STRAT
+}
+
+enum AggExtractionTypeEnum implements IExtractionType {
+    AGG_RDB
+}
+
+AggExtractionTypeEnum .left.> LiveExtractionTypeEnum: "has parent"
+
+interface IExtractionType {
+    +id: int [0..1]
+    +label: string [0..1]
+    +format: string
+    +version: string
+    +parentId: int
+}
+
+IExtractionType -left-> "1" ExtractionCategoryEnum : category
+
+IExtractionType "0..1" <--  IExtractionType: parent
+
+class ExtractionTypeVO extends IExtractionType {
+    +updateDate: Date
+    +parentId: int
+}
+
+class ExtractionProductVO extends IExtractionType {
+    +updateDate: Date
+    +parentId: int
+}
+
+class ExtractionContextVO extends IExtractionType {
+}
+
+class AggregationContextVO extends ExtractionContextVO {
+}
+
+class ExtractionManager {
+    +execute(type: IExtractionType, filter: ExtractionFilterVO): ExtractionContextVO
+    +executeAndRead(type: IExtractionType, filter: ExtractionFilterVO, strata: AggregationStrataVO): ExtractionContextVO
+}
+
+@enduml

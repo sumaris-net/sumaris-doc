@@ -1,0 +1,56 @@
+@startsalt
+
+{
+
+  {/  Engin principal | <b>Engin selectif | Engin standard }
+  ..
+    {
+      Engin ?? : | { ^ OTB - Chalut de fond ^ }
+      Libellé : | { "                       " }
+    }
+
+    <b>Caractéristiques :
+
+    {
+        Maillage / Ailes supérieures (mm) : { "                  " }
+        Maillage / Dos (mm) : { "                  " }
+        Maillage / Ailes intérieures (mm) : { "                  "  }
+        Maillage / Ventre (mm) : { "                  "  }
+        Maillage / Gorget (mm) : { "                  "  }
+        Maillage / Rallonge (mm) : { "                  "  }
+        Maillage / Cul de chalut (mm) : { "                  "  }
+        Type de maillage : { ^ Etiré           ^ Côté de maille ^ Jauge ^ }
+        .
+        .
+        Fil cul chalut : { [Simple] | [Double] }
+        Fil cul chalut / Diamètre (mm) : { "                  "  }
+        Cul de chalut : { [1 partie] | [2 parties] }
+        Nb mailles partie 1 : { "                  "  }
+        Nb mailles partie 2 : { "                  "  }
+        Avec tablier : { [Oui] | [Non] }
+
+        .
+        .
+        Gréement / Grille à cailloux : { [Oui] | [Non] }
+        Longueur corde de dos (m) : { "                  "  }
+        Type de bourrelet : { ^                 ^ }
+        Longueur de bourrelet (m) : { "                  "  }
+        Racasseur/Chaine : { [Oui] | [Non] }
+        Nb flotteurs : { "                  "  }
+        Ouverture verticale (m) : { "                  "  }
+        Information ouverture verticale : { [Estimé] | [Mesurée] }
+    }
+
+    {
+        <b>Commentaire :
+
+        { "                                                                    "}
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt

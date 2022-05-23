@@ -8,32 +8,51 @@ Historique|                                          |
 
 ---
 
+## Documents fournis
+
+- Protocole [chalut simple]() et [chalut jumeaux]()  
+- Grille de saisie SUMARiS : [ods](/projects/apase/doc/apase-doc-grille_saisie_sumaris-v1.1.ods)
+- 
+---
+
 ## Marée
 
-Paramètres collectés :
-
-à définir (à partir des formulaires papier)
+Paramètres collectés **(à valider)** :
+- Observateurs ? 
+- Vente ? (Lieu, type de vente, date de la vente)
+- Autres ? (ex: Nombre d'homme à bord)
 
 ---
 
-## Engins
+## Engins (1/2)
 
-L'utilisateur saisi :
+Pour les chaluts jumeaux, l'utilisateur saisi :
 - L'engin OTT avec les caractéristiques globales ;
 - L'engin avec dispositif sélectif et ses caractéristiques propres ;
 - L'engin standard et ses caractéristiques propres ;
 
-Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
+> Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
 
 - ~~Action : QS - **Détailler les caractéristique**s (min, max, nb max décimales, etc.)~~
+- Action : QS - Fournir la **liste des codes engins** (OTB, OTT, etc.)
 
 ---
 
+### Engin principal (parent)
+![ui-gears](/projects/apase/spe/gear-parent.svg)
+
+---
+
+### Engin sélectif (fils)
+
+![ui-gears](/projects/apase/spe/gear-child.svg)
+
+---
 ## Opération / Détails
 
-Chalut jumeaux
+Pour les chalut jumeaux :
 
-![collect](/projects/apase/spe/operation.svg)
+![ui-operation](/projects/apase/spe/operation.svg)
 
 ---
 

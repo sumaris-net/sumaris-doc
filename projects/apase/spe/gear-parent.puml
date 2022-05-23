@@ -1,0 +1,37 @@
+@startsalt
+
+{
+
+  {/ <b> Engin principal | Engin selectif | Engin standard }
+  ..
+
+    {
+      Engin : | { ^ OTT - Chalut jumeau à panneaux ^ }
+      Libellé : | { "                  " }
+    }
+
+    <b>Caractéristiques :
+
+    {
+      Longueur des bras (m) : { "                  " }
+      Longueur entremises (m) : { "                  " }
+      Type de gréement : { ^           ^  }
+      Type de panneaux : { ^           ^  }
+
+      <b>A valider
+      Présence d'un dispositif sélectif ? { [<b>Oui] | [Non] }
+    }
+
+    {
+        <b>Commentaire :
+
+        { "                                                                    "}
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt
