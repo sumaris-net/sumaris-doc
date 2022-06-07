@@ -17,7 +17,7 @@
 ## Besoins (1/2)
 
 - Qui lance la restitution ?
-   * Observateurs - doivent pouvoir sélectionner les traits concernés ;
+   * Observateurs 
      * Filtrer par navire / dates / strate sélectivité
    * Superviseurs 
      * Filtrer par strate sélectivité / navires / dates
@@ -37,10 +37,14 @@ Formats de sortie :
 ---
 ## Sélection des données 
 
-- Pour les chaluts simples : 
-  * Pouvoir regrouper les OPE par dispositif sélectif.
-  * Pouvoir inclure/exclure d'autres OPE
+- Pouvoir filtrer par
+    * `navires / dates / strate sélectivité`
+    * ou `strate sélectivité / navires / dates`
 
+- Pouvoir  
+  * Pouvoir regrouper les OPE par dispositif sélectif (pour les chaluts simples notamment).
+  * Pouvoir inclure/exclure des OPE
+  
 ## Test logiciel
 
  - Pour tester les restitutions :
