@@ -39,7 +39,7 @@ Type d'engin possible : OTB (pour le moment)
 
 ## Engin / Chaluts jumeaux
 
-Pour les chaluts jumeaux (OTT), l'utilisateur saisi :
+Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 - L'engin parent ;
 - Les sous-engins, avec leurs caractéristiques propres ;
 
@@ -50,6 +50,8 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisi :
 ### Engin / Chaluts jumeaux
 
 ![ui-gears](/projects/apase/spe/gear-parent.svg)
+
+```
 
 ---
 
