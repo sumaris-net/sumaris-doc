@@ -93,5 +93,3 @@ Réalisé :
 
 - [ ] Règle de contrôles - pour min/max Poids/Longueur par débarquement/rejet;
 - [ ] Écran Opérations : Filtrer sur (déroulement normal/anormal)
-
----
