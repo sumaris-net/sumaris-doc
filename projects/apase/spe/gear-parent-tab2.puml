@@ -1,0 +1,27 @@
+@startsalt
+
+{
+    {
+                         | [Rechercher...]
+    }
+    ..
+
+    {
+        {/ Détails | <b> Sous-engins }
+    }
+
+    {#
+      [ <&plus> ] |  .              | .
+      # | <b>Libellé engin | <b>Maillage
+      1 | Chalut standard | .
+      2 | Chalut sélectif panneaux maille carrée | .
+      3 | Chalut sélectif T90 | .
+    }
+
+  --
+
+  {
+    [Annuler] | [Valider]
+  }
+}
+@endsalt

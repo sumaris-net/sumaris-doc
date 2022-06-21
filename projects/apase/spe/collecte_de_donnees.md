@@ -1,13 +1,14 @@
 # Spécifications - Collecte de données
 
 
-|Historique|                                                                                               |
-|---------:|-----------------------------------------------------------------------------------------------|
-|11/04/2022| Création                                                                                      |
-|25/04/2022| Mise à jour écrans OPE                                                                                |
-|25/05/2022| - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations |
+| Historique |                                                                                                |
+|-----------:|------------------------------------------------------------------------------------------------|
+| 11/04/2022 | Création                                                                                       |
+| 25/04/2022 | Mise à jour écrans OPE                                                                         |
+| 25/05/2022 | - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations  |
+| 20/06/2022 | - Modification des écrans sous-engins                                                          |
 
-**Prochaine réunion** de suivi : lundi 30/05/2022 à 10h. Visio
+**Prochaine réunion** de suivi : lundi 27/06/22 à 11h en visio
 
 ---
 
@@ -47,15 +48,21 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 
 ---
 
-### Engin / Chaluts jumeaux
+### Engin / Chaluts jumeaux (1/2)
 
-![ui-gears](/projects/apase/spe/gear-parent.svg)
+![ui-modal-gear](/projects/apase/spe/gear-parent.svg)
 
-```
 
 ---
 
-### Engin / Chaluts jumeaux / Sous-engins
+### Engin / Chaluts jumeaux (2/2)
+
+![ui-modal-gear-2](/projects/apase/spe/gear-parent-tab2.svg)
+
+---
+
+
+### Sous-engin / Chaluts jumeaux
 
 ![ui-gears](/projects/apase/spe/gear-child.svg)
 

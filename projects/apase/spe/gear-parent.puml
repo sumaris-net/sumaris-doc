@@ -1,24 +1,18 @@
 @startsalt
 
 {
-    ..
     {
-        [Rechercher...]
+                         | [Rechercher...]
+    }
+    ..
+
+    {
+        {/ <b> Détails | Sous-engins }
     }
 
     {
       Engin : | { ^ OTT - Chaluts jumeaux à panneaux ^ }
       Libellé : | { "                       " }
-    }
-
-    <b>Sous-engins :
-
-    {#
-      [ <&plus> ] |  .              | .
-      # | <b>Libellé engin | <b>Maillage
-      1 | Chalut standard | .
-      2 | Chalut sélectif panneaux maille carrée | .
-      3 | Chalut sélectif T90 | .
     }
 
     {
