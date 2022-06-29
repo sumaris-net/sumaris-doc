@@ -16,10 +16,9 @@
     <b>Caractéristiques :
 
     {
-      . | Engin bâbord : { ^ Chalut standard                    ^ }
-      . | Engin tribord : { ^ Chalut sélectif panneau maille carré ^ }
       . | Mesures individuelles ? { [<b>Oui] | [Non] }
       . | Déroulement normal ? { [<b>Oui] | [Non] }
+      . | . | + Autres caractéristiques (cf "Grille de saisie")
     }
 
     {

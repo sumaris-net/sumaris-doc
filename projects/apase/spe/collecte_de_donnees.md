@@ -85,6 +85,9 @@ Pour les chaluts jumeaux :
 
 ![ui-operation](/projects/apase/spe/operation.svg)
 
+> Force du vent: [cf échelle beaufort](https://files.meteofrance.com/files/glossaire/FR/glossaire/designation/510_curieux_view.html)
+
+ 
 ---
 
 ## Opération / Capture
