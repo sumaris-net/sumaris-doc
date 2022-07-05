@@ -34,7 +34,9 @@ cf écran SUMARiS
 
 Type d'engin possible : OTB (pour le moment)
 
-> Sur chaque engin, un libellé (texte libre) peut être saisi, pour identifier plus simplement l'engin par la suite.
+> Sur chaque engin :
+> - un libellé (texte libre - obligatoire) peut être saisi, pour identifier plus simplement l'engin par la suite.
+> - un "code essai" (obligatoire) : "Grille à lotte", "Grille à langoustine", ...
 
 ---
 
