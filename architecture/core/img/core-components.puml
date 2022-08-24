@@ -7,13 +7,13 @@ together {
             + ID: NUMBER(10)
             + LABEL: VARCHAR2(50)
             + NAME: VARCHAR2(100)
-            + UPDATE_DATE: DATE
+            + UPDATE_DATE: TIMESTAMP()
         }
         class DEPARTMENT <<Table>> #EEE {
             + ID: NUMBER(10)
             + LABEL: VARCHAR2(50)
             + NAME: VARCHAR2(100)
-            + UPDATE_DATE: DATE
+            + UPDATE_DATE: TIMESTAMP()
         }
 
         hide LOCATION circle
@@ -70,6 +70,12 @@ package "net.sumaris.core" {
 	    }
 	}
 
+
+}
+
+
+
+package "net.sumaris.server" {
     package http {
 
         class GraphQLController {
@@ -80,7 +86,6 @@ package "net.sumaris.core" {
         GraphQLController --> DepartmentService : expose
         GraphQLController --> LocationService : expose
     }
-
 }
 
 interface "Client HTTP request" as client #DDD
