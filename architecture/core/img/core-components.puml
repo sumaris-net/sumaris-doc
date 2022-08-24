@@ -1,0 +1,91 @@
+@startuml
+hide empty members
+
+together {
+    package DB <<Database>>  #lightblue {
+        class LOCATION <<Table>> #EEE {
+            + ID: NUMBER(10)
+            + LABEL: VARCHAR2(50)
+            + NAME: VARCHAR2(100)
+            + UPDATE_DATE: DATE
+        }
+        class DEPARTMENT <<Table>> #EEE {
+            + ID: NUMBER(10)
+            + LABEL: VARCHAR2(50)
+            + NAME: VARCHAR2(100)
+            + UPDATE_DATE: DATE
+        }
+
+        hide LOCATION circle
+        hide DEPARTMENT circle
+
+    }
+}
+
+
+package "net.sumaris.core" {
+
+    package model {
+
+        interface IReferentialEntity {
+         + id
+         + label
+         + name
+         + updateDate
+         + creationDate
+        }
+        class Department <<Entity>> implements IReferentialEntity
+        class Location <<Entity>> implements IReferentialEntity
+    }
+
+
+	together {
+
+		package dao {
+
+	        interface JpaRepository {
+	          + findAll(filter: F): List<V>
+	          + get(id: ID): V
+	          + save(data: V): V
+	          + delete(id: int)
+	        }
+
+	        class DepartmentRepository <<Repository>> implements JpaRepository
+
+	        class LocationRepository <<Repository>> implements JpaRepository
+
+	        DepartmentRepository -down-> DEPARTMENT : read/write\n(SQL queries)
+	        LocationRepository -down-> LOCATION : read/write\n(SQL queries)
+
+	        DepartmentRepository .[hidden]down.> Department: reference
+	        LocationRepository .[hidden]down.> Location: reference
+	    }
+
+	    package service {
+	        DepartmentService <<Service>>
+	        DepartmentService -down-> DepartmentRepository : call
+
+	        LocationService <<Service>>
+	        LocationService -down-> LocationRepository : call
+	    }
+	}
+
+    package http {
+
+        class GraphQLController {
+            **Expose services** into the GraphQL endpoint
+        }
+        hide GraphQLController methods
+
+        GraphQLController --> DepartmentService : expose
+        GraphQLController --> LocationService : expose
+    }
+
+}
+
+interface "Client HTTP request" as client #DDD
+hide client circle
+
+client --> GraphQLController : /api/graphql
+
+@enduml
