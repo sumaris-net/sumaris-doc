@@ -1,5 +1,5 @@
-# Organisation des développements
-### Réunion du 08/04/2022
+# Réunion de rentrée
+## 29/08/2022
 
 > Présents :
 > 
@@ -10,10 +10,10 @@
 > - Benoit LAVENIER (EIS)
 
 ---
-# Découpage en lots
+# Rappel du planning
 
 - Lot 1 : Collecte de données
-  * Fin juin 2022
+  * Fin juin 2022 => Décalé à fin sept. (version corrective)
 - Lot 2 : Restitution pro
   * Fin septembre 2022
 - Lot 3 : Extraction des données
@@ -21,7 +21,7 @@
 
 ---
 
-# Collecte de données (1/2)
+# Collecte de données
 
 - Simulation du protocole
   * Nouveau protocole (programme) de collecte

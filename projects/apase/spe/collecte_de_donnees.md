@@ -8,7 +8,7 @@
 | 25/05/2022 | - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations  |
 | 20/06/2022 | - Modification des écrans sous-engins                                                          |
 
-**Prochaine réunion** de suivi : lundi 27/06/22 à 11h en visio
+**Prochaine réunion** de suivi : lundi 12/09/22 à 11h en visio
 
 ---
 
