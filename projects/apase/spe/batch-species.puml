@@ -1,0 +1,19 @@
+@startsalt
+{+
+
+  {  [ <&arrow-left> ] | <b>Lot MNZ- Baudroie | [<&check>] }
+
+  --
+
+  {
+    Espèce commerciale : | ^   MNZ- Baudroie ^
+    Categorie :          | ^              10 ^
+    Poids total (kg) :   | "                 "
+    { 1 / | "Coef. éch.    " } | { Poids échant. (kg) :  | "        " }
+  }
+
+  {
+    [<color:blue>Saisir les mesures <&arrow-right> ]
+  }
+}
+@endsalt

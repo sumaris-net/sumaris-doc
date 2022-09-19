@@ -1,31 +1,33 @@
-# Réunion de rentrée
-## 29/08/2022
+# Réunion de suivi
+## 19/09/2022
 
 > Présents :
 > 
-> - Vincent BADTS (IFREMER)
-> - Sonia MEHAULT (IFREMER)
 > - Thomas RIMAUD (OP LPDB)
 > - Quiterie SOURGET (AGLIA)
 > - Benoit LAVENIER (EIS)
+
+> Excusés :
+> - Vincent BADTS (IFREMER)
+> - Sonia MEHAULT (IFREMER)
+
+**Prochaine réunion** de suivi : lundi 26/09/22 à 11h en visio
 
 ---
 # Rappel du planning
 
 - Lot 1 : Collecte de données
-  * Fin juin 2022 => Décalé à fin sept. (version corrective)
+  * Fin sept. (version corrective)
 - Lot 2 : Restitution pro
-  * Fin septembre 2022
+  * Mi octobre 2022
 - Lot 3 : Extraction des données
   * Fin novembre 2022
 
 ---
 
-# Collecte de données
+# Spécifications
 
-- Simulation du protocole
-  * Nouveau protocole (programme) de collecte
-  * Spécification du protocole [sumaris-doc](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc)
+- [Collect de données](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/)
 
 - Tests (bureau) et retours
   * Site de test : [test.sumaris.net](https://test.sumaris.net)
@@ -66,19 +68,16 @@
 
 # Points de vigilance (1/2)
 
-- Fin de projet : novembre 2022
-- Stabilité du protocole de collecte
-- Développement : compatibilité avec les autres programmes de collecte
+- Migration Angular 14
+- Planning : Fin de projet => novembre 2022
 
 ---
 
 # Points de vigilance (2/2)
-
-- Organisation projet :
-  * Disponibilité du responsable projet
-  * Impératifs extérieurs (E-IS)
-  * Tests : chronophage !
-- Règle connectée ? (Ifremer)
+ 
+- ~~Stabilité du protocole de collecte~~
+- ~~Développement : compatibilité avec les autres programmes de collecte~~
+- ~~Règle connectée ? (Ifremer) ?~~
 
 ---
 

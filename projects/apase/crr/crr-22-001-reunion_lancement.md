@@ -1,5 +1,5 @@
-# Organisation des développements
-### Réunion du 08/04/2022
+# Réunion de lancement
+### 08/04/2022
 
 > Présents :
 > 

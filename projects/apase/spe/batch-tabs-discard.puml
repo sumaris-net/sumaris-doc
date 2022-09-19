@@ -1,0 +1,35 @@
+@startsalt
+{
+
+  {/  Détails | <b> Capture }
+
+  .
+
+
+  {/ <b> Bâbord | Tribord }
+
+  .
+
+    {
+      Engin bâbord : { ^ Chalut standard    ^ }
+      Poids total capture (kg) :  | "       "
+      Poids total rejet (kg) :  | "       "
+    }
+
+    {/ Partie retenue | <b> Partie rejetée }
+	{#
+      [ <&plus> ] |  .              | . | . | . | . | . | .
+       # | <b>Espèce commerciale     | <b>Catégorie | <b>Poids total     |  <b>Taux échant.  | <b>Taux sous-échant.  | <b>Poids échant. | <b>Nb indiv échant.
+       4 | ^MNZ- Baudroie             ^ | ^     10 ^ | 25   |  .   | . |   5  | 2
+       3 | ^MNZ- Baudroie             ^ | ^     30 ^ | 25   |  .   | . |   5  | 2
+       2 | ^NEP - Langoustine commune ^ | ^ Petite ^ | 25   |  1/5 | 1/5 | <i>5 | 2
+       1 | ^SOX - Sole                ^ | . |  25   |  1/1 | 1/1 | 25   | 2
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt

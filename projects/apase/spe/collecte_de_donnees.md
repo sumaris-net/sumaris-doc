@@ -1,14 +1,14 @@
-# Spécifications - Collecte de données
+# Collecte de données
+## Spécifications
+---
 
+## Sommaire
 
-| Historique |                                                                                                |
-|-----------:|------------------------------------------------------------------------------------------------|
-| 11/04/2022 | Création                                                                                       |
-| 25/04/2022 | Mise à jour écrans OPE                                                                         |
-| 25/05/2022 | - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations  |
-| 20/06/2022 | - Modification des écrans sous-engins                                                          |
-
-**Prochaine réunion** de suivi : lundi 12/09/22 à 11h en visio
+- [Marée](#/4/3)
+  - [Engin](#/4/4)
+- [Opération](#/4/11)
+  - [Capture](#/4/12)
+    - [Mesures individuelles](#/4/15)
 
 ---
 
@@ -19,18 +19,18 @@
 
 ---
 
-## Marée / onglet Détails
+## Marée > Détails
 
 cf écran SUMARiS
 
 ---
 
-### Marée / onglet Engins
+### Marée > onglet Engins
 ![ui-gears](/projects/apase/spe/gears-table.svg)
 
 ---
 
-## Engin / Chaluts simple
+## Engin > Chaluts simple
 
 Type d'engin possible : OTB (pour le moment)
 
@@ -40,7 +40,7 @@ Type d'engin possible : OTB (pour le moment)
 
 ---
 
-## Engin / Chaluts jumeaux
+## Engin > Chaluts jumeaux
 
 Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 - L'engin parent ;
@@ -50,23 +50,23 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 
 ---
 
-### Engin / Chaluts jumeaux (1/2)
+### Engin > Chaluts jumeaux (1/2)
 
 ![ui-modal-gear](/projects/apase/spe/gear-parent.svg)
 
 
 ---
 
-### Engin / Chaluts jumeaux (2/2)
+### Engin > Chaluts jumeaux (2/2)
 
 ![ui-modal-gear-2](/projects/apase/spe/gear-parent-tab2.svg)
 
 ---
 
 
-### Sous-engin / Chaluts jumeaux
+### Sous-engin > Chaluts jumeaux
 
-![ui-gears](/projects/apase/spe/gear-child.svg)
+[<img src="/projects/apase/spe/gear-child.svg" width="40%">](/projects/apase/spe/gear-child.svg)
 
 ---
 
@@ -81,32 +81,56 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 >   ```
 
 ---
-## Opération / Détails
+## Opération > Détails
 
 Pour les chaluts jumeaux :
 
 ![ui-operation](/projects/apase/spe/operation.svg)
 
 > Force du vent: [cf échelle beaufort](https://files.meteofrance.com/files/glossaire/FR/glossaire/designation/510_curieux_view.html)
-
  
 ---
-
-## Opération / Capture
+## Opération > Capture (1/3)
 
 Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
-![collect](/projects/apase/spe/batch-tabs.svg)
+![batch-tabs](/projects/apase/spe/batch-tabs.svg)
+
+---
+## Opération > Capture (2/3)
+
+![batch-tabs-discard](/projects/apase/spe/batch-tabs-discard.svg)
+
+---
+## Opération > Capture (3/3)
+
+> Priorité: 
+> - mode terrain (pour fin nov. 2022) 
+> - mode bureau ensuite
 
 > Règle(s) métier:
 > - Les espèces saisies sur un engin, sont à recopier dans l'autre engin.
->   Le poids par défaut est à zéro. 
+    >   Le poids par défaut est à zéro.
 > - (à confirmer) Recopier le taux d'échantillonnage, d'une ligne à l'autre ?
+> - Pouvoir saisir plusieurs taux d'échantillonnage
 
 ---
 
-## Mesures individuelles
+## Lots espèces
 
+![collect](/projects/apase/spe/batch-species.svg)
+
+---
+
+## Mesures individuelles (1/2)
+
+![batch-species](/projects/apase/spe/individual-measure.svg)
+
+- Pourvoir saisir d'abord les espèces de la partie retenue, puis la partie rejettée
+- (priorité basse) Pourvoir ajouter un lot espèce depuis la saisie des mesures (nouveau bouton "+")
+
+---
+## Mesures individuelles (2/2)
 > Règle(s) métier :
 > - Contrôle poids:
 >
@@ -129,8 +153,15 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 ---
 ## Actions
 
-- Aglia: Fournit des **scans de bordereau** (pour servir de jeu de données de référence)  
-- EIS: Maquettage dynamique des écrans - en cours
+- EIS: Livraison d'une nouvelle version (~ 1.30.0)
 
-- ~~QS : **Détailler les caractéristiques engins** (min, max, nb max décimales, etc.)~~
-- ~~EIS: Saisie des lots : Voir la compatibilité avec le modèle de données~~
+---
+## Historique
+
+|       Date | Sections mises à jour                                                                         |
+|-----------:|-----------------------------------------------------------------------------------------------|
+| 11/04/2022 | Création                                                                                      |
+| 25/04/2022 | Mise à jour écrans OPE                                                                        |
+| 25/05/2022 | - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations |
+| 20/06/2022 | - Modification des écrans sous-engins                                                         |
+| 19/09/2022 | - **Modification des écrans lots**                                                            
