@@ -1,27 +1,27 @@
 @startsalt
  {+
-  {  [ <&arrow-left> ] | <b>Lot MNZ- Baudroie - Mesures individuelles | [<&check>] }
+  {  [ <&arrow-left> ] | <b>Partie retenue - Lot MNZ - Baudroie - Mesures individuelles | [<&check>] }
 
   --
 
   {
 	{#
-      # | <b>Espèce commerciale        |  <b>Partie  | <b>Longueur totale (cm)
-      <color:blue>7 | <color:blue> MNZ- Baudroie             | <color:blue> Partie Retenue ^ |  <color:blue>46
-      6 | MNZ- Baudroie             | Partie Retenue ^ |  41
-      5 | MNZ- Baudroie             | Partie Retenue ^ |  20
-      4 | MNZ- Baudroie             | Partie Retenue ^ |  20
-      3 | MNZ- Baudroie             | Partie Retenue ^ |  15
-      2 | MNZ- Baudroie             | Partie Retenue ^ |  11
-      1 | MNZ- Baudroie             | Partie Retenue ^ |  10
+      # | <b>Espèce commerciale        |  <b>Longueur totale (cm)
+      <color:blue>7 | <color:blue> MNZ- Baudroie             | <color:blue>46
+      6 | MNZ- Baudroie             | 41
+      5 | MNZ- Baudroie             | 20
+      4 | MNZ- Baudroie             | 20
+      3 | MNZ- Baudroie             | 15
+      2 | MNZ- Baudroie             | 11
+      1 | MNZ- Baudroie             | 10
     } | {
         {
-          Lot espèce :         | ^ MNZ- Baudroie - cat. 10 ^
-          Partie :             | { [<b>Partie retenue] | [Partie Rejettée] }
           Longueur totale (cm) | "                         "
         }
         --
         { [<color:blue>Ajouter] }
+
+        { [<color:blue>Terminer et nouveau] | [<color:blue>Terminer] }
       }
     }
   }

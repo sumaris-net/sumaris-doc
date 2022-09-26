@@ -116,9 +116,30 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
 ---
 
-## Lots espèces
+## Lots espèces (1/2)
 
 ![collect](/projects/apase/spe/batch-species.svg)
+
+---
+## Lots espèces (2/2) 
+
+> Règle(s) métier :
+> - Contrôle poids:
+>
+> ```text
+> Somme poids élevés ~= Poids total capture
+> 
+> Marge d'erreur x% 
+> (x en variable d'exploitation)
+> Warning non bloquant  
+> ```
+> - Saisie du taux d'échantillonnage :
+>
+> ```text
+> - Soit rapport du poids
+> - Soit saisie du taux 1/n
+> - + Saisie du sous-taux 1/n
+> ```
 
 ---
 
@@ -132,28 +153,21 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 ---
 ## Mesures individuelles (2/2)
 > Règle(s) métier :
-> - Contrôle poids:
->
-> ```text
-> Somme poids élevés ~= Poids total capture
-> 
-> Marge d'erreur x% 
-> (x en variable d'exploitation)
-> Warning non bloquant  
-> ```
-> - Saisie du taux d'échantillonnage :
-> 
-> ```text
-> - Soit rapport du poids
-> - Soit saisie du taux 1/n
-> - + Saisie du sous-taux 1/n
-> ```
+> - Saisie au 1 cm, 0.5cm, 1mm, suivant l'espèce (cf normes Ifremer) 
 
+---
+## Référentiels
+
+### Espèces commerciales
+
+- Insérer les espèces manquantes (action Quiterie)
+- Pouvoir d'ajouter une espèce par trimestre (max).
 
 ---
 ## Actions
 
 - EIS: Livraison d'une nouvelle version (~ 1.30.0)
+- Quiterie: envoi d'une liste des espèces
 
 ---
 ## Historique
