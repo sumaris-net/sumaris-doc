@@ -49,7 +49,8 @@ const folders_svg = ['architecture', 'model', 'projects', 'use-case'];
 const paths = {
   resources: ['src/images*/**/*', 'src/data*/**/*'],
   src_md: folders.map(dir => dir + '*/**/*.*').concat('src/**/*.md'),
-  src_html: ['src/**/*.html'],
+  src_html: ['src/**/*.html', "!src/about.html"],
+  src_html_static: ['src/about.html'],
   src_css: ['src/css/*.css'],
   src_js: ['src/**/*.js'],
   src_layout: ['src/layout/*.html'],
@@ -100,7 +101,9 @@ function appCopyResources() {
 
   log(colors.green('Copy resources files...'));
   // Copy files to dist
-  return  gulp.src(paths.resources.concat(paths.src_md))
+  return  gulp.src(paths.resources
+      .concat(paths.src_md)
+      .concat(paths.src_html_static))
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream());
 }
@@ -140,7 +143,7 @@ function appGenerateSvg(done) {
     pipeStdout: false, // default = false, true means stdout is written to file.contents
   };
   return gulp.src(folders_svg)
-      .pipe(exec((file) => `java -jar lib/plantuml.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
+      .pipe(exec((file) => `java -jar lib/plantuml-1.2022.7.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
       .on('end', done);
 }
 
