@@ -9,6 +9,8 @@
 - [Opération](#/4/11)
   - [Capture](#/4/12)
     - [Mesures individuelles](#/4/15)
+- Actions
+- Historique
 
 ---
 
@@ -26,7 +28,7 @@ cf écran SUMARiS
 ---
 
 ### Marée > onglet Engins
-![ui-gears](/projects/apase/spe/gears-table.svg)
+![ui-gears](/projects/apase/spe/images/gears-table.svg)
 
 ---
 
@@ -52,21 +54,21 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 
 ### Engin > Chaluts jumeaux (1/2)
 
-![ui-modal-gear](/projects/apase/spe/gear-parent.svg)
+![ui-modal-gear](/projects/apase/spe/images/gear-parent.svg)
 
 
 ---
 
 ### Engin > Chaluts jumeaux (2/2)
 
-![ui-modal-gear-2](/projects/apase/spe/gear-parent-tab2.svg)
+![ui-modal-gear-2](/projects/apase/spe/images/gear-parent-tab2.svg)
 
 ---
 
 
 ### Sous-engin > Chaluts jumeaux
 
-[<img src="/projects/apase/spe/gear-child.svg" width="40%">](/projects/apase/spe/gear-child.svg)
+[<img src="/projects/apase/spe/images/gear-child.svg" width="40%">](/projects/apase/spe/images/gear-child.svg)
 
 ---
 
@@ -85,7 +87,7 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 
 Pour les chaluts jumeaux :
 
-![ui-operation](/projects/apase/spe/operation.svg)
+![ui-operation](/projects/apase/spe/images/operation.svg)
 
 > Force du vent: [cf échelle beaufort](https://files.meteofrance.com/files/glossaire/FR/glossaire/designation/510_curieux_view.html)
  
@@ -94,12 +96,12 @@ Pour les chaluts jumeaux :
 
 Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
-![batch-tabs](/projects/apase/spe/batch-tabs.svg)
+![batch-tabs](/projects/apase/spe/images/batch-tabs.svg)
 
 ---
 ## Opération > Capture (2/3)
 
-![batch-tabs-discard](/projects/apase/spe/batch-tabs-discard.svg)
+![batch-tabs-discard](/projects/apase/spe/images/batch-tabs-discard.svg)
 
 ---
 ## Opération > Capture (3/3)
@@ -118,7 +120,7 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
 ## Lots espèces (1/2)
 
-![collect](/projects/apase/spe/batch-species.svg)
+![collect](/projects/apase/spe/images/batch-species.svg)
 
 ---
 ## Lots espèces (2/2) 
@@ -145,7 +147,7 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 
 ## Mesures individuelles (1/2)
 
-![batch-species](/projects/apase/spe/individual-measure.svg)
+![batch-species](/projects/apase/spe/images/individual-measure.svg)
 
 - Pourvoir saisir d'abord les espèces de la partie retenue, puis la partie rejettée
 - (priorité basse) Pourvoir ajouter un lot espèce depuis la saisie des mesures (nouveau bouton "+")
