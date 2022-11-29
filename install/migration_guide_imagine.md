@@ -106,4 +106,30 @@ select ID,
 from SIH2_ADAGIO_DBA.PHOTO P
 /
 
-``
+```
+
+- Vue SAMPLE: mettre `null as PROGRAM_FK` et supprimer les jointures vers PROGRAM
+
+- Vue ROUND_WEIGHT_CONVERSION: ajout de la colonne ORIGIN_ITEM_TYPE_FK (déjà existante) 
+```
+create or replace view ROUND_WEIGHT_CONVERSION as
+select ID,
+       COMMENTS,
+       CONVERSION_COEFFICIENT,
+       null as CREATION_DATE,
+       DESCRIPTION,
+       START_DATE,
+       END_DATE,
+       UPDATE_DATE,
+       DRESSING_FK,
+       PRESERVING_FK,
+       LOCATION_FK,
+       TAXON_GROUP_FK,
+       ORIGIN_ITEM_TYPE_FK,
+       1 as STATUS_FK
+from SIH2_ADAGIO_DBA.ROUND_WEIGHT_CONVERSION RWC
+/
+
+```
+
+- Ajout de la vue weight_length_conversion 
