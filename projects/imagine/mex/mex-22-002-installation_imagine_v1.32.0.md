@@ -1,26 +1,26 @@
 # Manuel d'installation du SIH-Imagine en v1.32.0
 
-## Étapes de migration, depuis la V1.31.1
+Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v1.32.0
 
-- [ ] Mise à jour des vues SUMARIS_MAP :
-  * [ ] Ajouter PMFM.PRECISION (existe dans la table Adagio sous-jacente)
-  * [ ] Ajouter PMFM.DETECTION_THRESHOLD (existe dans la table Adagio sous-jacente)
-  * [ ] Ajouter  `null as PHYSICAL_GEAR.PARENT_PHYSICAL_GEAR_FK` (colonne non existante dans Adagio, mais pas utilisée par Imagine)
-  * [ ] Ajouter la colonne PHYSICAL_GEAR.HASH => nouvelle table pour gérer ce hash, et ajout de la colonne dans la vue. Cf le schéma de validation
-- [ ] Nouvelle vue ORDER_TYPE :
-```
-create or replace view order_type as
-select id,
-     comments,
-     null as creation_date,
-     description,
-     null as label,
-     name,
-     object_type_fk,
-     status_fk,
-     update_date
-from SIH2_ADAGIO_DBA.order_type;
-```
+## Configuration du POD
+
+- [ ] Nouvelles options dans le fichier de configuration :
+  ```properties
+  sumaris.persistence.sample.hashOptimization=true
+  sumaris.persistence.bash.hashOptimization=true
+  sumaris.persistence.physicalGear.hashOptimization=true
+  sumaris.persistence.adagio.optimization=true
+  sumaris.persistence.adagio.schema=SIH2_ADAGIO_DBA
+  ```
+
+- [ ] (Optionnel) pour limiter la taille du pool de connection Oracle
+  ```properties
+  sumaris.persistence.sample.hashOptimization=true
+  sumaris.persistence.bash.hashOptimization=true
+  sumaris.persistence.physicalGear.hashOptimization=true
+  sumaris.persistence.adagio.optimization=true
+  sumaris.persistence.adagio.schema=SIH2_ADAGIO_DBA
+  ```
 
 - [ ] Correction dans SOFTWARE_PROPERTY :
   ```sql
@@ -28,21 +28,40 @@ from SIH2_ADAGIO_DBA.order_type;
   update SOFTWARE_PROPERTY set label='sumaris.extraction.enabled' where label='sumaris.extraction.enable';  # Ajout d'un 'd' à la fin
   ```
 
-- [ ] Fichier de configuration :
-  ```properties
-  sumaris.persistence.sample.hashOptimization=true
-  sumaris.persistence.bash.hashOptimization=true
-  sumaris.persistence.physicalGear.hashOptimization=true
-  ```
-
 - [ ] Ajout d'un ProgramProperty, sur le programme SIH-OBSBIO :
-  ```properties
-  sumaris.program.strategy.department.enable=true 
+  ```sql
+  insert into PROGRAM_PROPERTY (ID, LABEL, NAME, CREATION_DATE, UPDATE_DATE, PROGRAM_FK) values (PROGRAM_PROPERTY_SEQ.nextval, 'sumaris.program.strategy.department.enable', 'true', sysdate, systimestamp, 101);
   ```
 
-## Install v2.0
+## Schéma SIH2_ADAGIO_DBA
 
-### Schema SIH2_ADAGIO_DBA_SUMARIS_MAP
+- [ ] Ajout d'un index sur SAMPLE_MEASUREMENT (PMFM_FK, ALPHANUMERICAL_VALUE) :
+  ```sql
+  create index IX_SAMPLE_MEAS_ALPHA_NUM on SAMPLE_MEASUREMENT (PMFM_FK, ALPHANUMERICAL_VALUE) tablespace SIH2_ADAGIO_MES_INDEX; 
+  ```
+
+## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
+
+- [ ] Mises à jour diverses, sur des vues existantes :
+  * [ ] Ajouter PMFM.PRECISION (existe dans la table Adagio sous-jacente)
+  * [ ] Ajouter PMFM.DETECTION_THRESHOLD (existe dans la table Adagio sous-jacente)
+  * [ ] Ajouter  `null as PHYSICAL_GEAR.PARENT_PHYSICAL_GEAR_FK` (colonne non existante dans Adagio, mais pas utilisée par Imagine)
+  * [ ] Ajouter la colonne PHYSICAL_GEAR.HASH => nouvelle table pour gérer ce hash, et ajout de la colonne dans la vue. Cf le schéma de validation
+- [ ] Nouvelle vue ORDER_TYPE :
+  ```sql
+  create or replace view order_type as
+  select id,
+       comments,
+       null as creation_date,
+       description,
+       null as label,
+       name,
+       object_type_fk,
+       status_fk,
+       update_date
+  from SIH2_ADAGIO_DBA.order_type;
+  /
+  ```
 
 - [ ] Mise à jour de la table USER_EVENT
   ```sql
@@ -86,7 +105,11 @@ from SIH2_ADAGIO_DBA.order_type;
          0 as QUALITY_FLAG_FK
   from SIH2_ADAGIO_DBA.VESSEL_FEATURES VF
            inner join SIH2_ADAGIO_DBA.M_VESSEL V on VF.VESSEL_FK = V.CODE;
-  
+  /
+  ```
+
+- [ ] Mise à jour de la vue IMAGE_ATTACHMENT
+  ```sql
   create or replace  view IMAGE_ATTACHMENT as
   select ID,
          COMMENTS,
@@ -105,11 +128,11 @@ from SIH2_ADAGIO_DBA.order_type;
          OBJECT_ID,
          OBJECT_TYPE_FK,
          null as RECORDER_PERSON_FK
-  from SIH2_ADAGIO_DBA.PHOTO P
+  from SIH2_ADAGIO_DBA.PHOTO P;
   /  
   ```
 
-- [ ] Vue ROUND_WEIGHT_CONVERSION: ajout de la colonne ORIGIN_ITEM_TYPE_FK (déjà existante)
+- [ ] Mise à jour de la vue ROUND_WEIGHT_CONVERSION: ajout de la colonne ORIGIN_ITEM_TYPE_FK (déjà existante dans Adagio)
   <details>
     <summary>SQL</summary>
   
@@ -129,16 +152,12 @@ from SIH2_ADAGIO_DBA.order_type;
            TAXON_GROUP_FK,
            ORIGIN_ITEM_TYPE_FK,
            1 as STATUS_FK
-    from SIH2_ADAGIO_DBA.ROUND_WEIGHT_CONVERSION RWC
+    from SIH2_ADAGIO_DBA.ROUND_WEIGHT_CONVERSION RWC;
     /
     ```  
   </details>
 
-
 - [ ] Ajout de la vue `WEIGHT_LENGTH_CONVERSION` (lecture seule)
-  <details>
-    <summary>SQL</summary>
-  
   ```sql
   create or replace view WEIGHT_LENGTH_CONVERSION as
   select WLC.ID as ID,
@@ -159,16 +178,12 @@ from SIH2_ADAGIO_DBA.order_type;
          null as CREATION_DATE,
          null as ORIGIN_ITEM_TYPE_FK
   from SIH2_ADAGIO_DBA.weight_length_conversion WLC
-    inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on MP.CODE=WLC.LENGTH_PARAMETER_FK
+    inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on MP.CODE=WLC.LENGTH_PARAMETER_FK;
   /
   ```
-  </details>
 
 - [ ] Correction du trigger sur la vue SAMPLE :
-  <details>
-  <summary>SQL</summary>
-  
-  ```sql
+  ```sql oracle
   create or replace trigger TR_SAMPLE
       instead of insert or update or delete
       on SAMPLE
@@ -209,5 +224,3 @@ from SIH2_ADAGIO_DBA.order_type;
   end;
   /
   ```
-  </details>
-
