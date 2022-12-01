@@ -15,16 +15,16 @@ Et le cas échéant :
 
 Chargement d'un LANDING :
 
-- [ ] Calcul de l'effort réalisé
-- [ ] Récupération du groupe opération indéfinie, d'un LANDING
+- [x] Calcul de l'effort réalisé
+- [x] Récupération du groupe opération indéfinie, d'un LANDING
 - [ ] Récupération du navire d'un LANDING
 
 Sauvegarde d'un LANDING :
 
-- [ ] Vérification de l'unicité d'un code de prélèvement
-- [ ] Trigger de mise à jour de SAMPLE
-- [ ] Lecture du landing, inutile après une sauvegarde
-- [ ] Récupération des groupes d'opération d'une marée
+- [x] Vérification de l'unicité d'un code de prélèvement
+- [x] Trigger de mise à jour de SAMPLE
+- [x] Lecture du landing, inutile après une sauvegarde
+- [x] Récupération des groupes d'opération d'une marée
 - [ ] Comptage d'un nombre de navires
 
 ## Performances au chargement
