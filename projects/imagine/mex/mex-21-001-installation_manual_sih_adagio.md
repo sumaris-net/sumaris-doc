@@ -1,5 +1,10 @@
-# Première mise en exploitation d'une application utilisant le socle Sumaris
+# Première mise en exploitation d'Imagine v1
+
+> Auteurs: Pierre-Yves Clément (Altran), Nolwenn RANNOU
+> Date: 2021
+
 ## Mise à jour du schéma SIH2_ADAGIO_DBA
+
 ```bash
 git clone --branch adagio-sumaris https://gitlab.ifremer.fr/sih/adagio/adagio.git
 mvn compile liquibase:update -pl core -Psql -Denv=oracle -Doracle.net.tns_admin=\\brest\tnsnames

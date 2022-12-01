@@ -1,8 +1,11 @@
-# Manuel d'installation du SIH-Imagine en v1.32.0
+# Manuel de mise en exploitation d'Imagine v1.32.0
 
 Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v1.32.0
 
-## Configuration du POD
+> Auteur: Benoit LAVENIER
+> Date : Novembre 2022
+
+## Configuration du Pod
 
 - [ ] Nouvelles options dans le fichier de configuration :
   ```properties
