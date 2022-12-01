@@ -2,6 +2,8 @@
 
 Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v1.32.0
 
+Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/370#note_107541
+
 > Auteur: Benoit LAVENIER
 > Date : Novembre 2022
 
