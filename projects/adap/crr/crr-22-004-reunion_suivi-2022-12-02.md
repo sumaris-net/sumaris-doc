@@ -68,13 +68,14 @@
 ---
 ## Facturation
 
-- Extraction : le suivi de la fin des travaux peut être effectué avec Ifremer (SIH et projet APASE)
-- PV de recette à prévoir, fin février, avec 
-  - les évolutions effectuées : 
+- PV de recette à prévoir, fin février 
+  - Indiquer les évolutions effectuées : 
     - Rapport au niveau de la sortie, 
     - Gestion des photos pour le mode bureau
     - Suivi des traitements du serveur (Extraction, import des navires)
     - Changement du plugin d'acquisition GPS
+  - Indiquer les réserves 
+    - Extractions - Le suivi de la fin des travaux pourra être effectué par Ifremer, projets SIH et APASE
 
 ---
 ## Actions
