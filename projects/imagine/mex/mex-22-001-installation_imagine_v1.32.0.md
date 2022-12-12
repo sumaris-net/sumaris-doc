@@ -5,7 +5,8 @@ Objectif : le document liste les étapes de migration, pour réaliser le passage
 Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/370#note_107541
 
 > Auteur: Benoit LAVENIER
-> Date : Novembre 2022
+> Date création : 28/11/2022
+> Mise à jour : 12/12/22
 
 ## Configuration du Pod
 
@@ -229,3 +230,39 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
   end;
   /
   ```
+
+
+- [ ] Mise à jour de la vue EXPECTED_SALE
+  ```sql
+  create or replace view EXPECTED_SALE as
+  select ES.ID,
+    null as SALE_DATE,
+    ES.SALE_LOCATION_FK,
+    ES.SALE_TYPE_FK,
+    ES.OBSERVED_LANDING_FK as LANDING_FK,
+    ES.FISHING_TRIP_FK as TRIP_FK
+  from SIH2_ADAGIO_DBA.EXPECTED_SALE ES
+  /
+
+  -- /!\ Le trigger est inchangé, mais doit etre recompiler
+  create or replace trigger TR_EXPECTED_SALE
+    instead of insert or update or delete
+    on EXPECTED_SALE
+    for each row
+  begin
+    case
+      WHEN INSERTING THEN
+        insert into SIH2_ADAGIO_DBA.EXPECTED_SALE(ID, SALE_LOCATION_FK, SALE_TYPE_FK, OBSERVED_LANDING_FK, FISHING_TRIP_FK)
+        values (:new.ID, :new.SALE_LOCATION_FK, :new.SALE_TYPE_FK, :new.LANDING_FK, :new.TRIP_FK);
+      WHEN UPDATING THEN
+        update SIH2_ADAGIO_DBA.EXPECTED_SALE ES set ES.SALE_LOCATION_FK=:new.SALE_LOCATION_FK, ES.SALE_TYPE_FK=:new.SALE_TYPE_FK,
+        ES.OBSERVED_LANDING_FK=:new.LANDING_FK, ES.FISHING_TRIP_FK=:new.TRIP_FK
+        where ES.ID = :new.ID;
+      WHEN DELETING THEN
+        delete from SIH2_ADAGIO_DBA.EXPECTED_SALE ES where ES.ID=:old.ID;
+    end case;
+  end;
+  /
+  ```
+
+- [ ] Recompiler les éventuels triggers du schéma SIH2_ADAGIO_DBA_SUMARIS_MAP en erreur.
