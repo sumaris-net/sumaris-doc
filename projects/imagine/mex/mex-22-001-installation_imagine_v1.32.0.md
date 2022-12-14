@@ -22,7 +22,7 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
 - [ ] (Optionnel) pour limiter la taille du pool de connection Oracle
   ```properties
   sumaris.persistence.sample.hashOptimization=true
-  sumaris.persistence.bash.hashOptimization=true
+  sumaris.persistence.batch.hashOptimization=true
   sumaris.persistence.physicalGear.hashOptimization=true
   sumaris.persistence.adagio.optimization=true
   sumaris.persistence.adagio.schema=SIH2_ADAGIO_DBA
