@@ -265,4 +265,20 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
   /
   ```
 
+- [ ] Mise à jour de la ve ORDER_TYPE
+  ```sql
+  create or replace view ORDER_TYPE as
+    select id,
+    comments,
+    null as creation_date,
+    description,
+    null as label,
+    name,
+    object_type_fk,
+    cast(STATUS_FK as number(10)) as STATUS_FK,
+    update_date
+  from SIH2_ADAGIO_DBA.order_type
+  /
+  ```
+
 - [ ] Recompiler les éventuels triggers du schéma SIH2_ADAGIO_DBA_SUMARIS_MAP en erreur.
