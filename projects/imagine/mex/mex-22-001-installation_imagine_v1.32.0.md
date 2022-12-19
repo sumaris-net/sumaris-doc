@@ -12,20 +12,21 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
 
 - [ ] Nouvelles options dans le fichier de configuration :
   ```properties
+  # Optimisations
   sumaris.persistence.sample.hashOptimization=true
   sumaris.persistence.bash.hashOptimization=true
   sumaris.persistence.physicalGear.hashOptimization=true
   sumaris.persistence.adagio.optimization=true
   sumaris.persistence.adagio.schema=SIH2_ADAGIO_DBA
+  
+  # Enumerations
+  sumaris.persistence.OrderType.NORTH_TO_SOUTH_LOCATION_RANK.id=1
+  sumaris.persistence.Unit.NONE.id=1
   ```
 
 - [ ] (Optionnel) pour limiter la taille du pool de connection Oracle
   ```properties
-  sumaris.persistence.sample.hashOptimization=true
-  sumaris.persistence.batch.hashOptimization=true
-  sumaris.persistence.physicalGear.hashOptimization=true
-  sumaris.persistence.adagio.optimization=true
-  sumaris.persistence.adagio.schema=SIH2_ADAGIO_DBA
+  spring.datasource.hikari.maximum-pool-size=10
   ```
 
 - [ ] Correction dans SOFTWARE_PROPERTY :
