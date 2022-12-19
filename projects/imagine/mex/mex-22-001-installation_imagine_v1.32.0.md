@@ -64,7 +64,7 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
        null as label,
        name,
        object_type_fk,
-       status_fk,
+       cast(STATUS_FK as number(10)) as STATUS_FK,
        update_date
   from SIH2_ADAGIO_DBA.order_type;
   /
