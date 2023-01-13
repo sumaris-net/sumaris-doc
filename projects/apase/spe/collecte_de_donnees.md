@@ -168,8 +168,8 @@ Pour les chaluts jumeaux, un onglet par position de sous-engin:
 ---
 ## Actions
 
-- EIS: Livraison d'une nouvelle version (~ 1.30.0)
-- Quiterie: envoi d'une liste des espèces
+- [x] EIS: Livraison d'une nouvelle version (~ 1.33.3)
+- [x] Quiterie: envoi d'une liste des espèces
 
 ---
 ## Historique
