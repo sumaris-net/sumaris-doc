@@ -3,11 +3,14 @@
 > Auteurs: Benoit LAVENIER
 > Date: 2023
 
+## Mise à jour du configuration serveur
+
+- [ ] Désactiver l'option: `sumaris.persistence.vessel.registrationCode.searchAsPrefix` (mettre à `false` dans SOFTWARE_PROPERTIES)
+
 ## Mise à jour du program ADAP-MER
 
 - [ ] Physical gear: Modifier le nombre d'acquisition du PMFM SELECTIVITY_DEVICE à 1  
 - [ ] Opération: Ajouter le PSFM HAS_INDIVIDUAL_MEASURE
-
 
 ## Ajout des coefficients de conversion poids vif
 
