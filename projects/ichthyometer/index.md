@@ -7,7 +7,7 @@ Modèle de règle:
 
 - [Cas d'utilisation](projects/ichthyometer/spe/spe-23-001-use-case.md)
 
-- [Spécification techniques](projects/ichthyometer/spe/spe-23-002-technical.md)
+- [Spécifications techniques](projects/ichthyometer/spe/spe-23-002-technical.md)
 
 ## Équipe projet 
 
