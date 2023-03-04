@@ -6,6 +6,7 @@ Test de sélectivité des chaluts
 
  - Spécifications 
    * [Collecte de la données](./spe/collecte_de_donnees.md)
+   * [Extraction des données](./spe/extraction.md)
    * [Restitution des données](./spe/restitution.md)
 
  - Liens utiles :
