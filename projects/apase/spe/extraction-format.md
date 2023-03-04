@@ -1,7 +1,7 @@
-# APASE exchange format
+# Spéficiation du format d'extraction APASE
 
-APASE exchange format has been inspired from the [ICES RDB exchange format](https://www.ices.dk/data/Documents/RDB/RDB%20Exchange%20Format.pdf).
-EU and ICES have defined common tools, to compute fischeries statistics (.e.G R scripts - see COST project).
+APASE extraction format is based on the [ICES RDB data exchange format](https://www.ices.dk/data/Documents/RDB/RDB%20Exchange%20Format.pdf).
+EU/ICES have defined common format and processing tools, for fisheries statistics (.e.G R scripts - see COST project).
 
 
 ## Trip (TR)
