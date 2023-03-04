@@ -4,12 +4,12 @@ Test de sélectivité des chaluts
 
 ## Documentation
 
- - Spécifications 
-   * [Collecte de la données](./spe/collecte_de_donnees.md)
-   * [Extraction des données](./spe/extraction.md)
-   * [Restitution des données](./spe/restitution.md)
+- Spécifications 
+  * [Collecte de la données](./spe/collecte_de_donnees.md)
+  * [Extraction des données](./spe/extraction.md)
+  * [Restitution des données](./spe/restitution.md)
 
- - Liens utiles :
+- Liens utiles :
   * Anomalies et évolutions (GitLab) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
   * Forum : https://forum.sumaris.net
   * Documentation 
