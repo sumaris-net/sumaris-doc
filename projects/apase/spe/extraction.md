@@ -9,7 +9,8 @@
 ---
 ## Actions
 
-- EIS : Achever la spéficiation de la table "Fishing Gear" (FG) 
+- EIS : Achever les spécifications de la table "Fishing Gear" (FG) 
+- Ifremer (Sonia) : Valider les spécifications
 
 ---
 ## Historique des modifications
