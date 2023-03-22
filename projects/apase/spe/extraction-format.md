@@ -47,7 +47,7 @@ Fishing gear, used on trips
 
 | Field name                    | Type    | Req.    | Basic checks  | Comments                                                                                                                                         |
 |-------------------------------|---------|---------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Record type *                 | String  | M     	 |               | Fixed value ”FG                                                                                                                                  |
+| Record type *                 | String  | M     	 |               | Fixed value ”FG”                                                                                                                                 |
 | Sampling type * 	             | String  | M     	 | Code list     | “S” = sea sampling, “M” = market sampling of known fishing trips, “D” = market sampling of mixed trips, “V” = vendor.                            |
 | Landing country *             | String  | M     	 | Code list     | ISO 3166 – 1 alpha-3 codes: the country where the vessel is landing and selling the catch.                                                       |
 | Vessel flag country *         | String  | M       | Code list     | ISO 3166 – 1 alpha-3 codes: the flag country of the vessel. This can be different from the landing country (see description of Landing country). |
