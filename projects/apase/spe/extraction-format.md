@@ -161,11 +161,11 @@ The sorting strata defined by species, catch category, etc.
 
 Custom columns, only for APASE:
 
-| Field name        | Type    | Req. | Basic checks | Comments                                                                       |
-|-------------------|---------|------|--------------|--------------------------------------------------------------------------------|
-| Sub gear position | String  | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears. |
-| Sub gear number   | Integer | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                              |
-| Catch weight *    | Integer | M    |              | The total catch weight for “OTB“ gears, or sub catch weight for “OTT“.         |
+| Field name                      | Type    | Req. | Basic checks | Comments                                                                       |
+|---------------------------------|---------|------|--------------|--------------------------------------------------------------------------------|
+| Sub gear position               | String  | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears. |
+| Sub gear identifier             | Integer | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                              |
+| Catch weight *                  | Integer | M    |              | The total catch weight for “OTB“ gears, or sub catch weight for “OTT“.         |
 
 ## Haul length (HL)
 
