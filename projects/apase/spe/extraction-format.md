@@ -45,41 +45,42 @@ Custom columns, only for APASE:
 
 Fishing gear, used on trips
 
-| Field name                    | Type    | Req.    | Basic checks  | Comments                                                                                                                                         |
-|-------------------------------|---------|---------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Record type *                 | String  | M     	 |               | Fixed value ”FG”                                                                                                                                 |
-| Sampling type * 	             | String  | M     	 | Code list     | “S” = sea sampling, “M” = market sampling of known fishing trips, “D” = market sampling of mixed trips, “V” = vendor.                            |
-| Landing country *             | String  | M     	 | Code list     | ISO 3166 – 1 alpha-3 codes: the country where the vessel is landing and selling the catch.                                                       |
-| Vessel flag country *         | String  | M       | Code list     | ISO 3166 – 1 alpha-3 codes: the flag country of the vessel. This can be different from the landing country (see description of Landing country). |
-| Year *                        | Integer | M       | 1 900 − 3 000 |                                                                                                                                                  | 
-| Project *                     | String  | M       | Code list     | National project name. Code list is editable.                                                                                                    |
-| Trip code *                   | String  | M       | String 50     | National coding system.                                                                                                                          |
-| Gear identifier *             | Integer | M       | 1 − 999 999   | Gear identifier. Unique for the trip.                                                                                                            |
-| Gear type *                   | String  | M       | Code list     | “OTB”  or “OTT”                                                                                                                                  |
-| Sub gear identifier           | Integer | O       | 1 - 99        | Sub gear identifier. Unique for the trip.                                                                                                        |
-| Gear label                    | String  | M       |               | Free text. Not unique                                                                                                                            |
-| Buoy weight kg                | Integer |         |               |                                                                                                                                                  |
-| Door type                     | String  |         |               |                                                                                                                                                  |
-| Entremise length              | Double  |         |               |                                                                                                                                                  |
-| Groundrope type               | String  |         |               |                                                                                                                                                  |
-| Headline cumulative length    | Double  |         |               |                                                                                                                                                  |
-| Mesh gauge ass mm             | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge back mm            | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge belly mm           | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge ext mm             | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge gor mm             | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge lower wing mm      | Integer |         |               |                                                                                                                                                  |
-| Mesh gauge upper wing mm      | Integer |         |               |                                                                                                                                                  |
-| Nb buoy                       | double  |         |               |                                                                                                                                                  |
-| Rig type                      | String  |         |               |                                                                                                                                                  |
-| Select device apase           | String  |         |               |                                                                                                                                                  |
-| Stone grid                    | String  |         |               |                                                                                                                                                  |
-| Sweep length                  | double  |         |               |                                                                                                                                                  |
-| Tickler chain                 | String  |         |               |                                                                                                                                                  |
-| Vertical opening estimated    | double  |         |               |                                                                                                                                                  |
-| Vertical opening instrument   | double  |         |               |                                                                                                                                                  |
+| Field name                  | Type    | Req.    | Basic checks  | Comments                                                                                                                                         |
+|-----------------------------|---------|---------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Record type *               | String  | M     	 |               | Fixed value ”FG”                                                                                                                                 |
+| Sampling type * 	           | String  | M     	 | Code list     | “S” = sea sampling, “M” = market sampling of known fishing trips, “D” = market sampling of mixed trips, “V” = vendor.                            |
+| Landing country *           | String  | M     	 | Code list     | ISO 3166 – 1 alpha-3 codes: the country where the vessel is landing and selling the catch.                                                       |
+| Vessel flag country *       | String  | M       | Code list     | ISO 3166 – 1 alpha-3 codes: the flag country of the vessel. This can be different from the landing country (see description of Landing country). |
+| Year *                      | Integer | M       | 1 900 − 3 000 |                                                                                                                                                  | 
+| Project *                   | String  | M       | Code list     | National project name. Code list is editable.                                                                                                    |
+| Trip code *                 | String  | M       | String 50     | National coding system.                                                                                                                          |
+| Gear identifier *           | Integer | M       | 1 − 999 999   | Gear identifier. Unique for the trip.                                                                                                            |
+| Gear type *                 | String  | M       | Code list     | “OTB”  or “OTT”                                                                                                                                  |
+| Sub gear identifier         | Integer | O       | 1 - 99        | Sub gear identifier. Unique for the trip.                                                                                                        |
+| Gear label                  | String  | M       |               | Free text. Not unique                                                                                                                            |
+| Buoy weight kg              | Integer |         |               |                                                                                                                                                  |
+| Door type                   | String  |         |               |                                                                                                                                                  |
+| Entremise length            | Double  |         |               |                                                                                                                                                  |
+| Groundrope type             | String  |         |               |                                                                                                                                                  |
+| Headline cumulative length  | Double  |         |               |                                                                                                                                                  |
+| Mesh gauge ass mm           | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge back mm          | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge belly mm         | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge ext mm           | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge gor mm           | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge lower wing mm    | Integer |         |               |                                                                                                                                                  |
+| Mesh gauge upper wing mm    | Integer |         |               |                                                                                                                                                  |
+| Nb buoy                     | double  |         |               |                                                                                                                                                  |
+| Rig type                    | String  |         |               |                                                                                                                                                  |
+| Select device apase         | String  |         |               |                                                                                                                                                  |
+| Selective device            | String  |         |               |                                                                                                                                                  |
+| Stone grid                  | String  |         |               |                                                                                                                                                  |
+| Sweep length                | double  |         |               |                                                                                                                                                  |
+| Tickler chain               | String  |         |               |                                                                                                                                                  |
+| Vertical opening estimated  | double  |         |               |                                                                                                                                                  |
+| Vertical opening instrument | double  |         |               |                                                                                                                                                  |
 
->  TODO: Fill all columns 
+> TODO: Fill all columns comments
 
 ## Fishing station (HH)
 
@@ -133,6 +134,35 @@ Custom columns, only for APASE:
 | Rectilinear operation   | String  | O    | Y or N       |                                                                   |
 | Seabed features         | String  | O    | Code list    |                                                                   |
 
+## Catch (CT)
+
+The catch details, by sub gear
+
+Custom columns, only for APASE:
+
+| Field name                       | Type    | Req. | Basic checks      | Comments                                                                                                              	                                                                                                                                                    |
+|----------------------------------|---------|------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Record type                      | String  | M    |                   | Fixed value ”SL”.                                                                                                        	                                                                                                                                                 |
+| Sampling type                    | String  | M    | Code list         | “S” = sea sampling  	                                                                                                                                                                                                                                                      |
+| Landing country                  | String  | M    | Code list         | ISO 3166 – 1 alpha-3 codes: the country where the vessel is landing and selling the catch.                                                                                                                                                                                 |
+| Vessel flag country              | String  | M    | Code list         | ISO 3166 – 1 alpha-3 codes: the flag country of the vessel. This can be different from the landing country (see description of Landing country).                                                                                                                           |
+| Year                             | Integer | M    | 1 900 − 3 000     |                                                                                                                                                                                                                                                                            | 
+| Project                          | String  | M    | Code list         | National project name. Code list is editable.                                                                                                                                                                                                                              |
+| Trip code                        | String  | M    | String 50         | National coding system.                                                                                                                                                                                                                                                    |
+| Station number                   | Integer | M    | 1-99999           | Sequential numbering of hauls. Starting by 1 for each new trip. If the “Aggregation level” is T then this “Station number” should be 999.                                                                                                                                  |
+| Species                          | Integer | M    | Code list         | The AphiaID, which is a 6 digit code, is used for the species in the species field. The AphiaIDs are maintained by WoRMS. Only species AphiaIDs with status “Accepted” or “Alternate Representation” is allowed.                                                           |
+| Catch category                   | String  | M    | Code list         | The fate of the catch: “DIS” = discard, “LAN” = landing.                                                                                                                                                                                                                   |
+| Landing category *               | String  | M    | Code list         | The intended usage at the time of landing. This should match the same field in CL record (whether or not the fish was actually used for this or another purpose): “IND” = industry or “HUC” = human consumption.                                                           |
+| Commercial size category scale * | String  | O    | Code list         | Commercial sorting scale code (optional for “Unsorted”)                                                                                                                                                                                                                    |
+| Commercial size category *       | String  | O    | Code list         | Commercial sorting category in the given scale (optional for “Unsorted”). (EC, 2006) and later amendments when scale is “EU”.                                                                                                                                              |
+| Subsampling category *           | String  | O    | Code list         | “VRAC“ = Vrac or “H-VRAC“ = Hors Vrac. Mandatory for catch category = “DIS“                                                                                                                                                                                                |
+
+| Field name          | Type    | Req. | Basic checks | Comments                                                                       |
+|---------------------|---------|------|--------------|--------------------------------------------------------------------------------|
+| Sub gear position   | String  | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears. |
+| Sub gear identifier | Integer | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                              |
+| Catch weight *      | Integer | M    |              | The total catch weight for “OTB“ gears, or sub catch weight for “OTT“.         |
+| Discard weight *    | Integer | M    |              | The total discard weight for “OTB“ gears, or sub discard weight for “OTT“.     |
 
 ## Species list (SL)
 
@@ -165,7 +195,6 @@ Custom columns, only for APASE:
 |---------------------------------|---------|------|--------------|--------------------------------------------------------------------------------|
 | Sub gear position               | String  | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears. |
 | Sub gear identifier             | Integer | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                              |
-| Catch weight *                  | Integer | M    |              | The total catch weight for “OTB“ gears, or sub catch weight for “OTT“.         |
 
 ## Haul length (HL)
 
@@ -189,13 +218,14 @@ One record represents one length class.
 | Commercial size category scale * | String  | O    | Code list     | Commercial sorting scale code (optional for “Unsorted”)                                                                                                                                                          |
 | Commercial size category *       | String  | O    | Code list     | Commercial sorting category in the given scale (optional for “Unsorted”). (EC, 2006) and later amendments when scale is “EU”.                                                                                    |
 | Subsampling category *           | String  | O    | Code list     | “VRAC“ = Vrac or “H-VRAC“ = Hors Vrac. Mandatory for catch category = “DIS“                                                                                                                                      |
-| Sex *                            | String  | O    | Code list     | M = Male, F = Female, T = Transitional 2 (optional for “Unsexed”)                                                                                                                                                |
-| Individual sex                   | String  | O    | Code list     | If M = Male, = , F = Female, T = Transitional = (optional for “Unsexed”). Only different from “Sex” if individual length distribution is obtained on HL-level (and not on SL-level).                             |
+| Sex                              | String  | O    | Code list     | If M = Male, = , F = Female, T = Transitional = (optional for “Unsexed”). Only different from “Sex” if individual length distribution is obtained on HL-level (and not on SL-level).                             |
 | Length class *                   | Integer | M    | 1−3 999       | In mm. Identifier: lower bound of size class, e.g. 650 for 65 – 66 cm.                                                                                                                                           |
 | Number at length *               | Integer | M    | 1−999         | (not raised to whole catch) Length classes with zero should be excluded from the record.                                                                                                                         |
 
 Custom columns, only for APASE:
 
-| Field name    	       | Type   | Req. | Basic checks | Comments                                                                                                              	 |
-|-----------------------|--------|------|--------------|-------------------------------------------------------------------------------------------------------------------------|
-| Measure type          | String | O    | Code list    | Measure type. “LT“ = length total, “LC“ = length carapace, etc.                                                         |
+| Field name    	     | Type     | Req. | Basic checks | Comments                                                                        |
+|-----------------------|----------|------|--------------|---------------------------------------------------------------------------------|
+| Sub gear position     | String   | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears.  |
+| Sub gear identifier   | Integer  | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                               |
+| Measure type          | String   | O    | Code list    | Measure type. “LT“ = length total, “LC“ = length carapace, etc.                 |
