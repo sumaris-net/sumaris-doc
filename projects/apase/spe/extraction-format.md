@@ -224,8 +224,9 @@ One record represents one length class.
 
 Custom columns, only for APASE:
 
-| Field name    	     | Type     | Req. | Basic checks | Comments                                                                        |
-|-----------------------|----------|------|--------------|---------------------------------------------------------------------------------|
-| Sub gear position     | String   | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears.  |
-| Sub gear identifier   | Integer  | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                               |
-| Measure type          | String   | O    | Code list    | Measure type. “LT“ = length total, “LC“ = length carapace, etc.                 |
+| Field name    	           | Type     | Req. | Basic checks | Comments                                                                       |
+|---------------------------|----------|------|--------------|--------------------------------------------------------------------------------|
+| Sub gear position         | String   | O    | Code list    | “B” = Bâbord, “T” = Tribord. Mandatory for “OTT“ gears. Empty for “OTB“ gears. |
+| Sub gear identifier       | Integer  | O    | 1 - 99       | Mandatory for “OTT“ gears. Empty for “OTB“ gears.                              |
+| Measure type              | String   | O    | Code list    | Measure type. “LT“ = length total, “LC“ = length carapace, etc.                |
+| Elevate number at length  | Integer  | M    | 1−999        | Elevated number at length                                                      |
