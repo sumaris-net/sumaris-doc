@@ -62,9 +62,13 @@ package "net.sumaris.core" {
 	    }
 
 	    package service {
+	        class DepartmentService {
+	        }
 	        DepartmentService <<Service>>
 	        DepartmentService -down-> DepartmentRepository : call
 
+	        class LocationService {
+	        }
 	        LocationService <<Service>>
 	        LocationService -down-> LocationRepository : call
 	    }

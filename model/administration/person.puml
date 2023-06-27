@@ -1,0 +1,38 @@
+@startuml
+hide empty members
+
+
+class Person {
+ +id
+ +firstName
+ +lastName
+ +email
+ +login
+ +pubkey
+}
+
+class Department{
+ +id
+ +label
+ +name
+}
+
+Person -right-> "1" Department: "has a department"
+
+package "referential" #DDDDDD {
+    class Status
+    class UserProfile
+
+    enum UserProfileEnum {
+        +ADMIN: 1
+        +USER: 2
+        +SUPERVISOR: 3
+        +GUEST: 4
+    }
+
+    Person --> "1" Status
+    Person "*" --> "1..*" UserProfile
+    UserProfileEnum .left.> UserProfile: "is an\n identifier of"
+}
+
+@enduml

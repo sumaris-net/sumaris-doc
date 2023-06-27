@@ -1,0 +1,31 @@
+@startuml
+
+State Saisie
+State Terminé
+State Validé
+State Qualifié
+
+Saisie : Sans de date de contrôle
+Saisie : Sans de date de validation
+Saisie : Sans de date de qualification
+
+Terminé : Avec de date de contrôle
+Terminé : Sans de date de validation
+Terminé : Sans de date de qualification
+
+Validé : Avec de date de contrôle
+Validé : Avec de date de validation
+Validé : Sans de date de qualification
+
+Qualifié : Avec de date de contrôle
+Qualifié : Avec de date de validation
+Qualifié : Avec de date de qualification
+
+Saisie --> Terminé
+Terminé --> Validé
+Validé --> Qualifié
+Qualifié --> Validé
+Validé --> Terminé
+Terminé --> Saisie
+
+@enduml
