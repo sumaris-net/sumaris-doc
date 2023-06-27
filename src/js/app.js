@@ -158,6 +158,9 @@
         RevealChalkboard,
         RevealCustomControls
       ],
+      markdown: {
+        smartypants: true
+      }
     });
 
     Reveal.on( 'ready', callback);
