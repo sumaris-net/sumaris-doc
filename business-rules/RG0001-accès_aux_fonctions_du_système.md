@@ -87,12 +87,12 @@ Qualifieur *(QUALIFIER)* :
 
 ## Notes de bas de page
 
-[^0] : Dans tous les cas.
+[^0]: Dans tous les cas.
 
-[^1] : Si est explicitement défini comme observateur sur les données et que l'option pour autoriser l’observateur à modifier la donnée est activé.
+[^1]: Si est explicitement défini comme observateur sur les données et que l'option pour autoriser l’observateur à modifier la donnée est activé.
 
-[^2] : Si est saisisseur de la donnée.
+[^2]: Si est saisisseur de la donnée.
 
-[^3] : Si membre du département saisisseur.
+[^3]: Si membre du département saisisseur.
 
-[^4] : Si membre des département qui peuvent tout voir.
+[^4]: Si membre des département qui peuvent tout voir.
