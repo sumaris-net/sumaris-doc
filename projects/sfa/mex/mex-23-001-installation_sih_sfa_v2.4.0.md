@@ -1,10 +1,10 @@
-# Manuel de mise en exploitation SUMARIS v2.4.0
+# Manuel de mise en exploitation SUMARiS v2.4.0
 
 Objectif : le document liste les étapes de migration, pour réaliser le passage en v2.4.0
 
 > Auteur: Benoit LAVENIER, Ludovic PECQUOT
 > Date création : 27/06/2023
-> Mise à jour : 27/06/2023
+> Mise à jour : 30/06/2023
 
 ## Configuration du Pod
 
@@ -12,8 +12,8 @@ Objectif : le document liste les étapes de migration, pour réaliser le passage
   ```properties
   # Activer les extractions
   sumaris.extraction.enabled=true
-  sumaris.extraction.map.enable=true
   sumaris.extraction.product.enable=true
+  #sumaris.extraction.map.enable=false
   sumaris.extraction.map.center.latLng=-4.621457, 55.456329'
   sumaris.extraction.map.center.zoom=6
   sumaris.extraction.accessNotSelfExtraction.role=ADMIN
@@ -21,8 +21,6 @@ Objectif : le document liste les étapes de migration, pour réaliser le passage
   # Enumerations
   sumaris.enumeration.Pmfm.SEX.id=171
   sumaris.enumeration.Pmfm.LENGTH_CARAPACE_MM.id=157
-  
-  sumaris.enumeration.Unit.NONE.id=10
   sumaris.enumeration.Unit.MM.id=21
   sumaris.enumeration.Unit.CM.id=17
   sumaris.enumeration.Unit.KG.id=14
@@ -76,7 +74,7 @@ Objectif : le document liste les étapes de migration, pour réaliser le passage
   from SIH2_ADAGIO_DBA.DENORMALIZED_BATCH_SORT_VAL SV
            inner join SIH2_ADAGIO_DBA.PARAMETER P on P.CODE = SV.PARAMETER_FK;
   
-  create or replace trigger SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_DDENORMALIZED_BATCH_SORT_VAL
+  create or replace trigger SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_DENORMALIZED_BATCH_SORT_VAL
       instead of insert or update
       on SIH2_ADAGIO_DBA_SUMARIS_MAP.DENORMALIZED_BATCH_SORT_VAL
       for each row
@@ -100,7 +98,7 @@ Objectif : le document liste les étapes de migration, pour réaliser le passage
 
 - [ ] Correction du paramètre CARAPACE_LENGTH
   ```sql oracle
-  update PARAMETER set IS_ALPHANUMERIC=0, IS_BOOLEAN=0, IS_QUALITATIVE=0, IS_DATE=0 WHERE LABEL='LENGTH_CARAPACE';
+  update PARAMETER set IS_ALPHANUMERIC=0, IS_BOOLEAN=0, IS_QUALITATIVE=0, IS_DATE=0, IS_CALCULATED=1 WHERE LABEL='LENGTH_CARAPACE';
   commit;
   ```
   
