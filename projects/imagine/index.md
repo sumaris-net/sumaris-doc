@@ -7,7 +7,7 @@ Outil de planification, de collecte et d'extraction des paramètres biologiques
 ## Documentation
 
 - Manuels
-  * [Manuel de mise en exploitation](./mex) (MEX)
+  * [Manuels de mise en exploitation](./mex) (MEX)
   * [Notes techniques](./not)
 
 - Liens utiles :
