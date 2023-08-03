@@ -6,7 +6,7 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
 
 > Auteur: Benoit LAVENIER
 > Date création : 04/07/2023
-> Mise à jour : 07/07/2023
+> Mise à jour : 03/08/2023
 
 ## Configuration du Pod
 
@@ -17,7 +17,7 @@ Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/suma
 
 - [ ] Ajout d'une option pour activer l'accès direct aux échantillonnages :
   ```sql
-  insert into SOFTWARE_PROPERTY (ID, LABEL, NAME, CREATION_DATE, UPDATE_DATE, SOFTWARE_FK) values (SOFTWARE_PROPERTY_SEQ.nextval, 'sumaris.observedLocation.landings.tab.enable', 'true', sysdate, systimestamp);  
+  insert into SOFTWARE_PROPERTY (ID, LABEL, NAME, CREATION_DATE, UPDATE_DATE, SOFTWARE_FK, STATUS_FK) values (SOFTWARE_PROPERTY_SEQ.nextval, 'sumaris.observedLocation.landings.tab.enable', 'true', sysdate, systimestamp, 21, 1);  
   ```
 
 ## Schéma SIH2_ADAGIO_DBA
