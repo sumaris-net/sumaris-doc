@@ -17,7 +17,7 @@
 
 ## Intents Android pour passer le protocole (1/2) 
 
-- URI (ex: https://gwaleen.aptatio.com/<command>?<queryParams>)
+- URI (ex: https://gwaleen.aptatio.com/&lt;command>?&lt;queryParams>)
 
 > Exemple de commande :
 > - `/configure?`

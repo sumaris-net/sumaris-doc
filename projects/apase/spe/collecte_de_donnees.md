@@ -68,7 +68,7 @@ Pour les chaluts jumeaux (OTT), l'utilisateur saisit :
 
 ### Sous-engin > Chaluts jumeaux
 
-[<img src="/projects/apase/spe/images/gear-child.svg" width="40%">](/projects/apase/spe/images/gear-child.svg)
+![ui-gear-child](/projects/apase/spe/images/gear-child.svg =x40%)
 
 ---
 

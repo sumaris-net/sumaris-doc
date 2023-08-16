@@ -71,8 +71,8 @@ FROM
         LEFT OUTER JOIN APPLIED_STRATEGY APS ON APS.STRATEGY_FK = ST.STRATEGY_ID
         LEFT OUTER JOIN APPLIED_PERIOD APP ON APP.APPLIED_STRATEGY_FK = APS.ID
         LEFT OUTER JOIN LANDING L ON L.PROGRAM_FK = ST.PROGRAM_ID
-        AND L.LANDING_DATE_TIME >= APP.START_DATE
-        AND L.LANDING_DATE_TIME < APP.END_DATE + INTERVAL '1' DAY
+        AND L.LANDING_DATE_TIME &gt;= APP.START_DATE
+        AND L.LANDING_DATE_TIME &lt; APP.END_DATE + INTERVAL '1' DAY
         AND EXISTS (
                                              SELECT 1 FROM LANDING_MEASUREMENT LM
                                              WHERE LM.LANDING_FK = L.ID
@@ -174,7 +174,7 @@ from (select distinct vesselfeat0_.id                       as id1_126_0_,
         and nvl(vesselfeat0_.end_date, date'2100-01-01') >= ?
         and nvl(vesselregi2_.end_date, date'2100-01-01') >= ?
       order by vesselfeat0_.start_date desc)
-where rownum <= ?;
+where rownum &lt;= ?;
 ```
 </details>
 
