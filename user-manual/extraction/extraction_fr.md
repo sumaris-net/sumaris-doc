@@ -1,27 +1,30 @@
 # Extractions
 
-## Module de téléchargement des marées
+## Module de téléchargement des données
 
-Le module d'extraction n'est accessible que pour le profil d'utilisateur "Superviseur"
+Le module d'extraction n'est accessible que pour :
+- les utilisateur ayant le profil d'utilisateur "Superviseur" (ou profil supérieur); 
+- Les responsables de programme.
 
-La partie "Extraction" contient toutes les données collectées dans le cadre du projet SUMARiS.
-Deux types d'informations peuvent être extraites :
+La partie "Extraction" permet d'accéder à toutes les données archivées dans la base de données.
+Deux types d'extraction existe :
 
-- Les données brutes collectées (quatre formats sont disponibles) :
-    - Les données nationales des états membres du consortium SUMARiS, au format ICES c1.4, appelé "**Données brutes (ICES v1.4)**"
-    - Les mêmes données au format FREE v1, appelé "**Données brutes (FREE v1)**",
-    - Les mêmes données au format RDB v1.3, appelé "**Données brutes (RDB v1.3)**",
-    - Les données d'observations issues des campagnes SUMARiS, exportées au format d'échange ICES v1.4, appelé "**Données brutes (SUMARiS v1.0)**",
-      avec les données des tests de survie dans le format personnalisé SUMARiS v1.0.
-- Produits figés :
-    - Produits issus d'un appel à données national, au format ICES v1.4, appelé "**Appel à données (ICES v1.4) / Données nationales des appels à données **"
-    - Produits issus des données au format RDB v1.3, appelé "**Appel à données (RDB v1.3)**"
-    - Produits issus des données collectées par SUMARiS, appelé "**SUMARIS Collected Data**"
-    - Produits issus d'une nouvelle agrégation.
+- L'extraction des données brutes collectées, disponible dans plusieurs formats :
+  - **Données brutes (RDB v1.3)** : format "Regional Data Base" du CIEM (ICES);
+  - **Données brutes (COST v1.4)** : format utilisé par l'Ifremer et ses partenaires, pour l'échange de données;
+  - **Données brutes (FREE v1)** : format utilisé par l'Ifremer et ses partenaires, pour l'échange de données;
+  - **Données brutes (FREE2)** : format utilisé par l'Ifremer et ses partenaires, pour l'échange de données;
+  - **Données brutes > Générique** : dérivé du format RDB, mais avec de nouvelles colonnes pour chaque champ collecté;
+    > Ce format permet d'extraire **tout ce qui a été saisie** dans l'outil SUMARiS, sur un programme de collecte;
+    > Le format final dépend donc du programme et de son protocole.
+  - "**Données brutes (SUMARiS v1.0)** : format spécifique aux données de tests de survie, telles que collectées dans les campagnes SUMARiS.
+- L'extraction des produits :
+  - Données issues d'extraction précédentes, dans un des formats précédents, figées à la date de l'extraction;
+  - Produits d'agrégation adaptés essentiellement afin d'être affiché dans la fonctionnalité "Cartes".
     
-![](./aggregation1_tab_fr.png)
+![](./aggregation1_tab_fr.png =x40%)
 
-Ce module permet, au format standard d'échange ICES, d'extraire les données du type "Débarquement" (CL) 
+Ce module permet donc, suivant le format choisi, d'extraire les données du type "Débarquement" (CL) 
 et différents types d'enregistrements correspondant aux tables TR (Marées), HH (Stations), SL (Captures), HL (Mensurations), 
 ST (Tests de survie) and RL (Relâchés). 
 
@@ -146,9 +149,9 @@ les cartes successives défilent.
 
 ## Téléchargement d'extraction
 
-Toutes les données filtrées peuvent être téléchargées. Pour ce faire, cliquez sur le bouton 
+Toutes les données filtrées peuvent être téléchargées. Pour ce faire, cliquez sur le bouton "Télécharger" : 
 
-![](./btn_download_tab_fr.png).
+![](./download-button_fr.png).
 
 Pour télécharger toutes les extractions effacez simplement les filtres.
 
@@ -164,7 +167,7 @@ Exemple d'extractions enregistrées :
 
 ![](./rgpd.png)
 
-L'anonymisation et la pseudonymation sont deux méthodes de protection des données personnelles validées par 
+L'anonymisation et la pseudonymisation sont deux méthodes de protection des données personnelles validées par 
 le Règlement Général de Protection des Données (RGPD) du 25 mai 2018. La première permet d'améliorer la sécurité, 
 la deuxième autorise une meilleure flexibilité. 
 

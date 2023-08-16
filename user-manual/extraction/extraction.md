@@ -1,24 +1,33 @@
 # Extractions
 
-## Trips extraction module
+## Data extraction module
 
-The extraction module is limited to the "supervisor" profiles.
+The data extraction module is only accessible to:
+- users with the "Supervisor" user profile (or higher profile);
+- Data collection program managers.
 
-The "Extractions" section contains all the data collected as part of the SUMARiS project. Two types of information can be extracted:
-- Raw data collected (four formats are available):
-    * national data from SUMARiS consurtium member states, in ICES v1.4 format, called "**Raw data (ICES v1.4)**" / National data call data,
-    * the same data in FREE v1 format, called "**Raw data (FREE v1)**",
-    * the same data in RDB v1.3 format, called "**Raw data (RDB v1.3)**",
-    * at sea observation data from dedicated SUMARiS campaigns, exported in ICES v1.4 data exchange format, called "**Raw data (SUMARIS v1.0)**",with the survival test data , in the custom format SUMARiS v1.0.
-- Fixed product:
-    * product through national data call, in ICES v1.4 format, called "**Data Call / Fishing operations**",
-    * product through data in RDB v1.3 format, called "**Data call (RDB v1.3)**",
-    * product through SUMARiS collected data, called "**SUMARIS Collected Data**",
-    * product through new aggregation created.
+The "Extraction" section provides access to all data archived in the database.
+There are two types of extractions:
+
+- Extraction of raw collected data, available in several formats:
+  - **Raw Data (RDB v1.3)**: "Regional Data Base" format from ICES;
+  - **Raw Data (COST v1.4)**: format used by Ifremer and its partners for data exchange;
+  - **Raw Data (FREE v1)**: format used by Ifremer and its partners for data exchange;
+  - **Raw Data (FREE2)**: format used by Ifremer and its partners for data exchange;
+  - **Raw Data > Generic**: derived from the RDB format, but with new columns for each collected field;
+    > This format allows extracting **everything that was entered** in the SUMARiS tool, on a data collection program;
+    > The final format therefore depends on the program and its protocol.
+  - **Raw Data (SUMARiS v1.0)**: format specific to survival test data, as collected in SUMARiS campaigns.
+- Product extraction:
+  - Data from previous extractions, in one of the previous formats, frozen on the extraction date;
+  - Aggregation products mainly designed to be displayed in the "Maps" feature.
+
     
-![](./aggregation1.png)
+![](./aggregation1.png =500px)
 
-This module allows, in the standard ICES data exchange format, to extract data of the type "Commercial Fisheries Landings statistics" (CL) and different types of records, corresponding to the tables TR (Trip record), HH (Fishing Station record), SL (Species List record) and HL (Length record). A new record type corresponding to the ST (Survival Tests record) table is also available, and releases (RL).
+This module therefore allows, depending on the chosen format, to extract data of the "Landing" (CL) type
+and various types of records corresponding to the TR (Tides) tables, HH (Stations), SL (Catches), HL (Measurements),
+ST (Survival Tests) and RL (Released).
 
 In the module, depending information concerned (raw data collected or fixed product), there are six types actions:
 
@@ -104,9 +113,9 @@ An aggregation created can be deleted by clicking here:
 
 ![](./aggregation13.png)
 
-## Maps extraction module
+## Maps 
 
-The extraction module is limited to the "supervisor" profiles.
+The maps feature is limited to the "supervisor" profiles or program managers.
 
 To use the mapping tool, it is necessary to choice a map in the list.
 
@@ -144,18 +153,20 @@ available data, the successive maps scroll.
 
 ## Extraction downloads
 
-All filtered data can be downloaded. To do this, click on the button          .
+All filtered data can be downloaded. To do this, click on the button "Download" :
+
+![](./download-button.png)
+
 To download all extractions, simply delete all specified filters.
 
-The following window opens, allowing to specify the path where to save the file, or to open the
-zipped file: <!--![](./download.png)-->
+A window will open, allowing to specify the path where to save the file, or to open the
+zipped file.
 
-The files will be downloaded in .csv format by type of record (CL, HH, HL, SL, ST, TR) in a
-zipped file always named in this way:
+The file is downloaded in .csv format by record type (CL, HH, HL, SL, ST, TR) in a zip file named according to the following scheme:
 
 ![](./save-zip.png)
 
-Example of saved extraction:
+Example extraction file:
 
 ![](./save-extraction.png)
 
