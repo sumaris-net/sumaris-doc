@@ -27,7 +27,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | Specs | Adagio |
 | ----- | ------ |
 | programme (SIH-OBSBIO) | strategy.program_fk |
-| code (AAESPECENUM) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=2867 ; acquisition_level_fk=LANDING ; is_mandatory=1 ; acquisition_number=1 ; rank_order=0) + pmfm_strategy.pmfm_fk (=116 ; acquisition_level_fk=SAMPLE ; is_mandatory=0 ; acquisition_number=1 ; rank_order à incrémenter d'un pmfm à l'autre pour le même acquisition_level_fk) + pmfm_strategy.pmfm_fk (=1435 ; acquisition_level_fk=SAMPLE ; is_mandatory=0 ; acquisition_number=1 ; rank_order à incrémenter d'un pmfm à l'autre pour le même acquisition_level_fk)|
+| code (AAESPECENUM) | strategy.label + strategy.name + strategy.description + pmfm_strategy.pmfm_fk (=2867 ; acquisition_level_fk=LANDING ; is_mandatory=1 ; acquisition_number=1 ; rank_order=0) + pmfm_strategy.pmfm_fk (=116 ; acquisition_level_fk=SAMPLE ; is_mandatory=1 ; acquisition_number=1 ; rank_order à incrémenter d'un pmfm à l'autre pour le même acquisition_level_fk) + pmfm_strategy.pmfm_fk (=1435 ; acquisition_level_fk=SAMPLE ; is_mandatory=0 ; acquisition_number=1 ; rank_order à incrémenter d'un pmfm à l'autre pour le même acquisition_level_fk)|
 | commentaire | strategy.comments |
 | EOTP | strategy.analytic_reference |
 | laboratoire | strategy2department (program_privilège_fk=Observateur) |
