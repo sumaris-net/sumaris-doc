@@ -1,21 +1,17 @@
-# Guide de démarrage rapide pour le logiciel web de saisie SUMARiS
+# Manuel utilisateur
 
-**Titre** : **Guide de démarrage rapide pour le logiciel web de saisie SUMARiS**
+![](./images/sumaris-doc_screen-fr-v0.2.png)
 
-**Auteur**: E-IS
+**Auteur** : E-IS
 
-**Date** : mai 2021
+**Date** : août 2023
 
-**Copyright** : ”Guide de démarrage rapide pour le logiciel web de saisie SUMARiS” par SUMARiS
-est concédé sous une licence internationale Creative Commons Attribution-ShareAlike 4.0.
+**Copyright** : ”Manuel utilisateur du logiciel SUMARiS”
+est concédé sous licence Creative Commons Attribution-ShareAlike 4.0
 
 ![cc-by-sa](./cc-by-sa.png)
 
-Guide d'utilisation SUMARiS Version V1.3    
-attached to SUMARiS Form V8.0  
-attached to the entry software V0.18.0
-
-Télécharger en pdf : [FR](./sumaris-doc_fr.pdf) | [EN](./sumaris-doc_en.pdf)
+> Télécharger en pdf : [FR](./sumaris-user_manual-fr.pdf) | [EN](./sumaris-user_manual-en.pdf)
 
 ## Table des matières
 

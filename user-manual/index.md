@@ -1,20 +1,16 @@
-# Quick Start user's guide for SUMARiS web entry software
+# User manuel for SUMARiS software
 
-**Title**: **Quick Start user's guide for SUMARiS web entry software** 
+![](./images/sumaris-doc_screen-fr-v0.1.png)
 
 **Author**: E-IS	
 
-**Date**: October 19, 2019 
+**Date**: August, 2023
 
-**Copyright**: ”Quick Start user's guide for SUMARiS web entry software” by SUMARiS is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+**Copyright**: ”User manuel for SUMARiS software” is licensed under a Creative Commons Attribution-ShareAlike 4.0
 
 ![cc-by-sa](cc-by-sa.png)
 
-SUMARiS user guide Version V1.3    
-attached to SUMARiS Form V8.0
-attached to the entry software V0.18.0
-
-Download pdf : [FR](./sumaris-doc_fr.pdf) | [EN](./sumaris-doc_en.pdf)
+> Download as PDF: [EN](./sumaris-user_manual-en.pdf) | [FR](./sumaris-user_manual-fr.pdf)
 
 # Table of contents
 
