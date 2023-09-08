@@ -1,29 +1,29 @@
-# Manuel de mise en exploitation d'Imagine v2.5.3
+# Manuel de mise en exploitation d'Imagine (v2.5.1)
 
-Objectif : le document liste Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.5.3
+Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.5.1
 
-Liste des tickets réalisés : 
-- https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/458/
-- https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/370#note_126575
+Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/370#note_126575
 
-> Auteur: Maxime DEMAREST
-> Date création : 07/09/2023
-> Mise à jour : 07/09/2023
+> Auteur: Benoit LAVENIER
+> Date création : 04/07/2023
+> Mise à jour : 03/08/2023
 
-## Mise a jours du programme SIH-OBSBIO
+## Configuration du Pod
 
-- [ ] Mettre à jour les PMFM Stratégie du programme `SIH-OBSBIO` : ajouter les paramètre AGE quant le paramètre absent, mais qu'il y a une fraction
-  **TODO : Demander si le l'ID pour le programe `SIH-OBSBIO` est bien `SIH-OBSBIO` ?**
-```sql
-UPDATE FROM PMFM_STRATEGY SET PARAMETER_FK = 'AGE' WHERE 
-  STRATEGY_FK IN (SELECT STRATEGY.ID FROM STRATEGY WHERE PROGRAM_FK = 'SIH-OBSBIO')
-  AND FRACTION_FK IS NOT NULL AND PARAMETER_FK IS NULL;
-```
+- [ ] Nouvelles options dans le fichier de configuration :
+  ```properties
+  # Pas de nouvelle option
+  ```
 
-- [ ] Supprimer les anciens PMFM Stratégies qui n'ont que le paramétre `AGE` et pas de fraction
-  **TODO : Demander si le l'ID pour le paramètre `AGE` est bien `AGE` ?**
-```sql
-DELETE FROM PMFM_STRATEGY WHERE
- STRATEGY_FK IN (SELECT STRATEGY.ID FROM STRATEGY WHERE PROGRAM_FK = 'SIH-OBSBIO')
- AND PARAMETER_FK = 'AGE' AND FRACTION_FK IS NULL;
-```
+- [ ] Ajout d'une option pour activer l'accès direct aux échantillonnages :
+  ```sql
+  insert into SOFTWARE_PROPERTY (ID, LABEL, NAME, CREATION_DATE, UPDATE_DATE, SOFTWARE_FK, STATUS_FK) values (SOFTWARE_PROPERTY_SEQ.nextval, 'sumaris.observedLocation.landings.tab.enable', 'true', sysdate, systimestamp, 21, 1);  
+  ```
+
+## Schéma SIH2_ADAGIO_DBA
+
+RAS
+
+## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
+
+RAS
