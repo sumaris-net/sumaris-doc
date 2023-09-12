@@ -10,5 +10,5 @@
   * [Configuration de l'environement](./core/setup_fr.md) de développement
   * [Noyau logiciel](./core/index_fr.md)
   * Module d'importation
-  * Module d'extraction
+  * [Module d'extraction](./extraction/index_fr.md)
   * [Module web sémantique](./rdf/index_fr.md)

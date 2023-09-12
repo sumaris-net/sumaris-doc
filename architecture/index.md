@@ -10,5 +10,5 @@
   * [Environment setup](./core/setup.md)
   * [Core](./core/index.md)
   * Data importation
-  * Data extraction
+  * [Data extraction](./extraction/index_fr.md) (French)
   * [Semantic web](./rdf/index_fr.md) (French)
