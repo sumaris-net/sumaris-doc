@@ -1,6 +1,6 @@
-# Manuel de mise en exploitation d'Imagine v2.5.3
+# Manuel de mise en exploitation d'Imagine v2.6
 
-Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.5.4
+Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.6
 
 Liste des tickets réalisés : 
 - https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/458/
@@ -8,7 +8,7 @@ Liste des tickets réalisés :
 
 > Auteur: Maxime DEMAREST
 > Date création : 07/09/2023
-> Mise à jour : 07/09/2023
+> Mise à jour : 11/09/2023
 
 ## Configuration du Pod
 

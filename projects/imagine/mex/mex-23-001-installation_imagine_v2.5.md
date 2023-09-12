@@ -1,6 +1,6 @@
-# Manuel de mise en exploitation d'Imagine (v2.5.1)
+# Manuel de mise en exploitation d'Imagine (v2.5)
 
-Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.5.1
+Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.5
 
 Liste des tickets réalisés : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/370#note_126575
 
