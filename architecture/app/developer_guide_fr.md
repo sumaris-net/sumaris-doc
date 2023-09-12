@@ -1,4 +1,4 @@
-# Guide de développement (app)
+# App > Guide de développement (app)
 
 ## Écriture d'un composant
 

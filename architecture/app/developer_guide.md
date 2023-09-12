@@ -1,4 +1,4 @@
-# Developer guide
+# App > Developer guide
 
 ## Writing a component
 
