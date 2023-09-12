@@ -20,9 +20,9 @@ class QualitativeValue {
   +name
 }
 
-Method "1" <-down- "0..*" Pmfm
 Matrix "1" <-down- "0..*" Pmfm
 Fraction "1" <-down- "0..*" Pmfm
+Method "1" <-down- "0..*" Pmfm
 QualitativeValue "0..*" <-down- "0..*" Pmfm
 Unit "1" <-down- "0..*" Pmfm
 Parameter "1" <-down- "0..*" Pmfm
