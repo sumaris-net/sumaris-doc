@@ -2,9 +2,10 @@
 
 ## Table of contents
 
-- General architecture
-- Modules :
-  * [Core](./core/index_fr.md) (French)
+- [General architecture](./general_architecture.md)
+- [App](./app/index.md)
+- Pod (modules):
+  * [Core](./core/index.md)
   * Data importation
   * Data extraction
   * [Semantic web](./rdf/index_fr.md) (French)

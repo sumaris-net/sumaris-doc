@@ -2,8 +2,9 @@
 
 ## Sommaire
 
-- Architecture générale
-- Modules :
+- [Architecture générale](./general_architecture_fr.md)
+- [App](./app/index_fr.md)
+- Pod (modules) :
   * [Noyau](./core/index_fr.md)
   * Data importation
   * Data extraction

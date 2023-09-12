@@ -123,12 +123,12 @@ On peut ainsi limiter l'accès, au cas pas cas, par exemple pour autoriser uniqu
 Options disponibles pour configurer le noyau : 
 
 
-| Propriété                         | Description                                                                            | Valeur par défaut                          |
-|-----------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------|
-| `server.url`                      | URL d'accès au serveur                                                                 | `http://localhost:8080`                    | 
-| `spring.datasource.url`           | URL de la BDD (au format JDBC)                                                         | `jdbc:postgresql://localhost:5432/sar`     | 
-| `spring.liquibase.enabled`        | Activation de la mise à jour du schéma de BDD par Liquibase                            | `sar`                                      | 
-| `logging.level.org.hibernate.SQL` | Niveau de log des requête SQL (mettre `debug`pour les voir)    | `warn                                      |
+| Propriété                         | Description                                                     | Valeur par défaut                          |
+|-----------------------------------|-----------------------------------------------------------------|--------------------------------------------|
+| `server.url`                      | URL d'accès au serveur                                          | `http://localhost:8080`                    | 
+| `spring.datasource.url`           | URL de la BDD (au format JDBC)                                  | `jdbc:postgresql://localhost:5432/sar`     | 
+| `spring.liquibase.enabled`        | Activation de la mise à jour du schéma de BDD par Liquibase     | `sar`                                      | 
+| `logging.level.org.hibernate.SQL` | Niveau de log des requête SQL (mettre `debug`pour les voir)     | `warn                                      |
 
 
 **TODO** : à compléter
