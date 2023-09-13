@@ -21,7 +21,7 @@ Les droits sont gérés au niveau de l'observation.
 
 ## Plans d'échantillonnage et lignes de plan
 
-Les stratégies sont reliées au programme SIH-PARAM-BIO. Les données en criée ou achat labo seront rattachées à ce même programme.
+Les stratégies sont reliées au programme SIH-OBSBIO. Les données en criée ou achat labo seront rattachées à ce même programme.
 En revanche, les données acquises lors des campagnes seront rattachées aux programmes de collecte correspondants : CAM-*.
 
 | Specs | Adagio |
@@ -43,7 +43,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 | Année | applied_strategy.applied_period.start_date : lié à la première zone de pêche. Il n'y a pas de persistance à proprement parler, c'est juste un affichage en prenant l'année du premier trimestre qu'on trouve (il y en a forcément au moins 1, sinon la ligne de plan ne peut pas être créée) |
 | trimestres de la période | applied_strategy.applied_period.start_date/end_date (lié à la première zone de pêche). - T1 : 01/01/20.. 00:00:00 - 31/03/20.. 23:59:59 - T2 : 01/04/20.. 00:00:00 - 30/06/20.. 23:59:59 - T3 : 01/07/20.. 00:00:00 - 30/09/20.. 23:59:59 - T4 : 01/10/20.. 00:00:00 - 31/12/20.. 23:59:59 |
 | effort planifié sur le trimestre | applied_strategy.applied_period.acquisition_number (lié à la première zone de pêche) |
-| effort réalisé sur le trimestre | nombre de landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
+| effort réalisé sur le trimestre | nombre de sample avec sample_measurement.pmfm_fk = 1435 (=TAG_ID) lié à landing avec landing_measurement.alphanumerical_value = strategy.label et landing_date_time entre applied_period.start_date et applied_period.end_date
 
 > Initialiser PROGRAM2LOCATION_CLASSIFICATION avec zones en mer / zones à terre
 
@@ -51,7 +51,7 @@ En revanche, les données acquises lors des campagnes seront rattachées aux pro
 
 Liste des évolutions de modèle nécessaires :
 - modifier PMFM_STRATEGY.PMFM_FK en nullable
-- ajouter la colonne PMFM_STRATEGY.FRACTION_FK en nullable
+- ajouter les colonnes PMFM_STRATEGY.PARAMETER_FK, MATRIX_FK, FRACTION_FK, METHOD_FK en nullable
 - ajouter les colonnes STRATEGY.ANALYTIC_REFERENCE, APPLIED_PERIOD.ACQUISITION_NUMBER
 - ajouter la table STRATEGY2DEPARTMENT : lien n-n avec program_privilège_fk (cf program2department)
 - ajouter la colonne STRATEGY.COMMENTS en nullable
