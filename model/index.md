@@ -1,17 +1,16 @@
-# SUMARiS Data Model
-
+# Data Model
 
 ## Referential
 
 ### Base classes
 
-![common](referential/common.svg)
+![common](model/referential/common.svg)
 
 Each referential entity item have a numerical id as identifier, a unique label (for code), a name and a full description. 
 
 ### Location
 
-![location](referential/location.svg)
+![location](model/referential/location.svg)
 
 A location can be:
   - a territorial location (e.g. Country, harbour, auction...)
@@ -39,7 +38,7 @@ Scientific species are called "Taxon" in the data model.
 
 ### Collected parameters (PMFMU)
 
-![pmfm](referential/pmfm.svg)
+![pmfm](model/referential/pmfm.svg)
 
 a PSFMU is an association of:
  
@@ -57,7 +56,7 @@ This class allows to define any kind of measure type, with the precision expecte
 
 Program is the entity that holds a data collection project (e.g. a scientific project, a UE project, ...).
 
-![program](administration/program.svg)
+![program](model/administration/program.svg)
 
  - A Program describe the project (label, name, description);  
    * Each program has one or more strategies; 
@@ -65,7 +64,7 @@ Program is the entity that holds a data collection project (e.g. a scientific pr
  - Forthcoming:
    * Each program can manage access rights by users or departments
 
-![strategy](administration/strategy.svg)
+![strategy](model/administration/strategy.svg)
 
  - A Strategy holds one data collection protocol. Typically, it define all parameters (PSFMU) that should be collected.
    * Each collected parameters is collected inside a acquisition level (e.g. on Trip, on Operation, on Landing, ...)
@@ -79,7 +78,7 @@ This is part the generic aspect of SUMARiS tools.
  
 ## Collected data
 
-![data](data/common.svg)
+![data](model/data/common.svg)
 
 Each collected data has a root entity, linked to a program.
 
@@ -89,9 +88,15 @@ Each collected data has a root entity, linked to a program.
   * A recorder department and person;
   * A quality flag (e.g. Good, Bad, Out of stats, ...) used to exclude bad data on exports or map products; 
 
+
+### Scientific cruise
+
+
+![scientific-cruise](model/data/scientific-cruise.svg)
+
 ### Trip
 
-![trip](data/trip.svg)
+![trip](model/data/trip.svg)
 
 - Trip: a fishing trip, on a unique vessel.
   * A trip start from a departure location (and date/time) and ends with a return location; 
@@ -104,7 +109,7 @@ Each collected data has a root entity, linked to a program.
 
 ### Landing
 
-![landing](data/landing.svg)
+![landing](model/data/landing.svg)
 
 - Observed Location: an observation applied on a landing site (harbour, auction) on a date/time (or period);
   * an observed location can have many landings (one or more by vessel), as children.

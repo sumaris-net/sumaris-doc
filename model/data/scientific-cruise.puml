@@ -1,0 +1,23 @@
+@startuml
+hide empty members
+
+class ScientificCruise {
+  +id: Integer
+  +name: String
+  +program: Program
+  +departureDateTime: Date
+  +returnDateTime: Date
+  +reference: String [0..1]
+  +comments: String [0..1]
+  +creationDate: Date
+  +updateDate: Date
+}
+
+ScientificCruise "*" -up-> "1" Vessel
+ScientificCruise "0..1" *-down- "1" Trip
+ScientificCruise "*" -left-> "1" Person: "managerPerson   "
+ScientificCruise "*" -left-> "0..1" Person: "recorderPerson   "
+ScientificCruise "*" -right-> "1" Department: "    recorderDepartment"
+
+
+@enduml

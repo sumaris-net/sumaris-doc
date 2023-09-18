@@ -1,4 +1,5 @@
 @startuml
+hide empty members
 
 class Vessel {
 }
@@ -21,6 +22,8 @@ class Operation {
     +id
     +startDateTime
     +endDateTime
+    +fishingStartDateTime [0..1]
+    +fishingEndDateTime [0..1]
 }
 
 class VesselPosition {
@@ -35,14 +38,14 @@ Trip "1" *-right- "0..*" Operation
 Trip "1" *-right- "0..*" PhysicalGear : "     "
 Trip "1" --> "1..*\nobservers" Person
 
-Operation "1" *-- "0..*" OperationMeasurement
+Operation "1" *-right- "0..*" OperationMeasurement
 Operation "0..*" -up-> "1" PhysicalGear
 Operation "0..1" *-down-> "2..*" VesselPosition
 
-PhysicalGear "1" *-down- "0..*" PhysicalGearMeasurement
+PhysicalGear "1" *-right- "0..*" PhysicalGearMeasurement
 
 package "referential" #DDDDDD {
-    PhysicalGear "*" -right-> "1" Gear : "     "
+    PhysicalGear "*" -up-> "1" Gear : "     "
 }
 
 @enduml

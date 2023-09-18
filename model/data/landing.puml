@@ -1,24 +1,26 @@
 @startuml
+hide empty members
 
 class ObservedLocation {
     +id
-    +program
+    +program: Program
     +startDateTime
     +endDateTime [0..1]
 }
 
 class Landing {
   +id
-  +program
+  +program: Program
   +landingDateTime
 }
 
-ObservedLocation "0..1" *-right- "0..*" Landing : contains
+ObservedLocation "0..1" *-right- "*" Landing : contains
 ObservedLocation "1" --> "1..*\nobservers" Person
-ObservedLocation "1" *-- "0..*" ObservedLocationMeasurement
+ObservedLocation "1" *-- "*" ObservedLocationMeasurement
 
 Landing "*" -up-> "1" Vessel
-Landing "1" *-- "0..*" LandingMeasurement
+Landing "1" *-- "*" LandingMeasurement
+Landing "*" -right- "0..1" Trip: "    "
 
 package "referential" #DDDDDD {
     Landing "*" --> "1" Location
