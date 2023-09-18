@@ -8,6 +8,7 @@
   * [Developer's guide](./app/developer_guide.md)
 - Pod:
   * [Environment setup](./core/setup.md)
+  * [Developer's guide](./core/developer_guide.md)
   * [Core](./core/index.md)
   * Data importation
   * [Data extraction](./extraction/index_fr.md) (French)

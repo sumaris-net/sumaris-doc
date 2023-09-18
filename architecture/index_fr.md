@@ -4,10 +4,11 @@
 
 - [Architecture générale](./general_architecture_fr.md)
 - [App](./app/index_fr.md) :
-  * [Configuration de l'environement](./app/setup_fr.md) de développement
+  * [Configuration de l'environement](./app/setup_fr.md)
   * [Guide de développement](./app/developer_guide_fr.md)
 - Pod (modules) :
-  * [Configuration de l'environement](./core/setup_fr.md) de développement
+  * [Configuration de l'environement](./core/setup_fr.md)
+  * [Guide de développement](./core/developer_guide_fr.md)
   * [Noyau logiciel](./core/index_fr.md)
   * Module d'importation
   * [Module d'extraction](./extraction/index_fr.md)

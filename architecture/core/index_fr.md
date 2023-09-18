@@ -66,21 +66,21 @@ Le résultat est retourné par un service métier est converti directement en JS
 
 #### package `service`
 
-Le package `service` concentrent les fonctions métier, responsable du traitement des données lues ou écrites. 
+Le package `service` concentre les fonctions métier, responsable du traitement des données lues ou écrites. 
 Cette couche gère également les transactions JDBC et gère les rollback éventuels en cas d'erreur.
 
 Cette couche bénéficie d'un cache applicatif, mis en place si besoin pour optimiser les performances d'accès aux données.
 
 #### package `dao`
 
-Les composants `Repository` définisse les requêtes (Objet ou SQL) d'accès à la base de données.
+Les composants `Repository` définissent les requêtes (JPA ou SQL) d'accès à la base de données.
 
 Chaque `Repository` est généralement lié à une entité métier particulière.
 
 #### package `model`
 
 Ce package permet la définition d'`Entity` qui porte le modèle de la base de données sous-jacente.
-Chaque `Entity` représente un concept métier (ex: `Department` réprésente un organisme, `CoastalStructureType` une typolologie d'ouvrage).
+Chaque `Entity` représente un concept métier (ex: `Department` réprésente un organisme, `Location` un lieu terrestre ou en mer, etc.).
 
 Les attributs d'une classe `Entity` permette de configurer les colonnes de la table associée, et ses contraintes (no null, etc) 
 

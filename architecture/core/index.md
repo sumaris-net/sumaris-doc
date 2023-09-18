@@ -75,7 +75,7 @@ Each `Repository` is usually linked to a particular business entity.
 
 #### package `model`
 
-This package defines `Entity` which represents the underlying database model. Each `Entity` represents a business concept (e.g., `Department` represents an organism, `CoastalStructureType` a typology of structure).
+This package defines `Entity` which represents the underlying database model. Each `Entity` represents a business concept (e.g., `Department` represents an organism, `Location` a location, etc.).
 
 The attributes of an `Entity` class allow configuring the columns of the associated table and its constraints (non-null, etc.)
 
