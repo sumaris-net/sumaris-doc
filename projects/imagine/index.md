@@ -11,12 +11,11 @@ Outil de planification, de collecte et d'extraction des paramètres biologiques
   * [Notes techniques](./not)
 
 - Liens utiles :
-  * Anomalies et évolutions (YouTrack) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
-  * Forum : https://forum.sumaris.net
+  * Anomalies et évolutions : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
   * Documentation :
     * Générale à SUMARiS : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
     * Projet Imagine : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/imagine
 
 ## Comptes-rendu
 
-- [CRR de suivi du 25/04/2023](crr/crr-23-001-reunion_suivi-2023-04-25.md)
+- [CRR](crr/crr-23-001-reunion_suivi-2023-04-25.md)

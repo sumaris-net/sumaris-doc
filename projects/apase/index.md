@@ -11,7 +11,6 @@ Test de sélectivité des chaluts
 
 - Liens utiles :
   * Anomalies et évolutions (GitLab) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
-  * Forum : https://forum.sumaris.net
   * Documentation 
     * Général (SUMARiS) : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
     * Projet APASE : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/apase
