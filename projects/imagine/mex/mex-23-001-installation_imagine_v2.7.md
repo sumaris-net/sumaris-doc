@@ -26,7 +26,28 @@ RAS
 
 - [ ] Mise à jour de la vue TRIP, pour ajouter la colonne SCIENTIFIC_CRUISE_FK
   ```sql oracle
-  TODO
+  create or replace view TRIP as
+  select FT.ID,
+       FT.COMMENTS,
+       FT.DEPARTURE_DATE_TIME,
+       FT.RETURN_DATE_TIME,
+       FT.CONTROL_DATE,
+       FT.VALIDATION_DATE,
+       FT.QUALIFICATION_DATE,
+       FT.QUALIFICATION_COMMENTS,
+       FT.CREATION_DATE,
+       FT.UPDATE_DATE,
+       FT.DEPARTURE_LOCATION_FK,
+       FT.RETURN_LOCATION_FK,
+       V.ID as VESSEL_FK,
+       P.ID as PROGRAM_FK,
+       FT.RECORDER_DEPARTMENT_FK,
+       FT.RECORDER_PERSON_FK,
+       FT.SCIENTIFIC_CRUISE_FK,
+       cast(FT.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+  from SIH2_ADAGIO_DBA.FISHING_TRIP FT
+  inner join SIH2_ADAGIO_DBA.M_VESSEL V on FT.VESSEL_FK = V.CODE
+  inner join SIH2_ADAGIO_DBA.M_PROGRAM P on FT.PROGRAM_FK = P.CODE;
   ```
   
 - [ ] Création de la vue SCIENTIFIC_CRUISE
