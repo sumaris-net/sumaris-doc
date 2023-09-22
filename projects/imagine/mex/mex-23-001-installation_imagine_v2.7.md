@@ -26,7 +26,30 @@ RAS
 
 - [ ] Mise à jour de la vue TRIP, pour ajouter la colonne SCIENTIFIC_CRUISE_FK
   ```sql oracle
-  TODO
+  create or replace view TRIP as
+  select FT.ID,
+       FT.COMMENTS,
+       FT.DEPARTURE_DATE_TIME,
+       FT.RETURN_DATE_TIME,
+       FT.CONTROL_DATE,
+       FT.VALIDATION_DATE,
+       FT.QUALIFICATION_DATE,
+       FT.QUALIFICATION_COMMENTS,
+       FT.CREATION_DATE,
+       FT.UPDATE_DATE,
+       FT.DEPARTURE_LOCATION_FK,
+       FT.RETURN_LOCATION_FK,
+       V.ID as VESSEL_FK,
+       P.ID as PROGRAM_FK,
+       FT.RECORDER_DEPARTMENT_FK,
+       FT.RECORDER_PERSON_FK,
+       FT.SCIENTIFIC_CRUISE_FK,
+       cast(FT.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+  from SIH2_ADAGIO_DBA.FISHING_TRIP FT
+  inner join SIH2_ADAGIO_DBA.M_VESSEL V on FT.VESSEL_FK = V.CODE
+  inner join SIH2_ADAGIO_DBA.M_PROGRAM P on FT.PROGRAM_FK = P.CODE;
+  /
+  -- + Actualiser ses trigger
   ```
   
 - [ ] Création de la vue SCIENTIFIC_CRUISE
@@ -50,15 +73,12 @@ RAS
   inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on SC.PROGRAM_FK = MP.CODE;
   /
   ```
-
-## Mise a jours du programme SIH-OBSBIO
-
-
+  
 - [ ] Ajouter M_PMFM_STRATEGY.PARAMETER_FK
   ```sql
   ALTER TABLE M_PMFM_STRATEGY ADD (PARAMETER_FK NUMBER(10));
   ```
-
+  
 - [ ] Mettre à jour la vue PMFM_STRATEGY
   ```sql
   create or replace view PMFM_STRATEGY as
@@ -113,6 +133,8 @@ RAS
   /
   ```
   
+## Mise a jours du programme SIH-OBSBIO
+
 - [ ] Mettre à jour les PMFM_STRATEGY : Utiliser le paramètre AGE plutot que le PMFM age
   ```sql
   UPDATE PMFM_STRATEGY ST
@@ -135,5 +157,5 @@ RAS
     AND PROGRAM_FK = 'SIH-OBSBIO';
   ```
 
-- [ ] Suppression des lignes PMFM_STRATEGY redondante : 
+- [ ] Suppression des lignes PMFM_STRATEGY redondantes : 
   - TODO supprimer les lignes ayant un PMFM_FK=AGE, alors qu'il existe des PMFM_STRATEGY avec parameter_fk 'AGE' et une fraction_K) 
