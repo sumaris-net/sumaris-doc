@@ -59,9 +59,58 @@ RAS
   ALTER TABLE M_PMFM_STRATEGY ADD (PARAMETER_FK NUMBER(10));
   ```
 
-- [ ] Mettre à jour la vue
+- [ ] Mettre à jour la vue PMFM_STRATEGY
   ```sql
-  ALTER TABLE M_PMFM_STRATEGY ADD (PARAMETER_FK NUMBER(10));
+  create or replace view PMFM_STRATEGY as
+  select PS.ID,
+         PS.ACQUISITION_NUMBER,
+         MPS.DEFAULT_VALUE,
+         PS.IS_MANDATORY,
+         PS.MIN_VALUE,
+         PS.MAX_VALUE,
+         PS.RANK_ORDER,
+         AL.ID as ACQUISITION_LEVEL_FK,
+         PS.PMFM_FK,
+         PS.STRATEGY_FK,
+         PS.FRACTION_FK,
+         MPS.PARAMETER_FK,
+         null as MATRIX_FK,
+         null as METHOD_FK
+  from SIH2_ADAGIO_DBA.PMFM_STRATEGY PS
+  inner join SIH2_ADAGIO_DBA.M_ACQUISITION_LEVEL AL on PS.ACQUISITION_LEVEL_FK = AL.CODE
+  left outer join SIH2_ADAGIO_DBA_SUMARIS_MAP.M_PMFM_STRATEGY MPS on PS.ID = MPS.ID;
+  /
+  
+  create or replace trigger TR_PMFM_STRATEGY
+      instead of insert or update or delete
+      on PMFM_STRATEGY
+  begin
+      case
+          WHEN INSERTING THEN
+              -- PMFM_STRATEGY itself
+              insert into SIH2_ADAGIO_DBA.PMFM_STRATEGY(ID, ACQUISITION_NUMBER, RANK_ORDER, IS_MANDATORY, MIN_VALUE, MAX_VALUE, PMFM_FK, ACQUISITION_LEVEL_FK, STRATEGY_FK, FRACTION_FK)
+              select :new.ID, :new.ACQUISITION_NUMBER, :new.RANK_ORDER, :new.IS_MANDATORY, :new.MIN_VALUE, :new.MAX_VALUE, :new.PMFM_FK, AL.CODE, :new.STRATEGY_FK, :new.FRACTION_FK
+              from SIH2_ADAGIO_DBA.M_ACQUISITION_LEVEL AL
+              where AL.ID = :new.ACQUISITION_LEVEL_FK;
+              -- M_PMFM_STRATEGY (map columns of PMFM_STRATEGY for sumaris)
+              insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_PMFM_STRATEGY(ID, DEFAULT_VALUE, PARAMETER_FK)
+              values (:new.ID, :new.DEFAULT_VALUE, :new.PARAMETER_FK);
+          WHEN UPDATING THEN
+              -- PMFM_STRATEGY itself
+              update SIH2_ADAGIO_DBA.PMFM_STRATEGY PS set PS.ACQUISITION_NUMBER=:new.ACQUISITION_NUMBER, PS.RANK_ORDER=:new.RANK_ORDER, PS.IS_MANDATORY=:new.IS_MANDATORY, PS.MIN_VALUE=:new.MIN_VALUE, PS.MAX_VALUE=:new.MAX_VALUE, PS.PMFM_FK=:new.PMFM_FK, PS.FRACTION_FK=:new.FRACTION_FK, PS.STRATEGY_FK=:new.STRATEGY_FK, PS.ACQUISITION_LEVEL_FK = (select L.CODE from SIH2_ADAGIO_DBA.M_ACQUISITION_LEVEL L where L.ID = :new.ACQUISITION_LEVEL_FK)
+              where PS.ID = :new.ID;
+              -- M_PMFM_STRATEGY update if row exists
+              update M_PMFM_STRATEGY MPS set MPS.DEFAULT_VALUE=:new.DEFAULT_VALUE, MPS.PARAMETER_FK=:new.PARAMETER_FK
+              where MPS.ID = :new.ID;
+              -- M_PMFM_STRATEGY insert if row not exists
+              insert into M_PMFM_STRATEGY(ID, DEFAULT_VALUE, PARAMETER_FK)
+              select PS.ID, :new.DEFAULT_VALUE, :new.PARAMETER_FK from SIH2_ADAGIO_DBA.PMFM_STRATEGY PS where PS.ID = :new.ID and not exists (select * from M_PMFM_STRATEGY MPS where  MPS.ID = :new.ID);
+          WHEN DELETING THEN
+              delete from SIH2_ADAGIO_DBA.PMFM_STRATEGY PS where PS.ID = :old.ID;
+              delete from M_PMFM_STRATEGY MPS where MPS.ID = :old.ID;
+          end case;
+  end;
+  /
   ```
   
 - [ ] Mettre à jour les PMFM_STRATEGY : Utiliser le paramètre AGE plutot que le PMFM age
@@ -85,3 +134,6 @@ RAS
     EXISTS (SELECT * FROM SIH2_ADAGIO_DBA.PMFM_STRATEGY WHERE PARAMETER_FK = 'AGE')    
     AND PROGRAM_FK = 'SIH-OBSBIO';
   ```
+
+- [ ] Suppression des lignes PMFM_STRATEGY redondante : 
+  - TODO supprimer les lignes ayant un PMFM_FK=AGE, alors qu'il existe des PMFM_STRATEGY avec parameter_fk 'AGE' et une fraction_K) 
