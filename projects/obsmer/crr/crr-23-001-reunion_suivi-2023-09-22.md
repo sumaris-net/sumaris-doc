@@ -6,7 +6,6 @@
 > - Glenn PRIGENT (Ifremer)
 > - Benoit LAVENIER (EIS)
 
-Prochaine réunion ? - [Lien visio](https://meet.jit.si/obsmer-sumaris-2023) (ou [ifremer](https://rendez-vous.renater.fr/ifremer_harmonie))
 
 ---
 # Organisation / planning
