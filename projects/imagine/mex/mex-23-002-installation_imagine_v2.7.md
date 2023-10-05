@@ -49,7 +49,7 @@ RAS
   inner join SIH2_ADAGIO_DBA.M_VESSEL V on FT.VESSEL_FK = V.CODE
   inner join SIH2_ADAGIO_DBA.M_PROGRAM P on FT.PROGRAM_FK = P.CODE;
   /
-  -- + Actualiser ses trigger
+  -- + Actualiser ses triggers
   ```
   
 - [ ] Création de la vue SCIENTIFIC_CRUISE
