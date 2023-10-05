@@ -1,17 +1,20 @@
-# Réunion de suivi
+# Réunion de suivi ObsMer
 ### 22/09/2023
 
 > Présents :
 >
 > - Glenn PRIGENT (Ifremer)
+> - Vincent FACHERO (Ifremer)
 > - Benoit LAVENIER (EIS)
 
 
 ---
-# Organisation / planning
+# Méthodologie
 
-- PoC de refonte sur la solution SUMARiS
-- Point hebdo ?
+- Prototype basé sur la solution **SUMARiS**
+- Point de suivi hebdo: 
+  - MOE: Glenn, Vincent
+  - MOA: avec qui ?
 - Implication utilisateurs finaux ?
 
 ---
@@ -23,15 +26,16 @@
   - Optimisation du chargement des navires (ElasticSearch) (0%)
 - **App** (Ergonomie) :
   - RAF: menu de navigation (afficher dans le menu les titres des onglets de l'écran + ceux des pages parentes) 
-- **Migration** (Liquibase, MEX) :
-  - Migration Programmes/Stratégies => en cours
-    - Tous les programmes SIH-OBSMER-* ?
+- **Migration** :
+  - Migration Programmes/Stratégies (en cours)
+    - Faut-il migrer tous les programmes `SIH-OBSMER-xxx` ?
     - Faut-il assurer la compatibilité Allegro-ObsMer ?
-  - Ajout d'un `software` "OBSMER" (tables `SOFTWARE` et `SOFTWARE_PROPERTY`)
+  - Personnalisation de SUMARiS : 
+    - Ajout d'une ligne `OBSMER` dans la table `SOFTWARE` (+ options dans `SOFTWARE_PROPERTY`)
 
 ---
 
-## Avancements > Collecte des données
+## Avancement > Collecte des données (1/2)
 
   - **Marées** (tableau, filtre): OK
   - Écran **Marée** : 
@@ -39,7 +43,10 @@
     - saisie vente: à activer ? obligatoire ?
     - RAF: séparer les "caractéristiques d'enquête" ? (via le groupe de paramètre) 
     - RAF: sélection de la stratégie par date/lieu
+
 ---
+
+## Avancement > Collecte des données (2/2)
 
 - Carte **positions** : OK
 - **Engins** (tableau et filtre) : OK
@@ -54,10 +61,12 @@
 ## Liens
 
 Liens utiles :
-* Anomalies et évolutions 
-  * YouTrack : https://youtrack.ifremer.fr
+* Documentation projet
+  * Compte-rendus de réunion : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/obsmer/crr
+  * Spécifications fonctionnelles : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/obsmer/spe
+* Anomalies et évolutions
   * GitLab : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
-* Documentation
-  * Général (SUMARiS) : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
+* Autre 
+  * Documentation générale SUMARiS : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
   
 

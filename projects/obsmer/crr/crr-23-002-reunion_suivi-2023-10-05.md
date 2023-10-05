@@ -1,4 +1,4 @@
-# Réunion prototype ObsMer
+# Réunion de suivi ObsMer
 ### 05/10/2023
 
 > Présents :
@@ -23,12 +23,12 @@ Prochaine réunion : **semaine 41** (date à fixer par Glenn)
   (EIS, Vincent, Glenn, Joanna)
 - **Ateliers** de maquettage : 
   - Période : octobre à novembre 
-  - Présence d'observateurs (prestataires) - à confirmer ?
+  - Présence d'observateurs (prestataires) - à confirmer
   - Implication de **partenaires** ? (ex: Aglia et LPDB)
 - **Spécifications fonctionnelles** (Cas d'utilisation, avec maquette statique)
 
 ---
-# Avancement > Prototype (1/2)
+# Avancement > Socle (1/2)
 
 - **Optimisation** des performances : 
   - Optimisation du chargement des stratégies (80%)
@@ -43,7 +43,7 @@ Prochaine réunion : **semaine 41** (date à fixer par Glenn)
   - Référentiel des min/max par espèce
 
 ---
-# Avancement > Prototype (2/2)
+# Avancement > Socle (2/2)
 
 - **Migration** :
   - Migration Programmes/Stratégies (en cours)
@@ -75,25 +75,24 @@ Prochaine réunion : **semaine 41** (date à fixer par Glenn)
 - Écran **Opération**
   - lecture/écriture: OK (sauf lots - onglet Capture)
 
-
 ---
 
-## Avancement > Rapports de synthèse 
+## Avancement > Rapports 
 
-- Types de graphique ? 
-- 
-
+- Restitution aux professionels
+- Rapport de contrôle
+  - Types de graphique à intégrer ?
 
 ---
 ## Liens
 
 Liens utiles :
-* Documentation ObsMer
+* Documentation projet
   * Compte-rendus de réunion : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/obsmer/crr
   * Spécifications fonctionnelles : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/tree/master/projects/obsmer/spe
 * Anomalies et évolutions
   * GitLab : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
-* Documentation dénérale
-  * https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
+* Autre 
+  * Documentation générale SUMARiS : https://gitlab.ifremer.fr/sih/sumaris/sumaris-doc
   
 
