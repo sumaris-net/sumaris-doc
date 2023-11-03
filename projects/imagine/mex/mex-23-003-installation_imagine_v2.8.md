@@ -49,6 +49,21 @@ Liste des tickets réalisés :
   update SOFTWARE_PROPERTY set label='sumaris.enumeration.LocationLevel.RECTANGLE_GFCM.id' where label IN ('sumaris.enumeration.LocationLevel.RECTANGLE_CGPM_GFCM.id', 'sumaris.enumeration.LocationLevel.GFCM_RECTANGLE.id');
   ```
 
+- Définir le noeud réseau par défaut
+  * Créer un répertoire (par exemple `config/environments/`)
+  * Crééer à l'intérieur le fichier `environment.json` : 
+    ```json
+    ```
+     
+  * Monter le répertoire dans l'image Docker, en modifiant le script de lancement (`run-app.sh`)    
+    ```bash
+    docker run -it -d --rm \
+           /* ... */
+           -v ${CONFIG_DIR}/environements:/usr/share/nginx/html/assets/environments \
+           /* ... */
+           ${CI_REGISTRY_IMAGE}
+    ``` 
+
 ## Schéma SIH2_ADAGIO_DBA
 
 RAS
@@ -57,6 +72,6 @@ RAS
 
 RAS
   
-## Mise a jours du programme SIH-OBSMER
+## Mise a jours du programme SIH-OBSBIO
 
 RAS
