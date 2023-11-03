@@ -34,29 +34,29 @@ En raison des congés et de contretemps rencontrés lors des mises en production
 
 ---
 
-- [ ] Sample table: option pour désactiver la génération des TAG_ID depuis la BDD, et reprendre celle de la ligne précédente (https://youtrack.ifremer.fr/issue/Obsbio-62)
-- [ ] Modifier la couleur orange des efforts quand trop d'efforts ont été réalisés sur un trimestre, sur le fond gris des colonnes "Efforts T1" et "Efforts T3" c'est difficile à lire (https://youtrack.ifremer.fr/issue/Obsbio-83)
-- [ ] Les efforts de tous les trimestres (passés, courant, futurs) doivent toujours être modifiables, même s'il y a des échantillonnages associés (https://youtrack.ifremer.fr/issue/Obsbio-48)
-- [ ] Gestion des droits utilisateurs (A COMPLETER)
+- [X] Sample table: option pour désactiver la génération des TAG_ID depuis la BDD, et reprendre celle de la ligne précédente (https://youtrack.ifremer.fr/issue/Obsbio-62)
+- [x] Modifier la couleur orange des efforts quand trop d'efforts ont été réalisés sur un trimestre, sur le fond gris des colonnes "Efforts T1" et "Efforts T3" c'est difficile à lire (https://youtrack.ifremer.fr/issue/Obsbio-83)
+- [x] Les efforts de tous les trimestres (passés, courant, futurs) doivent toujours être modifiables, même s'il y a des échantillonnages associés (https://youtrack.ifremer.fr/issue/Obsbio-48)
+- [x] Gestion des droits utilisateurs (A COMPLETER)
  
 ---
 # Tickets P0 à traiter (2/2)
 
-- [ ] Filtrage des sorties (https://youtrack.ifremer.fr/issue/Obsbio-89)
-- [ ] Par ligne de plan
-- [ ] Par identifiant d’échantillon
-- [ ] Créer sortie ou échantillonnage à partir de l’interface des lignes de plan (https://youtrack.ifremer.fr/issue/Obsbio-90 , cf. OBSBIO-10)
+- [x] Filtrage des sorties (https://youtrack.ifremer.fr/issue/Obsbio-89)
+  - [x] Par ligne de plan
+  - [x] Par identifiant d’échantillon
+- [x] Créer sortie ou échantillonnage à partir de l’interface des lignes de plan (https://youtrack.ifremer.fr/issue/Obsbio-90 , cf. OBSBIO-10)
 - [ ] Nœud de connexion (https://youtrack.ifremer.fr/issue/Obsbio-84)
 
 ---
 # Tickets P1 à traiter
 
 Priorité 1 :
-- [ ] Ajout des efforts campagnes dans l’interface (https://youtrack.ifremer.fr/issue/Obsbio-17)
+- [x] Ajout des efforts campagnes dans l’interface (https://youtrack.ifremer.fr/issue/Obsbio-17)
 - [ ] Définir le PSFM de l'âge en fonction du type de pièces calcifiées sélectionnées
 - [ ] La liste des zones doit avoir les mêmes valeurs que celle sur les lignes de plan
-- [ ] Les maturités "Maturity scale SMSF", "Maturité sexuelle WKMSGAD 9 stades" et "Maturité sexuelle Poissons osseux" sont dans la colonne "Autre"
-- [ ] Supprimer l'option programme "Sortie > Débarquements : Unité du poids"
+- [x] Les maturités "Maturity scale SMSF", "Maturité sexuelle WKMSGAD 9 stades" et "Maturité sexuelle Poissons osseux" sont dans la colonne "Autre"
+- [ ] ~~Supprimer l'option programme "Sortie > Débarquements : Unité du poids"~~
 
 ---
 # Avancement des autres volets (1/2)
