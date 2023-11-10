@@ -1,0 +1,36 @@
+@startsalt
+{
+
+  {/ <b> Détails | Capture }
+  ..
+
+    {
+      { Engin / espèce ciblée : | ^ FPN - Filet ^ | ^ Espèce cible ^ }
+
+      {
+        Fin filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+      }
+    }
+
+    <b>Caractéristiques :
+
+    {
+      . | Mesures individuelles ? { (X) <b>Oui | () Non }
+      . | Déroulement normal ? { (X) <b>Oui | () Non }
+      . | . | + Autres caractéristiques (cf "Grille de saisie")
+    }
+
+    {
+        <b>Commentaire :
+
+        { "                                                                    "}
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt

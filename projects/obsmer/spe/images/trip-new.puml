@@ -1,0 +1,46 @@
+@startsalt
+{
+  <b>Nouvelle marée
+  ..
+  {/ <b>Détails | Engins | Opérations }
+  .
+  {
+
+      Programme de collecte*:    | { ^SIH-OBSMER                                 ^ } | * | {^"Stratégie"
+
+      Démarrage au 01/01/2023 }
+
+      Observateurs* :            | ^ Observateur #1       ^ | { [<&plus>] | [<&x>] } | {^"Saisisseur"
+                                                                                               Nicolas DUPOND - Ifremer  }
+
+      Navire*:                   | { ^851751 - PETIT BATEAU                      ^ } | * | .
+
+      Départ*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | <&calendar> Créé le 10/11/2023
+
+      Retour*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^ | ^ hh:mm^ } | <&calendar> Mis à jour le 10/11/2023
+
+      Vente*:     | { ^Type de vente         ^ } | . | [Terminer la saisie]
+      .           | { ^Lieu de vente         ^ } | { ^ jj/mm/aaaa^ |  ^ hh:mm^ }
+
+  }
+
+  <b>Caractéristiques :
+
+  {
+      . |Nombre d'homme à bord : | " 4   "
+      . |Caractéristique #2 : | ^Valeur qualitative^
+      . |. | + autres caractéristiques (cf "Grille de saisie")
+      . |.
+  }
+
+  {
+     <b>Commentaire :
+
+     {+ .
+        "                                                               "
+     }
+  }
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt

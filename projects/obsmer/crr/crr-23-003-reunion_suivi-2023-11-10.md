@@ -1,5 +1,5 @@
 # Réunion de suivi ObsMer
-### 19/10/2023
+### 10/11/2023
 
 > Présents :
 >
@@ -7,13 +7,9 @@
 > - Vincent FACHERO (Ifremer)
 > - Marion SCAVINNER (Ifremer)
 > - Joanna VEGA (Ifremer)
-> - Thomas CLOATRE (Ifremer)
-> - Vincent BADTS (Ifremer)
 > - Benoit LAVENIER (EIS)
-> - Maxime DEMAREST (EIS)
-> - Sébastien POISSONNET (Codra)
 
-Prochaine réunion : 
+Prochaine réunion : Jeudi 16/11 à 15h ?
 
 ---
 # Méthodologie
