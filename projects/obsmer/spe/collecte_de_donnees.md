@@ -31,51 +31,29 @@
 ### Marée > onglet Engins
 ![ui-gears](/projects/obsmer/spe/images/gears-table.svg)
 
-> - Masquer les colonnes PSFM vides
-> - Ascenceur vertical 
+> - Conserver uniquement les colonnes PSFM ayant une valeur
+> - Libellé d'engin ?
+> - TODO: Optimiser le chargement de la stratégie
 
 ---
-## Opération > Détails - Engins dormants
+## Opération > Détails
 
-![ui-operation](/projects/obsmer/spe/images/operation-net.svg)
+![ui-operation](/projects/obsmer/spe/images/operation.svg)
 
 > - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
-> - Autoriser date de début OP AVANT marée 
+> - Engins dormants: autoriser date de début OP AVANT marée
+> - Engins traînants : Empêcher date de début OP en dehors de la période de la marée
+
+---
+## Opération > Capture
+
+(en cours de rédaction)
 
 ---
 
-## Opération > Détails - Engins traînant
+## Lots espèces
 
-![ui-operation](/projects/obsmer/spe/images/operation-trawl.svg)
-
-> - Empêcher date de début OP en dehors de la période de la marée
- 
----
-## Opération > Capture  (1/2)
-
-TODO
-
----
-## Opération > Capture (2/2)
-
-> Priorité:
-> - mode bureau 
-> - mode terrain ensuite
-
-> Règle(s) métier:
-> - Les espèces saisies sur un engin, sont à recopier dans l'autre engin.
-    >   Le poids par défaut est à zéro.
-> - (à confirmer) Recopier le taux d'échantillonnage, d'une ligne à l'autre ?
-> - Pouvoir saisir plusieurs taux d'échantillonnage
-
----
-
-## Lots espèces (1/2)
-
-![collect](/projects/apase/spe/images/batch-species.svg)
-
----
-## Lots espèces (2/2)
+(en cours de rédaction)
 
 > Règle(s) métier :
 > - Contrôle poids:
@@ -97,39 +75,30 @@ TODO
 
 ---
 
-## Mesures individuelles (1/2)
+## Mesures individuelles
+
+(en cours de rédaction)
 
 ![batch-species](/projects/apase/spe/images/individual-measure.svg)
 
-- Pourvoir saisir d'abord les espèces de la partie retenue, puis la partie rejettée
-- (priorité basse) Pourvoir ajouter un lot espèce depuis la saisie des mesures (nouveau bouton "+")
-
----
-## Mesures individuelles (2/2)
 > Règle(s) métier :
 > - Saisie au 1 cm, 0.5cm, 1mm, suivant l'espèce (cf normes Ifremer)
 
 ---
 ## Référentiels
 
-### Espèces commerciales
-
-- Insérer les espèces manquantes (action Quiterie)
-- Pouvoir d'ajouter une espèce par trimestre (max).
+(en cours de rédaction)
 
 ---
 ## Actions
 
-- [x] EIS: Livraison d'une nouvelle version (~ 1.33.3)
-- [x] Quiterie: envoi d'une liste des espèces
+- [x] EIS: Livraison une version testable (~ 3.0.0-rc1)
+- [x] Ifremer (Vincent Fachero): Déploiement docker
 
 ---
 ## Historique
 
 |       Date | Sections mises à jour                                                                         |
 |-----------:|-----------------------------------------------------------------------------------------------|
-| 11/04/2022 | Création                                                                                      |
-| 25/04/2022 | Mise à jour écrans OPE                                                                        |
-| 25/05/2022 | - Ajout des écrans engins (avec notion de sous-engins)<br/>-Mise à jour écrans des opérations |
-| 20/06/2022 | - Modification des écrans sous-engins                                                         |
-| 19/09/2022 | - **Modification des écrans lots**                                                            
+| 11/09/2023 | Création                                                                                      |
+| 10/11/2023 | Ajout écrans Marée, Engins et OP                                                              |
