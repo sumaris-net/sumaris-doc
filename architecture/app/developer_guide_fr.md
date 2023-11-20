@@ -12,7 +12,7 @@
     - Dans le constructeur :
         * Limiter les paramètres en utilisant injector: Injector pour faciliter l'héritage.
         * Définir tous les paramètres avec une visibilité protected.
-        * Ajouter un paramètre state: RxState<MonComposantState>.
+        * Ajouter un paramètre state: `RxState<MonComposantState>`.
     - Pour chaque attribut dynamique du composant :
         * Définir l'attribut avec son type simple dans la classe MonComposantState.
         * Dans le composant, définir un getter et un setter avec @Input qui utilise state :

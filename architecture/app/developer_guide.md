@@ -12,7 +12,7 @@
     - Within the constructor:
         * Limit the parameters by using injector: Injector to facilitate inheritance.
         * Define all parameters with `protected` visibility.
-        * Add a parameter state: RxState<MyComponentState>.
+        * Add a parameter state: `RxState<MyComponentState>`.
     - For each dynamic attribute of the component:
         * Define the attribute with its basic type in the MyComponentState class.
         * In the component, define a getter and a setter with @Input that uses state:
