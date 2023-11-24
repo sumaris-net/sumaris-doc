@@ -158,4 +158,4 @@ RAS
   ```
 
 - [ ] Suppression des lignes PMFM_STRATEGY redondantes : 
-  - Supprimer les lignes ayant un PMFM_FK=AGE, alors qu'il existe des PMFM_STRATEGY avec parameter_fk 'AGE' et n'ayant aucune fraction_kc) 
+  - Supprimer les lignes ayant un PMFM_FK=AGE, alors qu'il existe des PMFM_STRATEGY avec parameter_fk 'AGE' et n'ayant aucune fraction_fk) 

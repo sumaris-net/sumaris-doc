@@ -1,0 +1,39 @@
+@startsalt
+{
+  <b>Nouvelle sortie
+  ..
+  {/ <b>Détails | Débarquements }
+  .
+  {
+
+      Programme de collecte*:    | { ^SIH-OBSVENTE                                 ^ } | * | {^"Stratégie"
+
+      2023_V0001 DRZ <&eye> }
+
+      Observateurs* :            | ^ Observateur #1       ^ | { [<&plus>] | [<&x>] } | {^"Saisisseur"
+                                                                                               Nicolas DUPOND - Ifremer  }
+
+      Lieu / Date*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | <&calendar> Créé le 10/11/2023
+
+  }
+
+  <b>Caractéristiques :
+
+  {
+      . | Liste d'espèce :      | "  "
+      . | Caractéristique #2 :  | ^Valeur qualitative^
+      . | .                     | + autres caractéristiques (cf "Grille de saisie" - à venir)
+      . | .
+  }
+
+  {
+     <b>Commentaire :
+
+     {+ .
+        "                                                               "
+     }
+  }
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt

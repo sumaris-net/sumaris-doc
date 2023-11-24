@@ -1,4 +1,4 @@
-# Collecte de données
+# Collecte de données (Imagine)
 ## Spécifications
 ---
 

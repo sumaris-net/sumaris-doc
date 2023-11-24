@@ -1,0 +1,19 @@
+@startsalt
+{
+
+  {/  Détails | <b> Échantillonnages  }
+
+	{#
+      [ <&plus> ]          |  .              | .
+      # | <b>Navire        | <b>Espèce   | <b> PSFM 2
+      <b>POL - Pollachius
+      1 | 851751- Navire 1 | POL - Pollachius...  | Caractéristique 2
+    }
+
+  --
+
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt

@@ -1,14 +1,11 @@
-# Collecte de données (ObsMer)
+# Collecte de données (ObsVente)
 ## Spécifications
 ---
 
 ## Sommaire
 
-- [Marée](#/4/3)
-    - [Engin](#/4/4)
-- [Opération](#/4/11)
-    - [Capture](#/4/12)
-        - [Mesures individuelles](#/4/15)
+- [Sortie en criée](#/4/3)
+- [Échantillonnages](#/4/11)
 - Actions
 - Historique
 
@@ -16,34 +13,29 @@
 
 ## Documents
 
-- [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
-- [SPEC Fonc-Allegro_2023_V2](/projects/obsmer/doc/obsmer-doc-23-002-Propositions%20SPEC-Fonc-Allegro_2023_V2_Reflexions%20GT_300323.xlsx)
-- [Champs saisie](/projects/obsmer/doc/obsmer-doc-23-004-champs_saisie.xlsx)
+- TODO
 
 ---
+
 ## Lignes de plan
 
-- Fichier CSV importé dans WAO ObsMer
+- Fichier CSV importé dans WAO ObsVente
 - Possibilité de modifier/supprimer une ligne
-  - Facades (x4) 
-    - Strates : Trainants, Dormants_<12m, Trainants_[12-18m[
+- TODO : Mapping modèle WAO / 
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
 ---
 
-## Marée > Détails
+## Sortie en criées
 
-![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
+![ui-observed-location](/projects/obsvente/spe/images/observed-location-new.svg)
 
 ---
 
-### Marée > onglet Engins
-![ui-gears](/projects/obsmer/spe/images/gears-table.svg)
+### Sortie en criée > onglet Échantillonnages
+![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
-> - Conserver uniquement les colonnes PSFM ayant une valeur
-> - Libellé d'engin ?
-> - TODO: Optimiser le chargement de la stratégie
 
 ---
 ## Opération > Détails
