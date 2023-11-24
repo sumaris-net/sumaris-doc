@@ -1,16 +1,26 @@
 @startsalt
 {
 
-  {/  Détails | <b> Échantillonnages  }
+  {/  Détails | <b> Échantillonnages }
 
 	{#
-      [ <&plus> ]          |  .              | .
-      # | <b>Navire        | <b>Espèce   | <b> PSFM 2
-      <b>POL - Pollachius
-      1 | 851751- Navire 1 | POL - Pollachius...  | Caractéristique 2
-    }
+      [ <&plus> ]
+      # | Priorité | <b>Espèce              | Navire | Raison de non observation | Commentaire
+      [X] . | 1 | POL - Pollachius          | 851751- Navire 1 | .
+      [ ] . | 2 | MON - Lophius piscarorius | . | ^ Espèce absente       ^ | .
+      [X] . | 3 | ANE - Lophius budegassa   | 851751 - Navire 1 | . | .
+      [ ] . | 4 | PIL - ...                 | . | ^ Espèce absente       ^ | .
+      [X] . | 5 | ANE - Lophius budegassa   | 741541 - Navire 2 | . | .
+      [ ] . | 6 | ... | . | .
 
+    }
+    { 15 espèces minimales observées (justifiez si non observée) }
+
+    { (max: 30 espèces) }
+
+    { ATTENTION: une même espèce peut-être tiré plusieurs fois }
   --
+
 
   {
     [Fermer] | [Sauvegarder]

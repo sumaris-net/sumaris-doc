@@ -13,7 +13,7 @@
 
 ## Documents
 
-- TODO
+- Formulaire terrain (action Joanna)
 
 ---
 
@@ -31,32 +31,32 @@
 
 ![ui-observed-location](/projects/obsvente/spe/images/observed-location-new.svg)
 
+> Lignes de plan avec statut "programmée" doivent être importée (depuis WAO).
+> Avec la liste des espèces prioritaires à échantillonner.
+
 ---
 
 ### Sortie en criée > onglet Échantillonnages
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
-
----
-## Opération > Détails
-
-![ui-operation](/projects/obsmer/spe/images/operation.svg)
-
-> - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
-> - Engins dormants: autoriser date de début OP AVANT marée
-> - Engins traînants : Empêcher date de début OP en dehors de la période de la marée
-
----
-## Opération > Capture
-
-(en cours de rédaction)
-
 ---
 
 ## Lots espèces
 
-(en cours de rédaction)
+- Lots espèces: 
+  - espèce commerciale
+  - catégorie commerciale, présentation, état
+  - Poids de la caisse, puis poids échantillonné
+  > Cas des mélanges ? (ex: baudroie blanche/noire)
+  > Pas de sous-échantillonnage ?
+- Mesures individuelles :
+  - espèce scientifique 
+  - sexe, longueur 
+  - 30 individus
 
+---
+
+## Lots espèces
 > Règle(s) métier :
 > - Contrôle poids:
 >

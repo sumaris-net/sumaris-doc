@@ -85,6 +85,15 @@
 
 ---
 
+## Validation des données
+
+- Faciliter le travail des validateurs
+- Filtres :
+  - Critère PSFM (ex: programme de rattachement sur ObsMer)
+  - Pouvoir enregistrer des filtres ?
+
+---
+
 ## Mesures individuelles
 
 (en cours de rédaction)
