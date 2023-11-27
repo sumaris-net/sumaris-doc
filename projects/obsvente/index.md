@@ -12,7 +12,7 @@ Refonte du logiciel Allegro (ObsVente v2)
   * [Collecte de données](./spe/collecte_de_donnees.md)
   
 - Documentation techniques :
-  * TODO
+  * [Formualire terrain OBSVENTE](./doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf)
 
 - Liens utiles :
   * Anomalies et évolutions : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
