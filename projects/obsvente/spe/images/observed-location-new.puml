@@ -8,12 +8,14 @@
 
       Programme de collecte*:    | { ^SIH-OBSVENTE                                 ^ } | * | {^"Stratégie"
 
-      2023_V0001 DRZ <&eye> }
+      ObsVente démarrage au 01/01/2024 <&eye> }
 
       Observateurs* :            | ^ Observateur #1       ^ | { [<&plus>] | [<&x>] } | {^"Saisisseur"
                                                                                                Nicolas DUPOND - Ifremer  }
 
       Lieu / Date*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | <&calendar> Créé le 10/11/2023
+
+      Ligne de plan*:     | { ^ 2023_V0001 DRZ ^ }
 
   }
 
