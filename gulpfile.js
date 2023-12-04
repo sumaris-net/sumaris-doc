@@ -116,8 +116,8 @@ function appCopyExternalResources() {
     // Copy files to dist
     gulp.src([
       'node_modules/katex/dist/*fonts/**',
-      'node_modules/reveal.js-plugins/menu/menu.css',
-      'node_modules/reveal.js-plugins/menu/font-awesome*/**/*'
+      'node_modules/reveal.js-menu/menu.css',
+      'node_modules/reveal.js-menu/font-awesome*/**/*'
     ])
     .pipe(gulp.dest('dist')),
 
