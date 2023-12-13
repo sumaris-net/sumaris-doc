@@ -72,6 +72,6 @@ RAS
 
 RAS
   
-## Mise a jours du programme SIH-OBSBIO
+## Mise à jour du programme SIH-OBSBIO
 
 RAS

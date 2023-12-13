@@ -133,7 +133,7 @@ RAS
   /
   ```
   
-## Mise a jours du programme SIH-OBSBIO
+## Mise à jour du programme SIH-OBSBIO
 
 - [ ] Mettre à jour les PMFM_STRATEGY : Utiliser le paramètre AGE plutot que le PMFM age
   ```sql

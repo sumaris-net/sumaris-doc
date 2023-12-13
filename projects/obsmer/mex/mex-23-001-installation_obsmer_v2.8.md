@@ -24,6 +24,6 @@ RAS
 
 - Mise à jour de la vue IMAGE_ATTACHMENT
 
-## Mise a jours du programme SIH-OBSMER
+## Mise à jour du programme SIH-OBSMER
 
 - TODO
