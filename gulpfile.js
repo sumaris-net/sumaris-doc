@@ -21,6 +21,7 @@ const gulp = require('gulp'),
   footer = require('gulp-footer'),
   exec = require('gulp-exec');
 
+const plantumlVersion = '1.2022.7';
 const uglifyBaseOptions = {
   toplevel: true,
   warnings: true,
@@ -143,7 +144,7 @@ function appGenerateSvg(done) {
     pipeStdout: false, // default = false, true means stdout is written to file.contents
   };
   return gulp.src(folders_svg)
-      .pipe(exec((file) => `java -jar lib/plantuml-1.2022.7.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
+      .pipe(exec((file) => `java -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
       .on('end', done);
 }
 

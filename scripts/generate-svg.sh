@@ -8,8 +8,8 @@ if [[ "_" == "_${PROJECT_DIR}" ]]; then
 fi;
 
 JAR_DIR="${PROJECT_DIR}/lib"
-JAR_FILE="${JAR_DIR}/plantuml.jar"
-JAR_VERSION="1.2019.12"
+JAR_VERSION="1.2022.7"
+JAR_FILE="${JAR_DIR}/plantuml-${JAR_VERSION}.jar"
 JAR_URL="https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${JAR_VERSION}/plantuml-${JAR_VERSION}.jar"
 
 # Download the jar if need
@@ -27,5 +27,6 @@ fi;
 
 
 echo "--- Converting all PlatUML files from `pwd` into SVG..."
-java -jar lib/plantuml.jar -tsvg "./**.puml" -charset UTF-8 -progress -duration
+cd ${PROJECT_DIR}
+java -jar ${JAR_FILE} -tsvg "./**.puml" -charset UTF-8 -progress -duration -nometadata
 echo "Done"
