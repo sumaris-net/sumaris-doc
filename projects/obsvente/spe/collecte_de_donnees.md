@@ -53,6 +53,17 @@
   - espèce scientifique 
   - sexe, longueur 
   - 30 individus
+  
+---
+
+## Lots espèces
+
+- Mesures individuelles :
+  - Connectivité à la règle **Gwaleen** 
+    - Mode bureau (USB ?) 
+  - Caisse de **mélange**: possible au sein d'un même espèce commerciale :  
+    Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale  
+    (**non prioritaire**)
 
 ---
 

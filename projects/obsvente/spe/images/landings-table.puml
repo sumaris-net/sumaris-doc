@@ -5,13 +5,12 @@
 
 	{#
       [ <&plus> ]
-      # | Priorité | <b>Espèce              | Navire | Raison de non observation | Commentaire
-      [X] . | 1 | POL - Pollachius          | 851751- Navire 1 | .
-      [ ] . | 2 | MON - Lophius piscarorius | . | ^ Espèce absente       ^ | .
-      [X] . | 3 | ANE - Lophius budegassa   | 851751 - Navire 1 | . | .
-      [ ] . | 4 | PIL - ...                 | . | ^ Espèce absente       ^ | .
-      [X] . | 5 | ANE - Lophius budegassa   | 741541 - Navire 2 | . | .
-      [ ] . | 6 | ... | . | .
+      # | Priorité | <b>Espèce commerciale | <b>Espèce scientifique             | Navire | Raison de non observation | Commentaire
+      [X] . | 1 | POL - Lieu jaune | POL - Pollachius pollachius | 851751- Navire 1 | .
+      [X] . | 2 | MNZ - Baudroie | . | 851751 - Navire 1 | .
+      [ ] . | 3 | PIL - Sardine commune | PIL - Sardina pilchardus | . | ^ Espèce absente       ^ | .
+      [X] . | 4 | NEP - Langoustine | NEP - Nephrops norvegicus   | 741541 - Navire 2 | . | .
+      [ ] . | 5 | ... | . | . | .
 
     }
     { 15 espèces minimales observées (justifiez si non observée) }

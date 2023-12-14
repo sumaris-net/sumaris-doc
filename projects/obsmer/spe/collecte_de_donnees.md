@@ -13,7 +13,6 @@
 - Historique
 
 ---
-
 ## Documents
 
 - [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
@@ -31,19 +30,17 @@
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
 ---
-
 ## Marée > Détails
 
 ![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
 
 ---
-
 ### Marée > onglet Engins
 ![ui-gears](/projects/obsmer/spe/images/gears-table.svg)
 
-> - Conserver uniquement les colonnes PSFM ayant une valeur
-> - Libellé d'engin ?
-> - TODO: Optimiser le chargement de la stratégie
+> - [ ] ~~Optimiser le chargement de la stratégie~~
+> - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
+> - [ ] Libellé d'engin ?
 
 ---
 ## Opération > Détails
@@ -60,7 +57,6 @@
 (en cours de rédaction)
 
 ---
-
 ## Lots espèces
 
 (en cours de rédaction)
@@ -84,16 +80,6 @@
 > ```
 
 ---
-
-## Validation des données
-
-- Faciliter le travail des validateurs
-- Filtres :
-  - Critère PSFM (ex: programme de rattachement sur ObsMer)
-  - Pouvoir enregistrer des filtres ?
-
----
-
 ## Mesures individuelles
 
 (en cours de rédaction)
@@ -104,9 +90,33 @@
 > - Saisie au 1 cm, 0.5cm, 1mm, suivant l'espèce (cf normes Ifremer)
 
 ---
+## Inerte, végétaux et animaux
+
+(en cours de rédaction)
+
+- Inerte, végétaux : cf formulaire terrain
+- Animaux (ENV) : cf formulaire terrain
+
+---
+## Captures accidentelles
+
+(en cours de rédaction)
+- Plusieurs cas : Oiseaux, Mammifères
+
+---
+## Validation des données
+
+- Faciliter le travail des validateurs
+- Filtres :
+  - Critère PSFM (ex: programme de rattachement sur ObsMer)
+  - Pouvoir enregistrer des filtres ?
+
+---
 ## Référentiels
 
 (en cours de rédaction)
+
+- Ajouter la régionalisation des espèces/engins (Outre-mer)
 
 ---
 ## Actions
