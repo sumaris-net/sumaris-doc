@@ -13,8 +13,24 @@ Liste des tickets réalisés :
 ## Configuration du Pod
 
 - [ ] Nouvelles options dans le fichier de configuration :
-  ```properties
-  # TODO
+  ```properties  
+  # [Optionnel] Indexation et recherche des navires via ElasticSearch
+  # See documentation at: https://docs.spring.io/spring-boot/docs/2.7.17/reference/html/data.html#data.nosql.elasticsearch
+  spring.elasticsearch.enabled=true
+  spring.elasticsearch.uris=http://localhost:9200
+  spring.elasticsearch.username=<USERNAME>
+  spring.elasticsearch.password=<PASSWORD>
+  
+  # [Optionnel] Nb years for ElasticSearch vessels indexation (used to limit vessel features/registration) 
+  sumaris.elasticsearch.vessel.snapshot.scheduling.nbYears=5
+  
+  # Limit vessel indexation/search to specific VesselType (e.g. "Fishing vessel", "Scientific vessel")
+  sumaris.data.vessel.type.ids=1,8
+  
+  # Enumerations
+  sumaris.enumeration.VesselType.UNKNOWN.id=0
+  sumaris.enumeration.VesselType.FISHING_VESSEL.id=1
+  sumaris.enumeration.VesselType.SCIENTIFIC_RESEARCH_VESSEL.id=8
   ```
 
 ## Schéma SIH2_ADAGIO_DBA
