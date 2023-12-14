@@ -8,6 +8,8 @@
 
 - [User manual](user-manual/index.md)
 
+- [Sub-projects (FR)](projects/index.md)
+
 ## License
 
 All documents and source code are under [License GPL v3](./LICENSE), except user manual that use a CC-by-SA license.
