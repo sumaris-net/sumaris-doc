@@ -1,4 +1,4 @@
-# Ichtyomètre 
+# Ichtyomètre bluetooth
 
 Modèle de règle: 
 - Gwaleen (Aptatio)
