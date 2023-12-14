@@ -23,6 +23,5 @@ Refonte du logiciel Allegro (ObsVente v2)
 ---
 ## Comptes-rendu
 
-- [CRR 22/09/2023](crr/crr-23-001-reunion_suivi-2023-09-22.md) - Réunion de suivi du PoC ObsMer 
-- [CRR 05/10/2023](crr/crr-23-001-reunion_suivi-2023-09-22.md) - Réunion de suivi du PoC ObsMer
+- [CRR 14/12/2023](../obsmer/crr/crr-23-004-reunion_suivi-2023-12-14.md) - Réunion de suivi du PoC ObsMer/ObsVente
 
