@@ -11,6 +11,7 @@ Refonte du logiciel Allegro (ObsMer v2)
 
 - [Spécifications fonctionnelles](./spe) :
   * [Collecte de données](./spe/collecte_de_donnees.md)
+  * [Restitution](./spe/restitution.md)
   
 - Documentation techniques :
   * [Manuels de mise en exploitation](./mex) (MEX)

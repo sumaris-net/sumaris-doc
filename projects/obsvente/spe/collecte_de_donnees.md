@@ -1,12 +1,14 @@
-# Collecte de données (ObsVente)
-## Spécifications
+# Collecte de données
+## Spécifications (ObsVente)
 ---
 
 ## Sommaire
 
-- [Sortie en criée](#/4/3)
-- [Échantillonnages](#/4/11)
-- Actions
+- [Sortie en criée](#/1/4)
+  - [Échantillonnages](#/1/5)
+- [Lots epsèces](#/1/6)
+  - [Mesures individuelles](#/1/9)
+- Référentiels
 - Historique
 
 ---
@@ -41,7 +43,7 @@
 
 ---
 
-## Lots espèces
+## Lots espèces (1/3)
 
 - Lots espèces: 
   - espèce commerciale
@@ -56,7 +58,7 @@
   
 ---
 
-## Lots espèces
+## Lots espèces (2/3)
 
 - Mesures individuelles :
   - Connectivité à la règle **Gwaleen** 
@@ -67,7 +69,8 @@
 
 ---
 
-## Lots espèces
+## Lots espèces (3/3)
+
 > Règle(s) métier :
 > - Contrôle poids:
 >
@@ -103,15 +106,10 @@
 (en cours de rédaction)
 
 ---
-## Actions
-
-- [x] EIS: Livraison une version testable (~ 3.0.0-rc1)
-- [x] Ifremer (Vincent Fachero): Déploiement docker
-
----
 ## Historique
 
-|       Date | Sections mises à jour                                                                         |
-|-----------:|-----------------------------------------------------------------------------------------------|
-| 11/09/2023 | Création                                                                                      |
-| 10/11/2023 | Ajout écrans Marée, Engins et OP                                                              |
+|       Date | Sections mises à jour                                                                 |
+|-----------:|---------------------------------------------------------------------------------------|
+| 11/09/2023 | Création                                                                              |
+| 10/11/2023 | Ajout écrans Marée, Engins et OP                                                      |
+| 14/12/2023 | Tableau des échantillonnages : distinction colonnes espèce commerciale/scientifique   |

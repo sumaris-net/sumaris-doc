@@ -10,6 +10,7 @@ Refonte du logiciel Allegro (ObsVente v2)
 
 - [Spécifications fonctionnelles](./spe) :
   * [Collecte de données](./spe/collecte_de_donnees.md)
+  * [Extraction des données](./spe/extraction.md)
   
 - Documentation techniques :
   * [Formualire terrain OBSVENTE](./doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf)

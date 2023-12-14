@@ -1,5 +1,5 @@
-# Collecte de données (ObsMer)
-## Spécifications
+# Collecte de données
+## Spécifications (ObsMer)
 ---
 
 ## Sommaire
@@ -9,7 +9,7 @@
 - [Opération](#/4/11)
     - [Capture](#/4/12)
         - [Mesures individuelles](#/4/15)
-- Actions
+- Référentiels
 - Historique
 
 ---
@@ -117,12 +117,6 @@
 (en cours de rédaction)
 
 - Ajouter la régionalisation des espèces/engins (Outre-mer)
-
----
-## Actions
-
-- [x] EIS: Livraison une version testable (~ 3.0.0-rc1)
-- [x] Ifremer (Vincent Fachero): Déploiement docker
 
 ---
 ## Historique
