@@ -26,7 +26,7 @@ if  [[ ! -f "${JAR_FILE}" ]]; then
 fi;
 
 
-echo "--- Converting all PlatUML files from `pwd` into SVG..."
+echo "--- Converting all PlatUML files from ${PROJECT_DIR} into SVG..."
 cd ${PROJECT_DIR}
 java -jar ${JAR_FILE} -tsvg "./**.puml" -charset UTF-8 -progress -duration -nometadata
 echo "Done"

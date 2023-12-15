@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+class DenormalizedSamplingStrata <<Entity>>{
+  +id: Integer
+  +label: String
+  +startDate: Date [0..1]
+  +endDate: Date [0..1]
+  +description: String [0..1]
+  +comments: String [0..1]
+  +observationLocationComments: String [0..1]
+  +samplingStrategy: String [0..1]
+  +taxonGroupName: String [0..1]
+  +samplingSchemeLabel: String [0..1]
+  +samplingSchemeName: String [0..1]
+  +samplingSchemeDescription: String [0..1]
+  +gearMeshRange: String [0..1]
+  +vesselLengthRange: String [0..1]
+  +metier: String [0..1]
+  +areaName: String [0..1]
+  +subAreaLocationIds: String [0..1]
+  +updateDate: Date
+}
+
+DenormalizedSamplingStrata "*" -up-> "1" Program
+DenormalizedSamplingStrata "*" -up-> "1" Status
+
+DenormalizedSamplingStrata "*" -left-> "0..1" Department
+DenormalizedSamplingStrata "*" -left-> "0..1" Person
+
+DenormalizedSamplingStrata "*" *-right-> "0..1" Location: "observationLocation"
+
+@enduml

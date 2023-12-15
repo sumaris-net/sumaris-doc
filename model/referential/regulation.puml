@@ -1,0 +1,52 @@
+@startuml
+hide empty members
+class Corpus <<Entity>> {
+  +id: Integer
+  +label: String
+  +name: String
+  +startDate: Date
+  +endDate: Date
+  +description: String [0..1]
+  +comments: String [0..1]
+  +creationDate: Date
+  +updateDate: Date
+}
+class Fishery <<Entity>> {
+  +id: Integer
+  +label: String
+  +name: String
+  +description: String [0..1]
+  +comments: String [0..1]
+  +creationDate: Date
+  +updateDate: Date
+}
+
+class RegulationArea <<Entity>>{
+  +id: Integer
+}
+
+class MinimumSizeAllowed <<Entity>> {
+  +id: Integer
+  +updateDate: Date
+}
+
+Fishery "0..1" *-down- "1" RegulationArea
+Fishery "1.*" -up- "*" Corpus
+
+Fishery "*" -right-> "*" Grouping
+Fishery "*" -right-> "*" Metier
+Fishery "*" -up-> "*" TaxonGroup
+Fishery "*" -right-> "*" Gear
+
+RegulationArea "*" -down-> "0..1" Location
+RegulationArea "*" -down-> "0..1" NearbySpecificArea
+RegulationArea "*" -down-> "0..1" DepthGradient
+RegulationArea "*" -down-> "*" Location: "regulationLocations"
+
+Corpus "1" *-right- "*" MinimumSizeAllowed
+
+MinimumSizeAllowed "*" -right-> "1" Unit: "sizeUnit"
+MinimumSizeAllowed "*" -down-> "1" TaxonGroup
+MinimumSizeAllowed "*" -down-> "1..*" Location
+
+@enduml

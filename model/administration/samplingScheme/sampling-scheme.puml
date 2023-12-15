@@ -1,0 +1,41 @@
+@startuml
+hide empty members
+
+class SamplingScheme <<Entity>> {
+  +id: Integer
+  +label: String
+  +name: String
+  +description: String [0..1]
+  +comments: String [0..1]
+  +creationDate: Date
+  +updateDate: Date
+}
+
+SamplingScheme "*" -up-> "1" Program
+
+class SamplingStrata <<Entity>>{
+  +id: Integer
+  +label: String
+  +startDate: Date [0..1]
+  +endDate: Date [0..1]
+  +description: String [0..1]
+  +comments: String [0..1]
+  +updateDate: Date
+}
+
+class SamplingStrataMeasurement <<Measurement>>{
+
+}
+
+SamplingScheme "0..1" *-down- "1" SamplingStrata
+SamplingStrata "*" -up-> "1" Status
+SamplingStrata "*" -left-> "0..1" Department
+SamplingStrata "*" -left-> "0..1" Person
+
+SamplingStrata "1" *-right-> "*" SamplingStrataMeasurement
+
+SamplingStrata "*" -down-> "*" Grouping
+SamplingStrata "*" -down-> "*" Fishery
+SamplingStrata "*" -down-> "*" Vessel
+
+@enduml
