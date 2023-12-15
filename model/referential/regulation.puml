@@ -27,17 +27,19 @@ class RegulationArea <<Entity>>{
 
 class MinimumSizeAllowed <<Entity>> {
   +id: Integer
+  +minimumSize: Double
   +updateDate: Date
 }
 
-Fishery "0..1" *-down- "1" RegulationArea
+Fishery "1" *-down- "1..*" RegulationArea
 Fishery "1.*" -up- "*" Corpus
 
-Fishery "*" -right-> "*" Grouping
+Fishery "*" -left-> "*" Grouping
 Fishery "*" -right-> "*" Metier
 Fishery "*" -up-> "*" TaxonGroup
 Fishery "*" -right-> "*" Gear
 
+RegulationArea "*" -left-> "0..1" Grouping
 RegulationArea "*" -down-> "0..1" Location
 RegulationArea "*" -down-> "0..1" NearbySpecificArea
 RegulationArea "*" -down-> "0..1" DepthGradient
