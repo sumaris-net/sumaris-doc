@@ -19,6 +19,7 @@ Prochaine réunion : Jeudi 04/01/2024 à 15h
 
 - Pas de réunion les 15 derniers jours de décembre
 - En janvier: Vincent Fachero et Caroline commenceront les spécifications fonctionnelles (Cas d'utilisation)
+- EIS doit continuer le PoC, en avancant également sur la partie **calendrier d'activité mensuelle**
 
 ---
 # Avancement > Socle (1/2)
