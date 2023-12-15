@@ -4,6 +4,7 @@ hide empty members
 class DenormalizedSamplingStrata <<Entity>>{
   +id: Integer
   +label: String
+  +name: String [0..1]
   +startDate: Date [0..1]
   +endDate: Date [0..1]
   +description: String [0..1]
@@ -19,6 +20,7 @@ class DenormalizedSamplingStrata <<Entity>>{
   +metier: String [0..1]
   +areaName: String [0..1]
   +subAreaLocationIds: String [0..1]
+  +creationDate: Date
   +updateDate: Date
 }
 
