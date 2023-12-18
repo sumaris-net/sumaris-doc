@@ -4,14 +4,14 @@ hide empty members
 class ObservedLocation {
     +id
     +program: Program
-    +startDateTime
-    +endDateTime [0..1]
+    +startDateTime: Date
+    +endDateTime: Date [0..1]
 }
 
 class Landing {
   +id
   +program: Program
-  +landingDateTime
+  +landingDateTime: Date
 }
 
 ObservedLocation "0..1" *-right- "*" Landing : contains

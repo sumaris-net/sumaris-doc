@@ -41,3 +41,12 @@ Each collected data has a root entity, linked to a program.
 - Landing: an observation on a vessel, observed at landing time.
   * A landing can have a parent observed location, as parent;
   * A landing can have many trips, as children;
+
+---
+### Fishing Area
+
+![fishing-area](model/data/fishing-area.svg)
+
+---
+### Activity calendar
+![activity-calendar](model/data/activity-calendar.svg)

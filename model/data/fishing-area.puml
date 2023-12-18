@@ -1,0 +1,29 @@
+@startuml
+hide empty members
+
+class FishingArea {
+    +id : Integer
+    +qualificationDate : Date [0..1]
+    +qualificationComments : String [0..1]
+}
+
+class QualityFlag {
+}
+
+FishingArea "0..*" -up-* "0..1" Sale
+FishingArea "0..*" -up-* "0..1" Sample
+FishingArea "0..*" -up-* "0..1" VesselUseFeatures
+FishingArea "0..*" -up-* "0..1" GearUseFeatures
+FishingArea "0..*" -up-* "0..1" Produce
+
+FishingArea "*" -right- "1" QualityFlag
+
+FishingArea "*" -down-> "1" Location: "area"
+FishingArea "*" -down-> "0..*" Location: "regulationLocations"
+FishingArea "*" -down-> "0..*" Location : "managedLocations"
+
+FishingArea "*" -down-> "0..1" NearbySpecificArea
+FishingArea "*" -down-> "0..1" DepthGradient
+FishingArea "*" -down-> "0..1" DistanceToCoastGradient
+
+@enduml

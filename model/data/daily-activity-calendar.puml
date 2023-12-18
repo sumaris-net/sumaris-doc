@@ -1,0 +1,28 @@
+@startuml
+hide empty members
+
+class DailyActivityCalendar {
+    +id : Integer
+    +program : Program
+    +startDate : Date
+    +endDate : Date
+    +comments : String [0..1]
+    +controlDate : Timestamp [0..1]
+    +validationDate : Timestamp [0..1]
+    +qualificationDate : Timestamp [0..1]
+    +qualificationComments : String [0..1]
+    +creationDate : Timestamp
+    +updateDate : Timestamp
+}
+
+DailyActivityCalendar "*" -up-> "1" QualityFlag
+DailyActivityCalendar "*" -up-> "1" Vessel
+
+DailyActivityCalendar "*" -right-> "1" Department: "recorderDepartment"
+DailyActivityCalendar "*" -right-> "0..1" Person: "recorderPerson"
+
+DailyActivityCalendar "0..1" *-- "0..*" SurveyMeasurement
+DailyActivityCalendar "0..1" *-- "0..*" VesselUseFeatures
+DailyActivityCalendar "0..1" *-- "0..*" GearUseFeatures
+
+@enduml

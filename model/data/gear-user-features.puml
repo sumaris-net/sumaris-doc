@@ -1,0 +1,40 @@
+@startuml
+hide empty members
+
+class GearUseFeatures {
+    +id : Integer
+    +program: Program
+    +startDate : Date
+    +endDate : Date [0..1]
+    +rankOrder : Short
+    +comments : String [0..1]
+    +controlDate : Timestamp [0..1]
+    +validationDate : Timestamp [0..1]
+    +qualificationDate : Timestamp [0..1]
+    +qualificationComments : String [0..1]
+    +creationDate : Timestamp
+    +updateDate : Timestamp
+}
+class GearUseFeaturesOrigin {
+    +program: Program <<Identifier>>
+    +acquisitionLevel: AcquisitionLevel [0..1]
+}
+
+GearUseFeatures -up-> "1" Vessel
+
+
+GearUseFeatures "1\n<<Identifier>>" *-down- "0..*" GearUseFeaturesOrigin
+
+GearUseFeatures "1" *-down- "0..*" GearUseMeasurement
+GearUseFeatures "0..1" *-down- "0..*" FishingArea
+
+package "referential " #DDDDDD {
+    GearUseFeatures -right-> "0..1" Metier: "metier"
+    GearUseFeatures -left-> "0..1" Gear: "gear     "
+    GearUseFeatures -left-> "0..1" Gear: "otherGear        "
+}
+package "referential" #DDDDDD {
+    GearUseFeatures -up-> "1" QualityFlag
+}
+
+@enduml

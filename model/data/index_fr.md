@@ -47,3 +47,13 @@ Note:
   * Un débarquement peut avoir une sortie comme élément parent;
   * Un débarquement peut avoir de nombreuses marées comme sous-éléments;
 
+
+---
+### Zone de pêche
+
+![fishing-area](model/data/fishing-area.svg)
+
+---
+### Calendrier d'activité
+
+![activity-calendar](model/data/activity-calendar.svg)

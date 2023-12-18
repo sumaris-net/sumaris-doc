@@ -1,0 +1,40 @@
+@startuml
+hide empty members
+
+class VesselUseFeatures {
+    +id : Integer
+    +program: Program
+    +isActive : Integer
+    +startDate : Date
+    +endDate : Date [0..1]
+    +comments : String [0..1]
+    +controlDate : Timestamp [0..1]
+    +validationDate : Timestamp [0..1]
+    +qualificationDate : Timestamp [0..1]
+    +qualificationComments : String [0..1]
+    +creationDate : Timestamp
+    +updateDate : Timestamp
+}
+class VesselUseFeaturesOrigin {
+    +program: Program <<Identifier>>
+    +acquisitionLevel: AcquisitionLevel [0..1]
+}
+enum VesselUseFeaturesIsActiveEnum {
+    +INACTIVE = 0
+    +ACTIVE = 1
+    +NOT_EXISTS = 2
+}
+
+VesselUseFeatures  .right.> VesselUseFeaturesIsActiveEnum: "use"
+
+VesselUseFeatures -up-> "1" Vessel
+
+VesselUseFeatures "1\n<<Identifier>>" *-down- "0..*" VesselUseFeaturesOrigin
+VesselUseFeatures "1" *-down- "0..*" VesselUseMeasurement
+
+package "referential" #DDDDDD {
+    VesselUseFeatures -up-> "\n0..1" Location: "\nbasePortLocation"
+    VesselUseFeatures -up-> "\n1" QualityFlag
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+hide empty members
+
+class ActivityCalendar {
+    +id : Integer
+    +program : Program
+    +year : Integer
+    +directSurveyInvestigation : Boolean
+    +comments : String [0..1]
+    +controlDate : Timestamp [0..1]
+    +validationDate : Timestamp [0..1]
+    +qualificationDate : Timestamp [0..1]
+    +qualificationComments : String [0..1]
+    +creationDate : Timestamp
+    +updateDate : Timestamp
+}
+
+ActivityCalendar -up-> "1" QualityFlag
+ActivityCalendar -up-> "1" Vessel
+
+ActivityCalendar -right-> "1" Department: "recorderDepartment"
+ActivityCalendar -right-> "0..1" Person: "recorderPerson"
+
+ActivityCalendar "0..1" *-- "0..*" SurveyMeasurement
+ActivityCalendar "0..1" *-- "0..*" VesselUseFeatures
+ActivityCalendar "0..1" *-- "0..*" GearUseFeatures
+
+@enduml

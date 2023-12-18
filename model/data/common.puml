@@ -2,11 +2,12 @@
 hide empty members
 
 interface RootData {
-    +id: Int
+    +id: Integer
     +program: Program
-    +updateDate: Timestamp
     +recorderDepartment: Department
     +recorderPerson: Person[0..1]
+    +creationDate: Timestamp
+    +updateDate: Timestamp
 }
 
 interface ChildData {

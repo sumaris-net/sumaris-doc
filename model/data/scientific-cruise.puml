@@ -9,8 +9,8 @@ class ScientificCruise {
   +returnDateTime: Date
   +reference: String [0..1]
   +comments: String [0..1]
-  +creationDate: Date
-  +updateDate: Date
+  +creationDate: Timestamp
+  +updateDate: Timestamp
 }
 
 ScientificCruise "*" -up-> "1" Vessel

@@ -5,47 +5,47 @@ class Vessel {
 }
 
 class Trip {
-  +id
+  +id: Integer
   +program: Program
-  +departureDateTime
+  +departureDateTime: Date
   +departureLocation: Location
-  +returnDateTime
+  +returnDateTime: Date
   +returnLocation: Location
 }
 
 class PhysicalGear {
-    +id
-    +gear
+    +id: Integer
+    +gear: Gear
 }
 
 class Operation {
-    +id
-    +startDateTime
-    +endDateTime
-    +fishingStartDateTime [0..1]
-    +fishingEndDateTime [0..1]
+    +id: Integer
+    +startDateTime: Date
+    +endDateTime: Date
+    +fishingStartDateTime: Date [0..1]
+    +fishingEndDateTime: Date [0..1]
 }
 
 class VesselPosition {
-    +id
-    +dateTime
-    +latitude
-    +longitude
+    +id: Integer
+    +dateTime: Date
+    +latitude: Double
+    +longitude: Double
 }
 
-Trip "*" -up-> "1" Vessel
+Trip -up-> "1" Vessel
 Trip "1" *-right- "0..*" Operation
 Trip "1" *-right- "0..*" PhysicalGear : "     "
-Trip "1" --> "1..*\nobservers" Person
+Trip -left-> "0..*" Person: "observers"
 
-Operation "1" *-right- "0..*" OperationMeasurement
+Operation "1" *-right- "0..*" OperationMeasurement: "     "
 Operation "0..*" -up-> "1" PhysicalGear
-Operation "0..1" *-down-> "2..*" VesselPosition
+Operation "0..1" *-down- "2..*" VesselPosition
 
-PhysicalGear "1" *-right- "0..*" PhysicalGearMeasurement
+PhysicalGear "1" *-right- "0..*" PhysicalGearMeasurement: "      "
 
 package "referential" #DDDDDD {
-    PhysicalGear "*" -up-> "1" Gear : "     "
+    PhysicalGear -up-> "\n1" Gear : "     "
 }
 
 @enduml
