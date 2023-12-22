@@ -15,11 +15,12 @@ class DailyActivityCalendar {
     +updateDate : Timestamp
 }
 
+DailyActivityCalendar "*" -left-* "0..1" ObservedLocation: "        "
 DailyActivityCalendar "*" -up-> "1" QualityFlag
 DailyActivityCalendar "*" -up-> "1" Vessel
 
-DailyActivityCalendar "*" -right-> "1" Department: "recorderDepartment"
-DailyActivityCalendar "*" -right-> "0..1" Person: "recorderPerson"
+DailyActivityCalendar -right-> "1" Department: "recorderDepartment"
+DailyActivityCalendar -right-> "0..1" Person: "recorderPerson"
 
 DailyActivityCalendar "0..1" *-- "0..*" SurveyMeasurement
 DailyActivityCalendar "0..1" *-- "0..*" VesselUseFeatures

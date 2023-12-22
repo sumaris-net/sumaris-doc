@@ -1,0 +1,27 @@
+@startuml
+hide empty members
+interface IData {
+}
+
+class GearUseFeatures extends IData {
+    +id : Integer
+    +program:
+    +startDate : Date
+    +endDate : Date [0..1]
+    +comments : String [0..1]
+    +updateDate : Timestamp
+}
+class GearUseFeaturesOrigin {
+    +program: Program <<Identifier>>
+    +acquisitionLevel: AcquisitionLevel [0..1]
+}
+
+GearUseFeatures -up-> "1" Vessel
+GearUseFeatures "1\n<<Identifier>>" *-down- "0..*" GearUseFeaturesOrigin
+GearUseFeatures "1" *-down- "0..*" GearUseMeasurement
+
+package "referential" #DDDDDD {
+    GearUseFeatures -up-> "\n1" QualityFlag
+}
+
+@enduml

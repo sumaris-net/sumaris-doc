@@ -1,19 +1,15 @@
 @startuml
 hide empty members
+interface IData {
+}
 
-class VesselUseFeatures {
+class VesselUseFeatures extends IData {
     +id : Integer
     +program: Program
     +isActive : Integer
     +startDate : Date
     +endDate : Date [0..1]
     +comments : String [0..1]
-    +controlDate : Timestamp [0..1]
-    +validationDate : Timestamp [0..1]
-    +qualificationDate : Timestamp [0..1]
-    +qualificationComments : String [0..1]
-    +creationDate : Timestamp
-    +updateDate : Timestamp
 }
 class VesselUseFeaturesOrigin {
     +program: Program <<Identifier>>
