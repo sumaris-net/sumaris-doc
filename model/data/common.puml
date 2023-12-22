@@ -1,26 +1,35 @@
 @startuml
 hide empty members
 
-interface RootData {
+interface IData {
     +id: Integer
-    +program: Program
     +recorderDepartment: Department
-    +recorderPerson: Person[0..1]
-    +creationDate: Timestamp
+    +controlDate: Timestamp
+    +qualificationDate: Timestamp
+    +qualityFlag: QualityFlag
+    +qualificationComments: String [0..1]
     +updateDate: Timestamp
 }
 
-interface ChildData {
+interface IRootData extends IData {
+    +program: Program
+    +comments: String[0..1]
+    +validationDate: Timestamp
+    +recorderPerson: Person[0..1]
+    +creationDate: Timestamp
 }
 
-RootData "*" -left-> "0..1\n" Vessel: "     "
-RootData "1" --> "0..*\n" ChildData: "     "
+entity ChildData {
+}
+
+IRootData -left-> "0..1\n" Vessel: "     "
+IRootData "1" *--> "0..*\n" ChildData: "     "
 
 package "referential" #DDDDDD {
     interface ReferentialItem {
     }
 
-    RootData "1" -right-> "1..*\nobservers" Person: "                         "
-    RootData -right-> ReferentialItem: "use any"
+    IRootData "1" -right-> "1..*\nobservers" Person: "                         "
+    IRootData -right-> ReferentialItem: "use any"
 }
 @enduml

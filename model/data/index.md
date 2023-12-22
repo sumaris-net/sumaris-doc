@@ -43,10 +43,17 @@ Each collected data has a root entity, linked to a program.
   * A landing can have many trips, as children;
 
 ---
+### Activity calendar
+
+![activity-calendar](model/data/activity-calendar.svg)
+
+---
 ### Fishing Area
 
 ![fishing-area](model/data/fishing-area.svg)
 
 ---
-### Activity calendar
-![activity-calendar](model/data/activity-calendar.svg)
+### Vessel/Gear use features
+
+![vessel-use-features](model/data/vessel-use-features.svg)
+![vessel-use-features](model/data/gear-use-features.svg)

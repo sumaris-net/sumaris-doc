@@ -1,22 +1,23 @@
 @startuml
 hide empty members
 
-interface ReferentialItem {
+interface IReferentialItem {
     +id: Int
     +label: String
     +name: String
     +description: String [0..1]
-    +comment: String [0..1]
+    +comments: String [0..1]
     +updateDate: Timestamp
 }
 
-interface ReferentialLevel {
+interface IReferentialLevel {
 }
 
 class Status {
     +id: int
     +label: String
     +name: String
+    ...
 }
 
 enum StatusEnum {
@@ -26,8 +27,8 @@ enum StatusEnum {
    +DELETED: 3
 }
 
-ReferentialItem "0..*" --> "1" Status
-ReferentialItem "0..*" -right-> "0..1" ReferentialLevel: "           "
+IReferentialItem "0..*" --> "1" Status
+IReferentialItem "0..*" -right-> "0..1" IReferentialLevel: "has level"
 
 Status <.left. StatusEnum: "is an identifier of"
 
