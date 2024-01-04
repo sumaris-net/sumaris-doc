@@ -9,7 +9,6 @@ class VesselUseFeatures extends IData {
     +isActive : Integer
     +startDate : Date
     +endDate : Date [0..1]
-    +comments : String [0..1]
 }
 class VesselUseFeaturesOrigin {
     +program: Program <<Identifier>>
