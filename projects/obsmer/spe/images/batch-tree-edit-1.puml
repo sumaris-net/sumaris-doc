@@ -1,0 +1,16 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {
+  <b> v Capture | <back:green>[+]
+   | \t\tPartie retenue | [2] | [..]
+   | \t\tPartie rejetée, Vrac | [0] | [..]
+   | ^Partie rejetée, Hors Vrac^ | [0] | [..]
+   }
+  --
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt
+

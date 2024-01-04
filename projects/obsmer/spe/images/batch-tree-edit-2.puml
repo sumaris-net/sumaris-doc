@@ -1,0 +1,18 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {
+  <b> v Capture | [+]
+   | \t\tPartie retenue | [2] | [..]
+   | \t\tPartie rejetée, Vrac | [0] | [..]
+   | \t\tPartie rejetée, Hors Vrac | [0] |
+   {* ...
+   ... | Supprimer | Ajouter un critère }
+   }
+  --
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt
+
