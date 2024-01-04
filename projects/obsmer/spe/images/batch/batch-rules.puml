@@ -1,0 +1,25 @@
+@startsalt
+{
+  <b>Liste de règles "Arbre d'échantillonnage ObsMer"
+  ..
+
+  {Libellé de la liste: | "Arbre d'échantillonnage ObsMer"}
+
+  {Type d'objet contrôlé : | ^ Lot avec critères de classement ^}
+
+  {<&plus> | <&trash> }
+  {T#
+    + <b># | <b>Code                | <b>Libellé                            | <b>Précondition ? | <b>Bloquant ?| <b>Attribut contrôlé  | <b>Opérateur | <b>Valeur
+    +  1   | landing                | Partie Retenue (précondition)         | <&check> Oui      | .            | Valeur du critère de classement | =     | Partie retenue
+    ++ 1.1 | no-batch-sorting-pmfm  | Vrac/Hors vrac non autorisé           | <&x> Non          | <&check> Oui | Critère de classement | !=     | Vrac ou Hors Vrac
+    ++ 1.2 | no-discard-weight-pmfm | Poids du rejet non autorisé           | <&x> Non          | <&check> Oui | Critère de classement | !=     | Poids du rejet
+    +  2   | discard                | Partie Rejetée (précondition)         | <&check> Oui      | .            | Valeur du critère de classement | =     | Partie rejetée
+    ++ 2.1 | no-size-category-pmfm  | Catégorie commerciale non autorisée   | <&x> Non          | <&check> Oui | Critère de classement | !=     | Catégorie UE
+    ++ 2.2 | no-size-unli-cat-pmfm  | Catégorie de tri terrain non autorisée| <&x> Non          | <&check> Oui | Critère de classement | !=     | Catégorie de tri terrain
+}
+
+  -- | --
+
+  .                          | { [Annuler] | [<&check> Valider]}
+}
+@endsalt

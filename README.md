@@ -17,3 +17,12 @@ All documents and source code are under [License GPL v3](./LICENSE), except user
 ## Links
 
  - SUMARiS technical web site: http://doc.e-is.pro/sumaris/
+
+## Launch slides
+
+- Run 
+```
+npm install
+npm run start
+```
+- Open http://localhost:3000 in a web browser 

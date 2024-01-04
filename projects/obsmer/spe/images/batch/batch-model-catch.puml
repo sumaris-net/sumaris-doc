@@ -1,0 +1,40 @@
+@startsalt
+{
+  <b>Lot Capture
+  ..
+
+  { Destnation du produit: | ^Industrie^ }
+
+  <b>Options de saisie:
+
+  { [X] Poids total | [X] obligatoire }
+  { . |  [ ] Poids échantillonné | [ ] <color:#9a9a9a>obligatoire }
+
+  { [ ] Inventaire exhaustif espèces ? }
+
+  .
+
+  {<b>Lots fils : }
+
+  { [ ] Espèce commerciale }
+
+  { [ ] Espèce scientifique }
+
+  { ( ) <color:#9a9a9a>Poids total }
+  { . |  [ ] <color:#9a9a9a>Poids échantillonné }
+
+  { ( ) <color:#9a9a9a>Nombre d'individu total }
+
+  {<&plus> | <&trash> }
+  {#
+
+    <b># | <b>Critère de classement (PSFM) | <b>Valeur par défaut | .
+    1 | ^Partie Retenue (PR) ou Partie Non Retenue (PNR) ^ | ^(Aucune)     ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
+    2 | ^Vrac ou Hors Vrac                               ^ | ^Vrac         ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
+  }
+
+  -- | --
+
+  .                          | { [Annuler] | [<&check> Valider]}
+}
+@endsalt

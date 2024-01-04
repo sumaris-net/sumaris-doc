@@ -52,9 +52,29 @@
 > - Engins traînants : Empêcher date de début OP en dehors de la période de la marée
 
 ---
-## Opération > Capture
+## Opération > Capture (1/2)
 
-(en cours de rédaction)
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
+
+---
+## Administration > Lots > Modèle d'arbre (1/3)
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-1.svg)
+
+---
+## Administration > Lots > Modèle d'arbre (2/3)
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-2.svg)
+
+---
+## Administration > Lots > Modèle d'arbre (3/3)
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-3.svg)
+
+---
+## Administration > Lots > Règles 
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-rules.svg)
 
 ---
 ## Lots espèces

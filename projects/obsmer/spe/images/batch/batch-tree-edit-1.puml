@@ -1,0 +1,64 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+    {T
+         + <back:#DDD>Capture        | .
+         ++ Partie retenue, Vrac     | [<&plus>]
+         ++ Partie rejetée, Vrac     | [<&plus>]
+         ++ Partie rejetée, Hors-Vrac| [<&plus>]
+    }
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    --
+    {
+       [<&checkmark> Valider] | [ << ]
+    }
+  } | . | {
+    <b>Lot Capture
+    ..
+
+    <b>Options de saisie:
+
+    { [X] Poids total | [X] obligatoire }
+    { . |  [ ] Poids échantillonné | [ ] <color:#9a9a9a>obligatoire }
+
+    { [ ] Inventaire exhaustif espèces ? }
+
+    .
+
+    {<b>Lots fils : }
+
+    { [ ] Espèce commerciale }
+
+    { [ ] Espèce scientifique }
+
+    { (X) <color:#9a9a9a>Poids total (par défaut) }
+    { . |  [ ] <color:#9a9a9a>Poids échantillonné }
+
+    { ( ) <color:#9a9a9a>Nombre d'individu total }
+
+    {<&plus> | <&trash> }
+    {#
+      <b># | <b>Critère de classement (PSFM) | <b>Valeur par défaut | .
+      1 | ^Partie Retenue (PR) ou Partie Non Retenue (PNR) ^ | ^(Aucune)     ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
+      2 | ^Vrac ou Hors Vrac                               ^ | ^Vrac         ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
+    }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+

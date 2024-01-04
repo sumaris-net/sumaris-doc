@@ -1,6 +1,6 @@
 @startsalt
 {
-  <b>Menu.configruration
+  <b>Configruration
   ..
   Application name: | "name                              "
   Description (home page): | "description                       "
@@ -18,6 +18,6 @@
   .
   -- | --
 
-  .                          | {<&reload> [Annuler] | [<&check> Sauvegarder]}
+  .                          | {[ Fermer ] | [<&reload> Réinitialiser] | [ Sauvegarder ]}
 }
 @endsalt

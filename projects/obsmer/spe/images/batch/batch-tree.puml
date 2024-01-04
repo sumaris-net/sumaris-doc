@@ -1,0 +1,40 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + <back:#DDD>Capture    | .
+       ++ Partie retenue       | <color:gray>[0]
+       +++ Consommation humaine | <color:blue>[2]
+       +++ Industrie | <color:blue>[2]
+       ++ Partie rejetée, Vrac | <color:gray>[0]
+       ++ Partie rejetée, Hors-Vrac | <color:gray>[0]
+   }
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+   --
+   {
+      [<&pencil> éditer] | [ << ]
+   }
+  } | . | {
+    { [<b>Capture] | / | [...]}
+
+    {Capture (toutes espèces) : | " <color:gray>Poids total capture (kg) " }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+
