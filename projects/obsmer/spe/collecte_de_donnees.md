@@ -34,9 +34,68 @@
 
 ![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
 
+Marée : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
+Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
+
+---
+
+#### Scénario principal
+
+1. L'observateur demande la création d'une nouvelle marée (bouton + à droite dans le bandeau horizontal) 
+2. Une fenêtre s'ouvre ("Nouvelle marée")
+    * La fenêtre est composée de 3 onglets
+      * "Détails", positionnement par défaut pour la saisie de la marée
+      * "Engins"
+      * "Opérations"
+4. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
+    * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
+    * L'observateur* dans une liste déroulante
+      * Un bouton + permet de rajouter des obervateurs à la marée
+    * Le plan d'échantillonnage 
+      * La stratégie de référence* (menu déroulant avec stratégie de la société du saisisseur)
+      * Le programme de rattachement* (renseigné automatiquement si connexion avec WAO)
+    * Le navire, s'il est dans la liste déroulante
+      * _A supprimer_ => Le bouton +, à droite de la liste déroulante, permet de créer un nouveau Navire
+4. Dans l'onglet "Détails", L'observateur saisie pour cette marée :
+   * Le nombre d'homme à bord
+   * Le lieu de départ* (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
+   * La date* et l'heure* de début de marée
+   * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
+   * La date* et l'heure* de début de marée
+   * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
+   * Les détails sur la vente
+     * Le lieu* de vente (TODO - faire le model de sale) 
+     * La date* de vente
+     * Le type* de vente (référence des TYPE de VENTE)
+   * La présence de macrodéchets* (case à cocher, oui/non)
+     * Cette saisie conditionnera l'onglet "Macrodéchets" au niveau des captures
+   * Un commentaire (maximum 2000 caractères)
+5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
+    * Le fenêtre de sélection d'engins s'ouvre
+
+Un bouton permet de sauvegarder la marée.
+
+
+#### Modèle de données fishing_trip
+
+![ui-trip](/model/data/trip.svg)
+
+#### Modèle de données sale ?
+
+
 ---
 ### Marée > onglet Engins
 ![ui-gears](/projects/obsmer/spe/images/gears-table.svg)
+
+Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
+
+#### Scénario principal
+
+1. L'observateur demande l'ajout d'un nouvel engin à la marée (bouton + à gauche dans le bandeau horizontal)
+2. Une fenêtre s'ouvre ("Nouvel engin")
+3. L'observateur peut sélectionner l'engin par défaut ou créer un nouvel engin
+4. Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà
+   observé. TO COMPLETE
 
 > - [ ] ~~Optimiser le chargement de la stratégie~~
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
@@ -46,6 +105,12 @@
 ## Opération > Détails
 
 ![ui-operation](/projects/obsmer/spe/images/operation.svg)
+
+Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin de pêche pour capturer des espèces aquatiques marines. L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le professionnel et que l’engin n’est plus pêchant.
+
+#### Scénario principal
+
+1. L'observateur demande la création d'une nouvelle opération : TO COMPLETE
 
 > - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
 > - Engins dormants: autoriser date de début OP AVANT marée
