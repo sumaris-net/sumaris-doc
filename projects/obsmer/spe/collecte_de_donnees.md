@@ -29,13 +29,43 @@
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
+## Arbre d'échantillonnage
+
+<b>REF: OBSMER/INTERFACE
+
+![ui-main_tree](/projects/obsmer/spe/images/main-tree.svg)
+
+L'interface est composée des éléments graphiques suivants :
+1. Interface de gauche : Interface récapitulative des onglets principaux.
+    * Permet de savoir ou on se trouve dans l'arbre d'échantillonnage et de pouvoir naviguer dans les noeuds de l'arbre
+2. Un bandeau horizontal, récapitulatif de la marée / vente
+   * Le bandeau affiche les informations suivantes de la marée
+     * Immatriculation du navire
+     * La date de début de marée
+3. Sous le bandeau, l'interface centrale permet la saisie des données
+4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
+
+
+#### Scénario principal
+
+1. L'observateur clique sur un onglet de l'arbre.
+   * Les informations centrale propre à l'onglet s'ouvre dans l'interface centrale.
+     * Saisie des détails d'une marée : Un écran, à droite de l'interface centrale affiche les informations suivantes :
+       * Nom du saisisseur
+       * Mode de saisie (terrain ou bureau)
+
+    
 ---
 ## Marée > Détails
 
-![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
+<b>REF: OBSMER/MAREE
 
 Marée : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
 Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
+
+![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
+
+L'observateur sélectionne l'onglet "Marée" dans l'interface de l'arbre d'échantillonage. 
 
 ---
 
@@ -85,15 +115,34 @@ Un bouton permet de sauvegarder la marée.
 
 ---
 ### Marée > onglet Engins
-![ui-gears](/projects/obsmer/spe/images/gears-table.svg)
+
+<b>REF: OBSMER/ENGINS
 
 Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
+
+L'observateur sélectionne l'onglet "Engins"
+
+![ui-gears-table](/projects/obsmer/spe/images/gears-table.svg)
 
 #### Scénario principal
 
 1. L'observateur demande l'ajout d'un nouvel engin à la marée (bouton + à gauche dans le bandeau horizontal)
 2. Une fenêtre s'ouvre ("Nouvel engin")
-3. L'observateur peut sélectionner l'engin par défaut ou créer un nouvel engin
+   * Les engins appartenant à la stratégie sélectionnée apparaissent dans une liste déroulante
+3. L'observateur peut sélectionner un engin dans la liste
+   * L'engin sélectionné est affiché avec son code et son libellé 
+   * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
+     * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie sélectionnée ?)
+   * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
+
+---
+
+Variante 3a - Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet" 
+
+![ui-gear](/projects/obsmer/spe/images/gear.svg)
+
+
+
 4. Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà
    observé. TO COMPLETE
 

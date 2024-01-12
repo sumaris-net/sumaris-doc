@@ -1,0 +1,34 @@
+@startsalt
+{
+
+  {/ | Marée | <b> Détails | Opérations }
+  ..
+
+    {
+       <b>Engin : | GNC - Filets maillants encerclants
+    }
+  .
+    <b>Caractéristiques :
+    {
+      . | Hauteur du filet : |  "        "  | (m)
+      . | Longueur levée* : |  "        "  | (m)
+      . | Plus petit maillage à la jauge* : |  "        "  | (mm)
+      . | Plus grand maillage à la jauge (trémail)* : |  "        "  | (mm)
+      . | Type de fil majoritaire : | ^mono^
+      . | Dispositifs de répulsif* : | ^Pas d'info^
+      . | + Autres caractéristiques (cf "Grille de saisie")
+    }
+  .
+    {
+        <b>Commentaire :
+
+        { "                                                                    "}
+    }
+
+  --
+
+  {
+    [Annuler] | [Sauvegarder]
+  }
+}
+@endsalt
