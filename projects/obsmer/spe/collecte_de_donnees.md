@@ -36,38 +36,65 @@
 ![ui-main_tree](/projects/obsmer/spe/images/main-tree.svg)
 
 L'interface est composée des éléments graphiques suivants :
-1. Interface de gauche : Interface récapitulative des onglets principaux.
-    * Permet de savoir ou on se trouve dans l'arbre d'échantillonnage et de pouvoir naviguer dans les noeuds de l'arbre
+1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
+    * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif de la marée / vente
-   * Le bandeau affiche les informations suivantes de la marée
-     * Immatriculation du navire
-     * La date de début de marée
-3. Sous le bandeau, l'interface centrale permet la saisie des données
+   * Sur la sélection d'une marée, le bandeau affiche les informations suivantes 
+     * Immatriculation du navire de la marée
+     * La date de début de la marée
+   * Le bandeau permet d'afficher les opérations dans une vue cartographique (à voir au prochain point prototype)
+   * Un bouton permettant d'importer les formulaires (à détailler)
+3. Sous le bandeau, l'interface centrale permet la saisie des données (marées, opérations, captures, mesures)
 4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
 
 
 #### Scénario principal
 
-1. L'observateur clique sur un onglet de l'arbre.
+1. L'observateur clique sur un onglet de l'arbre du menu
    * Les informations centrale propre à l'onglet s'ouvre dans l'interface centrale.
-     * Saisie des détails d'une marée : Un écran, à droite de l'interface centrale affiche les informations suivantes :
+     * Sur la sélection du menu "Marée", un écran, à droite de l'interface centrale affiche les informations suivantes :
        * Nom du saisisseur
        * Mode de saisie (terrain ou bureau)
 
-    
----
-## Marée > Détails
+Pour la saisie de données, le niveau de plus bas de l'arbre du menu est à la capture 
+Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots des espèces (REF: OBSMER/LOTS PAR ESPECE)
 
-<b>REF: OBSMER/MAREE
+![ui-main_tree_expanded](/projects/obsmer/spe/images/main-tree-expanded.svg)
+
+---
+
+## Marée > Menu
+
+<b>REF: OBSMER/MAREE_MENU
 
 Marée : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
 Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
 
-![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
+<b> Fenêtre principale du menu marée
 
-L'observateur sélectionne l'onglet "Marée" dans l'interface de l'arbre d'échantillonage. 
+![ui-gears](/projects/obsmer/spe/images/trips-table.svg)
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Marée" dans l'interface de l'arbre du menu.
+2. Les marées s'affichent dans un tableau. Les informations suivants sont affichées pour chaque marée :
+    * Programme de collecte
+    * Navire
+    * Port de départ
+    * Date de départ
+    * Date de retour
+    * Observateurs
+3. Un bouton permet d'afficher ou de masquer des colonnes
 
 ---
+
+## Marée > Détails
+
+<b>REF: OBSMER/MAREE_DETAILS
+
+<b> Fenêtre principale de saisie d'une marée
+
+![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
 
 #### Scénario principal
 
@@ -106,12 +133,10 @@ L'observateur sélectionne l'onglet "Marée" dans l'interface de l'arbre d'écha
 Un bouton permet de sauvegarder la marée.
 
 
-#### Modèle de données fishing_trip
+#### Modèle de données fishing_trip ?
 
-![ui-trip](/model/data/trip.svg)
 
 #### Modèle de données sale ?
-
 
 ---
 ### Marée > onglet Engins
@@ -140,7 +165,6 @@ L'observateur sélectionne l'onglet "Engins"
 Variante 3a - Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet" 
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
-
 
 
 4. Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà

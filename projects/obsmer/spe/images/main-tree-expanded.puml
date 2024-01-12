@@ -1,0 +1,83 @@
+@startsalt
+{
+  {+
+   {
+       <b><font color=grey size=20>OBSMER    | . | . | . | . | . | . | .
+       Observateur
+       .
+       .
+       --
+       Accueil    | .
+       .
+       <font color=grey size=10>saisie des données
+       --
+       Campagnes en mer       | .
+       {T
+            +<back:#DDD>Marées
+            ++ Engins       | .
+            ++ Opérations       | .
+            +++ Captures       | .
+       }
+       Sorties        | .
+       .
+       <font color=grey size=10>Référentiels
+       --
+       Navires       | .
+       Programmes        | .
+       Référentiels        | .
+       Utilisateurs        | .
+       --
+       .
+       <font color=grey size=10>Système
+       --
+       Paramètres système       | .
+       .
+
+       --
+       Se déconnecter       | .
+       --
+   }
+
+   {
+      <font color=grey size=10>V XXX - à propos
+   }
+  } | . | {+
+    { [<b>Capture] | . |  . |  . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |.  }
+    --
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | <b>Fenêtre principale }
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    } | . | {+
+    { <font color=grey size=10>Saisisseur
+    Observateur
+    .
+    <font color=grey size=10>Mode saisie <b>terrain}
+ }
+  -- | -- | --
+  { [Fermer] | [Sauvegarder]}
+}
+@endsalt
+
