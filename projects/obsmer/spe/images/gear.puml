@@ -4,6 +4,10 @@
   {/ | Marée | <b> Détails | Opérations }
   ..
 
+     {
+         <back:red><font color=white><i>Informations de saisie
+     }
+
     {
        <b>Engin : | GNC - Filets maillants encerclants
     }

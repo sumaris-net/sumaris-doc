@@ -1,0 +1,19 @@
+@startsalt
+{
+
+  {/  Détails | Engins | <b> Opérations  }
+
+
+	{#
+      [ <&plus> ]
+      # | <b>Engins utilisé     | <b>Espèce cible   | <b> Début de l'opération | <b> Position Début | <b> Fin de l'opération | <b> Position de fin
+      1 | OTT- Chalut jumeaux                | MZZ - Poissons | 02/01/2024 07:35 | 43°9.354' N, 4°21.996'E  | 02/01/2024 08:35 | 43°4.497' N, 4°42.869'E |
+    }
+
+  --
+
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt

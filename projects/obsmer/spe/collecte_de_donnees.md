@@ -44,7 +44,6 @@ L'interface est composée des éléments graphiques suivants :
      * La date de début de la marée
    * Le bandeau permet d'afficher les opérations dans une vue cartographique (à voir au prochain point prototype)
    * Un bouton permettant d'importer les formulaires (à détailler)
-3. Sous le bandeau, l'interface centrale permet la saisie des données (marées, opérations, captures, mesures)
 4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
 
 
@@ -52,11 +51,14 @@ L'interface est composée des éléments graphiques suivants :
 
 1. L'observateur clique sur un onglet de l'arbre du menu
    * Les informations centrale propre à l'onglet s'ouvre dans l'interface centrale.
-     * Sur la sélection du menu "Marée", un écran, à droite de l'interface centrale affiche les informations suivantes :
+     * Dans l'écran de saisie ("Marée" ou "opération"), un écran, à droite de l'interface centrale affiche les informations suivantes :
        * Nom du saisisseur
        * Mode de saisie (terrain ou bureau)
-
-Pour la saisie de données, le niveau de plus bas de l'arbre du menu est à la capture 
+       * La dernière date de mise à jour des données 
+       * Un bouton "Terminer la saisie", permettant la validation des données
+   * Les informations centrale propre à l'onglet s'ouvre dans l'interface centrale.
+   * 
+Pour la saisie de données, le niveau de plus bas de l'arbre du menu est à la capture. 
 Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots des espèces (REF: OBSMER/LOTS PAR ESPECE)
 
 ![ui-main_tree_expanded](/projects/obsmer/spe/images/main-tree-expanded.svg)
@@ -77,7 +79,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 #### Scénario principal
 
 1. L'observateur sélectionne le menu "Marée" dans l'interface de l'arbre du menu.
-2. Les marées s'affichent dans un tableau. Les informations suivants sont affichées pour chaque marée :
+2. Les marées s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque marée :
     * Programme de collecte
     * Navire
     * Port de départ
@@ -85,6 +87,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
     * Date de retour
     * Observateurs
 3. Un bouton permet d'afficher ou de masquer des colonnes
+4. Un bouton + permet d'ajouter une nouvelle marée
 
 ---
 
@@ -98,7 +101,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle marée (bouton + à droite dans le bandeau horizontal) 
+1. L'observateur demande la création d'une nouvelle marée (OBSMER/MAREE_MENU : bouton +) 
 2. Une fenêtre s'ouvre ("Nouvelle marée")
     * La fenêtre est composée de 3 onglets
       * "Détails", positionnement par défaut pour la saisie de la marée
@@ -120,12 +123,12 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
    * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
    * La date* et l'heure* de début de marée
    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
-   * Les détails sur la vente
-     * Le lieu* de vente (TODO - faire le model de sale) 
+   * Les détails sur la vente (TODO - faire le model de sale)
+     * Le lieu* de vente 
      * La date* de vente
      * Le type* de vente (référence des TYPE de VENTE)
    * La présence de macrodéchets* (case à cocher, oui/non)
-     * Cette saisie conditionnera l'onglet "Macrodéchets" au niveau des captures
+     * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
    * Un commentaire (maximum 2000 caractères)
 5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
@@ -139,51 +142,113 @@ Un bouton permet de sauvegarder la marée.
 #### Modèle de données sale ?
 
 ---
-### Marée > onglet Engins
+### Marée > Engins > Menu
 
-<b>REF: OBSMER/ENGINS
+<b>REF: OBSMER/ENGINS_MENU
 
 Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
 
-L'observateur sélectionne l'onglet "Engins"
+L'observateur sélectionne le menu "Engins"
 
 ![ui-gears-table](/projects/obsmer/spe/images/gears-table.svg)
 
 #### Scénario principal
 
-1. L'observateur demande l'ajout d'un nouvel engin à la marée (bouton + à gauche dans le bandeau horizontal)
-2. Une fenêtre s'ouvre ("Nouvel engin")
-   * Les engins appartenant à la stratégie sélectionnée apparaissent dans une liste déroulante
-3. L'observateur peut sélectionner un engin dans la liste
-   * L'engin sélectionné est affiché avec son code et son libellé 
-   * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
-     * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie sélectionnée ?)
-   * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
+1. L'observateur sélectionne le menu "Engin" dans l'interface de l'arbre du menu ou l'onglet "Engin" dans l'interface d'une marée
+2. Les engins de la marée s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque engins :
+    * Engin (Code et libellé)
+    * Liste de PSFM 
+      * voir crr-23-003-reunion_suivi-2023-11-10.md - RAF: groupement des PSFM sur le même PSF ? (+ choix de la méthode)
+    * ...
+3. Un bouton permet d'afficher ou de masquer des colonnes
+4. Un bouton + permet d'ajouter un nouvel engin
+---
 
 ---
+### Marée > Engins > Détails
+
+<b>REF: OBSMER/ENGINS_DETAILS
+
+1. L'observateur demande l'ajout d'un nouvel engin à la marée (OBSMER/ENGINS_MENU : bouton +)
+2. Une fenêtre s'ouvre ("Nouvel engin")
+    * Les engins appartenant au navire sélectionné apparaissent dans une liste déroulante
+3. L'observateur peut sélectionner un engin dans la liste
+    * L'engin sélectionné est affiché avec son code et son libellé
+    * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
+        * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie sélectionnée ?)
+        * Les champs marqués par un * sont obligatoires
+        * Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
+            * Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
+        * A l'ouverture de la fenêtre de saisie, le champ "Ajouté" est grisé
+            * Le champ devient actif quand tous les champs obligatoires on été saisie
+    * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
+    * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
 
 Variante 3a - Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet" 
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
-
 4. Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà
-   observé. TO COMPLETE
+   observé. (Existant dans Allegro V2 ? Si non, voir avec Marion pour la cas d'usage)
 
 > - [ ] ~~Optimiser le chargement de la stratégie~~
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
 > - [ ] Libellé d'engin ?
 
 ---
-## Opération > Détails
 
-![ui-operation](/projects/obsmer/spe/images/operation.svg)
+## Marée > Opération > Menu
+
+<b>REF: OBSMER/OPERATION_MENU
+
+<b> Fenêtre principale du menu opération
+
+Pré-conditions: Pour que l'onglet "Opération" soit actif, la marée doit être saisie et sauvegardée.
 
 Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin de pêche pour capturer des espèces aquatiques marines. L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le professionnel et que l’engin n’est plus pêchant.
 
+![ui-operation](/projects/obsmer/spe/images/operations-table.svg)
+
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle opération : TO COMPLETE
+1. L'observateur sélectionne le menu "Opération" dans l'interface de l'arbre du menu ou l'onglet "Opérations" dans l'interface d'une marée
+2. Les opération s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque opération (à valider):
+    * L'engin utilisé
+    * L'espèce cible (SUMARIS une seule d'affichée ?)
+    * La date de début de pêche
+    * La position de début des opérations
+    * La date de fin de pêche
+    * La position de fin
+3. Un bouton permet d'afficher ou de masquer des colonnes
+4. Un bouton + permet d'ajouter une nouvelle opération
+
+
+---
+
+## Marée > Opération > Détails
+
+<b>REF: OBSMER/OPERATION_DETAILS
+
+<b> Fenêtre principale de saisie d'une opération
+
+![ui-operation](/projects/obsmer/spe/images/operation.svg)
+
+1. L'observateur demande la création d'une nouvelle opération (OBSMER/OPERATION_MENU : bouton +)
+2. Une fenêtre s'ouvre sur la saisie des caractéristiques de l'opération. 
+3. L'observateur renseigne les éléments suivants :
+   * L'engin* utilisé
+   * La date, l'heure et la position de début de pêche
+   * La date, l'heure et la position de fin de pêche
+   * Les caractéristiques de l'opération :
+     * L'espèce cible
+     * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
+     * Le déroulement normal de l'opération avec des cases à cocher (oui, non)
+     * Des réalisation de mesures individuelles avec des cases à cocher (oui, non)
+     * La profondeur moyen de l'engin
+     * L'état de la mer dans une liste déroulante (PSFM QUALITATIVE_VALUE.PARAMETER_FK = SEA_STATE)
+     * Autres observations (Stratégie ?)
+       * Force du vent
+       * ...
 
 > - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
 > - Engins dormants: autoriser date de début OP AVANT marée
