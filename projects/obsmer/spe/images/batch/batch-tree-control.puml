@@ -25,35 +25,11 @@
        [<&checkmark> Contrôler] | [ << ]
     }
   } | . | {
-    <b>Lot Capture
-    ..
 
-    <b>Options de saisie:
+   { [<b>Capture] | / | [...]}
 
-    { [X] Poids total | [X] obligatoire }
-    { . |  [ ] Poids échantillonné | [ ] <color:#9a9a9a>obligatoire }
+       {Capture (toutes espèces) (kg) ): | " 200" }
 
-    { [ ] Inventaire exhaustif espèces ? }
-
-    .
-
-    {<b>Lots fils : }
-
-    { [ ] Espèce commerciale }
-
-    { [ ] Espèce scientifique }
-
-    { (X) <color:#9a9a9a>Poids total (par défaut) }
-    { . |  [ ] <color:#9a9a9a>Poids échantillonné }
-
-    { ( ) <color:#9a9a9a>Nombre d'individu total }
-
-    {<&plus> | <&trash> }
-    {#
-      <b># | <b>Critère de classement (PSFM) | <b>Valeur par défaut | .
-      1 | ^Partie Retenue (PR) ou Partie Non Retenue (PNR) ^ | ^(Aucune)     ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
-      2 | ^Vrac ou Hors Vrac                               ^ | ^Vrac         ^ | {[<&arrow-top>] | [<&arrow-bottom>]}
-    }
   }
 
   -- | -- | --

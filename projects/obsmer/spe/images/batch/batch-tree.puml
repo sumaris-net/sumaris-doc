@@ -30,7 +30,7 @@
   } | . | {
     { [<b>Capture] | / | [...]}
 
-    {Capture (toutes espèces) : | " <color:gray>Poids total capture (kg) " }
+    {Capture (toutes espèces) (kg) : | " <color:gray>Poids total capture (kg) " }
   }
 
   -- | -- | --
