@@ -303,7 +303,7 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 > ```
 
 ---
-## Mesures individuelles
+## Mesures individuelles (1/2)
 
 (en cours de rédaction)
 
@@ -311,6 +311,31 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 
 > Règle(s) métier :
 > - Saisie au 1 cm, 0.5cm, 1mm, suivant l'espèce (cf normes Ifremer)
+
+---
+## Mesures individuelles (2/2)
+
+Questions : 
+- Poids RTP: faut-il tracer la valeur du poids "RTP des lot fils" dans un PSFM RTP ?  
+  (Thomas dit que oui: pour faire la différence avec les poids réels)
+- Poids de référence: faut-il pouvoir choisir la méthode "Déclaration par un observateur"
+
+---
+## Photos
+
+Pouvoir ajouter des photos : 
+- sur un lot d'espèces
+- sur un individu mesuré
+- sur l'opération
+
+Permettre une visualisation/recherche par un superviseur
+
+---
+## Pièces jointes
+
+Au niveau de la marée, pour stocker les bordereaux de saisie
+
+> Non prioritaire (tant que WAO est utilisé)
 
 ---
 ## Inerte, végétaux et animaux
@@ -325,6 +350,11 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 
 (en cours de rédaction)
 - Plusieurs cas : Oiseaux, Mammifères
+
+---
+## Contrôle des données
+
+Les saisisseurs doivent pouvoir visualiser une synthèse des poids, par lots parents
 
 ---
 ## Validation des données
