@@ -25,7 +25,7 @@
     .
    --
    {
-      [<&pencil> éditer] | [ << ]
+      [<&checkmark> Contrôler] | [ << ]
    }
   } | . | {
     { [<b>Capture] | / | [...]}

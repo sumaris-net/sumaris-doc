@@ -19,7 +19,8 @@ Prochaine réunion : Vendredi 12/01/2024 à 14h
 ---
 # Organisation
 
-- Vincent Fachero a commencé les spécifications fonctionnelles (Maquette écrans)
+- Vincent Fachero a commencé les spécifications fonctionnelles (Cas d'utilisation, maquettes écrans),
+  sur **ObsMer** 
 - EIS continue le PoC, sur la partie **calendrier d'activité mensuelle**
 
 ---
