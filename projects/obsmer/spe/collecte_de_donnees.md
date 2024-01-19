@@ -31,7 +31,7 @@
 
 ## Ergonomie générale
 
-<b>REF: OBSMER/INTERFACE
+**REF: OBSMER/INTERFACE**
 
 ![ui-main_tree](/projects/obsmer/spe/images/main-tree.svg)
 
@@ -67,12 +67,12 @@ Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots de
 
 ## Marées
 
-<b>REF: OBSMER/MAREES
+**REF: OBSMER/MAREES**
 
-Marée : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
+**Marée** : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
 Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
 
-<b> Fenêtre principale des marées
+**Fenêtre principale des marées**
 
 ![ui-gears](/projects/obsmer/spe/images/trips-table.svg)
 
@@ -94,9 +94,9 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 ## Marée > Détails
 
-<b>REF: OBSMER/MAREE_DETAILS
+**REF: OBSMER/MAREE_DETAILS**
 
-<b> Fenêtre principale de saisie d'une marée
+**Fenêtre principale de saisie d'une marée**
 
 ![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
 
@@ -145,9 +145,9 @@ Un bouton permet de sauvegarder la marée.
 ---
 ### Marée > Engins 
 
-<b>REF: OBSMER/ENGINS
+**REF: OBSMER/ENGINS**
 
-Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
+**Engin** : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
 
 ![ui-gears-table](/projects/obsmer/spe/images/gears-table.svg)
 
@@ -161,14 +161,14 @@ Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis e
 4. Un bouton + permet d'ajouter un nouvel engin
 
 
-<b>Variante(s) : 
+**Variante(s) :** 
 
-<b>Variante 2a - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
+**Variante 2a** - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
 
 ---
 ### Marée > Engin > Détails
 
-<b>REF: OBSMER/ENGINS_DETAILS
+**REF: OBSMER/ENGINS_DETAILS**
 
 1. L'observateur demande l'ajout d'un nouvel engin à la marée (OBSMER/ENGINS_MENU : bouton +)
 2. Une fenêtre s'ouvre ("Nouvel engin")
@@ -187,9 +187,9 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
-<b>Variante(s) :
+**Variante(s) :**
 
-<b>Variante 2a - Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà observé.
+**Variante 2a** - Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà observé.
 
 ![ui-gear](/projects/obsmer/spe/images/gears-present.svg)
 
@@ -210,7 +210,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
    * si l'application est en mode déconnecté , la recherche se fait parmis les données synchronisées
 
-<b>Variante 3a - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
+**Variante 3a** - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
 Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
 C'est une option liée au programme de collecte (<b>A CONFIRMER par la MOA)
 
@@ -223,13 +223,13 @@ C'est une option liée au programme de collecte (<b>A CONFIRMER par la MOA)
 
 ## Marée > Opérations
 
-<b>REF: OBSMER/OPERATION_MENU
+**REF: OBSMER/OPERATION_MENU**
 
-<b> Fenêtre principale du menu opération
+**Fenêtre principale du menu opération**
 
-Pré-conditions: Pour que l'onglet "Opération" soit actif, la marée doit être saisie et sauvegardée.
+**Pré-conditions** : Pour que l'onglet "Opération" soit actif, la marée doit être saisie et sauvegardée.
 
-Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin de pêche pour capturer des espèces aquatiques marines. L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le professionnel et que l’engin n’est plus pêchant.
+**Opération** : Opération de pêche qui consiste à la mise en oeuvre d’un engin de pêche pour capturer des espèces aquatiques marines. L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le professionnel et que l’engin n’est plus pêchant.
 
 ![ui-operation](/projects/obsmer/spe/images/operations-table.svg)
 
@@ -251,9 +251,9 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 
 ## Marée > Opération > Détails
 
-<b>REF: OBSMER/OPERATION_DETAILS
+**REF: OBSMER/OPERATION_DETAILS**
 
-<b> Fenêtre principale de saisie d'une opération
+**Fenêtre principale de saisie d'une opération**
 
 ![ui-operation](/projects/obsmer/spe/images/operation.svg)
 
@@ -274,15 +274,15 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
        * Force du vent
        * ...
 
-<b> Variante
+**Variantes**
 
-<b>Variante 3a - Il est possible de filtrer sur les espèces cibles (icone à droite du choix de l'espèce) 
+**Variante 3a** - Il est possible de filtrer sur les espèces cibles (icone à droite du choix de l'espèce) 
 Dépend de : 
 - Habitude du navire ? 
 - La période (A DEFINIR)
 A REALISER
 
-<b>Variante 3b - Cas du coup nul (pas de capture) : 
+**Variante 3b** - Cas du coup nul (pas de capture) : 
 A voir avec la MOA : _que signifie pas de capture ?_ 
 S'il n'y a pas de capture doit on saisir des captures (Poids à 0) ?
 
