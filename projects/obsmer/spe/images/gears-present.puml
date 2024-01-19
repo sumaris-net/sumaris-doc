@@ -1,0 +1,20 @@
+@startsalt
+{
+
+  {/  <b> Engins existants }
+
+  {
+    | Début de période : | "17/12/2023"    | .
+    | Fin de période : | "17/01/2024" | .
+  }
+	{#
+      # | <b>Engin     | <b>Libellé de l'engin   | <b>PSFM 2 | <b> Dernière utilisation
+      1 | OTT- Chalut jumeaux à panneaux               | Engin parent | Caractéristique 2 | il y a 1 mois
+      2 | OTB- Chalut de fond à panneaux               | Standart | Caractéristique 2 | il y a 1 mois
+    }
+
+  --
+
+
+}
+@endsalt

@@ -29,7 +29,7 @@
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
-## Arbre d'échantillonnage
+## Ergonomie générale
 
 <b>REF: OBSMER/INTERFACE
 
@@ -65,27 +65,28 @@ Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots de
 
 ---
 
-## Marée > Menu
+## Marées
 
-<b>REF: OBSMER/MAREE_MENU
+<b>REF: OBSMER/MAREES
 
 Marée : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
 Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
 
-<b> Fenêtre principale du menu marée
+<b> Fenêtre principale des marées
 
 ![ui-gears](/projects/obsmer/spe/images/trips-table.svg)
 
 #### Scénario principal
 
-1. L'observateur sélectionne le menu "Marée" dans l'interface de l'arbre du menu.
+1. L'observateur sélectionne le menu "Marées" dans l'interface de l'arbre du menu.
 2. Les marées s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque marée :
-    * Programme de collecte
-    * Navire
-    * Port de départ
-    * Date de départ
-    * Date de retour
-    * Observateurs
+    * Le programme de collecte
+    * Le navire
+    * Le port de départ
+    * La date de départ
+    * La date de retour
+    * Le saisisseur
+    * La liste des observateurs (séparés par une virgule)
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton + permet d'ajouter une nouvelle marée
 
@@ -115,40 +116,38 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
       * La stratégie de référence* (menu déroulant avec stratégie de la société du saisisseur)
       * Le programme de rattachement* (renseigné automatiquement si connexion avec WAO)
     * Le navire, s'il est dans la liste déroulante
-      * _A supprimer_ => Le bouton +, à droite de la liste déroulante, permet de créer un nouveau Navire
 4. Dans l'onglet "Détails", L'observateur saisie pour cette marée :
-   * Le nombre d'homme à bord
    * Le lieu de départ* (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
    * La date* et l'heure* de début de marée
    * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
    * La date* et l'heure* de début de marée
    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
-   * Les détails sur la vente (TODO - faire le model de sale)
+   * Les détails sur la vente 
      * Le lieu* de vente 
      * La date* de vente
-     * Le type* de vente (référence des TYPE de VENTE)
-   * La présence de macrodéchets* (case à cocher, oui/non)
-     * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
+     * Le type* de vente (_référentiel des TYPE DE VENTE_)
+   * Des caractéristiques (PSFM définit pat la stratégie appliquée):
+     * L'observateur à la possibilité de rajouter des caractéristiques à la marée  
+       * Nombre d'hommes à bord*
+       * Document déclaratif (case à cocher, oui/non)
+       * Débarquement de macro-déchets à terre* (case à cocher, oui/non)
+           * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
    * Un commentaire (maximum 2000 caractères)
 5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
 
 Un bouton permet de sauvegarder la marée.
 
+> Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
-#### Modèle de données fishing_trip ?
-
-
-#### Modèle de données sale ?
+> Modèle de données de vente : TODO (A REALISER par VFA)
 
 ---
-### Marée > Engins > Menu
+### Marée > Engins 
 
-<b>REF: OBSMER/ENGINS_MENU
+<b>REF: OBSMER/ENGINS
 
 Engin : Ensemble de matériels utilisé à bord d’un navire spécifique (mis en œuvre par un savoir-faire), qui a pour fonction l’exploitation d’une ressource marine.
-
-L'observateur sélectionne le menu "Engins"
 
 ![ui-gears-table](/projects/obsmer/spe/images/gears-table.svg)
 
@@ -157,15 +156,17 @@ L'observateur sélectionne le menu "Engins"
 1. L'observateur sélectionne le menu "Engin" dans l'interface de l'arbre du menu ou l'onglet "Engin" dans l'interface d'une marée
 2. Les engins de la marée s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque engins :
     * Engin (Code et libellé)
-    * Liste de PSFM 
-      * voir crr-23-003-reunion_suivi-2023-11-10.md - RAF: groupement des PSFM sur le même PSF ? (+ choix de la méthode)
-    * ...
+    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton + permet d'ajouter un nouvel engin
----
+
+
+<b>Variante(s) : 
+
+<b>Variante 2a - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
 
 ---
-### Marée > Engins > Détails
+### Marée > Engin > Détails
 
 <b>REF: OBSMER/ENGINS_DETAILS
 
@@ -175,21 +176,44 @@ L'observateur sélectionne le menu "Engins"
 3. L'observateur peut sélectionner un engin dans la liste
     * L'engin sélectionné est affiché avec son code et son libellé
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
-        * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie sélectionnée ?)
+        * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie appliquée)
         * Les champs marqués par un * sont obligatoires
-        * Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
-            * Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
         * A l'ouverture de la fenêtre de saisie, le champ "Ajouté" est grisé
             * Le champ devient actif quand tous les champs obligatoires on été saisie
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
     * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
 
-Variante 3a - Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet" 
+Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
-4. Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà
-   observé. (Existant dans Allegro V2 ? Si non, voir avec Marion pour la cas d'usage)
+<b>Variante(s) :
+
+<b>Variante 2a - Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà observé.
+
+![ui-gear](/projects/obsmer/spe/images/gears-present.svg)
+
+pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
+Nombre de mois pour la recherche ? (<b>A DEMANDER à la MOA)
+
+L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
+1. Une nouvelle fenêtre "Engins Existants" s'ouvre
+2. L'observateur saisie une date de début de période de marée et de fin de période de marée
+    * Les engins des navires déjà observés sur la période s'affichent dans un tableau
+    * Les informations suivantes, pour chaque engin, sont affichées :
+      * Type d'engin
+      * Le libellé de l'engin
+      * Les caractéristiques (PSFM obligatoires et renseignés)
+      * La période de la dernière utilisation
+      * Un commentaire 
+3. L'observateur sélectionne un engin
+4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
+   * si l'application est en mode déconnecté , la recherche se fait parmis les données synchronisées
+
+<b>Variante 3a - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
+Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
+C'est une option liée au programme de collecte (<b>A CONFIRMER par la MOA)
+
 
 > - [ ] ~~Optimiser le chargement de la stratégie~~
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
@@ -197,7 +221,7 @@ Variante 3a - Saisie des caractéristiques d'un engin - Exemple avec un engin de
 
 ---
 
-## Marée > Opération > Menu
+## Marée > Opérations
 
 <b>REF: OBSMER/OPERATION_MENU
 
@@ -214,7 +238,7 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 1. L'observateur sélectionne le menu "Opération" dans l'interface de l'arbre du menu ou l'onglet "Opérations" dans l'interface d'une marée
 2. Les opération s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque opération (à valider):
     * L'engin utilisé
-    * L'espèce cible (SUMARIS une seule d'affichée ?)
+    * L'espèce cible
     * La date de début de pêche
     * La position de début des opérations
     * La date de fin de pêche
@@ -237,18 +261,31 @@ Opération : Opération de pêche qui consiste à la mise en oeuvre d’un engin
 2. Une fenêtre s'ouvre sur la saisie des caractéristiques de l'opération. 
 3. L'observateur renseigne les éléments suivants :
    * L'engin* utilisé
+   * L'espèce cible
    * La date, l'heure et la position de début de pêche
    * La date, l'heure et la position de fin de pêche
-   * Les caractéristiques de l'opération :
-     * L'espèce cible
+   * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
      * Le déroulement normal de l'opération avec des cases à cocher (oui, non)
      * Des réalisation de mesures individuelles avec des cases à cocher (oui, non)
      * La profondeur moyen de l'engin
      * L'état de la mer dans une liste déroulante (PSFM QUALITATIVE_VALUE.PARAMETER_FK = SEA_STATE)
-     * Autres observations (Stratégie ?)
+     * Autres observations (suivant la stratégie appliquée)
        * Force du vent
        * ...
+
+<b> Variante
+
+<b>Variante 3a - Il est possible de filtrer sur les espèces cibles (icone à droite du choix de l'espèce) 
+Dépend de : 
+- Habitude du navire ? 
+- La période (A DEFINIR)
+A REALISER
+
+<b>Variante 3b - Cas du coup nul (pas de capture) : 
+A voir avec la MOA : _que signifie pas de capture ?_ 
+S'il n'y a pas de capture doit on saisir des captures (Poids à 0) ?
+
 
 > - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
 > - Engins dormants: autoriser date de début OP AVANT marée
@@ -369,9 +406,10 @@ Les saisisseurs doivent pouvoir visualiser une synthèse des poids, par lots par
 
 (en cours de rédaction)
 
-- Ajouter la régionalisation des espèces/engins (Outre-mer)
+- Ajouter la régionalisation des espèces/espèces cibles/engins (Outre-mer)
 
 ---
+
 ## Historique
 
 |       Date | Sections mises à jour                                                                         |
