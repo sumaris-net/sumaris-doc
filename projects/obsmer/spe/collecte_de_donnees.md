@@ -296,20 +296,34 @@ S'il n'y a pas de capture doit on saisir des captures (Poids à 0) ?
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
+> Questions MOA:
+> - Poids total de la capture: obligatoire ?
+> - Destination du produit : Quel PSFM ? (ex: `PRODUCTION_DESTINATION` et `LANDING_DESTINATION`)
+
+---
+## Opération > Capture (2/2)
+
+Contrôle de la saisie :
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-control.svg)
+
+> Questions MOA:
+> - Faut-il déplier l'arbre ?
+
 ---
 ## Administration > Lots > Modèle d'arbre (1/3)
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-1.svg)
+![ui-batch](/projects/obsmer/spe/images/batch/model/batch-tree-edit-1.svg)
 
 ---
 ## Administration > Lots > Modèle d'arbre (2/3)
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-2.svg)
+![ui-batch](/projects/obsmer/spe/images/batch/model/batch-tree-edit-2.svg)
 
 ---
 ## Administration > Lots > Modèle d'arbre (3/3)
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-edit-3.svg)
+![ui-batch](/projects/obsmer/spe/images/batch/model/batch-tree-edit-3.svg)
 
 ---
 ## Administration > Lots > Règles 
