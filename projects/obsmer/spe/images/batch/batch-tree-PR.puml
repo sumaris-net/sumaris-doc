@@ -3,8 +3,8 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + <back:#DDF>Capture    | .
-       ++ Partie retenue       | <color:gray>[0]
+       + Capture    | .
+       ++ <back:#DDF>Partie retenue       | .
        +++ Consommation humaine | <color:blue>[2]
        +++ Industrie | <color:blue>[2]
        ++ Partie rejetée, Vrac | <color:gray>[0]
@@ -18,11 +18,9 @@
       [<&checkmark> Contrôler] | [ << ]
    }
   } | . | {
-    { [<b>Capture] | / | [...]}
+    { [Capture] | / | [<b>Partie retenue] | [...] }
 
-    {[ ] Coup nul ? }
-    {Capture (toutes espèces) (kg) : | " <color:gray>Poids total capture (kg) " }
-
+    <i><color:blue>Rien à afficher sur cet écran
   }
 
   -- | -- | --

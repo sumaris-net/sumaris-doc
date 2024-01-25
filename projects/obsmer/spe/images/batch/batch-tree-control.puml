@@ -3,21 +3,14 @@
   {/ Détails | <b> Capture }
   {+
     {T
-         + <back:#DDD>Capture         | [200kg]
-         ++ Partie retenue, Vrac      | [100kg] (1/2)
+         + <back:#DDD>Capture         | <i><color:blue>[200kg]
+         ++ Partie       | [100kg] (1/2)
+       +++ Consommation humaine | <i><color:blue>[50kg]
+       +++ Industrie | <i><color:blue>[25kg]
          ++ Partie rejetée, Vrac      | [10kg]
          ++ Partie rejetée, Hors-Vrac | [5kg]
     }
     .
-    <i><color:orange>ou bien sous forme dépliée : (à confirmer)
-    .
-    {T
-         + <back:#DDD>Capture           | [200kg]
-         ++ Partie retenue, Vrac        | [100kg] (1/2)
-         ++ <color:#666>Partie rejetée  | <color:#666>[15kg]
-         +++ Vrac                       | [10kg]
-         +++ Hors-Vrac                  | [5kg]
-    }
     .
     .
     .
@@ -29,8 +22,8 @@
 
    { [<b>Capture] | / | [...]}
 
-       {Capture (toutes espèces) (kg) (*): | " 200" }
-       <i><color:orange> -> Est-ce obligatoire ?
+       {[ ] Coup nul ? }
+       {Capture (toutes espèces) (kg) : | " <i><color:blue>200" }
   }
 
   -- | -- | --

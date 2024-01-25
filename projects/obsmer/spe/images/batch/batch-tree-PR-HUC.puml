@@ -1,0 +1,41 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + Capture    | .
+       ++ Partie retenue       | .
+       +++ <back:#DDF>Consommation humaine | <color:blue>[2]
+       +++ Industrie | <color:blue>[2]
+       ++ Partie rejetée, Vrac | <color:gray>[0]
+       ++ Partie rejetée, Hors-Vrac | <color:gray>[0]
+   }
+    .
+    .
+    .
+   --
+   {
+      [<&checkmark> Contrôler] | [ << ]
+   }
+  } | . | {
+    { [Capture] | / | [Partie retenue] | [<b>Consommation humaine] }
+
+    {Poids total (kg) : | "     " }
+
+    {Taux échant (1/n) : | "     " | Poids échant (kg) : | "     " }
+
+    { [ ] Inventaire exhaustif des espèces ? }
+
+    {#
+          . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
+          # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant.
+          1 | ^MNZ- Baudroie       ^ | ^     WHL ^ | ^ FRE ^ | 50   |  .   |   10          | 4
+          2 | ^MNZ- Baudroie       ^ | ^     GUT ^ | ^ FRE ^ | 50   |  .   |   10          | 4
+        }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+
