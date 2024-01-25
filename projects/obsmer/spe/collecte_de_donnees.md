@@ -195,6 +195,7 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
 Nombre de mois pour la recherche ? (<b>A DEMANDER à la MOA)
+> A mettre en option de programme (12 mois par défaut)
 
 L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 1. Une nouvelle fenêtre "Engins Existants" s'ouvre
@@ -282,23 +283,45 @@ Dépend de :
 - La période (A DEFINIR)
 A REALISER
 
-**Variante 3b** - Cas du coup nul (pas de capture) : 
-A voir avec la MOA : _que signifie pas de capture ?_ 
-S'il n'y a pas de capture doit on saisir des captures (Poids à 0) ?
+**Variante 3b** - Engin dormant (A REALISER)
+3. Si l'engin choisi est un engin dormant : autoriser date de début OP AVANT marée 
 
+**Variante 3c** - Engin traînant (A REALISER)
+3. Si l'engin choisi est un engin traînant : Empêcher date de début OP en dehors de la période de la marée
 
-> - Prédocumenter la liste des espèces cibles / navires ? Pas prioritaire
-> - Engins dormants: autoriser date de début OP AVANT marée
-> - Engins traînants : Empêcher date de début OP en dehors de la période de la marée
+**Variante 3d** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
+   Alors il devient obligatoire de saisir le navire associé à l'opération
+   > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=41410
+
+**Variante 3e** - Filtrer les métier pratiqués - PAS PRIORITAIRE
+3. Le système filtre les espèces cibles en fonction des données historiques déjà saisies.
+   L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
 
 ---
 ## Opération > Capture (1/2)
 
+**REF: OBSMER/OPERATION_CAPTURE**
+
+**Fenêtre de saisie d'une capture, sur une opération**
+
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
+
+#### Scénario principal
+
+TODO
+
+#### Variante
+
+**Variante ??** - Cas du coup nul (pas de capture)
+3. Dans la capture, l'utilisateur coche le champ "coup nul ?" (Oui/Non). Le poids total de la capture passe à zéro.
+
+
+
 > Questions MOA:
-> - Poids total de la capture: obligatoire ?
-> - Destination du produit : Quel PSFM ? (ex: `PRODUCTION_DESTINATION` et `LANDING_DESTINATION`)
+> - Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
+> - Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation de débarquement`)
 
 ---
 ## Opération > Capture (2/2)
@@ -307,8 +330,28 @@ Contrôle de la saisie :
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-control.svg)
 
-> Questions MOA:
-> - Faut-il déplier l'arbre ?
+---
+## Opération > Capture > PR
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
+
+---
+## Opération > Capture > PR > Consommation humaine
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-HUC.svg)
+
+> - Présentation: `WHL Whole` par défaut 
+> - État: `FRE Frais` par défaut
+> Permettre l'ajout des PSFM ?
+---
+## Opération > Capture > PNR, Vrac
+
+---
+## Opération > Capture > PNR, Hors Vrac
+
+Capture accidentalle
+
+> TODO: Il faut des PSFM supplémentaire (ex: état de remise à l'eau)  
 
 ---
 ## Administration > Lots > Modèle d'arbre (1/3)
@@ -370,6 +413,14 @@ Questions :
 - Poids RTP: faut-il tracer la valeur du poids "RTP des lot fils" dans un PSFM RTP ?  
   (Thomas dit que oui: pour faire la différence avec les poids réels)
 - Poids de référence: faut-il pouvoir choisir la méthode "Déclaration par un observateur"
+
+---
+## Mesures de dénombrement
+
+Lorsque l'utilisateur n'a pas le temps de saisir les mensurations, il doit pouvoir détailler uniquement le nombre d'individu (par espèce scientifique)
+(**DEV A REALISER**)
+
+> Note technique: Ajouter une option à l'écran de saisie des mensurations, qu imasque les champs et PSFM autres l'espèce scientifique et le nombre d'individu  
 
 ---
 ## Photos
