@@ -477,7 +477,9 @@ Les saisisseurs doivent pouvoir visualiser une synthèse des poids, par lots par
 
 ## Historique
 
-|       Date | Sections mises à jour                                                                         |
-|-----------:|-----------------------------------------------------------------------------------------------|
-| 11/09/2023 | Création                                                                                      |
-| 10/11/2023 | Ajout écrans Marée, Engins et OP                                                              |
+|       Date | Auteur | Sections mises à jour                                             |
+|-----------:|--------|-------------------------------------------------------------------|
+| 11/09/2023 | BLA    | Création                                                          |
+| 10/11/2023 | BLA    | Ajout écrans Marée, Engins et OP                                  |
+| 19/01/2024 | VFA    | Ajout de cas d'utilisation (Marées, Marée, Opérations, Opération) |
+| 25/01/2024 | BLA    | Mise à jour des écrans de Capture                                 |
