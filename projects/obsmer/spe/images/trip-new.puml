@@ -27,7 +27,7 @@
   <b>Caractéristiques :
 
   {
-      . |Nombre d'homme à bord : | " 4   "
+      . |Nombre d'hommes à bord : | " 4   "
       . |Caractéristique #2 : | ^Valeur qualitative^
       . |. | + autres caractéristiques (cf "Grille de saisie")
       . |.

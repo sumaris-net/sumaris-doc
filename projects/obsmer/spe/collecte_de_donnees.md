@@ -29,6 +29,86 @@
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
+## Ergonomie : principes généraux
+**REF: OBSMER/ERGONOMIE**
+
+- Les champs obligatoires sont suffixé par un * (en rouge dans Allegro V2)
+- Les champs calculés sont en italique et la police est de couleur bleu
+- Les champs non saisissables sont affichés avec une police de couleur grise
+- Les données sous forme de tableau 
+  - Trie des données (croissant/décroissant) : Une flèche indique le sens du tri passage de la souris sur le nom de la colonne triable  
+  - Affichage/masque de colonnes : Un bouton offre la possibilité d'afficher ou de masquer des colonnes dans une vue tabulaire
+  - Les listes des marées, engins, opérations peuvent être restreintes en appliquant des filtres sur les données
+- Les caractéristiques (PSFM) obligatoires (*) sont affichée en tête de liste
+  - Cela se configure dans le programme, section "configuration des PSFM" 
+- _A complèter par rapport à l'existant dans Allegro V2_
+
+
+## Ergonomie : filtres
+**REF: OBSMER/ERGONOMIE_FILTRE**
+
+Les filtres sont accessibles sur les écrans affichant la liste des marées, engins(?) et opérations, par une icône entonnoir (<&funnel>) 
+
+L'écran de filtrage est composé de champ sur lesquels seront appliqués le filtre :
+- Le programme de collecte
+- Le navire (possibilité de renseigner plusieurs navires ?)
+- Le port de départ
+- La début de la période
+- La fin de la période
+- Le saisisseur
+- Les observateurs
+- L'état de saisie
+
+Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
+
+Question : l'écran de filtrage est il différent entre les marées/engins/opérations ?
+
+#### Scénario principal
+1. L'utilisateur clique sur le bouton du filtre
+2. L'écran affiche les paramètres sur lesquels appliquer un filtre
+3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
+4. L'utilisateur clique sur le bouton "Appliquer"
+  * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
+  * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
+  * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
+5. L'utilisateur clique sur le bouton de suppression du filtre
+  * La liste des élements est affichée dans sa totalité
+
+_VFA : Ecran de filtrage à faire_
+
+**Variante(s) :**
+
+_interface à réaliser_
+
+**Variante 1a**
+Le filtre peut être enregistré pour être ré-appliqué par la suite.
+
+## Connexion à l'application
+
+**REF: OBSMER/CONNEXION**
+
+L'interface est composée des éléments graphiques suivants :
+1. Champ texte pour renseigné son "Login"
+2. Champ texte pour renseigné son "Mot de passe"
+3. Choix du noeud dans une lite déroulante
+
+Une fois la connexion validée, l'interface graphique de l'application s'adapte par rapport à la configuration sélectionnée ("noeud") :
+- Titres,
+- Logos,
+- ...
+
+**Variante(s) :**
+
+_interface à réaliser_
+
+**Variante 3a** - Mode connecté : En mode connecté l'utilisateur est directement positionné sur le bon noeud.
+
+_interface à réaliser_
+
+**Variante 3b** - Mode déconnecté : En mode déconnecté, l'utilisateur choisit le noeud à la première connexion de l'application.
+Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le changer dans les paramètres de l'application.
+
+
 ## Ergonomie générale
 
 **REF: OBSMER/INTERFACE**
@@ -80,6 +160,10 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 1. L'observateur sélectionne le menu "Marées" dans l'interface de l'arbre du menu.
 2. Les marées s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque marée :
+    * L'état de saisie de la marée
+      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
+      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_ 
     * Le programme de collecte
     * Le navire
     * Le port de départ
@@ -195,7 +279,8 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
 Nombre de mois pour la recherche ? (<b>A DEMANDER à la MOA)
-> A mettre en option de programme (12 mois par défaut)
+> A mettre en option de programme (12 mois par défaut). Il est possible de modifier cette valeur dans les préférences
+> utilisateurs de l'application.
 
 L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 1. Une nouvelle fenêtre "Engins Existants" s'ouvre
@@ -213,7 +298,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 
 **Variante 3a** - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
 Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
-C'est une option liée au programme de collecte (<b>A CONFIRMER par la MOA)
+C'est une option liée au programme de collecte.
 
 
 > - [ ] ~~Optimiser le chargement de la stratégie~~
@@ -238,7 +323,11 @@ C'est une option liée au programme de collecte (<b>A CONFIRMER par la MOA)
 
 1. L'observateur sélectionne le menu "Opération" dans l'interface de l'arbre du menu ou l'onglet "Opérations" dans l'interface d'une marée
 2. Les opération s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque opération (à valider):
-    * L'engin utilisé
+    * L'état de saisie de l'opération
+        * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
+        * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+        * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
+     * L'engin utilisé
     * L'espèce cible
     * La date de début de pêche
     * La position de début des opérations
@@ -305,6 +394,16 @@ A REALISER
 
 **Fenêtre de saisie d'une capture, sur une opération**
 
+**Capture** : Ensemble des animaux, végétaux et matières inertes remontés à bord du navire à l’issue
+d’une opération de pêche.
+
+**Capture accessoire** : Partie de la capture d'une unité de pêche prise en plus de l'espèce cible vers
+laquelle l'effort de pêche est orienté. Une partie ou la totalité de cette prise peut être
+rejetée à la mer, généralement morte ou mourante (source FAO).
+
+**Capture accidentelle** : capture accessoire d’espèces protégées, en danger ou menacées (voir
+Définition de PETS).
+
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
 
@@ -315,13 +414,14 @@ TODO
 #### Variante
 
 **Variante ??** - Cas du coup nul (pas de capture)
-3. Dans la capture, l'utilisateur coche le champ "coup nul ?" (Oui/Non). Le poids total de la capture passe à zéro.
+?. Dans la capture, l'utilisateur coche le champ "coup nul ?" (Oui/Non). 
+   S'il coche oui, le poids total de la capture passe à zéro. le champ "poids total de la capture" est saisissable et tout le reste de l'arbre d'échantillonnage est grisé.
 
 
 
 > Questions MOA:
 > - Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
-> - Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation de débarquement`)
+> - Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation à débarquer`)
 
 ---
 ## Opération > Capture (2/2)
@@ -349,7 +449,7 @@ Contrôle de la saisie :
 ---
 ## Opération > Capture > PNR, Hors Vrac
 
-Capture accidentalle
+Capture accidentelle
 
 > TODO: Il faut des PSFM supplémentaire (ex: état de remise à l'eau)  
 

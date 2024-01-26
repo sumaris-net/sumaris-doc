@@ -16,7 +16,9 @@ RAS
 
 ## Schéma SIH2_ADAGIO_DBA
 
-RAS
+Modification de PSFM : 
+- PSFM `PRODUCT_DESTINATION` : il manque `Obligation à débarquer`
+- Pour la capture accidentelle il faut un PSFM supplémentaire (ex: `état de remise à l'eau`)
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
