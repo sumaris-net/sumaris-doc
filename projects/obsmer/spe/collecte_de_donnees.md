@@ -35,6 +35,7 @@
 - Les champs obligatoires sont suffixé par un * (en rouge dans Allegro V2)
 - Les champs calculés sont en italique et la police est de couleur bleu
 - Les champs non saisissables sont affichés avec une police de couleur grise
+- Les préconisations de saisies sont affichées en blanc sur fond rouge
 - Les données sous forme de tableau 
   - Trie des données (croissant/décroissant) : Une flèche indique le sens du tri passage de la souris sur le nom de la colonne triable  
   - Affichage/masque de colonnes : Un bouton offre la possibilité d'afficher ou de masquer des colonnes dans une vue tabulaire
@@ -347,6 +348,8 @@ C'est une option liée au programme de collecte.
 
 ![ui-operation](/projects/obsmer/spe/images/operation.svg)
 
+#### Scénario principal
+
 1. L'observateur demande la création d'une nouvelle opération (OBSMER/OPERATION_MENU : bouton +)
 2. Une fenêtre s'ouvre sur la saisie des caractéristiques de l'opération. 
 3. L'observateur renseigne les éléments suivants :
@@ -388,7 +391,7 @@ A REALISER
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
 
 ---
-## Opération > Capture (1/2)
+## Opération > Capture > Saisie 
 
 **REF: OBSMER/OPERATION_CAPTURE**
 
@@ -406,48 +409,101 @@ Définition de PETS).
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
+VFA : Ne faudrait-il pas un s à Capture ?
 
 #### Scénario principal
 
-TODO
+1. L'observateur à sélectionné l'onglet "Capture" dans le menu d'une opération. 
+ * L'écran de saisie des captures s'affiche. 
+ * L'écran capture est composé de 2 écrans :
+   * Un arbre d'échantillonnage d'information sur les PN (partie retenue) et PNR (partie non retenue)
+   * Une zone de saisie des lots par espèce pour les PN et PNR (à droite de l'arbre d'échantillonnage)
+2. L'observateur peut contrôler la saisie des captures par le bouton "Contrôler"
+3. L'observateur peut masquer cet arbre en cliquant sur le bouton <<
+ * Une fois l'abre masqué, il peut le réafficher en cliquant sur >>
+4. L'observateur peut saisir, dans l'écran de droite, des informations sur la capture
+ * Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
+ * Le poids total (en kg) de toutes les espèces capturées
+   * Ce champ est calculé
+ * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR") 
 
-#### Variante
+    
+#### Variantes
 
-**Variante ??** - Cas du coup nul (pas de capture)
-?. Dans la capture, l'utilisateur coche le champ "coup nul ?" (Oui/Non). 
-   S'il coche oui, le poids total de la capture passe à zéro. le champ "poids total de la capture" est saisissable et tout le reste de l'arbre d'échantillonnage est grisé.
+**Variante 4a** - Cas du coup nul (pas de capture) (VFA : à confirmer)
+4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
+   Le poids total de la capture est saisissable et tout le reste de l'arbre d'échantillonnage est grisé.
 
-
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
 > Questions MOA:
 > - Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
 > - Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation à débarquer`)
 
 ---
-## Opération > Capture (2/2)
+## Opération > Capture > Contrôle 
 
-Contrôle de la saisie :
+**REF: OBSMER/OPERATION_CAPTURE_CONTROLE**
+
+Contrôle de la saisie d'une capture :
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-control.svg)
 
+#### Scénario principal
+
+1. L'observateur clique sur le bouton "Contrôler"
+2. L'abre d'échantillonnage n'est alors pas dépilé et les poids sont calculés et remontés
+ * Les poids calculés sont affichés en bleu et en italique 
 ---
+
+
 ## Opération > Capture > PR
 
+**REF: OBSMER/OPERATION_CAPTURE_PR**
+
+**Partie retenue d'une capture** : Partie de la capture remontée à bord du navire qui est conservée à bord une fois le tri effectué par l’équipage
+
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
+
+#### Scénario principal
+1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
+2. L'écran de saisie de la "Partie retenue" se met à jour
+ *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
+ * Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture (VFA : pour ne pas rendre sélectionnable ce menu ?)
 
 ---
 ## Opération > Capture > PR > Consommation humaine
 
+**REF: OBSMER/OPERATION_CAPTURE_PR_CH**
+
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-HUC.svg)
+
+#### Scénario principal
+1. L'utilisateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
+2. 
 
 > - Présentation: `WHL Whole` par défaut 
 > - État: `FRE Frais` par défaut
 > Permettre l'ajout des PSFM ?
 ---
+
 ## Opération > Capture > PNR, Vrac
+
+**REF: OBSMER/OPERATION_CAPTURE_PNR_VRAC**
+
+**Partie non retenue** : Partie de la capture remontée à bord du navire qui est rejeté à la mer une
+fois le tri effectué par l’équipage.
+
+#### Scénario principal
+TODO
 
 ---
 ## Opération > Capture > PNR, Hors Vrac
+
+**REF: OBSMER/OPERATION_CAPTURE_PNR_HVRAC**
+
+#### Scénario principal
+TODO
 
 Capture accidentelle
 
