@@ -3,7 +3,7 @@
   {/ Détails | <b> Capture }
   {+
     {T
-         + <back:#DDD>Capture         | <color:grey>[200kg]
+         + <back:#DDD>Capture         | <color:grey>[0kg]
          ++ <color:grey>Partie retenue      | <color:grey>[0kg]
          ++ <color:grey>Partie rejetée, Vrac      | <color:grey>[0kg]
          ++ <color:grey>Partie rejetée, Hors-Vrac | <color:grey>[0kg]
@@ -21,7 +21,7 @@
    { [<b>Capture] | / | [...]}
 
        {[X] Coup nul ? }
-       {Capture (toutes espèces) (kg) : | " 200" }
+       {Capture (toutes espèces) (kg) : | " 0" }
   }
 
   -- | -- | --

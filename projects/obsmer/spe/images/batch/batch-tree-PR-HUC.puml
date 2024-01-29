@@ -4,7 +4,7 @@
   {+
    {T
        + Capture    | .
-       ++ Partie retenue       | .
+       ++ Partie retenue       | <color:blue>[4]
        +++ <back:#DDF>Consommation humaine | <color:blue>[2]
        +++ Industrie | <color:blue>[2]
        ++ Partie rejetée, Vrac | <color:gray>[0]

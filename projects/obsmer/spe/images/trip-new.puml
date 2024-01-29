@@ -19,7 +19,7 @@
 
       Retour*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^ | ^ hh:mm^ } | <&calendar> Mis à jour le 10/11/2023
 
-      Vente*:     | { ^Type de vente         ^ } | . | [Terminer la saisie]
+      Vente*:     | { ^Type de vente         ^ } | <i><color:blue>durée de la marée | [Terminer la saisie]
       .           | { ^Lieu de vente         ^ } | { ^ jj/mm/aaaa^ |  ^ hh:mm^ }
 
   }

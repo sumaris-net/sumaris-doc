@@ -167,8 +167,9 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
       * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_ 
     * Le programme de collecte
     * Le navire
-    * Le port de départ
+    * Le port de départ (VFA : Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...))
     * La date de départ
+    * Le port de retour (VFA : Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...))
     * La date de retour
     * Le saisisseur
     * La liste des observateurs (séparés par une virgule)
@@ -209,7 +210,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
    * Les détails sur la vente 
      * Le lieu* de vente 
-     * La date* de vente
+     * La date* de vente (VFA : faut il proposer de renseigner l'heure de vente ?)
      * Le type* de vente (_référentiel des TYPE DE VENTE_)
    * Des caractéristiques (PSFM définit pat la stratégie appliquée):
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée  
@@ -241,7 +242,8 @@ Un bouton permet de sauvegarder la marée.
 1. L'observateur sélectionne le menu "Engin" dans l'interface de l'arbre du menu ou l'onglet "Engin" dans l'interface d'une marée
 2. Les engins de la marée s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque engins :
     * Engin (Code et libellé)
-    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable
+    * Type d'engin (VFA : PARENT_GEAR_FK ?)
+    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable (VFA : Beaucoup de PSFM si beaucoup d'engins ?)
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton + permet d'ajouter un nouvel engin
 
@@ -279,9 +281,9 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 ![ui-gear](/projects/obsmer/spe/images/gears-present.svg)
 
 pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
-Nombre de mois pour la recherche ? (<b>A DEMANDER à la MOA)
-> A mettre en option de programme (12 mois par défaut). Il est possible de modifier cette valeur dans les préférences
-> utilisateurs de l'application.
+Nombre de mois pour la recherche ?
+
+A mettre en option de programme (12 mois par défaut). Il est possible de modifier cette valeur dans les préférences  utilisateurs de l'application.
 
 L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 1. Une nouvelle fenêtre "Engins Existants" s'ouvre
@@ -376,17 +378,21 @@ Dépend de :
 A REALISER
 
 **Variante 3b** - Engin dormant (A REALISER)
+
 3. Si l'engin choisi est un engin dormant : autoriser date de début OP AVANT marée 
 
 **Variante 3c** - Engin traînant (A REALISER)
+
 3. Si l'engin choisi est un engin traînant : Empêcher date de début OP en dehors de la période de la marée
 
 **Variante 3d** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
    Alors il devient obligatoire de saisir le navire associé à l'opération
    > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=41410
 
 **Variante 3e** - Filtrer les métier pratiqués - PAS PRIORITAIRE
+
 3. Le système filtre les espèces cibles en fonction des données historiques déjà saisies.
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
 
@@ -414,25 +420,26 @@ VFA : Ne faudrait-il pas un s à Capture ?
 #### Scénario principal
 
 1. L'observateur à sélectionné l'onglet "Capture" dans le menu d'une opération. 
- * L'écran de saisie des captures s'affiche. 
- * L'écran capture est composé de 2 écrans :
+   * L'écran de saisie des captures s'affiche. 
+   * L'écran capture est composé de 2 écrans :
    * Un arbre d'échantillonnage d'information sur les PN (partie retenue) et PNR (partie non retenue)
    * Une zone de saisie des lots par espèce pour les PN et PNR (à droite de l'arbre d'échantillonnage)
 2. L'observateur peut contrôler la saisie des captures par le bouton "Contrôler"
 3. L'observateur peut masquer cet arbre en cliquant sur le bouton <<
- * Une fois l'abre masqué, il peut le réafficher en cliquant sur >>
+    * Une fois l'abre masqué, il peut le réafficher en cliquant sur >>
 4. L'observateur peut saisir, dans l'écran de droite, des informations sur la capture
- * Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
- * Le poids total (en kg) de toutes les espèces capturées
-   * Ce champ est calculé
- * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR") 
+    *  Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
+    * Le poids total (en kg) de toutes les espèces capturées
+    * Ce champ est calculé
+      * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR") 
 
     
 #### Variantes
 
 **Variante 4a** - Cas du coup nul (pas de capture) (VFA : à confirmer)
+
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
-   Le poids total de la capture est saisissable et tout le reste de l'arbre d'échantillonnage est grisé.
+   Le poids total de la capture est saisissable (VFA : valeur 0 par défaut ?) et tout le reste de l'arbre d'échantillonnage est grisé.
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
