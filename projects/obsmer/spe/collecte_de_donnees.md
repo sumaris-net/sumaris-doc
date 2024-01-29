@@ -436,7 +436,7 @@ VFA : Ne faudrait-il pas un s à Capture ?
     
 #### Variantes
 
-**Variante 4a** - Cas du coup nul (pas de capture) (VFA : à confirmer)
+**Variante 4a** - Cas du coup nul (pas de capture)
 
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
    Le poids total de la capture est saisissable (VFA : valeur 0 par défaut ?) et tout le reste de l'arbre d'échantillonnage est grisé.
@@ -460,10 +460,10 @@ Contrôle de la saisie d'une capture :
 
 1. L'observateur clique sur le bouton "Contrôler"
 2. L'abre d'échantillonnage n'est alors pas dépilé et les poids sont calculés et remontés
- * Les poids calculés sont affichés en bleu et en italique 
+    *  Les poids calculés sont affichés en bleu et en italique 
+   
+
 ---
-
-
 ## Opération > Capture > PR
 
 **REF: OBSMER/OPERATION_CAPTURE_PR**
@@ -474,9 +474,13 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
-2. L'écran de saisie de la "Partie retenue" se met à jour
- *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
- * Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture (VFA : pour ne pas rendre sélectionnable ce menu ?)
+2. L'arbre se déplie et le sous menu suivants apparaissent sous le menu "Partie retenue"
+    * "Consommation humaine"
+    * "Industrie"
+    * "Obligation à débarquer" (VFA : Est ce exhaustif ?)
+3. L'écran de saisie de la "Partie retenue" se met à jour
+    *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
+    *  Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture 
 
 ---
 ## Opération > Capture > PR > Consommation humaine
@@ -487,7 +491,7 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 1. L'utilisateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
-2. 
+2. TODO
 
 > - Présentation: `WHL Whole` par défaut 
 > - État: `FRE Frais` par défaut
