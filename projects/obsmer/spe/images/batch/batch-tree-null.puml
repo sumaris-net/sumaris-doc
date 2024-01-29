@@ -1,0 +1,31 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+    {T
+         + <back:#DDD>Capture         | <color:grey>[200kg]
+         ++ <color:grey>Partie retenue      | <color:grey>[0kg]
+         ++ <color:grey>Partie rejetée, Vrac      | <color:grey>[0kg]
+         ++ <color:grey>Partie rejetée, Hors-Vrac | <color:grey>[0kg]
+    }
+    .
+    .
+    .
+    .
+    --
+    {
+       [<&checkmark> Contrôler] | [ << ]
+    }
+  } | . | {
+
+   { [<b>Capture] | / | [...]}
+
+       {[X] Coup nul ? }
+       {Capture (toutes espèces) (kg) : | " 200" }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+
