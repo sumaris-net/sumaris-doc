@@ -10,6 +10,7 @@
       {
         Fin filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Début virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        . | <i><color:blue>durée de l'opération
       }
     }
 

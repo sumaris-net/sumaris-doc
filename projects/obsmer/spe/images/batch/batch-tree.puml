@@ -4,11 +4,12 @@
   {+
    {T
        + <back:#DDF>Capture    | .
-       ++ Partie retenue       | <color:blue>[4]
-       +++ Consommation humaine | <color:blue>[2]
-       +++ Industrie | <color:blue>[2]
-       ++ Partie rejetée, Vrac | <color:gray>[0]
-       ++ Partie rejetée, Hors-Vrac | <color:gray>[0]
+       ++ Partie retenue       | <i><color:blue>[6]
+       +++ Consommation humaine | <i><color:blue>[2]
+       +++ Industrie | <i><color:blue>[2]
+       +++ Obligation à débarquer| <i><color:blue>[2]
+       ++ Partie rejetée, Vrac | <i><color:gray>[0]
+       ++ Partie rejetée, Hors-Vrac | <i><color:gray>[0]
    }
     .
     .

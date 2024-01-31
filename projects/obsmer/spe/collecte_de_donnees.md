@@ -42,13 +42,16 @@
   - Les listes des marées, engins, opérations peuvent être restreintes en appliquant des filtres sur les données
 - Les caractéristiques (PSFM) obligatoires (*) sont affichée en tête de liste
   - Cela se configure dans le programme, section "configuration des PSFM" 
-- _A complèter par rapport à l'existant dans Allegro V2_
+- Il faut afficher uniquement les colonnes PSFM ayant une valeur
+- Dans un écran de saisie, le bouton "Sauvegarder" est actif lorsque tous les champs obligatoires ont été saisis
 
+> Remarques :
+> VFA : A complèter par rapport à l'existant dans Allegro V2
 
 ## Ergonomie : filtres
 **REF: OBSMER/ERGONOMIE_FILTRE**
 
-Les filtres sont accessibles sur les écrans affichant la liste des marées, engins(?) et opérations, par une icône entonnoir (<&funnel>) 
+Les filtres sont accessibles sur les écrans affichant la liste des marées, engins(?) et opérations, par une icône entonnoir 
 
 L'écran de filtrage est composé de champ sur lesquels seront appliqués le filtre :
 - Le programme de collecte
@@ -62,7 +65,8 @@ L'écran de filtrage est composé de champ sur lesquels seront appliqués le fil
 
 Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
 
-Question : l'écran de filtrage est il différent entre les marées/engins/opérations ?
+> Questions :
+> VFA : L'écran de filtrage est il différent entre les marées/engins/opérations ?
 
 #### Scénario principal
 1. L'utilisateur clique sur le bouton du filtre
@@ -124,9 +128,11 @@ L'interface est composée des éléments graphiques suivants :
      * Immatriculation du navire de la marée
      * La date de début de la marée
    * Le bandeau permet d'afficher les opérations dans une vue cartographique (à voir au prochain point prototype)
-   * Un bouton permettant d'importer les formulaires (à détailler)
+   * Un bouton permettant d'importer les formulaires saisis sur le terrain
 4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
 
+> Questions :
+> VFA : C'est bien les formulaires saisit en mer par les observateurs ? Ecran à faire ?
 
 #### Scénario principal
 
@@ -167,14 +173,16 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
       * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_ 
     * Le programme de collecte
     * Le navire
-    * Le port de départ (VFA : Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...))
+    * Le port de départ 
     * La date de départ
-    * Le port de retour (VFA : Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...))
+    * Le port de retour 
     * La date de retour
     * Le saisisseur
     * La liste des observateurs (séparés par une virgule)
-3. Un bouton permet d'afficher ou de masquer des colonnes
-4. Un bouton + permet d'ajouter une nouvelle marée
+3. Un bouton + permet d'ajouter une nouvelle marée
+
+> Questions :
+> VFA : port -  Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...)
 
 ---
 
@@ -210,10 +218,10 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
    * Les détails sur la vente 
      * Le lieu* de vente 
-     * La date* de vente (VFA : faut il proposer de renseigner l'heure de vente ?)
+     * La date* de vente 
      * Le type* de vente (_référentiel des TYPE DE VENTE_)
-   * Des caractéristiques (PSFM définit pat la stratégie appliquée):
-     * L'observateur à la possibilité de rajouter des caractéristiques à la marée  
+   * Des caractéristiques (PSFM définit pat la stratégie appliquée)
+     * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
        * Nombre d'hommes à bord*
        * Document déclaratif (case à cocher, oui/non)
        * Débarquement de macro-déchets à terre* (case à cocher, oui/non)
@@ -221,12 +229,27 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
    * Un commentaire (maximum 2000 caractères)
 5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
+6. Un bouton "Sauvegarder" permet de sauvegarder la marée en cours de saisie.
 
-Un bouton permet de sauvegarder la marée.
+
+**Variante(s) :**
+
+**Variante 4a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton +.
+Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
+
+
+> Questions/Remarques :
+> VFA : Ecran d'ajout des PSFM à faire
+> VFA : Dans Allegro V2 et la maquette MOA, on sélectionne la stratégie de référence (programme de rattachement renseigné si connexion avec WAO).
+>       Si à implémenter, faire l'écran de la sélection de référence au plan d'échantillonnage  (Réunion du 2023-10-05 - Faisabilité de l'intégration de WAO)
+> VFA : Faut il proposer de renseigner l'heure de vente ?
+> VFA : Faut il implémenter un bouton "Sauvegarder et Suivant" ? (pour moi non)
 
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
 > Modèle de données de vente : TODO (A REALISER par VFA)
+
+
 
 ---
 ### Marée > Engins 
@@ -242,8 +265,8 @@ Un bouton permet de sauvegarder la marée.
 1. L'observateur sélectionne le menu "Engin" dans l'interface de l'arbre du menu ou l'onglet "Engin" dans l'interface d'une marée
 2. Les engins de la marée s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque engins :
     * Engin (Code et libellé)
-    * Type d'engin (VFA : PARENT_GEAR_FK ?)
-    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable (VFA : Beaucoup de PSFM si beaucoup d'engins ?)
+    * Type d'engin 
+    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable 
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton + permet d'ajouter un nouvel engin
 
@@ -251,6 +274,11 @@ Un bouton permet de sauvegarder la marée.
 **Variante(s) :** 
 
 **Variante 2a** - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
+
+> Questions/Remarques :
+> VFA : prép-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
+> VFA : Type d'engin - indiqué par le champ GEAR.PARENT_GEAR_FK ? Faut il le faire apparaitre ?
+> VFA : Beaucoup de PSFM si beaucoup d'engins (scrollbar horizontale). Exemple d'un engin avec 12 PSFM
 
 ---
 ### Marée > Engin > Détails
@@ -264,13 +292,14 @@ Un bouton permet de sauvegarder la marée.
     * L'engin sélectionné est affiché avec son code et son libellé
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
         * Les caractéristiques (PSFM à saisir) sont propre à l'engin sélectionné (suivant la stratégie appliquée)
-        * Les champs marqués par un * sont obligatoires
         * A l'ouverture de la fenêtre de saisie, le champ "Ajouté" est grisé
-            * Le champ devient actif quand tous les champs obligatoires on été saisie
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
     * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
 
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
+
+> Questions/Remarques :
+> VFA : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité dans sumaris ?
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
@@ -292,18 +321,20 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
     * Les informations suivantes, pour chaque engin, sont affichées :
       * Type d'engin
       * Le libellé de l'engin
-      * Les caractéristiques (PSFM obligatoires et renseignés)
+      * Les caractéristiques (affichage des PSFM renseignés seulement)
       * La période de la dernière utilisation
       * Un commentaire 
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
    * si l'application est en mode déconnecté , la recherche se fait parmis les données synchronisées
 
+**Variante(s) :**
+
 **Variante 3a** - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
 Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
 C'est une option liée au programme de collecte.
 
-
+> Questions/Remarques :
 > - [ ] ~~Optimiser le chargement de la stratégie~~
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
 > - [ ] Libellé d'engin ?
@@ -359,6 +390,7 @@ C'est une option liée au programme de collecte.
    * L'espèce cible
    * La date, l'heure et la position de début de pêche
    * La date, l'heure et la position de fin de pêche
+   * La durée de l'opération (calculée automatiquement)
    * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
      * Le déroulement normal de l'opération avec des cases à cocher (oui, non)
@@ -371,11 +403,15 @@ C'est une option liée au programme de collecte.
 
 **Variantes**
 
-**Variante 3a** - Il est possible de filtrer sur les espèces cibles (icone à droite du choix de l'espèce) 
-Dépend de : 
-- Habitude du navire ? 
-- La période (A DEFINIR)
+**Variante 3a** - Il est possible de filtrer sur les espèces cibles avec une période à définir (icone à droite du choix de l'espèce)
+
 A REALISER
+
+> Questions :
+> VFA : Dépend de l'habitude du navire ?
+> VFA : Manque la zone d'activité (Sous division) ?
+
+
 
 **Variante 3b** - Engin dormant (A REALISER)
 
@@ -415,15 +451,18 @@ Définition de PETS).
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
-VFA : Ne faudrait-il pas un s à Capture ?
+
+> Questions
+> VFA : Ne faudrait-il pas un s à Capture ?
+> VFA : Utiliser le terme PNR (partie non retenue) ou PR (partie rejetée) ? Plutôt PNR (modifier les écrans)
 
 #### Scénario principal
 
 1. L'observateur à sélectionné l'onglet "Capture" dans le menu d'une opération. 
    * L'écran de saisie des captures s'affiche. 
    * L'écran capture est composé de 2 écrans :
-   * Un arbre d'échantillonnage d'information sur les PN (partie retenue) et PNR (partie non retenue)
-   * Une zone de saisie des lots par espèce pour les PN et PNR (à droite de l'arbre d'échantillonnage)
+   * Un arbre d'échantillonnage d'information sur les PR (partie retenue) et PNR (partie non retenue)
+   * Une zone de saisie des lots par espèce pour les PR et PNR (à droite de l'arbre d'échantillonnage)
 2. L'observateur peut contrôler la saisie des captures par le bouton "Contrôler"
 3. L'observateur peut masquer cet arbre en cliquant sur le bouton <<
     * Une fois l'abre masqué, il peut le réafficher en cliquant sur >>
@@ -439,7 +478,7 @@ VFA : Ne faudrait-il pas un s à Capture ?
 **Variante 4a** - Cas du coup nul (pas de capture)
 
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
-   Le poids total de la capture est saisissable (VFA : valeur 0 par défaut ?) et tout le reste de l'arbre d'échantillonnage est grisé.
+   Le poids total de la capture est grisé et prend la valeur 0. Tout le reste de l'arbre d'échantillonnage est aussi grisé.
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
@@ -474,13 +513,16 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
-2. L'arbre se déplie et le sous menu suivants apparaissent sous le menu "Partie retenue"
+2. L'arbre se déplie et le sous menu suivants apparaissent sous le menu "Partie retenue" (_PSFM = PRODUCT_DESTINATION_)
     * "Consommation humaine"
-    * "Industrie"
-    * "Obligation à débarquer" (VFA : Est ce exhaustif ?)
+    * "Utilisation industrielle"
+    * "Obligation à débarquer" 
 3. L'écran de saisie de la "Partie retenue" se met à jour
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
-    *  Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture 
+4. Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture 
+
+> Questions :
+> VFA : Exhausivité de la destination de la partie retenue ?
 
 ---
 ## Opération > Capture > PR > Consommation humaine
@@ -491,11 +533,33 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 1. L'utilisateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
-2. TODO
+2. L'écran de saisie se met à jour
+    *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue / Consommation Humaine")
+3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
+    *  Une zone de saisie du poids total (en Kg)
+    *  Une zone de saisie du poids échantillonné (en Kg)
+    *  Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir
+       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs 
+    *  Une case à cocher indiquant si l'inventaire des espèces est exhaustif (Oui si la case est coché)
+    *  VFA : Une case à cocher indiquant si la partie retenue est estimée (Oui si la case est coché) 
+    *  Un tableau affichant la liste des espèces commerciale à saisir
+4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton +
+5. Il peut renseigner pour chaque espèce commerciale :
+    * Le nom de l'espèce
+    * La présentation (_PSMF = DRESSING_, _METHOD = 42_, _Observation par un observateur_) 
+        * Par défaut WHL (_entier_) 
+    * L'état (_PSMF = PRESERVATION_, _METHOD = 42_, _Observation par un observateur_)
+        * Par défaut FRE (_frais_) 
+   *  Le poids total (en Kg)
+   *  Le taux d'échantillonnage (1/n)
+   *  Le poids d'échantillonnage (en Kg)
+   *  Le nombre d'individu échantillonné
+6. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
-> - Présentation: `WHL Whole` par défaut 
-> - État: `FRE Frais` par défaut
-> Permettre l'ajout des PSFM ?
+> Questions :
+> VFA : Taux d'échantillonnage : ratio ou %
+> VFA : Permettre l'ajout de PSFM ?
+
 ---
 
 ## Opération > Capture > PNR, Vrac
