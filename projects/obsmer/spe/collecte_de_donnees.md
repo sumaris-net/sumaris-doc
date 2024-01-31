@@ -73,11 +73,11 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
 2. L'écran affiche les paramètres sur lesquels appliquer un filtre
 3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
 4. L'utilisateur clique sur le bouton "Appliquer"
-  * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
-  * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
-  * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
+   * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
+   * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
+   * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
 5. L'utilisateur clique sur le bouton de suppression du filtre
-  * La liste des élements est affichée dans sa totalité
+   * La liste des élements est affichée dans sa totalité
 
 _VFA : Ecran de filtrage à faire_
 
@@ -122,7 +122,7 @@ Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le chan
 
 L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
-    * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
+* Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif de la marée / vente
    * Sur la sélection d'une marée, le bandeau affiche les informations suivantes 
      * Immatriculation du navire de la marée
