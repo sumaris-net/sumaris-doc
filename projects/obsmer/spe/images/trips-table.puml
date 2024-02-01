@@ -11,8 +11,6 @@
     }
 
   --
-  {
-    [Fermer] | [Sauvegarder]
-  }
+
 }
 @endsalt

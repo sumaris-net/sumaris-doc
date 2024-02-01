@@ -1,0 +1,30 @@
+@startsalt
+{
+
+  {
+  <b> Marées | . | . | . | [ <&plus>] | . | . | . | [<b>Y]}
+  ..
+
+    {
+      {Programme de collecte : | ^ SIH-OBSMER ^ }
+      .
+      {
+        Navire : | . | ^ 851751 - PETIT BATEAU ^ | . | . | Port : | . | ^ RDZ  Douarnenez ^
+        .
+        Début de période :   | . |^ jj/mm/aaaa ^ | . | . | Fin de période :   | . | ^ jj/mm/aaaa ^
+        .
+        Organisme saisisseur :   | . |^ Ifremer ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND ^
+        .
+        Observateurs: | . | ^ Observateur #1 ^ |  . | . | Etat :   | . | ^En cours de saisie ^
+      }
+    }
+
+
+
+  --
+
+  {
+    2 résultats | . | . | . | [Fermer] | [Appliquer]
+  }
+}
+@endsalt

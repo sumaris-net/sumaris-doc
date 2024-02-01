@@ -29,6 +29,9 @@
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
+> Questions :
+> VFA : Peut on déplacer les règles d'ergonomie, les écrans communs à ObsMer, ObsVente, Calendrier dans une thématique "général" (projects/general) ?
+
 ## Ergonomie : principes généraux
 **REF: OBSMER/ERGONOMIE**
 
@@ -50,6 +53,8 @@
 
 ## Ergonomie : filtres
 **REF: OBSMER/ERGONOMIE_FILTRE**
+
+![ui-filtre](/projects/obsmer/spe/images/filter.svg)
 
 Les filtres sont accessibles sur les écrans affichant la liste des marées, engins(?) et opérations, par une icône entonnoir 
 
@@ -108,11 +113,17 @@ _interface à réaliser_
 
 **Variante 3a** - Mode connecté : En mode connecté l'utilisateur est directement positionné sur le bon noeud.
 
+![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect.svg)
+
 _interface à réaliser_
 
 **Variante 3b** - Mode déconnecté : En mode déconnecté, l'utilisateur choisit le noeud à la première connexion de l'application.
+
+![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect-out-first.svg)
+
 Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le changer dans les paramètres de l'application.
 
+![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect-out-next.svg)
 
 ## Ergonomie générale
 
