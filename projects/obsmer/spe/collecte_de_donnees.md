@@ -29,101 +29,11 @@
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
-> Questions :
-> VFA : Peut on déplacer les règles d'ergonomie, les écrans communs à ObsMer, ObsVente, Calendrier dans une thématique "général" (projects/general) ?
 
-## Ergonomie : principes généraux
-**REF: OBSMER/ERGONOMIE**
+## Ergonomie : principes généraux et connexion
 
-- Les champs obligatoires sont suffixé par un * (en rouge dans Allegro V2)
-- Les champs calculés sont en italique et la police est de couleur bleu
-- Les champs non saisissables sont affichés avec une police de couleur grise
-- Les préconisations de saisies sont affichées en blanc sur fond rouge
-- Les données sous forme de tableau 
-  - Trie des données (croissant/décroissant) : Une flèche indique le sens du tri passage de la souris sur le nom de la colonne triable  
-  - Affichage/masque de colonnes : Un bouton offre la possibilité d'afficher ou de masquer des colonnes dans une vue tabulaire
-  - Les listes des marées, engins, opérations peuvent être restreintes en appliquant des filtres sur les données
-- Les caractéristiques (PSFM) obligatoires (*) sont affichée en tête de liste
-  - Cela se configure dans le programme, section "configuration des PSFM" 
-- Il faut afficher uniquement les colonnes PSFM ayant une valeur
-- Dans un écran de saisie, le bouton "Sauvegarder" est actif lorsque tous les champs obligatoires ont été saisis
+[principes généraux](../../common/regles_ergonomie.md)
 
-> Remarques :
-> VFA : A complèter par rapport à l'existant dans Allegro V2
-
-## Ergonomie : filtres
-**REF: OBSMER/ERGONOMIE_FILTRE**
-
-![ui-filtre](/projects/obsmer/spe/images/filter.svg)
-
-Les filtres sont accessibles sur les écrans affichant la liste des marées, engins(?) et opérations, par une icône entonnoir 
-
-L'écran de filtrage est composé de champ sur lesquels seront appliqués le filtre :
-- Le programme de collecte
-- Le navire (possibilité de renseigner plusieurs navires ?)
-- Le port de départ
-- La début de la période
-- La fin de la période
-- Le saisisseur
-- Les observateurs
-- L'état de saisie
-
-Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
-
-> Questions :
-> VFA : L'écran de filtrage est il différent entre les marées/engins/opérations ?
-
-#### Scénario principal
-1. L'utilisateur clique sur le bouton du filtre
-2. L'écran affiche les paramètres sur lesquels appliquer un filtre
-3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
-4. L'utilisateur clique sur le bouton "Appliquer"
-   * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
-   * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
-   * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
-5. L'utilisateur clique sur le bouton de suppression du filtre
-   * La liste des élements est affichée dans sa totalité
-
-_VFA : Ecran de filtrage à faire_
-
-**Variante(s) :**
-
-_interface à réaliser_
-
-**Variante 1a**
-Le filtre peut être enregistré pour être ré-appliqué par la suite.
-
-## Connexion à l'application
-
-**REF: OBSMER/CONNEXION**
-
-L'interface est composée des éléments graphiques suivants :
-1. Champ texte pour renseigné son "Login"
-2. Champ texte pour renseigné son "Mot de passe"
-3. Choix du noeud dans une lite déroulante
-
-Une fois la connexion validée, l'interface graphique de l'application s'adapte par rapport à la configuration sélectionnée ("noeud") :
-- Titres,
-- Logos,
-- ...
-
-**Variante(s) :**
-
-_interface à réaliser_
-
-**Variante 3a** - Mode connecté : En mode connecté l'utilisateur est directement positionné sur le bon noeud.
-
-![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect.svg)
-
-_interface à réaliser_
-
-**Variante 3b** - Mode déconnecté : En mode déconnecté, l'utilisateur choisit le noeud à la première connexion de l'application.
-
-![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect-out-first.svg)
-
-Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le changer dans les paramètres de l'application.
-
-![ui-main_connexion](/projects/obsmer/spe/images/main-login-connect-out-next.svg)
 
 ## Ergonomie générale
 
@@ -142,8 +52,9 @@ L'interface est composée des éléments graphiques suivants :
    * Un bouton permettant d'importer les formulaires saisis sur le terrain
 4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
 
-> Questions :
-> VFA : C'est bien les formulaires saisit en mer par les observateurs ? Ecran à faire ?
+> Remarques :
+
+> VFA -> ISI: C'est bien les formulaires saisit en mer par les observateurs. Ecran à faire.
 
 #### Scénario principal
 
@@ -193,13 +104,16 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 3. Un bouton + permet d'ajouter une nouvelle marée
 
 > Questions :
-> VFA : port -  Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...)
+
+> VFA -> MOA : port -  Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...)
+
+> EIS : configurable, on peut en mettre plusieurs 
 
 ---
 
 ## Marée > Détails
 
-**REF: OBSMER/MAREE_DETAILS**
+**REF: OBSMER/MAREE/DETAILS**
 
 **Fenêtre principale de saisie d'une marée**
 
@@ -218,7 +132,10 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
     * L'observateur* dans une liste déroulante
       * Un bouton + permet de rajouter des obervateurs à la marée
     * Le plan d'échantillonnage 
-      * La stratégie de référence* (menu déroulant avec stratégie de la société du saisisseur)
+      * Pas de stratégie à saisir, la stratégie est trouvée et affichée suivant les éléments saisis :
+        * Le programme
+        * La date 
+        * Le lieu
       * Le programme de rattachement* (renseigné automatiquement si connexion avec WAO)
     * Le navire, s'il est dans la liste déroulante
 4. Dans l'onglet "Détails", L'observateur saisie pour cette marée :
@@ -250,16 +167,66 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 
 > Questions/Remarques :
-> VFA : Ecran d'ajout des PSFM à faire
-> VFA : Dans Allegro V2 et la maquette MOA, on sélectionne la stratégie de référence (programme de rattachement renseigné si connexion avec WAO).
->       Si à implémenter, faire l'écran de la sélection de référence au plan d'échantillonnage  (Réunion du 2023-10-05 - Faisabilité de l'intégration de WAO)
-> VFA : Faut il proposer de renseigner l'heure de vente ?
-> VFA : Faut il implémenter un bouton "Sauvegarder et Suivant" ? (pour moi non)
+
+> VFA -> ISI : Ecran d'ajout des PSFM à faire
+
+> VFA -> MOA : Faut il proposer de renseigner l'heure de vente ?
 
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
-> Modèle de données de vente : TODO (A REALISER par VFA)
+> VFA -> ISI : Modèle de données de vente à réaliser
 
+
+## Marées > filtres
+**REF: REF: OBSMER/MAREES/FILTRE**
+
+![ui-filtre](/projects/obsmer/spe/images/trip-filter.svg)
+
+Les filtres sur les marées sont accessibles, sur les écrans affichant la liste des marées, par une icône entonnoir.
+
+L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
+- Le programme de collecte
+- Le navire (possibilité de renseigner plusieurs navires ?)
+- Le port de départ
+- La début de la période
+- La fin de la période
+- Le saisisseur
+- Les observateurs
+- L'état de saisie
+
+Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
+
+
+> Questions :
+
+> VFA -> MOA : Peut on filtrer sur plusieurs navires ?
+
+> VFA-> MOA : liste des critères exhaustive ?
+
+> La validation supprime le filtre (cas particulier, variante de terminaison de saisie)
+
+> A la fin de la saisie l'utilisateur termine la saisie => le système à détecté une erreur et propose de corriger l'erreur (à reproduire)
+
+> Mode de saisie bureau : contrôle plus stricte sur la saisie qu'en mode terrain (Port de retour pas obligatoire en mode terrain)
+
+#### Scénario principal
+
+1. L'utilisateur clique sur le bouton du filtre
+2. L'écran affiche les paramètres sur lesquels appliquer un filtre
+3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
+4. L'utilisateur clique sur le bouton "Appliquer"
+    * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
+    * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
+    * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
+5. L'utilisateur clique sur le bouton de suppression du filtre
+    * La liste des élements est affichée dans sa totalité
+
+**Variante(s) :**
+
+_interface à réaliser_
+
+**Variante 1a**
+Le filtre peut être enregistré pour être ré-appliqué par la suite.
 
 
 ---
@@ -287,14 +254,19 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 **Variante 2a** - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
 
 > Questions/Remarques :
-> VFA : prép-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
-> VFA : Type d'engin - indiqué par le champ GEAR.PARENT_GEAR_FK ? Faut il le faire apparaitre ?
-> VFA : Beaucoup de PSFM si beaucoup d'engins (scrollbar horizontale). Exemple d'un engin avec 12 PSFM
+
+> VFA -> EIS : prép-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
+
+> VFA -> MOA : Type d'engin - indiqué par le champ GEAR.PARENT_GEAR_FK ? Faut il le faire apparaitre ?
+
+> VFA -> EIS : Beaucoup de PSFM si beaucoup d'engins (scrollbar horizontale). Exemple d'un engin avec 12 PSFM
 
 ---
 ### Marée > Engin > Détails
 
-**REF: OBSMER/ENGINS_DETAILS**
+**REF: OBSMER/ENGIN/DETAILS**
+
+**Fenêtre de saisi d'un engin**
 
 1. L'observateur demande l'ajout d'un nouvel engin à la marée (OBSMER/ENGINS_MENU : bouton +)
 2. Une fenêtre s'ouvre ("Nouvel engin")
@@ -310,7 +282,8 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 > Questions/Remarques :
-> VFA : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité dans sumaris ?
+
+> VFA -> EIS : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité dans sumaris ?
 
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
@@ -354,7 +327,7 @@ C'est une option liée au programme de collecte.
 
 ## Marée > Opérations
 
-**REF: OBSMER/OPERATION_MENU**
+**REF: OBSMER/OPERATION/MENU**
 
 **Fenêtre principale du menu opération**
 
@@ -382,11 +355,42 @@ C'est une option liée au programme de collecte.
 4. Un bouton + permet d'ajouter une nouvelle opération
 
 
+## Marée > Opérations > filtres
+
+**REF: REF: OBSMER/OPERATION/FILTRE**
+
+**Fenêtre de filtre sur la liste des opérations**
+
+![ui-filtre](/projects/obsmer/spe/images/operation-filter.svg)
+
+Les filtres sur les opérations sont accessibles, sur les écrans affichant la liste des opération, par une icône entonnoir.
+
+L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
+- L'état de saisie
+
+Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
+
+#### Scénario principal
+
+1. L'utilisateur clique sur le bouton du filtre
+2. L'écran affiche les paramètres sur lesquels appliquer un filtre
+3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
+4. L'utilisateur clique sur le bouton "Appliquer"
+    * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
+    * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
+    * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
+5. L'utilisateur clique sur le bouton de suppression du filtre
+    * La liste des élements est affichée dans sa totalité
+
+> Questions 
+
+> VFA -> MOA : Liste exhaustive des critères de filtrage sur les opérations ? 
+
 ---
 
 ## Marée > Opération > Détails
 
-**REF: OBSMER/OPERATION_DETAILS**
+**REF: OBSMER/OPERATION/DETAILS**
 
 **Fenêtre principale de saisie d'une opération**
 
@@ -401,7 +405,6 @@ C'est une option liée au programme de collecte.
    * L'espèce cible
    * La date, l'heure et la position de début de pêche
    * La date, l'heure et la position de fin de pêche
-   * La durée de l'opération (calculée automatiquement)
    * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
      * Le déroulement normal de l'opération avec des cases à cocher (oui, non)
@@ -411,17 +414,22 @@ C'est une option liée au programme de collecte.
      * Autres observations (suivant la stratégie appliquée)
        * Force du vent
        * ...
+4. Les champs suivants sont automatiquement calculés :
+   * La durée de l'opération, calculée automatiquement après la saisie des dates début et de fin d'opération
+   * la distance parcourue pendant l'opération, calculée automatiquement après la saisie des positions de début et de fin de pêche
+   * La zone d'activité du navire, calculée automatiquement après la saisie des positions de début et de fin de pêche
 
 **Variantes**
 
 **Variante 3a** - Il est possible de filtrer sur les espèces cibles avec une période à définir (icone à droite du choix de l'espèce)
 
-A REALISER
+_Développement à réaliser_
 
 > Questions :
-> VFA : Dépend de l'habitude du navire ?
-> VFA : Manque la zone d'activité (Sous division) ?
 
+> VFA - MOA : Dépend de l'habitude du navire ?
+
+> VFA - MOA : Zone d'activité (Rectangle ?)
 
 
 **Variante 3b** - Engin dormant (A REALISER)
@@ -446,7 +454,7 @@ A REALISER
 ---
 ## Opération > Capture > Saisie 
 
-**REF: OBSMER/OPERATION_CAPTURE**
+**REF: OBSMER/OPERATION/CAPTURE**
 
 **Fenêtre de saisie d'une capture, sur une opération**
 
@@ -464,8 +472,9 @@ Définition de PETS).
 
 
 > Questions
-> VFA : Ne faudrait-il pas un s à Capture ?
-> VFA : Utiliser le terme PNR (partie non retenue) ou PR (partie rejetée) ? Plutôt PNR (modifier les écrans)
+
+> VFA -> MOA : Ne faudrait-il pas un s à Capture ?
+
 
 #### Scénario principal
 
@@ -493,14 +502,17 @@ Définition de PETS).
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
-> Questions MOA:
-> - Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
-> - Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation à débarquer`)
+> Questions:
+
+> VFA -> MOA : Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
+
+> VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation à débarquer`)
+
 
 ---
 ## Opération > Capture > Contrôle 
 
-**REF: OBSMER/OPERATION_CAPTURE_CONTROLE**
+**REF: OBSMER/OPERATION/CAPTURE/CONTROLE**
 
 Contrôle de la saisie d'une capture :
 
@@ -516,9 +528,10 @@ Contrôle de la saisie d'une capture :
 ---
 ## Opération > Capture > PR
 
-**REF: OBSMER/OPERATION_CAPTURE_PR**
+**REF: OBSMER/OPERATION/CAPTURE/PR**
 
-**Partie retenue d'une capture** : Partie de la capture remontée à bord du navire qui est conservée à bord une fois le tri effectué par l’équipage
+**Partie retenue d'une capture** : Partie de la capture remontée à bord du navire qui est conservée à bord une fois le tri effectué par l’équipage.
+= Part commerciale + Obligation de débarquement
 
 ![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
 
@@ -526,26 +539,32 @@ Contrôle de la saisie d'une capture :
 1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
 2. L'arbre se déplie et le sous menu suivants apparaissent sous le menu "Partie retenue" (_PSFM = PRODUCT_DESTINATION_)
     * "Consommation humaine"
-    * "Utilisation industrielle"
+    * "Appat"
+    * "Godaille"
     * "Obligation à débarquer" 
+    * "Utilisation industrielle" 
 3. L'écran de saisie de la "Partie retenue" se met à jour
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
 4. Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture 
 
 > Questions :
-> VFA : Exhausivité de la destination de la partie retenue ?
+
+> VFA -> MOA : Exhausivité de la destination de la partie retenue ? 
+
 
 ---
 ## Opération > Capture > PR > Consommation humaine
 
-**REF: OBSMER/OPERATION_CAPTURE_PR_CH**
+**REF: OBSMER/OPERATION/CAPTURE/PR/HCN**
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-HUC.svg)
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-HCN.svg)
 
 #### Scénario principal
+
 1. L'utilisateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
 2. L'écran de saisie se met à jour
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue / Consommation Humaine")
+    *  Un compteur indique le nombre d'espèce commerciale saisie à côté du nom du devenir de l'espèce
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
     *  Une zone de saisie du poids total (en Kg)
     *  Une zone de saisie du poids échantillonné (en Kg)
@@ -565,20 +584,66 @@ Contrôle de la saisie d'une capture :
    *  Le taux d'échantillonnage (1/n)
    *  Le poids d'échantillonnage (en Kg)
    *  Le nombre d'individu échantillonné
-6. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale  
+7. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 > Questions :
-> VFA : Taux d'échantillonnage : ratio ou %
-> VFA : Permettre l'ajout de PSFM ?
+
+> VFA -> MOA : Taux d'échantillonnage : ratio ou %
+
+> VFA -> MOA : Permettre l'ajout de PSFM ?
+
+> VFA -> EIS : la saisie du poids total, taux échant. se fait par espèce, il n'y a plus de saisie pour la totalité du lot ?
+
+---
+
+## Opération > Capture > PR > Appat
+
+**REF: OBSMER/OPERATION/CAPTURE/PR/BAI**
+
+![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-BAI.svg)
+
+> Questions :
+
+> VFA -> EIS : Même scénario que OBSMER/OPERATION/CAPTURE/PR/HCN ?
+
+---
+
+## Opération > Capture > PR > Consommation humaine > Mesures indivuelles
+
+**REF: OBSMER/OPERATION_CAPTURE/PR/HCN/MI**
+
+![ui-batch](/projects/obsmer/spe/images/batch/samples.svg)
+
+#### Scénario principal
+
+L'observateur à ouvert l'écran de saisie des mesures individuelles pour l'espèce commerciale.
+
+L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
+1. L'écran est composé des champs suivants :
+    *  Le nom de l'espèce scientifique
+   *  La longueur totale mesurée, en cm
+   *  Le poids calculé RTP (Relation Taille Poids) en kg
+2. Un bouton permet d'ajouter une mesure individuelle
+
+![ui-batch](/projects/obsmer/spe/images/batch/sample-add.svg)
 
 ---
 
 ## Opération > Capture > PNR, Vrac
 
-**REF: OBSMER/OPERATION_CAPTURE_PNR_VRAC**
+**REF: OBSMER/OPERATION/CAPTURE/PNR/VRAC**
 
 **Partie non retenue** : Partie de la capture remontée à bord du navire qui est rejeté à la mer une
-fois le tri effectué par l’équipage.
+fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détaillés + Inerte et Végétaux
+
+**Rejets détaillés** = poissons + autres espèces commerciales.
+
+**Rejets non détaillés** = animaux non détaillés (méduses, étoiles de mer, etc.).
+
+**Inerte et végétaux** = partie inerte (sédiments, cailloux, débris coquilliers, déchets, etc.) + végétaux.
+
+
 
 #### Scénario principal
 TODO
@@ -586,7 +651,7 @@ TODO
 ---
 ## Opération > Capture > PNR, Hors Vrac
 
-**REF: OBSMER/OPERATION_CAPTURE_PNR_HVRAC**
+**REF: OBSMER/OPERATION/CAPTURE/PNR/HVRAC**
 
 #### Scénario principal
 TODO

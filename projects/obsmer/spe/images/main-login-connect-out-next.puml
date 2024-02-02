@@ -1,69 +1,16 @@
 @startsalt
 {
-  {+
-   {
-       <b><font color=grey size=20>OBSMER    | . | . | . | . | . | . | .
-       <font color=grey size=10>Observateur
-       .
-       .
-       --
-       <font color=grey size=10>Accueil    | .
-       .
-       <font color=grey size=10>saisie des données
-       --
-       <font color=grey size=10>Marées        | .
-       <font color=grey size=10>Sorties        | .
-       .
-       <font color=grey size=10>Référentiels
-       --
-       <font color=grey size=10>Navires       | .
-       <font color=grey size=10>Programmes        | .
-       <font color=grey size=10>Référentiels        | .
-       <font color=grey size=10>Utilisateurs        | .
-       --
-       .
-       <font color=grey size=10>Système
-       --
-       <font color=grey size=10>Paramètres système       | .
-       .
-
-       --
-       <font color=grey size=10>Se déconnecter       | .
-       --
-   }
-
-   {
-      <font color=grey size=10>V XXX - à propos
-   }
-  } | . | {+
+{+
     .
-    .
-    .
-    .
-    .
-    .
-    .
-    { ---------------
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  <back:red><font color=black><size:16><b>Authentification  | . | . | . | . | . | . | . | . |}
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  Email*  }
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  "                    "  | . | . | . | . | . | . | . | . |}
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  Mot de passe*  }
-    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  "                    "  | <b>(o) | . | . | . | . | . | . | . | . |}
+    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  "                    "  | <b><&eye> | . | . | . | . | . | . | . | . |}
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  Noeud | . | . | . | . | . | . | . | . | . | . | . |<u>OBSMER| . | . | . | . | . | . | . | . |}
     { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |   [Annuler]  | .| [Se Connecter] | . | . | . | . | . | . | . | . |}
-    ---------------
-    }
     .
-    .
-    .
-    .
-    .
-    .
-    .
-    }
  }
-  -- | -- | --
-
 }
 @endsalt
 

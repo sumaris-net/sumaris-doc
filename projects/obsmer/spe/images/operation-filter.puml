@@ -1,0 +1,23 @@
+@startsalt
+{
+
+  {
+  <b> Opérations | . | . | . | [ <&plus>] | . | . | . | [<color:Grey><&caret-bottom>]} | . | . | . | .
+  ..
+
+    {
+      .
+      {
+        Filtrer par état :   | . | ^En cours de saisie ^
+      }
+    }
+
+
+
+  --
+
+  {
+    2 résultats | . | . | . | [Fermer] | [Appliquer]
+  }
+}
+@endsalt

@@ -5,9 +5,9 @@
 
 
 	{#
-      [ <&plus>] | [<b>Y]
+      [ <&plus>] | [<&caret-bottom>]
       # | <b>Etat | <b>Programme     | <b>Navire   | <b> Port départ | <b> Date départ | <b> Date retour | <b> Saisisseur |<b> Observateur | <b> ...
-      1 | <b>   / | CAM-CGFS         | CN851769 - Vessel 2 | FRBES - Brest | 02/01/2024 06:15 | 02/01/2024 16:20 | Admin | Obs1 |
+      1 | <b>  <&pencil> | CAM-CGFS         | CN851769 - Vessel 2 | FRBES - Brest | 02/01/2024 06:15 | 02/01/2024 16:20 | Admin | Obs1 |
     }
 
   --

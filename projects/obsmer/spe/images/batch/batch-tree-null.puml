@@ -5,8 +5,8 @@
     {T
          + <back:#DDD>Capture         | <color:grey>[0kg]
          ++ <color:grey>Partie retenue      | <color:grey>[0kg]
-         ++ <color:grey>Partie rejetée, Vrac      | <color:grey>[0kg]
-         ++ <color:grey>Partie rejetée, Hors-Vrac | <color:grey>[0kg]
+         ++ <color:grey>Partie non retenue, Vrac      | <color:grey>[0kg]
+         ++ <color:grey>Partie non retenue, Hors-Vrac | <color:grey>[0kg]
     }
     .
     .
