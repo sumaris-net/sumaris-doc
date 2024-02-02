@@ -19,7 +19,7 @@
     .
     --
     {
-       [<&checkmark> Contrôler] | [ << ]
+       [<&checkmark> Contrôler] | [ <b><< ]
     }
   } | . | {
 

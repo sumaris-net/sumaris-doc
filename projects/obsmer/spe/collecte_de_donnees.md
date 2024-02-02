@@ -83,7 +83,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 **Fenêtre principale des marées**
 
-![ui-gears](/projects/obsmer/spe/images/trips-table.svg)
+![ui-trip-table](/projects/obsmer/spe/images/trips-table.svg)
 
 #### Scénario principal
 
@@ -117,7 +117,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 **Fenêtre principale de saisie d'une marée**
 
-![ui-gears](/projects/obsmer/spe/images/trip-new.svg)
+![ui-trip-new](/projects/obsmer/spe/images/trip-new.svg)
 
 #### Scénario principal
 
@@ -180,7 +180,7 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 ## Marées > filtres
 **REF: REF: OBSMER/MAREES/FILTRE**
 
-![ui-filtre](/projects/obsmer/spe/images/trip-filter.svg)
+![ui-trip-filter](/projects/obsmer/spe/images/trip-filter.svg)
 
 Les filtres sur les marées sont accessibles, sur les écrans affichant la liste des marées, par une icône entonnoir.
 
@@ -291,7 +291,7 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
 **Variante 2a** - Dans le cas d'une création d'un nouvel engin, l'observateur à la possibilité de charger les caractéristiques engin d’un navire déjà observé.
 
-![ui-gear](/projects/obsmer/spe/images/gears-present.svg)
+![ui-gear-present](/projects/obsmer/spe/images/gears-present.svg)
 
 pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
 Nombre de mois pour la recherche ?
@@ -335,7 +335,7 @@ C'est une option liée au programme de collecte.
 
 **Opération** : Opération de pêche qui consiste à la mise en oeuvre d’un engin de pêche pour capturer des espèces aquatiques marines. L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le professionnel et que l’engin n’est plus pêchant.
 
-![ui-operation](/projects/obsmer/spe/images/operations-table.svg)
+![ui-operation-table](/projects/obsmer/spe/images/operations-table.svg)
 
 #### Scénario principal
 
@@ -361,7 +361,7 @@ C'est une option liée au programme de collecte.
 
 **Fenêtre de filtre sur la liste des opérations**
 
-![ui-filtre](/projects/obsmer/spe/images/operation-filter.svg)
+![ui-operation-filtre](/projects/obsmer/spe/images/operation-filter.svg)
 
 Les filtres sur les opérations sont accessibles, sur les écrans affichant la liste des opération, par une icône entonnoir.
 
@@ -468,7 +468,7 @@ rejetée à la mer, généralement morte ou mourante (source FAO).
 **Capture accidentelle** : capture accessoire d’espèces protégées, en danger ou menacées (voir
 Définition de PETS).
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree.svg)
+![ui-batch-tree](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
 
 > Questions
@@ -500,7 +500,7 @@ Définition de PETS).
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
    Le poids total de la capture est grisé et prend la valeur 0. Tout le reste de l'arbre d'échantillonnage est aussi grisé.
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
+![ui-batch-tree-null](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
 > Questions:
 
@@ -516,7 +516,7 @@ Définition de PETS).
 
 Contrôle de la saisie d'une capture :
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-control.svg)
+![ui-batch-tree-control](/projects/obsmer/spe/images/batch/batch-tree-control.svg)
 
 #### Scénario principal
 
@@ -533,7 +533,7 @@ Contrôle de la saisie d'une capture :
 **Partie retenue d'une capture** : Partie de la capture remontée à bord du navire qui est conservée à bord une fois le tri effectué par l’équipage.
 = Part commerciale + Obligation de débarquement
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
+![ui-batch-tree-pr](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
 
 #### Scénario principal
 1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
@@ -557,7 +557,7 @@ Contrôle de la saisie d'une capture :
 
 **REF: OBSMER/OPERATION/CAPTURE/PR/HCN**
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-HCN.svg)
+![ui-batch-tree-pr-hcn](/projects/obsmer/spe/images/batch/batch-tree-PR-HCN.svg)
 
 #### Scénario principal
 
@@ -601,7 +601,7 @@ Contrôle de la saisie d'une capture :
 
 **REF: OBSMER/OPERATION/CAPTURE/PR/BAI**
 
-![ui-batch](/projects/obsmer/spe/images/batch/batch-tree-PR-BAI.svg)
+![ui-batch-tree-pr-bai](/projects/obsmer/spe/images/batch/batch-tree-PR-BAI.svg)
 
 > Questions :
 
@@ -613,7 +613,7 @@ Contrôle de la saisie d'une capture :
 
 **REF: OBSMER/OPERATION_CAPTURE/PR/HCN/MI**
 
-![ui-batch](/projects/obsmer/spe/images/batch/samples.svg)
+![ui-samples](/projects/obsmer/spe/images/samples.svg)
 
 #### Scénario principal
 
@@ -626,7 +626,7 @@ L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
    *  Le poids calculé RTP (Relation Taille Poids) en kg
 2. Un bouton permet d'ajouter une mesure individuelle
 
-![ui-batch](/projects/obsmer/spe/images/batch/sample-add.svg)
+![ui-sample-add](/projects/obsmer/spe/images/sample-add.svg)
 
 ---
 
