@@ -1,0 +1,46 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + Capture    | .
+       ++ Partie retenue       | <i><color:blue>[8]
+       +++ <back:#DDF>Appat | <i><color:blue>[2]
+       +++ Consommation humaine | <i><color:blue>[1]
+       +++ Godaille | <i><color:blue>[1]
+       +++ Industrie | <i><color:blue>[2]
+       +++ Obligation à débarquer| <i><color:blue>[2]
+       ++ Partie non retenue, Vrac | <color:gray>[0]
+       ++ Partie non retenue, Hors-Vrac | <color:gray>[0]
+   }
+    .
+    .
+    .
+   --
+   {
+      [<&checkmark> Contrôler] | [ <b><< ]
+   }
+  } | . | {
+    { [Capture] | / | [Partie retenue] | [<b>Appat]|(1) }
+
+
+
+    { [ ] Inventaire exhaustif des espèces ?
+    ---
+    <&box>Lots par espèce
+    }
+
+
+    {#
+          . | {[ <&plus> ] | [ <&trash> ] } | . | . | . | . | . | .
+          # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
+          1 | ^MNZ- Baudroie       ^ | ^     WHL ^ | ^ FRE ^ | 50   |  .   |   10          | 4 | <&bar-chart>
+          2 | ^MNZ- Baudroie       ^ | ^     GUT ^ | ^ FRE ^ | 50   |  .   |   10          | 4 | <&bar-chart>
+        }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+

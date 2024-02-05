@@ -4,12 +4,14 @@
   {+
     {T
          + <back:#DDD>Capture         | <i><color:blue>[200kg]
-         ++ Partie retenue       | [100kg] (1/2)
-       +++ Consommation humaine | <i><color:blue>[50kg]
-       +++ Industrie | <i><color:blue>[25kg]
-       +++ Obligation à débarquer| <i><color:blue>[25kg]
-         ++ Partie rejetée, Vrac      | [10kg]
-         ++ Partie rejetée, Hors-Vrac | [5kg]
+         ++ Partie retenue       | [185kg] (1/2)
+       +++ Appat | <i><color:blue>[10kg]
+       +++ Consommation humaine | <i><color:blue>[40kg]
+       +++ Godaille | <i><color:blue>[10kg]
+       +++ Industrie | <i><color:blue>[75kg]
+       +++ Obligation à débarquer| <i><color:blue>[50kg]
+         ++ Partie non retenue, Vrac      | [10kg]
+         ++ Partie non retenue, Hors-Vrac | [5kg]
     }
     .
     .
@@ -17,7 +19,7 @@
     .
     --
     {
-       [<&checkmark> Contrôler] | [ << ]
+       [<&checkmark> Contrôler] | [ <b><< ]
     }
   } | . | {
 

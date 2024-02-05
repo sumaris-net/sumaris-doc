@@ -4,19 +4,21 @@
   {+
    {T
        + Capture    | .
-       ++ <back:#DDF>Partie retenue       | <i><color:blue>[6]
+       ++ <back:#DDF>Partie retenue       | <i><color:blue>[8]
+       +++ Appat | <i><color:blue>[1]
        +++ Consommation humaine | <i><color:blue>[2]
-       +++ Industrie | <i><color:blue>[2]
+       +++ Godaille | <i><color:blue>[2]
+       +++ Industrie | <i><color:blue>[1]
        +++ Obligation à débarquer| <i><color:blue>[2]
-       ++ Partie rejetée, Vrac | <color:gray>[0]
-       ++ Partie rejetée, Hors-Vrac | <color:gray>[0]
+       ++ Partie non retenue, Vrac | <color:gray>[0]
+       ++ Partie non retenue, Hors-Vrac | <color:gray>[0]
    }
     .
     .
     .
    --
    {
-      [<&checkmark> Contrôler] | [ << ]
+      [<&checkmark> Contrôler] | [ <b><< ]
    }
   } | . | {
     { [Capture] | / | [<b>Partie retenue] | [...] }

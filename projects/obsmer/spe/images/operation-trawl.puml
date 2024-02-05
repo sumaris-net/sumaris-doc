@@ -10,9 +10,14 @@
       {
         Fin filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Début virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        . | <i><color:blue>durée de l'opération
+        . | <i><color:blue>durée de l'opération | . | <i><color:blue>distance parcourue
       }
     }
+    .
+    {
+    <b>Zone d'activité : <i><color:blue>22E7
+    }
+    .
 
     <b>Caractéristiques :
 
