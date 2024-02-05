@@ -32,7 +32,7 @@
 
 ## Ergonomie : principes généraux et connexion
 
-[principes généraux](../../common/regles_ergonomie.md)
+[principes généraux](../../common/spe/regles_ergonomie.md)
 
 
 ## Ergonomie générale
@@ -131,30 +131,23 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
     * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
     * L'observateur* dans une liste déroulante
       * Un bouton + permet de rajouter des obervateurs à la marée
-    * Le plan d'échantillonnage 
-      * Pas de stratégie à saisir, la stratégie est trouvée et affichée suivant les éléments saisis :
-        * Le programme
-        * La date 
-        * Le lieu
-      * Le programme de rattachement* (renseigné automatiquement si connexion avec WAO)
     * Le navire, s'il est dans la liste déroulante
-4. Dans l'onglet "Détails", L'observateur saisie pour cette marée :
-   * Le lieu de départ* (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
-   * La date* et l'heure* de début de marée
-   * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
-   * La date* et l'heure* de début de marée
-   * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
-   * Les détails sur la vente 
+    * Le lieu de départ* (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
+    * La date* et l'heure* de début de marée
+    * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
+    * La date* et l'heure* de début de marée
+    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
+    * Les détails sur la vente 
      * Le lieu* de vente 
      * La date* de vente 
      * Le type* de vente (_référentiel des TYPE DE VENTE_)
-   * Des caractéristiques (PSFM définit pat la stratégie appliquée)
+    * Des caractéristiques (PSFM définit pat la stratégie appliquée)
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
        * Nombre d'hommes à bord*
        * Document déclaratif (case à cocher, oui/non)
        * Débarquement de macro-déchets à terre* (case à cocher, oui/non)
            * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
-   * Un commentaire (maximum 2000 caractères)
+    * Un commentaire (maximum 2000 caractères)
 5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
 6. Un bouton "Sauvegarder" permet de sauvegarder la marée en cours de saisie.
@@ -162,11 +155,25 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 **Variante(s) :**
 
+**Variante 1a** - 
+1. L'observateur consulte une marée déjà saisie. Dans le cas d'une consultation de marée, le plan d'échantillonnage est affiché.
+La stratégie est trouvée suivant les éléments précédemment saisis :  
+    * Le programme
+    * La date
+    * Le lieu
+2. La stratégie est s'affiche affiche.
+3. La date de dernière mise à jour est affichée.
+4. Le nom du saisisseur est affiché.
+5. Le mode de saisie est affiché ("Terrain" ou "bureau").
+6. Un bouton "Terminer la saisie" permet la fin de la saisie et lance automatiquement les contrôles sur les données saisis. 
+
 **Variante 4a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton +.
 Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
 
 
 > Questions/Remarques :
+
+> VFA -> EIS : La stratégie ne s'affiche qu'en mode consultation des marées. Est il possible de visualiser et d'éditer la stratégie ? Dans Imagine il semble possible.
 
 > VFA -> ISI : Ecran d'ajout des PSFM à faire
 
@@ -175,7 +182,6 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
 > VFA -> ISI : Modèle de données de vente à réaliser
-
 
 ## Marées > filtres
 **REF: REF: OBSMER/MAREES/FILTRE**
@@ -201,13 +207,7 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
 
 > VFA -> MOA : Peut on filtrer sur plusieurs navires ?
 
-> VFA-> MOA : liste des critères exhaustive ?
-
-> La validation supprime le filtre (cas particulier, variante de terminaison de saisie)
-
-> A la fin de la saisie l'utilisateur termine la saisie => le système à détecté une erreur et propose de corriger l'erreur (à reproduire)
-
-> Mode de saisie bureau : contrôle plus stricte sur la saisie qu'en mode terrain (Port de retour pas obligatoire en mode terrain)
+> VFA-> MOA : Liste des critères est elle exhaustive ?
 
 #### Scénario principal
 
@@ -704,6 +704,11 @@ Capture accidentelle
 > ```
 
 ---
+
+> Remarques :
+
+> VFA -> EIS : supprimer l'IHM ci dessous
+
 ## Mesures individuelles (1/2)
 
 (en cours de rédaction)

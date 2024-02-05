@@ -28,7 +28,8 @@
     {Taux échant (1/n) : | "     " | Poids échant (kg) : | "     " }
 
     { [ ] Inventaire exhaustif des espèces ? }
-
+    ---
+    <&box>Lots par espèce
     {#
           . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
           # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant.

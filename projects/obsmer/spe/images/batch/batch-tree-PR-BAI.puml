@@ -23,7 +23,9 @@
   } | . | {
     { [Capture] | / | [Partie retenue] | [<b>Appat]|(1) }
 
+    {Poids total (kg) : | "     " }
 
+    {Taux échant (1/n) : | "     " | Poids échant (kg) : | "     " }
 
     { [ ] Inventaire exhaustif des espèces ?
     ---

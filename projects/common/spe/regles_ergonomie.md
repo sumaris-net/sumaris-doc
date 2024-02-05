@@ -67,3 +67,40 @@ Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le chan
 > VFA -> EIS : Comportement différent d'Imagine (on saisit d'abord le noeud)
 
 > VFA -> EIS : Ou est stocké l'information du noeud à la première connexion de l'utilisateur ?
+
+
+## Ergonomie : Application des filtres
+
+**REF: ERGONOMIE/FILTRES**
+
+Il est possible d'appliquer des filtres sur les marées et les opérations.
+
+La validation d'une saisie supprime le filtre précédemment appliqué (cas particulier, variante de terminaison de saisie)
+
+> Remarques
+
+> VFA : A mettre variante de terminaison de saisie ?
+
+
+## Ergonomie : Fin d'une saisie
+
+**REF: ERGONOMIE/SAISIE/TERMINER**
+
+1. L'utilisateur termine sa saisie en cliquant sur le bouton "Terminer saisie".
+2. Le système contrôle les données saisie.
+3. S'il a détecté une erreur, il indique un message explicite et propose de corriger l'erreur.
+
+**Variante(s) :**
+
+**Variante 1a**
+En mode de saisie bureau le contrôle plus stricte sur la saisie qu'en mode terrain.
+Par exemple en mode saisie terrain, le lieu de retour de marée n'est pas obligatoire alors qu'en mode bureau oui.
+
+
+## Ergonomie : Ecran d'ajout de PSFM
+
+**REF: ERGONOMIE/PSFM/AJOUT**
+
+**PSFM** :  Quadruplet paramètre/support/méthode/fraction. Ce quadruplet est systématiquement associé aux résultats et décrit précisemment les conditions de mesure/d'analyse de ceux-ci.
+
+![ui-psfm-ajout](/projects/common/spe/images/pmfm-add.svg)

@@ -1,0 +1,21 @@
+@startsalt
+{
+  {+
+    { | . |  <b>Quadruplet PSFM :  | . | . | . | . }
+    --
+    { | . | <font color=grey>Recherche : code, libellé  | . }
+    --
+	{#
+      # | <&arrow-thick-top><b>Libellé     | <b>Unité   | <b> Support | <b> Fraction | <b> Méthode de collecte | <b> Etat
+      1 | Poids        | kg | produit/lot | total | Déclaration d'un professionnel | <&check> Actif à la saisie
+      2 | Présentation        | aucune | produit/lot | totale | Déclaration d'un professionnel | <&check> Actif à la saisie
+      3 | Nombre de jours de pêche        | d dec. | navire | totale | Calculé, algorithme VMS | <&check> Actif à la saisie
+    }
+    .
+    {
+       { <font color=grey>Nombre de lignes</font> |  " 20 "  | . | . | . | . | <font color=grey>1 - 20 sur 759 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
+    }
+    { [Annuler] }
+    }
+ }
+@endsalt
