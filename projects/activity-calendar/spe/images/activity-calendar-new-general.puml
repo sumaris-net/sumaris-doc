@@ -1,0 +1,43 @@
+@startsalt
+{
+  <b>Nouveau calendrier
+  ..
+  {/ <b>Général | Calendrier | Engins | Commentaires }
+  .
+
+  {
+  <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
+    {
+    . | Caractéristiques des navires
+    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction | FPC
+       136794 | 06/04/2021 | 31/12/2022 | SONNY NINO MATHILDE 3 | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
+    .
+
+    . | Historique des immatriculations navires
+    . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation
+       136794 | 01/01/1967 | . | MA - Marseille}
+    .
+
+    . | Couples navires-armateurs
+    . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur
+       136794 | 15233 | 06/04/2021 | . | CRIMON | Eric}
+    }
+  }
+  .
+
+  {
+  <b>Caractéristiques de l'enquête
+     {
+     . | Qualification de l'enquête* : | ^Indirecte^
+     . | Fiabilité de l'enquête* : | ^Fiable   ^
+     . | Inactivité annuelle confirmée par l'observateur* : | { (X) <b>Oui | () Non }
+     . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
+     . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
+     . | Habitudes de vente à la criée : | ^         ^
+     }
+  }
+  .
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
