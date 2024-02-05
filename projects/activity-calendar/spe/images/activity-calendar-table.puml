@@ -1,0 +1,13 @@
+@startsalt
+{
+  <b>Calendriers d'activité                                                         <&plus>
+  ..
+	{#
+
+     [  ] | <b># | <b>Etat | <b>Navire   | <b> Année | <b> Saisisseur | .
+     [  ] | 120 | <b>   / | CN851769 - Vessel 2 | 2024 | Obs1 | .
+     [  ] | 122 | <b>   / | CN123456 - Vessel 3 | 2024 | Obs3 | <&comment-square>
+    }
+
+}
+@endsalt
