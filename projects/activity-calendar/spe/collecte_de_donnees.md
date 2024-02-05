@@ -4,7 +4,7 @@
 ---
 ## Sommaire
 
-- [Calendrier d'activité mensuelle](#/4/3)
+- Calendrier d'activité mensuelle
 - Actions
 - Historique
 
