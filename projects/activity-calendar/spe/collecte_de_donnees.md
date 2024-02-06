@@ -62,18 +62,18 @@ SUMARIS_MAP ou ADAGIO patché ?
 
 L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
-* Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
+   * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif du calendrier d'activité
-  * Sur la sélection d'un calendrier, le bandeau affiche les informations suivantes
-    * Immatriculation du navire
-    * Nom du navire
-    * Année
+   * Sur la sélection d'un calendrier, le bandeau affiche les informations suivantes
+     * Immatriculation du navire
+     * Nom du navire
+     * Année
 
 
 #### Scénario principal
 
 1. L'observateur clique sur un onglet de l'arbre du menu
-  * Les informations propre à l'onglet s'ouvre dans l'interface centrale.
+   * Les informations propre à l'onglet s'ouvre dans l'interface centrale.
 
 
 ---
@@ -89,19 +89,31 @@ Calendrier d'activité :
 
 1. L'observateur sélectionne le menu "Calendriers d'activité" dans l'interface de l'arbre du menu
 2. Les calendriers d'activité s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque calendrier :
-  * L'état de saisie du calendrier :
-    * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
-    * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
-    * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-  * Le navire (code + libellé)
-  * L'année
-  * Le saisisseur
+   * L'état de saisie du calendrier :
+     * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
+     * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+     * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
+   * Le navire (code + libellé)
+   * L'année
+   * Le saisisseur
 3. Un bouton + permet d'ajouter un nouveau calendrier
+
+---
+## Calendriers d'activité > Filtres
+
+**REF: ACTIVITY_CALENDAR/FILTERS**
+
+#### Scénario principal
+
+1. Filtres disponibles :
+   * Le navire
+   * L'année
+   * Le saisisseur
 
 ---
 ## Calendrier d'activité > Général
 
-**REF: ACTIVITY_CALENDAR_GENERAL**
+**REF: ACTIVITY_CALENDAR/GENERAL**
 
 **Jour de mer** : Toute période continue de 24 heures (ou une partie de celle-ci) durant laquelle un navire est présent dans
 une zone et absent du port (cf. décision (UE) 2019/910).
@@ -126,19 +138,19 @@ professionnel et que l’engin n’est plus pêchant.
 
 1. L'observateur demande la création d'une nouvelle marée (REF : bouton +)
 2. L'écran s'ouvre ("Nouveau calendrier")
-  * L'écran est composé de 4 onglets
-    * "Général"
-    * "Calendrier", onglet par défaut
-    * "Engins"
-    * "Commentaires
+   * L'écran est composé de 4 onglets
+     * "Général"
+     * "Calendrier", onglet par défaut
+     * "Métiers"
+     * "Commentaires
 3. Dans l'onglet "Général", l'observateur consulte l'état des changements des caractéristiques et des armateurs sur l'année en cours de saisie
 4. Dans l'onglet "Général", l'observateur renseigne les caractéristiques de l'enquête :
-  * Qualification de l'enquête*
-  * Fiabilité de l'enquête*
-  * Inactivité annuelle confirmée par l'observateur*
-  * Le professionnel accepterait-il de répondre à une autre enquête ?*
-  * Métiers déclarés dans les journeaux de bord/fiches de pêche
-  * Habitudes de vente à la criée
+   * Qualification de l'enquête*
+   * Fiabilité de l'enquête*
+   * Inactivité annuelle confirmée par l'observateur*
+   * Le professionnel accepterait-il de répondre à une autre enquête ?*
+   * Métiers déclarés dans les journeaux de bord/fiches de pêche
+   * Habitudes de vente à la criée
 5. Dans l'onglet "Général", l'observateur saisit les commentaires
 
 #### Détails techniques :
@@ -166,7 +178,7 @@ professionnel et que l’engin n’est plus pêchant.
 ---
 ## Calendrier d'activité > Calendrier
 
-**REF: ACTIVITY_CALENDAR_MAIN**
+**REF: ACTIVITY_CALENDAR/MAIN**
 
 **Pré-conditions** : ?
 
@@ -175,17 +187,17 @@ professionnel et que l’engin n’est plus pêchant.
 #### Scénario principal
 
 1. Dans l'onglet "Calendrier", l'observateur saisit pour chaque mois :
-  * L'activité du navire
-  * Le port d'exploitation ou de rattachement
-  * Le nombre de jours de mer
-  * Le nombre de jours de pêche
-  * Le nombre d'hommes à bord par marée
-  * Un ou plusieurs métiers. Pour chaque métier, l'observateur saisit :
-    * L'origine de l'information
-    * Une ou deux zones. Pour chaque zone, l'observateur saisit :
-        * Le gradient de côte
-        * Le gradient de profondeur
-        * La zone proche
+   * L'activité du navire
+   * Le port d'exploitation ou de rattachement
+   * Le nombre de jours de mer
+   * Le nombre de jours de pêche
+   * Le nombre d'hommes à bord par marée
+   * Un ou plusieurs métiers. Pour chaque métier, l'observateur saisit :
+     * L'origine de l'information
+     * Une ou deux zones. Pour chaque zone, l'observateur saisit :
+         * Le gradient de côte
+         * Le gradient de profondeur
+         * La zone proche
 
 #### Détails techniques :
 * Le nombre de jours de mer : PMFM.ID = 241
@@ -194,9 +206,35 @@ professionnel et que l’engin n’est plus pêchant.
 
 
 ---
-## Calendrier d'activité > Engins
+## Calendrier d'activité > Métiers
 
-**REF: ACTIVITY_CALENDAR_GEARS**
+**REF: ACTIVITY_CALENDAR/METIERS**
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-metiers.svg)
+
+#### Scénario principal
+
+1. Dans l'onglet "Métiers", l'observateur retrouve les métiers sélectionné sur l'onglet "Calendrier"
+2. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
+
+
+---
+## Calendrier d'activité > Métiers > PSFM
+
+**REF: ACTIVITY_CALENDAR/METIERS/PSFM**
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-metiers-psfm.svg)
+
+#### Scénario principal
+
+1. Dans l'onglet "Métiers", l'observateur clique sur le bouton <&menu> puis sur l'entrée de menu "Ajouter un PSFM..."
+2. L'écran de sélection d'un PSFM s'ouvre et affiche les PSFM. Pour chaque PSFM, les informations suivantes sont affichées :
+   * Le libellé
+   * L'unité
+   * Le support
+   * La fraction
+   * La méthode de collecte
+   * L'état
 
 
 ---

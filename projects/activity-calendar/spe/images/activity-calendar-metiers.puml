@@ -1,0 +1,31 @@
+@startsalt
+{
+  <b>Nouveau calendrier
+  ..
+  {/ Général | Calendrier | <b>Métiers | Commentaires }
+  .
+
+  {# Métier | {<b>Maillage de l'engin (logbook) (mm)
+                engin -
+                inconnue -
+                Déclaration d'un professionnel} |
+              {<b>Maillage étiré de l'engin (mm)
+                engin -
+                plus petite maille -
+                Déclaration d'un professionnel} |
+              {<b>Maillage étiré de l'engin (mm)
+                engin -
+                plus grande maille -
+                Déclaration d'un professionnel} |
+              {<b>Longueur levée (m)
+                engin -
+                totale -
+                Déclaration d'un professionnel} | <&menu>
+     GTRMZZ - Trémails à poissons | 100 | 97 | 103 | . | .
+     GTRNEP - Trémails à langoustines | . | 57 | . | 100 | .
+  }
+  .
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt

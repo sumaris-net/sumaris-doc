@@ -1,0 +1,25 @@
+@startsalt
+{
+
+  {
+  <b> Calendriers d'activité | . | . | . | [ <&plus>] | . | . | . | [<color:Grey><&caret-bottom>]}
+  ..
+
+    {
+        Programme de collecte : | . | ^ SIH-ACTIFLOT ^ | . | . | Etat :   | . | ^En cours de saisie ^
+        .
+        Navire : | . | ^ 851751 - PETIT BATEAU ^ | . | . | Port : | . | ^ RDZ  Douarnenez ^
+        .
+        Organisme saisisseur :   | . |^ Ifremer ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND ^
+
+    }
+
+
+
+  --
+
+  {
+    2 résultats | . | . | . | [Fermer] | [Appliquer]
+  }
+}
+@endsalt

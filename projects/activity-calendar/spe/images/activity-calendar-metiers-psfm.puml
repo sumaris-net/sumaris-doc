@@ -1,0 +1,19 @@
+@startsalt
+{
+  <b>Quadruplets PSFM
+  ..
+
+  {"Recherche : code, libellé                                                   "}
+  .
+
+  {# # | Libellé | Unité | Support | Fraction | Méthode de collecte | Etat
+     21 | Maillage de l'engin (logbook) | mm | engin | inconnue | Déclaration d'un professionnel | Actif à la saisie
+     292 | Maillage étiré de l'engin | mm | engin | plus petite maille | Déclaration d'un professionnel | Actif à la saisie
+     293 | Maillage étiré de l'engin | mm | engin | plus grande maille | Déclaration d'un professionnel | Actif à la saisie
+     204 | Longueur levée | m | engin | totale | Déclaration d'un professionnel | Actif à la saisie
+  }
+  .
+
+  { [Annuler] }
+}
+@endsalt
