@@ -3,7 +3,7 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + Capture    | .
+       + Capture    | <i><color:blue>[8]
        ++ Partie retenue       | <i><color:blue>[8]
        +++ Appart | <i><color:blue>[1]
        +++ <back:#DDF>Consommation humaine | <i><color:blue>[2]
@@ -32,9 +32,9 @@
     <&box>Lots par espèce
     {#
           . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
-          # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant.
-          1 | ^MNZ- Baudroie       ^ | ^     WHL ^ | ^ FRE ^ | 50   |  .   |   10          | 4
-          2 | ^MNZ- Baudroie       ^ | ^     GUT ^ | ^ FRE ^ | 50   |  .   |   10          | 4
+          # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
+          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
+          2 | ^MNZ- Baudroie       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
         }
   }
 

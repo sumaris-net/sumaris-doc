@@ -8,12 +8,22 @@
 ## Calendrier 
 
 ### Organisation des spécifications
+
 - Janvier/Février
   - VFA : ObsMer (relecture CDE)
   - CDE : Calendrier d'activité (Relecture VFA)
 
 
+### Cible des livrables
+
+Voir avec MOA
+
+- définir priorité des cibles (pc ou tablette)
+
+
 ### Organisation des développements
+
+Voir avec ISI/EIS
 
 - Début semaine N°10 (04/03/2024)
   - Présentation des spécifications aux développeurs (ISI/CODRA)
@@ -22,17 +32,27 @@
 
 
 ### Equipe de développement
+
+Voir avec ISI
+
 - Refonte : 
   - 1 ETP (Jean-Victor) : Actuellement sur Imagine
-  - 1 ETP (?) : Montée en compétence sur Imagine à partir de Février
-  - 1 ETP (?) : En renfort en Juin
+  - 1 ETP (Morgan) : Montée en compétence sur Imagine à partir de Février
+  - 1 ETP (?) : En renfort en Juin (?)
 
 - MCO :
   - 2 ETPs à temps plein
 
-### Support de spécification
+
+### Support de spécification 
+
+Voir avec EIS
+
 - Rédaction des spécifications générales dans gitlab (markdown/PlantUml)
+  - En cours
 - Rédaction des spécifications détaillées/techniques dans gitlab (markdown/PlantUml)
 - Création des tickets d'évolutions dans gitlab (utilisation de labels ?)
+  - Cloisonnement des tickets par application
 - Création des tickets d'anomalies dans gitlab (utilisation de labels ?)
-- Gestion du boards dans gitlab   
+  - Cloisonnement des tickets par application
+- Gestion du board dans gitlab   

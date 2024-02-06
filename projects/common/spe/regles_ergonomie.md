@@ -75,7 +75,25 @@ Aux connexions suivantes, un lien leur rappel le noeud et leur permet de le chan
 
 Il est possible d'appliquer des filtres sur les marées et les opérations.
 
+1. L'utilisateur clique sur le bouton du filtre
+2. L'écran affiche les paramètres sur lesquels appliquer un filtre
+3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
+4. L'utilisateur clique sur le bouton "Appliquer"
+  * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
+  * Le nombre de champs utilisés pour le filtrage est affiché sur l'icône du filtre
+  * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
+5. L'utilisateur clique sur le bouton de suppression du filtre
+  * La liste des élements est affichée dans sa totalité
+
 La validation d'une saisie supprime le filtre précédemment appliqué (cas particulier, variante de terminaison de saisie)
+
+**Variante(s) :**
+
+_interface à réaliser_
+
+**Variante 1a**
+Le filtre peut être enregistré pour être ré-appliqué par la suite.
+
 
 > Remarques
 

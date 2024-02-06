@@ -78,7 +78,7 @@ Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots de
 
 **REF: OBSMER/MAREES**
 
-**Marée** : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagnes halieutique ou une marée d'un navire professionnel, etc.).
+**Marée** : Voyage en mer, ayant pour vocation une activité de peche (peut etre une campagne halieutique ou une marée d'un navire professionnel, etc.).
 Un voyage peut présenter une marée observée (en mer, au débarquement), qui désigne une marée de pêche professionnelle au cours de laquelle des relevés sont effectués par un observateur.
 
 **Fenêtre principale des marées**
@@ -127,7 +127,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
       * "Détails", positionnement par défaut pour la saisie de la marée
       * "Engins"
       * "Opérations"
-4. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
+3. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
     * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
     * L'observateur* dans une liste déroulante
       * Un bouton + permet de rajouter des obervateurs à la marée
@@ -136,21 +136,21 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
     * La date* et l'heure* de début de marée
     * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
     * La date* et l'heure* de début de marée
-    * La durée de la marée est automatique calculée et affichée après la saisie des dates/heures de début et de fin
+    * La durée de la marée est automatiquement calculée et affichée après la saisie des dates/heures de début et de fin
     * Les détails sur la vente 
-     * Le lieu* de vente 
-     * La date* de vente 
-     * Le type* de vente (_référentiel des TYPE DE VENTE_)
-    * Des caractéristiques (PSFM définit pat la stratégie appliquée)
+      * Le lieu* de vente 
+      * La date* de vente 
+      * Le type* de vente (_référentiel des TYPE DE VENTE_)
+    * Des caractéristiques (PSFM définit par la stratégie appliquée)
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
        * Nombre d'hommes à bord*
        * Document déclaratif (case à cocher, oui/non)
        * Débarquement de macro-déchets à terre* (case à cocher, oui/non)
            * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
     * Un commentaire (maximum 2000 caractères)
-5. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
+4. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
-6. Un bouton "Sauvegarder" permet de sauvegarder la marée en cours de saisie.
+5. Un bouton "Sauvegarder" permet de sauvegarder la marée en cours de saisie.
 
 
 **Variante(s) :**
@@ -160,20 +160,23 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 La stratégie est trouvée suivant les éléments précédemment saisis :  
     * Le programme
     * La date
-    * Le lieu
-2. La stratégie est s'affiche affiche.
+    * Le lieu (?)
+2. La stratégie est s'affiche.
+   * Le bouton :eyes: permet d'obtenir le détail de la stratégie (CF question sur l'édition)
 3. La date de dernière mise à jour est affichée.
 4. Le nom du saisisseur est affiché.
 5. Le mode de saisie est affiché ("Terrain" ou "bureau").
 6. Un bouton "Terminer la saisie" permet la fin de la saisie et lance automatiquement les contrôles sur les données saisis. 
 
-**Variante 4a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton +.
+**Variante 3a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton +.
 Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
 
 
 > Questions/Remarques :
 
 > VFA -> EIS : La stratégie ne s'affiche qu'en mode consultation des marées. Est il possible de visualiser et d'éditer la stratégie ? Dans Imagine il semble possible.
+
+> Voir de quoi dépend la stratégie
 
 > VFA -> ISI : Ecran d'ajout des PSFM à faire
 
@@ -202,7 +205,6 @@ L'écran de filtrage est composé de champs sur lesquels seront appliqués le fi
 
 Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
 
-
 > Questions :
 
 > VFA -> MOA : Peut on filtrer sur plusieurs navires ?
@@ -211,23 +213,7 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
 
 #### Scénario principal
 
-1. L'utilisateur clique sur le bouton du filtre
-2. L'écran affiche les paramètres sur lesquels appliquer un filtre
-3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
-4. L'utilisateur clique sur le bouton "Appliquer"
-    * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
-    * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
-    * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
-5. L'utilisateur clique sur le bouton de suppression du filtre
-    * La liste des élements est affichée dans sa totalité
-
-**Variante(s) :**
-
-_interface à réaliser_
-
-**Variante 1a**
-Le filtre peut être enregistré pour être ré-appliqué par la suite.
-
+Référence : ERGONOMIE/FILTRES
 
 ---
 ### Marée > Engins 
@@ -281,10 +267,6 @@ Le filtre peut être enregistré pour être ré-appliqué par la suite.
 
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
-> Questions/Remarques :
-
-> VFA -> EIS : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité dans sumaris ?
-
 ![ui-gear](/projects/obsmer/spe/images/gear.svg)
 
 **Variante(s) :**
@@ -296,11 +278,11 @@ Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 pré-requis : Le nombre de mois pour la recherche d'engin d'une marée doit être configurable et sélectionnable dans les préférences
 Nombre de mois pour la recherche ?
 
-A mettre en option de programme (12 mois par défaut). Il est possible de modifier cette valeur dans les préférences  utilisateurs de l'application.
+A mettre en option de programme (12 mois par défaut). Il est possible de modifier cette valeur dans les préférences utilisateur de l'application.
 
 L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 1. Une nouvelle fenêtre "Engins Existants" s'ouvre
-2. L'observateur saisie une date de début de période de marée et de fin de période de marée
+2. L'observateur saisit une date de début de période de marée et de fin de période de marée
     * Les engins des navires déjà observés sur la période s'affichent dans un tableau
     * Les informations suivantes, pour chaque engin, sont affichées :
       * Type d'engin
@@ -327,7 +309,7 @@ C'est une option liée au programme de collecte.
 
 ## Marée > Opérations
 
-**REF: OBSMER/OPERATION/MENU**
+**REF: OBSMER/OPERATIONS/MENU**
 
 **Fenêtre principale du menu opération**
 
@@ -367,20 +349,13 @@ Les filtres sur les opérations sont accessibles, sur les écrans affichant la l
 
 L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
 - L'état de saisie
+- ...
 
 Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
 
-#### Scénario principal
+#### Scénario principal (à déplacer dans common)
 
-1. L'utilisateur clique sur le bouton du filtre
-2. L'écran affiche les paramètres sur lesquels appliquer un filtre
-3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
-4. L'utilisateur clique sur le bouton "Appliquer"
-    * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
-    * Le nombre de champ utilisés pour le filtrage est affiché sur l'icône du filtre
-    * Un bouton apparait à côté du bouton de filtrage, permettant d'effacer le filtre appliqué
-5. L'utilisateur clique sur le bouton de suppression du filtre
-    * La liste des élements est affichée dans sa totalité
+Référence : ERGONOMIE/FILTRES
 
 > Questions 
 
@@ -407,8 +382,8 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
    * La date, l'heure et la position de fin de pêche
    * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
-     * Le déroulement normal de l'opération avec des cases à cocher (oui, non)
-     * Des réalisation de mesures individuelles avec des cases à cocher (oui, non)
+     * Le déroulement normal de l'opération avec des cases à cocher (vide : par défaut, oui, non)
+     * Des réalisation de mesures individuelles avec des cases à cocher (vide : par défaut, oui, non)
      * La profondeur moyen de l'engin
      * L'état de la mer dans une liste déroulante (PSFM QUALITATIVE_VALUE.PARAMETER_FK = SEA_STATE)
      * Autres observations (suivant la stratégie appliquée)
@@ -495,6 +470,8 @@ Définition de PETS).
     
 #### Variantes
 
+**Variantes**
+
 **Variante 4a** - Cas du coup nul (pas de capture)
 
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
@@ -551,6 +528,9 @@ Contrôle de la saisie d'une capture :
 
 > VFA -> MOA : Exhausivité de la destination de la partie retenue ? 
 
+**Variantes**
+
+**Variante 2a** - Liste du PSFM PRODUCT_DESTINATION paramétrable par une option ("Option du programme")
 
 ---
 ## Opération > Capture > PR > Consommation humaine
@@ -580,7 +560,8 @@ Contrôle de la saisie d'une capture :
         * Par défaut WHL (_entier_) 
     * L'état (_PSMF = PRESERVATION_, _METHOD = 42_, _Observation par un observateur_)
         * Par défaut FRE (_frais_) 
-   *  Le poids total (en Kg)
+   *  Le poids total (unité par défaut en Kg)
+        * L'unité du poids est paramétrable
    *  Le taux d'échantillonnage (1/n)
    *  Le poids d'échantillonnage (en Kg)
    *  Le nombre d'individu échantillonné
@@ -594,6 +575,8 @@ Contrôle de la saisie d'une capture :
 > VFA -> MOA : Permettre l'ajout de PSFM ?
 
 > VFA -> EIS : la saisie du poids total, taux échant. se fait par espèce, il n'y a plus de saisie pour la totalité du lot ?
+
+> VFA -> EIS : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité pour le poids (oui), la taille ?
 
 ---
 

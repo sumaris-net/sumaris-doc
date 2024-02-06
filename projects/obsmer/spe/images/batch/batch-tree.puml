@@ -3,7 +3,7 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + <back:#DDF>Capture    | .
+       + <back:#DDF>Capture    | <i><color:blue>[6]
        ++ Partie retenue       | <i><color:blue>[6]
        +++ Appat | <i><color:blue>[1]
        +++ Consommation humaine | <i><color:blue>[1]
