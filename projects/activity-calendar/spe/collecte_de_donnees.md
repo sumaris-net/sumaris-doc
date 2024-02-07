@@ -69,12 +69,10 @@ L'interface est composée des éléments graphiques suivants :
      * Nom du navire
      * Année
 
-
 #### Scénario principal
 
 1. L'observateur clique sur un onglet de l'arbre du menu
    * Les informations propre à l'onglet s'ouvre dans l'interface centrale.
-
 
 ---
 ## Calendriers d'activité
@@ -180,67 +178,83 @@ professionnel et que l’engin n’est plus pêchant.
 
 **REF: ACTIVITY_CALENDAR/MAIN**
 
-**Pré-conditions** : ?
-
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new.svg)
 
 #### Scénario principal
 
-1. Dans l'onglet "Calendrier", l'observateur saisit pour chaque mois :
+1. Dans l'onglet "Calendrier", l'observateur consulte la prédocumentation. Les informations suivantes sont affichées pour chaque mois 
+et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
+   * L'armateur
+   * Le quartier d'immatriculation
    * L'activité du navire
    * Le port d'exploitation ou de rattachement
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
-   * Un ou plusieurs métiers. Pour chaque métier, l'observateur saisit :
-     * L'origine de l'information
-     * Une ou deux zones. Pour chaque zone, l'observateur saisit :
+   * Le ou les métiers. Pour chaque métier, l'observateur consulte :
+       * La ou les zones
+       * Le ou les gradients de côte
+2. L'observateur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
+   (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
+3. Pour chaque métier du calendrier de l'année en cours issu de la prédocumentation, l'origine de l'information est automatiquement renseignée :
+   * "Activité N-1", si le métier provient de la source "Enquête N-1 indirecte"
+   * "Document déclaratif", si le métier provient de la source "SACROIS-OBSDEB"
+4. L'observateur complète les données manquantes ou erronnées pour chaque mois :
+   * L'activité du navire :
+     * Actif
+     * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
+     * Inexistant : vide et rend non-modifiable les champs au-dessous y compris le port d'exploitation ou de rattachement
+   * Le port d'exploitation ou de rattachement
+   * Le nombre de jours de mer
+   * Le nombre de jours de pêche
+   * Le nombre d'hommes à bord par marée
+   * Un ou plusieurs métiers. L'ajout ou la modification d'un métier renseigne automatiquement l'origine de l'information associée avec la valeur "Enquêteur".
+     Pour chaque métier, l'observateur complète les données manquantes ou erronnées :
+     * Une ou deux zones. Pour chaque zone, l'observateur complète les données manquantes ou erronnées :
          * Le gradient de côte
-         * Le gradient de profondeur
-         * La zone proche
+         * Le gradient de profondeur : visibilité définie par une option du programme
+         * La zone proche : visibilité définie par une option du programme
 
 #### Détails techniques :
 * Le nombre de jours de mer : PMFM.ID = 241
 * Le nombre de jours de pêche : PMFM.ID = 242
 * Le nombre d'hommes à bord par marée : PMFM.ID = 109
+* Le gradient de profondeur : table DEPTH_GRADIENT
+* La zone proche : table NEARBY_SPECIFIC_AREA
 
+> Origine de l'information : d'ou vient la valeur "Ventes" ?
+> Zone proche : Valeur "Récif artificiel" à exclure de la liste ?
 
 ---
 ## Calendrier d'activité > Métiers
 
 **REF: ACTIVITY_CALENDAR/METIERS**
 
+**Pré-conditions** : Pour que l'onglet "Métiers" soit actif, le calendrier doit être saisi et sauvegardé
+
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-metiers.svg)
 
 #### Scénario principal
 
-1. Dans l'onglet "Métiers", l'observateur retrouve les métiers sélectionné sur l'onglet "Calendrier"
-2. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
+1. Dans l'onglet "Métiers", l'observateur consulte les métiers sélectionnés sur l'onglet "Calendrier"
+2. L'observateur ajoute les caractéristiques relatives aux métiers (REF: ERGONOMIE/PSFM/AJOUT)
+3. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
 
-
----
-## Calendrier d'activité > Métiers > PSFM
-
-**REF: ACTIVITY_CALENDAR/METIERS/PSFM**
-
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-metiers-psfm.svg)
-
-#### Scénario principal
-
-1. Dans l'onglet "Métiers", l'observateur clique sur le bouton <&menu> puis sur l'entrée de menu "Ajouter un PSFM..."
-2. L'écran de sélection d'un PSFM s'ouvre et affiche les PSFM. Pour chaque PSFM, les informations suivantes sont affichées :
-   * Le libellé
-   * L'unité
-   * Le support
-   * La fraction
-   * La méthode de collecte
-   * L'état
-
+> Les caractéristiques que l'observateur peut sélectionner doivent correspondre à celles définies dans la stratégie ?
+> Filtre possible sur le support engin dans la popup d'ajout des PMFM ?
 
 ---
 ## Calendrier d'activité > Commentaires
 
-**REF: ACTIVITY_CALENDAR_COMMENTS**
+**REF: ACTIVITY_CALENDAR/COMMENTS**
+
+**Pré-conditions** : Pour que l'onglet "Commentaires" soit actif, le calendrier doit être saisi et sauvegardé
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-comments.svg)
+
+#### Scénario principal
+
+
 
 
 ---

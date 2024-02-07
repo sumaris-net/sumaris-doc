@@ -1,0 +1,14 @@
+@startsalt
+{
+  <b>Nouveau calendrier
+  ..
+  {/ Général | Calendrier | Métiers | <b>Commentaires }
+  .
+
+  { Date Commentaires
+  }
+  .
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
