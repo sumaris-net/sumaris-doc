@@ -23,6 +23,8 @@
 ## Lignes de plan
 
 - Fichier CSV importé dans WAO ObsMer
+   - **Réunion MOA 06/02/2024** 
+     - Pas d'intégration de WAO dans la refonte d'Allegro
 - Possibilité de modifier/supprimer une ligne
   - Facades (x4) 
     - Strates : Trainants, Dormants_<12m, Trainants_[12-18m[
@@ -32,7 +34,7 @@
 
 ## Ergonomie : principes généraux et connexion
 
-[principes généraux](../../common/spe/regles_ergonomie.md)
+[Principes généraux communs](../../common/spe/regles_communes.md#commun--ergonomie--principes-généraux)
 
 
 ## Ergonomie générale
@@ -43,18 +45,15 @@
 
 L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
-* Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
+   * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif de la marée / vente
    * Sur la sélection d'une marée, le bandeau affiche les informations suivantes 
      * Immatriculation du navire de la marée
      * La date de début de la marée
    * Le bandeau permet d'afficher les opérations dans une vue cartographique (à voir au prochain point prototype)
    * Un bouton permettant d'importer les formulaires saisis sur le terrain
+     * Référence [COMMUN/FORMULAIRES](../../common/spe/regles_communes.md#commun--formulaires)
 4. Sous l'interface centrale, des boutons permettent de sauvegarder et de finaliser la saisie
-
-> Remarques :
-
-> VFA -> ISI: C'est bien les formulaires saisit en mer par les observateurs. Ecran à faire.
 
 #### Scénario principal
 
@@ -66,7 +65,7 @@ L'interface est composée des éléments graphiques suivants :
        * La dernière date de mise à jour des données 
        * Un bouton "Terminer la saisie", permettant la validation des données
    * Les informations centrale propre à l'onglet s'ouvre dans l'interface centrale.
-   * 
+   
 Pour la saisie de données, le niveau de plus bas de l'arbre du menu est à la capture. 
 Dans le menu "Capture", Un arbre d'échantillonnage permet de saisir les lots des espèces (REF: OBSMER/LOTS PAR ESPECE)
 
@@ -95,19 +94,59 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
       * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_ 
     * Le programme de collecte
     * Le navire
-    * Le port de départ 
+    * Le lieu de départ 
     * La date de départ
-    * Le port de retour 
+    * Le lieu du retour
     * La date de retour
     * Le saisisseur
     * La liste des observateurs (séparés par une virgule)
-3. Un bouton + permet d'ajouter une nouvelle marée
+3. Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle marée
 
 > Questions :
 
 > VFA -> MOA : port -  Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...)
 
-> EIS : configurable, on peut en mettre plusieurs 
+> **Réunion MOA 06/02/2024** :
+
+> Mettre "Lieu" à la place de port (plusieurs niveaux de lieu possible). Voir avec Armelle.
+
+---
+
+## Marées > filtres
+
+**REF: REF: OBSMER/MAREES/FILTRE**
+
+![ui-trip-filter](/projects/obsmer/spe/images/trip-filter.svg)
+
+Les filtres sur les marées sont accessibles, sur les écrans affichant la liste des marées, par une icône entonnoir.
+
+L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
+- Le programme de collecte
+- Les navires
+   - Un bouton :heavy_plus_sign: permet d'ajouter des navires qui seront prit en compte dans les critères de filtrage
+- Le port de départ
+- La début de la période
+- La fin de la période
+- Le saisisseur
+- Les observateurs
+- L'état de saisie
+
+Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
+
+
+> **Réunion MOA 06/02/2024** :
+
+> VFA -> MOA : Peut on filtrer sur plusieurs navires ? Oui, que les navires autorisés par la stratégie affecté au saisisseur
+
+> VFA-> MOA : Liste des critères est elle exhaustive ? Oui
+
+> Les champs suivants sont renseignés automatiquement (par la connexion observateur) : Programme de collecte, Organisme, Saisisseur
+
+> Cas d'un coordinateur Ifremer (plus de droit) souhaitant filtrer sur plusieurs organismes saisisseurs
+
+#### Scénario principal
+
+Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--application-des-filtres)
 
 ---
 
@@ -121,7 +160,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle marée (OBSMER/MAREE_MENU : bouton +) 
+1. L'observateur demande la création d'une nouvelle marée (OBSMER/MAREE_MENU : bouton :heavy_plus_sign:) 
 2. Une fenêtre s'ouvre ("Nouvelle marée")
     * La fenêtre est composée de 3 onglets
       * "Détails", positionnement par défaut pour la saisie de la marée
@@ -130,23 +169,25 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 3. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
     * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
     * L'observateur* dans une liste déroulante
-      * Un bouton + permet de rajouter des obervateurs à la marée
+      * Un bouton :heavy_plus_sign: permet de rajouter des obervateurs à la marée
     * Le navire, s'il est dans la liste déroulante
-    * Le lieu de départ* (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
-    * La date* et l'heure* de début de marée
-    * Le lieu de retour* (_saisie des 3 premières lettres, Référentiel des LIEUX_),
-    * La date* et l'heure* de début de marée
+    * Le type de lieu de départ *
+      * Le lieu de départ * (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
+    * La date* et l'heure * de début de marée
+    * Le type de lieu de retour *
+      * Le lieu de retour * (_saisie des 3 premières lettres, Référentiel des LIEUX_),
+    * La date* et l'heure * de début de marée
     * La durée de la marée est automatiquement calculée et affichée après la saisie des dates/heures de début et de fin
     * Les détails sur la vente 
-      * Le lieu* de vente 
-      * La date* de vente 
-      * Le type* de vente (_référentiel des TYPE DE VENTE_)
+      * Le lieu * de vente 
+      * La date * et l'heure de vente 
+        * L'heure de vente peut être saisit mais elle n'est pas obligatoire
+      * Le type * de vente (_référentiel des TYPE DE VENTE_)
     * Des caractéristiques (PSFM définit par la stratégie appliquée)
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
-       * Nombre d'hommes à bord*
+       * Nombre d'hommes à bord
        * Document déclaratif (case à cocher, oui/non)
-       * Débarquement de macro-déchets à terre* (case à cocher, oui/non)
-           * Cette saisie conditionnera l'affichage d'un onglet "Macrodéchets" au niveau de l'écran des captures
+       * ...
     * Un commentaire (maximum 2000 caractères)
 4. L'observateur sélectionnera des types d'engin observés dans l'onglet "Engins"
     * Le fenêtre de sélection d'engins s'ouvre
@@ -160,62 +201,45 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 La stratégie est trouvée suivant les éléments précédemment saisis :  
     * Le programme
     * La date
-    * Le lieu (?)
+    * Le lieu
 2. La stratégie est s'affiche.
-   * Le bouton :eyes: permet d'obtenir le détail de la stratégie (CF question sur l'édition)
 3. La date de dernière mise à jour est affichée.
 4. Le nom du saisisseur est affiché.
 5. Le mode de saisie est affiché ("Terrain" ou "bureau").
 6. Un bouton "Terminer la saisie" permet la fin de la saisie et lance automatiquement les contrôles sur les données saisis. 
 
-**Variante 3a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton +.
+**Variante 3a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton :heavy_plus_sign:.
 Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
 
-
-> Questions/Remarques :
-
-> VFA -> EIS : La stratégie ne s'affiche qu'en mode consultation des marées. Est il possible de visualiser et d'éditer la stratégie ? Dans Imagine il semble possible.
-
-> Voir de quoi dépend la stratégie
-
-> VFA -> ISI : Ecran d'ajout des PSFM à faire
-
-> VFA -> MOA : Faut il proposer de renseigner l'heure de vente ?
 
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
 > VFA -> ISI : Modèle de données de vente à réaliser
 
-## Marées > filtres
-**REF: REF: OBSMER/MAREES/FILTRE**
+> **Remarques** :
 
-![ui-trip-filter](/projects/obsmer/spe/images/trip-filter.svg)
+> VFA -> EIS : La stratégie ne s'affiche qu'en mode consultation des marées. 
 
-Les filtres sur les marées sont accessibles, sur les écrans affichant la liste des marées, par une icône entonnoir.
+> **Réunion MOA 06/02/2024** :
 
-L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
-- Le programme de collecte
-- Le navire (possibilité de renseigner plusieurs navires ?)
-- Le port de départ
-- La début de la période
-- La fin de la période
-- Le saisisseur
-- Les observateurs
-- L'état de saisie
+> Il ne faut pas pouvoir pour visualiser/éditer la stratégie à ce niveau
 
-Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
+> VFA -> MOA : Faut il proposer de renseigner l'heure de vente ? : Oui mais non obligatoire
 
-> Questions :
+> Pas besoin de spécifier la stratégie au moment de la saisie mais plutôt au moment de la consultation. 
 
-> VFA -> MOA : Peut on filtrer sur plusieurs navires ?
+> Rajouter les 2 champs obligatoires : strat. de référence (table très simple) de la société et Programme de rattachement (API pour un lien avec WAO)
 
-> VFA-> MOA : Liste des critères est elle exhaustive ?
+   > Voir comment est construit la valeur de strat. de référence (Allegro actuel)
 
-#### Scénario principal
+   > Avoir une API qui se connecter au serveur WAO 
 
-Référence : ERGONOMIE/FILTRES
+> 2 listes pour la saisie des lieux : type de lieu et lieu (à voir avec Armelle)
+
+> PSFM macro-déchets : pas obligatoire et pas lié à l'onglet dans les captures
 
 ---
+
 ### Marée > Engins 
 
 **REF: OBSMER/ENGINS**
@@ -232,7 +256,7 @@ Référence : ERGONOMIE/FILTRES
     * Type d'engin 
     * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable 
 3. Un bouton permet d'afficher ou de masquer des colonnes
-4. Un bouton + permet d'ajouter un nouvel engin
+4. Un bouton :heavy_plus_sign: permet d'ajouter un nouvel engin
 
 
 **Variante(s) :** 
@@ -254,7 +278,7 @@ Référence : ERGONOMIE/FILTRES
 
 **Fenêtre de saisi d'un engin**
 
-1. L'observateur demande l'ajout d'un nouvel engin à la marée (OBSMER/ENGINS_MENU : bouton +)
+1. L'observateur demande l'ajout d'un nouvel engin à la marée (OBSMER/ENGINS_MENU : bouton :heavy_plus_sign:)
 2. Une fenêtre s'ouvre ("Nouvel engin")
     * Les engins appartenant au navire sélectionné apparaissent dans une liste déroulante
 3. L'observateur peut sélectionner un engin dans la liste
@@ -334,7 +358,7 @@ C'est une option liée au programme de collecte.
     * La date de fin de pêche
     * La position de fin
 3. Un bouton permet d'afficher ou de masquer des colonnes
-4. Un bouton + permet d'ajouter une nouvelle opération
+4. Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle opération
 
 
 ## Marée > Opérations > filtres
@@ -349,7 +373,7 @@ Les filtres sur les opérations sont accessibles, sur les écrans affichant la l
 
 L'écran de filtrage est composé de champs sur lesquels seront appliqués le filtre :
 - L'état de saisie
-- ...
+  - La colonne "Etat" doit pouvoir être triée
 
 Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
 
@@ -357,9 +381,11 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
 
 Référence : ERGONOMIE/FILTRES
 
-> Questions 
+> Réunion MOA 06/02/2024 : 
 
-> VFA -> MOA : Liste exhaustive des critères de filtrage sur les opérations ? 
+> VFA -> MOA : Liste exhaustive des critères de filtrage sur les opérations ? Oui
+
+> pas de nécessité de rajouter des filtres, le filtre état suffit car généralement il y a 10-15 opérations d'affichées par marée
 
 ---
 
@@ -373,7 +399,7 @@ Référence : ERGONOMIE/FILTRES
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle opération (OBSMER/OPERATION_MENU : bouton +)
+1. L'observateur demande la création d'une nouvelle opération (OBSMER/OPERATION_MENU : bouton :heavy_plus_sign:)
 2. Une fenêtre s'ouvre sur la saisie des caractéristiques de l'opération. 
 3. L'observateur renseigne les éléments suivants :
    * L'engin* utilisé
@@ -553,7 +579,7 @@ Contrôle de la saisie d'une capture :
     *  Une case à cocher indiquant si l'inventaire des espèces est exhaustif (Oui si la case est coché)
     *  VFA : Une case à cocher indiquant si la partie retenue est estimée (Oui si la case est coché) 
     *  Un tableau affichant la liste des espèces commerciale à saisir
-4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton +
+4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton :heavy_plus_sign:
 5. Il peut renseigner pour chaque espèce commerciale :
     * Le nom de l'espèce
     * La présentation (_PSMF = DRESSING_, _METHOD = 42_, _Observation par un observateur_) 
