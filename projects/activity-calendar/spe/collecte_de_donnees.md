@@ -19,7 +19,7 @@
 ### Echéance
 
 Allegro Calendrier d'activité est essentiellement utilisé les 3 premiers mois de l'année.
-Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour une utilisation au 1er Janvier.
+Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour une utilisation au 1er Janvier de l'année suivante.
 
 ### Mode de saisie
 
@@ -34,16 +34,18 @@ Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour
 
 ### Instance
 
-Afin de pouvoir assurer une mise en production en minimisant les impacts sur les autres volets d'Allegro, 
-il y aura 2 instances distinctes jusqu'à ce que les 3 volets soient stabilisés :
-- Une instance dédiée aux calendriers d'activité
-- Une instance dédiée à OsbMer et ObsVentes qui sont complémentaires
+> Proposition à valider :
+>
+> Afin de pouvoir assurer une mise en production en minimisant les impacts sur les autres volets d'Allegro, 
+> il y aura 2 instances distinctes jusqu'à ce que les 3 volets soient stabilisés :
+> - Une instance dédiée aux calendriers d'activité
+> - Une instance dédiée à OsbMer et ObsVentes qui sont complémentaires
 
-Lorsque les 3 volets seront stabilisés, les 3 volets seront regroupés sur une seule instance.
+>Lorsque les 3 volets seront stabilisés, les 3 volets seront regroupés sur une seule instance.
 
 ### Schéma
 
-SUMARIS_MAP ou ADAGIO patché ?
+> A définir : SUMARIS_MAP ou ADAGIO patché ?
 
 ---
 ## Gestion des droits
@@ -60,11 +62,13 @@ SUMARIS_MAP ou ADAGIO patché ?
 
 **REF: ACTIVITY_CALENDAR/INTERFACE**
 
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-tree.svg)
+
 L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
    * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif du calendrier d'activité
-   * Sur la sélection d'un calendrier, le bandeau affiche les informations suivantes
+   * A la sélection d'un calendrier, le bandeau affiche les informations suivantes
      * Immatriculation du navire
      * Nom du navire
      * Année
@@ -86,7 +90,7 @@ Calendrier d'activité :
 #### Scénario principal
 
 1. L'observateur sélectionne le menu "Calendriers d'activité" dans l'interface de l'arbre du menu
-2. Les calendriers d'activité s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque calendrier :
+2. L'écran "Calendriers d'activité" s'ouvre. Les informations suivantes sont affichées pour chaque calendrier :
    * L'état de saisie du calendrier :
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
@@ -94,19 +98,22 @@ Calendrier d'activité :
    * Le navire (code + libellé)
    * L'année
    * Le saisisseur
-3. Un bouton + permet d'ajouter un nouveau calendrier
 
 ---
 ## Calendriers d'activité > Filtres
 
 **REF: ACTIVITY_CALENDAR/FILTERS**
 
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-table-filters.svg)
+
 #### Scénario principal
 
-1. Filtres disponibles :
+1. L'observateur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
    * Le navire
    * L'année
    * Le saisisseur
+
+TODO : finaliser maquette
 
 ---
 ## Calendrier d'activité > Général
@@ -119,7 +126,6 @@ une zone et absent du port (cf. décision (UE) 2019/910).
 **Métier** : Groupe d'opérations de pêche ciblant un ensemble similaire d'espèces, effectué au moyen d'un engin similaire
 durant la même période de l'année et/ou dans la même zone et caractérisé par un profil d'exploitation similaire
 (cf. décision (UE) 2019/910).
-> Définition à valider par rapport à Obsmer
 
 **Navire actif** : Navire qui participe à une quelconque opération de pêche (d'un jour ou plus) au cours d'une année civile. 
 Un navire qui n'a participé à aucune opération de pêche au cours d'une année civile est réputé « inactif » 
@@ -130,26 +136,25 @@ L’opération débute quand l’engin est mis à l’eau et qu’il est pêchan
 professionnel et que l’engin n’est plus pêchant.
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new-general.svg)
-> Ajouter champs "Programme" et "Stratégie" ?
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle marée (REF : bouton +)
-2. L'écran s'ouvre ("Nouveau calendrier")
-   * L'écran est composé de 4 onglets
-     * "Général"
-     * "Calendrier", onglet par défaut
-     * "Métiers"
-     * "Commentaires
-3. Dans l'onglet "Général", l'observateur consulte l'état des changements des caractéristiques et des armateurs sur l'année en cours de saisie
-4. Dans l'onglet "Général", l'observateur renseigne les caractéristiques de l'enquête :
+1. L'observateur demande la création d'une nouvelle marée
+2. L'écran "Nouveau calendrier" s'ouvre. Il est composé de 4 onglets :
+   * "Général"
+   * "Calendrier", onglet par défaut
+   * "Métiers"
+   * "Commentaires
+3. Dans l'onglet "Général", l'observateur sélectionne un navire*
+4. L'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affiche 
+5. L'observateur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
+6. L'observateur renseigne les caractéristiques de l'enquête :
    * Qualification de l'enquête*
    * Fiabilité de l'enquête*
    * Inactivité annuelle confirmée par l'observateur*
    * Le professionnel accepterait-il de répondre à une autre enquête ?*
    * Métiers déclarés dans les journeaux de bord/fiches de pêche
    * Habitudes de vente à la criée
-5. Dans l'onglet "Général", l'observateur saisit les commentaires
 
 #### Détails techniques :
   * Qualification de l'enquête : 
@@ -171,7 +176,10 @@ professionnel et que l’engin n’est plus pêchant.
     * PMFM.ID = 521
     * QUALITATIVE_VALUE.PARAMETER_FK = 'AUCTION_SALE_HABIT', tri par ordre alphabétique
 
-> Prévoir val def pour les combo oui/non ? ou laisser à ni oui ni non pour forcer l'utilisateur à répondre ?
+> Questions :
+> - Définition métier : à valider par rapport à Obsmer
+> - Champs "Programme" et "Stratégie" : à intégrer dans l'écran ?
+> - Combo oui/non : prévoir valeur par défaut ou laisser à ni oui ni non pour forcer l'utilisateur à répondre ?
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -182,8 +190,7 @@ professionnel et que l’engin n’est plus pêchant.
 
 #### Scénario principal
 
-1. Dans l'onglet "Calendrier", l'observateur consulte la prédocumentation. Les informations suivantes sont affichées pour chaque mois 
-et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
+1. Dans l'onglet "Calendrier", l'observateur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
    * L'activité du navire
@@ -191,29 +198,32 @@ et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
-   * Le ou les métiers. Pour chaque métier, l'observateur consulte :
-       * La ou les zones
-       * Le ou les gradients de côte
+   * Le ou les métiers
+   * La ou les zones rattachées à chaque métier (maximum 2)
+   * Le gradient de côte rattaché à chaque métier
 2. L'observateur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
    (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
 3. Pour chaque métier du calendrier de l'année en cours issu de la prédocumentation, l'origine de l'information est automatiquement renseignée :
    * "Activité N-1", si le métier provient de la source "Enquête N-1 indirecte"
    * "Document déclaratif", si le métier provient de la source "SACROIS-OBSDEB"
 4. L'observateur complète les données manquantes ou erronnées pour chaque mois :
-   * L'activité du navire :
+   * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
      * Inexistant : vide et rend non-modifiable les champs au-dessous y compris le port d'exploitation ou de rattachement
-   * Le port d'exploitation ou de rattachement
+   * Le port d'exploitation ou de rattachement*
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
    * Un ou plusieurs métiers. L'ajout ou la modification d'un métier renseigne automatiquement l'origine de l'information associée avec la valeur "Enquêteur".
      Pour chaque métier, l'observateur complète les données manquantes ou erronnées :
      * Une ou deux zones. Pour chaque zone, l'observateur complète les données manquantes ou erronnées :
-         * Le gradient de côte
+         * Le gradient de côte*
          * Le gradient de profondeur : visibilité définie par une option du programme
          * La zone proche : visibilité définie par une option du programme
+5. L'observateur enregistre le calendrier
+6. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
+7. L'encart sur le saisisseur s'affiche
 
 #### Détails techniques :
 * Le nombre de jours de mer : PMFM.ID = 241
@@ -222,8 +232,12 @@ et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
 * Le gradient de profondeur : table DEPTH_GRADIENT
 * La zone proche : table NEARBY_SPECIFIC_AREA
 
-> Origine de l'information : d'ou vient la valeur "Ventes" ?
-> Zone proche : Valeur "Récif artificiel" à exclure de la liste ?
+> Questions :
+> - Origine de l'information : d'ou vient la valeur "Ventes" ?
+> - Zone proche : Valeur "Récif artificiel" à exclure de la liste ?
+> - Carto : fonctionnement ? 
+>   - Visualisation des zones sélectionnées ? 
+>   - Pas de sélection sur la carte ?
 
 ---
 ## Calendrier d'activité > Métiers
@@ -237,11 +251,12 @@ et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
 #### Scénario principal
 
 1. Dans l'onglet "Métiers", l'observateur consulte les métiers sélectionnés sur l'onglet "Calendrier"
-2. L'observateur ajoute les caractéristiques relatives aux métiers (REF: ERGONOMIE/PSFM/AJOUT)
+2. L'observateur ajoute les caractéristiques relatives aux métiers (REF: COMMUN/PSFM/AJOUT)
 3. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
 
-> Les caractéristiques que l'observateur peut sélectionner doivent correspondre à celles définies dans la stratégie ?
-> Filtre possible sur le support engin dans la popup d'ajout des PMFM ?
+> Questions :
+> - Maillages et dimensions : correspondent à celles définies dans la stratégie ?
+> - Popup d'ajoit des PMFM : filtre possible sur le support engin ?
 
 ---
 ## Calendrier d'activité > Commentaires
@@ -254,6 +269,7 @@ et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" :
 
 #### Scénario principal
 
+TODO + finaliser maquette
 
 
 

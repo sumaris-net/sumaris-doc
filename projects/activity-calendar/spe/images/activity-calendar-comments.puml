@@ -1,13 +1,25 @@
 @startsalt
 {
-  <b>Nouveau calendrier
+  <b>136794 - SONNY NINO MATHILDE 3 - 2022
   ..
   {/ Général | Calendrier | Métiers | <b>Commentaires }
   .
 
-  { Date Commentaires
-  }
-  .
+
+
+    {
+     {# Date - commentaire } |
+     {+
+                { <font color=grey size=10>Saisisseur
+                Adelaide GAMON
+                <font color=grey size=10>Groupe EI
+                --
+                <font color=grey size=10>Créé le 20/03/2023 17:08:31
+                <font color=grey size=10>Mis à jour le 20/03/2023 17:08:31
+                .
+                <font color=grey size=10>Mode saisie <b>bureau
+     }}
+    }
 
   { [Fermer] | [Sauvegarder] }
 }

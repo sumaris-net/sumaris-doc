@@ -7,25 +7,25 @@
 
   {<b>Prédocumentation}
   	{#
-     . | <b>Janvier | * | <b>Février | * | <b>Mars | * | ... | <b>Décembre
-     . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
-     Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | .
-     Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | .
-     Actif ? | ^Inexistant    ^ | . | ^Inactif                       ^ | ^Actif                                      ^ | ^Actif                                      ^ | ^Actif                                      ^ | . | . | .
-     Port exploit. / rattach. | . | . | ^JMA - La Matrague de Montredon^| ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| ^JMA - La Matrague de Montredon             ^ | . | .
-     Nombre de jours de mer | . | . | . | 10 | 15 | 15 | . | . | .
-     Nombre de jours de pêche | . | . | . | 10 | 15 | 15 |. | . | .
-     Nombre d'hommes à bord/marée | . | . | . | 2 | 2 | 2 | . | . | .
-     Métier 1 | . | . | .| ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
-     Zone 1 | . | . | .| ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
-     Gradient côte | . | . | .| ^3-12 Mil. - 3 à 12 milles                  ^ | ^3-12 Mil. - 3 à 12 milles                  ^ | ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
-     Zone 2 | . | . | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | . | .
-     Métier 2 | . | . | . | . | . | ^GTRNEP - Trémails à langoustines           ^  | . | .
-     Zone 1 | . | . | . | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | .
-     Gradient côte | . | . | . | . | . | ^3-12 Mil. - 3 à 12 milles                  ^ | . | .
-     Zone 2 | . | . | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | . | .
+     . | <b>Janvier | * | <b>Février | * | ... | <b>Décembre
+     . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
+     Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | .
+     Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | .
+     Actif ? | ^Inexistant    ^ | . | ^Inactif                       ^ | ^Actif                                      ^ | . | .
+     Port exploit. / rattach. | . | . | ^JMA - La Matrague de Montredon^| ^JMA - La Matrague de Montredon             ^ | . | .
+     Nombre de jours de mer | . | . | . | 10 | . | .
+     Nombre de jours de pêche | . | . | . | 10 | . | .
+     Nombre d'hommes à bord/marée | . | . | . | 2 | . | .
+     Métier 1 | . | . | .| ^GTRMZZ - Trémails à poissons               ^ | . | .
+     Zone 1 | . | . | .| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | .
+     Gradient côte | . | . | .| ^3-12 Mil. - 3 à 12 milles                  ^ | . | .
+     Zone 2 | . | . | . | . | . | . | .
+     Gradient côte | . | . | . | . | . | . | .
+     Métier 2 | . | . | . | . | . | .
+     Zone 1 | . | . | . | . | . | .
+     Gradient côte | . | . | . | . | . | .
+     Zone 2 | . | . | . | . | . | . | .
+     Gradient côte | . | . | . | . | . | . | .
      }
      .
 
