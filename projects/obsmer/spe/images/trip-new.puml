@@ -6,21 +6,28 @@
   .
   {
 
-      Programme de collecte*:    | { ^SIH-OBSMER                                 ^ } | * | {^"Stratégie"
+      Programme de collecte*:    | { ^SIH-OBSMER                            ^ } | * {^"Stratégie"
+Démarrage au 01/01/2023 }
 
-      Démarrage au 01/01/2023 <&eye> }
+      Référence*:  | { ^2021_M020 - DPMA_23_Lot4^ }  | * | {^"Saisisseur"
+                                                                                                                   Nicolas DUPOND - Ifremer  } |.
 
-      Observateurs* :            | ^ Observateur #1       ^ | { [<&plus>] | [<&x>] } | {^"Saisisseur"
-                                                                                               Nicolas DUPOND - Ifremer  }
+      Programme de rattachement*: | { ^ DPMA_23_Lot4 ^ } |  . | <&calendar> Créé le 10/11/2023
+      .
+      Observateurs*:            | ^ Observateur #1    ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
 
-      Navire*:                   | { ^851751 - PETIT BATEAU                      ^ } | * | .
+      Navire*:                   | { ^851751 - PETIT BAT ^ } | * | [Terminer la saisie]
 
-      Départ*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | <&calendar> Créé le 10/11/2023
+      Départ*:     | { ^Port               ^ } | { ^ jj/mm/aaaa^ } | .
+      . | { ^DRZ - Douarnenez   ^ } | { ^ hh:mm     ^ } | .
 
-      Retour*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^ | ^ hh:mm^ } | <&calendar> Mis à jour le 10/11/2023
-
-      Vente*:     | { ^Type de vente         ^ } | <i><color:blue>durée de la marée | [Terminer la saisie]
-      .           | { ^Lieu de vente         ^ } | { ^ jj/mm/aaaa^ |  ^ hh:mm^ }
+      Retour*:     | { ^Port               ^ } | { ^ jj/mm/aaaa^ } | .
+      . | { ^DRZ - Douarnenez   ^ } | { ^ hh:mm     ^ } | .
+      . | . | <i><color:blue>durée de la marée |
+      .
+      .
+      Vente*:     | { ^Type de vente         ^ } | { ^ jj/mm/aaaa^ } | .
+      .           | { ^Lieu de vente         ^ } |  { ^ hh:mm^ } |
 
   }
 

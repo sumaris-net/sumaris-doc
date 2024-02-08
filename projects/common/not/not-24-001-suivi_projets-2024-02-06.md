@@ -21,6 +21,11 @@ Voir avec MOA
 - définir priorité des cibles (pc ou tablette)
 
 
+### Réunions d'avancement
+
+Inclure ISI, Développeurs et HISSEO (MOA)
+
+
 ### Organisation des développements
 
 Voir avec ISI/EIS
