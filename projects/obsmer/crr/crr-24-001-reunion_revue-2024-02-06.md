@@ -9,29 +9,42 @@
 > - Marion SCAVINNER (Ifremer)
 > - Vincent BADTS (Ifremer)
 
-Prochaine réunion : Vendredi 19/02/2024 à 15h30  
+
+# Prochains Points
+
+- Prochaine réunion : Lundi 19/02/2024 à 15h30  
+- Démonstration aux observateurs : Lundi 26/02/2024 à 14h30
 
 ---
+
+# Points divers
+
+Attente très forte sur l'ergonomie pour la refonte :
+- Large public : malvoyant, daltonisme, ... ? Quelles sont les exigences de l'état sur ces développements ?
+- Action côté MOA https://accessibilite.numerique.gouv.fr/
+
+
+
 # Revue des spécifications
 
-# Avancement - Revue spécifications Common
+## Avancement - Revue des spécifications des Parties Communes
 
 - [X] Ergonomie 
   - [X] Principes généraux
-  - [X] Cnnexion à l'application
+  - [X] Connexion à l'application
 - [X] Application des filtres
 - [X] Fin d'une saisie
 - [X] Ajout de PSFM
 - [X] Stratégie
 - [X] Formulaires
 
-# Avancement - Revue spécifications ObsMer
+## Avancement - Revue des spécifications ObsMer
 
 - [X] Marées
   - [X] Détails
   - [X] Filtres
 - [ ] Engins
-  - [X] Détails
+  - [ ] Détails
 - [ ] Opérations
   - [ ] Détails 
   - [X] Filtres
@@ -43,3 +56,8 @@ Prochaine réunion : Vendredi 19/02/2024 à 15h30
       - [ ] Mesures individuelles
     - [ ] Appat
   - [ ] PNR, Vrac
+
+
+# A planifier
+
+Faire un atelier d'ergonomie avec des observateurs : Lundi 26/02/2024 à 14h30

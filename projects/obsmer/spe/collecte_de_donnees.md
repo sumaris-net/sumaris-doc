@@ -124,7 +124,8 @@ L'écran de filtrage est composé de champs sur lesquels seront appliqués le fi
 - Le programme de collecte
 - Les navires
    - Un bouton :heavy_plus_sign: permet d'ajouter des navires qui seront prit en compte dans les critères de filtrage
-- Le port de départ
+   - Les navires que l'on peut ajouter sont ceux autorisés par la stratégie affecté au saisisseur
+- Le lieu de départ
 - La début de la période
 - La fin de la période
 - Le saisisseur
@@ -133,20 +134,19 @@ L'écran de filtrage est composé de champs sur lesquels seront appliqués le fi
 
 Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre de filtrage sans appliquer les critères de filtre.
 
-
-> **Réunion MOA 06/02/2024** :
-
-> VFA -> MOA : Peut on filtrer sur plusieurs navires ? Oui, que les navires autorisés par la stratégie affecté au saisisseur
-
-> VFA-> MOA : Liste des critères est elle exhaustive ? Oui
-
-> Les champs suivants sont renseignés automatiquement (par la connexion observateur) : Programme de collecte, Organisme, Saisisseur
-
-> Cas d'un coordinateur Ifremer (plus de droit) souhaitant filtrer sur plusieurs organismes saisisseurs
-
 #### Scénario principal
 
 Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--application-des-filtres)
+
+**Variante(s) :**
+
+**Variante 1a**
+
+**ACTEURS : OBSERVATEUR** : Les champs suivants sont renseignés automatiquement (par la connexion observateur) et non modifiables : Programme de collecte, Organisme, Saisisseur
+
+**Variante 1b**
+
+**ACTEUR : VALIDATEUR** : Un coordinateur Ifremer (avec plus de droit) peut filtrer sur plusieurs organismes saisisseurs, plusieurs saisisseurs (listes déroulantes actives)
 
 ---
 
@@ -168,14 +168,15 @@ Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--appli
       * "Opérations"
 3. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
     * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
+    * La stratégie de référence au plan d'échantillonnage de WAO
+      * l'API existante (Allegro) est utilisée pour se connecter au serveur WAO
+      * Le programme de rattachement est automatiquement renseigné à partir du plan d'échantillonnage
     * L'observateur* dans une liste déroulante
       * Un bouton :heavy_plus_sign: permet de rajouter des obervateurs à la marée
     * Le navire, s'il est dans la liste déroulante
-    * Le type de lieu de départ *
-      * Le lieu de départ * (_saisie des 3 premières lettres, Référentiel des LIEUX_), 
+    * Le lieu de départ * (_saisie des 3 premières lettres, Référentiel des LIEUX_) 
     * La date* et l'heure * de début de marée
-    * Le type de lieu de retour *
-      * Le lieu de retour * (_saisie des 3 premières lettres, Référentiel des LIEUX_),
+    * Le lieu de retour * (_saisie des 3 premières lettres, Référentiel des LIEUX_)
     * La date* et l'heure * de début de marée
     * La durée de la marée est automatiquement calculée et affichée après la saisie des dates/heures de début et de fin
     * Les détails sur la vente 
@@ -194,6 +195,9 @@ Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--appli
 5. Un bouton "Sauvegarder" permet de sauvegarder la marée en cours de saisie.
 
 
+Niveau des lieux : Le niveau des lieux des marées est définit dans le paramétrage du programme, accessible par le menu "Référentiel" :
+- Référentiel > Programme > Options > Marée : Niveau(x) de lieu
+
 **Variante(s) :**
 
 **Variante 1a** - 
@@ -202,7 +206,7 @@ La stratégie est trouvée suivant les éléments précédemment saisis :
     * Le programme
     * La date
     * Le lieu
-2. La stratégie est s'affiche.
+2. La stratégie s'affiche.
 3. La date de dernière mise à jour est affichée.
 4. Le nom du saisisseur est affiché.
 5. Le mode de saisie est affiché ("Terrain" ou "bureau").
@@ -224,17 +228,13 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 > Il ne faut pas pouvoir pour visualiser/éditer la stratégie à ce niveau
 
-> VFA -> MOA : Faut il proposer de renseigner l'heure de vente ? : Oui mais non obligatoire
-
 > Pas besoin de spécifier la stratégie au moment de la saisie mais plutôt au moment de la consultation. 
 
-> Rajouter les 2 champs obligatoires : strat. de référence (table très simple) de la société et Programme de rattachement (API pour un lien avec WAO)
+> Rajouter les 2 champs obligatoires : strat. de référence (Référence au plan d'échantillonnage de WOA) de la société et Programme de rattachement 
 
-   > Voir comment est construit la valeur de strat. de référence (Allegro actuel)
+   > Voir comment est construit la valeur de strat. de référence et Programme de rattachement (Allegro actuel)
 
-   > Avoir une API qui se connecter au serveur WAO 
-
-> 2 listes pour la saisie des lieux : type de lieu et lieu (à voir avec Armelle)
+   > Utiliser l'API existante (Allegro) pour se connecter au serveur WAO 
 
 > PSFM macro-déchets : pas obligatoire et pas lié à l'onglet dans les captures
 

@@ -17,17 +17,16 @@ Démarrage au 01/01/2023 }
       Observateurs*:            | ^ Observateur #1    ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
 
       Navire*:                   | { ^851751 - PETIT BAT ^ } | * | [Terminer la saisie]
+      .
+      Départ*:     | { ^DRZ - Douarnenez   ^ } | { ^ jj/mm/aaaa^ } | { ^ hh:mm     ^ } | .
 
-      Départ*:     | { ^Port               ^ } | { ^ jj/mm/aaaa^ } | .
-      . | { ^DRZ - Douarnenez   ^ } | { ^ hh:mm     ^ } | .
 
-      Retour*:     | { ^Port               ^ } | { ^ jj/mm/aaaa^ } | .
-      . | { ^DRZ - Douarnenez   ^ } | { ^ hh:mm     ^ } | .
+      Retour*:     | { ^DRZ - Douarnenez   ^ }  | { ^ jj/mm/aaaa^ } | { ^ hh:mm     ^ } | .
       . | . | <i><color:blue>durée de la marée |
       .
       .
-      Vente*:     | { ^Type de vente         ^ } | { ^ jj/mm/aaaa^ } | .
-      .           | { ^Lieu de vente         ^ } |  { ^ hh:mm^ } |
+      Vente*:     | { ^Type de vente        ^ } | { ^ jj/mm/aaaa^ } | { ^ hh:mm^ } | .
+      .          { ^Lieu de vente        ^ }
 
   }
 

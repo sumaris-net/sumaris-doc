@@ -10,8 +10,11 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 - Les champs calculés sont en italique et la police est de couleur bleu
 - Les champs non saisissables sont affichés avec une police de couleur grise
 - Les préconisations de saisies sont affichées en blanc sur fond rouge
+- Il est possible d'activer des fonctionnalités par des raccourcis clavier
+  - Touche "Ctrl" + Lettre surligné du bouton
 - Les données sous forme de tableau
     - Tri des données (croissant/décroissant) : Une flèche indique le sens du tri passage de la souris sur le nom de la colonne triable
+      - Toutes les colonnes peuvent être triées
     - Affichage/masque de colonnes : Un bouton offre la possibilité d'afficher ou de masquer des colonnes dans une vue tabulaire
     - Les listes des marées, engins, opérations peuvent être restreintes en appliquant des filtres sur les données
 - Les caractéristiques (PSFM) obligatoires (*) sont affichée en tête de liste
@@ -23,23 +26,9 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 
 > ISI : A complèter par rapport à l'existant dans Allegro V2
 
-> **Réunion MOA 06/02/2024** : 
-
-> Implémenter des raccourcis clavier, 1ère lettre du bouton souligné (control + alt + MAJ + lettre)
-
-> ISI -> EIS : Toutes les colonnes peuvent être triées 
-
-    > Ou se paramètre le tri sur les colonnes ? 
-
-> Attente très forte sur l'ergonomie pour la refonte :
-
-    > Large public : malvoyant, daltonisme, ... ? Quelles sont les exigences de l'état sur ces développements ?
-
-    > Action côté MOA https://accessibilite.numerique.gouv.fr/
-
-    > Faire un atelier d'ergonomie avec des observateurs
-
-
+> ISI -> EIS : Toutes les colonnes peuvent être triées (à confirmer)
+>
+> Ou se paramètre le tri sur les colonnes ? 
 
 
 ## Commun > Ergonomie > Connexion à l'application
@@ -67,23 +56,12 @@ Une fois la connexion validée, l'interface graphique de l'application s'adapte 
 - Menu,
 - ...
 
+Le noeud est stocké dans les paramètres locaux (local setting) du navigateur.
+
 **Variante(s) :**
 
 **Variante 3a** - Connexion suivantes : Aux connexionx suivantes, l'observateur est directement positionné sur le précédent noeud qu'il avait choisit lors
 de sa précédente connexion.
-
-> **Remarques ISI** :
-
-> ISI -> EIS : Comportement différent d'Imagine : on saisit d'abord le noeud, puis on se connecte
-
-> ISI -> EIS : Ou est stocké l'information du noeud à la première connexion de l'utilisateur ?
-
-
-> **Réunion MOA 06/02/2024** : 
-
-> Proposer la liste déroulante à chaque connexion et positionner le noeud choisit lors de la dernière connexion. L'observateur peut changer de noeud à chaque connexion
-
-> (En outre-mer ou métropole, les observateurs peuvent switcher entre ObsMer et ObsVente)
 
 
 ## Commun > Application des filtres
@@ -91,6 +69,10 @@ de sa précédente connexion.
 **REF: COMMUN/FILTRES**
 
 Il est possible d'appliquer des filtres sur les marées et les opérations.
+
+**ACCESSIBILITE : MAREES, OPERATIONS** 
+
+**ACTEURS : OBSERVATEUR**
 
 1. L'utilisateur clique sur le bouton du filtre
 2. L'écran affiche les paramètres sur lesquels appliquer un filtre
@@ -117,17 +99,32 @@ Le filtre peut être enregistré pour être ré-appliqué par la suite.
 
 > ISI : A mettre en variante la fin de saisie qui supprime les filtres appliqués ?
 
+> Les développements sur l'enregistrement des filtres sont en cours côté Quadrige.
+
+## Commun > Extraction
+
+**REF: COMMUN/EXTRACTION**
+
+_A mettre dans une partie validation de données_
+
+**ACTEURS : SUPERVISEUR, VALIDATEUR**
+
 > **Réunion MOA 06/02/2024** :
 
-> Filtrage sur l'écran des marées uniquement. 
+> Version 2 :
+> 
+> Prevoir un mécanisme pour rechercher rapidement la données et la corriger
+> 
+> Pouvoir facilement identifier une marée ou une opération sur la saisie d'une espèce.
+>
+> Réel besoin des MOAs pour par exemple connaitre comment les espèces sont exploitées)
+>
+> - Avoir un tableau avec les opérations toutes marées confondues
+> - Avoir un accès aux téléchargements avec un lien qui renvoie vers le formulaire de saisie
+> - Avoir un lien dans Valparaiso qui renvoie vers le formulaire de saisie
+>
+> MOA -> OBS : Demander aux observateurs les besoins en filtrage sur les données
 
-> Version 2 : 
-
-    > Pouvoir facilement identifier une marée ou une opération sur la saisie d'une espèce.
-    
-    > Réel besoin des MOAs pour par exemple connaitre comment les espèces sont exploitées)
-    
-    > MOA -> OBS : Demander aux observateurs les besoins en filtrage des données 
 
 
 ## Commun > Fin d'une saisie
@@ -147,10 +144,6 @@ Par exemple en mode saisie terrain, le lieu de retour de marée n'est pas obliga
 
 **Variante 1b** - Sur la validation de saisie d'une marée, le contrôle valide la saisie des opérations avec détection des erreurs.
 
-> **Réunion MOA 06/02/2024** :
-
-> Bouton Terminer la saisie sur les marées et sur les opérations (et sur les marées, on valide la saisie des opérations avec détection des erreurs) 
-
 
 ## Commun > Ajout de PSFM
 
@@ -167,22 +160,44 @@ L'écran d'ajout de PSFM est disponible pour ajouter des caractéristiques à sa
 
 #### Scénario principal
 
-TODO
+L'écran affiche la liste des PSFMs, disponible pour la stratégie, qu'il est possible d'ajouter.
+1. Les attributs suivants des PSFMs sont affichés :
+    * Le libellé
+    * L'unité
+    * Le support
+    * La fraction
+    * La méthode de collecte
+2. Une zone de saisie permet de rechercher les PSFMs par leur code ou leur libellé
+    * L'observateur saisie un code ou un libellé et valide avec la touche "Entrée"
+      * La liste des PSFMs se met à jour avec les résultats de la recherche
+3. Une liste déroulante permet de filtrer les PSFMs selon leur état
+    * Par défaut un filtre est positionné sur la valeur de l'état "Actif à la saisie". Seuls les PSFMs à l'état "Actif à la saisie" sont affichés.
 
-> **Réunion MOA 06/02/2024** :
+**Variante(s) :**
 
-> Ecran d'ajout de PSFM disponible sur les écrans : caractéristiques engins, marées, lots
+**Variante 3a** - Si le filtre sur l'état des PSFMs est supprimé, la colonne "Etat" devient visible.
 
-> Enlever la colonne Etat, si possible, car ne sert à rien.
+> **Remarques** :
+
+> Doit on pouvoir laisser un observateur ajouter un PSFM ?
+
+> Sinon il faut passer par la modification de la stratégie pour ajouter un PSFM. 
  
 
 ## Commun > Stratégie
 
-**REF: COMMUN/STRATEGIE**
+**REF: COMMUN/STRATEGIES**
 
-TODO
+**ACTEURS : SUPERVISEUR, VALIDATEUR**
 
-> **Réunion MOA 06/02/2024** :
+Prévoir un chantier pour refondre la gestion/mise en place des stratégies.
+
+Voir dans Quadrige pour la partie administration des stratégies.
+
+En attendant, il faut utiliser Allegro actuel pour la gestion des stratégies et rédiger un manuel d'exploitation pour faciliter
+l'expoitation.
+
+> **Remarques** :
 
 > Suivant le programme, en connexion administrateur/coordinateur/... : On peut éditer des stratégies 
  
@@ -205,12 +220,10 @@ Il devrait respecter la règle de nommenclature suivante :
 - _OBSMER_LOTX_LIGNE DE PLAN_IMMATRICULATION NAVIRE CFR_DATE D'EMBARQUEMENT DE LA SORTIE AU FORMAT AAAAMMJJ.pdf_
   - Exemple : OBSMER_LOT1_2020_M0002_FRA000123456_20200718.pdf
 
-Il est possible de les visionner directement dans Allegro, une fois le document importé.
+En mode bureau (connecté), Il est possible de les visionner directement dans Allegro, une fois le document importé.
 
-TODO
+En mode tablette (déconnecté), cela doit être étudié.
 
-> **Réunion MOA 06/02/2024** :
+> **Remarques** :
 
-> Nommenclature à faire au moment de l'import (attente nommenclature MOA).
-
-> Pouvoir visionner le PDF numériser.
+> _A compléter_
