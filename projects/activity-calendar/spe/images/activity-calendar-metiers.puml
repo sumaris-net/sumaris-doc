@@ -1,10 +1,11 @@
 @startsalt
 {
-  <b>Nouveau calendrier
+  <b>136794 - SONNY NINO MATHILDE 3 - 2022
   ..
   {/ Général | Calendrier | <b>Métiers | Commentaires }
   .
 
+  {
   {# Métier | {<b>Maillage de l'engin (logbook) (mm)
                 engin -
                 inconnue -
@@ -23,8 +24,16 @@
                 Déclaration d'un professionnel} | <&menu>
      GTRMZZ - Trémails à poissons | 100 | 97 | 103 | . | .
      GTRNEP - Trémails à langoustines | . | 57 | . | 100 | .
-  }
-  .
+  } | {+
+              { <font color=grey size=10>Saisisseur
+              Adelaide GAMON
+              <font color=grey size=10>Groupe EI
+              --
+              <font color=grey size=10>Créé le 20/03/2023 17:08:31
+              <font color=grey size=10>Mis à jour le 20/03/2023 17:08:31
+              .
+              <font color=grey size=10>Mode saisie <b>bureau
+              }}}
 
   { [Fermer] | [Sauvegarder] }
 }
