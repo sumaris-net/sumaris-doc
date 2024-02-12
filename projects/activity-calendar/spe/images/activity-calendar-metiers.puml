@@ -1,9 +1,9 @@
 @startsalt
 {
   <b>136794 - SONNY NINO MATHILDE 3 - 2022
-  ..
+  --
   {/ Général | Calendrier | <b>Métiers | Commentaires }
-  .
+  ..
 
   {
   {# Métier | {<b>Maillage de l'engin (logbook) (mm)
@@ -29,12 +29,14 @@
               Adelaide GAMON
               <font color=grey size=10>Groupe EI
               --
-              <font color=grey size=10>Créé le 20/03/2023 17:08:31
-              <font color=grey size=10>Mis à jour le 20/03/2023 17:08:31
+              <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
+              <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
               .
               <font color=grey size=10>Mode saisie <b>bureau
+              .
+              [ Terminer la saisie]
               }}}
-
+  --
   { [Fermer] | [Sauvegarder] }
 }
 @endsalt

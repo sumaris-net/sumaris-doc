@@ -1,8 +1,9 @@
 @startsalt
 {
   <b>Nouveau calendrier
-  ..
+  --
   {/ Général | <b>Calendrier | Métiers | Commentaires }
+  ..
   .
 
   {<b>Prédocumentation}
@@ -30,6 +31,7 @@
      .
 
   {<b>Calendrier d'activité}
+	{S-
 	{#
      . | <b>Janvier | <b>Février | <b>Mars | <b>Avril| ... | <b>Décembre
      Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | . | .
@@ -60,8 +62,8 @@
      Profondeur | . | . | . | . | . | . | .
      Zone proche | . | . | . | . | . | . | .
     }
-    .
-
+    }
+  --
   { [Fermer] | [Sauvegarder] }
 }
 @endsalt

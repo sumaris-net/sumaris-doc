@@ -1,9 +1,8 @@
 @startsalt
 {
 
-  {
-  <b> Calendriers d'activité | . | . | . | [ <&plus>] | . | . | . | [<color:Grey><&caret-bottom>]}
-  ..
+  {<b>Calendriers d'activité                                                                                                                                                    <&reload>}
+   --
 
     {
         Programme de collecte : | . | ^ SIH-ACTIFLOT^ | . | . | Etat :   | . | ^En cours de saisie^
@@ -14,12 +13,7 @@
 
     }
 
-
-
   --
-
-  {
-    2 résultats | . | . | . | [Fermer] | [Appliquer]
-  }
+  {2 résultats  {}[<&caret-bottom>] | [Fermer] | [Appliquer]}}
 }
 @endsalt

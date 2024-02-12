@@ -1,6 +1,7 @@
 # Collecte de données
 ## Spécifications (Calendrier d'activité)
 
+
 ---
 ## Sommaire
 
@@ -8,10 +9,12 @@
 - Actions
 - Historique
 
+
 ---
 ## Documents
 
 - [Spec_Metier_Calendrier_Activite](/projects/activity-calendar/doc/Specification fonctionnalites. 02.01.2024.docx)
+
 
 ---
 ## Feuille de route
@@ -28,6 +31,7 @@ Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour
 > Proposition à valider : 
 > - Dans un 1er temps : se focaliser sur la saisie bureau (pc) avec un mode déconnecté car les connexions internets ne sont pas stables dans les DOMTOMs
 > - Dans un 2nd temps : se focaliser sur la saisie terrain (tablette/smartphone) sans prédocumentation
+
 
 ---
 ## Spécificités techniques
@@ -47,6 +51,7 @@ Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour
 
 > A définir : SUMARIS_MAP ou ADAGIO patché ?
 
+
 ---
 ## Gestion des droits
 
@@ -56,6 +61,7 @@ Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour
 > Points de vigilance : 
 > - Certains quartier d'immatriculation sont observés par 2 sociétés de prestation 
 > - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
+
 
 ---
 ## Ergonomie générale
@@ -78,6 +84,7 @@ L'interface est composée des éléments graphiques suivants :
 1. L'observateur clique sur un onglet de l'arbre du menu
    * Les informations propre à l'onglet s'ouvre dans l'interface centrale.
 
+
 ---
 ## Calendriers d'activité
 
@@ -99,6 +106,17 @@ Calendrier d'activité :
    * L'année
    * Le saisisseur
 
+**Variante(s) :**
+
+**Variante 1a :** L'observateur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
+
+**Variante 1b :** L'observateur crée un nouveau calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
+
+**Variante 1c :** L'observateur consulte un calendrier d'activité existant
+
+**Variante 1d :** L'observateur supprime un calendrier d'activité existant
+
+
 ---
 ## Calendriers d'activité > Filtres
 
@@ -106,14 +124,18 @@ Calendrier d'activité :
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-table-filters.svg)
 
+Les filtres des calendriers d'activité sont accessibles depuis le tableau de consultation des calendriers d'activité via l'icône entonnoir.
+
+
 #### Scénario principal
 
 1. L'observateur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+   * L'état
    * Le navire
    * L'année
+   * L'organisme du saisisseur
    * Le saisisseur
 
-TODO : finaliser maquette
 
 ---
 ## Calendrier d'activité > Général
@@ -137,9 +159,11 @@ professionnel et que l’engin n’est plus pêchant.
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new-general.svg)
 
+La création d'un calendrier d'activité est accessible depuis le tableau de consultation des calendriers d'activité via l'icône <&plus>
+
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle marée
+1. L'observateur demande la création d'une nouveau calendrier
 2. L'écran "Nouveau calendrier" s'ouvre. Il est composé de 4 onglets :
    * "Général"
    * "Calendrier", onglet par défaut
@@ -180,6 +204,8 @@ professionnel et que l’engin n’est plus pêchant.
 > - Définition métier : à valider par rapport à Obsmer
 > - Champs "Programme" et "Stratégie" : à intégrer dans l'écran ?
 > - Combo oui/non : prévoir valeur par défaut ou laisser à ni oui ni non pour forcer l'utilisateur à répondre ?
+> - Caractéristiques de l'enquête : conserver les 6 caractéristiques ? ajouter des valeurs par défaut ?
+
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -206,7 +232,7 @@ professionnel et que l’engin n’est plus pêchant.
 3. Pour chaque métier du calendrier de l'année en cours issu de la prédocumentation, l'origine de l'information est automatiquement renseignée :
    * "Activité N-1", si le métier provient de la source "Enquête N-1 indirecte"
    * "Document déclaratif", si le métier provient de la source "SACROIS-OBSDEB"
-4. L'observateur complète les données manquantes ou erronnées pour chaque mois :
+4. L'observateur complète les données manquantes ou erronées pour chaque mois :
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
@@ -216,8 +242,8 @@ professionnel et que l’engin n’est plus pêchant.
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
    * Un ou plusieurs métiers. L'ajout ou la modification d'un métier renseigne automatiquement l'origine de l'information associée avec la valeur "Enquêteur".
-     Pour chaque métier, l'observateur complète les données manquantes ou erronnées :
-     * Une ou deux zones. Pour chaque zone, l'observateur complète les données manquantes ou erronnées :
+     Pour chaque métier, l'observateur complète les données manquantes ou erronées :
+     * Une ou deux zones. Pour chaque zone, l'observateur complète les données manquantes ou erronées :
          * Le gradient de côte*
          * Le gradient de profondeur : visibilité définie par une option du programme
          * La zone proche : visibilité définie par une option du programme
@@ -226,6 +252,18 @@ professionnel et que l’engin n’est plus pêchant.
 7. L'encart sur le saisisseur s'affiche
 
 #### Détails techniques :
+* Sources de la prédocumentation :
+  * Enquête N-1 indirecte : table ACTIVITY_CALENDAR avec :
+      * PROGRAM_FK = 'SIH-ACTIFLOT'
+      * YEAR = N-1
+      * VESSEL_FK
+  * SACROIS-OBSDEB : table ACTIVITY_CALENDAR avec :
+      * PROGRAM_FK = 'SIH-ACTIPRED'
+      * YEAR = N
+      * VESSEL_FK
+* Le port d'exploitation ou de rattachement : 
+  * LOCATION.LOCATION_LEVEL_FK = 6 (Port - Point de débarquement)
+  * Filtré selon la zone de compétence sélectionnée
 * Le nombre de jours de mer : PMFM.ID = 241
 * Le nombre de jours de pêche : PMFM.ID = 242
 * Le nombre d'hommes à bord par marée : PMFM.ID = 109
@@ -233,11 +271,14 @@ professionnel et que l’engin n’est plus pêchant.
 * La zone proche : table NEARBY_SPECIFIC_AREA
 
 > Questions :
+> - Sources de la prédocumentation : pouvoir afficher une seule source via une case à cocher ?
+> - Port d'exploitation ou de rattachement : renommer port en lieu ?
 > - Origine de l'information : d'ou vient la valeur "Ventes" ?
 > - Zone proche : Valeur "Récif artificiel" à exclure de la liste ?
 > - Carto : fonctionnement ? 
 >   - Visualisation des zones sélectionnées ? 
 >   - Pas de sélection sur la carte ?
+
 
 ---
 ## Calendrier d'activité > Métiers
@@ -253,10 +294,13 @@ professionnel et que l’engin n’est plus pêchant.
 1. Dans l'onglet "Métiers", l'observateur consulte les métiers sélectionnés sur l'onglet "Calendrier"
 2. L'observateur ajoute les caractéristiques relatives aux métiers (REF: COMMUN/PSFM/AJOUT)
 3. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
+4. L'observateur enregistre le calendrier
+5. La date de mise à jour du calendrier est actualisée
 
 > Questions :
 > - Maillages et dimensions : correspondent à celles définies dans la stratégie ?
-> - Popup d'ajoit des PMFM : filtre possible sur le support engin ?
+> - Popup d'ajout des PMFM : filtre possible sur le support engin ?
+
 
 ---
 ## Calendrier d'activité > Commentaires
@@ -269,19 +313,14 @@ professionnel et que l’engin n’est plus pêchant.
 
 #### Scénario principal
 
-TODO + finaliser maquette
+1. Dans l'onglet "Commentaires", l'observateur consulte les commentaires des années précédentes
+2. La date du jour est automatiquement renseignée à la fin du commenatire
+2. L'observateur renseigne les commentaires de l'année en cours de saisie
+3. L'observateur enregistre le calendrier
+4. La date de mise à jour du calendrier est actualisée
 
-
-
----
-## Calendrier d'activité mensuel
-
-TODO
-
-- Prédocumentation :
-  - SIH-ACTIFLOT - Calendrier d'activité
-  - SIH-ACTIPRED - Prédocumentation
-  - SIH-ACTIFLOT-CONFLIT - Conflit ?
+> Questions :
+> - La date du jour est automatiquement renseigné : cas où l'observateur ne renseigne pas de commentaires ?
 
 ---
 ## Historique

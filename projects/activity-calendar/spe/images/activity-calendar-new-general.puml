@@ -1,8 +1,9 @@
 @startsalt
 {
   <b>Nouveau calendrier
-  ..
+  --
   {/ <b>Général | Calendrier | Métiers | Commentaires }
+  ..
   .
 
   {<b>Navire* : | ^136794 - SONNY NINO MATHILDE 3^}
@@ -38,8 +39,8 @@
      . | Habitudes de vente à la criée : | ^         ^
      }
   }
-  .
 
+  --
   { [Fermer] | [Sauvegarder] }
 }
 @endsalt
