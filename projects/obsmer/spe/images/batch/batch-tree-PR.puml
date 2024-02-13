@@ -4,7 +4,7 @@
   {+
    {T
        + Capture    | .
-       ++ <back:#DDF>Partie retenue       | <i><color:blue>[8]
+       ++ Partie retenue       | <i><color:blue>[8]
        +++ Appat | <i><color:blue>[1]
        +++ Consommation humaine | <i><color:blue>[2]
        +++ Godaille | <i><color:blue>[2]
@@ -23,7 +23,6 @@
   } | . | {
     { [Capture] | / | [<b>Partie retenue] | [...] }
 
-    <i><color:blue>Rien à afficher sur cet écran
   }
 
   -- | -- | --

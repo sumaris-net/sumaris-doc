@@ -1,0 +1,43 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + Capture    | <i><color:blue>[10]
+       ++ Partie retenue       | <i><color:blue>[8]
+       ++ Partie non retenue, Vrac | <i><color:blue>[2]
+       +++ Détaillé | <i><color:blue>[2]
+       ++++ <back:#DDD>Animaux | <i><color:blue>[2]
+       ++++ Ecosystèmes Marins Vulnérables | <color:black>[0]
+       +++ Non détaillé | <color:black>[0]
+       ++ Partie non retenue, Hors-Vrac | <color:black>[0]
+   }
+    .
+    .
+    .
+   --
+   {
+      [<&checkmark> Contrôler] | [ <b><< ]
+   }
+  } | . | {
+    { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Animaux] | (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+
+    {Poids total (kg) : | "  0   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+
+    {Coef. éch. : | " 1/1    " | . | . | . | . | . | Poids échant (kg) : | "  0   " | . | . |}
+
+    { [ ] Inventaire exhaustif des espèces ? }
+    ---
+    {#
+          . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
+          # | <b>Espèce commerciale  | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Coef. échant. | <b>Poids. échant. | <b>Nb indiv échant. | <&menu>
+          1 | ^MNZ- Baudroie       ^ |  50   |  24   |   10          | 4 | 10 | <&bar-chart>
+          2 | ^MNZ- Baudroie       ^ |  20   |  36   |   10          | 4 | 10 | <&bar-chart>
+        }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+

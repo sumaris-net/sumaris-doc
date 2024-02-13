@@ -183,7 +183,7 @@ Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--appli
       * Le lieu * de vente 
       * La date * et l'heure de vente 
         * L'heure de vente peut être saisit mais elle n'est pas obligatoire
-      * Le type * de vente (_référentiel des TYPE DE VENTE_)
+      * Le type * de vente 
     * Des caractéristiques (PSFM définit par la stratégie appliquée)
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
        * Nombre d'hommes à bord
@@ -215,6 +215,11 @@ La stratégie est trouvée suivant les éléments précédemment saisis :
 **Variante 3a** - L'observateur ajoute des PSFM aux caractéristiques de la marée. Il sélectionne le bouton :heavy_plus_sign:.
 Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
 
+
+#### Détails techniques :
+
+- Type de vente : 
+  - Table SALE_TYPE
 
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
@@ -554,6 +559,8 @@ Contrôle de la saisie d'une capture :
 
 > VFA -> MOA : Exhausivité de la destination de la partie retenue ? 
 
+> VFA -> MOA : Utilisation industrielle ?
+
 **Variantes**
 
 **Variante 2a** - Liste du PSFM PRODUCT_DESTINATION paramétrable par une option ("Option du programme")
@@ -573,11 +580,10 @@ Contrôle de la saisie d'une capture :
     *  Un compteur indique le nombre d'espèce commerciale saisie à côté du nom du devenir de l'espèce
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
     *  Une zone de saisie du poids total (en Kg)
+      *  Une case à cocher indique si la poids est estimé  (Oui si la case est coché)
     *  Une zone de saisie du poids échantillonné (en Kg)
     *  Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir
-       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs 
-    *  Une case à cocher indiquant si l'inventaire des espèces est exhaustif (Oui si la case est coché)
-    *  VFA : Une case à cocher indiquant si la partie retenue est estimée (Oui si la case est coché) 
+       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs
     *  Un tableau affichant la liste des espèces commerciale à saisir
 4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton :heavy_plus_sign:
 5. Il peut renseigner pour chaque espèce commerciale :
@@ -591,7 +597,7 @@ Contrôle de la saisie d'une capture :
    *  Le taux d'échantillonnage (1/n)
    *  Le poids d'échantillonnage (en Kg)
    *  Le nombre d'individu échantillonné
-6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale  
+6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI) 
 7. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 > Questions :
@@ -600,7 +606,7 @@ Contrôle de la saisie d'une capture :
 
 > VFA -> MOA : Permettre l'ajout de PSFM ?
 
-> VFA -> EIS : la saisie du poids total, taux échant. se fait par espèce, il n'y a plus de saisie pour la totalité du lot ?
+> VFA -> EIS : Le Coef. échant. n'est pas saisissable
 
 > VFA -> EIS : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité pour le poids (oui), la taille ?
 
@@ -612,15 +618,196 @@ Contrôle de la saisie d'une capture :
 
 ![ui-batch-tree-pr-bai](/projects/obsmer/spe/images/batch/batch-tree-PR-BAI.svg)
 
+#### Scénario principal
+
+Même scénario que OBSMER/OPERATION/CAPTURE/PR/HCN
+
 > Questions :
 
 > VFA -> EIS : Même scénario que OBSMER/OPERATION/CAPTURE/PR/HCN ?
 
 ---
 
-## Opération > Capture > PR > Consommation humaine > Mesures indivuelles
+## Opération > Capture > PNR, Vrac > Détaillé
 
-**REF: OBSMER/OPERATION_CAPTURE/PR/HCN/MI**
+![ui-batch-PNR-VRAC](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-DETAIL.svg)
+
+**Partie non retenue** : Partie de la capture remontée à bord du navire qui est rejeté à la mer une
+fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détaillés + Inerte et Végétaux
+
+**REF: OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL**
+
+**Rejets détaillés** = poissons + autres espèces commerciales.
+
+L'arbre PNR, Vrac détaillé contient 2 sous menu :
+- Animaux
+- Ecosystèmes Marins Vulnérables
+
+#### Scénario principal
+
+1. L'observateur déroule l'arbre PNR, Vrac détaillé
+2. Les 2 sous menu suivants s'affichent :
+    * Animaux
+    * Ecosystèmes Marins Vulnérables
+3. Le menu "Détaillé" n'est pas sélectionnable
+
+
+## Opération > Capture > PNR, Vrac > Détaillé > Animaux
+
+![ui-batch-PNR-VRAC-ANI](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-ANI.svg)
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Vrac détaillé
+2. La fenêtre de saisie des "Animaux" s'affiche
+3. L'observateur renseigne les éléments suivants :
+   * Le poids total *, en kg
+      * Une case à cochée permet d'indiquer s'il le poids a été estimé
+   * Le coefficient d'échantillonnage (1/n)
+   * Le poids échantillonné *, en kg
+4. L'observateur renseigne les espèces observées :
+   * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+   * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
+   * Pour chaque nouvelle espèce, il doit renseigner : 
+     * Le code commercial (FAO) de l'espèce
+     * Le poids total, en kg
+     * Le nombre d'individu total
+     * Le coefficient d'échantillonnage
+     * Le poids d'échantillonnage
+     * Le nombre d'individu échantillonné
+     * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+     * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+## Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables
+
+![ui-batch-PNR-VRAC-EMV](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-EMV.svg)
+
+**EMV : Ecosystème marin vulnérable** : groupes d'espèces de communautés ou des habitats pouvant être vulnérable aux impacts des activités de pêche.    
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Ecosystèmes Marins Vulnérables" de l'arbre PNR, Vrac détaillé
+2. La fenêtre de saisie des "Ecosystèmes Marins Vulnérables" s'affiche
+3. L'observateur renseigne les éléments suivants :
+    * Le poids total *, en kg
+        * Une case à cochée permet d'indiquer s'il le poids a été estimé
+    * Le coefficient d'échantillonnage (1/n)
+    * Le poids échantillonné *, en kg
+4. L'observateur renseigne les catégories EMV observées :
+    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+    * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catégorie d'EMV
+    * Un bouton ((:heavy_plus_sign:) lui permet d'ajouter toutes les catégories d'EMV
+    * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
+        * La catégorie
+        * Le poids total, en kg
+        * Un commentaire
+        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+
+> Questions :
+
+> VFA -> EIS : Il n'y a pas la colonne Nb indiv. total mais on peut quand même ajouter une valeur. A la sauvegarde, la valeur disparait.
+
+
+## Opération > Capture > PNR, Vrac > Non Détaillé
+
+![ui-batch-PNR-VRAC-NDETAIL](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-NDETAIL.svg)
+
+**REF: OBSMER/OPERATION/CAPTURE/PNR/VRAC/NON_DETAIL**
+
+**Rejets non détaillés** = animaux non détaillés (méduses, étoiles de mer, etc.).
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Non détaillé" de l'arbre PNR, Vrac 
+2. La fenêtre de saisie des rejets s'affiche
+3. L'observateur peut remplir automatiquement toutes les espèces en cliquant sur le bouton ((:heavy_plus_sign:) :
+   * Une ligne d'EMV et une ligne d'animaux sont ajoutées
+4. L'observateur peut ajouter, un à un, un rejet en cliquant sur le bouton :heavy_plus_sign:
+   * Une nouvelle ligne est ajoutée au tableau
+     * Le choix de la nature du rejet ("Animaux" ou "EMV") s'ouvre automatiquement pour la saisie
+5. Pour chaque rejet, l'observateur renseigne :
+   * Le poids total 
+   * Un commentaire
+   * Une photo (A REALISER)
+
+> Questions :
+
+> VFA -> EIS : Peut on ajouter plusieurs lignes d'Animaux ou d'EMV (actuellement oui avec le bouton +) ?
+
+> VFA -> EIS : La suppression ne fonctionne pas
+
+> VFA -> EIS : AJout de commentaire et photo sur chaque ligne
+
+---
+## Opération > Capture > PNR, Hors Vrac
+
+![ui-batch-PNR-HVRAC](/projects/obsmer/spe/images/batch/batch-tree-PNR-HVRAC.svg)
+
+**REF: OBSMER/OPERATION/CAPTURE/PNR/HVRAC**
+
+L'arbre d'échantillonnage de la Partie Non Retenue Hors Vrac ne contient pas de menu Détaillé et Non Détaillé.
+
+On retrouve directement les sous menus "Animaux" et "Ecosystèmes Marins Vulnérables" sous le menu PNR, Hors Vrac.
+
+L'arbre PNR, Hors Vrac contient donc 2 sous menu :
+- Animaux
+- Ecosystèmes Marins Vulnérables
+
+#### Scénario principal
+Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
+
+
+## Opération > Capture > PNR, Hors Vrac > Animaux
+
+![ui-batch-PNR-HVRAC-ANI](/projects/obsmer/spe/images/batch/batch-tree-PNR-HVRAC-ANI.svg)
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Hors Vrac
+2. La fenêtre de saisie des "Animaux" s'affiche
+3. L'observateur renseigne les espèces observées :
+    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+    * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
+    * Pour chaque nouvelle espèce, il doit renseigner :
+        * Le code commercial (FAO) de l'espèce
+        * Le poids total, en kg
+        * Le nombre d'individu total
+        * Le coefficient d'échantillonnage
+        * Le poids d'échantillonnage
+        * Le nombre d'individu échantillonné
+        * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+
+> Remarques :
+ 
+> VFA -> EIS : Bug sur l'affichage des PSMFs qui varie suivant l'écran précédemment sélectionné
+
+## Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables
+
+![ui-batch-PNR-HVRAC-EMV](/projects/obsmer/spe/images/batch/batch-tree-PNR-HVRAC-EMV.svg)
+
+**EMV : Ecosystème marin vulnérable** : groupes d'espèces de communautés ou des habitats pouvant être vulnérable aux impacts des activités de pêche.
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Ecosystèmes Marins Vulnérables" de l'arbre PNR, Hors Vrac 
+2. La fenêtre de saisie des "Ecosystèmes Marins Vulnérables" s'affiche
+3. L'observateur renseigne les catégories EMV observées :
+    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+    * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catgégorie d'EMV
+    * Un bouton ((:heavy_plus_sign:) lui permet d'ajouter toutes les catégories d'EMV
+    * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
+        * La catégorie
+        * Le poids total, en kg
+        * Un commentaire
+        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+
+## Opération > Capture > Mesures indivuelles
+
+**REF: OBSMER/OPERATION_CAPTURE/MI**
 
 ![ui-samples](/projects/obsmer/spe/images/samples.svg)
 
@@ -630,7 +817,7 @@ L'observateur à ouvert l'écran de saisie des mesures individuelles pour l'esp�
 
 L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
 1. L'écran est composé des champs suivants :
-    *  Le nom de l'espèce scientifique
+   *  Le nom de l'espèce scientifique
    *  La longueur totale mesurée, en cm
    *  Le poids calculé RTP (Relation Taille Poids) en kg
 2. Un bouton permet d'ajouter une mesure individuelle
@@ -639,33 +826,14 @@ L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
 
 ---
 
-## Opération > Capture > PNR, Vrac
+## Opération > Capture > Capture accidentelle
 
-**REF: OBSMER/OPERATION/CAPTURE/PNR/VRAC**
-
-**Partie non retenue** : Partie de la capture remontée à bord du navire qui est rejeté à la mer une
-fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détaillés + Inerte et Végétaux
-
-**Rejets détaillés** = poissons + autres espèces commerciales.
-
-**Rejets non détaillés** = animaux non détaillés (méduses, étoiles de mer, etc.).
-
-**Inerte et végétaux** = partie inerte (sédiments, cailloux, débris coquilliers, déchets, etc.) + végétaux.
-
-
+**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE**
 
 #### Scénario principal
+
 TODO
 
----
-## Opération > Capture > PNR, Hors Vrac
-
-**REF: OBSMER/OPERATION/CAPTURE/PNR/HVRAC**
-
-#### Scénario principal
-TODO
-
-Capture accidentelle
 
 > TODO: Il faut des PSFM supplémentaire (ex: état de remise à l'eau)  
 

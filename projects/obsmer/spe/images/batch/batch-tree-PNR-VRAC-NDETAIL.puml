@@ -1,0 +1,37 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + Capture    | <i><color:blue>[10]
+       ++ Partie retenue       | <i><color:blue>[8]
+       ++ Partie non retenue, Vrac | <color:black>[0]
+       +++ Détaillé | <color:black>[0]
+       ++++ Animaux | <color:black>[0]
+       ++++ Ecosystèmes Marins Vulnérables | <color:black>[0]
+       +++ <back:#DDD>Non détaillé | <i><color:blue>[2]
+       ++ Partie non retenue, Hors-Vrac | <color:black>[0]
+   }
+    .
+    .
+    .
+   --
+   {
+      [<&checkmark> Contrôler] | [ <b><< ]
+   }
+  } | . | {
+    { [Capture] | / | [Partie non retenue, Vrac] | [<b>Non détaillé] | (2) | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+        .
+        {#
+            . | { [ <&plus> ]  | [<b>(<&plus><b>)] | [ <&trash> ] }  | . | .
+            # | <b>Nature des rejets  | <b>Poids total (kg)     |  <&menu>
+            1 | ^ Ani - Animaux^         | 10 |  <&comment-square> <&image>
+            2 | ^ INV - Inerte et végétaux ^        |  10 |  <&comment-square> <&image>
+          }
+    }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+

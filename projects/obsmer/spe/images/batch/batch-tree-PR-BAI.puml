@@ -21,23 +21,22 @@
       [<&checkmark> Contrôler] | [ <b><< ]
    }
   } | . | {
-    { [Capture] | / | [Partie retenue] | [<b>Appat]|(1) }
+    { [Capture] | / | [Partie retenue] | [<b>Appat]| (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  { [<&chevron-left>] | [<&chevron-right>] }}
 
-    {Poids total (kg) : | "     " }
+    {Poids total (kg)* : | " 0    " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. | [ ] Estimé ?}
 
-    {Taux échant (1/n) : | "     " | Poids échant (kg) : | "     " }
+    {Coef. éch. : | " 1/1    " | . | . | . | . | . |  Poids échant (kg)* : | "     " }
 
     { [ ] Inventaire exhaustif des espèces ?
     ---
-    <&box>Lots par espèce
     }
 
 
     {#
           . | {[ <&plus> ] | [ <&trash> ] } | . | . | . | . | . | .
-          # | <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
+          # | <&arrow-thick-top> <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
           1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
-          2 | ^MNZ- Baudroie       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
+          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
         }
   }
 

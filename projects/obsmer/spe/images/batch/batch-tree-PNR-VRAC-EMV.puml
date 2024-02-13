@@ -1,0 +1,42 @@
+@startsalt
+{
+  {/ Détails | <b> Capture }
+  {+
+   {T
+       + Capture    | <i><color:blue>[9]
+       ++ Partie retenue       | <i><color:blue>[8]
+       ++ Partie non retenue, Vrac | <i><color:blue>[1]
+       +++ Détaillé
+       ++++ Animaux | <color:black>[0]
+       ++++ <back:#DDD>Ecosystèmes Marins Vulnérables | <i><color:blue>[1]
+       +++ Non détaillé
+       ++ Partie non retenue, Hors-Vrac | <color:black>[0]
+   }
+    .
+    .
+    .
+   --
+   {
+      [<&checkmark> Contrôler] | [ <b><< ]
+   }
+  } | . | {
+    { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Ecosystèmes Marins Vulnérables] | (1) | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+
+    {Poids total (kg) : | "  0   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+
+    {Coef. éch. : | " 1/1    " | . | . | . | . | . | Poids échant (kg) : | "  0   " | . | . |}
+
+    { [ ] Inventaire exhaustif des espèces ? }
+    ---
+    {#
+          . | {[ <&plus> ] | [<b>(<&plus><b>)] | [ <&trash> ] }  | . | .
+          # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
+          1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square>
+        }
+  }
+
+  -- | -- | --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
+
