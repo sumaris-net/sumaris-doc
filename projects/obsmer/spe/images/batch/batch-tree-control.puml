@@ -23,7 +23,7 @@
     }
   } | . | {
 
-   { [<b>Capture] | / | [...]}
+   { [<b>Capture] | / | [...]| . | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
 
        {[ ] Coup nul ? }
        {Capture (toutes espèces) (kg) : | " <i><color:blue>200" }

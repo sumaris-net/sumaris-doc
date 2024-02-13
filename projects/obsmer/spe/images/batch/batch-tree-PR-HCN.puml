@@ -3,15 +3,14 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + Capture    | <i><color:blue>[8]
-       ++ Partie retenue       | <i><color:blue>[8]
-       +++ Appart | <i><color:blue>[1]
+       + Capture
+       ++ Partie retenue
+       +++ Appat | <i><color:blue>[1]
        +++ <back:#DDF>Consommation humaine | <i><color:blue>[2]
        +++ Godaille | <i><color:blue>[1]
-       +++ Industrie | <i><color:blue>[2]
-       +++ Obligation à débarquer| <i><color:blue>[2]
-       ++ Partie non retenue, Vrac | <color:gray>[0]
-       ++ Partie non retenue, Hors-Vrac | <color:gray>[0]
+       +++ Obligation à débarquer | <i><color:blue>[2]
+       ++ Partie non retenue, Vrac
+       ++ Partie non retenue, Hors-Vrac
    }
     .
     .
@@ -32,8 +31,8 @@
     {#
           . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
           # | <&arrow-thick-top> <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
-          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
-          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart>
+          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart> <&comment-square> <&image>
+          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart> <&comment-square> <&image>
         }
   }
 

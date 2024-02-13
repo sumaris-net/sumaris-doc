@@ -3,12 +3,12 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + Capture    | <i><color:blue>[8]
-       ++ Partie retenue       | <i><color:blue>[8]
-       ++ Partie non retenue, Vrac | <color:black>[0]
-       +++ Détaillé | <color:black>[0]
+       + Capture
+       ++ Partie retenue
+       ++ Partie non retenue, Vrac
+       +++ Détaillé
        +++ Non détaillé | <color:black>[0]
-       ++ Partie non retenue, Hors-Vrac | <color:black>[0]
+       ++ Partie non retenue, Hors-Vrac
        +++ Animaux | <color:black>[0]
        +++ Ecosystèmes Marins Vulnérables | <color:black>[0]
    }

@@ -3,15 +3,14 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + <back:#DDF>Capture    | <i><color:blue>[6]
-       ++ Partie retenue       | <i><color:blue>[6]
+       + <back:#DDF>Capture
+       ++ Partie retenue
        +++ Appat | <i><color:blue>[1]
        +++ Consommation humaine | <i><color:blue>[1]
        +++ Godaille | <i><color:blue>[1]
-       +++ Industrie | <i><color:blue>[1]
        +++ Obligation à débarquer| <i><color:blue>[2]
-       ++ Partie non retenue, Vrac | <i><color:gray>[0]
-       ++ Partie non retenue, Hors-Vrac | <i><color:gray>[0]
+       ++ Partie non retenue, Vrac
+       ++ Partie non retenue, Hors-Vrac
    }
     .
     .
@@ -21,7 +20,7 @@
       [<&checkmark> Contrôler] | [ <b><< ]
    }
   } | . | {
-    { [<b>Capture] | / | [...]}
+    { [<b>Capture] | / | [...] | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
 
     {[ ] Coup nul ? }
     {Capture (toutes espèces) (kg) : | " <color:gray>Poids total capture (kg) " }

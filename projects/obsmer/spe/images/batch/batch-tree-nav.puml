@@ -4,9 +4,9 @@
   {+
     {T
          + <back:#DDD>Capture
-         ++ <color:grey>Partie retenue
-         ++ <color:grey>Partie non retenue, Vrac
-         ++ <color:grey>Partie non retenue, Hors-Vrac
+         ++ Partie retenue
+         ++ Partie non retenue, Vrac
+         ++ Partie non retenue, Hors-Vrac
     }
     .
     .
@@ -18,8 +18,10 @@
     }
   } | . | {
 
-   { [<b>Capture] | / | [...] | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
-
+   { [<b>Capture] | / | [...] | | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] }
+    . | . | {* ...
+    ... | Partie retenue | Partie non retenue, Vrac | Partie non retenue, Hors-Vrac }
+    }
        {[X] Coup nul ? }
        {Capture (toutes espèces) (kg) : | " 0" }
   }

@@ -104,8 +104,6 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 > Questions :
 
-> VFA -> MOA : port -  Est ce le seul niveau de lieu saisissable ? (Criée, Quartier, ...)
-
 > **Réunion MOA 06/02/2024** :
 
 > Mettre "Lieu" à la place de port (plusieurs niveaux de lieu possible). Voir avec Armelle.
@@ -241,7 +239,6 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
    > Utiliser l'API existante (Allegro) pour se connecter au serveur WAO 
 
-> PSFM macro-déchets : pas obligatoire et pas lié à l'onglet dans les captures
 
 ---
 
@@ -386,12 +383,6 @@ Un bouton permet d'appliquer le filtre. Un bouton permet de fermer la fenêtre d
 
 Référence : ERGONOMIE/FILTRES
 
-> Réunion MOA 06/02/2024 : 
-
-> VFA -> MOA : Liste exhaustive des critères de filtrage sur les opérations ? Oui
-
-> pas de nécessité de rajouter des filtres, le filtre état suffit car généralement il y a 10-15 opérations d'affichées par marée
-
 ---
 
 ## Marée > Opération > Détails
@@ -476,12 +467,6 @@ Définition de PETS).
 
 ![ui-batch-tree](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
-
-> Questions
-
-> VFA -> MOA : Ne faudrait-il pas un s à Capture ?
-
-
 #### Scénario principal
 
 1. L'observateur à sélectionné l'onglet "Capture" dans le menu d'une opération. 
@@ -496,8 +481,10 @@ Définition de PETS).
     *  Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
     * Le poids total (en kg) de toutes les espèces capturées
     * Ce champ est calculé
-      * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR") 
-
+    * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR")
+      * Il est possible de naviguer par ce bandeau pour atteindre n'importe quel noeud de l'arbre (OBSMER/OPERATION/CAPTURE/NAVIGATION) 
+5. Des compteurs au niveau des menus indique le nombre de saisies
+    * Ces compteurs sont visibles uniquement sur les menus comportant des tableaux dans la fenêtre de saisie
     
 #### Variantes
 
@@ -514,7 +501,21 @@ Définition de PETS).
 
 > VFA -> MOA : Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
 
-> VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (mais il manque `Obligation à débarquer`)
+> VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (il manque `Obligation à débarquer`)
+
+---
+## Opération > Capture > Navigation
+
+**REF: OBSMER/OPERATION/CAPTURE/NAVIGATION
+
+Navigation dans l'arbre des captures
+
+![ui-batch-tree-nav](/projects/obsmer/spe/images/batch/batch-tree-nav.svg)
+
+#### Scénario principal
+
+1. L'observateur peut naviguer dans l'arbre d'échantillonnage à partir du bandeau de la fenêtre de saisie
+2. Il peut aussi dérouler le file d'Ariane de l'abre d'échantillonnage en cliquant sur les flèches <b>(<) et <b>(>)
 
 
 ---
@@ -546,14 +547,13 @@ Contrôle de la saisie d'une capture :
 #### Scénario principal
 1. L'utilisateur sélectionne le menu "Partie retenue" dans l'arbre d'échantillonnage
 2. L'arbre se déplie et le sous menu suivants apparaissent sous le menu "Partie retenue" (_PSFM = PRODUCT_DESTINATION_)
-    * "Consommation humaine"
     * "Appat"
+    * "Consommation humaine"
     * "Godaille"
-    * "Obligation à débarquer" 
-    * "Utilisation industrielle" 
+    * "Obligation à débarquer"
 3. L'écran de saisie de la "Partie retenue" se met à jour
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
-4. Il n'y a rien d'afficher dans la fenêtre de saisie de la partie retenue de la capture 
+4. Il n'y a rien d'affiché dans la fenêtre de saisie de la partie retenue de la capture 
 
 > Questions :
 
@@ -574,9 +574,10 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 
-1. L'utilisateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
+1. L'observateur sélectionne le sous-menu "Consommation humaine" dans le menu "Partie retenue" de l'arbre d'échantillonnage
 2. L'écran de saisie se met à jour
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue / Consommation Humaine")
+       * Il est possible de naviguer par ce bandeau pour atteindre n'importe quel noeud de l'arbre
     *  Un compteur indique le nombre d'espèce commerciale saisie à côté du nom du devenir de l'espèce
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
     *  Une zone de saisie du poids total (en Kg)
@@ -593,11 +594,15 @@ Contrôle de la saisie d'une capture :
     * L'état (_PSMF = PRESERVATION_, _METHOD = 42_, _Observation par un observateur_)
         * Par défaut FRE (_frais_) 
    *  Le poids total (unité par défaut en Kg)
-        * L'unité du poids est paramétrable
-   *  Le taux d'échantillonnage (1/n)
+   *  Le taux d'échantillonnage (1/n) 
+        * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
    *  Le poids d'échantillonnage (en Kg)
+        * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
    *  Le nombre d'individu échantillonné
-6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI) 
+6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+7. Un commentaire
+   *  Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+8. Une photo (A REALISER)
 7. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 > Questions :
@@ -606,9 +611,10 @@ Contrôle de la saisie d'une capture :
 
 > VFA -> MOA : Permettre l'ajout de PSFM ?
 
-> VFA -> EIS : Le Coef. échant. n'est pas saisissable
+> VFA -> MOA : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité pour le poids (g), la taille ?
 
-> VFA -> EIS : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité pour le poids (oui), la taille ?
+> VFA -> MOA/EIS : Compatibilité du modele d'arbre différent des données précédemment saisies : Données précédentes d'un arbre avec Macro Déchets par exemple
+La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
 
 ---
 
@@ -620,11 +626,12 @@ Contrôle de la saisie d'une capture :
 
 #### Scénario principal
 
-Même scénario que OBSMER/OPERATION/CAPTURE/PR/HCN
+Les écrans et les scénarios sont les mêmes pour toutes les parties retenus
+- "Appat"
+- "Consommation humaine"
+- "Godaille"
+- "Obligation à débarquer"
 
-> Questions :
-
-> VFA -> EIS : Même scénario que OBSMER/OPERATION/CAPTURE/PR/HCN ?
 
 ---
 
@@ -672,10 +679,15 @@ L'arbre PNR, Vrac détaillé contient 2 sous menu :
      * Le code commercial (FAO) de l'espèce
      * Le poids total, en kg
      * Le nombre d'individu total
-     * Le coefficient d'échantillonnage
-     * Le poids d'échantillonnage
+     * Le taux d'échantillonnage (1/n)
+         * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
+     * Le poids d'échantillonnage (en Kg)
+         * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
      * Le nombre d'individu échantillonné
      * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+     * Un commentaire
+         * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+     * Une photo (A REALISER)
      * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 ## Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables
@@ -701,12 +713,9 @@ L'arbre PNR, Vrac détaillé contient 2 sous menu :
         * La catégorie
         * Le poids total, en kg
         * Un commentaire
+          * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+        * Une photo (A REALISER)
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
-
-
-> Questions :
-
-> VFA -> EIS : Il n'y a pas la colonne Nb indiv. total mais on peut quand même ajouter une valeur. A la sauvegarde, la valeur disparait.
 
 
 ## Opération > Capture > PNR, Vrac > Non Détaillé
@@ -729,15 +738,8 @@ L'arbre PNR, Vrac détaillé contient 2 sous menu :
 5. Pour chaque rejet, l'observateur renseigne :
    * Le poids total 
    * Un commentaire
+       * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
    * Une photo (A REALISER)
-
-> Questions :
-
-> VFA -> EIS : Peut on ajouter plusieurs lignes d'Animaux ou d'EMV (actuellement oui avec le bouton +) ?
-
-> VFA -> EIS : La suppression ne fonctionne pas
-
-> VFA -> EIS : AJout de commentaire et photo sur chaque ligne
 
 ---
 ## Opération > Capture > PNR, Hors Vrac
@@ -773,16 +775,16 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * Le code commercial (FAO) de l'espèce
         * Le poids total, en kg
         * Le nombre d'individu total
-        * Le coefficient d'échantillonnage
-        * Le poids d'échantillonnage
+        * Le taux d'échantillonnage (1/n)
+            * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
+        * Le poids d'échantillonnage (en Kg)
+            * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
         * Le nombre d'individu échantillonné
         * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+        * Un commentaire
+            * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+        * Une photo (A REALISER) 
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
-
-
-> Remarques :
- 
-> VFA -> EIS : Bug sur l'affichage des PSMFs qui varie suivant l'écran précédemment sélectionné
 
 ## Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables
 
@@ -802,6 +804,8 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * La catégorie
         * Le poids total, en kg
         * Un commentaire
+          * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+        * Une photo (A REALISER)
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 

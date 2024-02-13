@@ -3,12 +3,12 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + Capture    | <i><color:blue>[10]
-       ++ Partie retenue       | <i><color:blue>[8]
-       ++ Partie non retenue, Vrac | <color:black>[0]
-       +++ Détaillé | <color:black>[0]
+       + Capture
+       ++ Partie retenue
+       ++ Partie non retenue, Vrac
+       +++ Détaillé
        +++ Non détaillé | <color:black>[0]
-       ++ Partie non retenue, Hors-Vrac | <i><color:blue>[2]
+       ++ Partie non retenue, Hors-Vrac
        +++ <back:#DDD>Animaux | <i><color:blue>[2]
        +++ Ecosystèmes Marins Vulnérables | <color:black>[0]
    }
@@ -27,8 +27,8 @@
     {#
           . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
           # | <b>Espèce commerciale  | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Coef. échant. | <b>Poids. échant. | <b>Nb indiv échant. | <&menu>
-          1 | ^MNZ- Baudroie       ^ |  50   |  24   |   10          | 4 | 10 | <&bar-chart>
-          2 | ^MNZ- Baudroie       ^ |  20   |  36   |   10          | 4 | 10 | <&bar-chart>
+          1 | ^MNZ- Baudroie   ^ |  50   |  24   |   10          | 4 | 10 | <&bar-chart> <&comment-square> <&image>
+          2 | ^CTC - Seiche commune   ^ |  20   |  36   |   10          | 4 | 10 | <&bar-chart> <&comment-square> <&image>
         }
   }
 

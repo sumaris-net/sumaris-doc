@@ -3,12 +3,12 @@
   {/ Détails | <b> Capture }
   {+
    {T
-       + Capture    | <i><color:blue>[10]
-       ++ Partie retenue       | <i><color:blue>[8]
-       ++ Partie non retenue, Vrac | <i><color:blue>[1]
-       +++ Détaillé | <color:black>[0]
+       + Capture
+       ++ Partie retenue
+       ++ Partie non retenue, Vrac
+       +++ Détaillé
        +++ Non détaillé | <color:black>[0]
-       ++ Partie non retenue, Hors-Vrac | <i><color:blue>[1]
+       ++ Partie non retenue, Hors-Vrac
        +++ Animaux | <color:black>[0]
        +++ <back:#DDD>Ecosystèmes Marins Vulnérables | <i><color:blue>[1]
    }
@@ -26,7 +26,7 @@
     {#
           . | {[ <&plus> ] | [<b>(<&plus><b>)] | [ <&trash> ] }  | . | .
           # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
-          1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square>
+          1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square> <&image>
         }
   }
 
