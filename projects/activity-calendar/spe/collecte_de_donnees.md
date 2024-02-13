@@ -34,29 +34,26 @@ Il faut donc compter sur une mise en production au plus tard le 30 Novembre pour
 
 
 ---
-## Spécificités techniques
-
-### Instance
-
-> Proposition à valider :
->
-> Afin de pouvoir assurer une mise en production en minimisant les impacts sur les autres volets d'Allegro, 
-> il y aura 2 instances distinctes jusqu'à ce que les 3 volets soient stabilisés :
-> - Une instance dédiée aux calendriers d'activité
-> - Une instance dédiée à OsbMer et ObsVentes qui sont complémentaires
-
->Lorsque les 3 volets seront stabilisés, les 3 volets seront regroupés sur une seule instance.
-
-### Schéma
-
-> A définir : SUMARIS_MAP ou ADAGIO patché ?
-
-
----
 ## Gestion des droits
 
-- Une personne de la société Ifremer peut consulter, modifier et supprimer toutes les données
-- Une personne d'une autre société peut uniquement consulter, modifier et supprimer les données crées par sa société
+**REF: ACTIVITY_CALENDAR/USERS_RIGHTS**
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-users-rights.svg)
+
+(1) : 
+* Si l'observateur est de la société Ifremer, il peut consulter, modifier et supprimer tous les calendriers d'activité
+* Si l'observateur n'est pas de la société Ifremer, il peut consulter, modifier et supprimer uniquement les calendriers créés par sa société
+
+#### Détails techniques :
+* Administrateur de programme :
+  * PERSON2USER_PROFIL = 1
+  * PROGRAM2PERSON = vide
+* Responsable de programme :
+  * PERSON2USER_PROFIL = 3
+  * PROGRAM2PERSON = 1
+* Observateur :
+  * PERSON2USER_PROFIL = 2
+  * PROGRAM2PERSON = 2
 
 > Points de vigilance : 
 > - Certains quartier d'immatriculation sont observés par 2 sociétés de prestation 
@@ -130,6 +127,7 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
 #### Scénario principal
 
 1. L'observateur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+   * Le programme de collecte
    * L'état
    * Le navire
    * L'année
@@ -183,7 +181,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 #### Détails techniques :
   * Qualification de l'enquête : 
     * PMFM.ID = 623
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'SURVEY_QUALIFICATION' en se limitant aux ID 965, 966, 967, 2555 via une option à créer dans les paramètres systèmes, tri par ordre alphabétique
+    * QUALITATIVE_VALUE.PARAMETER_FK = 'SURVEY_QUALIFICATION' en se limitant aux ID 965, 966, 967, 2555 via une option à créer au niveau du programme, tri par ordre alphabétique
   * Fiabilité de l'enquête : 
     * PMFM.ID = 681
     * QUALITATIVE_VALUE.PARAMETER_FK = 'SURVEY_RELIABILITY', tri par ordre alphabétique
@@ -219,8 +217,8 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 1. Dans l'onglet "Calendrier", l'observateur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
-   * L'activité du navire
-   * Le port d'exploitation ou de rattachement
+   * L'activité du navire*=
+   * Le port d'exploitation ou de rattachement*=
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée

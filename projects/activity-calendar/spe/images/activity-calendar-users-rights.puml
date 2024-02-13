@@ -1,0 +1,13 @@
+@startsalt
+{
+	{#
+     . | . | <b> Stratégie | * | * | * | <b> Calendrier d'activité | * | * | *
+     . | <b> Connexion | <b> Consultation | <b> Création |<b> Modification | <b> Suppression | <b> Consultation | <b> Création | <b> Modification | <b> Suppression
+     Administrateur de référentiel | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui
+     Responsable de programme | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui
+     Observateur | Oui | Non | Non | Non | Non | Oui(1) | Oui | Oui(1) | Oui(1)
+
+
+    }
+}
+@endsalt

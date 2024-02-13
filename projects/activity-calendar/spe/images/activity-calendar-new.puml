@@ -36,15 +36,15 @@
      . | <b>Janvier | <b>Février | <b>Mars | <b>Avril| ... | <b>Décembre
      Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | . | .
      Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | . | .
-     Actif ? | ^Inexistant    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
-     Port exploit. / rattach. | . | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
+     Actif ?* | ^Inexistant    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
+     Port exploit. / rattach.* | . | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
      Nombre de jours de mer | . | . | 10 | 15 | . | . | .
      Nombre de jours de pêche | . | . | 10 | 15 | . | . | .
      Nombre d'hommes à bord/marée | . | . | 2 | 2 | . | . | .
      Métier 1 | . | . | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
      Origine information | . | . | ^Enquête N-1                                ^ | ^Document déclaratif                        ^ | . | . | .
      Zone 1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
-     Gradient côte | . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
+     Gradient côte* | . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
      Profondeur | . | . | ^30-50m - Profondeur 30 à 50 mètres         ^ | ^30-50m - Profondeur 30 à 50 mètres         ^ | . | . | .
      Zone proche | . | . | ^Filière                                    ^ | ^Filière                                    ^ | . | . | .
      Zone 2 | . | . | . | . | . | .

@@ -2,6 +2,26 @@
 
 Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer</b>, <b>ObsVente</b>, <b>Calendrier d'activité</b>
 
+## Spécificités techniques
+
+**REF: COMMUN/TECHNIQUE**
+
+### Instance
+
+> Proposition à valider :
+>
+> Afin de pouvoir assurer une mise en production en minimisant les impacts sur les autres volets d'Allegro,
+> il y aura 2 instances distinctes jusqu'à ce que les 3 volets soient stabilisés :
+> - Une instance dédiée aux calendriers d'activité
+> - Une instance dédiée à OsbMer et ObsVentes qui sont complémentaires
+
+>Lorsque les 3 volets seront stabilisés, les 3 volets seront regroupés sur une seule instance.
+
+### Schéma
+
+> A définir : SUMARIS_MAP ou ADAGIO patché ?
+
+
 ## Commun > Ergonomie > principes généraux
 
 **REF: COMMUN/ERGONOMIE/PRINCIPES**
