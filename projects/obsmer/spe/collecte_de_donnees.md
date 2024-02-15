@@ -809,6 +809,55 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 
+---
+
+## Opération > Capture > Captures accidentelles
+
+**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE**
+
+![ui-batch-accident-measures](/projects/obsmer/spe/images/batch/batch-accident-measures.svg)
+
+**Capture accidentelle** : capture accessoire d’espèces protégées, en danger ou menacées (voir
+Définition de PETS)
+
+**PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa
+révision pour la période 2022-2027, la liste des espèces protégées à suivre est établie en vertu de
+la législation de l‘Union et des accords internationaux. Elle fait référence aux listes des deux
+conventions internationales OSPAR (région I à V) et UNEP (Méditerranée) et des organisations
+régionales des pêches NEAFC (=Liste OSPAR), ICCAT et GFCM (= Liste UNEP). Ces espèces sont des
+espèces d’élasmobranches et d’amphihalins, prélevées en prises accessoires ou accidentelles de
+la pêche professionnelle
+
+#### Scénario principal
+
+1. L'observateur est positionné sur l'onglet "Captures accidentelles"
+    * Par défaut l'écran affiche la saisie des mesures individuelles
+2. L'observateur peut ajouter une nouvelle capture en cliquant sur le bouton :heavy_plus_sign:
+3. Une nouvelle ligne s'ajoute au tableau
+    * La liste de sélection de l'espèce scientifique s'ouvre automatiquement pour la sélection
+4. L'observateur peut renseigner les éléments suivants de la nouvelle capture
+    * Le code de l'espèce scientifique *, dans une liste déroulante
+    * Si l'animal est mort, par une case à cocher (coché = Oui)
+    * Le sexe de l'animal capturé (parmi la liste suivante : "Indetermine", "Male", "Femelle", "Non sexe")
+    * Une photo
+    * Un commentaire
+5. L'observateur peut aussi supprimer toutes les captures saisis ou décider de supprimer les captures une à une
+6. A chaque sauvegarde, le nombre total de mesures individuelles est mit à jour 
+
+#### Détails Techniques
+- Sexe de l'espèce capturée : PMFM - SEX (ID = 196)
+
+
+## Opération > Capture > Captures accidentelles > Relachés
+
+**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE/RELACHES**
+
+![ui-batch-accident-release](/projects/obsmer/spe/images/batch/batch-accident-release.svg)
+
+#### Scénario principal
+TODO
+
+
 ## Opération > Capture > Mesures indivuelles
 
 **REF: OBSMER/OPERATION_CAPTURE/MI**
@@ -828,18 +877,8 @@ L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
 
 ![ui-sample-add](/projects/obsmer/spe/images/sample-add.svg)
 
----
 
-## Opération > Capture > Capture accidentelle
-
-**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE**
-
-#### Scénario principal
-
-TODO
-
-
-> TODO: Il faut des PSFM supplémentaire (ex: état de remise à l'eau)  
+> TODO: Il faut des PSFM supplémentaires (ex: état de remise à l'eau)  
 
 ---
 ## Administration > Lots > Modèle d'arbre (1/3)

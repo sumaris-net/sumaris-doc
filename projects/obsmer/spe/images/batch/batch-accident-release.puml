@@ -1,0 +1,18 @@
+@startsalt
+{
+
+  {/  Détails | Capture | <b> Captures accidentelles (1) }
+  {/  Mesures individuelles | <b>Relâchés (1) }
+
+	{#
+      [ <&plus>]
+      # | <&arrow-thick-top> <b>Référence de la marque | <b>Date de mise à l'eau     | <b>Latitude   | <b>Longitude | <&menu>
+      1 | Zzz | 12/02/2024 12:53          | 43°9.354' N | 4°21.996'E | <&comment-square> <&image> <&trash>
+    }
+  --
+
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt

@@ -55,8 +55,14 @@ Attente très forte sur l'ergonomie pour la refonte :
     - [ ] Consommation humaine
       - [ ] Mesures individuelles
     - [ ] Appat
+    - [ ] ...
   - [ ] PNR, Vrac
-
+    - [ ] Détaillé
+      - [ ] EMV
+      - [ ] Animaux
+    - [ ] Non détaillé
+  - [ ] PNR, Hors Vrac
+  - [ ] Captures accidentelles
 
 # A planifier
 
