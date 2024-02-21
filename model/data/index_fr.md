@@ -58,7 +58,16 @@ Note:
 ![fishing-area](model/data/fishing-area.svg)
 
 ---
-### Caractéristiques d'utilisation navire/engin
+### Caractéristiques d'utilisation navire
 
 ![vessel-use-features](model/data/vessel-use-features.svg)
+
+---
+### Caractéristiques d'utilisation engin
+
 ![vessel-use-features](model/data/gear-use-features.svg)
+
+---
+### Armateurs
+
+![vessel-owner](model/data/vessel-owner.svg)

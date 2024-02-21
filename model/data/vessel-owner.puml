@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+class VesselOwner {
+    id : Integer
+    registrationCode : String
+    lastName : String
+    firstName : String
+    street : String
+    zipCode : String
+    city : String
+    dateOfBirth : Date
+    retirementDate : Date
+    activityStartDate : Date
+    phoneNumber : String
+    mobileNumber : String
+    faxNumber : String
+    email : String
+    updateDate : Date
+}
+
+class VesselOwnerPeriod {
+    startDate : Date
+    endDate : Date [0..1]
+}
+
+VesselOwnerPeriod "0..*" -up-> "1" Vessel : vessel
+VesselOwnerPeriod "0..*" -right-> "1" VesselOwner : "    vesselOwner   "
+
+VesselOwner "0..*" -right-> "0..1" Location : countryLocation
+VesselOwner "0..*" -up-> "1" Program : program
+
+@enduml

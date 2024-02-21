@@ -1,9 +1,11 @@
 #!/bin/bash
 
 PROJECT_DIR=`pwd`
+PROJECT_CHARSET=UTF-8
 JAR_DIR="${PROJECT_DIR}/lib"
 JAR_FILE="${JAR_DIR}/plantuml.jar"
-JAR_VERSION="1.2023.9"
+#JAR_VERSION="1.2024.3"
+JAR_VERSION="1.2022.7"
 JAR_FILENAME="plantuml-${JAR_VERSION}.jar"
 JAR_FILE="${JAR_DIR}/${JAR_FILENAME}"
 JAR_URL="https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${JAR_VERSION}/plantuml-${JAR_VERSION}.jar"
@@ -25,14 +27,14 @@ checkJarExists() {
 }
 
 generateSvg() {
-  echo Converting all PlatUML files from `pwd` into SVG...
-  java -jar ${JAR_FILE} -tsvg "./**.puml" -charset UTF-8 -progress -duration -nometadata
+  echo "Converting all PlatUML files from $(pwd) into SVG..."
+  java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tsvg "./**.puml" -charset UTF-8 -progress -duration -nometadata
   echo "Done"
 }
 
 generatePng() {
-  echo Converting all PlatUML files from `pwd` into PNG...
-  java -jar ${JAR_FILE} -tpng "./**.puml" -charset UTF-8 -progress -duration -nometadata
+  echo "Converting all PlatUML files from $(pwd) into PNG..."
+  java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tpng "./**.puml" -charset ${PROJECT_CHARSET} -progress -duration -nometadata
   echo "Done"
 }
 

@@ -53,7 +53,15 @@ Each collected data has a root entity, linked to a program.
 ![fishing-area](model/data/fishing-area.svg)
 
 ---
-### Vessel/Gear use features
+### Vessel
 
 ![vessel-use-features](model/data/vessel-use-features.svg)
-![vessel-use-features](model/data/gear-use-features.svg)
+
+---
+### Vessel > Gear use features
+![gear-use-features](model/data/gear-use-features.svg)
+
+---
+### Vessel Owner
+
+![vessel-owner](model/data/vessel-owner.svg)
