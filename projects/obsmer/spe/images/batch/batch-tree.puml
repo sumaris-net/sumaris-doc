@@ -17,13 +17,13 @@
     .
    --
    {
-      [<&checkmark> Contrôler] | [ <b><< ]
+      [Contrôler la saisie] | [ <b><< ]
    }
   } | . | {
     { [<b>Capture] | / | [...] | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
 
     {[ ] Coup nul ? }
-    {Capture (toutes espèces) (kg) : | " <color:gray>Poids total capture (kg) " }
+    {Capture Totale (kg) : | " <i><color:blue>Poids total capture (kg) " }
 
   }
 

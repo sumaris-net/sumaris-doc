@@ -22,7 +22,7 @@
     <b>Caractéristiques :
 
     {
-      . | Mesures individuelles ? { (X) <b>Oui | () Non }
+      . | Opération échantillonnée ? { (X) <b>Oui | () Non }
       . | Déroulement normal ? { (X) <b>Oui | () Non }
       . | . | + Autres caractéristiques (cf "Grille de saisie")
     }

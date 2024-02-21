@@ -14,14 +14,14 @@
     .
     --
     {
-       [<&checkmark> Contrôler] | [ <b><< ]
+       [<color:grey>Contrôler la saisie] | [ <b><< ]
     }
   } | . | {
 
    { [<b>Capture] | / | [...] | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
 
        {[X] Coup nul ? }
-       {Capture (toutes espèces) (kg) : | " 0" }
+       {Capture (toutes espèces) (kg) : | " " }
   }
 
   -- | -- | --

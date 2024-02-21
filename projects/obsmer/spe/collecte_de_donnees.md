@@ -255,8 +255,7 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 1. L'observateur sélectionne le menu "Engin" dans l'interface de l'arbre du menu ou l'onglet "Engin" dans l'interface d'une marée
 2. Les engins de la marée s'affichent dans un tableau. Les informations suivantes sont affichées pour chaque engins :
     * Engin (Code et libellé)
-    * Type d'engin 
-    * Les caractéristiques de l'engin, définit par l'engin et la stratégie, saisissable 
+    * Type d'engin
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton :heavy_plus_sign: permet d'ajouter un nouvel engin
 
@@ -269,9 +268,15 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 > VFA -> EIS : prép-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
 
-> VFA -> MOA : Type d'engin - indiqué par le champ GEAR.PARENT_GEAR_FK ? Faut il le faire apparaitre ?
 
-> VFA -> EIS : Beaucoup de PSFM si beaucoup d'engins (scrollbar horizontale). Exemple d'un engin avec 12 PSFM
+> **Réunion MOA 19/02/2024** :
+
+> VFA -> MOA :  le type d'engin est un complément à l'engin (il faut le laisser) : caractéristique de l'engin (PSFM)
+
+#### Détails Techniques
+
+- Type de l'engin : PMFM - TRAWL_TYPE (ID = 210)
+
 
 ---
 ### Marée > Engin > Détails
@@ -290,6 +295,7 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
         * A l'ouverture de la fenêtre de saisie, le champ "Ajouté" est grisé
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
     * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
+4. L'observateur peut charger des caractéristiques d'es 'engins existants en cliquant sur le bouton "Rechercher" (Variante 2a)
 
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
@@ -314,7 +320,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
       * Type d'engin
       * Le libellé de l'engin
       * Les caractéristiques (affichage des PSFM renseignés seulement)
-      * La période de la dernière utilisation
+      * La période de la dernière utilisation (VFA -> MOA : A renommer )
       * Un commentaire 
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
@@ -324,7 +330,14 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 
 **Variante 3a** - Les informations de saisie sont affichées dans un bandeau rouge, sur fond blanc
 Exemple :_"Pour les maillages, saisir uniquement les maillages à la jauge."_
-C'est une option liée au programme de collecte.
+C'est une option liée au programme de collecte (A REALISER)
+
+> **Réunion MOA 19/02/2024** :
+
+> VFA -> MOA : Marion doit avoir la main sur la stratégie (se tourne vers Armelle) 
+
+> VFA -> MOA/EIS : Avoir une V1 qui permet d'administrer la stratégie (à confirmer avec Benoit)
+
 
 > Questions/Remarques :
 > - [ ] ~~Optimiser le chargement de la stratégie~~
@@ -363,6 +376,23 @@ C'est une option liée au programme de collecte.
 4. Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle opération
 
 
+> **Réunion MOA 19/02/2024** :
+ 
+>  VFA -> MOA : laisser a possibilité de saisir début/fin de virage (mise à l'eau), début/fin filage : date + heure + position pour ces 4 moments
+
+> Propre aux engins dormants
+
+> MOA : Intérêt sur une marée obsmer de saisir une mise à l'eau ? Date et heure de mise à l'eau de l'engin
+
+> MOA doit en discuter avec les scientifiques (Priorité 2)
+
+> EIS est capable d'enregistrer cela ? 
+
+> Partie à détailler avec EIS 
+
+
+
+
 ## Marée > Opérations > filtres
 
 **REF: REF: OBSMER/OPERATION/FILTRE**
@@ -398,16 +428,17 @@ Référence : ERGONOMIE/FILTRES
 1. L'observateur demande la création d'une nouvelle opération (OBSMER/OPERATION_MENU : bouton :heavy_plus_sign:)
 2. Une fenêtre s'ouvre sur la saisie des caractéristiques de l'opération. 
 3. L'observateur renseigne les éléments suivants :
-   * L'engin* utilisé
+   * L'engin * utilisé
    * L'espèce cible
    * La date, l'heure et la position de début de pêche
    * La date, l'heure et la position de fin de pêche
    * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
-     * Le déroulement normal de l'opération avec des cases à cocher (vide : par défaut, oui, non)
-     * Des réalisation de mesures individuelles avec des cases à cocher (vide : par défaut, oui, non)
+     * Le déroulement normal de l'opération avec une case à cocher (vide : par défaut, oui, non)
+     * Si l'opération est échantillonnée avec une case à cocher (vide : par défaut, oui, non)
+       * Oui par défaut. Si oui, l'écran des mensurations est accessible à la saisie
      * La profondeur moyen de l'engin
-     * L'état de la mer dans une liste déroulante (PSFM QUALITATIVE_VALUE.PARAMETER_FK = SEA_STATE)
+     * L'état de la mer dans une liste déroulante 
      * Autres observations (suivant la stratégie appliquée)
        * Force du vent
        * ...
@@ -422,31 +453,51 @@ Référence : ERGONOMIE/FILTRES
 
 _Développement à réaliser_
 
-> Questions :
+#### Détails Techniques
 
-> VFA - MOA : Dépend de l'habitude du navire ?
+- La zone d'activité du navire correspond au niveau de lieu Sous Rectangle Statistique (LOCATION_LEVEL.ID = 114)
+- L'état de la mer est définit par le PMFM - SEA_STATE (ID = 194 ou 1087)
 
-> VFA - MOA : Zone d'activité (Rectangle ?)
+> **Réunion MOA 19/02/2024** :
 
+> MOA : dépend de la régionalisation (zone d'activité) : Y a t il un référentiel des espèces (Métier/Engin => espèces cibles)
 
-**Variante 3b** - Engin dormant (A REALISER)
+> MOA : texte de 4~5 lignes pour expliquer le concept à EIS. Forcer la saisie de mensuration même si c'est une opération non échantillonnée.
+
+> Bouton + pour permettre la saisie de mensuration 
+
+**Variante 3b** - Il doit possible de forcer la saisie de mensuration pour une opération non échantillonnée.
+Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
+
+**Variante 3c** - Engin dormant (A REALISER)
 
 3. Si l'engin choisi est un engin dormant : autoriser date de début OP AVANT marée 
 
-**Variante 3c** - Engin traînant (A REALISER)
+**Variante 3d** - Engin traînant (A REALISER)
 
 3. Si l'engin choisi est un engin traînant : Empêcher date de début OP en dehors de la période de la marée
 
-**Variante 3d** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+**Variante 3e** - Pêche en bœuf et navire associé (DEV A RÉALISER)
 
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
-   Alors il devient obligatoire de saisir le navire associé à l'opération
+   Alors il devient obligatoire de saisir l'immatriculation du navire associé à l'opération.
+   L'observateur doit aussi indiquer si la capture est remontée sur le navire de l'observateur. 
    > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=41410
+
+> **Réunion MOA 19/02/2024** :
+
+> MOA : Il faut saisir obligatoirement le second navire  
+
+> MOA : Indiquer l'immatriculation et indiquer si la capture est remontée sur le navire observateur
+
+> MOA : Comment est filtrée la liste des navires  ?
 
 **Variante 3e** - Filtrer les métier pratiqués - PAS PRIORITAIRE
 
 3. Le système filtre les espèces cibles en fonction des données historiques déjà saisies.
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
+
+> MOA : à réaliser en P2
 
 ---
 ## Opération > Capture > Saisie 
@@ -465,6 +516,8 @@ rejetée à la mer, généralement morte ou mourante (source FAO).
 **Capture accidentelle** : capture accessoire d’espèces protégées, en danger ou menacées (voir
 Définition de PETS).
 
+**Coup nul** : 
+
 ![ui-batch-tree](/projects/obsmer/spe/images/batch/batch-tree.svg)
 
 #### Scénario principal
@@ -478,14 +531,26 @@ Définition de PETS).
 3. L'observateur peut masquer cet arbre en cliquant sur le bouton <<
     * Une fois l'abre masqué, il peut le réafficher en cliquant sur >>
 4. L'observateur peut saisir, dans l'écran de droite, des informations sur la capture
-    *  Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
+    * Coup nul : une case à cocher indique qu'il s'agit d'un coup nul ou non (case cochée = Oui)
     * Le poids total (en kg) de toutes les espèces capturées
-    * Ce champ est calculé
+    * Ce champ est calculé et n'est pas obligatoire (dans le cas d'un coup nul)
     * Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue > PR")
       * Il est possible de naviguer par ce bandeau pour atteindre n'importe quel noeud de l'arbre (OBSMER/OPERATION/CAPTURE/NAVIGATION) 
 5. Des compteurs au niveau des menus indique le nombre de saisies
     * Ces compteurs sont visibles uniquement sur les menus comportant des tableaux dans la fenêtre de saisie
-    
+
+
+**Coup nul** : l'engin remonte sans espèce, pas de détection
+
+> **Réunion MOA 19/02/2024** :
+
+> MOA : Champ calculé "Capture Totale" : OK  (à la place de "Capture (toutes espèces)"). Champ à mettre en bleu italique
+
+> Variantes à faire 
+
+> OP non échantillonnée, le champ Capture est non calculé, il est vide
+
+
 #### Variantes
 
 **Variantes**
@@ -493,15 +558,17 @@ Définition de PETS).
 **Variante 4a** - Cas du coup nul (pas de capture)
 
 4. Dans la saisie de la capture, l'observateur coche le champ "Coup nul". 
-   Le poids total de la capture est grisé et prend la valeur 0. Tout le reste de l'arbre d'échantillonnage est aussi grisé.
+   Le poids total de la capture est grisé et vide. Tout le reste de l'arbre d'échantillonnage est aussi grisé.
 
 ![ui-batch-tree-null](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
 > Questions:
 
-> VFA -> MOA : Poids total de la capture: non obligatoire, calculé (sauf si cout nul)
-
 > VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (il manque `Obligation à débarquer`)
+
+> **Réunion MOA 19/02/2024** :
+
+> MOA : Si coup nul, on ne met rien dans "Capture Totale"
 
 ---
 ## Opération > Capture > Navigation
@@ -516,8 +583,12 @@ Navigation dans l'arbre des captures
 
 1. L'observateur peut naviguer dans l'arbre d'échantillonnage à partir du bandeau de la fenêtre de saisie
 2. Il peut aussi dérouler le file d'Ariane de l'abre d'échantillonnage en cliquant sur les flèches <b>(<) et <b>(>)
+3. 
+> **Réunion MOA 19/02/2024** :
 
+> MOA : Si erreur de saisie (Appat dans Godaille par exemple), pouvoir import/exporter dans un autre lot 
 
+> ISI : Variante à faire sur l'export/import - A valider avec EIS (Option dans PR, au niveau des colonnes)
 ---
 ## Opération > Capture > Contrôle 
 
@@ -532,7 +603,10 @@ Contrôle de la saisie d'une capture :
 1. L'observateur clique sur le bouton "Contrôler"
 2. L'abre d'échantillonnage n'est alors pas dépilé et les poids sont calculés et remontés
     *  Les poids calculés sont affichés en bleu et en italique 
-   
+
+> **Réunion MOA 19/02/2024** : Voir s'il y a des 1/2 sur les poids remontés 
+
+> **Réunion MOA 19/02/2024** : rendu ici
 
 ---
 ## Opération > Capture > PR
@@ -541,6 +615,14 @@ Contrôle de la saisie d'une capture :
 
 **Partie retenue d'une capture** : Partie de la capture remontée à bord du navire qui est conservée à bord une fois le tri effectué par l’équipage.
 = Part commerciale + Obligation de débarquement
+
+**Godaille** : part de l'équipage.
+
+**Appat** : 
+
+**Obligation à débarquer** : Mettre un terme à la pratique consistant à rejeter en mer les captures non désirées de poissons :
+- Ne correspondant pas à la taille minimale de conservation de référence ;
+- Pour lesquelles le pêcheur ne dispose pas de quotas : du fait de règles particulières relatives à la composition des captures.
 
 ![ui-batch-tree-pr](/projects/obsmer/spe/images/batch/batch-tree-PR.svg)
 
@@ -555,11 +637,6 @@ Contrôle de la saisie d'une capture :
     *  Un bandeau en haut de l'écran rappel la localisation dans l'abre d'échantillonnage (Ex : "<i>Capture / Partie retenue")
 4. Il n'y a rien d'affiché dans la fenêtre de saisie de la partie retenue de la capture 
 
-> Questions :
-
-> VFA -> MOA : Exhausivité de la destination de la partie retenue ? 
-
-> VFA -> MOA : Utilisation industrielle ?
 
 **Variantes**
 
