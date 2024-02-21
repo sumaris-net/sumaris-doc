@@ -1,6 +1,6 @@
 # Réunion de revue des spécification ObsMer/ObsVente
 
-### 06/02/2024, 14h30 - 16h30
+### 19/02/2024, 15h30 - 17h30
 
 > Présents :
 > - Vincent FACHERO (Ifremer)
