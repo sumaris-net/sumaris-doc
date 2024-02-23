@@ -21,6 +21,7 @@ const gulp = require('gulp'),
   footer = require('gulp-footer'),
   exec = require('gulp-exec');
 
+//const plantumlVersion = '1.2023.9'; // FIXME: generate bad encoding
 const plantumlVersion = '1.2022.7';
 const uglifyBaseOptions = {
   toplevel: true,
