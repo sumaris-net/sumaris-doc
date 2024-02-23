@@ -1,15 +1,15 @@
 @startsalt
 {
 
-  {/ | Marée | <b> Détails | Opérations }
+  {  <b> Nouvel engin | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |[Rechercher] }
   ..
 
      {
          <back:red><font color=white><i>Informations de saisie
      }
-
+    .
     {
-       <b>Engin : | GNC - Filets maillants encerclants | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [Rechercher]
+       <b>Engin : | ^GNC - Filets maillants encerclants^
     }
   .
     <b>Caractéristiques :

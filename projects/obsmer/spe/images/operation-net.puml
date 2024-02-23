@@ -6,13 +6,15 @@
 
     {
       { Engin / espèce ciblée : | ^ FPN - Filet ^ | ^ Espèce cible ^ }
-
+       .
       {
-        Fin filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        Début virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de l'opération (Filage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de l'opération (Filage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de l'opération (Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de l'opération (Virage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
       }
     }
-
+    .
     <b>Caractéristiques :
 
     {
@@ -20,7 +22,7 @@
       . | Déroulement normal ? { (X) <b>Oui | () Non }
       . | . | + Autres caractéristiques (cf "Grille de saisie")
     }
-
+    .
     {
         <b>Commentaire :
 

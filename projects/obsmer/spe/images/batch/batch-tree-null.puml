@@ -21,7 +21,7 @@
    { [<b>Capture] | / | [...] | . | . | . | . | . | . | . | . | [<&chevron-left>] | [<&chevron-right>] }
 
        {[X] Coup nul ? }
-       {Capture (toutes espèces) (kg) : | " " }
+       {Capture (toutes espèces) (kg) : | <i><color:blue>"0" }
   }
 
   -- | -- | --

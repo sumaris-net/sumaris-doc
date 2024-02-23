@@ -273,6 +273,8 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 > VFA -> MOA :  le type d'engin est un complément à l'engin (il faut le laisser) : caractéristique de l'engin (PSFM)
 
+> VFA -> EIS : Mode ou on met en dur les PMFMs que l'on voir (mettre des PMFMs pour distinguer les engins)
+
 #### Détails Techniques
 
 - Type de l'engin : PMFM - TRAWL_TYPE (ID = 210)
@@ -295,7 +297,9 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
         * A l'ouverture de la fenêtre de saisie, le champ "Ajouté" est grisé
     * Les caractéristiques de l'engin sélectionné s'affichent, permettant une saisie par l'opérateur
     * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
-4. L'observateur peut charger des caractéristiques d'es 'engins existants en cliquant sur le bouton "Rechercher" (Variante 2a)
+4. L'observateur peut charger des caractéristiques des engins existants en cliquant sur le bouton "Rechercher" (Variante 2a)
+
+> VFA -> ISI : Refaire l'IHM (fenêtre modale, voir prototype)
 
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
@@ -320,7 +324,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
       * Type d'engin
       * Le libellé de l'engin
       * Les caractéristiques (affichage des PSFM renseignés seulement)
-      * La période de la dernière utilisation (VFA -> MOA : A renommer )
+      * La période de la dernière utilisation (VFA -> MOA : A renommer)
       * Un commentaire 
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
@@ -334,10 +338,15 @@ C'est une option liée au programme de collecte (A REALISER)
 
 > **Réunion MOA 19/02/2024** :
 
-> VFA -> MOA : Marion doit avoir la main sur la stratégie (se tourne vers Armelle) 
+> MOA : Marion doit avoir la main sur la stratégie (se tourne vers Armelle) 
 
-> VFA -> MOA/EIS : Avoir une V1 qui permet d'administrer la stratégie (à confirmer avec Benoit)
+> MOA : Avoir une V1 qui permet d'administrer la stratégie (à confirmer avec Benoit)
 
+> EIS : OK pour une la V1. Mais manque l'affectation au lieu.
+
+> EIS : Reste des écrans à faire de manière transverse (ObsMer/ObsVente/Calendrier d'activité)
+
+> ISI : Spécifications à rédiger dans la partie commons (Administration)
 
 > Questions/Remarques :
 > - [ ] ~~Optimiser le chargement de la stratégie~~
@@ -368,25 +377,34 @@ C'est une option liée au programme de collecte (A REALISER)
         * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
      * L'engin utilisé
     * L'espèce cible
-    * La date de début de pêche
-    * La position de début des opérations
-    * La date de fin de pêche
-    * La position de fin
+    * La date de début de l'opération (Filage)
+    * La position de début de l'opération (Filage)
+    * La date de fin de l'opération (Filage)
+    * La position de fin de l'opération (Filage)
+    * La date de début de l'opération (Virage)
+    * La position de début de l'opération (Virage)
+    * La date de fin de l'opération (Virage)
+    * La position de fin de l'opération (Virage)
 3. Un bouton permet d'afficher ou de masquer des colonnes
 4. Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle opération
 
+Le choix des dates de début/fin d'opération (filage/virage) se paramètre dans les options du programme.
 
 > **Réunion MOA 19/02/2024** :
  
 >  VFA -> MOA : laisser a possibilité de saisir début/fin de virage (mise à l'eau), début/fin filage : date + heure + position pour ces 4 moments
 
-> Propre aux engins dormants
+> Paramètrage via les options du programme
+
+> MOA : Propre aux engins dormants
+
+> EIS : bien dans la base Harmonie mais pas prit en compte dans le modèle Summaris
+
+> EIS : Exploiter le modèle dormants/trainants et actifs
 
 > MOA : Intérêt sur une marée obsmer de saisir une mise à l'eau ? Date et heure de mise à l'eau de l'engin
 
 > MOA doit en discuter avec les scientifiques (Priorité 2)
-
-> EIS est capable d'enregistrer cela ? 
 
 > Partie à détailler avec EIS 
 
@@ -460,11 +478,15 @@ _Développement à réaliser_
 
 > **Réunion MOA 19/02/2024** :
 
-> MOA : dépend de la régionalisation (zone d'activité) : Y a t il un référentiel des espèces (Métier/Engin => espèces cibles)
+> MOA : Y a t il un référentiel des espèces (Métier/Engin => espèces cibles) : OUI
 
-> MOA : texte de 4~5 lignes pour expliquer le concept à EIS. Forcer la saisie de mensuration même si c'est une opération non échantillonnée.
+> MOA : Mise en place de la régionalisation (zone d'activité) : 
 
-> Bouton + pour permettre la saisie de mensuration 
+> MOA : Forcer la saisie de mensuration même si c'est une opération non échantillonnée. Texte de 4~5 lignes pour expliquer le concept à EIS.
+
+> Question pour MOA : Si opération non échantillonnée, on peut saisir quand même des mensurations uniquement pour la partie débarquée ? 
+
+> ISI : A ajouter : Bouton + pour permettre la saisie de mensuration 
 
 **Variante 3b** - Il doit possible de forcer la saisie de mensuration pour une opération non échantillonnée.
 Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
@@ -490,7 +512,7 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
 
 > MOA : Indiquer l'immatriculation et indiquer si la capture est remontée sur le navire observateur
 
-> MOA : Comment est filtrée la liste des navires  ?
+> MOA : Comment est filtrée la liste des navires  ? Regarder dans Allegro comment c'est fait.
 
 **Variante 3e** - Filtrer les métier pratiqués - PAS PRIORITAIRE
 
@@ -540,16 +562,7 @@ Définition de PETS).
     * Ces compteurs sont visibles uniquement sur les menus comportant des tableaux dans la fenêtre de saisie
 
 
-**Coup nul** : l'engin remonte sans espèce, pas de détection
-
-> **Réunion MOA 19/02/2024** :
-
-> MOA : Champ calculé "Capture Totale" : OK  (à la place de "Capture (toutes espèces)"). Champ à mettre en bleu italique
-
-> Variantes à faire 
-
-> OP non échantillonnée, le champ Capture est non calculé, il est vide
-
+**Coup nul** : L'engin remonte sans espèce, pas de détection
 
 #### Variantes
 
@@ -562,13 +575,15 @@ Définition de PETS).
 
 ![ui-batch-tree-null](/projects/obsmer/spe/images/batch/batch-tree-null.svg)
 
+**Variantes**
+
+**Variante 1b** - Opération non échantillonnée
+
+1. Si l'opérateur à indiqué que l'opération est non échantillonnée (OBSMER/OPERATION/DETAILS), le champ capture est non calculé et il est renseigné à 0.
+
 > Questions:
 
 > VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (il manque `Obligation à débarquer`)
-
-> **Réunion MOA 19/02/2024** :
-
-> MOA : Si coup nul, on ne met rien dans "Capture Totale"
 
 ---
 ## Opération > Capture > Navigation
@@ -589,7 +604,14 @@ Navigation dans l'arbre des captures
 > MOA : Si erreur de saisie (Appat dans Godaille par exemple), pouvoir import/exporter dans un autre lot 
 
 > ISI : Variante à faire sur l'export/import - A valider avec EIS (Option dans PR, au niveau des colonnes)
+
+> ISI  : Tout cocher les espèces : apparition bouton copier. Si bouton copier activé, afficher le bouton coller dans un autre PR. 
+
+> ISI  : Le presse papier est vidé après le paste. A partir de combien de temps on le vide sinon ?
+
+> MOA : copier/coller entre les opérations ? Si oui entre opérations, pouvoir vider les poids 
 ---
+
 ## Opération > Capture > Contrôle 
 
 **REF: OBSMER/OPERATION/CAPTURE/CONTROLE**
@@ -604,7 +626,7 @@ Contrôle de la saisie d'une capture :
 2. L'abre d'échantillonnage n'est alors pas dépilé et les poids sont calculés et remontés
     *  Les poids calculés sont affichés en bleu et en italique 
 
-> **Réunion MOA 19/02/2024** : Voir s'il y a des 1/2 sur les poids remontés 
+> **Réunion MOA 19/02/2024** : Voir avec EIS s'il y a des 1/2 sur les poids remontés 
 
 > **Réunion MOA 19/02/2024** : rendu ici
 
