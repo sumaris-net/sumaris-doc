@@ -2,14 +2,15 @@
 {
 
   {/ <b> Détails | Capture }
-  ..
-
+  .
     {
       { Engin / espèce ciblée : | ^ OTT - Chalut jumeau à panneaux ^ | ^ Espèce cible ^ }
-
+        .
       {
-        Fin filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        Début virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de l'opération (Filage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de l'opération (Filage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de l'opération (Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de l'opération (Virage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         . | <i><color:blue>durée de l'opération | . | <i><color:blue>distance parcourue
       }
     }
