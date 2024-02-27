@@ -33,9 +33,9 @@
 
     {#
           . | {[ <&plus> ] | [ <&trash> ] } | . | . | . | . | . | .
-          # | <&arrow-thick-top> <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
-          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart> <&comment-square> <&image>
-          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | 50   |  .   |   10          | 4 | <&bar-chart> <&comment-square> <&image>
+          # | <&arrow-thick-top> <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Catégorie | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
+          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | ^Gros^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
+          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | ^Moyen^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
         }
   }
 

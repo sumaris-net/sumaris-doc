@@ -4,7 +4,7 @@
     { | . |  <b>Ajouter une mesure :  | . }
     --
     { | . | Espèce scientifique *  | . }
-    { | . | ^Lophius piscatorius^   | . }
+    { | . | ^Lophius piscatorius^   | .  | [ ] Figer }
     .
     { | . | Longueur totale (cm) * | .  }
     { | . | "   12  "  }

@@ -1,0 +1,28 @@
+@startsalt
+{
+  {+
+   {
+       <b><font color=grey size=20>OBSMER    | . | . | . | . | . | . | .
+       Observateur
+       .
+       .
+       --
+       Accueil    | .
+       .
+       <font color=grey size=10>saisie des données
+       --
+       {T
+            +<back:#DDD>Marées
+            ++ Engins       | .
+            ++ Opérations       | .
+            +++ OP #2      |.   <b><&badge>
+            ++++ Captures       | .
+            ++++ Captures accidentelles      | .
+       }
+       Sorties        | .
+       .
+    }
+  }
+}
+@endsalt
+

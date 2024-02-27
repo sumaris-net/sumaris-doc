@@ -5,9 +5,8 @@
    {T
        + Capture
        ++ Partie retenue
-       ++ Partie non retenue, Vrac
+       ++ <back:#DDF>Partie non retenue, Vrac
        +++ Détaillé
-       ++++ Animaux | <color:black>[0]
        ++++ Ecosystèmes Marins Vulnérables | <color:black>[0]
        +++ Non détaillé | <color:black>[0]
        ++ Partie non retenue, Hors-Vrac
@@ -21,6 +20,12 @@
    }
   } | . | {
     { [Capture] | / | [<b>Partie non retenue, Vrac] | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+
+    {Poids total (kg)* : | " 0    " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  }
+
+    {Coef. éch. : | " 1/1    " | . | . | . | . | . |  Poids échant (kg)* : | "     " }
+
+
     }
   -- | -- | --
   { [Fermer] | [Sauvegarder] }

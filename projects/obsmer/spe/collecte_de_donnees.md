@@ -448,8 +448,8 @@ Référence : ERGONOMIE/FILTRES
 3. L'observateur renseigne les éléments suivants :
    * L'engin * utilisé
    * L'espèce cible
-   * La date, l'heure et la position de début de pêche
-   * La date, l'heure et la position de fin de pêche
+   * La date, l'heure et la position de début (non obligatoire) de pêche
+   * La date, l'heure et la position de fin (non obligatoire) de pêche
    * Les caractéristiques de l'opération (PSFM définit par la stratégie appliquée):
      * Le type d'opération dans une liste déroulante (Opération échantillonnée, non échantillonnée, opération de repos)
      * Le déroulement normal de l'opération avec une case à cocher (vide : par défaut, oui, non)
@@ -520,6 +520,22 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
 
 > MOA : à réaliser en P2
+
+---
+## Marée > Opération > Historique
+
+**REF: OBSMER/OPERATION/HISTORIQUE**
+
+![operation-edit-history](/projects/obsmer/spe/images/operation-edit-history.svg)
+
+Un historique des saisies des opérations est accessible depuis le bandeau récapitulatif de l'opérations d'une marée
+
+#### Scénario principal
+
+L'observateur clique sur le menu déroulant "LOG" (_a renommer_) dans le bandeau récapitulatif d'une opération
+1. Une fenêtre modale s'ouvre avec les dernières opérations saisies
+    * La date de création est affichée pour chaque opération
+2. Un bouton "Ajouter" permet de créer une nouvelle opération
 
 ---
 ## Opération > Capture > Saisie 
@@ -598,20 +614,45 @@ Navigation dans l'arbre des captures
 
 1. L'observateur peut naviguer dans l'arbre d'échantillonnage à partir du bandeau de la fenêtre de saisie
 2. Il peut aussi dérouler le file d'Ariane de l'abre d'échantillonnage en cliquant sur les flèches <b>(<) et <b>(>)
-3. 
-> **Réunion MOA 19/02/2024** :
 
-> MOA : Si erreur de saisie (Appat dans Godaille par exemple), pouvoir import/exporter dans un autre lot 
-
-> ISI : Variante à faire sur l'export/import - A valider avec EIS (Option dans PR, au niveau des colonnes)
-
-> ISI  : Tout cocher les espèces : apparition bouton copier. Si bouton copier activé, afficher le bouton coller dans un autre PR. 
-
-> ISI  : Le presse papier est vidé après le paste. A partir de combien de temps on le vide sinon ?
-
-> MOA : copier/coller entre les opérations ? Si oui entre opérations, pouvoir vider les poids 
 ---
 
+## Opération > Capture > Copier-Coller
+
+**REF: OBSMER/OPERATION/CAPTURE/COPIER-COLLER**
+
+L'observateur à la possibilité de faire des "Copier-Coller" et des "Déplacer vers" d'un lot d'espèce d'une catégorie à une autre (Exemple : Appat -> Consommation humaine)
+
+#### Scénario principal
+
+1. L'observateur coche toutes les espèces saisies dans un catégorie 
+2. Un bouton "Copier" apparait
+3. L'observateur clique sur le bouton "Copier" et navique sur une autre catégorie
+4. Un bouton "Coller" apparait
+5. L'utilisateur clique sur le bouton "Coller"
+    *  Seules les espèces sont copiées, les poids sont laissés à vides
+    *  Le presse papier contenant les données est automatiquement vidé après la copie
+
+
+**Variantes**
+
+**Variante 1a** - Copie des captures entre opérations
+
+L'observateur peut aussi effectuer un "Copier/Coller" de la totalité des captures d'une opération à une autre opération
+afin d'accélérer la saisie. Les boutons "Copier/Coller" sont disponibles au niveau de l'arbre des Captures.
+Si l'observateur à déjà effectué une saisie dans l'opération de destination, une demande de confirmation est faite avant la recopie.
+
+**Variante 1b** - Déplacement des lots d'espèces
+
+L'observateur peut aussi effectuer une action de "Déplacer vers" d'un lot d'espèce d'une catégorie à une autre.
+Le lot est ainsi supprimé de sa catégorie source et copier vers sa catégorie de destination.
+Si l'observateur à déjà effectué une saisie dans le lot de destination, une demande de confirmation est faite avant la recopie.
+
+> **Réunion MOA 19/02/2024** :
+
+> ISI/EIS : Maquettage à faire
+
+---
 ## Opération > Capture > Contrôle 
 
 **REF: OBSMER/OPERATION/CAPTURE/CONTROLE**
@@ -625,6 +666,11 @@ Contrôle de la saisie d'une capture :
 1. L'observateur clique sur le bouton "Contrôler"
 2. L'abre d'échantillonnage n'est alors pas dépilé et les poids sont calculés et remontés
     *  Les poids calculés sont affichés en bleu et en italique 
+3. Sur les formulaires ou rien n'a été saisi :
+    *  Les compteurs affichent 0 et sont de couleur grise 
+    *  Le poids total est automatiquement renseigné à 0
+4. Les compteurs des formulaires de saisi comportant dans erreurs sont affichés en rouge
+    *  L'observateur est positionné directement sur le premier formulaire comportant des erreurs de saisie
 
 > **Réunion MOA 19/02/2024** : Voir avec EIS s'il y a des 1/2 sur les poids remontés 
 
@@ -690,23 +736,25 @@ Contrôle de la saisie d'une capture :
     * Le nom de l'espèce
     * La présentation (_PSMF = DRESSING_, _METHOD = 42_, _Observation par un observateur_) 
         * Par défaut WHL (_entier_) 
+    * La catégorie (_PSFM = SIZE_SORTING_CAT_, _METHOD = 42_, _Observation par un observateur_))
     * L'état (_PSMF = PRESERVATION_, _METHOD = 42_, _Observation par un observateur_)
         * Par défaut FRE (_frais_) 
    *  Le poids total (unité par défaut en Kg)
+       * Une case à cocher indique si le poids est estimé
    *  Le taux d'échantillonnage (1/n) 
         * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
    *  Le poids d'échantillonnage (en Kg)
         * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
-   *  Le nombre d'individu échantillonné
+        * Une case à cocher indique si le poids est estimé 
+   * Le nombre d'individu échantillonné
 6. Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+   *  S'il n'y a aucune mensuration de saisi, le bouton est noir, sinon il est bleu avec un indicateur du nombre de saisi
 7. Un commentaire
    *  Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
 8. Une photo (A REALISER)
 7. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 > Questions :
-
-> VFA -> MOA : Taux d'échantillonnage : ratio ou %
 
 > VFA -> MOA : Permettre l'ajout de PSFM ?
 
@@ -745,49 +793,21 @@ fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détai
 
 **Rejets détaillés** = poissons + autres espèces commerciales.
 
-L'arbre PNR, Vrac détaillé contient 2 sous menu :
-- Animaux
+L'arbre PNR, Vrac détaillé contient un sous menu :
 - Ecosystèmes Marins Vulnérables
+
+L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquement renseignés :
+- Poids total 
+- Poids échantillonné
 
 #### Scénario principal
 
 1. L'observateur déroule l'arbre PNR, Vrac détaillé
-2. Les 2 sous menu suivants s'affichent :
-    * Animaux
+2. Le sous menu suivant s'affiche :
     * Ecosystèmes Marins Vulnérables
 3. Le menu "Détaillé" n'est pas sélectionnable
 
-
-## Opération > Capture > PNR, Vrac > Détaillé > Animaux
-
-![ui-batch-PNR-VRAC-ANI](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-ANI.svg)
-
-#### Scénario principal
-
-1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Vrac détaillé
-2. La fenêtre de saisie des "Animaux" s'affiche
-3. L'observateur renseigne les éléments suivants :
-   * Le poids total *, en kg
-      * Une case à cochée permet d'indiquer s'il le poids a été estimé
-   * Le coefficient d'échantillonnage (1/n)
-   * Le poids échantillonné *, en kg
-4. L'observateur renseigne les espèces observées :
-   * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
-   * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
-   * Pour chaque nouvelle espèce, il doit renseigner : 
-     * Le code commercial (FAO) de l'espèce
-     * Le poids total, en kg
-     * Le nombre d'individu total
-     * Le taux d'échantillonnage (1/n)
-         * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
-     * Le poids d'échantillonnage (en Kg)
-         * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
-     * Le nombre d'individu échantillonné
-     * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
-     * Un commentaire
-         * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
-     * Une photo (A REALISER)
-     * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+--- 
 
 ## Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables
 
@@ -967,9 +987,10 @@ TODO
 
 L'observateur à ouvert l'écran de saisie des mesures individuelles pour l'espèce commerciale.
 
-L'écran affiche la liste des mesures individuelles pour l'espèce commerciale
+L'écran affiche la liste des mesures individuelles pour l'espèce commerciale.
 1. L'écran est composé des champs suivants :
    *  Le nom de l'espèce scientifique
+     * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
    *  La longueur totale mesurée, en cm
    *  Le poids calculé RTP (Relation Taille Poids) en kg
 2. Un bouton permet d'ajouter une mesure individuelle

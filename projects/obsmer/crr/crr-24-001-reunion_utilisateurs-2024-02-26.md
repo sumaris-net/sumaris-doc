@@ -37,13 +37,14 @@ Sur tablette ou ordiphone Android :
 
 # Page d'accueil
  
-- Menu et page centrale permettant de saisie des marées, des sorties (ventes) et d'administrer les référentiels (navires, programmes, ...)
+- Menu et page centrale permettant de saisir des marées, des sorties (ventes) et d'administrer les référentiels (navires, programmes, ...)
 - L'utilisateur peut avoir des notifications (messages indiqués par une cloche).
 
 # Saisie des marées
 
 - Filtre sur les marées : Possibilité de filtrer les données (visibilité du filtre mit en place et suppression possible)
-  Colonne triable et paramétrage des colonnes possibles : A la prochaine connexion, l'ordre est restauré
+  
+- Colonnes triables et paramétrage des colonnes possible : A la prochaine connexion, l'ordre des colonnes est restauré
 
 - Descendre dans une marée : on clique sur une marée (flèche retour pour revenir au tableau précédent). 2 façons de savoir ou on est rendu (bandeau ou menu de gauche)
 
@@ -57,34 +58,23 @@ Sur tablette ou ordiphone Android :
 
 - Fenêtre dédiée pour saisir un engin : caractéristiques pour la saisie
 
-- Les champs de saisis sont rouges s'ils sont obligatoire laissés vide 
+- Les champs de saisis sont rouges s'ils sont obligatoires et laissés vides
 
-> ISI : A ajouter dans les règles d'ergonomie communes
-
-- Saisis des champs : filtre sur les 3 premiers caractères renseignés et utilisation du champ * pour les libellés
-
-> ISI : A ajouter dans les règles d'ergonomie communes
-
+- Saisis des champs : filtre sur le 1er premier caractère renseigné et utilisation du champ * pour les libellés
 
 # Marée > Opérations
 
--latitude/longitude pas forcément connues : rendre non obligatoire
+- Latitude/Longitude pas forcément connues : rendre non obligatoire
 
 # Saisie des captures 
 
 - Possibilité d'épingler un élément dans le menu de gauche (Exemple: épingler une opération pour retrouver la saisie)
 
-> ISI : A spécifier
-
 **Question utilisateur** : 
 - L'opération est non visible sur le menu de gauche ?
 Bouton LOG : historique des dernière saisies (Exemple : opérations) -> Bouton d'ajout disponible
 
-> ISI : A spécifier
-
 - Possibilité de figer des champs (sur une liste déroulante) pour faciliter la saisie
-
-> ISI : A spécifier
 
 **Question utilisateur** :
 - Avoir plus de critères de saisis de mesures (centimètre, longueur totale, ...) ?
@@ -100,14 +90,10 @@ Coef. échant. se saisit tout seul ? OUI
 Bouton des mensurations cliquable - Avoir le bouton d'ajout de mensuration plus grand : bleu s'il y a de la donnée, noir sinon (avec icone pour avoir le nombre de saisie)
 On doit pouvoir y accèder par le clavier (tabulation).
 
-> ISI : A spécifier
-
 Notion d'unicité de saisie à ajouter dans l'outil ? A confirmer.
 
 **Remarque utilisateur** :
 Ajouter une colonne catégorie dans sous menu des parties retenus (CHU, AP, GOD, OD)
-
-> ISI : A spécifier
 
 **Question aux utilisateurs** :
 - Coef. Echant. : % ou fraction ? Utilisation de fraction OK
@@ -118,10 +104,10 @@ Ajouter une colonne catégorie dans sous menu des parties retenus (CHU, AP, GOD,
 - Le copier/coller -> Ne colle pas les poids mais seulement les espèces
 - "Déplacer Vers" -> Coupe et colle les espèces
 
-> ISI : A spécifier
-
 - Au niveau de la capture -> Importer toutes la liste d'espèce depuis une opération précédente (faire une variante), disponible dans les options de la capture (à côté du menu capture)
 Avec demande de confirmation.
+
+> ISI : En cours de spécification
 
 - PNR, Vrac : Rajouter un poids total et un poids échantillonné dans l'écran (rien pour l'instant). Laisser saisissable mais se remplit tout seul.
 -"Animaux" dans PNR non détaillé à la place de PNR détaillé
@@ -129,8 +115,6 @@ Avec demande de confirmation.
 **Question utilisateur** :
 - Au niveau des poids : estimé ou pas ?
 - Estimé ou pas dépend des espèces : Rajouter dans le champ estimé dans le champ poids total et poids échantillonné
-
-> ISI : A spécifier
 
 Ergonomie : Réduire par exemple la colonne Présentation (avec ...)
 
@@ -140,8 +124,6 @@ Ergonomie : Réduire par exemple la colonne Présentation (avec ...)
 - Bouton contrôler : en rouge les erreurs sur les compteurs et se positionne sur la première erreur.
 - Quand on controle, si rien n'a été saisi, on passe le poids total à 0 comme ça on peut revenir dessus.
 - Compteur : Couleur gris quand vide, bleu ok, rouge en erreur
-
-> ISI : A spécifier
 
 **Question utilisateur** :
 - Pouvoir connecter un ichtyomètre bluetooth => Mode de saisie avec une tablette

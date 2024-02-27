@@ -27,18 +27,23 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 **REF: COMMUN/ERGONOMIE/PRINCIPES**
 
 - Les champs obligatoires sont suffixé par un * (en rouge dans Allegro V2)
+  - S'ils ne sont pas renseignés lors de la saisie, ils apparaissent en rouge
 - Les champs calculés sont en italique et la police est de couleur bleu
 - Les champs non saisissables sont affichés avec une police de couleur grise
 - Les préconisations de saisies sont affichées en blanc sur fond rouge
 - Il est possible d'activer des fonctionnalités par des raccourcis clavier
   - Touche "Ctrl" + Lettre surligné du bouton
+- Dans un écran de saisi, il est possible de passer à l'élément suivant par la touche TAB du clavier
 - Les données sous forme de tableau
     - Tri des données (croissant/décroissant) : Une flèche indique le sens du tri passage de la souris sur le nom de la colonne triable
       - Toutes les colonnes peuvent être triées
     - Affichage/masque de colonnes : Un bouton offre la possibilité d'afficher ou de masquer des colonnes dans une vue tabulaire
+      - A la prochaine connexion, le paramétrage sur les colonnes est appliqué
     - Les listes des marées, engins, opérations peuvent être restreintes en appliquant des filtres sur les données
 - Les caractéristiques (PSFM) obligatoires (*) sont affichée en tête de liste
     - Cela se configure dans le programme, section "configuration des PSFM"
+- Pour les champs réliés à un référentiel, un filtre s'applique sur le 1er premier caractère saisi
+  - L'utilisation du caractère * permet de rechercher sur tout le libellé
 - Il faut afficher uniquement les colonnes PSFM ayant une valeur
 - Dans un écran de saisie, le bouton "Sauvegarder" est actif lorsque tous les champs obligatoires ont été saisis
 
@@ -65,6 +70,7 @@ L'interface est composée des éléments graphiques suivants :
 5. Un bouton "Se connecter"
 
 #### Scénario principal
+
 1. L'observateur renseigne son identifiant (Compte intranet de l'Ifremer)
 2. L'observateur renseigne son mot de passe
 3. L'observateur sélectionne le noeud de connexion dans la liste déroulante (ObsMer, ObsVente)
@@ -94,6 +100,8 @@ Il est possible d'appliquer des filtres sur les marées et les opérations.
 
 **ACTEURS : OBSERVATEUR**
 
+#### Scénario principal
+
 1. L'utilisateur clique sur le bouton du filtre
 2. L'écran affiche les paramètres sur lesquels appliquer un filtre
 3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
@@ -120,6 +128,23 @@ Le filtre peut être enregistré pour être ré-appliqué par la suite.
 > ISI : A mettre en variante la fin de saisie qui supprime les filtres appliqués ?
 
 > Les développements sur l'enregistrement des filtres sont en cours côté Quadrige.
+
+
+## Commun > Epingler un élément
+
+**REF: COMMUN/EPINGLER**
+
+![main-tree-pin](/projects/common/spe/images/main-tree-pin.svg)
+
+Il est possible d'épingler des éléments (marées, opérations) dans l'arbre du menu de façon
+à les rendre toujours visibles pour y accèder facilement.
+
+#### Scénario principal
+
+L'observateur passe le pointeur de la souris sur un élément du menu. 
+1. Une épingle apparait
+2. L'observateur clique sur l'épingle
+3. L'élément épinglé reste affiché et est accessible, même si l'observateur sélectionne un autre élement. 
 
 ## Commun > Extraction
 
