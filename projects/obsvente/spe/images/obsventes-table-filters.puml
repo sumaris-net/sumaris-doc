@@ -1,0 +1,23 @@
+@startsalt
+{
+
+  {<b>Sorties                                                                                                                                                                                  <&reload>}
+   --
+
+    {
+        Programme de collecte : | . | ^ SIH-ACTIFLOT^ | . | . | Etat :   | . | ^En cours de saisie^
+        .
+        Lieu : | . | ^ FRDRZ - Douarnenez^
+        .
+        Début de la période : | . | ^01/01/2023^ | . | . | Fin de la période : | . | ^31/12/2023^
+        .
+        Organisme saisisseur :   | . | ^ Ifremer^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND^
+        .
+        Observateurs : | . | ^ Nicolas DUPOND    ^
+
+    }
+
+  --
+  {2 résultats  {}[<&caret-bottom>] | [Fermer] | [Appliquer]}}
+}
+@endsalt

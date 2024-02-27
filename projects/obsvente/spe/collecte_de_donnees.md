@@ -28,18 +28,97 @@
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
 ---
+## Sorties
 
-## Sortie en criées
+**REF: OBSVENTES/SORTIES**
+
+![ui-obsventes](/projects/obsvente/spe/images/obsventes-table.svg)
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Sorties" dans l'interface de l'arbre du menu
+2. L'écran "Sorties" s'ouvre. Les informations suivantes sont affichées pour chaque sortie :
+  * L'état de saisie de la sortie :
+    * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
+    * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+    * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
+  * Le lieu
+  * La date
+  * Le ou les observateurs
+  * Le saisisseur
+  * Le commentaire
+
+**Variante(s) :**
+
+**Variante 1a :** L'observateur filtre les sorties (REF: OBSVENTES/FILTERS)
+
+**Variante 1b :** L'observateur crée une nouvelle sortie (REF: OBSVENTES/GENERAL)
+
+**Variante 1c :** L'observateur consulte une sortie existante
+
+**Variante 1d :** L'observateur supprime une sortie existante
+
+---
+## Sorties > Filtres
+
+**REF: OBSVENTES/SORTIES/FILTERS**
+
+![ui-obsventes](/projects/obsvente/spe/images/obsventes-table-filters.svg)
+
+Les filtres des sorties sont accessibles depuis le tableau de consultation des sorties via l'icône entonnoir.
+
+#### Scénario principal
+
+1. L'observateur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+  * Le programme de collecte
+  * L'état
+  * Le lieu
+  * La début de la période
+  * La fin de la période
+  * L'organisme du saisisseur
+  * Le saisisseur
+  * L'observateur
+
+---
+
+## Sortie > Détails
+
+**REF: OBSVENTES/SORTIE/DETAILS**
 
 ![ui-observed-location](/projects/obsvente/spe/images/observed-location-new.svg)
 
 > Lignes de plan avec statut "programmée" doivent être importée (depuis WAO).
 > Avec la liste des espèces prioritaires à échantillonner.
 
+La création d'une sortie est accessible depuis le tableau de consultation des sorties via l'icône <&plus>
+
+#### Scénario principal
+
+1. L'observateur demande la création d'une nouvelle sortie
+2. L'écran "Nouvelle sortie" s'ouvre. Il est composé de 2 onglets :
+  * "Détails"
+  * "Echantillonnages"
+3. Dans l'onglet "Détails", l'observateur sélectionne :
+  * Le ou les observateurs
+  * Le lieu
+  * La date
+  * La ligne de plan
+  * Les caractéristiques
+4. La liste des espèces à observer s'affiche
+5. L'observateur enregistre la sortie
+
+> Questions :
+> - Caractéristiques : présentes par défaut ? ajout possible ?
+
 ---
 
-### Sortie en criée > onglet Échantillonnages
+### Sortie > Échantillonnages
+
+**REF: OBSVENTES/SORTIE/ECH**
+
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
+
+
 
 ---
 

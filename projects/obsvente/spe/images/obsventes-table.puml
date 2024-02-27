@@ -1,0 +1,13 @@
+@startsalt
+{
+  <b>Sorties                                                                                                                            <&plus>
+  --
+	{#
+
+     [ ]. | <b>Etat | <b>Lieu | <b>Date | <b>Observateurs | <b>Saisisseur | .
+     [ ]. | <b>  <&pencil> | FRDRZ - Douarnenez | 25/11/2023 17:00 | toto | toto
+     [ ]. | <b>  <&pencil> | FRDRZ - Douarnenez | 26/11/2023 17:00 | toto| toto | <&comment-square>
+    }
+
+}
+@endsalt

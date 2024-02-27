@@ -7,22 +7,24 @@
   {
 
       Programme de collecte*:    | { ^SIH-OBSVENTE                                 ^ } | * | {^"Stratégie"
+                                                                                              ObsVente démarrage au 01/01/2024 <&eye> }
 
-      ObsVente démarrage au 01/01/2024 <&eye> }
+      Référence*: | ^2021_V0010 - DPMA_20_23_Lot2^ | * | {^"Saisisseur"
+                                                          Nicolas DUPOND - Ifremer  }
 
-      Observateurs* :            | ^ Observateur #1       ^ | { [<&plus>] | [<&x>] } | {^"Saisisseur"
-                                                                                               Nicolas DUPOND - Ifremer  }
-
-      Lieu / Date*:     | { ^DRZ - Douarnenez      ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | <&calendar> Créé le 10/11/2023
-
-      Ligne de plan*:     | { ^ 2023_V0001 DRZ ^ }
-
+      Programme de rattachement*: | ^DPMA_20_23_Lot2^ | * | <&calendar> Créé le 10/11/2023
+      .
+      Observateurs* :            | ^ Observateur #1        ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
+      .
+      Lieu / Date*:     | { ^DRZ - Douarnenez       ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | [Terminer la saisie]
+      Type de vente*:   | { ^Enchères - HAM / Criées^}
+      .
   }
 
   <b>Caractéristiques :
 
   {
-      . | Liste d'espèce :      | "  "
+      . | Liste d'espèces :      | "  "
       . | Caractéristique #2 :  | ^Valeur qualitative^
       . | .                     | + autres caractéristiques (cf "Grille de saisie" - à venir)
       . | .
