@@ -99,16 +99,28 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
    * "Détails"
    * "Echantillonnages"
 3. Dans l'onglet "Détails", l'observateur sélectionne :
-   * Le ou les observateurs
+   * La référence au plan. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseigné via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
+   * Le ou les observateurs. L'observateur est automatiquement renseigné avec le saisisseur
    * Le lieu
-   * La date
-   * La ligne de plan
-   * Les caractéristiques
-4. La liste des espèces à observer s'affiche
-5. L'observateur enregistre la sortie
+   * La date. La stratégie est automatiquement renseigné et les caractéristiques de la vente s'affichent
+   * Le type de vente
+4. L'observateur renseigne les caractéristiques de la vente
+
+#### Détails techniques :
+  * Type de vente : SALE_TYPE
+  * Caractéristiques de la vente : 
+    * Origine : PMFM_STRATGY avec :
+      * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
+      * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID
+      * PMFM_STRATGY.ACQUISITION_LEVEL_FK = SALE_SURVEY ou OBSERVED_SALE
+    * Caractère obligatoire : PMFM_STRATGY.IS_MANDATORY
+    * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - Caractéristiques : présentes par défaut ? ajout possible ?
+> - Ajouter les champs : date et heure d'arrivée de l'obs, date et heure de départ de l'obs, type de sortie, disponibilité de la fichie pré-vente ?
+> - Caractéristiques : Autoriser l'ajout de caractéristiques ? 
+> - Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
+> - Liste d'espèces à observer : déjà présente dans l'API Allegro-WAO ?
 
 ---
 
@@ -118,6 +130,17 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
+#### Scénario principal
+
+1. Dans l'onglet "Echantillonnages", l'observateur consulte la liste des espèces à observer
+2. Pour chaque espèce observée, l'observateur :
+   * Coche la case 
+   * Indique le navire* associée
+   * Saisit un commentaire
+3. Pour chaque espèce non observée, l'observateur saisit un commentaire*
+4. L'observateur enregistre la sortie
+5. Le bandeau de l'écran affiche "Lieu - date"
+6. L'encart sur le saisisseur s'affiche
 
 
 ---
