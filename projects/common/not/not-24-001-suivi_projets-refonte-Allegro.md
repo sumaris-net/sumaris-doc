@@ -41,7 +41,7 @@ Difficulté à estimer la durée des chantiers
 ---
 ### Démarrage des développements
 
-> [!IMPORTANT]
+> :information_source:
 > Début des développements CODRA - Semaine N°10 (04/03/2024)
 
 - 2 Journées de présentation (04-05/03/2024)
@@ -50,7 +50,7 @@ Difficulté à estimer la durée des chantiers
   - Création et répartition des premiers tickets de développements pour CODRA (ISI/EIS)
     - Ecrans ObsVente à réaliser
 
-> [!WARNING]
+> :warning:
 > Information : Benoit (EIS) : Absent la semaine N°11 (du 11/03/2024 au 15/03/2024)
 
 ## Organisation des développements
