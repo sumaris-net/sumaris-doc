@@ -126,11 +126,11 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 **Variante(s) :**
 
-**Variante 1a :** Le saisisseur crée une nouvelle vente (REF: OBSVENTE/VENTE/DETAILS)
+**Variante 2a :** Le saisisseur crée une nouvelle vente (REF: OBSVENTE/VENTE/DETAILS)
 
-**Variante 1b :** Le saisisseur consulte une vente existante
+**Variante 2b :** Le saisisseur consulte une vente existante
 
-**Variante 1c :** Le saisisseur supprime une vente existante
+**Variante 2c :** Le saisisseur supprime une vente existante
 
 ---
 ## Vente > Détails
@@ -176,7 +176,7 @@ La création d'une vente est accessible depuis le tableau de consultation des ve
 
 ---
 
-### Vente > Echantillonnage
+## Vente > Echantillonnage
 
 **REF: OBSVENTE/VENTE/ECH**
 
@@ -186,22 +186,48 @@ La création d'une vente est accessible depuis le tableau de consultation des ve
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
 2. Pour chaque espèce observée, le saisisseur :
-   * Coche la case 
+   * Coche la case*
    * Sélectionne le navire*
    * Saisit un commentaire
 3. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
 4. Le saisisseur enregistre la vente
-5. Le bandeau de l'écran affiche xxx
+5. Le bandeau de l'écran affiche "Sortie : Erquy - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
 6. L'encart sur le saisisseur s'affiche
+
+**Variante(s) :**
+
+**Variante 3a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
+
+**Variante 3b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTE/VENTE/ECH/LOT)
 
 > Questions :
 > - PETS : fonctionnement attendu ?
 
 ---
-
 ## Lots espèces (1/3)
 
+**REF: OBSVENTE/VENTE/ECH/LOT**
+
 ![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
+
+La création d'un lot d'espèce est accessible depuis le tableau de consultation des espèces à observer en double-cliquant sur une espèce
+
+#### Scénario principal
+
+1. Pour chaque lot, le saisisseur renseigne :
+   * L'espèce commerciale*
+   * La catégorie de tri terrain*
+   * La catégorie UE*
+   * L'état*
+   * La présentation*
+   * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
+   * Le taux échantillonné
+   * Le poids échantillonné
+2. Le saisisseur enregistre
+
+**Variante(s) :**
+
+**Variante 4a :** Le saisisseur ajoute des mesures individuelles
 
 - Lots espèces: 
   - espèce commerciale
@@ -215,8 +241,9 @@ La création d'une vente est accessible depuis le tableau de consultation des ve
   - 30 individus
   
 ---
-
 ## Lots espèces (2/3)
+
+**REF: OBSVENTE/VENTE/ECH/LOT/MESURES**
 
 ![ui-obsvente](/projects/obsvente/spe/images/sample-add.svg)
 
