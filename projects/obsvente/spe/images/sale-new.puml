@@ -1,8 +1,9 @@
 @startsalt
 {
   <b>Nouvelle vente
-  ..
+  --
   {/ <b>Détails | Echantillonnages }
+  ..
   .
   {
 
@@ -24,7 +25,7 @@
   <b>Caractéristiques :
 
   {
-      . | Temps disponible à l'échantillonnage* :| 4.0
+      . | Temps disponible à l'échantillonnage* :| "4.0"
       . | Programme de rattachement* :   | ^DPMA_20_23_Lot2^
       . | Stratégie d'échantillonnage* : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
       . | Validation observateur* : | ^Données contrôlées^

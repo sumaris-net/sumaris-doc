@@ -2,11 +2,12 @@
 {
   <b>Sorties                                                                                                                                                          <&plus>
   --
+  .
 	{#
 
      [ ]. | <b>Etat | <b>Programme | <b>Lieu de la sortie | <b>Date/heure | <b>Observateurs | <b>Saisisseur | .
-     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | FRDRZ - Douarnenez | 25/11/2023 17:00 | obs1 | obs1
-     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | FRDRZ - Douarnenez | 26/11/2023 17:00 | obs1, obs2 | obs1 | <&comment-square>
+     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | XDZ - Douarnenez | 25/11/2023 17:00 | obs1 | obs1
+     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | XDZ - Douarnenez | 26/11/2023 17:00 | obs1, obs2 | obs1 | <&comment-square>
     }
 
 }

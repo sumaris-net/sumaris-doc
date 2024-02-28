@@ -1,10 +1,13 @@
 @startsalt
 {
-
+  <b>Nouvelle vente
+  --
   {/  Détails | <b> Échantillonnages }
-
+  ..
+  <&plus>
+  .
 	{#
-      [ <&plus> ]
+
       # | Priorité | <b>Espèce commerciale | <b>Espèce scientifique             | Navire | Raison de non observation | Commentaire
       [X] . | 1 | POL - Lieu jaune | POL - Pollachius pollachius | 851751- Navire 1 | .
       [X] . | 2 | MNZ - Baudroie | . | 851751 - Navire 1 | .

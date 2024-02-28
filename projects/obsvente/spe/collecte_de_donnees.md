@@ -72,13 +72,15 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
 
 1. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
    * Le programme de collecte
-   * L'état ?
    * Le lieu de la sortie
    * La début de la période
    * La fin de la période
    * L'organisme du saisisseur
    * Le saisisseur
    * L'observateur
+
+> Questions :
+> - Ajouter un filtre sur l'état ?
 
 ---
 ## Sortie > Détails
@@ -116,7 +118,6 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
         * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
         * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
         * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-    * Le navire ??
     * Le lieu
     * La date
     * Le saisisseur
@@ -175,18 +176,18 @@ La création d'une vente est accessible depuis le tableau de consultation des ve
 
 ---
 
-### Sortie > Partie vendue
+### Vente > Echantillonnage
 
-**REF: OBSVENTE/VENTE/PV**
+**REF: OBSVENTE/VENTE/ECH**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
 #### Scénario principal
 
-1. Dans l'onglet "Partie vendue", le saisisseur consulte la liste des espèces à observer
+1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
 2. Pour chaque espèce observée, le saisisseur :
    * Coche la case 
-   * Indique le navire* associée
+   * Sélectionne le navire*
    * Saisit un commentaire
 3. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
 4. Le saisisseur enregistre la vente

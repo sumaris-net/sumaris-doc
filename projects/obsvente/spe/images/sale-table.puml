@@ -1,12 +1,16 @@
 @startsalt
 {
-  <b>Ventes                                                                                                                                                                                              <&plus>
+  <b>Erquy - 02/08/2022
   --
+  {/ Détails | <b>Ventes }
+  ..
+  <&plus> <&reload>
+
 	{#
 
-     [ ]. | <b>Etat | <b>Navire | <b>Lieu de la vente | <b>Date/heure | <b>Saisisseur | <b>Référence au plan | .
-     [ ]. | <b>  <&pencil> | 110854 - TETHYS | ESB - Erquy | 02/08/2022 05:00 | saisisseur1 | 2021_V0010 - DPMA_20_23_Lot2
-     [ ]. | <b>  <&pencil> | 123444 - LA BARAKA | ESB - Erquy | 02/08/2022 05:00 | saisisseur1 | 2021_V0010 - DPMA_20_23_Lot | <&comment-square>
+     [ ]. | <b>Etat | <b>Lieu de la vente | <b>Date/heure | <b>Saisisseur | <b>Référence au plan | .
+     [ ]. | <b>  <&pencil> | ESB - Erquy | 02/08/2022 05:00 | saisisseur1 | 2021_V0010 - DPMA_20_23_Lot2
+     [ ]. | <b>  <&pencil> | ESB - Erquy | 02/08/2022 05:00 | saisisseur1 | 2021_V0011 - DPMA_20_23_Lot1 | <&comment-square>
     }
 
 }
