@@ -32,36 +32,37 @@
 
 **REF: OBSVENTE/SORTIES**
 
-![ui-obsvente](/projects/obsvente/spe/images/obsvente-table.svg)
+![ui-obsvente](/projects/obsvente/spe/images/observed-location-table.svg)
 
 #### Scénario principal
 
-1. L'observateur sélectionne le menu "Sorties" dans l'interface de l'arbre du menu
+1. Le saisisseur sélectionne le menu "Sorties" dans l'interface de l'arbre du menu
 2. L'écran "Sorties" s'ouvre. Les informations suivantes sont affichées pour chaque sortie :
    * L'état de saisie de la sortie :
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-   * Le lieu
-   * La date
+   * Le programme
+   * Le lieu de la sortie
+   * La date/heure
    * Le ou les observateurs
    * Le saisisseur
    * Le commentaire
 
 **Variante(s) :**
 
-**Variante 1a :** L'observateur filtre les sorties (REF: OBSVENTE/FILTERS)
+**Variante 1a :** Le saisisseur filtre les sorties (REF: OBSVENTE/SORTIES/FILTRES)
 
-**Variante 1b :** L'observateur crée une nouvelle sortie (REF: OBSVENTE/GENERAL)
+**Variante 1b :** Le saisisseur crée une nouvelle sortie (REF: OBSVENTE/SORTIE/DETAILS)
 
-**Variante 1c :** L'observateur consulte une sortie existante
+**Variante 1c :** Le saisisseur consulte une sortie existante
 
-**Variante 1d :** L'observateur supprime une sortie existante
+**Variante 1d :** Le saisisseur supprime une sortie existante
 
 ---
 ## Sorties > Filtres
 
-**REF: OBSVENTE/SORTIES/FILTERS**
+**REF: OBSVENTE/SORTIES/FILTRES**
 
 ![ui-obsvente](/projects/obsvente/spe/images/obsvente-table-filters.svg)
 
@@ -69,10 +70,10 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
 
 #### Scénario principal
 
-1. L'observateur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+1. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
    * Le programme de collecte
-   * L'état
-   * Le lieu
+   * L'état ?
+   * Le lieu de la sortie
    * La début de la période
    * La fin de la période
    * L'organisme du saisisseur
@@ -80,31 +81,81 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'observateur
 
 ---
-
 ## Sortie > Détails
 
 **REF: OBSVENTE/SORTIE/DETAILS**
 
-![ui-observed-location](/projects/obsvente/spe/images/observed-location-new.svg)
-
-> Lignes de plan avec statut "programmée" doivent être importée (depuis WAO).
-> Avec la liste des espèces prioritaires à échantillonner.
+![ui-obsvente](/projects/obsvente/spe/images/observed-location-new.svg)
 
 La création d'une sortie est accessible depuis le tableau de consultation des sorties via l'icône <&plus>
 
 #### Scénario principal
 
-1. L'observateur demande la création d'une nouvelle sortie
-2. L'écran "Nouvelle sortie" s'ouvre. Il est composé de 2 onglets :
+1. Le saisisseur demande la création d'une nouvelle sortie
+2. L'écran "Nouvelle sortie" s'ouvre sur l'onglet "Détails" (seul onglet accessible)
+3. Le saisisseur sélectionne :
+    * Le programme de collecte
+    * Le lieu
+    * La date/heure
+    * Le commentaire
+4. Le saisisseur enregistre
+5. Le bandeau de l'écran affiche "Lieu - date"
+6. L'onglet "Ventes" s'affiche
+
+---
+## Sortie > Ventes
+
+**REF: OBSVENTE/SORTIE/VENTES**
+
+![ui-obsvente](/projects/obsvente/spe/images/sale-table.svg)
+
+#### Scénario principal
+
+1. Les informations suivantes sont affichées pour chaque vente de la sortie :
+    * L'état de saisie de la vente :
+        * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
+        * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+        * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
+    * Le navire ??
+    * Le lieu
+    * La date
+    * Le saisisseur
+    * La référence au plan
+    * Le commentaire
+
+**Variante(s) :**
+
+**Variante 1a :** Le saisisseur crée une nouvelle vente (REF: OBSVENTE/VENTE/DETAILS)
+
+**Variante 1b :** Le saisisseur consulte une vente existante
+
+**Variante 1c :** Le saisisseur supprime une vente existante
+
+---
+## Vente > Détails
+
+**REF: OBSVENTE/VENTE/DETAILS**
+
+![ui-observed-location](/projects/obsvente/spe/images/sale-new.svg)
+
+> Lignes de plan avec statut "programmée" doivent être importée (depuis WAO).
+> Avec la liste des espèces prioritaires à échantillonner.
+
+La création d'une vente est accessible depuis le tableau de consultation des ventes via l'icône <&plus>
+
+#### Scénario principal
+
+1. Le saisisseur demande la création d'une nouvelle vente
+2. L'écran "Nouvelle vente" s'ouvre. Il est composé de 2 onglets :
    * "Détails"
    * "Echantillonnages"
-3. Dans l'onglet "Détails", l'observateur sélectionne :
+3. Dans l'onglet "Détails", le saisisseur sélectionne :
    * La référence au plan. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseigné via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
    * Le ou les observateurs. L'observateur est automatiquement renseigné avec le saisisseur
    * Le lieu
    * La date. La stratégie est automatiquement renseigné et les caractéristiques de la vente s'affichent
    * Le type de vente
-4. L'observateur renseigne les caractéristiques de la vente
+4. Le saisisseur renseigne les caractéristiques de la vente
 
 #### Détails techniques :
   * Type de vente : SALE_TYPE
@@ -117,35 +168,39 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - Ajouter les champs : date et heure d'arrivée de l'obs, date et heure de départ de l'obs, type de sortie, disponibilité de la fichie pré-vente ?
+> - Ajouter les champs : type de sortie, disponibilité de la fichie pré-vente ?
 > - Caractéristiques : Autoriser l'ajout de caractéristiques ? 
 > - Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - Liste d'espèces à observer : déjà présente dans l'API Allegro-WAO ?
 
 ---
 
-### Sortie > Échantillonnages
+### Sortie > Partie vendue
 
-**REF: OBSVENTE/SORTIE/ECH**
+**REF: OBSVENTE/VENTE/PV**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
 #### Scénario principal
 
-1. Dans l'onglet "Echantillonnages", l'observateur consulte la liste des espèces à observer
-2. Pour chaque espèce observée, l'observateur :
+1. Dans l'onglet "Partie vendue", le saisisseur consulte la liste des espèces à observer
+2. Pour chaque espèce observée, le saisisseur :
    * Coche la case 
    * Indique le navire* associée
    * Saisit un commentaire
-3. Pour chaque espèce non observée, l'observateur saisit un commentaire*
-4. L'observateur enregistre la sortie
-5. Le bandeau de l'écran affiche "Lieu - date"
+3. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
+4. Le saisisseur enregistre la vente
+5. Le bandeau de l'écran affiche xxx
 6. L'encart sur le saisisseur s'affiche
 
+> Questions :
+> - PETS : fonctionnement attendu ?
 
 ---
 
 ## Lots espèces (1/3)
+
+![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
 
 - Lots espèces: 
   - espèce commerciale
@@ -161,6 +216,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 ---
 
 ## Lots espèces (2/3)
+
+![ui-obsvente](/projects/obsvente/spe/images/sample-add.svg)
 
 - Mesures individuelles :
   - Connectivité à la règle **Gwaleen** 

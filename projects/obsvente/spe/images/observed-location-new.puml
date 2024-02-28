@@ -2,34 +2,14 @@
 {
   <b>Nouvelle sortie
   ..
-  {/ <b>Détails | Echantillonnages }
+  {/ <b>Détails | Ventes }
   .
   {
 
-      Programme de collecte* :    | { ^SIH-OBSVENTE                                 ^ } | * | {^"Stratégie"
-                                                                                              ObsVente démarrage au 01/01/2024 <&eye> }
-
-      Référence* : | ^2021_V0010 - DPMA_20_23_Lot2^ | * | {^"Saisisseur"
-                                                          Nicolas DUPOND - Ifremer  }
-
-      Programme de rattachement* : | ^DPMA_20_23_Lot2^ | * | <&calendar> Créé le 10/11/2023
+      Programme de collecte* :    | { ^SIH-OBSVENTE^ }
+      Lieu / Date* :     | { ^XDZ - Douarnenez^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+      Observateurs* :            | ^ Observateur #1 ^ | { [<&plus>] | [<&x>] }
       .
-      Observateurs* :            | ^ Observateur #1        ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
-      .
-      Lieu / Date* :     | { ^DRZ - Douarnenez       ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | [Terminer la saisie]
-      Type de vente* :   | { ^Enchères - HAM / Criées^}
-      .
-  }
-
-  <b>Caractéristiques :
-
-  {
-      . | Temps disponible à l'échantillonnage* :| 4.0
-      . | Programme de rattachement* :   | ^DPMA_20_23_Lot2^
-      . | Stratégie d'échantillonnage* : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
-      . | Validation observateur* : | ^Données contrôlées^
-      . | Validation société* : | ^Données valides^
-      . | .
   }
 
   {
