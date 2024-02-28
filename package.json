@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "gulp clean",
     "compile": "gulp compile",
+    "svg": "gulp svg",
     "build": "gulp build",
     "start": "gulp serve"
   },
@@ -41,7 +42,7 @@
     "yargs": "^7.1.2"
   },
   "engines": {
-    "node": ">= 18.19.0",
+    "node": ">= 1npm i8.19.0",
     "npm": ">= 9.9.1"
   }
 }
