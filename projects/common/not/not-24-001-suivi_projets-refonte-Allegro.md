@@ -44,13 +44,36 @@ Difficulté à estimer la durée des chantiers
 > :information_source:
 > Début des développements CODRA - Semaine N°10 (04/03/2024)
 
-- 2 Journées de présentation (04-05/03/2024)
-  - Présentation des spécifications aux développeurs de CODRA (ISI/CODRA)
-  - Présentation du socle technique/architecture aux développeurs de CODRA (EIS)
-  - Création et répartition des premiers tickets de développements pour CODRA (ISI/EIS)
-    - Ecrans ObsVente à réaliser
+- 2 Journées de présentation Refonte Allegro (04-05/03/2024)
+
+  - 04/03/2024 - ISI / CODRA / EIS - Spécifications
+    - Présentation du contexte ObsMer/ObsVente
+      - Formulaires terrains, Manuel Observateur, Videos de présentation du métier d'observateur (déposer sur gitlab)
+      - Version Allegro Actuellement utilisée (démo, documentations)
+        - ObsMer
+        - ObsVente
+    - Présentation des spécifications aux développeurs de CODRA (ISI/CODRA)
+      - ObsVente : Développement par CODRA, support EIS
+        - Revue fonctionnelle MOA le 29/02/2023, 12/03/2023
+      - ObsMer : Développement EIS (dans un premier temps)
+    - Rédaction/Présentation des tickets ObsVente (re-use Imagine)
+      - Ticket 1 : OBSVENTE/SORTIE/DETAILS
+      - Ticket 2 : OBSVENTE/SORTIE/VENTE/DETAILS
+      - Ticket 3 : OBSVENTE/SORTIES
+      - Ticket 4 : OBSVENTE/SORTIE/VENTES
+
+  - 05/03/2024 - ISI / CODRA / EIS
+    - Présentation de l'architecture de Sumaris 
+    - Présentation du socle technique de Sumaris
+    - Présentation du scole technique ObsVente, ObsMer
+    - Présentation de l'environnement de développement, tests unitaires, ... 
+    - Présentation des best practices
+      - Re-use
+      - Performances
+      - ...
 
 > :warning:
+> Planifier la migration Imagine vers Angular 17 (Semaine N° ?). Point EIS sur la migration.
 > Information : Benoit (EIS) : Absent la semaine N°11 (du 11/03/2024 au 15/03/2024)
 
 ## Organisation des développements
