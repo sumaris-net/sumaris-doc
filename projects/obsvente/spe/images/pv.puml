@@ -2,12 +2,13 @@
 {
   <b>Lots
   --
-	{#
-     . | {[ <&plus> ] | [ <&trash> ] }  | . | . | . | . | .
+  { <&plus> <&trash> }
+
+  {#
      # | <b>Espèce commerciale | <b>Catégorie de tri terrain | <b>Catégorie UE | <b>Etat | <b>Présentation | <b>Poids total (kg) | <b>Taux échant. | <b>Poids échant. | <b>Nb ind. échant. | <&menu>
      1 | MAC - Maquerau commun | 20 | Cat UE20 | FRE - Frais | WHL - Entier | 2 | 1 | 2 | 15 | <&bar-chart> <&comment-square>
      2 | MAC - Maquerau commun | 30 | Cat UE30 | FRE - Frais | WHL - Entier | 3 | 1 | 3 | 11 | <&bar-chart> <&comment-square>
-    }
+   }
 
 }
 @endsalt

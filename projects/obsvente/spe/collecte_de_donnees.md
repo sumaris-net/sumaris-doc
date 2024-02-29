@@ -4,10 +4,10 @@
 
 ## Sommaire
 
-- [Sortie en criée](#/1/4)
-  - [Échantillonnages](#/1/5)
-- [Lots epsèces](#/1/6)
-  - [Mesures individuelles](#/1/9)
+- [Sorties](#/1/4)
+  - [Ventes](#/1/5)
+    - [Lots epsèces](#/1/6)
+      - [Mesures individuelles](#/1/9)
 - Référentiels
 - Historique
 
@@ -15,6 +15,7 @@
 
 ## Documents
 
+- [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
 - [Formulaire terrain OBSVENTE](/projects/obsvente/doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf) (v1 2023)
 
 ---
