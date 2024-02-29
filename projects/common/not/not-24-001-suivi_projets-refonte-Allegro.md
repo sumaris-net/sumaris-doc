@@ -34,7 +34,7 @@ Par la suite d’autres outils ont vocation à intégrer ce socle applicatif :
 2 chantiers en parallèle : 
 - Obsmer à partir de mars
 - Obsvente à partir de mars
-- Calendrier d’activité date de démmarage à confirmer en fonction des avancées des autres chantiers
+- Calendrier d’activité date de démarrage à confirmer en fonction des avancées des autres chantiers
 
 Difficulté à estimer la durée des chantiers
 
@@ -74,6 +74,7 @@ Difficulté à estimer la durée des chantiers
 
 > :warning:
 > Planifier la migration Imagine vers Angular 17 (Semaine N° ?). Point EIS sur la migration.
+
 > Information : Benoit (EIS) : Absent la semaine N°11 (du 11/03/2024 au 15/03/2024)
 
 ## Organisation des développements
@@ -89,6 +90,10 @@ EIS avance sur le maquettage des écrans de calendriers d’activités pour ensu
 - Réunion à bloquer en amont avec les acteurs notamment les démonstrations
   - Avancement : Inclure ISI, Développeurs et HISSEO (MOA)
 
+> :information_source:
+Les 2 premiers sprints sur ObsVentes devront aboutir à la réalisation d'un prototype de l'ensemble des écrans
+afin de faire une démonstration aux utilisateurs de métropole et desDOM, sur la saisie PC et tablette. 
+
 ---
 ## Support de spécifications
 
@@ -103,6 +108,13 @@ A confirmer ISI/EIS
   - Cloisonnement des tickets par application
 - Gestion du board dans gitlab
 
+---
+## Support cibles des outils de saisie
+
+- ObsVentes : En mode tablette et PC
+  - La saisie sur tablette est importante
+  
+- ObsMer : Saisie sur PC priotiaire
 
 ---
 ## Point contractuel
