@@ -1,6 +1,6 @@
 @startsalt
 {
-  <b>Nouvelle vente
+  <b>Nouvelle sortie
   --
   {/  Détails | <b> Échantillonnages }
   ..
@@ -8,11 +8,11 @@
   .
 	{#
 
-      # | Priorité | <b>Espèce commerciale | <b>Espèce scientifique             | Navire | Raison de non observation | Commentaire
-      [X] . | 1 | POL - Lieu jaune | POL - Pollachius pollachius | 851751- Navire 1 | . | .
-      [X] . | 2 | MNZ - Baudroie | . | 851751 - Navire 1 | . | .
-      [ ] . | 3 | PIL - Sardine commune | PIL - Sardina pilchardus | . | ^ Espèce absente       ^ | .
-      [X] . | 4 | NEP - Langoustine | NEP - Nephrops norvegicus   | 741541 - Navire 2 | . | .
+      # |<b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique   | <b>Navire | <b>Type de vente | <b>Raison de non observation | <b>Commentaire
+      [X] . | 1 | POL - Lieu jaune | POL - Pollachius pollachius | 851751- Navire 1 | { ^Enchères - HAM / Criées^} | . | .
+      [X] . | 2 | MNZ - Baudroie | . | 851751 - Navire 1 | { ^Enchères - HAM / Criées^} |. | .
+      [ ] . | 3 | PIL - Sardine commune | PIL - Sardina pilchardus | . -|{ ^Enchères - HAM / Criées^} | ^ Espèce absente       ^ | .
+      [X] . | 4 | NEP - Langoustine | NEP - Nephrops norvegicus   | 741541 - Navire 2 | { ^Enchères - HAM / Criées^} | . | .
       [ ] . | 5 | ... | . | . | .
 
     }

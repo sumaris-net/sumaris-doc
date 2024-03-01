@@ -1,12 +1,11 @@
 # Collecte de données
-## Spécifications (ObsVente)
+## Spécifications (ObsVentes)
 ---
 
 ## Sommaire
 
 - [Sorties](#/1/4)
-  - [Ventes](#/1/5)
-    - [Lots epsèces](#/1/6)
+    - [Lots epsèces](#/1/5)
       - [Mesures individuelles](#/1/9)
 - Référentiels
 - Historique
@@ -16,24 +15,32 @@
 ## Documents
 
 - [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
-- [Formulaire terrain OBSVENTE](/projects/obsvente/doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf) (v1 2023)
+- [Formulaire terrain OBSVENTES](/projects/obsvente/doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf) (v1 2023)
+- [Formulaire terrain OBSVENTES DOM](/projects/obsvente/doc/Manuel_OBSVENTES_DOM_V3_2022.pdf)
 
 ---
 
 ## Lignes de plan
 
-- Fichier CSV importé dans WAO ObsVente
+- Fichier CSV importé dans WAO ObsVentes
 - Possibilité de modifier/supprimer une ligne
 - TODO : Mapping modèle WAO / 
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
+
+---
+
+## Support cible du livrable ObsVentes
+
+Le mode tablette est à inclure dans le périmètre de la V1.
+
 ---
 ## Sorties
 
-**REF: OBSVENTE/SORTIES**
+**REF: OBSVENTES/SORTIES**
 
-![ui-obsvente](/projects/obsvente/spe/images/observed-location-table.svg)
+![ui-obsventes](/projects/obsvente/spe/images/observed-location-table.svg)
 
 #### Scénario principal
 
@@ -47,14 +54,16 @@
    * Le lieu de la sortie
    * La date/heure
    * Le ou les observateurs
-   * Le saisisseur
+   * Les saisisseurs
+     * Il peut y avoir un ou plusieurs saisisseurs, dans le cas d'une poursuite de saisie
+     * _En BDD, le saisisseur correspond au premier saisisseur_
    * Le commentaire
 
 **Variante(s) :**
 
-**Variante 1a :** Le saisisseur filtre les sorties (REF: OBSVENTE/SORTIES/FILTRES)
+**Variante 1a :** Le saisisseur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
 
-**Variante 1b :** Le saisisseur crée une nouvelle sortie (REF: OBSVENTE/SORTIE/DETAILS)
+**Variante 1b :** Le saisisseur crée une nouvelle sortie (REF: OBSVENTES/SORTIE/DETAILS)
 
 **Variante 1c :** Le saisisseur consulte une sortie existante
 
@@ -63,9 +72,9 @@
 ---
 ## Sorties > Filtres
 
-**REF: OBSVENTE/SORTIES/FILTRES**
+**REF: OBSVENTES/SORTIES/FILTRES**
 
-![ui-obsvente](/projects/obsvente/spe/images/obsvente-table-filters.svg)
+![ui-obsventes](/projects/obsvente/spe/images/obsvente-table-filters.svg)
 
 Les filtres des sorties sont accessibles depuis le tableau de consultation des sorties via l'icône entonnoir.
 
@@ -79,111 +88,71 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'organisme du saisisseur
    * Le saisisseur
    * L'observateur
+   * L'état de saisie
 
-> Questions :
-> - Ajouter un filtre sur l'état ?
+Le filtre peut être enregistré pour être réappliqué par le suite (COMMUN/FILTRES).
+
+Les filtres peuvent être multiples sur les champs suivants : 
+- L'organisme du saisisseur
+- Le saisisseur
+- L'observateur
+- L'état de saisie
+
+> Actions ISI : A spécifier dans COMMON/FILTRES
 
 ---
 ## Sortie > Détails
 
-**REF: OBSVENTE/SORTIE/DETAILS**
+**REF: OBSVENTES/SORTIE/DETAILS**
 
-![ui-obsvente](/projects/obsvente/spe/images/observed-location-new.svg)
+![ui-obsventes](/projects/obsvente/spe/images/observed-location-new.svg)
 
-La création d'une sortie est accessible depuis le tableau de consultation des sorties via l'icône <&plus>
+La création d'une sortie est accessible depuis le tableau de consultation des sorties via l'icône :heavy_plus_sign:
 
 #### Scénario principal
 
 1. Le saisisseur demande la création d'une nouvelle sortie
-2. L'écran "Nouvelle sortie" s'ouvre sur l'onglet "Détails" (seul onglet accessible)
-3. Le saisisseur sélectionne :
-    * Le programme de collecte
-    * Le lieu
-    * La date/heure
-    * Le commentaire
-4. Le saisisseur enregistre
-5. Le bandeau de l'écran affiche "Lieu - date"
-6. L'onglet "Ventes" s'affiche
-
----
-## Sortie > Ventes
-
-**REF: OBSVENTE/SORTIE/VENTES**
-
-![ui-obsvente](/projects/obsvente/spe/images/sale-table.svg)
-
-#### Scénario principal
-
-1. Les informations suivantes sont affichées pour chaque vente de la sortie :
-    * L'état de saisie de la vente :
-        * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
-        * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
-        * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-    * Le lieu
-    * La date
-    * Le saisisseur
-    * La référence au plan
-    * Le commentaire
-
-**Variante(s) :**
-
-**Variante 2a :** Le saisisseur crée une nouvelle vente (REF: OBSVENTE/VENTE/DETAILS)
-
-**Variante 2b :** Le saisisseur consulte une vente existante
-
-**Variante 2c :** Le saisisseur supprime une vente existante
-
----
-## Vente > Détails
-
-**REF: OBSVENTE/VENTE/DETAILS**
-
-![ui-observed-location](/projects/obsvente/spe/images/sale-new.svg)
-
-> Lignes de plan avec statut "programmée" doivent être importée (depuis WAO).
-> Avec la liste des espèces prioritaires à échantillonner.
-
-La création d'une vente est accessible depuis le tableau de consultation des ventes via l'icône <&plus>
-
-#### Scénario principal
-
-1. Le saisisseur demande la création d'une nouvelle vente
-2. L'écran "Nouvelle vente" s'ouvre. Il est composé de 2 onglets :
-   * "Détails"
-   * "Echantillonnages"
+2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
+    * "Détails" (automatiquement positionné sur cet onglet)
+    * "Echantillonnages"
 3. Dans l'onglet "Détails", le saisisseur sélectionne :
-   * La référence au plan. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseigné via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
-   * Le ou les observateurs. L'observateur est automatiquement renseigné avec le saisisseur
-   * Le lieu
-   * La date. La stratégie est automatiquement renseigné et les caractéristiques de la vente s'affichent
-   * Le type de vente
-4. Le saisisseur renseigne les caractéristiques de la vente
+    * La référence au plan. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseigné via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
+    * Le ou les observateurs. L'observateur est automatiquement renseigné avec le saisisseur
+    * Le lieu
+    * La date. La stratégie est automatiquement renseigné et les caractéristiques de la sortie s'affichent
+    * Le type de vente
+4. Le saisisseur renseigne les caractéristiques de la sortie
+5. Le saisisseur enregistre
+6. Le bandeau de l'écran affiche "Lieu - date"
+7. Le saisisseur est positionné sur l'onglet "Echantillonnages"
 
 #### Détails techniques :
-  * Type de vente : SALE_TYPE
-  * Caractéristiques de la vente : 
+* Type de vente : SALE_TYPE
+* Caractéristiques de la vente :
     * Origine : PMFM_STRATGY avec :
-      * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
-      * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID
-      * PMFM_STRATGY.ACQUISITION_LEVEL_FK = SALE_SURVEY ou OBSERVED_SALE
+        * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
+        * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID
+        * PMFM_STRATGY.ACQUISITION_LEVEL_FK = SALE_SURVEY ou OBSERVED_SALE
     * Caractère obligatoire : PMFM_STRATGY.IS_MANDATORY
     * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - Ajouter les champs : type de sortie, disponibilité de la fichie pré-vente ?
-> - Caractéristiques : Autoriser l'ajout de caractéristiques ? 
+> - Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente ?
+> - Caractéristiques : Autoriser l'ajout de caractéristiques ?
 > - Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - Liste d'espèces à observer : déjà présente dans l'API Allegro-WAO ?
 
 ---
 
-## Vente > Echantillonnage
+## Sortie > Echantillonnage
 
-**REF: OBSVENTE/VENTE/ECH**
+**REF: OBSVENTE/SORTIE/ECH**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
 #### Scénario principal
+
+Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
 2. Pour chaque espèce observée, le saisisseur :
@@ -191,23 +160,33 @@ La création d'une vente est accessible depuis le tableau de consultation des ve
    * Sélectionne le navire*
    * Saisit un commentaire
 3. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
-4. Le saisisseur enregistre la vente
-5. Le bandeau de l'écran affiche "Sortie : Erquy - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
+4. Le saisisseur enregistre l'échantillon observé
+5. Le bandeau de l'écran affiche "Sortie : Douarnenez - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
 6. L'encart sur le saisisseur s'affiche
 
 **Variante(s) :**
 
-**Variante 3a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
+**Variante 2a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
 
-**Variante 3b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTE/VENTE/ECH/LOT)
+**Variante 2b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTE/SORTIE/ECH/LOT)
 
-> Questions :
-> - PETS : fonctionnement attendu ?
+**Variante 2c:** Débarquement d'espèces sensibles (PETS)
+Il s'agit d'une liste à part, présent dans WAO (export PDF de la liste des espèces à observer). Si présent, la saisie des mensurations est 
+prioritaire sur le reste du protocole.
+
+**Variante 2d:** Protocole de saisie Métropole et Outre-Mer
+Les protocoles de métropoles permettent de définir les caractéristiques suivantes sur les espèces à observer (_non applicable pour le protocole d'Outre-Mer_):
+- Nombre d'espèce minimum à observer
+- Nombre d'espèce maximum à observer
+- Les espèces prioritaires à observer
+
+
+
 
 ---
 ## Lots espèces (1/3)
 
-**REF: OBSVENTE/VENTE/ECH/LOT**
+**REF: OBSVENTE/SORTIE/ECH/LOT**
 
 ![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
 
@@ -224,9 +203,14 @@ La création d'un lot d'espèce est accessible depuis le tableau de consultation
    * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
    * Le taux échantillonné
    * Le poids échantillonné
+   * Si l'espèce est identifiée (case à cocher)
 2. Le saisisseur enregistre
+3. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom) "
 
 **Variante(s) :**
+
+**Variante 1a :** Le saisisseur peut copier/coller un lot pour faire une nouvelle saisie.
+Il sélectionne le lot à copier et clique sur l'icône de recopie.
 
 **Variante 4a :** Le saisisseur ajoute des mesures individuelles
 
@@ -236,24 +220,37 @@ La création d'un lot d'espèce est accessible depuis le tableau de consultation
   - Poids de la caisse, puis poids échantillonné
   > Cas des mélanges ? (ex: baudroie blanche/noire)
   > Pas de sous-échantillonnage ?
-- Mesures individuelles :
-  - espèce scientifique 
-  - sexe, longueur 
-  - 30 individus
   
+
+> ISI : cas d'usage à faire sur le contrôle des données
+
+> Détecter les lots saisis en doublons : Créer une clé unique à partir de la stratégie
+
 ---
 ## Lots espèces (2/3)
 
-**REF: OBSVENTE/VENTE/ECH/LOT/MESURES**
+**REF: OBSVENTE/SORTIE/ECH/LOT/MESURES**
 
-![ui-obsvente](/projects/obsvente/spe/images/sample-add.svg)
+![ui-obsventes](/projects/obsvente/spe/images/sample-add.svg)
 
 - Mesures individuelles :
-  - Connectivité à la règle **Gwaleen** 
-    - Mode bureau (USB ?) 
-  - Caisse de **mélange**: possible au sein d'un même espèce commerciale :  
-    Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale  
-    (**non prioritaire**)
+    - espèce scientifique
+    - sexe, longueur, taille
+    - 30 individus
+    - Connectivité à la règle **Gwaleen** 
+      - Mode bureau (USB ?) 
+    - Caisse de **mélange**: possible au sein d'un même espèce commerciale :  
+     Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale  
+     (**non prioritaire**)
+
+**Variante(s) :**
+
+**Variante 1a :** Contrôle des valeurs saisies
+La stratégie permet de définir des bornes minimales et maximales sur la longueur et les poids, globalement ou par espèce.
+NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
+
+Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d'avertissement
+
 
 ---
 
@@ -292,6 +289,15 @@ La création d'un lot d'espèce est accessible depuis le tableau de consultation
 ## Référentiels
 
 (en cours de rédaction)
+
+---
+## Importation depuis ObsDeb
+Dans ObsDeb, il est possible de saisir des ventes en version moins poussée que dans ObsVentes.
+Au niveau de l'écran des marée, on a une case à cocher indiquant si la marée est à transférer dans ObsVentes.
+Un flag est alors positionné sur la table SURVEY_MEASUREMENT grâce à un PSFM (1987, valeur qualitative : Oui/Non)
+Voir les Mantis :
+- [35221: Transfert de données Obsdeb / Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35221) 
+- [[OBSVENTE-OBSDEB] Evol : Transfert de données Obsdeb vers Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35031)
 
 ---
 ## Historique
