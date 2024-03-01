@@ -1,5 +1,5 @@
 # Refonte Allegro 
-# (ObsMer / ObsVente / Calendrier d'activité)
+# (ObsMer / ObsVentes / Calendrier d'activité)
 
 > Rédacteurs :
 > - Vincent FACHERO - VFA - (IFREMER)
@@ -10,7 +10,7 @@
 
 ## Objectifs 
 
-La refonte Allegro porte sur le développement des volets Obsmer, Obsvente et Calendrier d’Activité en se basant sur le socle Sumaris développé par la société EIS.
+La refonte Allegro porte sur le développement des volets Obsmer, Obsventes et Calendrier d’Activité en se basant sur le socle Sumaris développé par la société EIS.
 Par la suite d’autres outils ont vocation à intégrer ce socle applicatif :
 - Administration des référentiels
 - WAO (Planification des observations obsmer/obsventes)
@@ -27,7 +27,7 @@ Par la suite d’autres outils ont vocation à intégrer ce socle applicatif :
 - Janvier/Février/Mars
   - ObsMer : rédaction VFA, relecture CDE
   - Calendrier d'activité : rédaction CDE, Relecture VFA
-  - ObsVente : rédaction VFA, CDE
+  - ObsVentes : rédaction VFA, CDE
 
 ---
 
@@ -37,7 +37,7 @@ Par la suite d’autres outils ont vocation à intégrer ce socle applicatif :
 
 2 chantiers en parallèle : 
 - Obsmer à partir de mars
-- Obsvente à partir de mars
+- Obsventes à partir de mars
 - Calendrier d’activité date de démarrage à confirmer en fonction des avancées des autres chantiers
 
 Difficulté à estimer la durée des chantiers
@@ -50,27 +50,28 @@ Difficulté à estimer la durée des chantiers
 
 - 2 Journées de présentation Refonte Allegro (04-05/03/2024)
   - 04/03/2024 - ISI / CODRA / EIS - Spécifications
-    - Présentation du contexte ObsMer/ObsVente
+    - Présentation du contexte ObsMer/ObsVentes
       - Formulaires terrains, Manuel Observateur, Videos de présentation du métier d'observateur (déposer sur gitlab)
       - Version Allegro Actuellement utilisée (démo, documentations)
         - ObsMer
-        - ObsVente
+        - ObsVentes
 ---
     - Présentation des spécifications aux développeurs de CODRA (ISI/CODRA)
-      - ObsVente : Développement par CODRA, support EIS
+      - ObsVentes : Développement par CODRA, support EIS
         - Revue fonctionnelle MOA le 29/02/2023, 12/03/2023
       - ObsMer : Développement EIS (dans un premier temps)
-    - Rédaction/Présentation des tickets ObsVente (re-use Imagine)
-      - Ticket 1 : OBSVENTE/SORTIE/DETAILS
-      - Ticket 2 : OBSVENTE/SORTIE/VENTE/DETAILS
-      - Ticket 3 : OBSVENTE/SORTIES
-      - Ticket 4 : OBSVENTE/SORTIE/VENTES
+        - Montée en compétence de CODRA        
+    - Rédaction/Présentation des tickets ObsVentes (re-use Imagine)
+      - Ticket 1 : OBSVENTES/SORTIES
+      - Ticket 2 : OBSVENTES/SORTIE/DETAILS
+      - ...
+
 ---
   - 05/03/2024 - ISI / CODRA / EIS
     - Présentation de l'architecture de Sumaris 
     - Présentation du socle technique de Sumaris
-    - Présentation du scole technique ObsVente, ObsMer
-    - Présentation de l'environnement de développement, tests, ... 
+    - Présentation du socle technique ObsVents, ObsMer
+    - Présentation de l'environnement de développement (IDE, outils, ...)
     - Présentation des best practices
       - Re-use
       - Performances
@@ -84,19 +85,39 @@ Difficulté à estimer la durée des chantiers
 ---
 ## Organisation des développements
 
-EIS continue d’avancer sur le chantier OBSMER.
+EIS continue d’avancer sur le chantier OBSMER (avec une montée en compétence d'un intervenant de CODRA).
 
-CODRA intervient avec 2 intervenants à partir du 04/03/2023 sur le chantier OBSVENTE (les écrans ressemblent à ceux d’Imagine).
+CODRA intervient avec 2 intervenants à partir du 04/03/2023 sur le chantier ObsVentes (les écrans ressemblent à ceux d’Imagine).
 
 EIS avance sur le maquettage des écrans de calendriers d’activités pour ensuite pouvoir faire la réalisation par CODRA.
 
 - Développement sur base de sprints de 3 semaines
+  - Des points d'avancement / présentation seront réaliser avec la MOA
 - Daily à positionner
 - Réunion à bloquer en amont avec les acteurs notamment les démonstrations (Inclure ISI, Développeurs et HISSEO (MOA))
 
 > :information_source:
 > Les 2 premiers sprints sur ObsVentes devront aboutir à la réalisation d'un prototype dans le but de faire une démonstration 
 aux utilisateurs de métropole et des DOM (saisie PC et tablette).
+
+---
+## Organisation des réunions
+
+- Daily meeting
+  - Participants : ISI/CODRA/EIS
+  - Fréquence : Quotidienne
+
+- Fin de prints
+  - Participants : ISI/CODRA/EIS/MOA
+  - Fréquence : Toutes les 3 semaines  
+
+- Revue de spécifications 
+  - Participants : ISI/CODRA/EIS/MOA
+  - Fréquence : Hebdomadaire actuellement (à espacer par la suite)
+
+- Démonstration aux utilisateurs 
+  - Participants : ISI/CODRA/EIS/MOA/Observateurs, saisisseurs/Administrateurs
+  - Fréquence : A positionner selon l'avancement
 
 ---
 ## Support de spécifications
@@ -129,7 +150,8 @@ A confirmer ISI/EIS
 ---
 ## Historique
 
-|       Date | Auteur | Sections mises à jour                  |
-|-----------:|--------|----------------------------------------|
-| 06/02/2024 | VFA    | Création                               |
-| 28/02/2024 | VFA    | Prise en compte du point du 22/02/2024 |
+|       Date | Auteur | Sections mises à jour                             |
+|-----------:|--------|---------------------------------------------------|
+| 06/02/2024 | VFA    | Création                                          |
+| 28/02/2024 | VFA    | Prise en compte du point du 22/02/2024            |
+| 01/03/2024 | VFA    | Prise en compte du point avec CODRA du 01/03/2024 |
