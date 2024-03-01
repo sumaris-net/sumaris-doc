@@ -1,9 +1,12 @@
-# Refonte Allegro - ObsMer / ObsVente / Calendrier d'activité
+# Refonte Allegro 
+# (ObsMer / ObsVente / Calendrier d'activité)
 
 > Rédacteurs :
 > - Vincent FACHERO - VFA - (IFREMER)
 > - Glenn PRIGENT - GPR - (IFREMER)
 > - Caroline DESTREEZ - CDE - (CODRA)
+
+---
 
 ## Objectifs 
 
@@ -27,6 +30,7 @@ Par la suite d’autres outils ont vocation à intégrer ce socle applicatif :
   - ObsVente : rédaction VFA, CDE
 
 ---
+
 ### Planning des développements
 
 ![ui-planning](/projects/common/not/images/planning.png)
@@ -45,13 +49,13 @@ Difficulté à estimer la durée des chantiers
 > Début des développements CODRA - Semaine N°10 (04/03/2024)
 
 - 2 Journées de présentation Refonte Allegro (04-05/03/2024)
-
   - 04/03/2024 - ISI / CODRA / EIS - Spécifications
     - Présentation du contexte ObsMer/ObsVente
       - Formulaires terrains, Manuel Observateur, Videos de présentation du métier d'observateur (déposer sur gitlab)
       - Version Allegro Actuellement utilisée (démo, documentations)
         - ObsMer
         - ObsVente
+---
     - Présentation des spécifications aux développeurs de CODRA (ISI/CODRA)
       - ObsVente : Développement par CODRA, support EIS
         - Revue fonctionnelle MOA le 29/02/2023, 12/03/2023
@@ -61,12 +65,12 @@ Difficulté à estimer la durée des chantiers
       - Ticket 2 : OBSVENTE/SORTIE/VENTE/DETAILS
       - Ticket 3 : OBSVENTE/SORTIES
       - Ticket 4 : OBSVENTE/SORTIE/VENTES
-
+---
   - 05/03/2024 - ISI / CODRA / EIS
     - Présentation de l'architecture de Sumaris 
     - Présentation du socle technique de Sumaris
     - Présentation du scole technique ObsVente, ObsMer
-    - Présentation de l'environnement de développement, tests unitaires, ... 
+    - Présentation de l'environnement de développement, tests, ... 
     - Présentation des best practices
       - Re-use
       - Performances
@@ -77,6 +81,7 @@ Difficulté à estimer la durée des chantiers
 
 > Information : Benoit (EIS) : Absent la semaine N°11 (du 11/03/2024 au 15/03/2024)
 
+---
 ## Organisation des développements
 
 EIS continue d’avancer sur le chantier OBSMER.
@@ -87,12 +92,11 @@ EIS avance sur le maquettage des écrans de calendriers d’activités pour ensu
 
 - Développement sur base de sprints de 3 semaines
 - Daily à positionner
-- Réunion à bloquer en amont avec les acteurs notamment les démonstrations
-  - Avancement : Inclure ISI, Développeurs et HISSEO (MOA)
+- Réunion à bloquer en amont avec les acteurs notamment les démonstrations (Inclure ISI, Développeurs et HISSEO (MOA))
 
 > :information_source:
-Les 2 premiers sprints sur ObsVentes devront aboutir à la réalisation d'un prototype de l'ensemble des écrans
-afin de faire une démonstration aux utilisateurs de métropole et desDOM, sur la saisie PC et tablette. 
+> Les 2 premiers sprints sur ObsVentes devront aboutir à la réalisation d'un prototype dans le but de faire une démonstration 
+aux utilisateurs de métropole et des DOM (saisie PC et tablette).
 
 ---
 ## Support de spécifications
