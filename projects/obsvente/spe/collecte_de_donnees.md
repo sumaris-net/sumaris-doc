@@ -5,7 +5,7 @@
 ## Sommaire
 
 - [Sorties](#/1/4)
-    - [Lots epsèces](#/1/5)
+    - [Lots espèces](#/1/5)
       - [Mesures individuelles](#/1/9)
 - Référentiels
 - Historique
