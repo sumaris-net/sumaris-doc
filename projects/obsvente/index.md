@@ -1,8 +1,8 @@
-# Projet ObsVente v2
+# Projet ObsVentes v2
 
 "Observation en criées"
 
-Refonte du logiciel Allegro (ObsVente v2)
+Refonte du logiciel Allegro (ObsVentes v2)
 
 ## Documentation
 
@@ -12,8 +12,12 @@ Refonte du logiciel Allegro (ObsVente v2)
   * [Collecte de données](./spe/collecte_de_donnees.md)
   * [Extraction des données](./spe/extraction.md)
   
+
 - Documentation techniques :
-  * [Formualire terrain OBSVENTE](./doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf)
+  * [Manuel Observateur ObsVentes](projects/obsvente/doc/obsventes-doc-24-003-Manuel-observateur-ObsVentes.pdf)
+  * [Manuel Observateur DOM ObsVentes](projects/obsvente/doc/obsventes-doc-24-002-Manuel-ObsVentes-DOM.pdf)
+  * [Formulaire terrain ObsVentes](projects/obsvente/doc/obsventes-doc-24-001-Formulaire_terrain_OBSVENTES.pdf)
+
 
 - Liens utiles :
   * Anomalies et évolutions : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues

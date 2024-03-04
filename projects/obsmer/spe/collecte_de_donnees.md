@@ -995,7 +995,7 @@ L'écran affiche la liste des mesures individuelles pour l'espèce commerciale.
    *  Le poids calculé RTP (Relation Taille Poids) en kg
 2. Un bouton permet d'ajouter une mesure individuelle
 
-![ui-sample-add](/projects/obsmer/spe/images/sample-add.svg)
+![ui-sample-add](/projects/common/spe/images/sample-add.svg)
 
 
 > TODO: Il faut des PSFM supplémentaires (ex: état de remise à l'eau)  
