@@ -287,6 +287,9 @@ Dans le cas d'une poursuite de saisie, une donnée peut être saisie par un ou p
 Dans les applications, la notion de saisisseur fait référence au 1er saisisseur, les autres saisisseurs doivent être définis dans 
 la liste des observateurs et pourront éditer la donnée.
 
+> Questions :
+> - Utile pour tous les volets ?
+
 
 ## Commun > Enregistrement automatique
 

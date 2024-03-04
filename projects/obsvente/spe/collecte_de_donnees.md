@@ -68,7 +68,8 @@ Le mode tablette est à inclure dans le périmètre de la V1.
 **Variante 1d :** Le saisisseur supprime une sortie existante
 
 > Questions :
-> - Renommer le programme SIH-OBSVENTE en SIH-OBSVENTES ? 
+> - MOA : Renommer le programme SIH-OBSVENTE en SIH-OBSVENTES ? Impacts ?
+> - MOA : Liste des colonnes exhaustive ?
 
 ---
 ## Sorties > Filtres
@@ -114,7 +115,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
-3. Le saisisseur est automatiquement défini comme observateur ?
+3. Le saisisseur est automatiquement défini comme observateur
 4. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * La référence au plan*
@@ -147,11 +148,11 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
-> - Saisisseur : le saisisseur est-il forcément observateur ?
-> - Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> - Caractéristiques : Autoriser l'ajout de caractéristiques ?
-> - Liste d'espèces à observer + liste PETS : déjà présentes dans l'API Allegro-WAO ?
+> - MOA : Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
+> - MOA : Saisisseur : le saisisseur est-il forcément observateur ?
+> - ESI & ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
+> - ISI : Liste d'espèces à observer + liste PETS : déjà présentes dans l'API Allegro-WAO ? Ou est le code ?
+> - CD : Caractéristiques enquête : stockage ? Autoriser l'ajout de caractéristiques ?
 
 ---
 
@@ -166,33 +167,34 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
-2. Pour chaque espèce observée, le saisisseur :
+2. Le type de vente est renseignée avec le type de vente sélectionnée sur la sortie
+3. Pour chaque espèce observée, le saisisseur :
    * Coche la case*
    * Sélectionne le navire*
+   * Modifie le type de vente
    * Saisit un commentaire
-3. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
-4. Le saisisseur enregistre l'échantillon observé
-5. Le bandeau de l'écran affiche "Sortie : Douarnenez - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
-6. L'encart sur le saisisseur s'affiche
+4. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
+5. Le saisisseur enregistre l'échantillon observé
+6. Le bandeau de l'écran affiche "Sortie : Douarnenez - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
+7. L'encart sur le saisisseur s'affiche
+8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/ECH/LOT)
 
 **Variante(s) :**
 
-**Variante 2a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
+**Variante 3a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
 
-**Variante 2b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/ECH/LOT)
+**Variante 3b :** Des PETS (espèces sensibles) sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
+par rapport à celles définies dans la liste des espèces à observer
 
-**Variante 2c:** Débarquement d'espèces sensibles (PETS)
-Il s'agit d'une liste à part, présent dans WAO (export PDF de la liste des espèces à observer). Si présent, la saisie des mensurations est 
-prioritaire sur le reste du protocole.
+**Variante 3c :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
+- La priorité des espèces  à observer
+- Nombre d'espèces minimum à observer
+- Nombre d'espèces maximum à observer
 
-**Variante 2d:** Protocole de saisie Métropole et Outre-Mer
-Les protocoles de métropoles permettent de définir les caractéristiques suivantes sur les espèces à observer (_non applicable pour le protocole d'Outre-Mer_):
-- Nombre d'espèce minimum à observer
-- Nombre d'espèce maximum à observer
-- Les espèces prioritaires à observer
-
-
-
+> Questions :
+> - EIS : Espèces scientifiques : présentes sur les lots ? on peut avoir plusieurs espèces scienifiques pour une seule espèce commerciale ?
+> - EIS : Raison de non-observation ou commentaire ?
+> - EIS : Sauvegarde espèce non observée ?
 
 ---
 ## Lots espèces (1/3)
@@ -201,41 +203,33 @@ Les protocoles de métropoles permettent de définir les caractéristiques suiva
 
 ![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
 
-La création d'un lot d'espèce est accessible depuis le tableau de consultation des espèces à observer en double-cliquant sur une espèce
+La création d'un lot d'espèce est accessible depuis le tableau de consultation des espèces à observer en double-cliquant 
+sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 
 #### Scénario principal
 
-1. Pour chaque lot, le saisisseur renseigne :
-   * L'espèce commerciale*
-   * La catégorie de tri terrain*
-   * La catégorie UE*
+1. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
+2. Pour chaque lot, le saisisseur renseigne :
+   * La catégorie de tri terrain
+   * La catégorie UE
    * L'état*
    * La présentation*
    * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
    * Le taux échantillonné
    * Le poids échantillonné
    * Si l'espèce est identifiée (case à cocher)
-2. Le saisisseur enregistre
-3. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom) "
+3. Le saisisseur enregistre
+4. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
+5. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/ECH/LOT/MESURES)
 
 **Variante(s) :**
 
-**Variante 1a :** Le saisisseur peut copier/coller un lot pour faire une nouvelle saisie.
-Il sélectionne le lot à copier et clique sur l'icône de recopie.
+**Variante 4a :** Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie
 
-**Variante 4a :** Le saisisseur ajoute des mesures individuelles
-
-- Lots espèces: 
-  - espèce commerciale
-  - catégorie commerciale, présentation, état
-  - Poids de la caisse, puis poids échantillonné
-  > Cas des mélanges ? (ex: baudroie blanche/noire)
-  > Pas de sous-échantillonnage ?
-  
-
-> ISI : cas d'usage à faire sur le contrôle des données
-
-> Détecter les lots saisis en doublons : Créer une clé unique à partir de la stratégie
+> Questions !
+> - Cas des mélanges ? (ex: baudroie blanche/noire)
+> - Pas de sous-échantillonnage ?
+> ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
 
 ---
 ## Lots espèces (2/3)
@@ -243,6 +237,8 @@ Il sélectionne le lot à copier et clique sur l'icône de recopie.
 **REF: OBSVENTES/SORTIE/ECH/LOT/MESURES**
 
 ![ui-obsventes](/projects/obsvente/spe/images/sample-add.svg)
+
+La création de mesures individuelles est accessible depuis le tableau de consultation des lots en cliquant sur l'icône :bar_chart:
 
 - Mesures individuelles :
     - espèce scientifique
@@ -256,7 +252,7 @@ Il sélectionne le lot à copier et clique sur l'icône de recopie.
 
 **Variante(s) :**
 
-**Variante 1a :** Contrôle des valeurs saisies
+**Variante 5a :** Contrôle des valeurs saisies
 La stratégie permet de définir des bornes minimales et maximales sur la longueur et les poids, globalement ou par espèce.
 NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
 
