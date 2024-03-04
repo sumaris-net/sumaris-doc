@@ -54,9 +54,7 @@ Le mode tablette est à inclure dans le périmètre de la V1.
    * Le lieu de la sortie
    * La date/heure
    * Le ou les observateurs
-   * Les saisisseurs
-     * Il peut y avoir un ou plusieurs saisisseurs, dans le cas d'une poursuite de saisie
-     * _En BDD, le saisisseur correspond au premier saisisseur_
+   * Le saisisseur
    * Le commentaire
 
 **Variante(s) :**
@@ -69,12 +67,15 @@ Le mode tablette est à inclure dans le périmètre de la V1.
 
 **Variante 1d :** Le saisisseur supprime une sortie existante
 
+> Questions :
+> - Renommer le programme SIH-OBSVENTE en SIH-OBSVENTES ? 
+
 ---
 ## Sorties > Filtres
 
 **REF: OBSVENTES/SORTIES/FILTRES**
 
-![ui-obsventes](/projects/obsvente/spe/images/obsvente-table-filters.svg)
+![ui-obsventes](/projects/obsvente/spe/images/observed-location-table-filters.svg)
 
 Les filtres des sorties sont accessibles depuis le tableau de consultation des sorties via l'icône entonnoir.
 
@@ -90,15 +91,13 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'observateur
    * L'état de saisie
 
-Le filtre peut être enregistré pour être réappliqué par le suite (COMMUN/FILTRES).
+Le filtre peut être enregistré pour être réappliqué par le suite.
 
-Les filtres peuvent être multiples sur les champs suivants : 
+Les critères suivants sont multiples : 
 - L'organisme du saisisseur
 - Le saisisseur
 - L'observateur
 - L'état de saisie
-
-> Actions ISI : A spécifier dans COMMON/FILTRES
 
 ---
 ## Sortie > Détails
@@ -113,18 +112,29 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 1. Le saisisseur demande la création d'une nouvelle sortie
 2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
-    * "Détails" (automatiquement positionné sur cet onglet)
-    * "Echantillonnages"
-3. Dans l'onglet "Détails", le saisisseur sélectionne :
-    * La référence au plan. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseigné via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
-    * Le ou les observateurs. L'observateur est automatiquement renseigné avec le saisisseur
-    * Le lieu
-    * La date. La stratégie est automatiquement renseigné et les caractéristiques de la sortie s'affichent
-    * Le type de vente
-4. Le saisisseur renseigne les caractéristiques de la sortie
+    * "Détails" (onglet par défaut)
+    * "Echantillonnages" (visible uniquement si le programme est renseigné)
+3. Le saisisseur est automatiquement défini comme observateur ?
+4. Dans l'onglet "Détails", le saisisseur sélectionne :
+    * Le programme de collecte*
+    * La référence au plan*
+    * Le ou les observateurs supplémentaires
+    * Le lieu*
+    * La date*
+    * Le type de vente*
+4. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
+5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
+6. Le saisisseur renseigne les caractéristiques de la sortie
 5. Le saisisseur enregistre
 6. Le bandeau de l'écran affiche "Lieu - date"
 7. Le saisisseur est positionné sur l'onglet "Echantillonnages"
+
+**Variante(s) :**
+
+**Variante 2a :** La sélection du filtre "Programme de collecte" sur le tableaux des sorties, renseigne automatiquement les champs suivants sur le formulaire en mode création :
+- Programme de collecte
+- Observateur
+- Date
 
 #### Détails techniques :
 * Type de vente : SALE_TYPE
@@ -137,16 +147,17 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente ?
-> - Caractéristiques : Autoriser l'ajout de caractéristiques ?
+> - Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
+> - Saisisseur : le saisisseur est-il forcément observateur ?
 > - Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> - Liste d'espèces à observer : déjà présente dans l'API Allegro-WAO ?
+> - Caractéristiques : Autoriser l'ajout de caractéristiques ?
+> - Liste d'espèces à observer + liste PETS : déjà présentes dans l'API Allegro-WAO ?
 
 ---
 
 ## Sortie > Echantillonnage
 
-**REF: OBSVENTE/SORTIE/ECH**
+**REF: OBSVENTES/SORTIE/ECH**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
@@ -168,7 +179,7 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 
 **Variante 2a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
 
-**Variante 2b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTE/SORTIE/ECH/LOT)
+**Variante 2b :** Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/ECH/LOT)
 
 **Variante 2c:** Débarquement d'espèces sensibles (PETS)
 Il s'agit d'une liste à part, présent dans WAO (export PDF de la liste des espèces à observer). Si présent, la saisie des mensurations est 
@@ -186,7 +197,7 @@ Les protocoles de métropoles permettent de définir les caractéristiques suiva
 ---
 ## Lots espèces (1/3)
 
-**REF: OBSVENTE/SORTIE/ECH/LOT**
+**REF: OBSVENTES/SORTIE/ECH/LOT**
 
 ![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
 
@@ -229,7 +240,7 @@ Il sélectionne le lot à copier et clique sur l'icône de recopie.
 ---
 ## Lots espèces (2/3)
 
-**REF: OBSVENTE/SORTIE/ECH/LOT/MESURES**
+**REF: OBSVENTES/SORTIE/ECH/LOT/MESURES**
 
 ![ui-obsventes](/projects/obsvente/spe/images/sample-add.svg)
 

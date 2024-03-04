@@ -10,15 +10,15 @@
       Programme de collecte* :    | { ^SIH-OBSVENTE                ^ } | * | {^"Stratégie"
                                                                                               ObsVente démarrage au 01/01/2024 <&eye> }
 
-      Référence* : | ^2021_V0010 - DPMA_20_23_Lot2^ | * | {^"Saisisseur"
-                                                          Nicolas DUPOND - Ifremer  }
-
-      Programme de rattachement* : | ^DPMA_20_23_Lot2^ | * | <&calendar> Créé le 10/11/2023
+      Référence* : | ^2021_V0010 - DPMA_20_23_Lot2^
       .
-      Observateurs* :            | ^ Observateur #1        ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
+      Programme de rattachement* : | ^DPMA_20_23_Lot2             ^
       .
-      Lieu / Date* :     | { ^DRZ - Douarnenez       ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ } | [Terminer la saisie]
-      Type de vente* :   | { ^Enchères - HAM / Criées^}
+      Observateurs* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
+      .
+      Lieu / Date* :     | { ^XDZ - Douarnenez            ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+      .
+      Type de vente* :   | { ^Enchères - HAM / Criées     ^}
       .
   }
 
@@ -37,7 +37,7 @@
      <b>Commentaires :
 
      {+ .
-        "                                                                                              "
+        "                                                                                          "
      }
   }
 

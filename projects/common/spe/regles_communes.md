@@ -122,6 +122,10 @@ _interface à réaliser_
 
 Le filtre peut être enregistré pour être ré-appliqué par la suite.
 
+**Variante 2a**
+
+Les filtres peuvent être multiples selon le paramétrage réalisé (à préciser)
+
 
 > **Remarques** : 
 
@@ -272,3 +276,21 @@ En mode tablette (déconnecté), cela doit être étudié.
 > **Remarques** :
 
 > _A compléter_
+
+
+## Commun > Saisisseur
+
+**REF: COMMUN/SAISISSEUR**
+
+Dans le cas d'une poursuite de saisie, une donnée peut être saisie par un ou plusieurs saisisseurs.
+
+Dans les applications, la notion de saisisseur fait référence au 1er saisisseur, les autres saisisseurs doivent être définis dans 
+la liste des observateurs et pourront éditer la donnée.
+
+
+## Commun > Enregistrement automatique
+
+**REF: COMMUN/ENREGISTREMENT**
+
+L'accès à certains onglets nécessite d'enregisreer le formulaire.
+Si tous les champs obligatoires du formulaire ont été renseignés, alors la sélection de l'onglet enregistre automatiquement le formulaire.
