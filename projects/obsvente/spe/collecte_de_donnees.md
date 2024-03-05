@@ -115,15 +115,13 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
-3. Le saisisseur est automatiquement défini comme observateur
 4. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * La référence au plan*
     * Le ou les observateurs supplémentaires
     * Le lieu*
     * La date*
-    * Le type de vente*
-4. Le programme de rattachement et la liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés via l'API Allegro-WAO en fonction de la référence au plan sélectionnée
+4. La liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés en fonction de la référence au plan sélectionnée
 5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
 6. Le saisisseur renseigne les caractéristiques de la sortie
 5. Le saisisseur enregistre
@@ -149,10 +147,9 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 > Questions :
 > - MOA : Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
-> - MOA : Saisisseur : le saisisseur est-il forcément observateur ?
-> - ESI & ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> - ISI : Liste d'espèces à observer + liste PETS : déjà présentes dans l'API Allegro-WAO ? Ou est le code ?
-> - CD : Caractéristiques enquête : stockage ? Autoriser l'ajout de caractéristiques ?
+> - MOA : Carac : Autoriser l'ajout de carac non définies dans la stratégie ?
+> - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
+> - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
 
 ---
 
@@ -169,11 +166,13 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
 2. Le type de vente est renseignée avec le type de vente sélectionnée sur la sortie
 3. Pour chaque espèce observée, le saisisseur :
-   * Coche la case*
+   * Coche la case "Observé ?"*
    * Sélectionne le navire*
    * Modifie le type de vente
    * Saisit un commentaire
-4. Pour chaque espèce non observée, le saisisseur saisit un commentaire*
+4. Pour chaque espèce non observée, le saisisseur :
+   * Sélectionne une raison de non observation*
+   * Saisit un commentaire
 5. Le saisisseur enregistre l'échantillon observé
 6. Le bandeau de l'écran affiche "Sortie : Douarnenez - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
 7. L'encart sur le saisisseur s'affiche
@@ -191,10 +190,10 @@ par rapport à celles définies dans la liste des espèces à observer
 - Nombre d'espèces minimum à observer
 - Nombre d'espèces maximum à observer
 
-> Questions :
-> - EIS : Espèces scientifiques : présentes sur les lots ? on peut avoir plusieurs espèces scienifiques pour une seule espèce commerciale ?
-> - EIS : Raison de non-observation ou commentaire ?
-> - EIS : Sauvegarde espèce non observée ?
+#### Détails techniques :
+* Observé ? : PMFM
+* Priorité : RANK_ORDER
+* Raison de non observation : PMFM
 
 ---
 ## Lots espèces (1/3)
@@ -226,10 +225,10 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 
 **Variante 4a :** Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie
 
-> Questions !
+> Questions :
 > - Cas des mélanges ? (ex: baudroie blanche/noire)
 > - Pas de sous-échantillonnage ?
-> ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
+> - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
 
 ---
 ## Lots espèces (2/3)
@@ -300,7 +299,7 @@ Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d
 ---
 ## Importation depuis ObsDeb
 Dans ObsDeb, il est possible de saisir des ventes en version moins poussée que dans ObsVentes.
-Au niveau de l'écran des marée, on a une case à cocher indiquant si la marée est à transférer dans ObsVentes.
+Au niveau de l'écran des marées, on a une case à cocher indiquant si la marée est à transférer dans ObsVentes.
 Un flag est alors positionné sur la table SURVEY_MEASUREMENT grâce à un PSFM (1987, valeur qualitative : Oui/Non)
 Voir les Mantis :
 - [35221: Transfert de données Obsdeb / Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35221) 
