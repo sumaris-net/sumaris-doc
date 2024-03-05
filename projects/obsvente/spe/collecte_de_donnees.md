@@ -4,9 +4,9 @@
 ---
 ## Sommaire
 
-- [Documents](#Documents)
-- [Lignes de plan](#Lignes de plan)
-- [Ergonomie générale](#Ergonomie générale)
+- [Documents](#documents)
+- [Lignes de plan](#lignes-de-plan)
+- [Ergonomie générale](#ergonomie-générale)
 
 [TOC]
 
