@@ -4,7 +4,9 @@
 
 ## Sommaire
 
-- [Sorties](#/1/4)
+[TOC]
+
+- [Sorties](#/1)
     - [Lots espèces](#/1/5)
       - [Mesures individuelles](#/1/9)
 - Référentiels
@@ -203,7 +205,7 @@ par rapport à celles définies dans la liste des espèces à observer
 * Raison de non observation : PMFM
 
 ---
-## Lots espèces (1/3)
+## Lots d'espèces
 
 **REF: OBSVENTES/SORTIE/ECH/LOT**
 
@@ -238,23 +240,17 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 > - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
 
 ---
-## Lots espèces (2/3)
+## Mesures individuelles
 
 **REF: OBSVENTES/SORTIE/ECH/LOT/MESURES**
 
-![ui-obsventes](/projects/common/spe/images/sample-add.svg)
+![ui-obsventes](/projects/common/spe/images/individual-measures.svg)
 
 La création de mesures individuelles est accessible depuis le tableau de consultation des lots en cliquant sur l'icône :bar_chart:
 
-- Mesures individuelles :
-    - espèce scientifique
-    - sexe, longueur, taille
-    - 30 individus
-    - Connectivité à la règle **Gwaleen** 
-      - Mode bureau (USB ?) 
-    - Caisse de **mélange**: possible au sein d'un même espèce commerciale :  
-     Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale  
-     (**non prioritaire**)
+> Questions/Points de vigilance :
+> - Ichtyomètre électronique : connexion bleutooth (gwaleen) + usb pour le mode bureau ?
+> - Caisse de **mélange**: possible au sein d'un même espèce commerciale : Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale (**non prioritaire**)
 
 **Variante(s) :**
 
@@ -262,12 +258,13 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 La stratégie permet de définir des bornes minimales et maximales sur la longueur et les poids, globalement ou par espèce.
 NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
 
-Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d'avertissement
-
-
 ---
 
-## Lots espèces (3/3)
+## Règle(s) métier
+
+(en cours de rédaction)
+
+Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d'avertissement
 
 > Règle(s) métier :
 > - Contrôle poids:
@@ -286,17 +283,6 @@ Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d
 > - Soit saisie du taux 1/n
 > - + Saisie du sous-taux 1/n
 > ```
-
----
-
-## Mesures individuelles
-
-(en cours de rédaction)
-
-![batch-species](/projects/apase/spe/images/individual-measure.svg)
-
-> Règle(s) métier :
-> - Saisie au 1 cm, 0.5cm, 1mm, suivant l'espèce (cf normes Ifremer)
 
 ---
 ## Référentiels
