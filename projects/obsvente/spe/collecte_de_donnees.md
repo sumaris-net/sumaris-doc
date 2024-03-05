@@ -4,10 +4,8 @@
 ---
 ## Sommaire
 
-<TOCInline
-  minHeadingLevel={3}
-  maxHeadingLevel={4}
-/>
+toc_min_heading_level: 2
+toc_max_heading_level: 3
 
 [TOC]
 
