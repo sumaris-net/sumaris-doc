@@ -1,19 +1,16 @@
 # Collecte de données
 ## Spécifications (ObsVentes)
----
 
+---
 ## Sommaire
+
+<TOCInline
+minHeadingLevel={3}
+/>
 
 [TOC]
 
-- [Sorties](#/1)
-    - [Lots espèces](#/1/5)
-      - [Mesures individuelles](#/1/9)
-- Référentiels
-- Historique
-
 ---
-
 ## Documents
 
 - [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
@@ -21,7 +18,6 @@
 - [Formulaire terrain OBSVENTES DOM](/projects/obsvente/doc/obsventes-doc-24-002-Manuel-ObsVentes-DOM.pdf)
 
 ---
-
 ## Lignes de plan
 
 - Fichier CSV importé dans WAO ObsVentes
@@ -32,7 +28,6 @@
 
 
 ---
-
 ## Support cible du livrable ObsVentes
 
 Le mode tablette est à inclure dans le périmètre de la V1.
@@ -162,7 +157,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 ---
 
-## Sortie > Echantillonnage
+## Sortie > Echantillonnages
 
 **REF: OBSVENTES/SORTIE/ECH**
 
@@ -259,7 +254,6 @@ La stratégie permet de définir des bornes minimales et maximales sur la longue
 NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
 
 ---
-
 ## Règle(s) métier
 
 (en cours de rédaction)
