@@ -4,8 +4,9 @@
 ---
 ## Sommaire
 
-toc_min_heading_level: 2
-toc_max_heading_level: 3
+- [Documents](#Documents)
+- [Lignes de plan](#Lignes de plan)
+- [Ergonomie générale](#Ergonomie générale)
 
 [TOC]
 
@@ -241,6 +242,13 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 ![ui-obsventes](/projects/common/spe/images/individual-measures.svg)
 
 La création de mesures individuelles est accessible depuis le tableau de consultation des lots en cliquant sur l'icône :bar_chart:
+
+#### Scénario principal
+
+1. Pour chaque mesure individuelle, le saisisseur renseigne :
+   * L'espèce scientifique
+   * Le sexe
+   * La taille
 
 > Questions/Points de vigilance :
 > - Ichtyomètre électronique : connexion bleutooth (gwaleen) + usb pour le mode bureau ?
