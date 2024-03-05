@@ -7,8 +7,15 @@
 - [Documents](#documents)
 - [Lignes de plan](#lignes-de-plan)
 - [Ergonomie générale](#ergonomie-générale)
-
-[TOC]
+- [Sorties](#sorties)
+- [Sorties > Filtres](#sorties->-filtres)
+- [Sortie > Détails](#sortie->-détails)
+- [Sortie > Echantillonnages](#sortie->-echantillonnages)
+- [Lots d'espèces](#lots-d'espèces)
+- [Mesures individuelles](#mesures-individuelles)
+- [Référentiels](#référentiels)
+- [Importation depuis ObsDeb](#importation-depuis-obsdeb)
+- [Règles métier](#règles-métier)
 
 ---
 ## Documents
@@ -261,7 +268,7 @@ La stratégie permet de définir des bornes minimales et maximales sur la longue
 NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
 
 ---
-## Règle(s) métier
+## Règles métier
 
 (en cours de rédaction)
 
