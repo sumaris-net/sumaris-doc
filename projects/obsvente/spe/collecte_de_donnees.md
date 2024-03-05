@@ -36,6 +36,13 @@
 Le mode tablette est à inclure dans le périmètre de la V1.
 
 ---
+## Ergonomie générale
+
+**REF: OBSVENTES/INTERFACE**
+
+![ui-obsvente](/projects/obsvente/spe/images/observed-location-tree.svg)
+
+---
 ## Sorties
 
 **REF: OBSVENTES/SORTIES**
@@ -163,7 +170,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
-1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer
+1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer (espèce commerciale + espèce scientifique)
 2. Le type de vente est renseignée avec le type de vente sélectionnée sur la sortie
 3. Pour chaque espèce observée, le saisisseur :
    * Coche la case "Observé ?"*

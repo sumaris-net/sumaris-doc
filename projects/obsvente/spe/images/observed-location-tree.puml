@@ -1,0 +1,66 @@
+@startsalt
+{
+  {+
+   {
+       <b><font color=grey size=20>ObsVentes    | . | . | . | . | . | . | .
+       Observateur
+       .
+       .
+       --
+       Accueil    | .
+       .
+       <font color=grey size=10>Saisie de données
+       --
+       <back:#DDD>Sorties
+       | .
+       .
+       .
+       .
+       .
+       .
+       .
+       .
+
+       .
+       <font color=grey size=10>Référentiels
+       --
+       .
+
+       --
+       Se déconnecter       | .
+       --
+   }
+
+   {
+      <font color=grey size=10>V XXX - à propos
+   }
+  } | . | {+
+    { <b>Sorties | . |  . |  . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |[<b>+] }
+    --
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  <b>Fenêtre principale }
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+
+    } | . |
+}
+@endsalt
+
