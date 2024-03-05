@@ -118,7 +118,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 4. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * La référence au plan*
-    * Le ou les observateurs supplémentaires
+    * Le ou les observateurs
     * Le lieu*
     * La date*
 4. La liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés en fonction de la référence au plan sélectionnée
@@ -136,7 +136,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 - Date
 
 #### Détails techniques :
-* Type de vente : SALE_TYPE
+* Type de vente : PMFM qui point vers SALE_TYPE
 * Caractéristiques de la vente :
     * Origine : PMFM_STRATGY avec :
         * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
@@ -174,7 +174,7 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
    * Sélectionne une raison de non observation*
    * Saisit un commentaire
 5. Le saisisseur enregistre l'échantillon observé
-6. Le bandeau de l'écran affiche "Sortie : Douarnenez - 08-02-2022 - <b>Référence au plan : 2021_V0010 - DPMA_20_23_Lot2"
+6. Le bandeau de l'écran affiche "Lieu - Date"
 7. L'encart sur le saisisseur s'affiche
 8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/ECH/LOT)
 
