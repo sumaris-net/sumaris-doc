@@ -48,7 +48,7 @@ Difficulté à estimer la durée des chantiers
 > :information_source:
 > Début des développements CODRA - Semaine N°10 (04/03/2024)
 
-- 2 Journées de présentation Refonte Allegro (04-05/03/2024)
+- Journées de présentation Refonte Allegro (04-05-06/03/2024)
   - 04/03/2024 - ISI / CODRA / EIS - Spécifications
     - Présentation du contexte ObsMer/ObsVentes
       - Formulaires terrains, Manuel Observateur, Videos de présentation du métier d'observateur (déposer sur gitlab)
@@ -67,15 +67,14 @@ Difficulté à estimer la durée des chantiers
       - ...
 
 ---
-  - 05/03/2024 - ISI / CODRA / EIS
+  - 05-06/03/2024 - ISI / CODRA / EIS
     - Présentation de l'architecture de Sumaris 
     - Présentation du socle technique de Sumaris
     - Présentation du socle technique ObsVents, ObsMer
     - Présentation de l'environnement de développement (IDE, outils, ...)
     - Présentation des best practices
-      - Re-use
-      - Performances
-      - ...
+      - Re-use, performances, ...
+
 
 > :warning:
 > Planifier la migration Imagine vers Angular 17 (Semaine N° ?). Point EIS sur la migration.
@@ -96,7 +95,9 @@ EIS avance sur le maquettage des écrans de calendriers d’activités pour ensu
 - Daily à positionner
 - Réunion à bloquer en amont avec les acteurs notamment les démonstrations (Inclure ISI, Développeurs et HISSEO (MOA))
 
+---
 > :information_source:
+> 
 > Les 2 premiers sprints sur ObsVentes devront aboutir à la réalisation d'un prototype dans le but de faire une démonstration 
 aux utilisateurs de métropole et des DOM (saisie PC et tablette).
 
@@ -111,6 +112,7 @@ aux utilisateurs de métropole et des DOM (saisie PC et tablette).
   - Participants : ISI/CODRA/EIS/MOA
   - Fréquence : Toutes les 3 semaines  
 
+---
 - Revue de spécifications 
   - Participants : ISI/CODRA/EIS/MOA
   - Fréquence : Hebdomadaire actuellement (à espacer par la suite)

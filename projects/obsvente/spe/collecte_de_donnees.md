@@ -15,8 +15,8 @@
 ## Documents
 
 - [PPT_Allegro_V2](/projects/obsmer/doc/obsmer-doc-23-001-PPT_Allegro_V2.pdf)
-- [Formulaire terrain OBSVENTES](/projects/obsvente/doc/Formulaire_terrain_OBSVENTES_V1-2023_Nouveau-marché.pdf) (v1 2023)
-- [Formulaire terrain OBSVENTES DOM](/projects/obsvente/doc/Manuel_OBSVENTES_DOM_V3_2022.pdf)
+- [Formulaire terrain OBSVENTES](/projects/obsvente/doc/obsventes-doc-24-001-Formulaire_terrain_OBSVENTES.pdf) (v1 2023)
+- [Formulaire terrain OBSVENTES DOM](/projects/obsvente/doc/obsventes-doc-24-002-Manuel-ObsVentes-DOM.pdf)
 
 ---
 
@@ -235,7 +235,7 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 
 **REF: OBSVENTES/SORTIE/ECH/LOT/MESURES**
 
-![ui-obsventes](/projects/obsvente/spe/images/sample-add.svg)
+![ui-obsventes](/projects/common/spe/images/sample-add.svg)
 
 La création de mesures individuelles est accessible depuis le tableau de consultation des lots en cliquant sur l'icône :bar_chart:
 
