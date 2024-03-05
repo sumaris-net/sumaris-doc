@@ -4,16 +4,15 @@
   --
   {/  Détails | <b> Échantillonnages }
   ..
-  <&plus>
   .
 	{#
 
-      <b>Observé ? |<b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique   | <b>Raison de non observation | <b>Navire | <b>Type de vente | .
-      [X] . | 1 | POL - Lieu jaune | POL - Pollachius pollachius | . | 851751- Navire 1 | { ^Enchères - HAM / Criées^} | .
-      [X] . | 2 | MNZ - Baudroie | . | . | 851751 - Navire 1 | { ^Enchères - HAM / Criées^} | <&comment-square>
-      [ ] . | 3 | PIL - Sardine commune | PIL - Sardina pilchardus | ^ Espèce absente  ^  |. -| . | .
-      [X] . | 4 | NEP - Langoustine | NEP - Nephrops norvegicus   | . | 741541 - Navire 2 | { ^Enchères - HAM / Criées^} | <&comment-square>
-      [ ] . | 5 | ... | . | . | . | .
+      <b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Type de vente | .
+       1 | POL - Lieu jaune | POL - Pollachius pollachius | [X] . | . | 851751- Navire 1 | { ^Enchères - HAM / Criées^} | .
+       2 | MNZ - Baudroie | . |  [X] . | . | 851751 - Navire 1 | { ^Enchères - HAM / Criées^} | <&comment-square>
+       3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ] . | ^ Espèce absente  ^  |. -| . | .
+       4 | NEP - Langoustine | NEP - Nephrops norvegicus   | [X] . | . | 741541 - Navire 2 | { ^Enchères - HAM / Criées^} | <&comment-square>
+       5 | ... | . | [ ] . | . | . | .
 
     }
     { 15 espèces minimales observées (justifiez si non observée) }

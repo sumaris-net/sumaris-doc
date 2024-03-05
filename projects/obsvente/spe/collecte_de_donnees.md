@@ -8,14 +8,15 @@
 - [Lignes de plan](#lignes-de-plan)
 - [Ergonomie générale](#ergonomie-générale)
 - [Sorties](#sorties)
-- [Sorties > Filtres](#sorties->-filtres)
+- [Sorties > Filtres](#sorties-filtres)
 - [Sortie > Détails](#sortie->-détails)
 - [Sortie > Echantillonnages](#sortie->-echantillonnages)
-- [Lots d'espèces](#lots-d'espèces)
+- [Lots espèces](#lots-espèces)
 - [Mesures individuelles](#mesures-individuelles)
-- [Référentiels](#référentiels)
-- [Importation depuis ObsDeb](#importation-depuis-obsdeb)
 - [Règles métier](#règles-métier)
+- [Importation depuis ObsDeb](#importation-depuis-obsdeb)
+- [Référentiels](#référentiels)
+
 
 ---
 ## Documents
@@ -38,6 +39,7 @@
 ## Support cible du livrable ObsVentes
 
 Le mode tablette est à inclure dans le périmètre de la V1.
+Version de tablette utilisée par BL : Samsung Activ Tab (991*580).
 
 ---
 ## Ergonomie générale
@@ -81,6 +83,7 @@ Le mode tablette est à inclure dans le périmètre de la V1.
 > Questions :
 > - MOA : Renommer le programme SIH-OBSVENTE en SIH-OBSVENTES ? Impacts ?
 > - MOA : Liste des colonnes exhaustive ?
+> - MOA : Ajouter onglets avec l'ensemble des échantillonnages toutes sorties ?
 
 ---
 ## Sorties > Filtres
@@ -129,7 +132,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 4. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * La référence au plan*
-    * Le ou les observateurs
+    * Le ou les observateurs*
     * Le lieu*
     * La date*
 4. La liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés en fonction de la référence au plan sélectionnée
@@ -166,7 +169,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 ## Sortie > Echantillonnages
 
-**REF: OBSVENTES/SORTIE/ECH**
+**REF: OBSVENTES/SORTIE/VENTE**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
@@ -187,16 +190,14 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 5. Le saisisseur enregistre l'échantillon observé
 6. Le bandeau de l'écran affiche "Lieu - Date"
 7. L'encart sur le saisisseur s'affiche
-8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/ECH/LOT)
+8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 **Variante(s) :**
 
-**Variante 3a :** Le saisisseur ajoute une nouvelle espèce dans la liste des espèces à observer
-
-**Variante 3b :** Des PETS (espèces sensibles) sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
+**Variante 3a :** Des PETS (espèces sensibles) sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
 par rapport à celles définies dans la liste des espèces à observer
 
-**Variante 3c :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
+**Variante 3b :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
 - La priorité des espèces  à observer
 - Nombre d'espèces minimum à observer
 - Nombre d'espèces maximum à observer
@@ -206,10 +207,14 @@ par rapport à celles définies dans la liste des espèces à observer
 * Priorité : RANK_ORDER
 * Raison de non observation : PMFM
 
----
-## Lots d'espèces
+> Questions :
+> - MOA : une espèce peut-elle être observée sur plusieurs navires ?
+> - MOA : liste des raisons de non observation ?
 
-**REF: OBSVENTES/SORTIE/ECH/LOT**
+---
+## Lots espèces
+
+**REF: OBSVENTES/SORTIE/VENTE/LOT**
 
 ![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
 
@@ -230,13 +235,14 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
    * Si l'espèce est identifiée (case à cocher)
 3. Le saisisseur enregistre
 4. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
-5. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/ECH/LOT/MESURES)
+5. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
 
 **Variante(s) :**
 
 **Variante 4a :** Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie
 
 > Questions :
+> - MOA : valeur par défaut état et présentation ?
 > - Cas des mélanges ? (ex: baudroie blanche/noire)
 > - Pas de sous-échantillonnage ?
 > - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
@@ -244,7 +250,7 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 ---
 ## Mesures individuelles
 
-**REF: OBSVENTES/SORTIE/ECH/LOT/MESURES**
+**REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES**
 
 ![ui-obsventes](/projects/common/spe/images/individual-measures.svg)
 
@@ -258,7 +264,7 @@ La création de mesures individuelles est accessible depuis le tableau de consul
    * La taille
 
 > Questions/Points de vigilance :
-> - Ichtyomètre électronique : connexion bleutooth (gwaleen) + usb pour le mode bureau ?
+> - Ichtyomètre électronique : connexion bleutooth (gwaleen) uniquement en mode tablette + usb pour le mode bureau ?
 > - Caisse de **mélange**: possible au sein d'un même espèce commerciale : Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale (**non prioritaire**)
 
 **Variante(s) :**
@@ -293,18 +299,18 @@ Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d
 > ```
 
 ---
-## Référentiels
-
-(en cours de rédaction)
-
----
 ## Importation depuis ObsDeb
 Dans ObsDeb, il est possible de saisir des ventes en version moins poussée que dans ObsVentes.
 Au niveau de l'écran des marées, on a une case à cocher indiquant si la marée est à transférer dans ObsVentes.
 Un flag est alors positionné sur la table SURVEY_MEASUREMENT grâce à un PSFM (1987, valeur qualitative : Oui/Non)
 Voir les Mantis :
-- [35221: Transfert de données Obsdeb / Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35221) 
+- [35221: Transfert de données Obsdeb / Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35221)
 - [[OBSVENTE-OBSDEB] Evol : Transfert de données Obsdeb vers Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35031)
+
+---
+## Référentiels
+
+(en cours de rédaction)
 
 ---
 ## Historique

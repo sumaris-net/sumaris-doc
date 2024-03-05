@@ -1,19 +1,20 @@
 @startsalt
  {+
   { Lot MNZ - Baudroie - <b>Mesures individuelles }
-
-  --
+  ..
+  <&trash>
+  .
 
   {
 	{#
-      # | <b>Espèce scientifique | <b>Longueur totale (cm) | <b>Poids calculé RTP (kg) | <b>Sexe
-      7 | ANK - Lophius budegassa   | 46 | <color:blue>1.0173 | Male
-      6 | ANK - Lophius budegassa   | 41 | <color:blue>0.965  | Male
-      5 | MON - Lophius piscatorius | 20 | <color:blue>0.5874 | Male
-      4 | ANK - Lophius budegassa   | 20 | <color:blue>0.55   | Femelle
-      3 | MON - Lophius piscatorius | 15 | <color:blue>0.4789 | Inconnu
-      2 | MON - Lophius piscatorius | 11 | <color:blue>0.3578 | Inconnu
-      1 | ANK - Lophius budegassa   | 10 | <color:blue>0.254  | Inconnu
+      [].| .# | <b>Espèce scientifique | <b>Sexe | <b>Longueur totale (cm) | <b>Poids calculé RTP (kg)
+      [].| 7 | ANK - Lophius budegassa   | Male | 46 | <color:blue>1.0173
+      [].| 6 | ANK - Lophius budegassa   | Male | 41 | <color:blue>0.965
+      [].| 5 | MON - Lophius piscatorius | Male | 20 | <color:blue>0.5874
+      [].| 4 | ANK - Lophius budegassa   | Femelle | 20 | <color:blue>0.55
+      [].| 3 | MON - Lophius piscatorius | Inconnu | 15 | <color:blue>0.4789
+      [].| 2 | MON - Lophius piscatorius | Inconnu | 11 | <color:blue>0.3578
+      [].| 1 | ANK - Lophius budegassa   | Inconnu | 10 | <color:blue>0.254
     } |
 
     {
