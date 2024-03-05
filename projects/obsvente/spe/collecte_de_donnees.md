@@ -5,7 +5,8 @@
 ## Sommaire
 
 <TOCInline
-minHeadingLevel={3}
+  minHeadingLevel={3}
+  maxHeadingLevel={4}
 />
 
 [TOC]
