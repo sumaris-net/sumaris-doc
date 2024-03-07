@@ -9,8 +9,8 @@
 - [Ergonomie générale](#ergonomie-générale)
 - [Sorties](#sorties)
 - [Sorties > Filtres](#sorties-filtres)
-- [Sortie > Détails](#sortie->-détails)
-- [Sortie > Echantillonnages](#sortie->-echantillonnages)
+- [Sortie > Détails](#sortie-détails)
+- [Sortie > Echantillonnages](#sortie-echantillonnages)
 - [Lots espèces](#lots-espèces)
 - [Mesures individuelles](#mesures-individuelles)
 - [Règles métier](#règles-métier)
@@ -26,6 +26,14 @@
 - [Formulaire terrain OBSVENTES DOM](/projects/obsvente/doc/obsventes-doc-24-002-Manuel-ObsVentes-DOM.pdf)
 
 ---
+## Cible
+
+Le mode tablette est à inclure dans le périmètre de la V1.
+Version de tablette utilisée par BL : Samsung Active Tab (ith zoom) 991x580.
+
+> Définir la résolution cible des saisisseurs
+
+---
 ## Lignes de plan
 
 - Fichier CSV importé dans WAO ObsVentes
@@ -33,13 +41,6 @@
 - TODO : Mapping modèle WAO / 
 
 > Code source : https://gitlab.ifremer.fr/sih/WAO
-
-
----
-## Support cible du livrable ObsVentes
-
-Le mode tablette est à inclure dans le périmètre de la V1.
-Version de tablette utilisée par BL : Samsung Activ Tab (991*580).
 
 ---
 ## Ergonomie générale
@@ -106,13 +107,12 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'observateur
    * L'état de saisie
 
-Le filtre peut être enregistré pour être réappliqué par le suite.
-
-Les critères suivants sont multiples : 
+Les critères suivants sont multiples (dev en cours sur Imagine) : 
 - L'organisme du saisisseur
 - Le saisisseur
 - L'observateur
 - L'état de saisie
+
 
 ---
 ## Sortie > Détails
@@ -129,13 +129,12 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
-4. Dans l'onglet "Détails", le saisisseur sélectionne :
+3. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
-    * La référence au plan*
-    * Le ou les observateurs*
     * Le lieu*
     * La date*
-4. La liste des espèces à observer (onglet "Echantillonnages") sont automatiquement renseignés en fonction de la référence au plan sélectionnée
+    * Le ou les observateurs*
+4. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
 5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
 6. Le saisisseur renseigne les caractéristiques de la sortie
 5. Le saisisseur enregistre
@@ -150,7 +149,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 - Date
 
 #### Détails techniques :
-* Type de vente : PMFM qui point vers SALE_TYPE
+* Sortie : OBSERVED_LOCATION
+* Type de vente : PMFM à créer, pointe vers SALE_TYPE
 * Caractéristiques de la vente :
     * Origine : PMFM_STRATGY avec :
         * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
@@ -161,9 +161,10 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 > Questions :
 > - MOA : Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
-> - MOA : Carac : Autoriser l'ajout de carac non définies dans la stratégie ?
+> - MOA : Autoriser l'ajout de carac non définies dans la stratégie ?
 > - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
+> - EIS : Stocker la ligne de plan dans OBSERVED_LOCATION.SAMPLING_STRATA_FK ?
 
 ---
 
@@ -178,7 +179,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer (espèce commerciale + espèce scientifique)
-2. Le type de vente est renseignée avec le type de vente sélectionnée sur la sortie
+2. Le type de vente est automatiquement renseignée avec le type de vente sélectionnée sur la sortie
 3. Pour chaque espèce observée, le saisisseur :
    * Coche la case "Observé ?"*
    * Sélectionne le navire*
@@ -203,13 +204,16 @@ par rapport à celles définies dans la liste des espèces à observer
 - Nombre d'espèces maximum à observer
 
 #### Détails techniques :
-* Observé ? : PMFM
+* Echantillonnage : LANDING
+* Vente : SALE
 * Priorité : RANK_ORDER
-* Raison de non observation : PMFM
+* Observé ? : PMFM à créer
+* Raison de non observation : PMFM à créer
 
 > Questions :
 > - MOA : une espèce peut-elle être observée sur plusieurs navires ?
 > - MOA : liste des raisons de non observation ?
+> - MOA : Notion d'inventaire exhaustif à ajouter ?
 
 ---
 ## Lots espèces

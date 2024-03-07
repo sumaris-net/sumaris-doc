@@ -9,19 +9,19 @@
 
       Programme de collecte* :    | { ^SIH-OBSVENTE                ^ } | * | {^"Stratégie"
                                                                                               ObsVentes démarrage au 01/01/2024 <&eye> }
-
-      Référence au plan* : | ^2021_V0010 - DPMA_20_23_Lot2^
+      Lieu / Date* :     | { ^XDZ - Douarnenez            ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
       .
       Observateurs* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
       .
-      Lieu / Date* :     | { ^XDZ - Douarnenez            ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
-      .
+
+
   }
 
   <b>Caractéristiques :
 
   {
       . | Temps disponible à l'échantillonnage* :| "4.0"
+      . | Référence au plan* : | ^2021_V0010 - DPMA_20_23_Lot2^
       . | Stratégie d'échantillonnage* : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
       . | Type de vente* : | ^Enchères - HAM / Criées     ^
       . | Validation observateur* : | ^Données contrôlées^

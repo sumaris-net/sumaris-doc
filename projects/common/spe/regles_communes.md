@@ -104,7 +104,7 @@ Il est possible d'appliquer des filtres sur les marées et les opérations.
 
 1. L'utilisateur clique sur le bouton du filtre
 2. L'écran affiche les paramètres sur lesquels appliquer un filtre
-3. Le nombre d'élement avant l'application du filtre est affiché en bas de la fenêtre
+3. Le nombre d'élements avant l'application du filtre est affiché en bas de la fenêtre
 4. L'utilisateur clique sur le bouton "Appliquer"
    * Le filtre est appliqué : la liste est restreinte selon les critères de filtrage
    * Le nombre de champs utilisés pour le filtrage est affiché sur l'icône du filtre
@@ -120,11 +120,12 @@ _interface à réaliser_
 
 **Variante 1a**
 
-Le filtre peut être enregistré pour être ré-appliqué par la suite.
+Le filtre peut être enregistré pour être ré-appliqué par la suite (dev en cours sur Quadrige, nécessité ajout d'une table
+qui contient les champs filtrés et les valeurs sous forme de flux JSON)
 
 **Variante 2a**
 
-Les filtres peuvent être multiples selon le paramétrage réalisé (à préciser)
+Les filtres peuvent être multiples sur certains champs définis dans le code (dev en cours sur Imagine)
 
 
 > **Remarques** : 
