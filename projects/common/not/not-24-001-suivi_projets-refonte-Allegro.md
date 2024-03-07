@@ -61,10 +61,9 @@ Difficulté à estimer la durée des chantiers
         - Revue fonctionnelle MOA le 29/02/2023, 12/03/2023
       - ObsMer : Développement EIS (dans un premier temps)
         - Montée en compétence de CODRA        
-    - Rédaction/Présentation des tickets ObsVentes (re-use Imagine)
-      - Ticket 1 : OBSVENTES/SORTIES
-      - Ticket 2 : OBSVENTES/SORTIE/DETAILS
-      - ...
+    - Rédaction/Présentation des premiers tickets ObsVentes (re-use Imagine)
+      - Ticket 1 : OBSVENTES/SORTIE/DETAILS
+      - Ticket 2 : OBSVENTES/SORTIE/VENTE
 
 ---
   - 05-06/03/2024 - ISI / CODRA / EIS
@@ -102,6 +101,33 @@ EIS avance sur le maquettage des écrans de calendriers d’activités pour ensu
 aux utilisateurs de métropole et des DOM (saisie PC et tablette).
 
 ---
+
+Démarrage des développements : Découpage ObsVentes (CODRA)
+
+- 1 intervenant sur l'édition des sorties -> 1 ticket -> 1 branche (feature)
+- 1 intervenant sur le tableau des espèces -> 1 ticket -> 1 branche (feature)
+
+Mise à jour de la BDD côté développement (HSQL / PostGres / Oracle) :
+- Doublonné avec EIS (Benoit) et CODRA (Jean-Victor)
+- Jean-Victor est le référent technique
+
+Mise à jour à l'Ifremer du schéma SIH2_ADAGIO_SUMARIS_MAP : 
+- A Doublonner avec ISI (Vincent) et CODRA (Caroline)
+
+---
+## Organisation des livrables
+
+La livraison d'une version se fera sur la branche develop (après les merge request).
+
+Avec la CI, le merge sur la branche develop build une release, contenant les livrables de l'application pour la version :
+- Version Web
+- Version Windows (autonome)
+- Version Linux (autonome)
+- Version Android (autonome)
+
+La release listera les tickets associés à la version.
+
+---
 ## Organisation des réunions
 
 - Daily meeting
@@ -113,6 +139,7 @@ aux utilisateurs de métropole et des DOM (saisie PC et tablette).
   - Fréquence : Toutes les 3 semaines  
 
 ---
+
 - Revue de spécifications 
   - Participants : ISI/CODRA/EIS/MOA
   - Fréquence : Hebdomadaire actuellement (à espacer par la suite)
@@ -129,11 +156,43 @@ A confirmer ISI/EIS
 - Rédaction des spécifications générales dans gitlab (markdown/PlantUml)
   - En cours (ISI/CODRA)
 - Rédaction des spécifications détaillées/techniques dans gitlab (markdown/PlantUml)
-- Création des tickets d'évolutions dans gitlab (utilisation de labels ?)
+- Création des tickets d'évolutions dans gitlab
   - Cloisonnement des tickets par application
-- Création des tickets d'anomalies dans gitlab (utilisation de labels ?)
+- Création des tickets d'anomalies dans gitlab
   - Cloisonnement des tickets par application
 - Gestion du board dans gitlab
+
+---
+
+## Gestion des tickets
+
+Les tickets seront créés dans gitlab issues.
+
+Les tickets associés à un sprint seront regroupés par jalon (milestone).
+
+Un sprint (voir plusieurs sprint) correspondra à un milestone. La version, unique, sera incrémentée à chaque milestone.
+
+Le milestone sera terminé lorsque toutes les issues liées à ce dernier seront à l'état "closed".
+
+---
+
+La vue "Issue boards" de gitlab sera utilisée pour suivre les différents états des tickets :
+- Open
+- To Do (milestone à positionner si possible)
+- Doing (milestone obligatoire)
+- Done (milestone obligatoire)
+- Test (milestone obligatoire)
+- Closed (milestone obligatoire)
+
+---
+
+Des labels seront assignés au ticket afin de les regrouper par thématique (OBSMER, OBSVENTES, CALENDRIER, COMMON, ...). 
+
+Les tickets des évolutions et des bugs seront discriminés par les étiquettes "enhancement" (améliorations) et "bug".
+
+Pour information, les commit seront préfixés de la façon suivante :
+- Tickets enhancement : enh(_thématique_), Exemple enh(trips)
+- Tickets bug : fix(_thématique_), Exemple fix(operation)
 
 ---
 ## Support cibles des outils de saisie
