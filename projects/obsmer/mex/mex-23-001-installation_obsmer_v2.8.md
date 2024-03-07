@@ -22,7 +22,7 @@ Modification de PSFM :
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
-- Appliquer les [manuels d'exploitaion d'Imagine](../../imagine/mex) (v2.8)
+- Appliquer les [manuels d'exploitation d'Imagine](../../imagine/mex) (v2.8)
 
 - Mise à jour de la vue IMAGE_ATTACHMENT
 

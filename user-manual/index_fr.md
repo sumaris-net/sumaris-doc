@@ -18,7 +18,7 @@ est concédé sous licence Creative Commons Attribution-ShareAlike 4.0
  - [Préambule](preamble/preamble_fr.md)
     * [Configuration minimum](preamble/preamble_fr.md#Configuration_minimum)
     * [Objectifs du logiciel](preamble/preamble_fr.md#Objectifs_du_logiciel)
-    * [Fonctionalités](preamble/preamble_fr.md#Fonctionalit.C3.A9s)
+    * [Fonctionnalités](preamble/preamble_fr.md#Fonctionalit.C3.A9s)
     * [Accéder au logiciel SUMARiS](preamble/preamble_fr.md#Acceder_au_logiciel_SUMARiS)
  - [Conceptions des interfaces](screens-concepts/screens-concepts_fr.md)
     * [Design global des interfaces de saisie](screens-concepts/screens-concepts_fr.md#Design_global_des_interfaces_de_saisie)
