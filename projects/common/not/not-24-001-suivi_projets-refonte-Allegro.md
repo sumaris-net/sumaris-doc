@@ -104,8 +104,9 @@ aux utilisateurs de métropole et des DOM (saisie PC et tablette).
 
 Démarrage des développements : Découpage ObsVentes (CODRA)
 
-- 1 intervenant sur l'édition des sorties -> 1 ticket -> 1 branche (feature)
-- 1 intervenant sur le tableau des espèces -> 1 ticket -> 1 branche (feature)
+- 1 intervenant CODRA sur l'édition des sorties -> 1 ticket -> 1 branche (feature) (Jean-Victor)
+
+- 1 intervenant CODRA sur le tableau des espèces -> 1 ticket -> 1 branche (feature) (Morgan)
 
 Mise à jour de la BDD côté développement (HSQL / PostGres / Oracle) :
 - Doublonné avec EIS (Benoit) et CODRA (Jean-Victor)
@@ -113,6 +114,11 @@ Mise à jour de la BDD côté développement (HSQL / PostGres / Oracle) :
 
 Mise à jour à l'Ifremer du schéma SIH2_ADAGIO_SUMARIS_MAP : 
 - A Doublonner avec ISI (Vincent) et CODRA (Caroline)
+
+---
+## Planification semaine 11-12 (11/03/2024 - 22/03/2024) 
+
+A planifier lors du premier daily le 08/03/2024 à 10h30.
 
 ---
 ## Organisation des livrables
@@ -126,6 +132,18 @@ Avec la CI, le merge sur la branche develop build une release, contenant les liv
 - Version Android (autonome)
 
 La release listera les tickets associés à la version.
+
+---
+## Nommage des applications
+
+Le nom du socle applicatif sera désormais Sumaris (actuellement Allegro).
+
+Les applications seront ainsi nommées :
+- Sumaris ObsMer
+- Sumaris ObsVentes
+- Sumaris Calendrier d'activité
+- Sumaris Imagine
+
 
 ---
 ## Organisation des réunions
@@ -174,6 +192,9 @@ Un sprint (voir plusieurs sprint) correspondra à un milestone. La version, uniq
 
 Le milestone sera terminé lorsque toutes les issues liées à ce dernier seront à l'état "closed".
 
+Les manuels d'exploitation doivent être généralisés aux applications :
+- Les mex doivent lister les modifications du schéma sur la livraison d'une version majeur (2.9 par exemple) pour ObsMer / ObsVentes / Calendrier d'activité
+
 ---
 
 La vue "Issue boards" de gitlab sera utilisée pour suivre les différents états des tickets :
@@ -184,8 +205,7 @@ La vue "Issue boards" de gitlab sera utilisée pour suivre les différents état
 - Test (milestone obligatoire)
 - Closed (milestone obligatoire)
 
----
-
+--- 
 Des labels seront assignés au ticket afin de les regrouper par thématique (OBSMER, OBSVENTES, CALENDRIER, COMMON, ...). 
 
 Les tickets des évolutions et des bugs seront discriminés par les étiquettes "enhancement" (améliorations) et "bug".
@@ -193,6 +213,14 @@ Les tickets des évolutions et des bugs seront discriminés par les étiquettes 
 Pour information, les commit seront préfixés de la façon suivante :
 - Tickets enhancement : enh(_thématique_), Exemple enh(trips)
 - Tickets bug : fix(_thématique_), Exemple fix(operation)
+
+---
+Après les daily, une revue des tickets sera réalisée entre ISI/CODRA/EIS afin de s'assurer que le développeur parte dans la bonne direction.
+
+Le développeur exprimera sa compréhension du besoin et la façon dont voit l'implémentation dans le logiciel.
+
+EIS, qui a la maitrise du scole technique et de la conception, validera l'implémentation et réalisera si besoin un découpage plus fin
+des éléments à développer.
 
 ---
 ## Support cibles des outils de saisie
