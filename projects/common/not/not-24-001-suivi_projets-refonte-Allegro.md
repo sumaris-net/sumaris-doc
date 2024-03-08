@@ -116,11 +116,6 @@ Mise à jour à l'Ifremer du schéma SIH2_ADAGIO_SUMARIS_MAP :
 - A Doublonner avec ISI (Vincent) et CODRA (Caroline)
 
 ---
-## Planification semaine 11-12 (11/03/2024 - 22/03/2024) 
-
-A planifier lors du premier daily le 08/03/2024 à 10h30.
-
----
 ## Organisation des livrables
 
 La livraison d'une version se fera sur la branche develop (après les merge request).
@@ -169,26 +164,24 @@ Les applications seront ainsi nommées :
 ---
 ## Support de spécifications
 
-A confirmer ISI/EIS
-
 - Rédaction des spécifications générales dans gitlab (markdown/PlantUml)
   - En cours (ISI/CODRA)
 - Rédaction des spécifications détaillées/techniques dans gitlab (markdown/PlantUml)
+  - TODO (ISI/CODRA/EIS)
 - Création des tickets d'évolutions dans gitlab
-  - Cloisonnement des tickets par application
-- Création des tickets d'anomalies dans gitlab
-  - Cloisonnement des tickets par application
-- Gestion du board dans gitlab
+  - Cloisonnement des tickets par milestone (jalon de version)
+- Création des tickets d'anomalies dans gitlab (jalon de version)
+  - Cloisonnement des tickets par milestone
+- Gestion du board dans gitlab par milestone
 
 ---
-
 ## Gestion des tickets
 
 Les tickets seront créés dans gitlab issues.
 
 Les tickets associés à un sprint seront regroupés par jalon (milestone).
 
-Un sprint (voir plusieurs sprint) correspondra à un milestone. La version, unique, sera incrémentée à chaque milestone.
+Un sprint (voir plusieurs sprints) correspondra à un milestone. La version, unique, sera incrémentée à chaque milestone.
 
 Le milestone sera terminé lorsque toutes les issues liées à ce dernier seront à l'état "closed".
 
@@ -196,16 +189,17 @@ Les manuels d'exploitation doivent être généralisés aux applications :
 - Les mex doivent lister les modifications du schéma sur la livraison d'une version majeur (2.9 par exemple) pour ObsMer / ObsVentes / Calendrier d'activité
 
 ---
-
 La vue "Issue boards" de gitlab sera utilisée pour suivre les différents états des tickets :
-- Open
-- To Do (milestone à positionner si possible)
+
+- Open (affecter un milestone)
+- To Do (milestone + affectation développeur)
 - Doing (milestone obligatoire)
 - Done (milestone obligatoire)
-- Test (milestone obligatoire)
+- Testing (milestone obligatoire)
 - Closed (milestone obligatoire)
 
---- 
+
+---
 Des labels seront assignés au ticket afin de les regrouper par thématique (OBSMER, OBSVENTES, CALENDRIER, COMMON, ...). 
 
 Les tickets des évolutions et des bugs seront discriminés par les étiquettes "enhancement" (améliorations) et "bug".
@@ -221,6 +215,33 @@ Le développeur exprimera sa compréhension du besoin et la façon dont voit l'i
 
 EIS, qui a la maitrise du scole technique et de la conception, validera l'implémentation et réalisera si besoin un découpage plus fin
 des éléments à développer.
+
+---
+## Mise en place des sprints
+
+Premier daily le 08/03/2024 à 10h30.
+
+Premier sprint de définit : 
+- Milestone : 2.9.0-aplha15
+- Période :
+  - Début : 08/03/2024
+  - Fin : 29/03/2024
+
+Planification des issues :
+- Issues non planifiées dans un sprint
+  - A mettre dans le 2.9.0 (stable)
+- Issue planifiées
+  - A mettre dans un sprint (milestone 2.9.0-aplhaXX)
+
+---
+Board du premier sprint 
+
+Board utilisé "Project Management" :
+
+https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha15
+
+![ui-board-sprint-1](/projects/common/not/images/issues-board-sprint-1.png)
+
 
 ---
 ## Support cibles des outils de saisie
@@ -239,8 +260,9 @@ des éléments à développer.
 ---
 ## Historique
 
-|       Date | Auteur | Sections mises à jour                             |
-|-----------:|--------|---------------------------------------------------|
-| 06/02/2024 | VFA    | Création                                          |
-| 28/02/2024 | VFA    | Prise en compte du point du 22/02/2024            |
-| 01/03/2024 | VFA    | Prise en compte du point avec CODRA du 01/03/2024 |
+|       Date | Auteur | Sections mises à jour                              |
+|-----------:|--------|----------------------------------------------------|
+| 06/02/2024 | VFA    | Création                                           |
+| 28/02/2024 | VFA    | Prise en compte du point du 22/02/2024             |
+| 01/03/2024 | VFA    | Prise en compte du point avec CODRA du 01/03/2024  |
+| 08/03/2024 | VFA    | MAJ gestion tickets/sprints du daily du 08/03/2024 |
