@@ -147,7 +147,7 @@ Les applications seront ainsi nommées :
   - Participants : ISI/CODRA/EIS
   - Fréquence : Quotidienne
 
-- Fin de prints
+- Fin de sprints
   - Participants : ISI/CODRA/EIS/MOA
   - Fréquence : Toutes les 3 semaines  
 
@@ -189,6 +189,13 @@ Les manuels d'exploitation doivent être généralisés aux applications :
 - Les mex doivent lister les modifications du schéma sur la livraison d'une version majeur (2.9 par exemple) pour ObsMer / ObsVentes / Calendrier d'activité
 
 ---
+
+> :information_source: 
+> 
+> Mettre en place une notification dans mattermost (canal issues de HAMONIE_MCO) pour être alerté de la mise à jour des tickets
+
+
+---
 La vue "Issue boards" de gitlab sera utilisée pour suivre les différents états des tickets :
 
 - Open (affecter un milestone)
@@ -222,7 +229,7 @@ des éléments à développer.
 Premier daily le 08/03/2024 à 10h30.
 
 Premier sprint de définit : 
-- Milestone : 2.9.0-aplha15
+- Milestone : 2.9.0-alpha15
 - Période :
   - Début : 08/03/2024
   - Fin : 29/03/2024
