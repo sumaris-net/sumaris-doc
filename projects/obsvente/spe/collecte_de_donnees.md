@@ -304,12 +304,22 @@ Utiliser le moteur de règles : définir le contexte de la règle bloquante ou d
 
 ---
 ## Importation depuis ObsDeb
-Dans ObsDeb, il est possible de saisir des ventes en version moins poussée que dans ObsVentes.
-Au niveau de l'écran des marées, on a une case à cocher indiquant si la marée est à transférer dans ObsVentes.
-Un flag est alors positionné sur la table SURVEY_MEASUREMENT grâce à un PSFM (1987, valeur qualitative : Oui/Non)
-Voir les Mantis :
-- [35221: Transfert de données Obsdeb / Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35221)
-- [[OBSVENTE-OBSDEB] Evol : Transfert de données Obsdeb vers Obsvente](https://forge.ifremer.fr/mantis/view.php?id=35031)
+
+L'objectif du transfert ObsDeb - ObsVentes est de réduire le temps de saisie dans Obsventes des mensurations
+effectuées par les observateurs dans ObsDeb.
+
+#### Scénario principal
+
+1. Le saisisseur clique sur le bouton d'import des données ObsDeb
+2. La liste des marées ObsDeb ayant la case "Marée à transférer dans Allegro-Obsvente" cochée et n'existant pas déjà dans 
+la base Harmonie s'affiche (clé sur la vente : navire, lieu, date/heure). Une marée ObsDeb modifiée ou complétée avec de 
+nouvelles espèces ne sera pas présente dans la liste.
+3. Le saisisseur coche les marées à importer dans ObsVentes
+4. Le saisisseur valide l'import
+5. Les ventes sont importées dans ObsVentes (cf spec détaillée : [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert-obsdeb_obsventes.md))
+
+> Questions :
+> - MOA : conserver ce fonctionnement ou mettre en place un import automatique ?
 
 ---
 ## Référentiels

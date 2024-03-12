@@ -1,76 +1,70 @@
 # Transfert ObsDeb - ObsVentes
 
-L'objectif du transfert ObsDeb - ObsVentes est de faciliter et de réduire le temps de saisie dans Obsventes des mensurations 
-effectuées par les observateurs dans le cadre d'ObsDeb.
+## Sommaire
 
+- [Principe](#principe)
+- [Sortie](#sortie)
+- [Débarquement](#debarquement)
+- [Lot "Partie vendue"](#lot-partie-vendue)
+- [Lot "Espèce commerciale"](#lot-espèce-commerciale)
+- [Lot "Catégorie Terrain - Catégorie UE - Présenttaion - Etat"](#lot-categorie-terrain-categorie-ue-presentation-etat)
+- [Lot "Espèce scientifique"](#lot-espece-scientifique)
+- [Lot "Sexe"](#lot-sexe)
+- [Lot "Taille"](#lot-taille)
+
+---
 ## Principe
 
-Dans ObsVentes, un bouton permet d'afficher la liste des ventes ObsDeb à importer dans ObsVentes, elles correspondent aux 
-marées ayant la case "Marée à transférer dans Allegro-Obsvente" cochée et n'existant pas déjà dans la base Harmonie
-(clé sur la vente : navire, lieu de vente, date/heure).
-Une marée ObsDeb modifiée ou complétée avec de nouvelles espèces ne sera pas répercutée côté ObsVentes.
+L'objectif du transfert ObsDeb - ObsVentes est de réduire le temps de saisie dans Obsventes des mensurations
+effectuées par les observateurs dans ObsDeb.
 
-> Questions :
-> - MOA : conserver ce fonctionnement ou mettre en place un import automatique ?
-
-## Règles
 <b>RG001</b> : les PMFM et valeurs qualitatives spécifiées sont configurables via des énumérations
 
-<b>RG002</b> : Une nouvelle vente est créée pour chaque type de commercialisation distinct (Produce.saleType_fk) d’une marée 
-ObsDeb sélectionnée par l’utilisateur. Pour chaque vente une ligne est ajoutée dans la table SALE. S'il existe plusieurs 
-circuits de commercialisation pour une espèce d’une marée obsdeb, alors  il faut créer une seule vente pour une marée OBSDEB 
-et positionner le type de vente "9-Indéterminé - Hors HAM / Criée" sur la vente créée.
-Exemple dans le cas de plusieurs circuits de commercialisation pour une même espèce :  
-A partir de l'arbre de la marée ObsDeb suivant (au niveau de la capture)
+---
+## Sortie
 
-Espèce 
-    |________Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
-    |________Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
-
-La procédure stockée reconstitue la vente suivante dans ObsVentes :
-
-Vente "9-Indéterminé - Hors HAM / Criée"
-    |_____ Partie Vendue
-               |_______Espèce 
-                           |________Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
-                           |________Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
-
-## Sortie (OBSERVED_LOCATION)
+<b>RG020 - NOUVELLE REGLE</b> : Une nouvelle sortie ObsVentes est créée pour chaque sortie Obsdeb dont une marée est importée.
+Pour chaque sortie, une ligne est ajoutée dans la table OBSERVED_LOCATION :
 
 | Colonne                   | Valeur                                                                                     |
 |---------------------------|--------------------------------------------------------------------------------------------|
 | ID                        | Trigger Oracle                                                                             |
-| START_DATE_TIME           | Date de début de l'observation ObsDeb                                                      |
-| END_DATE_TIME             | Date de fin de l'observation Obsdeb                                                        |
+| START_DATE_TIME           | Date/heure de début de l'observation ObsDeb (OBSERVED_lOCATION.START_DATE_TIME)            |
+| END_DATE_TIME             | Date/heure de fin de l'observation Obsdeb (OBSERVED_lOCATION.END_DATE_TIME)                |
 | COMMENTS                  | "Sortie importée par <_Utilisateur connecté à ObsVentes_> depuis OBSDEB le <_dd/mm/yyyy_>" |
 | QUALIFICATION_DATE        |                                                                                            |
 | QUALIFICATION_COMMENTS    |                                                                                            |
 | UPDATE_DATE               | Date du jour (sysdate)                                                                     |
-| RECORDER_PERSON_FK        | Utilisateur connecté à ObsVentes                                                           |
-| RECORDER_DEPARTMENT_FK    | Société de l'utilisateur connecté à ObsVentes                                              |
+| RECORDER_PERSON_FK        | ID de l'utilisateur connecté                                                               |
+| RECORDER_DEPARTMENT_FK    | ID du service ou de la société de l'utilisateur connecté                                   |
 | SAMPLING_STRATA_FK        | ?                                                                                          |
 | SAMPLING_STRATA_REFERENCE | ?                                                                                          |
-| LOCATION_FK               | Port de débarquement                                                                       |
+| LOCATION_FK               | ID du port de débarquement de la marée ObsDeb                                              |
 | QUALITY_FLAG_FK           | "0"                                                                                        |
 | PROGRAM_FK                | "SIH-OBSVENTE"                                                                             |
 | CREATION_DATE             | Date du jour (sysdate)                                                                     |
 | VALIDATION_DATE           |                                                                                            |
 | CONTROLE_DATE             |                                                                                            |
 
-## Observateurs de la sortie (OBSERVED_LOCATION2PERSON)
+<b>RG021 - NOUVELLE REGLE</b> : Un ou plusieurs observateurs sont associés à la sortie. Pour chaque observateur, une ligne 
+est ajoutée dans la table OBSERVED_LOCATION2PERSON :
 
 | Colonne              | Valeur                          |
 |----------------------|---------------------------------|
 | OBSERVED_LOCATION_FK | ID de la sortie ObsVentes créée |
 | OBSERVER_PERSON_FK   | ID de l'observateur             |
 
-## Débarquement (LANDING)
+## Débarquement
+
+<b>RG022 - NOUVELLE REGLE</b> : Un nouveau débarquement est créée pour chaque sortie ObsVentes. Pour chaque débarquement, 
+une ligne est ajoutée dans la table LANDING :
+
 
 | Colonne                 | Valeur                                                                                          |
 |-------------------------|-------------------------------------------------------------------------------------------------|
 | ID                      | Trigger Oracle                                                                                  |
 | IS_OBSERVED             | "1"                                                                                             |
-| LANDING_DATE_TIME       | Date de début de l'observation ObsDeb                                                           |
+| LANDING_DATE_TIME       | Date/Heure du débarquement ObsDeb (LANDING.LANDING_DATE_TIME)                                   |
 | COMMENTS                | "Débarquement importé par <_Utilisateur connecté à ObsVentes_> depuis OBSDEB le <_dd/mm/yyyy_>" |
 | CREATION_DATE           | Date du jour (sysdate)                                                                          |
 | CONTROL_DATE            |                                                                                                 |
@@ -81,14 +75,14 @@ Vente "9-Indéterminé - Hors HAM / Criée"
 | CATCH_BATCH_FK          |                                                                                                 |
 | VESSEL_FK               | Navire de la marée ObsDeb                                                                       |
 | PROGRAM_FK              | "SIH-OBSVENTE"                                                                                  |
-| RECORDER_DEPARTMENT_FK  | Société de l'utilisateur connecté à ObsVentes                                                   |
-| RECORDER_PERSON_FK      | Utilisateur connecté à ObsVentes                                                                |
+| RECORDER_DEPARTMENT_FK  | ID du service ou de la société de l'utilisateur connecté                                        |
+| RECORDER_PERSON_FK      | ID de l'utilisateur connecté                                                                    |
 | SURVEY_QUALIFICATION_FK |                                                                                                 |
 | QUALITY_FLAG_FK         | "0"                                                                                             |
 | FISHING_TRIP_FK         |                                                                                                 |
 | LANDING_LOCATION_FK     |                                                                                                 |
 | RANK_ORDER              | "1"                                                                                             |
-| OBSERVED_LOCATION_FK    | ID de la sortie ObsVentes créée                                                                 |
+| OBSERVED_LOCATION_FK    | ID de la sortie                                                                                 |
 | SAMPLING_STRATA_FK      | ?                                                                                               |
 
 > Questions :
@@ -96,10 +90,31 @@ Vente "9-Indéterminé - Hors HAM / Criée"
 
 ## Vente (SALE)
 
+<b>RG002</b> : Une nouvelle vente est créée pour chaque type de commercialisation distinct (Produce.saleType_fk) d’une marée
+ObsDeb sélectionnée par l’utilisateur. Pour chaque vente une ligne est ajoutée dans la table SALE. S'il existe plusieurs
+circuits de commercialisation pour une espèce d’une marée obsdeb, alors  il faut créer une seule vente pour une marée OBSDEB
+et positionner le type de vente "9-Indéterminé - Hors HAM / Criée" sur la vente créée.
+Exemple dans le cas de plusieurs circuits de commercialisation pour une même espèce :  
+A partir de l'arbre de la marée ObsDeb suivant (au niveau de la capture)
+
+Espèce
+| Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
+| Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
+
+La procédure stockée reconstitue la vente suivante dans ObsVentes :
+
+Vente "9-Indéterminé - Hors HAM / Criée"
+|____Partie Vendue
+|    |____Espèce 
+|    |    |____Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
+|    |    |____Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
+
+Table SALE :
+
 | Colonne                        | Valeur                                                                                  |
 |--------------------------------|-----------------------------------------------------------------------------------------|
 | ID                             | Trigger Oracle                                                                          |
-| SALE_START_DATE                | cf Mapping en Annexe                                                                    |
+| SALE_START_DATE                | Date/heure de fin de la marée ObsDeb (FISHING_TRIP.RETURN_DATE_TIME)                    |
 | CONTROL_DATE                   |                                                                                         |
 | VALIDATION_DATE                |                                                                                         |
 | QUALIFICATION_DATE             |                                                                                         |
@@ -109,66 +124,62 @@ Vente "9-Indéterminé - Hors HAM / Criée"
 | SALE_LOCATION_FK               | cf Mapping en Annexe                                                                    |
 | SALE_TYPE_FK                   | cf Mapping en Annexe + [RG019]                                                          |
 | VESSEL_FK                      | cf Mapping en Annexe                                                                    |
-| QUALITY_FLAG_FK                | 0                                                                                       |
-| IS_OBSERVED                    | 1                                                                                       |
+| QUALITY_FLAG_FK                | "0"                                                                                     |
+| IS_OBSERVED                    | "1"                                                                                     |
 | SALE_END_DATE                  |                                                                                         |
 | COMMENTS                       | "Vente importée par <_Utilisateur connecté à Allegro_> depuis OBSDEB le <_dd/mm/yyyy_>" |
 | CREATION_DATE                  | Date du jour (sysdate)                                                                  |
 | UPDATE_DATE                    | Date du jour (sysdate)                                                                  |
-| CATCH_BATCH_FK                 | Lien vers le lot "Partie Vendue"                                                        |
+| CATCH_BATCH_FK                 | ID du lot "Partie Vendue"                                                               |
 | LANDING_FK                     |                                                                                         |
 | PROGRAM_FK                     | "SIH-OBSVENTE"                                                                          |
-| RECORDER_DEPARTMENT_FK         | Société de l'utilisateur connecté à ObsVentes                                           |
-| RECORDER_PERSON_FK             | Utilisateur connecté à ObsVentes                                                        |
+| RECORDER_DEPARTMENT_FK         | ID du service ou de la société de l'utilisateur connecté                                |
+| RECORDER_PERSON_FK             | ID de l'utilisateur connecté                                                            |
 | SELLER_FK                      |                                                                                         |
 | TAKE_OVER_FK                   |                                                                                         |
 | SAMPLING_STRATA_FK             | ?                                                                                       |
 | TAKE_OVER_TYPE_FK              |                                                                                         |
 
-## Observateurs de la vente (SALE2OBSERVER_PERSON)
-
 <b>RG003</b> : Un ou plusieurs observateurs sont associés à la vente. Pour chaque observateur, une ligne est ajoutée dans la 
-table SALE2OBSERVER_PERSON (cf cf Mapping en Annexe)
+table SALE2OBSERVER_PERSON :
 
-| Colonne   | Valeur                         |
-|-----------|--------------------------------|
-| SALE_FK   | ID de la vente ObsVentes créée |
-| PERSON_FK | ID de l'observateur            |
-
-## Caractéristiques de la vente (SALE_MEASUREMENT)
+| Colonne   | Valeur                                                                          |
+|-----------|---------------------------------------------------------------------------------|
+| SALE_FK   | ID de la vente                                                                  |
+| PERSON_FK | ID de l'observateur de la marée ObsDeb (FISHING_TRIP2OBSERVER_PERSON.PERSON_FK) |
 
 <b>RG005</b> : Les caractéristiques de ventes suivantes sont associées à la vente. Pour chaque caractéristique, une ligne est 
-ajoutée dans la table SALE_MEASUREMENT.
-* Stratégie d'échantillonnage (PMFM_ID=1389). La valeur de la stratégie d’échantillonnage est initialisée à partir de la stratégie d'échantillonnage de la référence au plan, si disponible (DENORMALIZED_SAMPLING_STRATA. SAMPLING_STRATEGY avec DENORMALIZED_SAMPLING_STRATA.ID= référence récupérée dans SALE. SAMPLING_STRATA_FK) 
-* Validation observateur  (PMFM_ID=741) : initialisé par défaut à "Données non contrôlées" (QUALITATIVE_VALUE_ID=1242)
-* Validation société  (PMFM_ID=297): initialisé par défaut à "Non"  (QUALITATIVE_VALUE_ID=418)
+ajoutée dans la table SALE_MEASUREMENT :
+ * Stratégie d'échantillonnage (PMFM_ID=1389) : la valeur de la stratégie d’échantillonnage est initialisée à partir de la stratégie d'échantillonnage de la référence au plan, si disponible (DENORMALIZED_SAMPLING_STRATA. SAMPLING_STRATEGY avec DENORMALIZED_SAMPLING_STRATA.ID= référence récupérée dans SALE. SAMPLING_STRATA_FK) 
+ * Validation observateur  (PMFM_ID=741) : initialisé par défaut à "Données non contrôlées" (QUALITATIVE_VALUE_ID=1242)
+ * Validation société (PMFM_ID=297) : initialisé par défaut à "Non"  (QUALITATIVE_VALUE_ID=418)
 
+| Colonne                | Valeur                                                    |
+|------------------------|-----------------------------------------------------------|
+| ID                     | Trigger Oracle                                            |
+| NUMERICAL_VALUE        |                                                           |
+| DIGIT_COUNT            |                                                           |
+| PRECISION_VALUE        |                                                           |
+| CONTROLE_DATE          |                                                           |
+| VALIDATION_DATE        |                                                           |
+| QUALIFICATION_DATE     |                                                           |
+| QUALIFICATION_COMMENTS |                                                           |
+| DEPARTMENT_FK          | Service ou société de l'utilisateur connecté à ObsVentes  |
+| PRECISION_TYPE_FK      |                                                           |
+| QUALITY_FLAG_FK        | "0"                                                       |
+| ANALYSIS_INSTRUMENT_FK |                                                           |
+| NUMERICAL_PRECISION_FK |                                                           |
+| PMFM_FK                |                                                           |
+| QUALITATIVE_VALUE_FK   |                                                           |
+| AGGREGATION_LEVEL_FK   |                                                           |
+| SALE_FK                | ID de la vente ObsVentes créée                            |
+| EXPECTED_SALE_FK       |                                                           |
+| ALPHANUMERICAL_VALUE   |                                                           |
 
-| Colonne                | Valeur                                        |
-|------------------------|-----------------------------------------------|
-| ID                     | Trigger Oracle                                |
-| NUMERICAL_VALUE        |                                               |
-| DIGIT_COUNT            |                                               |
-| PRECISION_VALUE        |                                               |
-| CONTROLE_DATE          |                                               |
-| VALIDATION_DATE        |                                               |
-| QUALIFICATION_DATE     |                                               |
-| QUALIFICATION_COMMENTS |                                               |
-| DEPARTMENT_FK          | Société de l'utilisateur connecté à ObsVentes |
-| PRECISION_TYPE_FK      |                                               |
-| QUALITY_FLAG_FK        | "0"                                           |
-| ANALYSIS_INSTRUMENT_FK |                                               |
-| NUMERICAL_PRECISION_FK |                                               |
-| PMFM_FK                |                                               |
-| QUALITATIVE_VALUE_FK   |                                               |
-| AGGREGATION_LEVEL_FK   |                                               |
-| SALE_FK                | ID de la vente ObsVentes créée                |
-| EXPECTED_SALE_FK       |                                               |
-| ALPHANUMERICAL_VALUE   |                                               |
-
-## Lot "Partie vendue"
+## Lot "Partie Vendue"
 
 Le lot "Partie Vendue" est le lot de plus haut niveau de l’arbre d’échantillonnage. 
+
 <b>RG006</b> : Pour chaque vente est associée un lot "Partie Vendue". Pour chaque lot "Partie Vendue", une ligne est ajoutée 
 dans la table BATCH :
 
@@ -197,14 +208,15 @@ dans la table BATCH :
 | ROOT_BATCH_FK            |                          |
 | LOCATION_FK              |                          |
 
-## Lots "Espèces commerciales"
+## Lot "Espèce commerciale"
 
-Les lots "Espèces commerciales" sont des lots fils du lot "Partie Vendue". Ces lots sont caractérisés par un "Type de tri". 
+Les lots "Espèce commerciale" sont des lots fils du lot "Partie Vendue". Ces lots sont caractérisés par un "Type de tri". 
+
 <b>RG007</b> : un lot "Espèce commerciale", fils du lot "Partie Vendue" est créé pour chaque "Espèce commerciale" 
 de la capture débarquée et dont le  type de commercialisation est celui de la vente en cours de création. S'il existe 
-plusieurs circuits de commercialisation pour une espèce d’une marée OBSDEB (cf règle RG002)  alors   un lot "Espèce commerciale", 
+plusieurs circuits de commercialisation pour une espèce d’une marée OBSDEB (cf règle RG002) alors un lot "Espèce commerciale", 
 fils du lot "Partie Vendue" est créé pour chaque "Espèce commerciale" de la capture débarquée (quel que soit le type de 
-commercialisation)  de la vente en cours de création. Pour chaque lot "Espèce commerciale", une ligne est ajoutée dans la 
+commercialisation) de la vente en cours de création. Pour chaque lot "Espèce commerciale", une ligne est ajoutée dans la 
 table BATCH :
 
 | Colonne                  | Valeur                                                  |
@@ -233,33 +245,34 @@ table BATCH :
 | LOCATION_FK              |                                                         |
 
 <b>RG008</b> : Pour chaque lot "Espèce commerciale", une ligne est ajoutée dans la table SORTING MEASUREMENT pour caractériser  
-le "Type de tri" (PMFM.ID = 1387)  avec la valeur "Tri patron navire" (QUALITATIVE_VALUE_FK =  1746) par défaut 
+le "Type de tri" (PMFM.ID = 1387)  avec la valeur "Tri patron navire" (QUALITATIVE_VALUE_FK =  1746) par défaut :
 
-| Colonne                | Valeur                                        |
-|------------------------|-----------------------------------------------|
-| ID                     | Trigger Oracle                                |
-| NUMERICAL_VALUE        |                                               |
-| DIGIT_COUNT            |                                               |
-| PRECISION_VALUE        |                                               |
-| CONTROL_DATE           |                                               |
-| VALIDATION_DATE        |                                               |
-| QUALIFICATION_DATE     |                                               |
-| QUALIFICATION_COMMENTS |                                               |
-| DEPARTMENT_FK          | Société de l'utilisateur connecté à ObsVentes |
-| PRECISION_TYPE_FK      |                                               |
-| QUALITY_FLAG_FK        | "0"                                           |
-| ANALYSIS_INSTRUMENT_FK |                                               |
-| NUMERICAL_PRECISION_FK |                                               |
-| PMFM_FK                | Valeur du PMFM [RG008]                        |
-| QUALITATIVE_VALUE_FK   | Valeur du PMFM [RG008]                        |
-| AGGREGATION_LEVEL_FK   |                                               |
-| RANK_ORDER             | 1                                             |
-| SORTING_BATCH_FK       | ID du lot "Espèce commerciale"                |
-| ALPHANUMERICAL_VALUE   |                                               |
+| Colonne                | Valeur                                                   |
+|------------------------|----------------------------------------------------------|
+| ID                     | Trigger Oracle                                           |
+| NUMERICAL_VALUE        |                                                          |
+| DIGIT_COUNT            |                                                          |
+| PRECISION_VALUE        |                                                          |
+| CONTROL_DATE           |                                                          |
+| VALIDATION_DATE        |                                                          |
+| QUALIFICATION_DATE     |                                                          |
+| QUALIFICATION_COMMENTS |                                                          |
+| DEPARTMENT_FK          | ID du service ou de la société de l'utilisateur connecté |
+| PRECISION_TYPE_FK      |                                                          |
+| QUALITY_FLAG_FK        | "0"                                                      |
+| ANALYSIS_INSTRUMENT_FK |                                                          |
+| NUMERICAL_PRECISION_FK |                                                          |
+| PMFM_FK                | ID du PMFM [RG008]                                       |
+| QUALITATIVE_VALUE_FK   | Valeur du PMFM [RG008]                                   |
+| AGGREGATION_LEVEL_FK   |                                                          |
+| RANK_ORDER             | "1"                                                      |
+| SORTING_BATCH_FK       | ID du lot "Espèce commerciale"                           |
+| ALPHANUMERICAL_VALUE   |                                                          |
 
-## Lots "Catégorie Terrain - Catégorie UE - Présentation - Etat"
+## Lot "Catégorie Terrain - Catégorie UE - Présentation - Etat"
 
-Les lots "Catégorie Terrain - Catégorie UE - Présentation - Etat" sont des lots fils des lots "Espèces commerciale".
+Les lots "Catégorie Terrain - Catégorie UE - Présentation - Etat" sont des lots fils des lots "Espèce commerciale".
+
 <b>RG009</b> : un lot "Catégorie Terrain - Catégorie UE - Présentation - Etat", fils du lot "Espèce commerciale" est créé 
 pour chaque "Espèce commerciale" de la capture débarquée. Pour chaque lot "Espèce commerciale", une ligne est ajoutée 
 dans la table BATCH :
@@ -286,7 +299,7 @@ dans la table BATCH :
 | TAXON_GROUP_FK           | cf Mapping en Annexe                                    |
 | REFERENCE_TAXON_FK       |                                                         |
 | LABEL                    |                                                         |
-| ROOT_BATCH_FK            | ID du lot "Partie vendue" ?                             |
+| ROOT_BATCH_FK            | ID du lot "Partie vendue"                               |
 | LOCATION_FK              |                                                         |
 
 <b>RG010</b> : Une ligne est ajoutée dans la table SORTING MEASUREMENT, pour chacun des critères suivants du lot  
@@ -306,7 +319,7 @@ dans la table BATCH :
 | VALIDATION_DATE        |                                                                    |
 | QUALIFICATION_DATE     |                                                                    |
 | QUALIFICATION_COMMENTS |                                                                    |
-| DEPARTMENT_FK          | Société de l'utilisateur connecté à ObsVentes                      |
+| DEPARTMENT_FK          | Service ou société de l'utilisateur connecté à ObsVentes           |
 | PRECISION_TYPE_FK      |                                                                    |
 | QUALITY_FLAG_FK        | "0"                                                                |
 | ANALYSIS_INSTRUMENT_FK |                                                                    |
@@ -332,7 +345,7 @@ pour les espèces sexées (cf RG014 : Détermination du sexage des espèces scie
 | VALIDATION_DATE             |                                                                    |
 | QUALIFICATION_DATE          |                                                                    |
 | QUALIFICATION_COMMENTS      |                                                                    |
-| DEPARTMENT_FK               | Société de l'utilisateur connecté à ObsVentes                      |
+| DEPARTMENT_FK               | Service ou société de l'utilisateur connecté à ObsVentes           |
 | PRECISION_TYPE_FK           |                                                                    |
 | QUALITY_FLAG_FK             | "0"                                                                |
 | ANALYSIS_INSTRUMENT_FK      |                                                                    |
@@ -382,7 +395,7 @@ l’utilisateur complétera la vente dans Allegro (Onglet RTP d’une Vente).
 | TAXON_GROUP_FK           |                                                                                 |
 | REFERENCE_TAXON_FK       | reference_taxon de l’espèce scientifique associé à l’espèce commerciale [RG012] |
 | LABEL                    |                                                                                 |
-| ROOT_BATCH_FK            | ID du lot "Partie vendue" ?                                                     |
+| ROOT_BATCH_FK            | ID du lot "Partie vendue"                                                       |
 | LOCATION_FK              |                                                                                 |
 
 ## Lot "Sexe"
@@ -425,7 +438,7 @@ Une ligne est ajoutée dans la table BATCH, pour chaque valeur de sexage récup�
 | TAXON_GROUP_FK           |                                                         |
 | REFERENCE_TAXON_FK       |                                                         |
 | LABEL                    |                                                         |
-| ROOT_BATCH_FK            | ID du lot "Partie vendue" ?                             |
+| ROOT_BATCH_FK            | ID du lot "Partie vendue"                               |
 | LOCATION_FK              |                                                         |
 
 <b>RG015</b> : Une ligne est ajoutée dans la table SORTING MEASUREMENT, pour chaque valeur de sexage récupérée (cf RG014):
@@ -434,27 +447,27 @@ Une ligne est ajoutée dans la table BATCH, pour chaque valeur de sexage récup�
 2.	Si ‘M’ Alors ID QUALITATIVE_VALUE("Mâle")
 3.	Si ‘F’ Alors ID QUALITATIVE_VALUE("Femelle")
 
-| Colonne                | Valeur                                             |
-|------------------------|----------------------------------------------------|
-| ID                     | Trigger Oracle                                     |
-| NUMERICAL_VALUE        |                                                    |
-| DIGIT_COUNT            |                                                    |
-| PRECISION_VALUE        |                                                    |
-| CONTROL_DATE           |                                                    |
-| VALIDATION_DATE        |                                                    |
-| QUALIFICATION_DATE     |                                                    |
-| QUALIFICATION_COMMENTS |                                                    |
-| DEPARTMENT_FK          | Société de l'utilisateur connecté à ObsVentes      |
-| PRECISION_TYPE_FK      |                                                    |
-| QUALITY_FLAG_FK        | "0"                                                |
-| ANALYSIS_INSTRUMENT_FK |                                                    |
-| NUMERICAL_PRECISION_FK |                                                    |
-| PMFM_FK                | ID du PMFM [RG015]                                 |
-| QUALITATIVE_VALUE_FK   | Valeur du PMFM [RG015]                             |
-| AGGREGATION_LEVEL_FK   |                                                    |
-| RANK_ORDER             | Ordre du critère de classement [RG015] (1, 2 ou 3) |
-| SORTING_BATCH_FK       | ID du lot "Sexe"                                   |
-| ALPHANUMERICAL_VALUE   |                                                    |
+| Colonne                | Valeur                                                    |
+|------------------------|-----------------------------------------------------------|
+| ID                     | Trigger Oracle                                            |
+| NUMERICAL_VALUE        |                                                           |
+| DIGIT_COUNT            |                                                           |
+| PRECISION_VALUE        |                                                           |
+| CONTROL_DATE           |                                                           |
+| VALIDATION_DATE        |                                                           |
+| QUALIFICATION_DATE     |                                                           |
+| QUALIFICATION_COMMENTS |                                                           |
+| DEPARTMENT_FK          | Service ou société de l'utilisateur connecté à ObsVentes  |
+| PRECISION_TYPE_FK      |                                                           |
+| QUALITY_FLAG_FK        | "0"                                                       |
+| ANALYSIS_INSTRUMENT_FK |                                                           |
+| NUMERICAL_PRECISION_FK |                                                           |
+| PMFM_FK                | ID du PMFM [RG015]                                        |
+| QUALITATIVE_VALUE_FK   | Valeur du PMFM [RG015]                                    |
+| AGGREGATION_LEVEL_FK   |                                                           |
+| RANK_ORDER             | Ordre du critère de classement [RG015] (1, 2 ou 3)        |
+| SORTING_BATCH_FK       | ID du lot "Sexe"                                          |
+| ALPHANUMERICAL_VALUE   |                                                           |
 
 ## Lot "Taille"
 Le lot "Taille" est un lot fils du lot "Sexe" ou du lot "Espèce scientifique" si l’espèce n’est pas sexée
@@ -493,29 +506,29 @@ BATCH :
 | TAXON_GROUP_FK           |                                                              |
 | REFERENCE_TAXON_FK       |                                                              |
 | LABEL                    |                                                              |
-| ROOT_BATCH_FK            | ID du lot "Partie vendue" ?                                  |
+| ROOT_BATCH_FK            | ID du lot "Partie vendue"                                    |
 | LOCATION_FK              |                                                              |
 
 SORTING_MEASUREMENT :
 
-| Colonne                | Valeur                                          |
-|------------------------|-------------------------------------------------|
-| ID                     | Trigger Oracle                                  |
-| NUMERICAL_VALUE        | Valeur du PMFM [RG018]                          |
-| DIGIT_COUNT            |                                                 |
-| PRECISION_VALUE        |                                                 |
-| CONTROL_DATE           |                                                 |
-| VALIDATION_DATE        |                                                 |
-| QUALIFICATION_DATE     |                                                 |
-| QUALIFICATION_COMMENTS |                                                 |
-| DEPARTMENT_FK          | Société de l'utilisateur connecté à ObsVentes   |
-| PRECISION_TYPE_FK      |                                                 |
-| QUALITY_FLAG_FK        | "0"                                             |
-| ANALYSIS_INSTRUMENT_FK |                                                 |
-| NUMERICAL_PRECISION_FK |                                                 |
-| PMFM_FK                | ID du PMFM [RG017]                              |
-| QUALITATIVE_VALUE_FK   |                                                 |
-| AGGREGATION_LEVEL_FK   |                                                 |
-| RANK_ORDER             | Ordre du critère de classement [RG018] (1 ou 2) |
-| SORTING_BATCH_FK       | ID du lot "Taille"                              |
-| ALPHANUMERICAL_VALUE   |                                                 |
+| Colonne                | Valeur                                                    |
+|------------------------|-----------------------------------------------------------|
+| ID                     | Trigger Oracle                                            |
+| NUMERICAL_VALUE        | Valeur du PMFM [RG018]                                    |
+| DIGIT_COUNT            |                                                           |
+| PRECISION_VALUE        |                                                           |
+| CONTROL_DATE           |                                                           |
+| VALIDATION_DATE        |                                                           |
+| QUALIFICATION_DATE     |                                                           |
+| QUALIFICATION_COMMENTS |                                                           |
+| DEPARTMENT_FK          | Service ou société de l'utilisateur connecté à ObsVentes  |
+| PRECISION_TYPE_FK      |                                                           |
+| QUALITY_FLAG_FK        | "0"                                                       |
+| ANALYSIS_INSTRUMENT_FK |                                                           |
+| NUMERICAL_PRECISION_FK |                                                           |
+| PMFM_FK                | ID du PMFM [RG017]                                        |
+| QUALITATIVE_VALUE_FK   |                                                           |
+| AGGREGATION_LEVEL_FK   |                                                           |
+| RANK_ORDER             | Ordre du critère de classement [RG018] (1 ou 2)           |
+| SORTING_BATCH_FK       | ID du lot "Taille"                                        |
+| ALPHANUMERICAL_VALUE   |                                                           |
