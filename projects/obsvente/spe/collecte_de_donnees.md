@@ -29,9 +29,9 @@
 ## Cible
 
 Le mode tablette est à inclure dans le périmètre de la V1.
-Version de tablette utilisée par BL : Samsung Active Tab (ith zoom) 991x580.
+Version de tablette utilisée par BL : Samsung Active Tab (with zoom) 991x580.
 
-> Définir la résolution cible des saisisseurs
+> Définir la résolution cible des saisisseurs avec VB et BL
 
 ---
 ## Lignes de plan
@@ -82,9 +82,8 @@ Version de tablette utilisée par BL : Samsung Active Tab (ith zoom) 991x580.
 **Variante 1d :** Le saisisseur supprime une sortie existante
 
 > Questions :
-> - MOA : Renommer le programme SIH-OBSVENTE en SIH-OBSVENTES ? Impacts ?
-> - MOA : Liste des colonnes exhaustive ?
-> - MOA : Ajouter onglets avec l'ensemble des échantillonnages toutes sorties ?
+> - ISI : Analyser le renommage du programme SIH-OBSVENTE en SIH-OBSVENTES (impact + chiffrage) ?
+> - Saisisseur : Ajouter onglet avec l'ensemble des échantillonnages toutes sorties ? (cf Imagine)
 
 ---
 ## Sorties > Filtres
@@ -151,6 +150,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
 * Type de vente : PMFM à créer, pointe vers SALE_TYPE
+* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
+* Disponibilité de la fiche de pré-vente : PMFM à créer, QUALITATIVE_VALUE à créer (oui/non)
 * Caractéristiques de la vente :
     * Origine : PMFM_STRATGY avec :
         * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
@@ -160,8 +161,6 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
 
 > Questions :
-> - MOA : Ajouter les champs : type de sortie, disponibilité de la fiche pré-vente (cf doc de Johanna) ?
-> - MOA : Autoriser l'ajout de carac non définies dans la stratégie ?
 > - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
 > - EIS : Stocker la ligne de plan dans OBSERVED_LOCATION.SAMPLING_STRATA_FK ?
@@ -211,9 +210,10 @@ par rapport à celles définies dans la liste des espèces à observer
 * Raison de non observation : PMFM à créer
 
 > Questions :
-> - MOA : une espèce peut-elle être observée sur plusieurs navires ?
+> - EIS : ajouter un nouveau tableau ou un nouvel onglet pour ajouter des PETS à l'échantillonnage 
+(espèce commerciale, espèce scientifique, navire, type de vente, commentaire) ? Liste des PETS issue de WAO (environ 15 espèces). 
+Besoin de pouvoir ajouter et supprimer en cas de mauvais ajout.
 > - MOA : liste des raisons de non observation ?
-> - MOA : Notion d'inventaire exhaustif à ajouter ?
 
 ---
 ## Lots espèces
@@ -246,7 +246,6 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
 **Variante 4a :** Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie
 
 > Questions :
-> - MOA : valeur par défaut état et présentation ?
 > - Cas des mélanges ? (ex: baudroie blanche/noire)
 > - Pas de sous-échantillonnage ?
 > - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
@@ -316,7 +315,7 @@ la base Harmonie s'affiche (clé sur la vente : navire, lieu, date/heure). Une m
 nouvelles espèces ne sera pas présente dans la liste.
 3. Le saisisseur coche les marées à importer dans ObsVentes
 4. Le saisisseur valide l'import
-5. Les ventes sont importées dans ObsVentes (cf spec détaillée : [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert-obsdeb_obsventes.md))
+5. Les ventes sont importées dans ObsVentes (cf spec détaillée : [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert_obsdeb_obsventes.md))
 
 > Questions :
 > - MOA : conserver ce fonctionnement ou mettre en place un import automatique ?
