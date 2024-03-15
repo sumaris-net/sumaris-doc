@@ -1,0 +1,20 @@
+@startsalt
+{
+
+  {/  Détails | Capture | <b> Captures accidentelles (1) }
+  {/  <b>Mesures individuelles | Remise à l'eau }
+
+     { [ <&plus>] | [ <&trash> ] }
+	{#
+      [ ] | # | <&arrow-thick-top> <b>Espèce scientifique | <b>Mort     | <b>Sexe   | <b>Trace de capture | <b> Position Filière | <b> Référence de la marque | <&menu>
+      [ ] | 1 | SKA - Raja spp | ^ Rejet vivant ^ | ^ Male ^ | [<&check>] | ^ Début de virage ^ | Zzz | <&bar-chart> <&comment-square> <&image>
+    }
+    .
+    <b>Total : 1</b> individu(s) marqué(s)
+  --
+
+  {
+    [Fermer] | [Sauvegarder]
+  }
+}
+@endsalt

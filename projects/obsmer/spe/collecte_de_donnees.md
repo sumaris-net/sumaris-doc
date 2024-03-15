@@ -756,12 +756,16 @@ Contrôle de la saisie d'une capture :
 
 > Questions :
 
-> VFA -> MOA : Permettre l'ajout de PSFM ?
-
-> VFA -> MOA : Unité des PSFM - le choix de l'unité impacte le PSFM de destination. Possible de choisir l'unité pour le poids (g), la taille ?
-
 > VFA -> MOA/EIS : Compatibilité du modele d'arbre différent des données précédemment saisies : Données précédentes d'un arbre avec Macro Déchets par exemple
 La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
+
+
+> 14/03/2024 : Pas de possibilité d'ajouter des PSFMs : OK
+
+> MOA (attente confirmation Marion) : Retirer la notion d'échantillonnage : Enlever ou griser "Coef. éch." (1/1) et "Poids échant. (kg)" pour Conso, Appat, Godaille, Obligatoire à débarquer : ATTENTE
+
+> MOA (à confirmer) : Saisir en gramme pour certains écrans ? Tout est saisi en Kg ? : ATTENTE
+
 
 ---
 
@@ -833,8 +837,12 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
         * Le poids total, en kg
         * Un commentaire
           * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
-        * Une photo (A REALISER)
-        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+        * Des photos (A REALISER)
+    * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+> 14/03/2024 : Ajouter la case à cocher pour supprimer un EMV : OK
+
+> 14/03/2024 EIS : Y a t il un nombre de photos limites ?
 
 
 ## Opération > Capture > PNR, Vrac > Non Détaillé
@@ -849,16 +857,26 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
 
 1. L'observateur sélectionne le menu "Non détaillé" de l'arbre PNR, Vrac 
 2. La fenêtre de saisie des rejets s'affiche
-3. L'observateur peut remplir automatiquement toutes les espèces en cliquant sur le bouton ((:heavy_plus_sign:) :
+3. L'observateur renseigne les éléments suivants :
+    * Une case à cochée permet d'indiquer s'il le poids a été estimé
+4. L'observateur peut remplir automatiquement toutes les espèces en cliquant sur le bouton ((:heavy_plus_sign:) :
    * Une ligne d'EMV et une ligne d'animaux sont ajoutées
-4. L'observateur peut ajouter, un à un, un rejet en cliquant sur le bouton :heavy_plus_sign:
+5. L'observateur peut ajouter, un à un, un rejet en cliquant sur le bouton :heavy_plus_sign:
    * Une nouvelle ligne est ajoutée au tableau
      * Le choix de la nature du rejet ("Animaux" ou "EMV") s'ouvre automatiquement pour la saisie
-5. Pour chaque rejet, l'observateur renseigne :
+6. Pour chaque rejet, l'observateur renseigne :
    * Le poids total 
    * Un commentaire
        * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
    * Une photo (A REALISER)
+7. Le poids total est calculé à partir des poids saisies pour chaque rejet
+
+> 14/03/2024 : Ajouter "Poids total (kg)" et case à cocher "Estimé ?" : OK
+
+>  Poids total (kg) calculé des poids total des Natures de rejets : OK
+
+>  Ajouter une case à cocher pour la suppression : OK
+
 
 ---
 ## Opération > Capture > PNR, Hors Vrac
@@ -888,10 +906,9 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Hors Vrac
 2. La fenêtre de saisie des "Animaux" s'affiche
 3. L'observateur renseigne les espèces observées :
-    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
     * Pour chaque nouvelle espèce, il doit renseigner :
-        * Le code commercial (FAO) de l'espèce
+        * Le code de l'espèce scientifique de l'espèce
         * Le poids total, en kg
         * Le nombre d'individu total
         * Le taux d'échantillonnage (1/n)
@@ -905,6 +922,17 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * Une photo (A REALISER) 
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
+> 14/03/2024 : Enlever la case à cocher "Inventaire exhaustif des espèces ?" : OK
+
+> MOA (à confirmer) : Garder Coef. échant. et poids échant. : ATTENTE 
+
+> Ajouter une case à cocher pour la suppression : OK
+
+> Ne pas avoir le libellé "Espèce Commerciale" mais plutôt le libellé "Espèce scientifique" (pas vendu) : OK
+
+> AJOUT DE REGLES - Action de contrôle : Warning pas respecté : si coef echant PNR Vrac est 1/1 alors que le poids de PNR Hors Vrac doit être à 0 : TODO
+
+
 ## Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables
 
 ![ui-batch-PNR-HVRAC-EMV](/projects/obsmer/spe/images/batch/batch-tree-PNR-HVRAC-EMV.svg)
@@ -916,7 +944,7 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 1. L'observateur sélectionne le menu "Ecosystèmes Marins Vulnérables" de l'arbre PNR, Hors Vrac 
 2. La fenêtre de saisie des "Ecosystèmes Marins Vulnérables" s'affiche
 3. L'observateur renseigne les catégories EMV observées :
-    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+    * Si le poids total est estimé, par une case à cocher
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catgégorie d'EMV
     * Un bouton ((:heavy_plus_sign:) lui permet d'ajouter toutes les catégories d'EMV
     * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
@@ -926,6 +954,14 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
           * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
         * Une photo (A REALISER)
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+4. Le poids total est calculé à partir des poids saisies pour chaque EMV
+
+> 14/03/2024 : Enlever la case à cocher "Inventaire exhaustif des espèces ?" : OK
+
+> Ajouter "Poids total (kg)" et case à cocher "Estimé ?" : OK
+
+> Ajouter une case à cocher pour la suppression : OK
+
 
 
 ---
@@ -934,7 +970,7 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 
 **REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE**
 
-![ui-batch-accident-measures](/projects/obsmer/spe/images/batch/batch-accident-measures.svg)
+![ui-batch-accident](/projects/obsmer/spe/images/batch/batch-accident.svg)
 
 **Capture accidentelle** : capture accessoire d’espèces protégées, en danger ou menacées (voir
 Définition de PETS)
@@ -956,32 +992,98 @@ la pêche professionnelle
     * La liste de sélection de l'espèce scientifique s'ouvre automatiquement pour la sélection
 4. L'observateur peut renseigner les éléments suivants de la nouvelle capture
     * Le code de l'espèce scientifique *, dans une liste déroulante
-    * Si l'animal est mort, par une case à cocher (coché = Oui)
+    * Si l'animal est mort (parmi la liste suivante : "Mort", "Vivant", "Blessé")
     * Le sexe de l'animal capturé (parmi la liste suivante : "Indetermine", "Male", "Femelle", "Non sexe")
+    * S'il y a des traces de capture (case à cocher)
+       * Si oui il faut renseigner le type de trace (gaffé, amputation, lacération, ...)
+    * La position de l'individu au niveau de l'opération (parmi la liste suivante : "Début du virage", "Milieu du virage", "Fin du virage")
+    * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour la capture
     * Une photo
     * Un commentaire
-5. L'observateur peut aussi supprimer toutes les captures saisis ou décider de supprimer les captures une à une
-6. A chaque sauvegarde, le nombre total de mesures individuelles est mit à jour 
+5. A chaque sauvegarde, le nombre total de mesures individuelles est mit à jour 
+6. L'observateur peut aussi supprimer toutes les captures saisis ou décider de supprimer les captures une à une
+
+
+#### Ajout de mesure à la capture accidentelle
+
+![ui-batch-accident-measures](/projects/obsmer/spe/images/batch/batch-accident-measures.svg)
+
+1. L'oservateur ajoute des mesures à la capture accidentelle saisie
+    * En fonction de l'espèce (dauphin / oiseau), on peut avoir différentes mesures (appliquées par la stratégie)
+
 
 #### Détails Techniques
 - Sexe de l'espèce capturée : PMFM - SEX (ID = 196)
+  - UNK, Male, Femelle, Non sexe
+  
+- Etat de l'espèce : PMFM - DEAD_ALIVE (ID = 1393)
+  - Rejet vivant, Rejet mort, Unk, Rejet en état de décomposition
+  
+- Type de trace : PMFM - CATCH_TRACK_TYPE (ID = 2428)
+  - Gaffé, Amputation, Lacération, Fracture rostre, Aucune
 
+- Position de l'individu durant l'opération : PMFM - NET_STRING_CATCH_POSITION (ID = 3259)
+  - Début du virage, Milieu du virage, Fin du virage
 
-## Opération > Capture > Captures accidentelles > Relachés
+> 14/03/2024 : 
 
-**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE/RELACHES**
+> Ajouter une case à cocher pour la suppression : OK
+
+> Mort ? pas de case à cocher - Liste déroulante : OK
+
+> Ajout les PSFMs suivants (issue de la stratégie) : 
+
+> Trace de capture : Oui/Non : OK
+
+    > Si oui, renseigné le type de trace de capture (voir le protocole Observateur, fiche capture accidentelle) : OK
+
+> Position de l'individu au niveau de l'opération (Début / Milieu / Fin) : OK
+
+> Avoir des colonnes fixes sans les mesures : OK
+
+> En fonction de l'espèce (souvent dauphins et oiseaux), on peut avoir plusieurs mesures
+
+> Exemple : Si saisit de dauphin : 1 mesure de longueur et 1 circonférence
+
+> !!! Enlever la colonne "Longueur totale" : OK
+
+> Gestion des mesures : OK 
+
+> Scénario : Aller chercher le type de mesure pour chaque espèce dans les .. (Ajout de PSFM)
+
+> Ouvrir un écran comme celui de saisie des mesures avec choix des PSFM de mesure suivant le choix des taxons (définit dans la stratégie)
+
+> On saisit directement et on a une icone détail (3 barres) pour accèder à la saisie 
+
+## Opération > Capture > Captures accidentelles > Remise à l'eau
+
+**REF: OBSMER/OPERATION_CAPTURE/CAPTURE_ACCIDENTELLE/REMISE-A-L-EAU**
 
 ![ui-batch-accident-release](/projects/obsmer/spe/images/batch/batch-accident-release.svg)
 
 #### Scénario principal
-TODO
 
+1. L'observateur est positionné sur l'onglet "Remise à l'eau"
+2. Il peut ajouter des individus remit à l'eau par rapport aux captures accidentelles mesurées 
+3. L'observateur peut renseigner les éléments suivants pour chaque remise :
+    * La référence de la marque (saisie dans la mesure individuelle de la capture accidentelle)
+    * La date de remise à l'eau
+    * La latitude
+    * La longitude
+    * Un commentaire
+4. L'observateur peut aussi supprimer toutes les remises à l'eau saisis ou décider de supprimer les remises à l'eau une à une
+
+> 14/03/2024 : Utilisé le mot "Remise à l'eau" : OK
+
+>  Ajouter une case à cocher pour la suppression : OK
+
+> Enlever la photo car présent dans Mesures individuelles : OK 
 
 ## Opération > Capture > Mesures indivuelles
 
 **REF: OBSMER/OPERATION_CAPTURE/MI**
 
-![ui-samples](/projects/obsmer/spe/images/samples.svg)
+![ui-samples](/projects/common/spe/images/individual-measures.svg)
 
 #### Scénario principal
 
@@ -991,14 +1093,16 @@ L'écran affiche la liste des mesures individuelles pour l'espèce commerciale.
 1. L'écran est composé des champs suivants :
    *  Le nom de l'espèce scientifique
      * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
-   *  La longueur totale mesurée, en cm
+   * Le sexe de l'espèce mesurée 
+   * La longueur totale mesurée, en cm
    *  Le poids calculé RTP (Relation Taille Poids) en kg
 2. Un bouton permet d'ajouter une mesure individuelle
 
-![ui-sample-add](/projects/common/spe/images/sample-add.svg)
 
 
-> TODO: Il faut des PSFM supplémentaires (ex: état de remise à l'eau)  
+> TODO: Il faut des PSFM supplémentaires (ex: état de remise à l'eau)
+
+> Rendu ICI : voir avec ESI si besoin d'un point avec la MOA  
 
 ---
 ## Administration > Lots > Modèle d'arbre (1/3)

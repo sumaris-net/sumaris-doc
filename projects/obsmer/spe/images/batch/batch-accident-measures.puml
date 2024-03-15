@@ -1,20 +1,16 @@
-@startsalt
+<@startsalt
 {
-
-  {/  Détails | Capture | <b> Captures accidentelles (1) }
-  {/  <b>Mesures individuelles | Relâchés }
-
-	{#
-      [ <&plus>]
-      # | <&arrow-thick-top> <b>Espèce scientifique | <b>Mort ?     | <b>Sexe   | <b>Longueur totale (cm) | <b> Référence de la marque | <&menu>
-      1 | SKA - Raja spp | <&check>                | M | 124 | Zzz | <&comment-square> <&image> <&trash>
-    }
+  {+
+    { | . |  <b>Ajouter des mesures :  | . }
+    --
+    { | . | Espèce scientifique   | . }
+    { | . | <color:grey>Lophius piscatorius   | .  }
     .
-    <b>Total : 1</b> individu(s) marqué(s)
-  --
-
-  {
-    [Fermer] | [Sauvegarder]
-  }
-}
+    { | . | Longueur totale (cm) * | .  }
+    { | . | "   12  "  }
+    .
+    { [Ajouter] }
+    }
+ }
 @endsalt
+

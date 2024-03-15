@@ -21,12 +21,14 @@
    }
   } | . | {
     { [Capture] | / | [Partie non retenue, Vrac] | [<b>Non détaillé] | (2) | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
-        .
+           .
+           {Poids total (kg) : | "  <i><color:blue>20  " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+           .
+        { [ <&plus> ] | [<b>((<&plus><b>)] | [<&trash>] }
         {#
-            . | { [ <&plus> ]  | [<b>((<&plus><b>)] | [ <&trash> ] }  | . | .
-            # | <b>Nature des rejets  | <b>Poids total (kg)     |  <&menu>
-            1 | ^ ANI - Animaux^         | 10 |  <&comment-square> <&image>
-            2 | ^ INV - Inerte et végétaux ^        |  10 |  <&comment-square> <&image>
+            [ ] | # | <b>Nature des rejets  | <b>Poids total (kg)     |  <&menu>
+            [ ] | 1 | ^ ANI - Animaux^         | 10 |  <&comment-square> <&image>
+            [ ] | 2 | ^ INV - Inerte et végétaux ^        |  10 |  <&comment-square> <&image>
           }
     }
 
