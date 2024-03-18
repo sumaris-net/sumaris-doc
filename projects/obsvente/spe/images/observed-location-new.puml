@@ -2,7 +2,7 @@
 {
   <b>Nouvelle sortie
   --
-  {/ <b>Détails | Echantillonnages }
+  {/ <b>Détails | Echantillonnages | <Autres espèces> (PETS)}
   ..
   .
   {
@@ -20,11 +20,12 @@
   <b>Caractéristiques :
 
   {
-      . | Zone de pêche : | ^5219056 - FAO 5219056 Quadrilatère FAO 1° * 1°^
+      . | Origine* : | ^SIH-OBSVENTES     ^
       . | Temps disponible à l'échantillonnage* :| "4.0"
       . | Disponibilité de la fiche de pré-vente :| ^Oui^
       . | Référence au plan* : | ^2021_V0010 - DPMA_20_23_Lot2^
       . | Stratégie d'échantillonnage : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
+      . | PETS ?* : | ^Oui^
       . | Type de vente* : | ^Enchères - HAM / Criées     ^
       . | Validation observateur* : | ^Données contrôlées^
       . | Validation société* : | ^Données valides   ^

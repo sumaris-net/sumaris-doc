@@ -29,7 +29,8 @@
 ## Cible
 
 Le mode tablette est à inclure dans le périmètre de la V1.
-Version de tablette utilisée par BL : Samsung Active Tab (with zoom) 991x580.
+Résolution de tablette utilisée par BL : Samsung Active Tab (with zoom) 991x580.
+Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1200.
 
 > Définir la résolution cible des saisisseurs avec VB et BL
 
@@ -69,6 +70,7 @@ Version de tablette utilisée par BL : Samsung Active Tab (with zoom) 991x580.
    * La date/heure
    * Le ou les observateurs
    * Le saisisseur
+   * L'origine
    * Le commentaire
 
 **Variante(s) :**
@@ -104,13 +106,16 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'organisme du saisisseur
    * Le saisisseur
    * L'observateur
+   * L'origine
    * L'état de saisie
+   
 
 Les critères suivants sont multiples (dev en cours sur Imagine) : 
-- L'organisme du saisisseur
-- Le saisisseur
-- L'observateur
-- L'état de saisie
+  * L'organisme du saisisseur 
+  * Le saisisseur 
+  * L'observateur 
+  * L'origine
+  * L'état de saisie
 
 
 ---
@@ -125,9 +130,10 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 #### Scénario principal
 
 1. Le saisisseur demande la création d'une nouvelle sortie
-2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
+2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 3 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
+    * "<Autres espèces> (PETS)" (visible uniquement si la caractéristique "PETS" est à "Oui")
 3. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * Le lieu*
@@ -136,29 +142,29 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 4. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
 5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
 6. Le saisisseur renseigne les caractéristiques de la sortie
-5. Le saisisseur enregistre
-6. Le bandeau de l'écran affiche "Lieu - date"
-7. Le saisisseur est positionné sur l'onglet "Echantillonnages"
+7. Le saisisseur enregistre
+8. Le bandeau de l'écran affiche "Lieu - date"
+9. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui", "Echantillonnages" sinon
 
 **Variante(s) :**
 
-**Variante 2a :** La sélection du filtre "Programme de collecte" sur le tableaux des sorties, renseigne automatiquement les champs suivants sur le formulaire en mode création :
-- Programme de collecte
-- Observateur
-- Date
+**Variante 2a :** La sélection du filtre "Programme de collecte" sur le tableau des sorties, renseigne automatiquement les champs suivants sur le formulaire en mode création :
+  * Programme de collecte 
+  * Observateur 
+  * Date
 
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
+* Origine : PMFM à créer, pointe vers OBSERVED_LOCATION_ORIGIN ? A VALIDER. Sera également utilisé dans Imagine pour distinguer les données Obsbio de Campagne
 * Type de vente : PMFM à créer, pointe vers SALE_TYPE
-* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 * Disponibilité de la fiche de pré-vente : PMFM à créer, QUALITATIVE_VALUE à créer (oui/non)
 * Caractéristiques de la vente :
-    * Origine : PMFM_STRATGY avec :
+    * Origine : PMFM_STRATEGY avec :
         * STRATEGY.PROGRAM_FK "SIH-OBSVENTE"
         * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID
-        * PMFM_STRATGY.ACQUISITION_LEVEL_FK = SALE_SURVEY ou OBSERVED_SALE
-    * Caractère obligatoire : PMFM_STRATGY.IS_MANDATORY
-    * Ordre d'affichage : PMFM_STRATGY : RANK_ORDER
+        * PMFM_STRATEGY.ACQUISITION_LEVEL_FK = SALE_SURVEY ou OBSERVED_LOCATION
+    * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY
+    * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
 
 > Questions :
 > - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
@@ -178,10 +184,11 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer (espèce commerciale + espèce scientifique)
-2. Le type de vente est automatiquement renseignée avec le type de vente sélectionnée sur la sortie
+2. Le type de vente est automatiquement renseigné avec le type de vente sélectionnée sur la sortie
 3. Pour chaque espèce observée, le saisisseur :
    * Coche la case "Observé ?"*
    * Sélectionne le navire*
+   * Sélectionne la zone de pêche
    * Modifie le type de vente
    * Saisit un commentaire
 4. Pour chaque espèce non observée, le saisisseur :
@@ -194,8 +201,8 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 
 **Variante(s) :**
 
-**Variante 3a :** Des PETS (espèces sensibles) sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
-par rapport à celles définies dans la liste des espèces à observer
+**Variante 3a :** Des PETS sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
+par rapport à celles définies dans la liste des espèces à observer (REF: OBSVENTES/SORTIE/VENTE_OTHERS)
 
 **Variante 3b :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
 - La priorité des espèces  à observer
@@ -208,12 +215,50 @@ par rapport à celles définies dans la liste des espèces à observer
 * Priorité : RANK_ORDER
 * Observé ? : PMFM à créer
 * Raison de non observation : PMFM à créer
+* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 > Questions :
-> - EIS : ajouter un nouveau tableau ou un nouvel onglet pour ajouter des PETS à l'échantillonnage 
-(espèce commerciale, espèce scientifique, navire, type de vente, commentaire) ? Liste des PETS issue de WAO (environ 15 espèces). 
-Besoin de pouvoir ajouter et supprimer en cas de mauvais ajout.
+> - MOA : Inverser l'ordre des onglets "Echantillonnages" et "PETS" ?
 > - MOA : liste des raisons de non observation ?
+
+---
+**REF: OBSVENTES/SORTIE/VENTE_OTHERS**
+
+**PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa révision pour la période 
+2022-2027, la liste des espèces protégées à suivre est établie en vertu de la législation de l‘Union et des accords 
+internationaux. Elle fait référence aux listes des deux conventions internationales OSPAR (région I à V) et UNEP
+(Méditerranée) et des organisations régionales des pêches NEAFC (=Liste OSPAR), ICCAT et GFCM (= Liste UNEP). Ces 
+espèces sont des espèces d’élasmobranches et d’amphihalins, prélevées en prises accessoires ou accidentelles de la pêche 
+professionnelle
+
+![ui-landings](/projects/obsvente/spe/images/landings-others-table.svg)
+
+#### Scénario principal
+
+Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
+
+1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés 
+2. Le type de vente est automatiquement renseigné avec le type de vente sélectionnée sur la sortie
+3. Pour chaque PETS, le saisisseur renseigne :
+  * L'espèce commerciale*
+  * L'espèce scientifique
+  * Le navire*
+  * La zone de pêche 
+  * Le type de vente*
+  * Le commentaire
+4. Le saisisseur enregistre l'échantillon observé
+5. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/LOT)
+
+**Variante(s) :**
+
+**Variante 4a :** Le saisisseur supprime un PETS
+
+
+#### Détails techniques :
+* PETS : le nom de l'onglet fait partie du dictionnaire thématique. Dans le cas d'Obsventes, le nom sera "PETS"
+* Echantillonnage : LANDING
+* Vente : SALE
+* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 ---
 ## Lots espèces
@@ -309,16 +354,10 @@ effectuées par les observateurs dans ObsDeb.
 
 #### Scénario principal
 
-1. Le saisisseur clique sur le bouton d'import des données ObsDeb
-2. La liste des marées ObsDeb ayant la case "Marée à transférer dans Allegro-Obsvente" cochée et n'existant pas déjà dans 
-la base Harmonie s'affiche (clé sur la vente : navire, lieu, date/heure). Une marée ObsDeb modifiée ou complétée avec de 
-nouvelles espèces ne sera pas présente dans la liste.
-3. Le saisisseur coche les marées à importer dans ObsVentes
-4. Le saisisseur valide l'import
-5. Les ventes sont importées dans ObsVentes (cf spec détaillée : [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert_obsdeb_obsventes.md))
-
-> Questions :
-> - MOA : conserver ce fonctionnement ou mettre en place un import automatique ?
+1. Les marées ObsDeb ayant la case "Marée à transférer dans Allegro-Obsvente" cochée et n'existant pas déjà dans
+   la base Harmonie s'affiche (clé sur la vente : navire, lieu, date/heure) sont automatiquement importées dans ObsVentes. 
+   Une marée ObsDeb modifiée ou complétée avec de nouvelles espèces ne sera pas ré importée (cf spec détaillée : 
+   [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert_obsdeb_obsventes.md))
 
 ---
 ## Référentiels

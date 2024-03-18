@@ -5,14 +5,15 @@
    --
 
     {
-        Programme de collecte : | . | ^ SIH-OBSVENTE    ^ | . | . | Lieu : | . | ^ XDZ - Douarnenez ^
+        Programme de collecte : | . | ^ SIH-OBSVENTE     ^ | . | . | Lieu : | . | ^ XDZ - Douarnenez ^
         .
-        Début de la période : | . | ^01/01/2023       ^ | . | . | Fin de la période : | . | ^31/12/2023        ^
+        Début de la période : | . | ^01/01/2023        ^ | . | . | Fin de la période : | . | ^31/12/2023        ^
         .
-        Organisme saisisseur :   | . | ^ Ifremer         ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND   ^
+        Organisme saisisseur :   | . | ^ Ifremer          ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND   ^
         .
-        Observateurs : | . | ^ Nicolas DUPOND  ^ |  . | . | Etat :   | . | ^En cours de saisie^
-
+        Observateurs : | . | ^ Nicolas DUPOND   ^ |  . | . | Origine :   | . | ^SIH-OBSVENTE      ^
+        .
+        Etat :   | . | ^En cours de saisie^
     }
 
   --

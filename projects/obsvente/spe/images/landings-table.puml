@@ -2,17 +2,17 @@
 {
   <b>Douarnenez - 08/02/2022
   --
-  {/  Détails | <b> Échantillonnages }
+  {/  Détails | <b> Échantillonnages | <Autres espèces> (PETS)}
   ..
   .
 	{#
 
-      <b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Type de vente | .
-       1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | ^851751 - Navire 1^ | { ^Enchères - HAM / Criées^} | .
-       2 | MNZ - Baudroie | . |  [X]. | . | ^851751 - Navire 1^ | { ^Enchères - HAM / Criées^} | <&comment-square>
-       3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | .
-       4 | NEP - Langoustine | NEP - Nephrops norvegicus   | [X]. | . | ^741541 - Navire 2^ | { ^Enchères - HAM / Criées^} | <&comment-square>
-       5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | ^741541 - Navire 2^ | { ^Enchères - HAM / Criées^} | .
+      <b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche| <b>Type de vente | .
+       1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | ^851751 - Navire 1^ | ^008B00 - CIEM VIIIb (Sud Gascogne)   ^ | ^Enchères - HAM / Criées^ | .
+       2 | MNZ - Baudroie | . |  [X]. | . | ^851751 - Navire 1^ | ^008B00 - CIEM VIIIb (Sud Gascogne)   ^ | ^Enchères - HAM / Criées^ | <&comment-square>
+       3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | . | .
+       4 | NEP - Langoustine | NEP - Nephrops norvegicus   | [X]. | . | ^741541 - Navire 2^ | ^008B00 - CIEM VIIId (Centre Gascogne)^ | ^Enchères - HAM / Criées^ | <&comment-square>
+       5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | ^741541 - Navire 2^ | ^008B00 - CIEM VIIId (Centre Gascogne)^ | ^Enchères - HAM / Criées^ | .
        6 | ... | . | [ ] . | . | . | .
 
     }
