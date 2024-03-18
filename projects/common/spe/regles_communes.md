@@ -296,5 +296,12 @@ la liste des observateurs et pourront éditer la donnée.
 
 **REF: COMMUN/ENREGISTREMENT**
 
-L'accès à certains onglets nécessite d'enregisreer le formulaire.
+L'accès à certains onglets nécessite d'enregistrer le formulaire.
 Si tous les champs obligatoires du formulaire ont été renseignés, alors la sélection de l'onglet enregistre automatiquement le formulaire.
+
+
+## Commun > Suppression
+
+**REF: COMMUN/SUPPRESSION**
+
+La suppression d'un élément doit être confirmé par le saisisseur via une popup de confirmation.

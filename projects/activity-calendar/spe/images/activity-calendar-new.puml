@@ -1,11 +1,11 @@
 @startsalt
 {
-  <b>Nouveau calendrier
+  Nouveau calendrier: navire <b>SONNY NINO MATHILDE 3 - b136794 - MA</b>; longueur: <b>7,81 m</b>; enquête: Directe; enquêteur: <b>Adelaide GAMON</b>; société: <b>Ifremer</b>
   --
   {/ Général | <b>Calendrier | Métiers | Commentaires }
   ..
-  .
 
+  {Information affichée :  {[X]SACROIS-OBSDEB | [X]Enquête N-1 }}
   {<b>Prédocumentation}
   	{#
      . | <b>Janvier | * | <b>Février | * | ... | <b>Décembre

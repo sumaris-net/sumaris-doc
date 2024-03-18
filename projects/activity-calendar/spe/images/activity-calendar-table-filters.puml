@@ -1,15 +1,17 @@
 @startsalt
 {
 
-  {<b>Calendriers d'activité                                                                                                                                                    <&reload>}
+  {<b>Calendriers d'activité                                                                                                                                                      <&reload>}
    --
 
     {
-        Programme de collecte : | . | ^ SIH-ACTIFLOT^ | . | . | Etat :   | . | ^En cours de saisie^
+        Programme de collecte : | . | ^ SIH-ACTIFLOT         ^ | . | . | Etat :   | . | ^En cours de saisie^
         .
-        Navire : | . | ^ 851751 - PETIT BATEAU^ | . | . | Année : | . | ^ 2022^
+        Navire : | . | ^ 851751 - PETIT BATEAU^ | . | . | Année : | . | ^ 2022             ^
         .
-        Organisme saisisseur :   | . |^ Ifremer^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND^
+        Enquête :   | . |^ Directe              ^ |  . | . | Eco :   | . | ^                  ^
+        .
+        Organisme saisisseur :   | . |^ Ifremer              ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND   ^
 
     }
 

@@ -2,7 +2,7 @@
 {
   {+
    {
-       <b><font color=grey size=20>Calendrier d'activité    | . | . | . | . | . | . | .
+       <b><font color=grey size=20>Calendrier d'activité
        Observateur
        .
        .
@@ -13,6 +13,13 @@
        --
        <back:#DDD>Calendriers d'activité
        | .
+       .
+       .
+       .
+       .
+       .
+       .
+       .
 
        .
        <font color=grey size=10>Référentiels
@@ -40,7 +47,7 @@
     .
     .
     .
-    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | <b>Fenêtre principale }
+    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | <b>Fenêtre principale }
     .
     .
     .

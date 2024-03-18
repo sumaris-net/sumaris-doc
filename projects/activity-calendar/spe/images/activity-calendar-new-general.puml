@@ -1,13 +1,10 @@
 @startsalt
 {
-  <b>Nouveau calendrier
+  Nouveau calendrier: navire <b>SONNY NINO MATHILDE 3 - b136794 - MA</b>; longueur: <b>7,81 m</b>; enquête: Directe; enquêteur: <b>Adelaide GAMON</b>; société: <b>Ifremer</b>
   --
   {/ <b>Général | Calendrier | Métiers | Commentaires }
   ..
   .
-
-  {<b>Navire* : | ^136794 - SONNY NINO MATHILDE 3^}
-
   {
   <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
     {
@@ -39,6 +36,18 @@
      . | Habitudes de vente à la criée : | ^         ^
      }
   }
+  .
+  <b>Commentaires :
+       {+ 19.01.2017 : Appel sans réponse
+          08/03/2019 : Conversation téléphonique
+          2020 : Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS de temps en temps à ERU
+          12/02/2022 : Hélice cassée fin 2022
+          .
+          .
+          .
+          .
+          .
+       }
 
   --
   { [Fermer] | [Sauvegarder] }
