@@ -11,6 +11,7 @@
 - [Sorties > Filtres](#sorties-filtres)
 - [Sortie > Détails](#sortie-détails)
 - [Sortie > Echantillonnages](#sortie-echantillonnages)
+- [Sortie > PETS](#sortie-pets)
 - [Lots espèces](#lots-espèces)
 - [Mesures individuelles](#mesures-individuelles)
 - [Règles métier](#règles-métier)
@@ -29,7 +30,9 @@
 ## Cible
 
 Le mode tablette est à inclure dans le périmètre de la V1.
+
 Résolution de tablette utilisée par BL : Samsung Active Tab (with zoom) 991x580.
+
 Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1200.
 
 > Définir la résolution cible des saisisseurs avec VB et BL
@@ -170,6 +173,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 > - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
 > - EIS : Stocker la ligne de plan dans OBSERVED_LOCATION.SAMPLING_STRATA_FK ?
+> - MOA : Type de vente : restreindre la liste des valeurs possibles ?
 
 ---
 
@@ -202,7 +206,7 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 **Variante(s) :**
 
 **Variante 3a :** Des PETS sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
-par rapport à celles définies dans la liste des espèces à observer (REF: OBSVENTES/SORTIE/VENTE_OTHERS)
+par rapport à celles définies dans la liste des espèces à observer (REF: OBSVENTES/SORTIE/VENTE_AUTRES)
 
 **Variante 3b :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
 - La priorité des espèces  à observer
@@ -222,7 +226,10 @@ par rapport à celles définies dans la liste des espèces à observer (REF: OBS
 > - MOA : liste des raisons de non observation ?
 
 ---
-**REF: OBSVENTES/SORTIE/VENTE_OTHERS**
+
+## Sortie > PETS
+
+**REF: OBSVENTES/SORTIE/VENTE_AUTRES**
 
 **PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa révision pour la période 
 2022-2027, la liste des espèces protégées à suivre est établie en vertu de la législation de l‘Union et des accords 
@@ -255,9 +262,10 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 
 
 #### Détails techniques :
-* PETS : le nom de l'onglet fait partie du dictionnaire thématique. Dans le cas d'Obsventes, le nom sera "PETS"
+* Nom de l'onglet : il fait partie du dictionnaire thématique. Dans le cas d'ObsVentes, le nom sera "PETS"
 * Echantillonnage : LANDING
 * Vente : SALE
+* Espèce commerciale et scientifique : liste des PETS issue de WAO
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 ---

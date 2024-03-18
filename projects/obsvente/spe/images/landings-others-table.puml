@@ -10,7 +10,7 @@
 
       [].| <b>Espèce commerciale | <b>Espèce scientifique  | <b>Navire | <b>Zone de pêche| <b>Type de vente | .
       [X]. | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | ^851751 - Navire 1^ | ^008B00 - CIEM VIIIb (Sud Gascogne)   ^ | ^Enchères - HAM / Criées^ | .
-      []. | ^BSH - Peau bleue^ | . | ^851751 - Navire 1^ | ^008B00 - CIEM VIIIb (Sud Gascogne)   ^ | ^Enchères - HAM / Criées^ | <&comment-square>
+      []. | ^BSH - Peau bleue^ | ^                        ^ | ^851751 - Navire 1^ | ^008B00 - CIEM VIIIb (Sud Gascogne)   ^ | ^Enchères - HAM / Criées^ | <&comment-square>
     }
     .
   --
