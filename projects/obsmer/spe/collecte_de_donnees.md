@@ -906,6 +906,7 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Hors Vrac
 2. La fenêtre de saisie des "Animaux" s'affiche
 3. L'observateur renseigne les espèces observées :
+    * Si le poids total est estimé, par une case à cocher
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
     * Pour chaque nouvelle espèce, il doit renseigner :
         * Le code de l'espèce scientifique de l'espèce
@@ -921,6 +922,7 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
             * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
         * Une photo (A REALISER) 
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+4. Le poids total est calculé à partir des poids saisies pour chaque EMV
 
 > 14/03/2024 : Enlever la case à cocher "Inventaire exhaustif des espèces ?" : OK
 

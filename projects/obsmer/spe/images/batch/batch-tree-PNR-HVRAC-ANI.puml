@@ -22,8 +22,10 @@
   } | . | {
     { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Animaux] | (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
     ---
-  {[ <&plus> ] | [ <&trash> ] }
+      {Poids total (kg) : | "  <i><color:blue>70   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
   .
+  {[ <&plus> ] | [ <&trash> ] }
+
     {#
 
           [ ] | # | <b>Espèce scientifique  | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Coef. échant. | <b>Poids. échant. | <b>Nb indiv échant. | <&menu>
