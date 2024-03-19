@@ -7,16 +7,13 @@
 - [Documents](#documents)
 - [Feuille de route](#feuille-de-route)
 - [Gestion des droits](#gestion-des-droits)
-- [Ergonomie générale](#ergonomie-generale)
-- [Calendriers d'activité](#calendriers-dactivite)
-- [Calendriers d'activité > Filtres](#calendriers-dactivite-filtres)
-- [Calendrier d'activité > Général](#calendrier-dactivite-general)
-- [Calendrier d'activité > Calendrier](#calendrier-dactivite-calendrier)
-- [Calendrier d'activité > Métiers](#calendrier-dactivite-metiers)
+- [Ergonomie générale](#ergonomie-générale)
+- [Calendriers d'activité](#calendriers-dactivité)
+- [Calendriers d'activité > Filtres](#calendriers-dactivité--filtres)
+- [Calendrier d'activité > Général](#calendrier-dactivité--général)
+- [Calendrier d'activité > Calendrier](#calendrier-dactivité--calendrier)
+- [Calendrier d'activité > Métiers](#calendrier-dactivité--métiers)
 
-- Calendrier d'activité mensuelle
-- Actions
-- Historique
 
 ---
 ## Documents
