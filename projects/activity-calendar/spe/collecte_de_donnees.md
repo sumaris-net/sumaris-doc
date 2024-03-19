@@ -9,10 +9,10 @@
 - [Gestion des droits](#gestion-des-droits)
 - [Ergonomie générale](#ergonomie-générale)
 - [Calendriers d'activité](#calendriers-dactivité)
-- [Calendriers d'activité > Filtres](#calendriers-dactivité--filtres)
-- [Calendrier d'activité > Général](#calendrier-dactivité--général)
-- [Calendrier d'activité > Calendrier](#calendrier-dactivité--calendrier)
-- [Calendrier d'activité > Métiers](#calendrier-dactivité--métiers)
+- [Calendriers d'activité > Filtres](#calendriers-dactivité-filtres)
+- [Calendrier d'activité > Général](#calendrier-dactivité-général)
+- [Calendrier d'activité > Calendrier](#calendrier-dactivité-calendrier)
+- [Calendrier d'activité > Métiers](#calendrier-dactivité-métiers)
 
 
 ---
