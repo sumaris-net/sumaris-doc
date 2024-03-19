@@ -112,8 +112,8 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
    * Le navire (code + libellé)
    * L'année
-   * L'enquête
-   * Le flag éco
+   * L'objectif d'enquête directe
+   * L'enquête éco
    * Les saisisseurs
 
 **Variante(s) :**
@@ -124,10 +124,12 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 
 **Variante 1c :** Le saisisseur consulte un calendrier d'activité existant
 
+#### Détails techniques
+  * Objectif d'equête directe : donnée consultative issue de Festif
+  * Enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
+
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
-> - MOA : Contenu colonne éco issue de WAO ?
-> - MOA : duplication de calendrier sur un autre navire par exemple ?
 > - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
 
 ---
@@ -146,8 +148,8 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
    * L'état
    * Le navire
    * L'année
-   * L'enquête
-   * Le flag éco
+   * L'objectif d'enquête directe
+   * L'enquête éco
    * L'organisme du saisisseur
    * Le saisisseur
 2. L'année est automatiquement renseignée avec l'année :
@@ -207,11 +209,10 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
       * PMFM_STRATEGY.ACQUISITION_LEVEL_FK = ACTIVITY_CALENDAR
     * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY 
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
+  * Qualification de l'enquête : prévoir une option pour limiter les valeurs possibles aux QUALITATIVE_VALUE.ID = 965, 966, 967, 2555
 
 > Questions :
 > - EIS : Prévoir POC pour le commentaire/date/initiales
-> - ISI : Qualification de l'enquête : limiter les valeurs ?
-> - MOA : Ajouter un flag VMS ?
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -247,8 +248,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
-   * Un ou plusieurs métiers. L'ajout ou la modification d'un métier renseigne automatiquement l'origine de l'information associée avec la valeur "Enquêteur".
-     Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
+   * Un ou plusieurs métiers. Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
      * Une ou deux zones. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
          * Le gradient de côte*
          * Le gradient de profondeur : visibilité définie par une option du programme
@@ -278,8 +278,16 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 * La zone proche : table NEARBY_SPECIFIC_AREA, filtrée en fonction de la zone sélectionnée
 
 > Questions :
-> - MOA : Origine de l'information : à supprimer ?
-> - MOA : Passer en revue la liste des actiosn possibles
+> - ISI : Ajouter un flag VMS ? Info dans la prédoc (données avec un *), à vérifier
+> - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
+> - MOA : navire inexistant, cf requête :
+      SELECT count(v.is_active), a.year
+      FROM VESSEL_USE_FEATURES v
+      INNER JOIN activity_calendar a ON a.id = v.activity_calendar_fk
+      WHERE a.program_fk = 'SIH-ACTIFLOT'
+      AND v.is_active = 2
+      GROUP BY a.year
+> - MOA : Passer en revue la liste des actions possibles
 
 Actions possibles sur une cellule dans l'Allegro actuel :
   * Copier
@@ -340,6 +348,13 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 > Questions :
 > - Maillages et dimensions : correspondent à celles définies dans la stratégie ?
 > - Popup d'ajout des PMFM : filtre possible sur le support engin ?
+
+---
+## Calendrier d'activité > Carte
+
+**REF: ACTIVITY_CALENDAR/Carte**
+
+A spécifier : en attente POC
 
 ---
 ## Historique

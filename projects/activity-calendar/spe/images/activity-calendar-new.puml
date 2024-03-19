@@ -1,8 +1,8 @@
 @startsalt
 {
-  Nouveau calendrier: navire <b>SONNY NINO MATHILDE 3 - 136794 - MA</b>; longueur: <b>7,81 m</b>; enquête: Directe; enquêteur: <b>Adelaide GAMON</b>; société: <b>Ifremer</b>
+  Navire : <b>SONNY NINO MATHILDE 3 - 136794 - MA - 7,81 m - 2022
   --
-  {/ Général | <b>Calendrier | Métiers }
+  {/ Général | <b>Calendrier | Métiers | Carte}
   ..
 
   {Information affichée :  {[X]SACROIS-OBSDEB | [X]Enquête N-1 }}
@@ -42,7 +42,6 @@
      Nombre de jours de pêche | . | . | 10 | 15 | . | . | .
      Nombre d'hommes à bord/marée | . | . | 2 | 2 | . | . | .
      Métier 1 | . | . | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
-     Origine information | . | . | ^Enquête N-1                                ^ | ^Document déclaratif                        ^ | . | . | .
      Zone 1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
      Gradient côte* | . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
      Profondeur | . | . | ^30-50m - Profondeur 30 à 50 mètres         ^ | ^30-50m - Profondeur 30 à 50 mètres         ^ | . | . | .
@@ -52,7 +51,6 @@
      Profondeur | . | . | . | . | . | . | .
      Zone proche | . | . | . | . | . | . | .
      Métier 2 | . | . | ^GTRNEP - Trémails à langoustines           ^ | . | . | . | .
-     Origine information | . | . | ^Enquêteur                                  ^ | . | . | . | .
      Zone 1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^|.| . | . | .
      Gradient côte | . | . | ^3-12 Mil. - 3 à 12 milles                  ^|.| . | . | .
      Profondeur | . | . | ^30-50m - Profondeur 30 à 50 mètres         ^|.| . | . | .
