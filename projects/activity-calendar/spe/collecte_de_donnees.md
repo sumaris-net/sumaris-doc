@@ -81,7 +81,7 @@ L'interface est composée des éléments graphiques suivants :
 
 #### Scénario principal
 
-1. L'observateur clique sur un onglet de l'arbre du menu
+1. Le saisisseur clique sur un onglet de l'arbre du menu
    * Les informations propre à l'onglet s'ouvre dans l'interface centrale.
 
 ---
@@ -96,7 +96,8 @@ Calendrier d'activité :
 #### Scénario principal
 
 1. Le saisisseur sélectionne le menu "Calendriers d'activité" dans l'interface de l'arbre du menu
-2. L'écran "Calendriers d'activité" s'ouvre. Les informations suivantes sont affichées pour chaque navire :
+2. L'écran "Calendriers d'activité" s'ouvre. Il contient les navires du portefeuille du saisisseur ayant ou non un calendrier 
+d'activité associé. Les informations suivantes sont affichées pour chaque navire :
    * L'état de saisie du calendrier :
      * "Non saisi" : _réprésenté par une icône ? dans la cellule_
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
@@ -110,11 +111,11 @@ Calendrier d'activité :
 
 **Variante(s) :**
 
-**Variante 1a :** L'observateur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
+**Variante 1a :** Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
 
-**Variante 1b :** L'observateur crée un nouveau calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
+**Variante 1b :** Le saisisseur crée un nouveau calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
 
-**Variante 1c :** L'observateur consulte un calendrier d'activité existant
+**Variante 1c :** Le saisisseur consulte un calendrier d'activité existant
 
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
@@ -148,7 +149,6 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
 Les critères suivants sont multiples (dev en cours sur Imagine) :
   * L'état
   * Le navire
-  * L'année
   * L'organisme du saisisseur
   * Le saisisseur
 
@@ -174,47 +174,34 @@ professionnel et que l’engin n’est plus pêchant.
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new-general.svg)
 
-La création d'un calendrier d'activité est accessible depuis le tableau de consultation des calendriers d'activité via l'icône <&plus>
+La création d'un calendrier d'activité est accessible depuis le tableau de consultation des calendriers d'activité en cliquant sur le navire correspondant
 
 #### Scénario principal
 
-1. Le saisisseur demande la création d'un nouveau calendrier
+1. Le saisisseur clique sur un navire sans calendrier d'activité associé
 2. L'écran "Nouveau calendrier" s'ouvre. Il est composé de 3 onglets :
-   * "Général"
-   * "Calendrier", onglet par défaut
+   * "Général", onglet par défaut
+   * "Calendrier"
    * "Métiers"
-3. Dans l'onglet "Général", l'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affiche 
-4. Le saisisseur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
-5. Le saisisseur renseigne les caractéristiques de l'enquête. Par défaut toutes les caractéristiques sont vident.
-   * Qualification de l'enquête*
-   * Fiabilité de l'enquête*
-   * Inactivité annuelle confirmée par l'observateur* (si la valeur est à "Oui", vider et griser tout le calendrier)
-   * Le professionnel accepterait-il de répondre à une autre enquête ?*
-   * Métiers déclarés dans les journeaux de bord/fiches de pêche
-   * Habitudes de vente à la criée
-6. Le saisisseur saisit un commentaire
+3. L'année du calendrier correspond à l'année présente dans le filtre du tableau des calendriers d'activité
+4. Dans l'onglet "Général", l'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affiche 
+5. Le saisisseur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
+6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de l'année' sélectionnée
+7. Le saisisseur renseigne les caractéristiques de l'enquête. Par défaut toutes les caractéristiques sont vident.
+8. Le saisisseur saisit un commentaire
 
 #### Détails techniques :
-  * Qualification de l'enquête : 
-    * PMFM.ID = 623
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'SURVEY_QUALIFICATION' en se limitant aux ID 965, 966, 967, 2555 via une option à créer au niveau du programme, tri par ordre alphabétique
-  * Fiabilité de l'enquête : 
-    * PMFM.ID = 681
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'SURVEY_RELIABILITY', tri par ordre alphabétique
-  * Inactivité annuelle confirmée par l'observateur : 
-    * PMFM.ID = 1395
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'INACTIVTY_YEAR', tri par ordre alphabétique
-  * Le professionnel accepterait-il de répondre à une autre enquête ? : 
-    * PMFM.ID = 503
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'ACCEPT_OTHER_SURVEY', tri par ordre alphabétique
-  * Métiers déclarés dans les journeaux de bord/fiches de pêche : 
-    * PMFM.ID = 621
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'DECLARED_METIER', tri par ordre alphabétique
-  * Habitudes de vente à la criée : 
-    * PMFM.ID = 521
-    * QUALITATIVE_VALUE.PARAMETER_FK = 'AUCTION_SALE_HABIT', tri par ordre alphabétique
+  * Pour faciliter les développements, pendant toute la durée des développements, le programme et l'année sont affichés sur l'écran
+  * Caractéristiques du calendrier d'activité :
+    * Origine : PMFM_STRATEGY avec :
+      * STRATEGY.PROGRAM_FK "SIH-ACTIFLOT"
+      * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID 
+      * PMFM_STRATEGY.ACQUISITION_LEVEL_FK = ACTIVITY_CALENDAR
+    * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY 
+    * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
 
 > Questions :
+> - ISI : Qualification de l'enquête : limiter les valeurs ?
 > - MOA : Ajouter un flag VMS ?
 
 ---
@@ -226,7 +213,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 
 #### Scénario principal
 
-1. Dans l'onglet "Calendrier", l'observateur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
+1. Dans l'onglet "Calendrier", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
    * L'activité du navire*
@@ -237,12 +224,12 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Le ou les métiers
    * La ou les zones rattachées à chaque métier (maximum 2)
    * Le gradient de côte rattaché à chaque métier
-2. L'observateur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
+2. Le saisisseur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
    (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
 3. Pour chaque métier du calendrier de l'année en cours issu de la prédocumentation, l'origine de l'information est automatiquement renseignée :
    * "Activité N-1", si le métier provient de la source "Enquête N-1 indirecte"
    * "Document déclaratif", si le métier provient de la source "SACROIS-OBSDEB"
-4. L'observateur complète les données manquantes ou erronées pour chaque mois :
+4. Le saisisseur complète les données manquantes ou erronées pour chaque mois :
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
@@ -252,12 +239,12 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
    * Un ou plusieurs métiers. L'ajout ou la modification d'un métier renseigne automatiquement l'origine de l'information associée avec la valeur "Enquêteur".
-     Pour chaque métier, l'observateur complète les données manquantes ou erronées :
-     * Une ou deux zones. Pour chaque zone, l'observateur complète les données manquantes ou erronées :
+     Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
+     * Une ou deux zones. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
          * Le gradient de côte*
          * Le gradient de profondeur : visibilité définie par une option du programme
          * La zone proche : visibilité définie par une option du programme
-5. L'observateur enregistre le calendrier
+5. Le saisisseur enregistre le calendrier
 6. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
 7. L'encart sur le saisisseur s'affiche
 
@@ -283,6 +270,46 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 
 > Questions :
 > - MOA : Origine de l'information : à supprimer ?
+> - MOA : Passer en revue la liste des actiosn possibles
+
+Actions possibles sur une cellule dans l'Allegro actuel :
+  * Copier
+    * Copier (CTRL + C)
+    * Copier la colonne (CTRL + E)
+    * Copier vers les mois
+    * Copier le bloc métier (CTRL + B)
+    * Copier le bloc zone/gradient
+    * Copier les blocs zone/gradient de la ligne (CTRL + D)
+    * Copier le bloc gradient
+    * Etirer jusqu'à
+    * Etirer le bloc métier jusqu'à
+    * Etirer le bloc zone/gradient jusqu'à
+    * Etirer le bloc gradient jusqu'à
+    * Copier le bloc métier vers les mois (CTRL + Q)
+    * Copier le bloc zone/gradient vers les mois
+    * Copier le bloc gradient vers les mois
+    * Copier la ligne vers [xxx] (CTRL + D) (uniquement pour les lignes "Nombre de jours de mer" et "Nombre de jours de pêche")
+  * Coller
+    * Coller (CTRL + V)
+    * Coller vers les mois
+    * Coller la colonne (CTRL + V)
+    * Coller la colonne vers les mois
+    * Coller le bloc métier (CTRL + V)
+    * Coller le bloc métier vers les mois
+    * Coller les blocs métier sur la ligne (CTRL + V)
+  * Effacer
+    * Effacer (CTRL + X)
+    * Effacer la colonne
+    * Effacer le contenu de la ligne
+    * Effacer le calendrier complet
+    * Effacer le bloc métier (CTRL + X)
+    * Effacer les blocs de ce métier des mois
+  * Ajouter un métier
+  * Ajouter un zone à ce métier
+  * Agrandir tous les métiers
+  * Réduire tous les métiers
+  * Agrandir tous les gradients côte/profondeur/zone proche
+  * Réduire tous les gradients côte/profondeur/zone proche
 
 ---
 ## Calendrier d'activité > Métiers
@@ -295,10 +322,10 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 
 #### Scénario principal
 
-1. Dans l'onglet "Métiers", l'observateur consulte les métiers sélectionnés sur l'onglet "Calendrier"
-2. L'observateur ajoute les caractéristiques relatives aux métiers (REF: COMMUN/PSFM/AJOUT)
-3. Pour chaque métier, l'observateur renseigne les valeurs d'une ou plusieurs caractéristiques
-4. L'observateur enregistre le calendrier
+1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Calendrier"
+2. Le saisisseur ajoute les caractéristiques relatives aux métiers (REF: COMMUN/PSFM/AJOUT)
+3. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
+4. Le saisisseur enregistre le calendrier
 5. La date de mise à jour du calendrier est actualisée
 
 > Questions :
