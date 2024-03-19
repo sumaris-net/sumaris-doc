@@ -127,6 +127,7 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
 > - MOA : Contenu colonne éco issue de WAO ?
+> - MOA : duplication de calendrier sur un autre navire par exemple ?
 > - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
 
 ---
@@ -208,6 +209,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
 
 > Questions :
+> - EIS : Prévoir POC pour le commentaire/date/initiales
 > - ISI : Qualification de l'enquête : limiter les valeurs ?
 > - MOA : Ajouter un flag VMS ?
 
