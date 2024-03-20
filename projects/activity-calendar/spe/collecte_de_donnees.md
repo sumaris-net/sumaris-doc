@@ -67,7 +67,7 @@ Cheminement de la donnée : collecte > saisie > validation > correction éventue
   * PROGRAM2PERSON = 2
 
 > Points de vigilance : 
-> - Certains quartier d'immatriculation sont observés par 2 sociétés de prestation 
+> - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation 
 > - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
 
 ---
@@ -201,7 +201,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 8. Le saisisseur saisit un commentaire
 
 #### Détails techniques :
-  * Pour faciliter les développements, pendant toute la durée des développements, le programme et l'année sont affichés sur l'écran
+  * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
   * Caractéristiques du calendrier d'activité :
     * Origine : PMFM_STRATEGY avec :
       * STRATEGY.PROGRAM_FK "SIH-ACTIFLOT"
@@ -213,6 +213,8 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 
 > Questions :
 > - EIS : Prévoir POC pour le commentaire/date/initiales
+> - MOA : Remonter les carac et le commentaire au-dessus de l'état des changements des carac et des armateurs ?
+> - MOA : Laisser le champ "Navire" affiché pour permettre le changement de navire en cas d'erreur ou de navire non trouvé dans le référentiel ? 
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -232,7 +234,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Le nombre de jours de pêche
    * Le nombre d'hommes à bord par marée
    * Le ou les métiers
-   * La ou les zones rattachées à chaque métier (maximum 2)
+   * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
    * Le gradient de côte rattaché à chaque métier
 2. Le saisisseur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
    (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
@@ -280,6 +282,9 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 > Questions :
 > - ISI : Ajouter un flag VMS ? Info dans la prédoc (données avec un *), à vérifier
 > - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
+> - ISI : En mode déconnecté : quelles infos importer en local ? Prédoc ?
+> - MOA : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
+Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOA : navire inexistant, cf requête :
       SELECT count(v.is_active), a.year
       FROM VESSEL_USE_FEATURES v
@@ -355,6 +360,7 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 **REF: ACTIVITY_CALENDAR/Carte**
 
 A spécifier : en attente POC
+Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 ---
 ## Historique
