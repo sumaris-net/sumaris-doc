@@ -1,4 +1,4 @@
-# Manuel de mise en exploitation d'ObsMer v2.8
+# Manuel de mise en exploitation d'ObsMer v2.9
 
 
 Objectif : le document liste les étapes de migration, pour réaliser le passage d'Imagine en v2.8
@@ -24,7 +24,9 @@ Modification de PSFM :
 
 - Appliquer les [manuels d'exploitation d'Imagine](../../imagine/mex) (v2.8)
 
-- Mise à jour de la vue IMAGE_ATTACHMENT
+- Mise à jour de la vue `IMAGE_ATTACHMENT`
+
+- 
 
 ## Mise à jour du programme SIH-OBSMER
 
