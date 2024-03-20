@@ -69,11 +69,11 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
    * Le programme
+   * L'origine
    * Le lieu de la sortie
    * La date/heure
    * Le ou les observateurs
-   * Le saisisseur
-   * L'origine
+   * Le ou les saisisseurs
    * Le commentaire
 
 **Variante(s) :**
@@ -103,23 +103,21 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
 
 1. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
    * Le programme de collecte
+   * L'origine
+   * L'état de saisie
    * Le lieu de la sortie
    * La début de la période
    * La fin de la période
    * L'organisme du saisisseur
    * Le saisisseur
    * L'observateur
-   * L'origine
-   * L'état de saisie
-   
 
 Les critères suivants sont multiples (dev en cours sur Imagine) : 
+  * L'origine
+  * L'état de saisie
   * L'organisme du saisisseur 
   * Le saisisseur 
   * L'observateur 
-  * L'origine
-  * L'état de saisie
-
 
 ---
 ## Sortie > Détails
@@ -142,7 +140,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Le lieu*
     * La date*
     * Le ou les observateurs*
-4. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
+4. L'origine est automatiquement renseignée en fonction du programme de collecte
+5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
 5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
 6. Le saisisseur renseigne les caractéristiques de la sortie
 7. Le saisisseur enregistre
@@ -158,7 +157,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
-* Origine : PMFM à créer, pointe vers OBSERVED_LOCATION_ORIGIN ? A VALIDER. Sera également utilisé dans Imagine pour distinguer les données Obsbio de Campagne
+* Origine : POC à prévoir : créer une table OBSERVED_LOCATION_ORIGIN liée à OBSERVED_LOCATION ? Non-modifiable. 
+Sera également utilisé dans Imagine pour distinguer les données Obsbio de Campagne
 * Type de vente : PMFM à créer, pointe vers SALE_TYPE
 * Disponibilité de la fiche de pré-vente : PMFM à créer, QUALITATIVE_VALUE à créer (oui/non)
 * Caractéristiques de la vente :

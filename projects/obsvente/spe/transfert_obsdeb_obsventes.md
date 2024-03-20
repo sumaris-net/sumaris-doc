@@ -27,25 +27,25 @@ effectuées par les observateurs dans ObsDeb.
 <b>RG020 - NOUVELLE REGLE</b> : Une nouvelle sortie ObsVentes est créée pour chaque sortie Obsdeb dont une marée est importée.
 Pour chaque sortie, une ligne est ajoutée dans la table OBSERVED_LOCATION :
 
-| Colonne                   | Valeur                                                                                 |
-|---------------------------|----------------------------------------------------------------------------------------|
-| ID                        | Trigger Oracle                                                                         |
-| START_DATE_TIME           | Date/heure de début de l'observation ObsDeb (OBSERVED_lOCATION.START_DATE_TIME)        |
-| END_DATE_TIME             | Date/heure de fin de l'observation Obsdeb (OBSERVED_lOCATION.END_DATE_TIME)            |
-| COMMENTS                  | "Sortie importée par <Nom_Prénom_Utilisateur_ObsVentes> depuis OBSDEB le <dd/mm/yyyy>" |
-| QUALIFICATION_DATE        |                                                                                        |
-| QUALIFICATION_COMMENTS    |                                                                                        |
-| UPDATE_DATE               | Date du jour (sysdate)                                                                 |
-| RECORDER_PERSON_FK        | ID de l'utilisateur connecté                                                           |
-| RECORDER_DEPARTMENT_FK    | ID du service ou de la société de l'utilisateur connecté                               |
-| SAMPLING_STRATA_FK        | ?                                                                                      |
-| SAMPLING_STRATA_REFERENCE | ?                                                                                      |
-| LOCATION_FK               | ID du port de débarquement de la marée ObsDeb (FISHING_TRIP.RETURN_LOCATION_FK)        |
-| QUALITY_FLAG_FK           | "0"                                                                                    |
-| PROGRAM_FK                | "SIH-OBSVENTE"                                                                         |
-| CREATION_DATE             | Date du jour (sysdate)                                                                 |
-| VALIDATION_DATE           |                                                                                        |
-| CONTROLE_DATE             |                                                                                        |
+| Colonne                   | Valeur                                                                          |
+|---------------------------|---------------------------------------------------------------------------------|
+| ID                        | Trigger Oracle                                                                  |
+| START_DATE_TIME           | Date/heure de début de l'observation ObsDeb (OBSERVED_lOCATION.START_DATE_TIME) |
+| END_DATE_TIME             | Date/heure de fin de l'observation Obsdeb (OBSERVED_lOCATION.END_DATE_TIME)     |
+| COMMENTS                  |                                                                                 |
+| QUALIFICATION_DATE        |                                                                                 |
+| QUALIFICATION_COMMENTS    |                                                                                 |
+| UPDATE_DATE               | Date du jour (sysdate)                                                          |
+| RECORDER_PERSON_FK        | ID de l'utilisateur connecté                                                    |
+| RECORDER_DEPARTMENT_FK    | ID du service ou de la société de l'utilisateur connecté                        |
+| SAMPLING_STRATA_FK        | ?                                                                               |
+| SAMPLING_STRATA_REFERENCE | ?                                                                               |
+| LOCATION_FK               | ID du port de débarquement de la marée ObsDeb (FISHING_TRIP.RETURN_LOCATION_FK) |
+| QUALITY_FLAG_FK           | "0"                                                                             |
+| PROGRAM_FK                | "SIH-OBSVENTE"                                                                  |
+| CREATION_DATE             | Date du jour (sysdate)                                                          |
+| VALIDATION_DATE           |                                                                                 |
+| CONTROLE_DATE             |                                                                                 |
 
 <b>RG021 - NOUVELLE REGLE</b> : Un ou plusieurs observateurs sont associés à la sortie. Pour chaque observateur, une ligne 
 est ajoutée dans la table OBSERVED_LOCATION2PERSON :
@@ -55,35 +55,46 @@ est ajoutée dans la table OBSERVED_LOCATION2PERSON :
 | OBSERVED_LOCATION_FK | ID de la sortie ObsVentes créée |
 | OBSERVER_PERSON_FK   | ID de l'observateur             |
 
+<b>RG022 - NOUVELLE REGLE</b> : Une origine est associée à la sortie. Pour chaque origine, une ligne est ajoutée dans la table 
+OBSERVED_LOCATION_ORIGIN :
+
+| Colonne              | Valeur                          |
+|----------------------|---------------------------------|
+| OBSERVED_LOCATION_FK | ID de la sortie ObsVentes créée |
+| PROGRAM_FK           | "SIH-OBSDEB"                    |
+
+> Questions :
+> -ISI/EIS : Valider le stockage de l'origine
+
 ## Débarquement
 
-<b>RG022 - NOUVELLE REGLE</b> : Un nouveau débarquement est créée pour chaque sortie ObsVentes. Pour chaque débarquement, 
+<b>RG023 - NOUVELLE REGLE</b> : Un nouveau débarquement est créée pour chaque sortie ObsVentes. Pour chaque débarquement, 
 une ligne est ajoutée dans la table LANDING :
 
-| Colonne                 | Valeur                                                                                      |
-|-------------------------|---------------------------------------------------------------------------------------------|
-| ID                      | Trigger Oracle                                                                              |
-| IS_OBSERVED             | "1"                                                                                         |
-| LANDING_DATE_TIME       | Date/Heure du débarquement ObsDeb (LANDING.LANDING_DATE_TIME)                               |
-| COMMENTS                | "Débarquement importé par <Nom_Prénom_Utilisateur_ObsVentes> depuis OBSDEB le <dd/mm/yyyy>" |
-| CREATION_DATE           | Date du jour (sysdate)                                                                      |
-| CONTROL_DATE            |                                                                                             |
-| VALIDATION_DATE         |                                                                                             |
-| QUALIFICATION_DATE      |                                                                                             |
-| QUALIFICATION_COMMENTS  |                                                                                             |
-| UPDATE_DATE             | Date du jour (sysdate)                                                                      |
-| CATCH_BATCH_FK          |                                                                                             |
-| VESSEL_FK               | Code du navire du débarquement ObsDeb (LANDING.VESSEL_FK)                                   |
-| PROGRAM_FK              | "SIH-OBSVENTE"                                                                              |
-| RECORDER_DEPARTMENT_FK  | ID du service ou de la société de l'utilisateur connecté                                    |
-| RECORDER_PERSON_FK      | ID de l'utilisateur connecté                                                                |
-| SURVEY_QUALIFICATION_FK |                                                                                             |
-| QUALITY_FLAG_FK         | "0"                                                                                         |
-| FISHING_TRIP_FK         |                                                                                             |
-| LANDING_LOCATION_FK     | ID du port de débarquement de la marée ObsDeb (FISHING_TRIP.RETURN_LOCATION_FK)             |
-| RANK_ORDER              | "1"                                                                                         |
-| OBSERVED_LOCATION_FK    | ID de la sortie                                                                             |
-| SAMPLING_STRATA_FK      | ?                                                                                           |
+| Colonne                 | Valeur                                                                          |
+|-------------------------|---------------------------------------------------------------------------------|
+| ID                      | Trigger Oracle                                                                  |
+| IS_OBSERVED             | "1"                                                                             |
+| LANDING_DATE_TIME       | Date/Heure du débarquement ObsDeb (LANDING.LANDING_DATE_TIME)                   |
+| COMMENTS                |                                                                                 |
+| CREATION_DATE           | Date du jour (sysdate)                                                          |
+| CONTROL_DATE            |                                                                                 |
+| VALIDATION_DATE         |                                                                                 |
+| QUALIFICATION_DATE      |                                                                                 |
+| QUALIFICATION_COMMENTS  |                                                                                 |
+| UPDATE_DATE             | Date du jour (sysdate)                                                          |
+| CATCH_BATCH_FK          |                                                                                 |
+| VESSEL_FK               | Code du navire du débarquement ObsDeb (LANDING.VESSEL_FK)                       |
+| PROGRAM_FK              | "SIH-OBSVENTE"                                                                  |
+| RECORDER_DEPARTMENT_FK  | ID du service ou de la société de l'utilisateur connecté                        |
+| RECORDER_PERSON_FK      | ID de l'utilisateur connecté                                                    |
+| SURVEY_QUALIFICATION_FK |                                                                                 |
+| QUALITY_FLAG_FK         | "0"                                                                             |
+| FISHING_TRIP_FK         |                                                                                 |
+| LANDING_LOCATION_FK     | ID du port de débarquement de la marée ObsDeb (FISHING_TRIP.RETURN_LOCATION_FK) |
+| RANK_ORDER              | "1"                                                                             |
+| OBSERVED_LOCATION_FK    | ID de la sortie                                                                 |
+| SAMPLING_STRATA_FK      | ?                                                                               |
 
 > Questions :
 > ISI : ajouter les observateurs dans LANDING2OBSERVER_PERSON ? ce n'est pas le cas pour Imagine
@@ -139,6 +150,9 @@ Table SALE :
 | TAKE_OVER_FK                   |                                                                                                                 |
 | SAMPLING_STRATA_FK             | ?                                                                                                               |
 | TAKE_OVER_TYPE_FK              |                                                                                                                 |
+
+> Questions :
+> -ISI : Suppression commentaire car l'origine est stockée dans OBSERVED_LOCATION_ORIGIN ?
 
 <b>RG003</b> : Un ou plusieurs observateurs sont associés à la vente. Pour chaque observateur, une ligne est ajoutée dans la 
 table SALE2OBSERVER_PERSON :
