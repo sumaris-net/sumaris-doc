@@ -162,6 +162,10 @@ Les applications seront ainsi nommées :
   - Participants : ISI/CODRA/EIS/MOA/Observateurs, saisisseurs/Administrateurs
   - Fréquence : A positionner selon l'avancement
 
+- Points sur des interrogations/remarques
+  - Participants : ISI/CODRA/EIS/MOA
+  - Fréquence : Ponctuelle (en fonction des questions issues des daily)
+
 ---
 ## Support de spécifications
 
@@ -232,8 +236,8 @@ Premier daily le 08/03/2024 à 10h30.
 Premier sprint de définit : 
 - Milestone : 2.9.0-alpha15
 - Période :
-  - Début : 08/03/2024
-  - Fin : 29/03/2024
+  - Début : 18/03/2024
+  - Fin : 05/04/2024
 
 Planification des issues :
 - Issues non planifiées dans un sprint
