@@ -107,6 +107,19 @@ Une fois les critères de l'agrégation définis, il faut valider son enregistre
 
 Le nom et l'agrégation sauvegardée peuvent être utilisé plus tard dans l'outil de cartographie en fonction de la stratification définie.
 
+### Définir les strates
+
+Une strate correspond à une **couche géographique** (au sens SIG), qui va être activable lors de la consultation de la carte.
+
+En général, il est pratique de définir une strate par table de l'extraction. Par exemple : 
+ Opérations, Captures, Mensurations individuelle
+Pour chaque strate, on peut choisir : 
+- une période temporelle de cumul (annuel ou mensuelle),
+- un type de géométrie (rectangle statistiques ou carréé 10 min x 10min)
+- la variable qui est cumulées (qui apparaitra en couleur dans la géométrie)
+- Le type de cumul (somme ou moyenne)
+- le champ technique (optionnel) qui va servir pour initialiser le graphique. Cette variable peut être modifier en direct dans l'entête du graphique.
+
 ## Module d'extraction des cartes
 
 Le module d'extraction n'est accessible que pour le profil d'utilisateur "Superviseur"
