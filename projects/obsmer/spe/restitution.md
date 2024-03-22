@@ -5,8 +5,11 @@
 ## Documents fournis
 
 - Exemple de restitution : 
-- Cahier des charges : 
- 
+  - [Formulaire terrain vierge 2020](/projects/obsmer/doc/obsmer-doc-24-004-Formulaire_terrain_OBSMER_2020.pdf)
+  - [Formulaire terrain vierge 2023](/projects/obsmer/doc/obsmer-doc-24-005-Formulaire_terrain_OBSMER_2023.pdf)
+  - [Formulaire validation (2020)](/projects/obsmer/doc/obsmer-doc-24-006-Formulaire_validation_OBSMER_2020.pdf)
+  - [Restitution aux professionnels (2020)](/projects/obsmer/doc/obsmer-doc-24-007-Rapport_restitution_pro_OBSMER_2020.pdf)
+
 ---
 ## Restitution de la marée (1/2)
 

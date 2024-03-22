@@ -16,9 +16,11 @@ RAS
 
 ## Schéma SIH2_ADAGIO_DBA
 
-Modification de PSFM : 
-- PSFM `PRODUCT_DESTINATION` : il manque `Obligation à débarquer`
-- Pour la capture accidentelle il faut un PSFM supplémentaire (ex: `état de remise à l'eau`)
+- Modification de PSFM : 
+  - PSFM `PRODUCT_DESTINATION` : il manque `Obligation à débarquer`
+  - Pour la capture accidentelle il faut un PSFM supplémentaire (ex: `état de remise à l'eau`)
+
+- Modification ACTIVITY_CALENDAR
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
@@ -30,4 +32,10 @@ Modification de PSFM :
 
 ## Mise à jour du programme SIH-OBSMER
 
-- TODO
+- Ajouter les options de programmes : 
+
+```properties
+# Activer les rapports de marée (formulaires terrain et restitution aux professionnels)
+sumaris.trip.report.enable=true
+sumaris.trip.report.type= /* TODO */
+```
