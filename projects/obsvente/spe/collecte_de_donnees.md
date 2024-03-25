@@ -12,7 +12,8 @@
 - [Sortie > Détails](#sortie-détails)
 - [Sortie > Echantillonnages](#sortie-echantillonnages)
 - [Sortie > PETS](#sortie-pets)
-- [Lots espèces](#lots-espèces)
+- [Vente > Détails](#vente-détails)
+- [Vente > Lots espèces](#vente-lots-espèces)
 - [Mesures individuelles](#mesures-individuelles)
 - [Règles métier](#règles-métier)
 - [Importation depuis ObsDeb](#importation-depuis-obsdeb)
@@ -269,19 +270,42 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 ---
-## Lots espèces
+## Vente > Détails
 
-**REF: OBSVENTES/SORTIE/VENTE/LOT**
+**REF: OBSVENTES/SORTIE/VENTE/DETAILS**
 
-![ui-obsvente](/projects/obsvente/spe/images/pv.svg)
+![ui-obsvente](/projects/obsvente/spe/images/sale-details.svg)
 
-La création d'un lot d'espèce est accessible depuis le tableau de consultation des espèces à observer en double-cliquant 
-sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
+La création d'un lot d'espèces est accessible depuis le tableau de consultation des espèces à observer en double-cliquant
+sur une espèce.
 
 #### Scénario principal
 
-1. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
-2. Pour chaque lot, le saisisseur renseigne :
+1. Le saisisseur demande la création d'un nouveau lot d'espèces
+2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
+   * "Détails" (onglet par défaut)
+   * "Lots"
+3. Sur l'onglet "Détails", le saisisseur consulte les détails de la vente (non modifiable) :
+   * Navire*
+   * Type de vente*
+   * Lieu de vente*
+   * Date/heure*
+   * Zone de pêche
+   * Commentaires
+4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
+
+---
+## Vente > Lots espèces
+
+**REF: OBSVENTES/SORTIE/VENTE/LOT**
+
+![ui-obsvente](/projects/obsvente/spe/images/sale.svg)
+
+#### Scénario principal
+
+1. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
+2. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
+3. Pour chaque lot, le saisisseur renseigne :
    * La catégorie de tri terrain
    * La catégorie UE
    * L'état*
@@ -290,9 +314,9 @@ sur une espèce puis en cliquant sur le bouton :heavy_plus_sign:
    * Le taux échantillonné
    * Le poids échantillonné
    * Si l'espèce est identifiée (case à cocher)
-3. Le saisisseur enregistre
-4. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
-5. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
+4. Le saisisseur enregistre
+5. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
+6. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
 
 **Variante(s) :**
 

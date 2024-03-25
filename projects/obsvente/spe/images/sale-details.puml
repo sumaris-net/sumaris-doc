@@ -1,0 +1,25 @@
+@startsalt
+{
+  Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 851751 Navire 1
+  --
+  {/  <b>Détails | Lots}
+  ..
+  {
+
+      Navire* :    | { ^851751 - Navire 1                  ^ }
+      .
+      Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
+      .
+      Lieu de vente* :     | { ^XDZ - Douarnenez                   ^ } | { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+      .
+      Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^
+      .
+  }
+
+  Commentaires
+  {+ .
+          "                                                                     "
+  }
+
+}
+@endsalt
