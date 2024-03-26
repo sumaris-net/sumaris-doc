@@ -248,12 +248,12 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés 
 2. Le type de vente est automatiquement renseigné avec le type de vente sélectionnée sur la sortie
 3. Pour chaque PETS, le saisisseur renseigne :
-  * L'espèce commerciale*
-  * L'espèce scientifique
-  * Le navire*
-  * La zone de pêche 
-  * Le type de vente*
-  * Le commentaire
+   * L'espèce commerciale*
+   * L'espèce scientifique
+   * Le navire*
+   * La zone de pêche 
+   * Le type de vente*
+   * Le commentaire
 4. Le saisisseur enregistre l'échantillon observé
 5. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
