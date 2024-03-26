@@ -9,10 +9,10 @@
       Programme de collecte*:    | { ^SIH-OBSMER                            ^ } | * {^"Stratégie"
 Démarrage au 01/01/2023 }
 
-      Référence*:  | { ^2021_M020 - DPMA_23_Lot4^ }  | * | {^"Saisisseur"
+      Référence au plan*:  | { ^2021_M020 - DPMA_23_Lot4^ }  | * | {^"Saisisseur"
                                                                                                                    Nicolas DUPOND - Ifremer  } |.
 
-      Programme de rattachement*: | { ^ DPMA_23_Lot4 ^ } |  . | <&calendar> Créé le 10/11/2023
+      . | . |  . | <&calendar> Créé le 10/11/2023
       .
       Observateurs*:            | ^ Observateur #1    ^ | { [<&plus>] | [<&x>] } | <&calendar> Mis à jour le 10/11/2023
 

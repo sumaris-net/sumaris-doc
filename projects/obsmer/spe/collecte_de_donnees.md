@@ -3,14 +3,33 @@
 ---
 
 ## Sommaire
-
-- [Marée](#/4/3)
-    - [Engin](#/4/4)
-- [Opération](#/4/11)
-    - [Capture](#/4/12)
-        - [Mesures individuelles](#/4/15)
-- Référentiels
-- Historique
+- [Ergonomie : principes généraux et connexion](#ergonomie-principes-généraux-et-connexion)
+- [Ergonomie générale](#ergonomie-générale)
+- [Marées](#marées)
+- [Marées > filtres](#marées-filtres)
+- [Marée > Détails](#marée-détails)
+- [Marée > Engins](#marée-engins)
+- [Marée > Engin > Détails](#marée-engin-détails)
+- [Marée > Opérations](#marée-opérations)
+- [Marée > Opérations > filtres](#marée-opération-filtres)
+- [Marée > Opération > Détails](#marée-opération-détails)
+- [Marée > Opération > Historique](#marée-opération-historique)
+- [Opération > Capture > Saisie](#opération-capture-saisie)
+- [Opération > Capture > Navigation](#opération-capture-navigation)
+- [Opération > Capture > Copier-Coller](#opération-capture-copier-coller)
+- [Opération > Capture > Contrôle](#opération-capture-contrôle)
+- [Opération > Capture > PR](#opération-capture-pr)
+- [Opération > Capture > PR > Consommation humaine](#opération-capture-pr-consommation-humaine)
+- [Opération > Capture > PR > Appat](#opération-capture-pr-appat)
+- [Opération > Capture > PNR, Vrac > Détaillé](#opération-capture-pnr-Vrac-détaillé)
+- [Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables](#opération-capture-pnr-vrac-détaillé-ecosystèmes-marins-vulnérables)
+- [Opération > Capture > PNR, Vrac > Non Détaillé](#opération-capture-pnr-vrac-non-détaillé)
+- [Opération > Capture > PNR, Hors Vrac](#opération-capture-pnr-hors-vrac)
+- [Opération > Capture > PNR, Hors Vrac > Animaux](#opération-capture-pnr-hors-vrac-animaux)
+- [Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables](#opération-capture-pnr-hors-vrac-ecosystèmes-marins-vulnérables)
+- [Opération > Capture > Captures accidentelles](#opération-capture-captures-accidentelles)
+- [Opération > Capture > Captures accidentelles > Remise à l'eau](#opération-capture-captures-accidentelles-remise-à-l-eau)
+- [Opération > Capture > Mesures indivuelles](#opération-capture-mesures-indivuelles)
 
 ---
 ## Documents
@@ -167,8 +186,6 @@ Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--appli
 3. Dans l'onglet "Détails", l'observateur choisit pour cette marée (_les champs marqués d'un * sont obligatoires_) :
     * Le programme de collecte* dans une liste déroulante : information déjà pré-rempli
     * La stratégie de référence au plan d'échantillonnage de WAO
-      * l'API existante (Allegro) est utilisée pour se connecter au serveur WAO
-      * Le programme de rattachement est automatiquement renseigné à partir du plan d'échantillonnage
     * L'observateur* dans une liste déroulante
       * Un bouton :heavy_plus_sign: permet de rajouter des obervateurs à la marée
     * Le navire, s'il est dans la liste déroulante
@@ -242,7 +259,7 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 ---
 
-### Marée > Engins 
+## Marée > Engins 
 
 **REF: OBSMER/ENGINS**
 
