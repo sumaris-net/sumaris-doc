@@ -280,7 +280,6 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 * La zone proche : table NEARBY_SPECIFIC_AREA, filtrée en fonction de la zone sélectionnée
 
 > Questions :
-> - ISI : Ajouter un flag VMS ? Info dans la prédoc (données avec un *), à vérifier
 > - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
 > - ISI : En mode déconnecté : quelles infos importer en local ? Prédoc ?
 > - MOA : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
@@ -292,6 +291,7 @@ Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
       WHERE a.program_fk = 'SIH-ACTIFLOT'
       AND v.is_active = 2
       GROUP BY a.year
+> - MOA : Nombre de métiers max ?
 > - MOA : Passer en revue la liste des actions possibles
 
 Actions possibles sur une cellule dans l'Allegro actuel :

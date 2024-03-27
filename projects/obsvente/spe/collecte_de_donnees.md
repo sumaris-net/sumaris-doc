@@ -138,16 +138,18 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * "<Autres espèces> (PETS)" (visible uniquement si la caractéristique "PETS" est à "Oui")
 3. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
+    * Le plan d'échantillonnage*
     * Le lieu*
-    * La date*
+    * La date de début*
+    * La date de fin*
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
-5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
-6. Le saisisseur renseigne les caractéristiques de la sortie
-7. Le saisisseur enregistre
-8. Le bandeau de l'écran affiche "Lieu - date"
-9. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui", "Echantillonnages" sinon
+6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
+7. Le saisisseur renseigne les caractéristiques de la sortie
+8. Le saisisseur enregistre
+9. Le bandeau de l'écran affiche "Lieu - date"
+10. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui", "Echantillonnages" sinon
 
 **Variante(s) :**
 
@@ -174,7 +176,6 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 > - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
 > - EIS : Stocker la ligne de plan dans OBSERVED_LOCATION.SAMPLING_STRATA_FK ?
-> - MOA : Type de vente : restreindre la liste des valeurs possibles ?
 
 ---
 
@@ -224,7 +225,8 @@ par rapport à celles définies dans la liste des espèces à observer (REF: OBS
 
 > Questions :
 > - MOA : Inverser l'ordre des onglets "Echantillonnages" et "PETS" ?
-> - MOA : liste des raisons de non observation ?
+> - MOA : Liste des raisons de non observation ?
+> - MOA : Date de vente : notion différente de la date de la sortie, reboucler avec les saisisseurs (action Marion)
 
 ---
 
