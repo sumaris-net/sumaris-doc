@@ -14,7 +14,7 @@ Liste des tickets réalisés :
 
 - [ ] Nouvelles options dans le fichier de configuration :
   ```properties  
-  # [Optionnel] Indexation et recherche des navires via ElasticSearch
+  # [Optionnel] Indexation et recherche des navires via ElasticSearch (version ~7.17.7)
   # See documentation at: https://docs.spring.io/spring-boot/docs/2.7.17/reference/html/data.html#data.nosql.elasticsearch
   spring.elasticsearch.enabled=true
   spring.elasticsearch.uris=http://localhost:9200
@@ -24,6 +24,9 @@ Liste des tickets réalisés :
   # [Optionnel] Nb years for ElasticSearch vessels indexation (used to limit vessel features/registration) 
   sumaris.elasticsearch.vessel.snapshot.scheduling.nbYears=5
   
+  # [Optionnel] Cron expression, to update the vessels indexation (Hourly by default) 
+  sumaris.elasticsearch.vessel.snapshot.scheduling.cron=0 0 * * * ?
+  
   # Limit vessel indexation/search to specific VesselType (e.g. "Fishing vessel", "Scientific vessel")
   sumaris.data.vessel.type.ids=1,8
   
@@ -32,6 +35,8 @@ Liste des tickets réalisés :
   sumaris.enumeration.VesselType.FISHING_VESSEL.id=1
   sumaris.enumeration.VesselType.SCIENTIFIC_RESEARCH_VESSEL.id=8
   ```
+
+- [ ] Tester l'accès à l'index ES (par exemple `http://localhost:9200/vessel_snapshot/_search?pretty&size=0`)
 
 ## Schéma SIH2_ADAGIO_DBA
 
