@@ -1,10 +1,11 @@
 @startsalt
 {
 	{#
-     . | . | <b> Stratégie | * | * | * | <b> Calendrier d'activité | * | * | * | *
+     . | . | <b> Stratégie | * | * | * | <b> Sortie | * | * | * | *
      . | <b> Connexion | <b> Consultation | <b> Création |<b> Modification | <b> Suppression | <b> Consultation | <b> Création | <b> Modification | <b> Suppression | <b> Validation
      Administrateur de référentiels | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui(2) | Oui(2) | Non
      Responsable de programme | Oui | Oui | Oui | Oui | Oui | Oui | Oui | Oui(2) | Oui(2) | Oui
+     Coordinateur | Oui | Non | Non | Non | Non | Oui(1) | Oui | Oui(1)(2) | Oui(1)(2) | Oui
      Observateur | Oui | Non | Non | Non | Non | Oui(1) | Oui | Oui(1)(2) | Oui(1)(2) | Non
     }
 }

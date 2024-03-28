@@ -48,6 +48,41 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
 > Code source : https://gitlab.ifremer.fr/sih/WAO
 
 ---
+## Gestion des droits
+
+**REF: OBSVENTES/USERS_RIGHTS**
+
+![ui-obsvente](/projects/obsvente/spe/images/obsventes-users-rights.svg)
+
+(1) :
+* Si l'utilisateur est de la société Ifremer, il peut consulter, modifier et supprimer toutes les sorties non validés
+* Si l'utilisateur n'est pas de la société Ifremer, il peut consulter, modifier et supprimer uniquement les sorties créées par sa société et non validés
+
+(2) : Seules les données non validées peuvent être modifiées ou supprimées
+
+#### Détails techniques :
+* Administrateur de référentiels :
+   * PERSON2USER_PROFIL = 1
+   * PROGRAM2PERSON = vide
+* Responsable de programme :
+   * PERSON2USER_PROFIL = 3
+   * PROGRAM2PERSON = 1
+* Coordinateur :
+   * PERSON2USER_PROFIL = 2
+   * PROGRAM2PERSON = 4
+* Observateur :
+   * PERSON2USER_PROFIL = 2
+   * PROGRAM2PERSON = 2
+
+> Questions :
+> - MOA : Revoir la gestion des droits 
+>   - Actuellement : définition d'un portefeuille de navires par utilisateur -> pb perf
+>   - Proposition 1 : définir le coordinateur selon le PROGRAM_PRIVILEGE -> Instantané. Le coordinateur a les mêmes navires que les saisisseurs de sa société, moins fin que la gestion actuelle. Peu couteux.
+>   - Proposition 2 : inder les porteuilles de navires dans ES -> L'indexation est réalisée une fois par jour, la modification des droits n'est donc pas prise en compte instantanément. Fin. Couteux ?
+> - MOA : Validation des données : qui valide (responsable de programme et/ou coordinateur) ? comment ?
+> - MOA : Fonctionnalités utilisées : données temporaires (navires, personnes, taxons, groupes de taxons, engins) ?
+
+---
 ## Ergonomie générale
 
 **REF: OBSVENTES/INTERFACE**
@@ -74,7 +109,7 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
    * Le lieu de la sortie
    * La date/heure
    * Le ou les observateurs
-   * Le ou les saisisseurs
+   * Le saisisseur
    * Le commentaire
 
 **Variante(s) :**
@@ -90,6 +125,7 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
 > Questions :
 > - ISI : Analyser le renommage du programme SIH-OBSVENTE en SIH-OBSVENTES (impact + chiffrage) ?
 > - Saisisseur : Ajouter onglet avec l'ensemble des échantillonnages toutes sorties ? (cf Imagine)
+> - MOA/EIS : Ajout du plan d'échantillonnage ? Impact côté Imagine ?
 
 ---
 ## Sorties > Filtres
@@ -173,9 +209,8 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
 
 > Questions :
-> - ISI : Programme de rattachement : Information doublonnée (SAMPLING_SCHEME + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMELIZED_SAMPLING_STRATA ? A approfondir
-> - EIS : Stocker la ligne de plan dans OBSERVED_LOCATION.SAMPLING_STRATA_FK ?
+> - ISI : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
+> - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
 
 ---
 
@@ -226,7 +261,6 @@ par rapport à celles définies dans la liste des espèces à observer (REF: OBS
 > Questions :
 > - MOA : Inverser l'ordre des onglets "Echantillonnages" et "PETS" ?
 > - MOA : Liste des raisons de non observation ?
-> - MOA : Date de vente : notion différente de la date de la sortie, reboucler avec les saisisseurs (action Marion)
 
 ---
 
@@ -287,14 +321,17 @@ sur une espèce.
 2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
    * "Détails" (onglet par défaut)
    * "Lots"
-3. Sur l'onglet "Détails", le saisisseur consulte les détails de la vente (non modifiable) :
-   * Navire*
-   * Type de vente*
-   * Lieu de vente*
-   * Date/heure*
-   * Zone de pêche
-   * Commentaires
+3. Sur l'onglet "Détails", le saisisseur consulte les détails de la vente :
+   * Navire* (automatiquement renseigné avec le navire de l'espèce observée)
+   * Type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
+   * Lieu de vente* (automatiquement renseigné avec le lieu de la sortie)
+   * Date/heure* (automatiquement renseigné ?)
+   * Zone de pêche (automatiquement renseigné avec la zone de pêche de l'espèce observée)
+   * Commentaires (automatiquement renseigné avec le commentaire de l'espèce observée)
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
+
+> Questions : 
+> - MOA : Date de vente : notion différente de la date de la sortie ? Reboucler avec les saisisseurs (action Marion)
 
 ---
 ## Vente > Lots espèces

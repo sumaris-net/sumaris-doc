@@ -56,7 +56,7 @@ Cheminement de la donnée : collecte > saisie > validation > correction éventue
 
 
 #### Détails techniques :
-* Administrateur de programme :
+* Administrateur de référentiels :
   * PERSON2USER_PROFIL = 1
   * PROGRAM2PERSON = vide
 * Responsable de programme :
