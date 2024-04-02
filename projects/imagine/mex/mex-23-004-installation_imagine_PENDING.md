@@ -20,6 +20,7 @@ Liste des tickets réalisés :
   spring.elasticsearch.uris=http://localhost:9200
   spring.elasticsearch.username=<USERNAME>
   spring.elasticsearch.password=<PASSWORD>
+  spring.elasticsearch.index.prefix=isi_sumaris_rw_
   
   # [Optionnel] Nb years for ElasticSearch vessels indexation (used to limit vessel features/registration) 
   sumaris.elasticsearch.vessel.snapshot.scheduling.nbYears=5
