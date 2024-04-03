@@ -108,3 +108,8 @@
 .reveal p img.logo {
 	background-color: transparent !important;
 }
+
+/* -- Reduce the font size on large tables -- */
+.reveal table.font-size-small {
+	font-size: 0.7em;
+}

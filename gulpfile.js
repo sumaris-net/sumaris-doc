@@ -19,10 +19,12 @@ const gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   header = require('gulp-header'),
   footer = require('gulp-footer'),
-  exec = require('gulp-exec');
+  exec = require('gulp-exec'),
+  plantuml = require('node-plantuml');
 
-//const plantumlVersion = '1.2023.9'; // FIXME: generate bad encoding
-const plantumlVersion = '1.2022.7';
+const plantumlVersion = '1.2024.3'; // FIXME: generate bad encoding
+//const plantumlVersion = '1.2022.7';
+const projectCharset= 'UTF-8';
 const uglifyBaseOptions = {
   toplevel: true,
   warnings: true,
@@ -145,7 +147,8 @@ function appGenerateSvg(done) {
     pipeStdout: false, // default = false, true means stdout is written to file.contents
   };
   return gulp.src(folders_svg)
-      .pipe(exec((file) => `java -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset UTF-8 -progress -duration -nometadata`, options))
+      //.pipe()
+      .pipe(exec((file) => `java -Dfile.encoding=${projectCharset} -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset ${projectCharset}`, options))
       .on('end', done);
 }
 
