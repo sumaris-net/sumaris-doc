@@ -54,6 +54,16 @@ Les saisies bureau et tablette sont envisagées.
 
 Cheminement de la donnée : collecte > saisie > validation > correction éventuelle
 
+> Points de vigilance :
+> - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
+> - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
+
+> Questions MOA :
+> - Qui fait une demande de création d'utilisateur dans le système ? A qui ? Comment ?
+> - Qui fait une demande d'accès à un navire pour un utilisateur ? A qui ? Comment ?
+> - Notion de coordinateur chez les prestataires ?
+> - Qui valide les données ? Comment ?
+> - Qui corrige les données ? Comment ?
 
 #### Détails techniques :
 * Administrateur de référentiels :
@@ -65,10 +75,6 @@ Cheminement de la donnée : collecte > saisie > validation > correction éventue
 * Observateur :
   * PERSON2USER_PROFIL = 2
   * PROGRAM2PERSON = 2
-
-> Points de vigilance : 
-> - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation 
-> - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
 
 ---
 ## Ergonomie générale
@@ -131,6 +137,8 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
 > - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
+> - MOA : Utilisation de données temporaires  (navires, personnes, engins) ?
+> - MOA : Prévoir une fonctionnalité de suppression d'un navire ?
 
 ---
 ## Calendriers d'activité > Filtres
@@ -282,6 +290,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 > Questions :
 > - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
 > - ISI : En mode déconnecté : quelles infos importer en local ? Prédoc ?
+> - ISI : Comment fonctionne la réorganisation des métiers ?
 > - MOA : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOA : navire inexistant, cf requête :
