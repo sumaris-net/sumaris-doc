@@ -1,0 +1,65 @@
+@startuml
+
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+skinparam sameClassWidth false
+skinparam minClassWidth 20
+skinparam defaultTextAlignment center
+
+  component Sumaris [ **Sumaris**
+  {{
+
+        component Ifremer {
+            [ObsMer]
+            [ObsVentes]
+            [Imagine]
+            Imagine -left[hidden]- ObsVentes
+        }
+
+        component Others {
+            [...]
+            [APASE]
+            [SFA]
+             ... -left[hidden]- APASE
+        }
+
+        component Ecrans {
+             [Opération]
+             [Debarquement, Vente]
+             [Marée]
+             [Sortie]
+              Sortie -left[hidden]- Opération
+        }
+
+        Imagine -down.> Sortie
+        ObsVentes -down.> "Debarquement, Vente"
+        ObsMer -down.> Marée
+        ObsMer -down.> Opération
+        APASE -down.> Opération
+  }}
+  ]
+
+
+: : --> Sumaris
+
+  component Socle_Technique [ **Socle technique**
+  {{
+        component "Composants maison" {
+        }
+
+        component "Librairies" {
+        [...]
+        [Angular]
+        }
+
+        "Composants maison" -down[hidden]-"Librairies"
+  }}
+  ]
+
+
+
+  [Quadrige2] -right..> Socle_Technique
+
+  Sumaris -down-> Socle_Technique
+@enduml
+
