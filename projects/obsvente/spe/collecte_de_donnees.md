@@ -224,21 +224,23 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 
 Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
 
-1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer (espèce commerciale + espèce scientifique)
-2. Le type de vente est automatiquement renseigné avec le type de vente sélectionnée sur la sortie
-3. Pour chaque espèce observée, le saisisseur :
-   * Coche la case "Observé ?"*
-   * Sélectionne le navire*
-   * Sélectionne la zone de pêche
-   * Modifie le type de vente
-   * Saisit un commentaire
-4. Pour chaque espèce non observée, le saisisseur :
+1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Les informations suivantes sont affichées pour chaque espèce :
+   * Espèce commerciale
+   * Espèce scientifique
+   * Observé ?
+   * Raison de non observation
+   * Navire
+   * Zone de pêche
+   * Type de vente
+   * Commentaire
+2. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
+3. Pour chaque espèce non observée, le saisisseur :
    * Sélectionne une raison de non observation*
    * Saisit un commentaire
-5. Le saisisseur enregistre l'échantillon observé
-6. Le bandeau de l'écran affiche "Lieu - Date"
-7. L'encart sur le saisisseur s'affiche
-8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/LOT)
+4. Le saisisseur enregistre l'échantillon observé
+5. Le bandeau de l'écran affiche "Lieu - Date"
+6. L'encart sur le saisisseur s'affiche
+7. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 **Variante(s) :**
 
@@ -281,17 +283,18 @@ professionnelle
 
 Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
 
-1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés 
-2. Le type de vente est automatiquement renseigné avec le type de vente sélectionnée sur la sortie
-3. Pour chaque PETS, le saisisseur renseigne :
+1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
+    * Espèce commerciale
+    * Espèce scientifique
+    * Navire
+    * Zone de pêche
+    * Type de vente
+    * Commentaire
+2. Pour chaque PETS, le saisisseur renseigne :
    * L'espèce commerciale*
    * L'espèce scientifique
-   * Le navire*
-   * La zone de pêche 
-   * Le type de vente*
-   * Le commentaire
-4. Le saisisseur enregistre l'échantillon observé
-5. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/LOT)
+3. Le saisisseur enregistre l'échantillon observé
+4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 **Variante(s) :**
 
@@ -321,16 +324,24 @@ sur une espèce.
 2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
    * "Détails" (onglet par défaut)
    * "Lots"
-3. Sur l'onglet "Détails", le saisisseur consulte les détails de la vente :
-   * Navire* (automatiquement renseigné avec le navire de l'espèce observée)
+3. Sur l'onglet "Détails", le saisisseur renseigne les détails de la vente :
+   * Navire*
    * Type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
    * Lieu de vente* (automatiquement renseigné avec le lieu de la sortie)
    * Date/heure* (automatiquement renseigné ?)
-   * Zone de pêche (automatiquement renseigné avec la zone de pêche de l'espèce observée)
-   * Commentaires (automatiquement renseigné avec le commentaire de l'espèce observée)
+   * Zone de pêche
+   * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 > Questions : 
+> - MOA : Type de vente : 
+>   - Initialisé avec le type de vente défini sur la sortie
+>   - Modifiable sur la vente ?
+>   - Si modification du type de vente sur la sortie alors répercution sur les ventes existantes ?
+> - MOA : Lieu de vente :
+>   - Initialisé avec le lieu défini sur la sortie
+>   - Modifiable sur la vente ?
+>   - Si modification du lieu sur la sortie alors répercution sur les ventes existantes ?
 > - MOA : Date de vente : notion différente de la date de la sortie ? Reboucler avec les saisisseurs (action Marion)
 
 ---
