@@ -390,7 +390,7 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 
 #### Scénario principal
 
-[Spécifications communes / Mesures](/projects/common/spe/regles_communes.md#COMMUN-MESURES)
+[Spécifications communes / Mesures](/projects/common/spe/regles_communes.md#commun--saisie-de-mensuration)
 
 ---
 ## Règles métier
