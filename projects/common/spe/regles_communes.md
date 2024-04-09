@@ -202,9 +202,11 @@ _A mettre dans une partie validation de données_
 ![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
 
 La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
+
 L'écran affiche la liste des mesures individuelles ou un dénombrement pour l'espèce commerciale.
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
+
 Le choix se fait par une case à cocher.
 
 1. L'observateur coche "Mensuration".
