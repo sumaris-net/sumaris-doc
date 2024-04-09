@@ -211,6 +211,10 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 > Questions :
 > - ISI : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
+> - MOA : Validation observateur, Validation société : conserver ces PMFM ou les remplacer par le processus de contrôle des données de Sumaris ? 
+>  - Ces champs sont-ils utilisés par les rapports Birt ?
+>  - Y a t-il une validation (donnée unitaire) ou une qualification (ensemble de données)côté Ifremer ?
+>  - Détail du processus de validation des données de Sumaris : l'observateur termine la saisie puis le coordinateur (prestataire) valide les données
 
 ---
 
@@ -388,20 +392,7 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 
 #### Scénario principal
 
-1. Pour chaque mesure individuelle, le saisisseur renseigne :
-   * L'espèce scientifique
-   * Le sexe
-   * La taille
-
-> Questions/Points de vigilance :
-> - Ichtyomètre électronique : connexion bleutooth (gwaleen) uniquement en mode tablette + usb pour le mode bureau ?
-> - Caisse de **mélange**: possible au sein d'un même espèce commerciale : Dans ce cas, il faut pouvoir choisir une espèce scientifique en dehors de l'espère commerciale (**non prioritaire**)
-
-**Variante(s) :**
-
-**Variante 5a :** Contrôle des valeurs saisies
-La stratégie permet de définir des bornes minimales et maximales sur la longueur et les poids, globalement ou par espèce.
-NB : Si la vérification est bloquante, il faut prendre des bornes assez larges
+Cf COMMON/...
 
 ---
 ## Règles métier
