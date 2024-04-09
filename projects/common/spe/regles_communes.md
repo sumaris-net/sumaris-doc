@@ -2,6 +2,25 @@
 
 Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer</b>, <b>ObsVente</b>, <b>Calendrier d'activité</b>
 
+
+---
+## Sommaire
+
+- [Spécificités techniques](#spécificités-techniques)
+- [Commun > Ergonomie > principes généraux](#commun-ergonomie-principes-généraux)
+- [Commun > Ergonomie > Connexion à l'application](#commun-ergonomie-connexion-à-l-application)
+- [Commun > Application des filtres](#commun-application-des-filtres)
+- [Commun > Epingler un élément](#commun-epingler-un-élément)
+- [Commun > Extraction](#commun-extraction)
+- [Commun > Saisie de mensuration](#commun-saisie-de-mensuration)
+- [Commun > Fin d'une saisie](#commun-fin-d-une-saisie)
+- [Commun > Ajout de PSFM](#commun-ajout-de-psfm)
+- [Commun > Stratégie](#commun-stratégie)
+- [Commun > Formulaires](#commun-formulaires)
+- [Commun > Saisisseur](#commun-saisisseur)
+- [Commun > Enregistrement automatique](#commun-enregistrement-automatique)
+- [Commun > Suppression](#commun-suppression)
+
 ## Spécificités techniques
 
 **REF: COMMUN/TECHNIQUE**
