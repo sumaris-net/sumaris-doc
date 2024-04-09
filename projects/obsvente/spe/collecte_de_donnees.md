@@ -386,13 +386,11 @@ sur une espèce.
 
 **REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES**
 
-![ui-obsventes](/projects/common/spe/images/individual-measures.svg)
-
 La création de mesures individuelles est accessible depuis le tableau de consultation des lots en cliquant sur l'icône :bar_chart:
 
 #### Scénario principal
 
-Cf COMMON/...
+[Spécifications communes / Mesures](/projects/common/spe/regles_communes.md#COMMUN-MESURES)
 
 ---
 ## Règles métier

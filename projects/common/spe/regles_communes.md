@@ -176,6 +176,52 @@ _A mettre dans une partie validation de données_
 > MOA -> OBS : Demander aux observateurs les besoins en filtrage sur les données
 
 
+## Commun > Saisie de mensuration
+
+**REF: COMMUN/MESURES**
+
+![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
+
+La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
+L'écran affiche la liste des mesures individuelles ou un dénombrement pour l'espèce commerciale.
+
+L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
+Le choix se fait par une case à cocher.
+
+1. L'observateur coche "Mensuration".
+2. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
+3. La zone de saisie de mesure est composée des champs suivants :
+    * Le nom de l'espèce scientifique
+      * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
+    * Le sexe de l'espèce mesurée
+    * La longueur totale mesurée, en cm
+    * Le poids calculé RTP (Relation taille poids) en kg
+      * Ce poids RTP est automatiquement calculé (affiché en bleu en italique)
+4. Un bouton permet d'ajouter la mesure individuelle saisit
+    * Une ligne est ajoutée au tableau
+5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
+
+
+**Variante 1a**
+
+![ui-common-mesures-enumerations](/projects/common/spe/images/enumerations.svg)
+
+1. L'observateur coche "Dénombrement"
+2. L'écran se retaille pour n'afficher seulement que le champ suivant :
+    * Le nombre d'individus
+
+**Variante 1b**
+
+![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/enumerations-edit-warning.svg)
+
+1. L'observateur coche "Mensuration".
+2. L'observateur à saisi des mesures individuelles, présentent dans le tableau
+3. L'observateur coche "Dénombrement"
+4. L'écran affiche la saisie d'un dénombrement pour l'espèce commerciale (variante 1b)
+5. Un message d'avertissement (text de couleur blanche surligné en rouge) indique à l'observateur que des mensurations ont été saisies.
+   * La saisie d'un dénombrement effacera les mensurations précédemment saisies 
+
+
 
 ## Commun > Fin d'une saisie
 

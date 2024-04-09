@@ -19,7 +19,9 @@
 
     {
       {+
-        { | . |  <b>Ajouter une mesure :  | . }
+        { | . | (X)  <b>Mensurations | . }
+        { | . | ()  <b>Dénombrement |  . }
+
         --
         { | . | Espèce scientifique *  | . }
         { | . | ^Lophius piscatorius^   | .  | [ ] Figer }

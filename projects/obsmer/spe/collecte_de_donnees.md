@@ -1100,24 +1100,13 @@ la pêche professionnelle
 
 ## Opération > Capture > Mesures indivuelles
 
-**REF: OBSMER/OPERATION_CAPTURE/MI**
+**REF: OBSMER/OPERATION_CAPTURE/MESURES**
 
-![ui-samples](/projects/common/spe/images/individual-measures.svg)
+La création de mesures individuelles est accessible depuis le tableau de consultation des captures en cliquant sur l'icône :bar_chart:
 
 #### Scénario principal
 
-L'observateur à ouvert l'écran de saisie des mesures individuelles pour l'espèce commerciale.
-
-L'écran affiche la liste des mesures individuelles pour l'espèce commerciale.
-1. L'écran est composé des champs suivants :
-   *  Le nom de l'espèce scientifique
-     * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
-   * Le sexe de l'espèce mesurée 
-   * La longueur totale mesurée, en cm
-   *  Le poids calculé RTP (Relation Taille Poids) en kg
-2. Un bouton permet d'ajouter une mesure individuelle
-
-
+[Spécifications communes / Mesures](/projects/common/spe/regles_communes.md#COMMUN-MESURES)
 
 > TODO: Il faut des PSFM supplémentaires (ex: état de remise à l'eau)
 
