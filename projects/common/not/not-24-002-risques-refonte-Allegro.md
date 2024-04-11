@@ -29,6 +29,30 @@
 
 ---
 
+**Inquiétudes sur la performance des applications**
+- Amélioration du socle technique (Allegro actuel 2009-2012)
+- Imagine : Indexation sur les navires en pré-production
+- Réalisation de benchmarks
+
+--
+
+**Imagine : Indexation sur les navires en pré-production**
+
+- Tests de performances sur la recherche de navires
+
+| Libellé recherché | Nombre de navires | Réponse (s) sans indexation | Réponse (s) avec indexation | Ratio (%) |
+|-------------------|-------------------|-----------------------------|-----------------------------|-----------|
+| *pou              | 114               | 9                           | 2                           | 77        |
+| *tha              | 225               | 14                          | 1                           | 93        |
+| *mou              | 230               | 13                          | 2                           | 84        |
+| *vil              | 1912              | 62                          | 8                           | 87        |
+| *vi               | 6240              | 169                         | 35                          | 80        |
+<!-- .element: class="font-size-small" -->
+--
+
+![ui-board-es-benchmark](/projects/common/not/images/vessels_search_benchmark.png)
+
+
 ## Matrice de risques sur la refonte Allegro - V0
 
 | Risques                                   | Probabilité | Impact    | Criticité | Actions de mitigation                         |
