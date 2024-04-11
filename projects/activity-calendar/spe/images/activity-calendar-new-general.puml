@@ -1,6 +1,6 @@
 @startsalt
 {
-  Navire : <b>SONNY NINO MATHILDE 3 - 136794 - MA - 7,81 m - 2022
+  Navire : <b>SONNY NINO MATHILDE 3 - 123456 - MA - 7,81 m - 2022
   --
   {/ <b>Général | Calendrier | Métiers | Carte}
   ..
@@ -10,17 +10,17 @@
     {
     . | Caractéristiques des navires
     . | {# Immatriculation | Début validité | Fin validité | Nom du navire | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction | FPC
-       136794 | 06/04/2021 | 31/12/2022 | SONNY NINO MATHILDE 3 | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
+       123456 | 06/04/2021 | 31/12/2022 | SONNY NINO MATHILDE 3 | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
     .
 
     . | Historique des immatriculations navires
     . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation
-       136794 | 01/01/1967 | . | MA - Marseille}
+       123456 | 01/01/1967 | . | MA - Marseille}
     .
 
     . | Couples navires-armateurs
     . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur
-       136794 | 15233 | 06/04/2021 | . | CRIMON | Eric}
+       123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
     }
   }
   .

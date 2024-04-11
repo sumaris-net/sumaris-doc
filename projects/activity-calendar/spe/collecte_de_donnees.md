@@ -47,12 +47,10 @@ Les saisies bureau et tablette sont envisagées.
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-users-rights.svg)
 
 (1) : 
-* Si l'observateur est de la société Ifremer, il peut consulter, modifier et supprimer tous les calendriers d'activité non validés
-* Si l'observateur n'est pas de la société Ifremer, il peut consulter, modifier et supprimer uniquement les calendriers créés par sa société et non validés
+* Si l'utilisateur est de la société Ifremer, il peut consulter, modifier et supprimer tous les calendriers d'activité non validés
+* Si l'utilisateur n'est pas de la société Ifremer, il peut consulter, modifier et supprimer uniquement les calendriers créés par sa société et non validés
 
 (2) : Seules les données non validées peuvent être modifiées ou supprimées
-
-Cheminement de la donnée : collecte > saisie > validation > correction éventuelle
 
 > Points de vigilance :
 > - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
@@ -119,7 +117,7 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
    * Le navire (code + libellé)
    * L'année
    * L'objectif d'enquête directe
-   * L'enquête éco
+   * L'enquête économique
    * Les saisisseurs
 
 **Variante(s) :**
@@ -132,13 +130,11 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
-  * Enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
+  * Enquête économique : donnée consultative issue de la feuille de route, cf mantis 61967
 
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
 > - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
-> - MOA : Utilisation de données temporaires  (navires, personnes, engins) ?
-> - MOA : Prévoir une fonctionnalité de suppression d'un navire ?
 
 ---
 ## Calendriers d'activité > Filtres
@@ -157,7 +153,7 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
    * Le navire
    * L'année
    * L'objectif d'enquête directe
-   * L'enquête éco
+   * L'enquête économique
    * L'organisme du saisisseur
    * Le saisisseur
 2. L'année est automatiquement renseignée avec l'année :
@@ -202,9 +198,9 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * "Calendrier"
    * "Métiers"
 3. L'année du calendrier correspond à l'année présente dans le filtre du tableau des calendriers d'activité
-4. Dans l'onglet "Général", l'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affiche 
-5. Le saisisseur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
-6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de l'année' sélectionnée
+4. Dans l'onglet "Général", le navire et l'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affichent
+5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de l'année
+6. Le saisisseur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
 7. Le saisisseur renseigne les caractéristiques de l'enquête. Par défaut toutes les caractéristiques sont vident.
 8. Le saisisseur saisit un commentaire
 
@@ -222,7 +218,6 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 > Questions :
 > - EIS : Prévoir POC pour le commentaire/date/initiales
 > - MOA : Remonter les carac et le commentaire au-dessus de l'état des changements des carac et des armateurs ?
-> - MOA : Laisser le champ "Navire" affiché pour permettre le changement de navire en cas d'erreur ou de navire non trouvé dans le référentiel ? 
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -253,7 +248,6 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
-     * Inexistant : vide et rend non-modifiable les champs au-dessous y compris le port d'exploitation ou de rattachement
    * Le port d'exploitation ou de rattachement*
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
@@ -267,6 +261,12 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 6. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
 7. L'encart sur le saisisseur s'affiche
 
+**Variante(s) :**
+
+**Variante 1a :** Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche
+
+**Variante 2a :** Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées
+
 #### Détails techniques :
 * Sources de la prédocumentation :
   * Enquête N-1 indirecte : table ACTIVITY_CALENDAR avec :
@@ -277,6 +277,7 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
       * PROGRAM_FK = 'SIH-ACTIPRED'
       * YEAR = N
       * VESSEL_FK
+* L'activité du navire : dans les données historiques, la valeur "Inexistant" était également possible
 * Le port d'exploitation ou de rattachement : 
   * LOCATION.LOCATION_LEVEL_FK = 6 (Port - Point de débarquement)
   * Filtré selon la zone de compétence sélectionnée
@@ -290,18 +291,12 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 > Questions :
 > - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
 > - ISI : En mode déconnecté : quelles infos importer en local ? Prédoc ?
+> - ISI : Conserver uniquement les raccourcis CTRL+C et CTRL+V
 > - ISI : Comment fonctionne la réorganisation des métiers ?
-> - MOA : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
+> - ISI/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
-> - MOA : navire inexistant, cf requête :
-      SELECT count(v.is_active), a.year
-      FROM VESSEL_USE_FEATURES v
-      INNER JOIN activity_calendar a ON a.id = v.activity_calendar_fk
-      WHERE a.program_fk = 'SIH-ACTIFLOT'
-      AND v.is_active = 2
-      GROUP BY a.year
-> - MOA : Nombre de métiers max ?
-> - MOA : Passer en revue la liste des actions possibles
+> - ISI : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
+> - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
 
 Actions possibles sur une cellule dans l'Allegro actuel :
   * Copier

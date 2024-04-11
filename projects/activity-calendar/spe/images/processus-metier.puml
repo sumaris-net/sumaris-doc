@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 350 width
+
+
+state "Calendriers d'Activité" as calendriers {
+
+    state "Base centrale" as base
+
+    state "Collecte des données" as collecte {
+      state "Collecter les données" as collecter
+      state "Saisir les données" as saisir
+      state "Enregistrer les données dans le système central" as enregistrer
+      state "Contrôler les données" as contrôler
+      collecter --> saisir
+      saisir --> enregistrer
+      enregistrer --> contrôler
+      contrôler <--- saisir : Correction
+    }
+
+    state "Consolidation des données" as consolidation {
+      state "Consolider les données avec SACROIS" as consolider
+
+    }
+
+    state "Stratégie de pêche" as stratégie_peche {
+      state "Déterminer la stragégie de pêche" as stratégie
+      state "Stratifier la flotte" as stratifier
+      state "Définir les plans d'échantillonnage" as échantillonner
+      stratégie --> stratifier
+      stratifier --> échantillonner
+    }
+
+    [*] --> collecte
+
+    collecte --> consolidation
+    consolidation --> stratégie_peche
+}
+
+
+
+@enduml

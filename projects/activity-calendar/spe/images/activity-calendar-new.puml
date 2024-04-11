@@ -1,6 +1,6 @@
 @startsalt
 {
-  Navire : <b>SONNY NINO MATHILDE 3 - 136794 - MA - 7,81 m - 2022
+  Navire : <b>SONNY NINO MATHILDE 3 - 123456 - MA - 7,81 m - 2022
   --
   {/ Général | <b>Calendrier | Métiers | Carte}
   ..
@@ -10,7 +10,7 @@
   	{#
      . | <b>Janvier | * | <b>Février | * | ... | <b>Décembre
      . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
-     Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | .
+     Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | .
      Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | .
      Actif ? | ^Inexistant    ^ | . | ^Inactif                       ^ | ^Actif                                      ^ | . | .
      Port exploit. / rattach. | . | . | ^JMA - La Matrague de Montredon^| ^JMA - La Matrague de Montredon             ^ | . | .
@@ -34,7 +34,7 @@
 	{S-
 	{#
      . | <b>Janvier | <b>Février | <b>Mars | <b>Avril| ... | <b>Décembre
-     Armateur | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | 15233 - CRIMON ERIC | . | . | .
+     Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | . | .
      Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | . | .
      Actif ?* | ^Inexistant    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
      Port exploit. / rattach.* | . | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
