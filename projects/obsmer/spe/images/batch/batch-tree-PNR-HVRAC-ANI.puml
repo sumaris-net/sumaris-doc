@@ -28,9 +28,9 @@
 
     {#
 
-          [ ] | # | <b>Espèce scientifique  | <b>Poids total (kg)     |  <b>Nb indiv. total  | <b>Coef. échant. | <b>Poids. échant. | <b>Nb indiv échant. | <&menu>
-          [ ] | 1 | ^MON - Lophius piscatoruis  ^ |  50   |  24   |   10          | 4 | 10 | <&bar-chart> <&comment-square> <&image>
-          [ ] | 2 | ^ANK - Lophius budegassa  ^ |  20   |  36   |   10          | 4 | 10 | <&bar-chart> <&comment-square> <&image>
+          [ ] | # | <b>Espèce scientifique  | <b>Poids total (kg)     |  <b>Nb indiv. total   | <&menu>
+          [ ] | 1 | ^MON - Lophius piscatoruis  ^ |  50   |  24    | <&bar-chart> <&comment-square> <&image>
+          [ ] | 2 | ^ANK - Lophius budegassa  ^ |  20   |  36   |    <&bar-chart> <&comment-square> <&image>
         }
   }
 
