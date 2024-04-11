@@ -781,8 +781,6 @@ La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
 
 > MOA (attente confirmation Marion) : Retirer la notion d'échantillonnage : Enlever ou griser "Coef. éch." (1/1) et "Poids échant. (kg)" pour Conso, Appat, Godaille, Obligatoire à débarquer : ATTENTE
 
-> MOA (à confirmer) : Saisir en gramme pour certains écrans ? Tout est saisi en Kg ? : ATTENTE
-
 
 ---
 
@@ -818,8 +816,7 @@ L'arbre PNR, Vrac détaillé contient un sous menu :
 - Ecosystèmes Marins Vulnérables
 
 L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquement renseignés :
-- Poids total 
-- Poids échantillonné
+- Poids total
 
 #### Scénario principal
 
@@ -843,8 +840,6 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
 3. L'observateur renseigne les éléments suivants :
     * Le poids total *, en kg
         * Une case à cochée permet d'indiquer s'il le poids a été estimé
-    * Le coefficient d'échantillonnage (1/n)
-    * Le poids échantillonné *, en kg
 4. L'observateur renseigne les catégories EMV observées :
     * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catégorie d'EMV
@@ -855,12 +850,9 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
         * Un commentaire
           * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
         * Des photos (A REALISER)
+          * Il n'y a pas de limitation en nombre de photos
+          * Il est possible de proposer des tailles en dimensions/poids pour l'image (configurable dans les options)
     * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
-
-> 14/03/2024 : Ajouter la case à cocher pour supprimer un EMV : OK
-
-> 14/03/2024 EIS : Y a t il un nombre de photos limites ?
-
 
 ## Opération > Capture > PNR, Vrac > Non Détaillé
 
@@ -887,13 +879,6 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
        * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
    * Une photo (A REALISER)
 7. Le poids total est calculé à partir des poids saisies pour chaque rejet
-
-> 14/03/2024 : Ajouter "Poids total (kg)" et case à cocher "Estimé ?" : OK
-
->  Poids total (kg) calculé des poids total des Natures de rejets : OK
-
->  Ajouter une case à cocher pour la suppression : OK
-
 
 ---
 ## Opération > Capture > PNR, Hors Vrac
@@ -929,25 +914,12 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * Le code de l'espèce scientifique de l'espèce
         * Le poids total, en kg
         * Le nombre d'individu total
-        * Le taux d'échantillonnage (1/n)
-            * Si ce champ est renseigné, le poids d'échantillonnage est automatique calculé et renseigné
-        * Le poids d'échantillonnage (en Kg)
-            * Si ce champ est renseigné, le taux d'échantillonnage est automatique calculé et renseigné
-        * Le nombre d'individu échantillonné
         * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
         * Un commentaire
             * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
         * Une photo (A REALISER) 
-        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+        * L'observateur peut supprimer une espèce scientifique en la sélectionnant et en cliquant sur l'icône "Poubelle"
 4. Le poids total est calculé à partir des poids saisies pour chaque EMV
-
-> 14/03/2024 : Enlever la case à cocher "Inventaire exhaustif des espèces ?" : OK
-
-> MOA (à confirmer) : Garder Coef. échant. et poids échant. : ATTENTE 
-
-> Ajouter une case à cocher pour la suppression : OK
-
-> Ne pas avoir le libellé "Espèce Commerciale" mais plutôt le libellé "Espèce scientifique" (pas vendu) : OK
 
 > AJOUT DE REGLES - Action de contrôle : Warning pas respecté : si coef echant PNR Vrac est 1/1 alors que le poids de PNR Hors Vrac doit être à 0 : TODO
 
@@ -965,7 +937,7 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 3. L'observateur renseigne les catégories EMV observées :
     * Si le poids total est estimé, par une case à cocher
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catgégorie d'EMV
-    * Un bouton ((:heavy_plus_sign:) lui permet d'ajouter toutes les catégories d'EMV
+    * Un bouton **((**:heavy_plus_sign:**)** lui permet d'ajouter toutes les catégories d'EMV
     * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
         * La catégorie
         * Le poids total, en kg
@@ -974,14 +946,6 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
         * Une photo (A REALISER)
         * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
 4. Le poids total est calculé à partir des poids saisies pour chaque EMV
-
-> 14/03/2024 : Enlever la case à cocher "Inventaire exhaustif des espèces ?" : OK
-
-> Ajouter "Poids total (kg)" et case à cocher "Estimé ?" : OK
-
-> Ajouter une case à cocher pour la suppression : OK
-
-
 
 ---
 
@@ -1044,29 +1008,15 @@ la pêche professionnelle
 - Position de l'individu durant l'opération : PMFM - NET_STRING_CATCH_POSITION (ID = 3259)
   - Début du virage, Milieu du virage, Fin du virage
 
-> 14/03/2024 : 
-
-> Ajouter une case à cocher pour la suppression : OK
+> 14/03/2024 :
 
 > Mort ? pas de case à cocher - Liste déroulante : OK
 
-> Ajout les PSFMs suivants (issue de la stratégie) : 
-
-> Trace de capture : Oui/Non : OK
-
-    > Si oui, renseigné le type de trace de capture (voir le protocole Observateur, fiche capture accidentelle) : OK
-
-> Position de l'individu au niveau de l'opération (Début / Milieu / Fin) : OK
-
-> Avoir des colonnes fixes sans les mesures : OK
+> Ajout les PSFMs suivants (issue de la stratégie) :
 
 > En fonction de l'espèce (souvent dauphins et oiseaux), on peut avoir plusieurs mesures
 
 > Exemple : Si saisit de dauphin : 1 mesure de longueur et 1 circonférence
-
-> !!! Enlever la colonne "Longueur totale" : OK
-
-> Gestion des mesures : OK 
 
 > Scénario : Aller chercher le type de mesure pour chaque espèce dans les .. (Ajout de PSFM)
 
@@ -1091,12 +1041,6 @@ la pêche professionnelle
     * La longitude
     * Un commentaire
 4. L'observateur peut aussi supprimer toutes les remises à l'eau saisis ou décider de supprimer les remises à l'eau une à une
-
-> 14/03/2024 : Utilisé le mot "Remise à l'eau" : OK
-
->  Ajouter une case à cocher pour la suppression : OK
-
-> Enlever la photo car présent dans Mesures individuelles : OK 
 
 ## Opération > Capture > Mesures indivuelles
 
