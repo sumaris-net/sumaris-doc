@@ -24,8 +24,9 @@
   - A planifier en avance
 
 ---
-**A planifier**
--  Mettre en place un comité de coordination en incluant Emilie Le Blond et tous les coordinateurs.
+**A planifier/réaliser**
+- Mettre en place un comité de coordination en incluant Emilie Le Blond et tous les coordinateurs.
+- Mettre en place un plan qualité sur le projet de refonte
 
 ---
 
