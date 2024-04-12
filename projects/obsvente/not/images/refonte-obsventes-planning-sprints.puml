@@ -1,6 +1,53 @@
 @startgantt
 hide footbox
 
+<style>
+ganttDiagram {
+    unstartedTask {
+        FontName Helvetica
+        FontColor Green
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    task {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    milestone {
+        FontColor black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor yellow
+        LineColor FireBrick
+    }
+    note {
+        FontColor DarkGreen
+        FontSize 10
+        LineColor OrangeRed
+    }
+    arrow {
+        FontName Helvetica
+        FontColor red
+        FontSize 18
+        FontStyle bold
+        BackGroundColor GreenYellow
+        LineColor blue
+        LineStyle 8.0;13.0
+        LineThickness 3.0
+    }
+    closed {
+        BackgroundColor pink
+        FontColor red
+    }
+}
+</style>
+
 printscale weekly
 projectscale weekly
 
@@ -11,8 +58,9 @@ Project starts the 2024/03/04
 [TRAIN1] is colored in Green/LightGreen
 
 [Sprint 1] as [TASK1] requires 4 weeks
-[TASK1] is colored in Lavender/LightBlue
+[TASK1] is colored in Grey
 [TRAIN1]->[TASK1]
+
 
 [Testing1] requires 1 week
 [TASK1]->[Testing1]
