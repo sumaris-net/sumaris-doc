@@ -1,17 +1,13 @@
-# Markdown files
+## Exemple avec un fichier markdown
 
-To slide from `.md` files, use:
+Vous pouvez aussi inclure vos graphiques dans les **fichiers markdown**
+
 ```html
-<section data-markdown="demo.md">  
+<section data-markdown="demo-chart.md">    
 </section>
 ```
----
 
-# Chart
-
-Insérez des graphiques [Chart.js](https://www.chartjs.org/) dans vos diapos.
-
-<div style="height:480px">
+<div style="height:300px">
     <canvas data-chart="line" >
         <!--
         {

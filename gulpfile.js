@@ -1,29 +1,27 @@
 'use strict';
 
 const gulp = require('gulp'),
-  fs = require("fs"),
-  useref = require('gulp-useref'),
-  filter = require('gulp-filter'),
-  uglify = require('gulp-uglify-es').default,
-  sourcemaps = require('gulp-sourcemaps'),
-  lazypipe = require('lazypipe'),
-  gulpif = require('gulp-if'),
-  zip = require('gulp-zip'),
-  merge = require('merge2'),
-  csso = require('gulp-csso'),
-  replace = require('gulp-replace'),
-  log = require('fancy-log'),
-  del = require('del'),
-  colors = require('ansi-colors'),
-  {argv} = require('yargs'),
-  browserSync = require('browser-sync').create(),
-  header = require('gulp-header'),
-  footer = require('gulp-footer'),
-  exec = require('gulp-exec'),
-  plantuml = require('node-plantuml');
+    fs = require("fs"),
+    useref = require('gulp-useref'),
+    filter = require('gulp-filter'),
+    uglify = require('gulp-uglify-es').default,
+    sourcemaps = require('gulp-sourcemaps'),
+    lazypipe = require('lazypipe'),
+    gulpif = require('gulp-if'),
+    zip = require('gulp-zip'),
+    merge = require('merge2'),
+    csso = require('gulp-csso'),
+    replace = require('gulp-replace'),
+    log = require('fancy-log'),
+    del = require('del'),
+    colors = require('ansi-colors'),
+    {argv} = require('yargs'),
+    bs = require('browser-sync').create(),
+    header = require('gulp-header'),
+    footer = require('gulp-footer'),
+    exec = require('gulp-exec');
 
-const plantumlVersion = '1.2024.3'; // FIXME: generate bad encoding
-//const plantumlVersion = '1.2022.7';
+const plantumlVersion = '1.2024.3';
 const projectCharset= 'UTF-8';
 const uglifyBaseOptions = {
   toplevel: true,
@@ -53,8 +51,8 @@ const folders_svg = ['architecture', 'model', 'projects', 'use-case'];
 const paths = {
   resources: ['src/images*/**/*', 'src/data*/**/*'],
   src_md: folders.map(dir => dir + '*/**/*.*').concat('src/**/*.md'),
-  src_html: ['src/**/*.html', "!src/about.html"],
-  src_html_static: ['src/about.html'],
+  src_html: ['src/**/*.html', "!src/modal/**/*.html"],
+  src_html_static: ['src/modal/**/*.html'],
   src_css: ['src/css/*.css'],
   src_js: ['src/**/*.js'],
   src_layout: ['src/layout/*.html'],
@@ -77,7 +75,7 @@ function watch() {
 
 function serve(done) {
   // Launch browser
-  browserSync.init({
+  bs.init({
     watch: true,
     server: "./dist",
     watchOptions: {
@@ -108,8 +106,8 @@ function appCopyResources() {
   return  gulp.src(paths.resources
       .concat(paths.src_md)
       .concat(paths.src_html_static))
-  .pipe(gulp.dest('dist'))
-  .pipe(browserSync.stream());
+      .pipe(gulp.dest('dist'))
+      .pipe(bs.stream());
 }
 
 function appCopyExternalResources() {
@@ -117,28 +115,39 @@ function appCopyExternalResources() {
   log(colors.green('Copy external resources files...'));
   return merge(
 
-    // Copy files to dist
-    gulp.src([
-      'node_modules/katex/dist/*fonts/**',
-      'node_modules/reveal.js-menu/menu.css',
-      'node_modules/reveal.js-menu/font-awesome*/**/*'
-    ])
-    .pipe(gulp.dest('dist')),
+      // Copy files to dist
+      gulp.src([
+        'node_modules/katex/dist/*fonts/**',
+        'node_modules/reveal.js-menu/menu.css',
+        'node_modules/reveal.js-menu/font-awesome*/**/*'
+      ])
+          .pipe(gulp.dest('dist')),
 
-    // Copy to dist/lib
-    gulp.src([
-      'node_modules/reveal.js-plugins/chalkboard/img*/*',
-    ])
-    .pipe(gulp.dest('dist/lib')),
+      // Copy to dist/lib
+      gulp.src([
+        'node_modules/reveal.js-plugins/chalkboard/img*/*',
+      ])
+          .pipe(gulp.dest('dist/lib')),
 
-    // Copy dist/css
-    gulp.src([
-      'node_modules/reveal.js/dist/theme/fonts/source-sans-pro/**',
-      'node_modules/reveal.js/dist/theme*/*.css'
-    ])
-    .pipe(gulp.dest('dist/css'))
+      // Copy dist/css
+      gulp.src([
+        'node_modules/reveal.js/dist/theme/fonts/source-sans-pro/**',
+        'node_modules/reveal.js/dist/theme*/*.css',
+        'node_modules/jquery-ui/dist/themes/base/images*/**/*'
+      ])
+          .pipe(gulp.dest('dist/css'))
   );
 }
+
+function appTimestamp() {
+  log(colors.green('Creating \'timestamp.txt\' file...'));
+
+  fs.writeFileSync('src/timestamp.txt', Date.now().toString());
+
+  return gulp.src('src/timestamp.txt')
+      .pipe(gulp.dest('dist'));
+}
+
 function appGenerateSvg(done) {
 
   log(colors.green('Generating SVG...'));
@@ -147,8 +156,7 @@ function appGenerateSvg(done) {
     pipeStdout: false, // default = false, true means stdout is written to file.contents
   };
   return gulp.src(folders_svg)
-      //.pipe()
-      .pipe(exec((file) => `java -Dfile.encoding=${projectCharset} -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset ${projectCharset}`, options))
+      .pipe(exec((file) => `java -Dfile.encoding=${projectCharset} -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset ${projectCharset} -progress -duration -nometadata`, options))
       .on('end', done);
 }
 
@@ -157,7 +165,7 @@ function appCopySvg() {
   log(colors.green('Copy SVG files...'));
   return  gulp.src(paths.src_svg)
       .pipe(gulp.dest('dist'))
-      .pipe(browserSync.stream());
+      .pipe(bs.stream());
 }
 
 function appHtml() {
@@ -173,41 +181,41 @@ function appHtml() {
   // Process index.html
   return gulp.src(htmlPaths)
 
-    .pipe(header(fs.readFileSync('src/layout/header.html', 'utf8'), {title: pkg.description}))
-    .pipe(footer(fs.readFileSync('src/layout/footer.html', 'utf8'), {version: pkg.version}))
+      .pipe(header(fs.readFileSync('src/layout/header.html', 'utf8'), {title: pkg.description}))
+      .pipe(footer(fs.readFileSync('src/layout/footer.html', 'utf8'), {version: pkg.version}))
 
-    // Concatenate JS and CSS files (using gulp-useref)
-    //.pipe(useref())
-    .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
+      // Concatenate JS and CSS files (using gulp-useref)
+      //.pipe(useref())
+      .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
 
       // Minify JS files
-    .pipe(gulpif((file) => {
-      if (!enableUglify || !file.path.endsWith('.js') || file.path.endsWith('.min.js')) return false; // Skip
-      if (minifiedFiles.includes(file.path)) return false; // Skip: already exists
+      .pipe(gulpif((file) => {
+        if (!enableUglify || !file.path.endsWith('.js') || file.path.endsWith('.min.js')) return false; // Skip
+        if (minifiedFiles.includes(file.path)) return false; // Skip: already exists
 
-      minifiedFiles.push(file.path);
-      log(colors.grey('Minifying ' + colors.bold(file.path) + '... '));
+        minifiedFiles.push(file.path);
+        log(colors.grey('Minifying ' + colors.bold(file.path) + '... '));
 
-      file.path = file.path.replace('.js', '.min.js');
-      return true;
-    }, uglify(uglifyBaseOptions)))
+        file.path = file.path.replace('.js', '.min.js');
+        return true;
+      }, uglify(uglifyBaseOptions)))
 
-    // Process CSS
-    .pipe(gulpif('*.css', csso())) // Minify any CSS sources
+      // Process CSS
+      .pipe(gulpif('*.css', csso())) // Minify any CSS sources
 
-    .pipe(htmlFilter)
+      .pipe(htmlFilter)
       // Use minified JS files
-    .pipe(gulpif(enableUglify,replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.min.js"')))
+      .pipe(gulpif(enableUglify,replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.min.js"')))
       // Add version to JS files (to force the browser to refresh, after a new version)
-    .pipe(replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.js?v=' + pkg.version + '"'))
-    .pipe(replace(/"(css\/default)\.css"/g, '"$1.css" id="theme"'))
-    .pipe(replace(/"(css\/[a-zA-Z0-9]+)\.css"/g, '"$1.css?v=' + pkg.version + '"'))
-    .pipe(htmlFilter.restore)
+      .pipe(replace(/"(lib\/[a-zA-Z0-9.]+)\.js"/g, '"$1.js?v=' + pkg.version + '"'))
+      .pipe(replace(/"(css\/default)\.css"/g, '"$1.css" id="theme"'))
+      .pipe(replace(/"(css\/[a-zA-Z0-9]+)\.css"/g, '"$1.css?v=' + pkg.version + '"'))
+      .pipe(htmlFilter.restore)
 
-    .pipe(sourcemaps.write('maps'))
+      .pipe(sourcemaps.write('maps'))
 
-    .pipe(gulp.dest('dist'))
-    .pipe(browserSync.stream());
+      .pipe(gulp.dest('dist'))
+      .pipe(bs.stream());
 }
 
 
@@ -217,8 +225,8 @@ function appZip() {
   const version = packageObj.version;
 
   return gulp.src(['dist/**/*.*', '!dist/*.zip'])
-    .pipe(zip(projectName + '-v'+version+'.zip'))
-    .pipe(gulp.dest('dist'));
+      .pipe(zip(projectName + '-v'+version+'.zip'))
+      .pipe(gulp.dest('dist'));
 }
 
 function buildSuccess(done) {
@@ -247,7 +255,7 @@ function help() {
    -- Define public tasks
    --------------------------------------------------------------------------*/
 
-const svg = gulp.series(appGenerateSvg, appCopySvg);
+const svg = gulp.series(appGenerateSvg, appTimestamp, appCopySvg);
 const prepare = gulp.parallel(appCopyResources, appCopyExternalResources);
 const compile = gulp.series(prepare, gulp.parallel(appHtml, svg));
 const build = gulp.series(appClean, compile, appZip, buildSuccess);

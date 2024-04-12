@@ -1,0 +1,84 @@
+
+
+.circle-container {
+    --circle-size: 500px;
+    --circle-count: 6;
+    --circle-margin-slice: calc(var(--circle-size) / 2 / var(--circle-count));
+    width: var(--circle-size);
+    height: var(--circle-size);
+    position: absolute;
+    margin-inline-start: 25%;
+}
+
+.circle {
+    --circle-margin: calc(var(--circle-id, 0) * var(--circle-margin-slice));
+    top: var(--circle-margin);
+    left: var(--circle-margin);
+    right: var(--circle-margin);
+    bottom: var(--circle-margin);
+    background: var(--circle-color);
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle[data-id="circle-1"] { --circle-color: #9AD2D9; }
+.circle[data-id="circle-2"] { --circle-color: #2ABFBF; }
+.circle[data-id="circle-3"] { --circle-color: #44AFF2; }
+.circle[data-id="circle-4"] { --circle-color: #e0727c; }
+.circle[data-id="circle-5"] { --circle-color: #D92534; }
+
+.circle-label {
+    --circle-id: 0;
+    --circle-label-font-size: 14px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: var(--circle-label-font-size);
+    line-height: var(--circle-label-font-size);
+}
+.circle-label-middle {
+    margin-top: calc(var(--circle-label-font-size) * 2);
+}
+.circle-label-arrow {
+    bottom: calc(var(--circle-id) * var(--circle-margin-slice) + var(--circle-label-font-size) * 2);
+    margin-bottom: calc(-1 * var(--circle-label-font-size));
+}
+.circle-label[data-id="circle-label-1"] { color: black; }
+.circle-label[data-id="circle-label-2"] { color: black; }
+
+.circle-label-arrow:before {
+    content: '\f0de';
+    font-family: 'Font Awesome 5 Free';
+    display: block;
+    text-align: center;
+    font-weight: 900;
+}
+
+.circle-hidden {
+    opacity: 0 !important;
+    color: transparent !important;
+}
+
+.circle-fade {
+    opacity: 0.3 !important;
+}
+
+.circle-description {
+    --circle-description-font-size: 24px;
+    min-width: calc(var(--circle-size) * 0.5);
+    max-width: calc(var(--circle-size) * 0.8);
+    position: absolute;
+    right: 0;
+    bottom: calc(var(--circle-id, 0) * var(--circle-margin-slice));
+    margin-right: calc(-1 * var(--circle-size) / 3);
+    font-size: var(--circle-description-font-size);
+    line-height: var(--circle-description-font-size);
+    font-style: italic;
+    text-align: left;
+}
+
+.circle-description blockquote {
+    background: rgba(0,0,0,.55);
+}

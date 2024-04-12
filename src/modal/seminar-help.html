@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <title>Séminaire</title>
+
+</head>
+<body>
+    <h2>Rejoindre une conférence</h2>
+    <form>
+        <button id="seminar-join" type="submit" style="margin:10px;" onclick="App.showSeminarJoinForm(event)">Rejoindre</button>
+        <button id="seminar-leave" style="margin:10px;" onclick="App.leaveSeminar(event)">Quitter</button>
+    </form>
+
+    <h2>Administrateur</h2>
+    <form>
+        <button id="seminar-start" type="submit" style="margin:10px;" onclick="App.showSeminarHostForm(event)">Démarrer</button>
+        <button id="seminar-stop" style="margin:10px;" onclick="App.stopSeminar(event)">Arrêter</button>
+        <button id="seminar-participants" style="margin:10px;" onclick="App.showSeminarParticipants(event)">Liste des participants</button>
+    </form>
+</body>
+</html>

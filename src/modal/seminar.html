@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <title>Séminaire</title>
+
+</head>
+<body>
+    <h2>Rejoindre une conférence</h2>
+
+    <div id="seminar-join-form">
+        <p class="validateTips">Voulez-vous rejoindre la conférence en cours ?</p>
+
+        <form onsubmit="App.joinSeminar(event)">
+            <table>
+                <tbody>
+                <tr>
+                    <td>Pseudo :</td><td> <input type="text" id="seminar-username" placeholder="(optionnel)"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button tabindex="-1" type="submit" style="position:absolute; top:-1000px"></button>
+        </form>
+    </div>
+
+    <h2>Administrateur</h2>
+
+    <div id="seminar-host-form">
+        <p class="validateTips">Veuillez vous authentificer, pour pouvoir démarrer la conférence :</p>
+
+        <form onsubmit="App.startSeminar(event)">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Pseudo :</td><td> <input type="text" id="seminar-username" placeholder="(optionnel)"></td>
+                    </tr>
+                    <tr>
+                        <td>Mot de passe :</td><td> <input type="password" id="seminar-password" autocomplete="off" placeholder="(obligatoire)"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button tabindex="-1" type="submit" style="position:absolute; top:-1000px"></button>
+        </form>
+    </div>
+
+    <div id="seminar-participants">
+        <p class="validateTips">Liste des participants à la conférence :</p>
+
+        <table style="width: 100%;">
+            <thead>
+                <tr style="border-bottom: 1px solid black;">
+                    <th style="width: 50%;">Pseudo</th>
+                    <th style="width: 50%;">ID</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
