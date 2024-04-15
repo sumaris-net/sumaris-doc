@@ -25,7 +25,7 @@
 
 ---
 
-- **A planifier ** : Mettre en place un comité de coordination en incluant Emilie Le Blond et tous les coordinateurs.
+- **A planifier** : Mettre en place un comité de coordination en incluant Emilie Le Blond et tous les coordinateurs.
 
 ---
 
@@ -34,7 +34,7 @@
 - Imagine : Indexation sur les navires en pré-production
 - Réalisation de benchmarks
 
---
+---
 
 **Imagine : Indexation sur les navires en pré-production**
 
@@ -42,16 +42,63 @@
 
 | Libellé recherché | Nombre de navires | Réponse (s) sans indexation | Réponse (s) avec indexation | Ratio (%) |
 |-------------------|-------------------|-----------------------------|-----------------------------|-----------|
-| *pou              | 114               | 9                           | 2                           | 77        |
+| *pou              | 114               | 9                           | 1                           | 88        |
 | *tha              | 225               | 14                          | 1                           | 93        |
-| *mou              | 230               | 13                          | 2                           | 84        |
-| *vil              | 1912              | 62                          | 8                           | 87        |
-| *vi               | 6240              | 169                         | 35                          | 80        |
+| *mou              | 230               | 13                          | 1                           | 92        |
+| *vil              | 1912              | 62                          | 1                           | 98        |
+| *vi               | 6240              | 169                         | 1                           | 99.4      |
 <!-- .element: class="font-size-small" -->
---
 
-![ui-board-es-benchmark](/projects/common/not/images/vessels_search_benchmark.png)
+---
 
+<div style="height:300px">
+    <canvas data-chart="line" >
+        <!--
+        {
+         "options": {
+                "plugins": {
+                    "title": {
+                      "display": true,
+                      "text": "Vessel Indexation"
+                    }
+                },
+                "scales": {
+                    "y": { 
+                      "title": {
+                        "stacked": false,
+                        "color": "green",
+                        "display": true,
+                        "text": "Time (s)"
+                        }
+                    },
+                    "x": { 
+                      "title": {
+                        "color": "green",
+                        "display": true,
+                        "text": "Vessel count"
+                        }
+                    }
+                }
+        },
+         "data": {
+            "labels": [114,225,230,1912,6240],
+            "datasets":[
+             {
+				"data":[9,14,13,62,169],
+				"label":"Without ES indexation","backgroundColor":"rgba(20,220,220,.8)"
+             },
+             {
+				"data":[1,1,1,1,1],
+				"label":"ES indexation","backgroundColor":"rgba(220,120,120,.8)"
+             }
+            ]
+         }
+        }
+        -->
+    </canvas>
+</div>
+
+---
 
 ## Matrice de risques sur la refonte Allegro - V0
 
