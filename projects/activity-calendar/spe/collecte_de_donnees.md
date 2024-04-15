@@ -53,15 +53,9 @@ Les saisies bureau et tablette sont envisagées.
 (2) : Seules les données non validées peuvent être modifiées ou supprimées
 
 > Points de vigilance :
+> - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 > - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
 > - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
-
-> Questions MOA :
-> - Qui fait une demande de création d'utilisateur dans le système ? A qui ? Comment ?
-> - Qui fait une demande d'accès à un navire pour un utilisateur ? A qui ? Comment ?
-> - Notion de coordinateur chez les prestataires ?
-> - Qui valide les données ? Comment ?
-> - Qui corrige les données ? Comment ?
 
 #### Détails techniques :
 * Administrateur de référentiels :
@@ -80,6 +74,8 @@ Les saisies bureau et tablette sont envisagées.
 **REF: ACTIVITY_CALENDAR/INTERFACE**
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-tree.svg)
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-tree-expanded.svg)
 
 L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux

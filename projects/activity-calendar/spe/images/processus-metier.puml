@@ -6,8 +6,6 @@ scale 350 width
 
 state "Calendriers d'Activité" as calendriers {
 
-    state "Base centrale" as base
-
     state "Collecte des données" as collecte {
       state "Collecter les données" as collecter
       state "Saisir les données" as saisir
@@ -16,7 +14,7 @@ state "Calendriers d'Activité" as calendriers {
       collecter --> saisir
       saisir --> enregistrer
       enregistrer --> contrôler
-      contrôler <--- saisir : Correction
+      contrôler --[dashed]-> saisir : Correction
     }
 
     state "Consolidation des données" as consolidation {
@@ -24,7 +22,7 @@ state "Calendriers d'Activité" as calendriers {
 
     }
 
-    state "Stratégie de pêche" as stratégie_peche {
+    state "Détermination de la stratégie de pêche" as stratégie_peche {
       state "Déterminer la stragégie de pêche" as stratégie
       state "Stratifier la flotte" as stratifier
       state "Définir les plans d'échantillonnage" as échantillonner
@@ -33,7 +31,6 @@ state "Calendriers d'Activité" as calendriers {
     }
 
     [*] --> collecte
-
     collecte --> consolidation
     consolidation --> stratégie_peche
 }

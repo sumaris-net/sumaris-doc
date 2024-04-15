@@ -1,0 +1,70 @@
+@startsalt
+{
+  {+
+   {
+       <b><font color=grey size=20>Calendrier d'activité
+       Observateur
+       .
+       .
+       --
+       Accueil    | .
+       .
+       <font color=grey size=10>Saisie de données
+       --
+        {T
+                   +<back:#DDD>Calendriers d'activité
+                   ++ Calendrier d'activité 2023 | .
+                   +++ Calendrier | .
+                   +++ Carte | .
+              }
+
+       .
+       .
+       .
+       .
+       .
+       .
+
+       .
+       <font color=grey size=10>Référentiels
+       --
+       .
+
+       --
+       Se déconnecter       | .
+       --
+   }
+
+   {
+      <font color=grey size=10>V XXX - à propos
+   }
+  } | . | {+
+    { <b>Calendriers d'activité | . |  . |  . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |[<b>+] }
+    --
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    { | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | <b>Fenêtre principale }
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+
+    } | . |
+}
+@endsalt
+

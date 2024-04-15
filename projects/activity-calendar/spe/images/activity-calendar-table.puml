@@ -4,10 +4,10 @@
   --
 	{#
 
-     <b>Etat | <b>Programme | <b>Navire   | <b>Année | <b>Objectif d'enquête directe ? | <b>Enquête éco ?|<b>Saisisseurs | .
-     <b>  <&pencil> | SIH-ACTIFLOT | 123456 - SONNY NINO MATHILDE 3 | 2022 | Oui | Oui | Obs1, Obs2 | .
+     <b>Etat | <b>Programme | <b>Navire   | <b>Année | <b>Objectif d'enquête directe ? | <b>Enquête économique ?|<b>Saisisseurs | .
+     <b>  <&pencil> | SIH-ACTIFLOT | 123456 - SONNY | 2022 | Oui | Oui | Obs1, Obs2 | .
      <b>  <&pencil> | SIH-ACTIFLOT | CN123456 - Vessel 3 | 2022 | Non | Non | Obs3 | <&comment-square>
-     <b>  ? | SIH-ACTIFLOT | CN78946 - Vessel 2 | . | . | . | .
+     <b>  ? | SIH-ACTIFLOT | CN78946 - Vessel 2 | 2022 | Oui | Non | .
     }
 
 }

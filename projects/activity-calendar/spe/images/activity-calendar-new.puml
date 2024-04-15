@@ -1,6 +1,6 @@
 @startsalt
 {
-  Navire : <b>SONNY NINO MATHILDE 3 - 123456 - MA - 7,81 m - 2022
+  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
   {/ Général | <b>Calendrier | Métiers | Carte}
   ..
@@ -12,14 +12,14 @@
      . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
      Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | .
      Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | .
-     Actif ? | ^Inexistant    ^ | . | ^Inactif                       ^ | ^Actif                                      ^ | . | .
-     Port exploit. / rattach. | . | . | ^JMA - La Matrague de Montredon^| ^JMA - La Matrague de Montredon             ^ | . | .
+     Actif ? | Inexistant | . | Inactif | Actif | . | .
+     Port exploit. / rattach. | . | . | JMA - La Matrague de Montredon | JMA - La Matrague de Montredon | . | .
      Nombre de jours de mer | . | . | . | 10 | . | .
      Nombre de jours de pêche | . | . | . | 10 | . | .
      Nombre d'hommes à bord/marée | . | . | . | 2 | . | .
-     Métier 1 | . | . | .| ^GTRMZZ - Trémails à poissons               ^ | . | .
-     Zone 1 | . | . | .| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | .
-     Gradient côte | . | . | .| ^3-12 Mil. - 3 à 12 milles                  ^ | . | .
+     Métier 1 | . | . | .| GTRMZZ - Trémails à poissons | . | .
+     Zone 1 | . | . | .| MD11 - 3 à 12 milles, région LR, partie Sud | . | .
+     Gradient côte | . | . | .| 3-12 Mil. - 3 à 12 milles | . | .
      Zone 2 | . | . | . | . | . | . | .
      Gradient côte | . | . | . | . | . | . | .
      Métier 2 | . | . | . | . | . | .
@@ -36,8 +36,8 @@
      . | <b>Janvier | <b>Février | <b>Mars | <b>Avril| ... | <b>Décembre
      Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | . | .
      Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | . | .
-     Actif ?* | ^Inexistant    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
-     Port exploit. / rattach.* | . | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
+     Actif ?* | ^Inactif    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
+     Port exploit. / rattach.* | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
      Nombre de jours de mer | . | . | 10 | 15 | . | . | .
      Nombre de jours de pêche | . | . | 10 | 15 | . | . | .
      Nombre d'hommes à bord/marée | . | . | 2 | 2 | . | . | .

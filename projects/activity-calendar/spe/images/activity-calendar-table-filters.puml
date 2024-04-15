@@ -1,15 +1,15 @@
 @startsalt
 {
 
-  {<b>Calendriers d'activité                                                                                                                                                      <&reload>}
+  {<b>Calendriers d'activité                                                                                                                                                                                  <&reload>}
    --
 
     {
         Programme de collecte : | . | ^ SIH-ACTIFLOT         ^ | . | . | Etat :   | . | ^En cours de saisie^
         .
-        Navire : | . | ^ 456789 - PETIT BATEAU^ | . | . | Année : | . | ^ 2022             ^
+        Navire : | . | ^ 123456 - SONNY^ | . | . | Année : | . | ^ 2022             ^
         .
-        Objectif d'enquête directe :   | . |^ Directe              ^ |  . | . | Enquête éco :   | . | ^                  ^
+        Objectif d'enquête directe ? :   | . |^ Directe              ^ |  . | . | Enquête économique ? :   | . | ^                  ^
         .
         Organisme saisisseur :   | . |^ Ifremer              ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND   ^
 
