@@ -41,8 +41,12 @@ Liste des tickets réalisés :
 
 ## Schéma SIH2_ADAGIO_DBA
 
-RAS
+- Nouvelle entrée dans la table `PROCESSING_TYPE` : `VESSEL_SNAPSHOTS_INDEXATION`
 
+  ```sql
+  INSERT INTO into PROCESSING_TYPE (CODE, DESCRIPTION, STATUS_FK) values ('VESSEL_SNAPSHOTS_INDEXATION', 'Traitement d''indexation des navires dans ElastiSearch', 1);
+  ```
+  
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 RAS
