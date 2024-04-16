@@ -220,7 +220,7 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 
 ## Sortie > Echantillonnages
 
-**REF: OBSVENTES/SORTIE/VENTE**
+**REF: OBSVENTES/SORTIE/ECH**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
@@ -231,7 +231,7 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Les informations suivantes sont affichées pour chaque espèce :
    * Espèce commerciale
    * Espèce scientifique
-   * Observé ?
+   * Observé ? (par défaut décoché)
    * Raison de non observation
    * Navire
    * Zone de pêche
@@ -256,6 +256,9 @@ par rapport à celles définies dans la liste des espèces à observer (REF: OBS
 - Nombre d'espèces minimum à observer
 - Nombre d'espèces maximum à observer
 
+**Variante 3c :** Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
+Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher"
+
 #### Détails techniques :
 * Echantillonnage : LANDING
 * Vente : SALE
@@ -272,7 +275,7 @@ par rapport à celles définies dans la liste des espèces à observer (REF: OBS
 
 ## Sortie > PETS
 
-**REF: OBSVENTES/SORTIE/VENTE_AUTRES**
+**REF: OBSVENTES/SORTIE/ECH_AUTRES**
 
 **PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa révision pour la période 
 2022-2027, la liste des espèces protégées à suivre est établie en vertu de la législation de l‘Union et des accords 
@@ -321,8 +324,8 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 
 ![ui-obsvente](/projects/obsvente/spe/images/sale-details.svg)
 
-La création d'un lot d'espèces est accessible depuis le tableau de consultation des espèces à observer en double-cliquant
-sur une espèce.
+La création d'un lot d'espèces est accessible depuis le tableau de consultation des espèces à observer en cliquant
+sur l'icône :page_facing_up:
 
 #### Scénario principal
 
@@ -384,7 +387,7 @@ sur une espèce.
 > - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
 
 ---
-## Mesures individuelles
+## Vente > Lots espèces > Mesures individuelles
 
 **REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES**
 
@@ -393,6 +396,20 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 #### Scénario principal
 
 [Spécifications communes / Mesures](/projects/common/spe/regles_communes.md#commun-saisie-de-mensuration)
+
+---
+## Sortie > Contrôle de la saisie
+
+**REF: OBSVENTES/SORTIE/CONTROLE**
+
+![ui-obsvente](/projects/obsvente/spe/images/observed-location-control.svg)
+
+Le contrôle de la saisie d'une sortie est accessible depuis l'écran de consultation d'une sortie en cliquant sur le bouton "Terminer la saisie"
+
+#### Scénario principal
+
+1. Le saisisseur clique sur le bouton "Terminer la saisie"
+2. Un message indique les espèces ayant la case à cocher "Observé ?" décochée et une vente associée
 
 ---
 ## Règles métier

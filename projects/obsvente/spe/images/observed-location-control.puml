@@ -1,0 +1,62 @@
+@startsalt
+{
+  <b>Douarnenez - 25/11/2024
+  --
+  {/ <b>Détails | Echantillonnages | <Autres espèces> (PETS)}
+  ..
+  .
+  {
+  {
+      Programme de collecte* :    | { ^SIH-OBSVENTE                ^ }
+      .
+      .
+      Plan d'échantillonnage* :    | { ^2021_V0010 - DPMA_20_23_Lot2^}
+      .
+      Origine* :    | { ^SIH-OBSVENTE                ^ }
+      .
+      Lieu * :     | { ^XDZ - Douarnenez            ^ }
+      .
+      Début/Fin* :     | { ^jj/mm/aaaa^  |  ^hh:mm^ } { ^jj/mm/aaaa^  |  ^hh:mm^ } <i><color:blue>durée de la sortie
+      .
+      Observateurs* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
+      .
+ } |
+ {
+ {^"Stratégie"
+ ObsVentes démarrage au 01/01/2024 <&eye>}
+ {+
+               { <font color=grey size=10>Saisisseur
+               Obs1
+               <font color=grey size=10>Groupe EI
+               --
+               <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
+               <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
+               .
+               <font color=grey size=10>Mode saisie <b>bureau
+               .
+               [ Terminer la saisie]
+               }
+ }}}
+
+  <b>Caractéristiques :
+
+  {
+      . | Disponibilité de la fiche de pré-vente :| ^Oui^
+      . | Stratégie d'échantillonnage : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
+      . | PETS ?* : | ^Oui^
+      . | Type de vente* : | ^Enchères - HAM / Criées     ^
+      . | Validation observateur* : | ^Données contrôlées^
+      . | Validation société* : | ^Données valides   ^
+      . | .
+  }
+
+  {
+     <b>Commentaires :
+     {+ .
+        "                                                                                          "
+     }
+  }
+
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt
