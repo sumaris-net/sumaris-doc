@@ -1,12 +1,12 @@
 @startsalt
 {
-  Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 851751 Navire 1
+  Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 123456 Navire 1
   --
   {/  <b>Détails | Lots}
   ..
   {
 
-      Navire* :    | { ^851751 - Navire 1                  ^ }
+      Navire* :    | { ^123456 - Navire 1                  ^ }
       .
       Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
       .
