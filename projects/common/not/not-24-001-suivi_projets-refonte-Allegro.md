@@ -234,7 +234,7 @@ des éléments à développer.
 Premier daily le 08/03/2024 à 10h30.
 
 Premier sprint de définit : 
-- Milestone : 2.9.0-alpha15
+- Milestone : 2.9.0-alpha16
 - Période :
   - Début : 18/03/2024
   - Fin : 05/04/2024
@@ -250,7 +250,7 @@ Board du premier sprint
 
 Board utilisé "Project Management" :
 
-https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha15
+https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha16
 
 ![ui-board-sprint-1](/projects/common/not/images/issues-board-sprint-1.png)
 

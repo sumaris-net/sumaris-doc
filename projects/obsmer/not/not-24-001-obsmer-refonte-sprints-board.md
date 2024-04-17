@@ -10,10 +10,10 @@
 
 - **Start date** : 11/03/2024
 - **End date** : 02/04/2024
-- **Milestone** : 2.9.0-alpha15
+- **Milestone** : 2.9.0-alpha16
 - **Status** : Closed
 - **Goal** : NA
-- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha15)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha16)
 
 ---
 
@@ -33,10 +33,10 @@
 
 - **Start date** : 08/04/2024
 - **End date** : 22/04/2024
-- **Milestone** : 2.9.0-alpha16
+- **Milestone** : 2.9.0-alpha17
 - **Status** : Doing
 - **Goal** : NA
-- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha16)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha17)
 
 ---
 

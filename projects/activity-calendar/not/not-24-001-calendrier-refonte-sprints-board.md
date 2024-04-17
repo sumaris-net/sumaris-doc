@@ -30,7 +30,7 @@
 
 - **Start date** : 11/03/2024
 - **End date** : 02/04/2024
-- **Milestone** : 2.9.0-alpha15
+- **Milestone** : 2.9.0-alpha16
 - **Goal** : POC
 - [gitlab Issues board](...)
 ---
