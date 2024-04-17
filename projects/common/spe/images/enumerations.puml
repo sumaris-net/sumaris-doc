@@ -4,15 +4,13 @@
   ..
   .
   {
-     . | . | . | . | . | . | . |  . | {+
-        { | . | ()  <b>Mensurations | . | . | . | . | . | . }
-        { | . | (X)  <b>Dénombrement |  . | . | . | . | . | . }
-
+     . | . |   {+
+        { | . | ()  <b>Mensurations | (X)  <b>Dénombrement | . | . | . | . | . }
         --
         { | . | Nombre d'individus *  | . | . | . | . | . | . }
         { | . | "   4  "  }
         .
-        }
+        } . | . |
     }
     .
     {| . | . | . | . | . | . | . | . | [Annuler] | [Appliquer]}

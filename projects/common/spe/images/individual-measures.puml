@@ -19,8 +19,7 @@
 
     {
       {+
-        { | . | (X)  <b>Mensurations | . }
-        { | . | ()  <b>Dénombrement |  . }
+        { | . | (X)  <b>Mensurations | ()  <b>Dénombrement }
 
         --
         { | . | Espèce scientifique *  | . }
