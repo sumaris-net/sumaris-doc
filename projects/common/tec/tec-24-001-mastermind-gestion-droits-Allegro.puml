@@ -1,0 +1,104 @@
+@startmindmap
+<style>
+node {
+     BackgroundColor LightGray
+}
+:depth(0) {
+     BackgroundColor Orange
+}
+:depth(1) {
+     BackgroundColor LightBlue
+}
+leafNode {
+    LineColor white
+    RoundCorner 0
+    Padding 0
+    BackgroundColor none
+}
+</style>
+hide empty members
+* Gestion des droits \n utilisateurs Allegro \n F_FILL_PERSON_SESSION \n (p_person_fk)
+    * 1 - Fonction \n P_FILL_SUPERVISOR
+        * Suppression des anciens privilèges
+            * PROGRAM2PERSON
+        * Ajout nouveaux privilèges
+            * PROGRAM2PERSON
+    * 2 - Gestion de person_fk \n dans PERSON_SESSION
+        * Existe
+            * Récupération SESSION_ID
+        * N'existe pas
+            * insertion
+                * récupération SESSION_ID nextval
+
+    * 3 - Récupération des privilèges \n pour person_fk
+        * Privilèges des programmes \n / navires / lieux / données \n (moins les navires exclus)
+            * privileges_by_location
+                * person_program_privilege \n <location_fk>
+                    * program2person
+                    * type de données \n sur les programmes
+                        * program
+                        * strategy, pmfm_strategy
+                * vessel_by_parent_location \n <parent_location_fk>
+                    * vessel
+                    * vessel_registration_period
+                    * location_hierarchy
+                * condition vessel_fk \n not in excluded_exceptions
+                    * program2person_exception
+        * Privilèges par services des programmes \n / navires / lieux / données \n (pas d'inclusion ou d'exclusion de navire)
+            * privileges_by_department
+                * department_program_privilege \n <location_fk>
+                    * program2departement
+                    * type de données \n sur les programmes
+                        * program
+                        * strategy, pmfm_strategy
+                * vessel_by_parent_location \n <parent_location_fk>
+                    * vessel
+                    * vessel_registration_period
+                    * location_hierarchy
+        * Privilèges des programmes \n / navires / données \n (avec les navires inclus)
+            * privilege_by_inc_exceptions
+                * person_program_privilege \n <reference_person_fk>
+                    * program2person
+                    * type de données \n sur les programmes
+                        * program
+                        * strategy, pmfm_strategy
+                * included_exceptions
+                    * program2person_exception
+                * vessel_registration_period
+        * Privilèges des programmes \n / navires / données sans lieu \n (n'y inclusion et ni exclusion de navire)
+            * privilege_no_location
+                * person_program_privilege \n <reference_person_fk>
+                    * program2person
+                    * types de donnes sur \n les programmes
+                        * program
+                        * strategy, pmfm_strategy
+                * count inclusion is NULL or 0 \n <program2person_fk>
+                    * program2person_exception
+                * condition vessel_fk \n not in excluded_exceptions
+                    * program2person_exception
+                * condition vessel.program_fk = SIH
+
+
+    * 4 - UNION \n (privileges_by_location, \n privilege_by_inc_exceptions, \n privilege_no_location, \n privileges_by_department)
+        * Récupération des privilèges \n sur Navire / \n Programme / \n Types de données
+
+    * 5 - Pour chaque privilège \n récupéré
+        * Ecriture du privilège \n dans la table TEMP_PERSON_SESSION_VESSEL
+        * Mise à jour \n PERSON_SESSION_VESSEL
+            * UPDATE : Mise à jour des droits \n s'ils sont différents
+            * INSERT : Insertion des nouveaux droits
+
+
+    left side
+    * 6 - Suppression des anciens \n privilèges
+        * Privilèges de PERSON_SESSION_VESSEL \n qui ne sont pas dans les nouveaux privilèges \n (TEMP_PERSON_SESSION_VESSEL)
+        * Historisation des droits \n supprimés
+            * Insertion dans \n DELETE_ITEM_HISTORY
+    * 7 - Mise à jour de la durée d'exécution \n de la mise à jour
+        * person_session.fill_duration
+
+legend left
+|<#Orange> Objectif | <#LightBlue> Acteur |<#LightGray> Levier d'action | <#White> Action |
+endlegend
+
+@endmindmap
