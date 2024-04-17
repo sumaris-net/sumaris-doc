@@ -98,7 +98,7 @@ hide empty members
         * person_session.fill_duration
 
 legend left
-|<#Orange> Objectif | <#LightBlue> Acteur |<#LightGray> Levier d'action | <#White> Action |
+|<#Orange> Procédure principale | <#LightBlue> Sous procédure |<#LightGray> Tables avec conditions | <#White> Tables |
 endlegend
 
 @endmindmap
