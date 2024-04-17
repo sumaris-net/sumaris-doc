@@ -25,7 +25,7 @@ state "Calendriers d'Activité" as calendriers {
     state "Détermination de la stratégie de pêche" as stratégie_peche {
       state "Déterminer la stragégie de pêche" as stratégie
       state "Stratifier la flotte" as stratifier
-      state "Définir les plans d'échantillonnage" as échantillonner
+      state "Etablir les plans d'échantillonnage" as échantillonner
       stratégie --> stratifier
       stratifier --> échantillonner
     }
