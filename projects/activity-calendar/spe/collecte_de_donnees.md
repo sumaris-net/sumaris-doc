@@ -47,15 +47,20 @@ Les saisies bureau et tablette sont envisagées.
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-users-rights.svg)
 
 (1) : 
-* Si l'utilisateur est de la société Ifremer, il peut consulter, modifier et supprimer tous les calendriers d'activité non validés
-* Si l'utilisateur n'est pas de la société Ifremer, il peut consulter, modifier et supprimer uniquement les calendriers créés par sa société et non validés
+* Si l'utilisateur est de la société Ifremer, il voit tous les navires
+* Si l'utilisateur n'est pas de la société Ifremer, il voit uniquement les navires des quartiers maritimes sur lesquels il a les droits
 
 (2) : Seules les données non validées peuvent être modifiées ou supprimées
 
 > Points de vigilance :
-> - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 > - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
-> - Un navire peut changer de quartier d'immatriculation et donc de société de prestation
+> - Un navire peut changer de quartier d'immatriculation et donc de société de prestation et de saisisseur au cours d'une année :
+>   - En mode connecté : pas de synchro donc pas de problème
+>   - En mode déconnecté : synchro via les boutons "Terminer la saisie" > "Exporter", cas par onglet :
+>     - "Général" : écrasement des données
+>     - "Calendrier" : chaque saisisseur voit l'ensemble des données du calendrier mais peut uniquement saisir les mois où il a les droits
+>     - "Métiers" : ajout des métiers, puis suppression manuelle des doublons
+> - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 
 #### Détails techniques :
 * Administrateur de référentiels :
@@ -113,7 +118,7 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
    * Le navire (code + libellé)
    * L'année
    * L'objectif d'enquête directe
-   * L'enquête économique
+   * L'enquête éco
    * Les saisisseurs
 
 **Variante(s) :**
@@ -126,7 +131,7 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
-  * Enquête économique : donnée consultative issue de la feuille de route, cf mantis 61967
+  * Enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
 
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
@@ -149,7 +154,7 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
    * Le navire
    * L'année
    * L'objectif d'enquête directe
-   * L'enquête économique
+   * L'enquête éco
    * L'organisme du saisisseur
    * Le saisisseur
 2. L'année est automatiquement renseignée avec l'année :
