@@ -6,7 +6,7 @@
 
 Exemple de restitution :
 - [Formulaire terrain vierge](/projects/activity-calendar/doc/Formulaire-terrain-vierge.png)
-- [Formulaire terrain avec données](/projects/activity-calendar/doc/Formulaire-terrain-aved-données.png)
+- [Formulaire terrain avec données](/projects/activity-calendar/doc/Formulaire-terrain-avec-données.png)
 - [Rapport d'avancement](/projects/activity-calendar/doc/Rapport-avancement.png)
 
 ---
