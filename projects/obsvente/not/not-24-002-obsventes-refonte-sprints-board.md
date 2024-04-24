@@ -17,10 +17,12 @@
 
 ---
 
-| **Open** | **To Do**                                                                          | **Doing**        | **Done** | **Testing** | **Waiting** | **Closed** |
-|----------|------------------------------------------------------------------------------------|------------------|----------|-------------|-------------|------------| 
-|          |  |         |          |             |             |   Enh [#531](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/531)         |  |          |             |             |            |
-|          |                                                                                    |         |          |             |             |     Enh [#552](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/552)        |
+| **Open** | **To Do**                                                                          | **Doing**        | **Done** | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|------------------------------------------------------------------------------------|------------------|----------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          |  |         |          |             |             | Enh [#531](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/531) |  |          |             |             |            |
+|          |                                                                                    |         |          |             |             | Enh [#552](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/552) |
+|          |                                                                                    |         |          |             |             | Soc [#523](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/523) |
+
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -28,7 +30,7 @@
 ## ObsVentes - Sprint 2 - Issues Board
 
 - **Start date** : 08/04/2024
-- **End date** : 22/04/2024
+- **End date** : 26/04/2024
 - **Milestone** : 2.9.0-alpha17
 - **Status** : Doing
 - **Goal** : Prototype demonstration
@@ -38,11 +40,11 @@
 
 | **Open**                                                                           | **To Do**                                                                           | **Doing**                                                                         | **Done** | **Testing** | **Waiting** | **Closed** |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------|-------------|-------------|------------| 
-| Tech [#542](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/542) |  |                                                                                   |          |             |             |            | 
+|  | Tech [#542](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/542) |                                                                                   |          |             |             |            | 
 | Tech [#544](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/544) |                                                                                     |                                                                                   |          |             |             |            |
 |   |                                                                                     |                                                                Ref [#541](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/541)                     |        |             |             |            |
 |  |                                                                                     | Enh [#551](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/551) |          |             |             |            |
-|  |            Enh [#539](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/539)                                                                           |                                                                                  |          |             |             |            |
+|  |                                                                                      |   Enh [#539](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/539)                                                                                |          |             |             |            |
 | Enh [#548](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/548)  |                                                                                     |                                                                                   |          |             |             |            |
 |  |                                                                                     | Enh [#532](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/532) |          |             |             |            |
 <!-- .element: class="font-size-small" -->
@@ -53,9 +55,9 @@
 
 - **Start date** : 29/04/2024
 - **End date** : 21/05/2024
-- **Milestone** : 2.9.0-alpha17
+- **Milestone** : 2.9.0-alpha18
 - **Goal** :
-- [gitlab Issues board](...)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha18)
 
 ---
 
@@ -73,7 +75,7 @@
 
 - **Start date** : 27/05/2024
 - **End date** : 10/06/2024
-- **Milestone** : 2.9.0-alpha18
+- **Milestone** : 2.9.0-alpha19
 - **Goal** :
 - [gitlab Issues board](...)
 
