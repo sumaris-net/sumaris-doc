@@ -24,7 +24,7 @@
 
 ## Planning
 
-![ui-calendrier-planning](/projects/actitity-calendar/not/images/refonte-activity-calendar-planning-planning-sprints.svg...)<!-- .element: style="width: 75%" -->
+![ui-calendrier-planning](/projects/activity-calendar/not/images/refonte-activity-calendar-planning-sprints.svg)<!-- .element: style="width: 75%" -->
 
 ---
 
