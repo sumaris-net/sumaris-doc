@@ -195,6 +195,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
   * Observateur 
   * Date
 
+**Variante 2b :** Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages associés
+
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
 * Origine : POC à prévoir : créer une table OBSERVED_LOCATION_ORIGIN liée à OBSERVED_LOCATION ? Non-modifiable. 
@@ -315,7 +317,7 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 * Nom de l'onglet : il fait partie du dictionnaire thématique. Dans le cas d'ObsVentes, le nom sera "PETS"
 * Echantillonnage : LANDING
 * Vente : SALE
-* Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime)
+* Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 ---
