@@ -8,12 +8,12 @@
 	{#
 
       <b>Priorité | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche| <b>Type de vente | . | .
-       1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | . | <&document>
-       2 | MNZ - Baudroie | . |  [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&document>
-       3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | . | . | <&document>
-       4 | NEP - Langoustine | NEP - Nephrops norvegicus | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&document>
-       5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | . | <&document>
-       6 | ... | . | [ ] . | . | . | .
+       1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | . | <&tag>
+       2 | MNZ - Baudroie | . |  [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&tag>
+       3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | . | . | <&tag>
+       4 | NEP - Langoustine | NEP - Nephrops norvegicus | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&tag>
+       5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | . | <&tag>
+       6 | ... | . | [ ] . | . | . | . | . | .
 
     }
     { 15 espèces minimales observées (justifiez si non observée) }

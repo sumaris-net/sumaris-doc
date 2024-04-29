@@ -10,7 +10,8 @@
 - [Sorties](#sorties)
 - [Sorties > Filtres](#sorties-filtres)
 - [Sortie > Détails](#sortie-détails)
-- [Sortie > Echantillonnages](#sortie-echantillonnages)
+- [Sortie > Echantillonnages en métropole](#sortie-echantillonnages-en-métropole)
+- [Sortie > Echantillonnages en outremer](#sortie-echantillonnages-en-outremer)
 - [Sortie > PETS](#sortie-pets)
 - [Vente > Détails](#vente-détails)
 - [Vente > Lots espèces](#vente-lots-espèces)
@@ -112,16 +113,17 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
    * Le ou les observateurs
    * Le saisisseur
    * Le commentaire
+3. Le saisisseur consulte le tableau des sorties
+4. Le saisisseur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
+5. Le saisisseur crée une nouvelle sortie (REF: OBSVENTES/SORTIE/DETAILS)
 
 **Variante(s) :**
 
-**Variante 1a :** Le saisisseur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
+**Variante a :** 
+4. Le saisisseur consulte une sortie existante [Retour en 4]
 
-**Variante 1b :** Le saisisseur crée une nouvelle sortie (REF: OBSVENTES/SORTIE/DETAILS)
-
-**Variante 1c :** Le saisisseur consulte une sortie existante
-
-**Variante 1d :** Le saisisseur supprime une sortie existante
+**Variante b :** 
+3. Le saisisseur supprime une sortie existante [Retour en 3]
 
 > Questions :
 > - ISI : Analyser le renommage du programme SIH-OBSVENTE en SIH-OBSVENTES (impact + chiffrage) ?
@@ -139,7 +141,7 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
 
 #### Scénario principal
 
-1. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+1. Les filtres du tableau "Sorties" s'ouvrent. Les critères suivants sont disponibles :
    * Le programme de collecte
    * L'origine
    * L'état de saisie
@@ -149,6 +151,7 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * L'organisme du saisisseur
    * Le saisisseur
    * L'observateur
+2. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES)
 
 Les critères suivants sont multiples (dev en cours sur Imagine) : 
   * L'origine
@@ -190,12 +193,14 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 **Variante(s) :**
 
-**Variante 2a :** La sélection du filtre "Programme de collecte" sur le tableau des sorties, renseigne automatiquement les champs suivants sur le formulaire en mode création :
+**Variante a :** 
+3. Les champs suivants sont automatiquement renseignés lorsque le filtre "Programme de collecte" sur le tableau des sorties est renseigné [Retour en 3] :
   * Programme de collecte 
   * Observateur 
   * Date
 
-**Variante 2b :** Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages associés
+**Variante b :** 
+Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages associés
 
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
@@ -220,18 +225,18 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 >  - Détail du processus de validation des données de Sumaris : l'observateur termine la saisie puis le coordinateur (prestataire) valide les données
 
 ---
+## Sortie > Echantillonnages en métropole
 
-## Sortie > Echantillonnages
-
-**REF: OBSVENTES/SORTIE/ECH**
+**REF: OBSVENTES/SORTIE/ECH_METROPOLE**
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
 #### Scénario principal
 
-Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de sortie.
+Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
 
-1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Les informations suivantes sont affichées pour chaque espèce :
+1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
+   * Priorité
    * Espèce commerciale
    * Espèce scientifique
    * Observé ? (par défaut décoché)
@@ -240,27 +245,21 @@ Le saisisseur clique sur l'onglet "Echantillonnages" de l'écran de création de
    * Zone de pêche
    * Type de vente
    * Commentaire
-2. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
-3. Pour chaque espèce non observée, le saisisseur :
-   * Sélectionne une raison de non observation*
-   * Saisit un commentaire
-4. Le saisisseur enregistre l'échantillon observé
-5. Le bandeau de l'écran affiche "Lieu - Date"
-6. L'encart sur le saisisseur s'affiche
-7. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/LOT)
+2. Le système affiche :
+   * Le nombre d'espèces minimal à observer
+   * Le nombre d'espèces maximal à observer
+3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
+4. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation*
+5. Le saisisseur enregistre les échantillonnages
+6. Le bandeau de l'écran affiche "Lieu - Date"
+7. L'encart sur le saisisseur s'affiche
+8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 **Variante(s) :**
 
-**Variante 3a :** Des PETS sont présents sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces 
-par rapport à celles définies dans la liste des espèces à observer (REF: OBSVENTES/SORTIE/VENTE_AUTRES)
-
-**Variante 3b :** La vente a lieu en métropole, le protocole métropole s'applique et contient les informations suivantes (_non applicable pour le protocole d'Outre-Mer_) :
-- La priorité des espèces  à observer
-- Nombre d'espèces minimum à observer
-- Nombre d'espèces maximum à observer
-
-**Variante 3c :** Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
-Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher"
+**Variante c :** 
+8. Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
+Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" [Retour en 8]
 
 #### Détails techniques :
 * Echantillonnage : LANDING
@@ -275,7 +274,31 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher"
 > - MOA : Liste des raisons de non observation ?
 
 ---
+## Sortie > Echantillonnages en outre-mer
 
+**REF: OBSVENTES/SORTIE/ECH_OUTREMER**
+
+![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
+
+#### Scénario principal
+
+Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
+
+1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
+    * Espèce commerciale
+    * Espèce scientifique
+    * Observé ? (par défaut décoché)
+    * Navire
+    * Zone de pêche
+    * Type de vente
+    * Commentaire
+2. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
+3. Le saisisseur enregistre l'échantillon observé
+4. Le bandeau de l'écran affiche "Lieu - Date"
+5. L'encart sur le saisisseur s'affiche
+6. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+
+---
 ## Sortie > PETS
 
 **REF: OBSVENTES/SORTIE/ECH_AUTRES**
@@ -291,7 +314,10 @@ professionnelle
 
 #### Scénario principal
 
-Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
+En cas de présence de PETS sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces
+par rapport à celles définies dans la liste des espèces à observer.
+
+Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
 
 1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
     * Espèce commerciale
@@ -304,7 +330,7 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
    * L'espèce commerciale*
    * L'espèce scientifique
 3. Le saisisseur enregistre l'échantillon observé
-4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/LOT)
+4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 **Variante(s) :**
 
@@ -327,12 +353,11 @@ Le saisisseur clique sur l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 
 ![ui-obsvente](/projects/obsvente/spe/images/sale-details.svg)
 
-La création d'un lot d'espèces est accessible depuis le tableau de consultation des espèces à observer en cliquant
-sur l'icône :page_facing_up:
+La création d'un lot d'espèces est accessible depuis le tableau des échantillonnages en cliquant sur l'icône :page_facing_up:
 
 #### Scénario principal
 
-1. Le saisisseur demande la création d'un nouveau lot d'espèces
+1. Le saisisseur demande la création d'un lot d'espèces
 2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
    * "Détails" (onglet par défaut)
    * "Lots"
@@ -363,11 +388,12 @@ sur l'icône :page_facing_up:
 
 ![ui-obsvente](/projects/obsvente/spe/images/sale.svg)
 
+Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
+
 #### Scénario principal
 
-1. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
-2. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
-3. Pour chaque lot, le saisisseur renseigne :
+1. L'onglet "Lots" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
+   * L'espèce commerciale
    * La catégorie de tri terrain
    * La catégorie UE
    * L'état*
@@ -376,13 +402,25 @@ sur l'icône :page_facing_up:
    * Le taux échantillonné
    * Le poids échantillonné
    * Identification à confirmer
-4. Le saisisseur enregistre
-5. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
-6. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
+2. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
+3. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
+4. Pour chaque lot, le saisisseur renseigne :
+   * La catégorie de tri terrain
+   * La catégorie UE
+   * L'état*
+   * La présentation*
+   * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
+   * Le taux échantillonné
+   * Le poids échantillonné
+   * Identification à confirmer
+5. Le saisisseur enregistre
+6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
+7. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
 
 **Variante(s) :**
 
-**Variante 4a :** Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie
+**Variante a :** 
+4. Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie [Retour en 5]
 
 > Questions :
 > - Cas des mélanges ? (ex: baudroie blanche/noire)
