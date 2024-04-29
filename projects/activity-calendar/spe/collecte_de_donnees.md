@@ -55,10 +55,11 @@ Les saisies bureau et tablette sont envisagées.
 > Points de vigilance :
 > - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
 > - Un navire peut changer de quartier d'immatriculation et donc de société de prestation et de saisisseur au cours d'une année :
+>   - Chaque saisisseur voit l'ensemble des données du calendrier mais peut uniquement saisir les mois où il a les droits. Le mois du changement de QI doit être saisissable par les 2 saisisseurs. Les 2 QI doivent être affichés sur le mois du changement.
 >   - En mode connecté : pas de synchro donc pas de problème
 >   - En mode déconnecté : synchro via les boutons "Terminer la saisie" > "Exporter", cas par onglet :
 >     - "Général" : écrasement des données
->     - "Calendrier" : chaque saisisseur voit l'ensemble des données du calendrier mais peut uniquement saisir les mois où il a les droits
+>     - "Calendrier" : gestion des données saisies sur le mois du changement ?
 >     - "Métiers" : ajout des métiers, puis suppression manuelle des doublons
 > - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 
