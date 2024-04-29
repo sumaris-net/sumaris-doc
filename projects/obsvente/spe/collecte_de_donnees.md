@@ -123,7 +123,7 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
 4. Le saisisseur consulte une sortie existante [Retour en 4]
 
 **Variante b :** 
-3. Le saisisseur supprime une sortie existante [Retour en 3]
+4. Le saisisseur supprime une sortie existante [Retour en 4]
 
 > Questions :
 > - ISI : Analyser le renommage du programme SIH-OBSVENTE en SIH-OBSVENTES (impact + chiffrage) ?
@@ -185,11 +185,12 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
-6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de la date sélectionnée
+6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction du programme, de la date et du lieu sélectionnés
 7. Le saisisseur renseigne les caractéristiques de la sortie
 8. Le saisisseur enregistre
 9. Le bandeau de l'écran affiche "Lieu - date"
-10. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui", "Echantillonnages" sinon
+10. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui" (REF: OBSVENTES/SORTIE/ECH_AUTRES), 
+"Echantillonnages" sinon (REF: OBSVENTES/SORTIE/ECH_METROPOLE - OBSVENTES/SORTIE/ECH_OUTREMER)
 
 **Variante(s) :**
 
@@ -220,9 +221,9 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 > - ISI : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
 > - MOA : Validation observateur, Validation société : conserver ces PMFM ou les remplacer par le processus de contrôle des données de Sumaris ? 
->  - Ces champs sont-ils utilisés par les rapports Birt ?
->  - Y a t-il une validation (donnée unitaire) ou une qualification (ensemble de données) côté Ifremer ?
->  - Détail du processus de validation des données de Sumaris : l'observateur termine la saisie puis le coordinateur (prestataire) valide les données
+>  * Ces champs sont-ils utilisés par les rapports Birt ?
+>  * Y a t-il une validation (donnée unitaire) ou une qualification (ensemble de données) côté Ifremer ?
+>  * Détail du processus de validation des données de Sumaris : l'observateur termine la saisie puis le coordinateur (prestataire) valide les données
 
 ---
 ## Sortie > Echantillonnages en métropole
@@ -231,9 +232,10 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
 
-#### Scénario principal
-
 Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
+La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
+
+#### Scénario principal
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
    * Priorité
@@ -272,17 +274,23 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 > Questions :
 > - MOA : Inverser l'ordre des onglets "Echantillonnages" et "PETS" ?
 > - MOA : Liste des raisons de non observation ?
+> - MOA : Définir la règle sur les 15 espèces à observer :
+>   * Erreur ou warning ?
+>   * Espèce non observée à prendre en compte ?
+>   * Cas moins de 15 espèces à observer sur le lieu de la vente ?
+>   * Cas de PETS présents sur le lieu de la vente ?
 
 ---
-## Sortie > Echantillonnages en outre-mer
+## Sortie > Echantillonnages en outremer
 
 **REF: OBSVENTES/SORTIE/ECH_OUTREMER**
 
-![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
-
-#### Scénario principal
+![ui-landings](/projects/obsvente/spe/images/landings-table-outremer.svg)
 
 Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
+La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
+
+#### Scénario principal
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
     * Espèce commerciale
@@ -293,7 +301,7 @@ Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de
     * Type de vente
     * Commentaire
 2. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
-3. Le saisisseur enregistre l'échantillon observé
+3. Le saisisseur enregistre les échantillonnages
 4. Le bandeau de l'écran affiche "Lieu - Date"
 5. L'encart sur le saisisseur s'affiche
 6. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
@@ -312,12 +320,12 @@ professionnelle
 
 ![ui-landings](/projects/obsvente/spe/images/landings-others-table.svg)
 
-#### Scénario principal
-
 En cas de présence de PETS sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces
 par rapport à celles définies dans la liste des espèces à observer.
 
 Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
+
+#### Scénario principal
 
 1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
     * Espèce commerciale
