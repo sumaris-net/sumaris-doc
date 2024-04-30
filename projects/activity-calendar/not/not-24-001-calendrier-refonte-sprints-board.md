@@ -21,6 +21,7 @@
 - [ACTIFLOT] [Calendrier d'activité] Câbler la popup d'ajout de PMFM dans l'onglet "Métiers"
 - [ACTIFLOT] [Contrôle des données]
 
+---
 
 ## Planning
 

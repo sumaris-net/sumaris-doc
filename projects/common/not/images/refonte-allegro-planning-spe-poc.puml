@@ -1,0 +1,219 @@
+@startgantt
+hide footbox
+hide ressources names
+
+<style>
+ganttDiagram {
+  legend {
+    FontColor black
+    BackGroundColor White
+    FontSize 15
+    FontStyle italic
+    LineColor Grey
+  }
+    unstartedTask {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    task {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    milestone {
+        FontColor black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor yellow
+        LineColor FireBrick
+    }
+    note {
+        FontColor DarkGreen
+        FontSize 10
+        LineColor OrangeRed
+    }
+    arrow {
+        FontName Helvetica
+        FontColor red
+        FontSize 18
+        FontStyle bold
+        BackGroundColor GreenYellow
+        LineColor blue
+        LineStyle 8.0;13.0
+        LineThickness 3.0
+    }
+    separator {
+        BackgroundColor OliveDrab
+        LineStyle 8.0;3.0
+        LineColor Gray
+        LineThickness 1.0
+        FontSize 16
+        FontStyle bold
+        FontColor White
+        Margin 5
+        Padding 6
+    }
+    timeline {
+        BackgroundColor Snow
+    }
+    closed {
+        BackgroundColor pink
+        FontColor red
+    }
+}
+</style>
+
+printscale weekly
+projectscale weekly
+
+title Refonte Allegro - Spécifications / Prototypes / Développements
+
+Project starts the 2023/10/01
+[1] happen the 2023/10/05
+[1] is colored in blue
+
+[2] happen the 2023/10/19
+[2] is colored in blue
+
+[3] happen the 2023/10/26
+[3] is colored in blue
+
+[4] happen the 2023/11/10
+[4] is colored in blue
+
+[5] happen the 2023/11/17
+[5] is colored in blue
+
+[6] happen the 2023/11/24
+[6] is colored in blue
+
+[7] happen the 2023/12/01
+[7] is colored in blue
+
+[8] happen the 2023/12/14
+[8] is colored in blue
+
+[9] happen the 2024/01/04
+[9] is colored in blue
+
+[10] happen the 2024/01/12
+[10] is colored in blue
+
+[11] happen the 2024/01/25
+[11] is colored in blue
+
+[12] happen the 2024/02/01
+[12] is colored in blue
+
+[13] happen the 2024/02/08
+[13] is colored in blue
+
+[14] happen the 2024/02/14
+[14] is colored in blue
+
+[15] happen the 2024/02/19
+[15] is colored in blue
+
+[16] happen the 2024/02/26
+[16] is colored in yellow
+
+[17] happen the 2024/03/17
+[17] is colored in blue
+
+[1] displays on same row as [2]
+[2] displays on same row as [3]
+[3] displays on same row as [4]
+[4] displays on same row as [5]
+[5] displays on same row as [6]
+[6] displays on same row as [7]
+[7] displays on same row as [8]
+[8] displays on same row as [9]
+[9] displays on same row as [10]
+[10] displays on same row as [11]
+[11] displays on same row as [12]
+[12] displays on same row as [13]
+[13] displays on same row as [14]
+[14] displays on same row as [15]
+[15] displays on same row as [16]
+[16] displays on same row as [17]
+
+!procedure N(x,n)
+[x<size:0>n</size>]
+!endprocedure
+
+N(1, 1) as [o1] happen the 2024/02/29
+N(1, 1) is colored in orange
+
+N(2, 2) as [o2] happen the 2024/03/12
+N(2, 2) is colored in orange
+
+N(3, 3) as [o3] happen the 2024/03/26
+N(3, 3) is colored in orange
+
+[o1] displays on same row as [o2]
+[o2] displays on same row as [o3]
+
+N(1, 4) as [c1] happen the 2024/02/14
+N(1, 4)  is colored in green
+
+N(2, 5) as [c2] happen the 2024/03/19
+N(2, 5)  is colored in green
+
+N(3, 6) as [c3] happen the 2024/04/09
+N(3, 6)  is colored in green
+
+N(4, 7) as [c4] happen the 2024/04/18
+N(4, 7)  is colored in green
+
+N(5, 8) as [c5] happen the 2024/04/25
+N(5, 8)  is colored in green
+
+[c1] displays on same row as [c2]
+[c2] displays on same row as [c3]
+[c3] displays on same row as [c4]
+[c4] displays on same row as [c5]
+
+[Spécifications] as [TASK1] starts the 2024/01/03 and requires 23 week
+[TASK1] is colored in darkTurquoise
+[TASK1] is 75% complete
+
+[Formation] as [TASK2] starts the 2024/03/04 and requires 1 week
+[TASK2] is colored in lightSalmon
+
+[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 25 week
+[TASK3] is colored in orange
+[TASK3] is 30% complete
+
+[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 25 week
+[TASK4] is colored in blue
+[TASK4] is 30% complete
+
+[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 18 week
+[TASK5] is colored in green
+[TASK5] is 10% complete
+
+[Batchs] as [TASK6] starts the 2024/06/01 and requires 11 week
+[TASK6] is colored in red
+[TASK6] is 0% complete
+
+
+2024-08-16 to 2024-08-30 is closed
+
+legend
+  |<#orange>   | ObsVentes |
+  |<#blue>  | ObsMer|
+  |<#green> | Calendrier|
+  |<#yellow> | Démo Obs.|
+  |<#red> | Batchs |
+end legend
+
+
+
+@endgantt
