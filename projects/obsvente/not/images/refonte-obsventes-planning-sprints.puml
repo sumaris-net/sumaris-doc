@@ -63,49 +63,49 @@ Project starts the 2024/03/04
 
 
 [Sprint 2] as [TASK2] requires 3 weeks
-[TASK2] is colored in Lavender/LightBlue
+[TASK2] is colored in Grey
 [TASK1]->[TASK2]
-[Testing2] requires 1 week
-[TASK2]->[Testing2]
-[Demo MOA/COORD 1] happens 1 day after [Testing2]'s end
+[Testing1] requires 1 week and starts the 6th of May 2024
+[TASK2]->[Testing1]
+[Demo MOA/COORD 1] happens 1 day after [Testing1]'s end
 
-[pre-prod] as [PREPROD] requires 1 week and starts the 15th of April 2024
+[pre-prod] as [PREPROD] requires 1 week and starts the 29th of April 2024
 [PREPROD] is colored in salmon
 
 [Sprint 3] as [TASK3] requires 4 weeks
-[TASK3] is colored in Lavender/LightBlue
+[TASK3] is colored in green
 [TASK2]->[TASK3]
-[Testing3] requires 1 week
-[TASK3]->[Testing3]
-[Demo MOA 2] happens 1 day after [Testing3]'s end
+[Testing2] requires 1 week
+[TASK3]->[Testing2]
+[Demo MOA 2] happens 1 day after [Testing2]'s end
 
 [Sprint 4] as [TASK4] requires 3 weeks
 [TASK4] is colored in Lavender/LightBlue
 [TASK3]->[TASK4]
-[Testing4] requires 1 week
-[TASK4]->[Testing4]
-[Demo MOA 4] happens 1 day after [Testing4]'s end
+[Testing3] requires 1 week
+[TASK4]->[Testing3]
+[Demo MOA 4] happens 1 day after [Testing3]'s end
 
 [Sprint 5] as [TASK5] requires 3 weeks
 [TASK5] is colored in Lavender/LightBlue
 [TASK4]->[TASK5]
-[Testing5] requires 1 week
-[TASK5]->[Testing5]
-[Demo MOA 5] happens 1 day after [Testing5]'s end
+[Testing4] requires 1 week
+[TASK5]->[Testing4]
+[Demo MOA 5] happens 1 day after [Testing4]'s end
 
 [Sprint 6] as [TASK6] requires 4 weeks
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
-[Testing6] requires 2 week
-[TASK6]->[Testing6]
-[Demo MOA 6] happens 1 day after [Testing6]'s end
+[Testing5] requires 2 week
+[TASK6]->[Testing5]
+[Demo MOA 6] happens 1 day after [Testing5]'s end
 
 
 [Sprint 7] as [TASK7] requires 3 weeks and starts the 2th of September 2024
 [TASK7] is colored in Lavender/LightBlue
-[Testing7] requires 1 week and  starts the 2th of September 2024
+[Testing6] requires 1 week and  starts the 2th of September 2024
 
-[Demo MOA/COORD 2] happens 1 day after [Testing7]'s start
+[Demo MOA/COORD 2] happens 1 day after [Testing6]'s start
 
 [production] as [PROD] requires 1 week and starts the 23th of September 2024
 [PROD] is colored in red

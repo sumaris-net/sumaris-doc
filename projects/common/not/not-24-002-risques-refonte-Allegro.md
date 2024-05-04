@@ -100,32 +100,73 @@
 
 ---
 
-## Matrice de risques sur la refonte Allegro - V0
+## **Matrice de risques sur la refonte Allegro**
 
-| Risques                                   | Probabilité | Impact    | Criticité | Actions de mitigation                         |
-|-------------------------------------------|-------------|-----------|-----------|-----------------------------------------------|
-| Retard dans la livraison des sprints      | Moyenne     | Élevé     | Moyenne   | - Affecter des ressources supplémentaires     |   
-|                                           |             |           |           | - Rajouter des points spécifiques             |
-| Montée de version des librairies (Angular)| Élevé       | Élevé     | Élevé     | - Mise en place de tests unitaires            |
-|                                           |             |           |           | - A mettre en place en début de développment  | 
+| **Risques - TECHNIQUE**                                   | Probabilité | Impact  | Criticité | Actions de mitigation                                                     |
+|-----------------------------------------------------------|-------------|---------|-----------|---------------------------------------------------------------------------|
+| Montée de version des librairies (Angular)                | Élevé       | Élevé   | Élevé     | - Mise en place de tests unitaires                                        |
+|                                                           |             |         |           | - A mettre en place en début de développement                             | 
+| Problèmes techniques                                      | Élevé       | Élevé   | Élevé     | - Revues de code régulières, tests approfondis, développement incrémental |                                                                     |
+| Régression des applicatifs sur les évolutions des schémas | Élevé       | Élevé   | Élevé     | - Mise en place d'un circuit de validation (MOE)                          |
+<!-- .element: class="font-size-extra-small" -->
+
+---
+
+| **Risques - PERFORMANCE**              | Probabilité | Impact    | Criticité | Actions de mitigation  |
+|----------------------------------------|-------------|-----------|-----------|------------------------|
+| Lenteur de la synchronisation          | Moyenne     | Élevé     | Haute     | - Cluster PostGres     |
+| Lenteur de chargement des référentiels | Moyenne     | Élevé     | Haute     | - Indexation ES        |
 <!-- .element: class="font-size-small" -->
 
 ---
 
-| Risques                                   | Probabilité | Impact    | Criticité | Actions de mitigation  |
-|-------------------------------------------|-------------|-----------|-----------|------------------------|
-| Lenteur de la synchronisation             | Faible      | Élevé     | Haute     | - Cluster PostGres     |
-| Lenteur de chargement des référentiels    | Faible      | Élevé     | Haute     | - Indexation ES        |
-|                                           |             |           |           |                        |
-<!-- .element: class="font-size-small" -->
+| **Risques - RESSOURCES**                | Probabilité | Impact    | Criticité     | Actions de mitigation                                              |
+|-----------------------------------------|-------------|-----------|---------------|--------------------------------------------------------------------|
+| Compétence de l'équipe de développement | Moyenne     | Élevé     | Élevé         | - Former, accompagner, référent technique                          |
+| Disponibilité des ressources (MOE)      | Elevé       | Moyenne   | Moyenne       | - Arbitrer les priorités                                           | 
+|                                         |             |           |               | - Augmenter le temps alloué à la refonte (+10%)                    |
+| Changements des exigences               | Élevé       | Élevé     | Élevé         | - Documentation précise des exigences et validation fréquente      |
+| Conflits d'équipe                       | Faible      | Moyenne   | Moyenne       | - Encourager la communication ouverte et la résolution de conflits |
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
-| Risques                                   | Probabilité | Impact    | Criticité | Actions de mitigation                                                                                            |
-|-------------------------------------------|-------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------|
-| Problèmes techniques                      | Élevé       | Élevé     | Élevé     | - Revues de code régulières, tests approfondis, développement incrémental pour identifier les problèmes plus tôt |                                                                     |
-| Changements des exigences                 | Élevé       | Élevé     | Élevé     | - Documentation précise des exigences et validation fréquente                                                    |
-| Conflits d'équipe                         | Moyenne     | Moyenne   | Moyenne   | - Encourager la communication ouverte et la résolution de conflits                                               |
-<!-- .element: class="font-size-small" -->
+
+| **Risques - DELAIS**                  | Probabilité | Impact | Criticité | Actions de mitigation                                                                   |
+|---------------------------------------|-------------|--------|-----------|-----------------------------------------------------------------------------------------|
+| Retard dans la livraison des releases | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                               |   
+|                                       |             |        |           | - Rajouter des points spécifiques                                                       |
+| Retard dans la recette                | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                               |   
+|                                       |             |        |           | - Planifier/Organiser la recette                                                        | 
+| Retard dans la mise en exploitation   | Moyenne     | Élevé  | Elevé     | - Mise en pré-production à chaque release                                               |
+|                                       |             |        |           | - Mettre à jour les MEX, industrialiser les mises à jour des schémas BDD (liquide base) |
+<!-- .element: class="font-size-extra-small" -->
 
 ---
+
+## **Points de vigilance**
+
+- Equipe de développement 
+  - EIS, éviter le goulot d'étranglement : revue de code, merge des branches, production des releases
+  - Exigences technique fortes d'EIS
+  
+```
+Gestion MOE, Renfort d'un expert technique si besoin
+```
+
+- Déploiement des releases en pré production
+  - Evolution des schémas BDD : détection, analyse impacte 
+
+```
+Circuit de validation MOE
+```
+
+---
+
+- Coordination de la recette
+  - Rédaction des tests : charge de travail non négigeable
+  - Déroulement de la recette MOE/MOA
+
+```
+Coordination MOA, Renfort MOE (+1 ETP, ETP à 100% si besoin)
+```

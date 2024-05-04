@@ -32,7 +32,7 @@
 - **Start date** : 08/04/2024
 - **End date** : 26/04/2024
 - **Milestone** : 2.9.0-alpha17
-- **Status** : Doing
+- **Status** : Closed
 - **Goal** : Prototype demonstration
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha17)
 

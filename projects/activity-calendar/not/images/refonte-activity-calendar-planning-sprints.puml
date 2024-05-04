@@ -70,14 +70,14 @@ title Calendrier d'activité - Development
 Project starts the 2024/04/08
 
 [Sprint 1] as [TASK1] requires 3 weeks
-[TASK1] is colored in green
+[TASK1] is colored in grey
 
 [Testing1] requires 1 week
 [TASK1]->[Testing1]
 [Demo MOA 1] happens 1 day after [Testing1]'s end
 
 [Sprint 2] as [TASK2] requires 4 weeks
-[TASK2] is colored in Lavender/LightBlue
+[TASK2] is colored in green
 [TASK1]->[TASK2]
 [Testing2] requires 1 week
 [TASK2]->[Testing2]
