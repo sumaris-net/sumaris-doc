@@ -142,7 +142,11 @@ RAS
 ;
 -```  
 
-
+- Ajout du synonyme `ACTIVITY_CALENDAR_SEQ`
+  ```sql
+  create or replace synonym ACTIVITY_CALENDAR_SEQ for SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR_SEQ
+;
+-```
 
 ## Mise à jour du programme SIH-OBSMER
 

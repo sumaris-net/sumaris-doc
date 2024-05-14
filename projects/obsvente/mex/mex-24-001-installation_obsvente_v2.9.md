@@ -19,7 +19,65 @@ RAS
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
-RAS
+- Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`
+  ```sql
+    create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
+-```
+
+- Modification du trigger `TR_OBS_LOCATION_MEAS`
+  ```sql
+    create or replace trigger TR_OBS_LOCATION_MEAS
+        instead of insert or update or delete
+        on OBSERVED_LOCATION_MEASUREMENT
+    declare
+        l_obs_loc_feat_fk NUMBER(10) := NULL;
+    begin
+        case
+            WHEN inserting THEN 
+                BEGIN
+                    -- select sur OBSERVED_LOCATION_FEATURES avec OBSERVED_LOCATION_FK
+                    select ID into l_obs_loc_feat_fk from SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES where OBSERVED_LOCATION_FK = :new.OBSERVED_LOCATION_FK;
+                EXCEPTION WHEN NO_DATA_FOUND THEN
+                    l_obs_loc_feat_fk := -1;
+                END;
+                -- Si null, insertion dans OBSERVED_LOCATION_FEATURE avec un nexval (séquence de OBSERVED_LOCATION_FEATURES_SEQ)
+                if (l_obs_loc_feat_fk = -1) then
+                    select SIH2_ADAGIO_DBA_SUMARIS_MAP.OBSERVED_LOCATION_FEATURES_SEQ.nextval into l_obs_loc_feat_fk from dual;
+                    insert into SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES(ID, START_DATE, CREATION_DATE, RANK_ORDER, OBSERVED_LOCATION_FK, QUALITY_FLAG_FK, PROGRAM_FK, VESSEL_TYPE_FK)
+                    select l_obs_loc_feat_fk, OL.START_DATE_TIME, sysdate, 1, :new.OBSERVED_LOCATION_FK, 1, OL.PROGRAM_FK, 1 from SIH2_ADAGIO_DBA.OBSERVED_LOCATION OL where OL.ID = :new.OBSERVED_LOCATION_FK;
+                end if;
+
+            -- OBSERVED_LOCATION_MEASUREMENT itself
+            insert into SIH2_ADAGIO_DBA.OBSERVED_LOCATION_MEASUREMENT(ID, NUMERICAL_VALUE, ALPHANUMERICAL_VALUE, DIGIT_COUNT, PRECISION_VALUE, CONTROL_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, QUALITY_FLAG_FK,
+                                                                     DEPARTMENT_FK, PMFM_FK, QUALITATIVE_VALUE_FK, OBSERVED_LOCATION_FEATURES_FK)
+            values (:new.ID, :new.NUMERICAL_VALUE, :new.ALPHANUMERICAL_VALUE, :new.DIGIT_COUNT, :new.PRECISION_VALUE, :new.CONTROL_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.QUALITY_FLAG_FK,
+                                                                     :new.RECORDER_DEPARTMENT_FK, :new.PMFM_FK, :new.QUALITATIVE_VALUE_FK, l_obs_loc_feat_fk);
+
+
+
+            -- M_OBS_LOCATION_MEAS (map columns of OBSERVED_LOCATION_MEASUREMENT for sumaris)
+            insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_OBS_LOCATION_MEAS(ID, OBSERVED_LOCATION_FK, RANK_ORDER)
+            values (:new.ID, :new.OBSERVED_LOCATION_FK, :new.RANK_ORDER);
+        WHEN UPDATING THEN
+            select ID into l_obs_loc_feat_fk from SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES where OBSERVED_LOCATION_FK = :new.OBSERVED_LOCATION_FK;
+            -- select sur OBSERVED_LOCATION_FEATURES avec OBSERVED_LOCATION_FK
+            -- A utiliser dans l'update
+            -- OBSERVED_LOCATION_MEASUREMENT itself
+            update SIH2_ADAGIO_DBA.OBSERVED_LOCATION_MEASUREMENT M set M.NUMERICAL_VALUE=:new.NUMERICAL_VALUE, M.ALPHANUMERICAL_VALUE=:new.ALPHANUMERICAL_VALUE, M.DIGIT_COUNT=:new.DIGIT_COUNT, M.PRECISION_VALUE=:new.PRECISION_VALUE,M.CONTROL_DATE=:new.CONTROL_DATE, M.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, M.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS,
+                                                                      M.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK, M.DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK, M.PMFM_FK=:new.PMFM_FK, M.QUALITATIVE_VALUE_FK=:new.QUALITATIVE_VALUE_FK, M.OBSERVED_LOCATION_FEATURES_FK = l_obs_loc_feat_fk
+            where M.ID = :new.ID;
+            -- M_OBS_LOCATION_MEAS update if row exists
+            update M_OBS_LOCATION_MEAS MOLM set MOLM.RANK_ORDER=:new.RANK_ORDER
+            where MOLM.ID = :new.ID;
+            -- M_OBS_LOCATION_MEAS insert if row not exists
+            insert into M_OBS_LOCATION_MEAS (ID, OBSERVED_LOCATION_FK, RANK_ORDER)
+            select OLM.ID, :new.OBSERVED_LOCATION_FK, :new.RANK_ORDER from SIH2_ADAGIO_DBA.OBSERVED_LOCATION_MEASUREMENT OLM where OLM.ID = :new.ID and not exists (select * from M_OBS_LOCATION_MEAS MOLM where  MOLM.ID = :new.ID);
+        WHEN DELETING THEN
+            delete from SIH2_ADAGIO_DBA.OBSERVED_LOCATION_MEASUREMENT OLM where OLM.ID=:old.ID;
+            delete from M_OBS_LOCATION_MEAS MOLM where MOLM.ID=:old.ID;
+        end case;
+end;
+-```
 
 ## Mise à jour du programme SIH-OBSVENTE
 

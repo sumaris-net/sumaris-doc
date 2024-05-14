@@ -233,21 +233,23 @@ grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_A
 
 - Modification du trigger `TR_PROGRAM`
   ```sql
-  create or replace trigger TR_PROGRAM
-    instead of insert or update
-    on PROGRAM
-  begin
-    case
-      WHEN INSERTING THEN
-        insert into SIH2_ADAGIO_DBA.PROGRAM(CODE, NAME, DESCRIPTION, CREATION_DATE, UPDATE_DATE, TAXON_GROUP_TYPE_FK, GEAR_CLASSIFICATION_FK)
-        select :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.UPDATE_DATE, TGT.CODE, :new.GEAR_CLASSIFICATION_FK
-        from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT
-        where TGT.ID = :new.TAXON_GROUP_TYPE_FK;  
-      WHEN UPDATING THEN
-        -- PROGRAM itself
-        update SIH2_ADAGIO_DBA.PROGRAM P set P.NAME=:new.NAME, P.DESCRIPTION=:new.DESCRIPTION, P.CREATION_DATE=:new.CREATION_DATE, P.UPDATE_DATE=:new.UPDATE_DATE, P.TAXON_GROUP_TYPE_FK=:new.TAXON_GROUP_TYPE_FK, P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
-        where P.CODE = (select CODE from SIH2_ADAGIO_DBA.M_PROGRAM where ID=:new.ID);
-    end case;
+    create or replace trigger TR_PROGRAM
+      instead of insert or update
+      on PROGRAM
+    begin
+      case
+        WHEN INSERTING THEN
+          insert into SIH2_ADAGIO_DBA.PROGRAM(CODE, NAME, DESCRIPTION, CREATION_DATE, UPDATE_DATE, TAXON_GROUP_TYPE_FK, GEAR_CLASSIFICATION_FK)
+          select :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.UPDATE_DATE, TGT.CODE, :new.GEAR_CLASSIFICATION_FK
+          from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT
+          where TGT.ID = :new.TAXON_GROUP_TYPE_FK;
+
+          update SIH2_ADAGIO_DBA.M_PROGRAM set ID = :new.ID where CODE = :new.label;
+        WHEN UPDATING THEN
+           -- PROGRAM itself
+           update SIH2_ADAGIO_DBA.PROGRAM P set P.NAME=:new.NAME, P.DESCRIPTION=:new.DESCRIPTION, P.CREATION_DATE=:new.CREATION_DATE, P.UPDATE_DATE=:new.UPDATE_DATE, P.TAXON_GROUP_TYPE_FK=:new.TAXON_GROUP_TYPE_FK, P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
+           where P.CODE = (select CODE from SIH2_ADAGIO_DBA.M_PROGRAM where ID=:new.ID);
+       end case;
   end;
 -```
 
