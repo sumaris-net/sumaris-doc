@@ -2,7 +2,7 @@
 {
   Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
-  {/ Général | Calendrier (4) | <b>Métiers (2) | Carte}
+  {/ Général | Mois d'activité (4) | <b>Métiers (2) | Zones d'activité}
   ..
   { <&plus> <&trash> }
   {
@@ -21,9 +21,9 @@
               {<b>Longueur levée (m)
                 engin -
                 totale -
-                Déclaration d'un professionnel} | <&menu>
-     [X]. | GTRMZZ - Trémails à poissons | 100 | 97 | 103 | . | .
-     [ ]. | GTRNEP - Trémails à langoustines | . | 57 | . | 100 | .
+                Déclaration d'un professionnel}
+     [X]. | GTRMZZ - Trémails à poissons | 100 | 97 | 103 | .
+     [ ]. | GTRNEP - Trémails à langoustines | . | 57 | . | 100
   } | {+
               { <font color=grey size=10>Saisisseur
               Obs1

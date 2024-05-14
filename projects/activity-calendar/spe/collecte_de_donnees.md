@@ -109,8 +109,8 @@ Calendrier d'activité :
 #### Scénario principal
 
 1. Le saisisseur sélectionne le menu "Calendriers d'activité" dans l'interface de l'arbre du menu
-2. L'écran "Calendriers d'activité" s'ouvre. Il contient les navires du portefeuille du saisisseur ayant ou non un calendrier 
-d'activité associé. Les informations suivantes sont affichées pour chaque navire :
+2. L'écran "Calendriers d'activité" s'ouvre. Il contient les calendriers des navires du portefeuille du saisisseur.
+Les informations suivantes sont affichées pour chaque calendrier :
    * L'état de saisie du calendrier :
      * "Non saisi" : _réprésenté par une icône ? dans la cellule_
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
@@ -121,14 +121,8 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
    * L'objectif d'enquête directe
    * L'enquête éco
    * Les saisisseurs
-
-**Variante(s) :**
-
-**Variante 1a :** Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
-
-**Variante 1b :** Le saisisseur crée un nouveau calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
-
-**Variante 1c :** Le saisisseur consulte un calendrier d'activité existant
+3. Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
+4. Le saisisseur accède à un calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
@@ -137,6 +131,7 @@ d'activité associé. Les informations suivantes sont affichées pour chaque nav
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
 > - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
+> - ISI : Prévoir traitement pour charger les calendriers vides
 
 ---
 ## Calendriers d'activité > Filtres
@@ -190,21 +185,24 @@ professionnel et que l’engin n’est plus pêchant.
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new-general.svg)
 
-La création d'un calendrier d'activité est accessible depuis le tableau de consultation des calendriers d'activité en cliquant sur le navire correspondant
+Les calendriers d'activité sont accessibles depuis le tableau de consultation des calendriers d'activité
 
 #### Scénario principal
 
-1. Le saisisseur clique sur un navire sans calendrier d'activité associé
-2. L'écran "Nouveau calendrier" s'ouvre. Il est composé de 3 onglets :
+1. Le saisisseur clique sur un calendrier d'activité
+2. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 4 onglets :
    * "Général", onglet par défaut
-   * "Calendrier"
+   * "Mois d'activité"
    * "Métiers"
-3. L'année du calendrier correspond à l'année présente dans le filtre du tableau des calendriers d'activité
-4. Dans l'onglet "Général", le navire et l'état des changements des caractéristiques et des armateurs du navire sélectionné sur l'année en cours de saisie s'affichent
-5. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction de l'année
-6. Le saisisseur consulte l'état des changements des caractéristiques et des armateurs du navire sur l'année en cours de saisie
-7. Le saisisseur renseigne les caractéristiques de l'enquête. Par défaut toutes les caractéristiques sont vident.
-8. Le saisisseur saisit un commentaire
+   * "Zones d'activité"
+3. Dans l'onglet "Général", les informations suivantes sont affichées :
+   * La stratégie
+   * L'état des changements des caractéristiques et des armateurs du navire
+4. Le saisisseur renseigne (par défaut les valeurs sont vides) :
+   * L'objectif d'enquête directe
+   * L'enquête éco
+   * Les caractéristiques de l'enquête
+5. Le saisisseur saisit un commentaire
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -240,13 +238,10 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Le nombre d'hommes à bord par marée
    * Le ou les métiers
    * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
-   * Le gradient de côte rattaché à chaque métier
+   * Le gradient de côte rattaché à chaque zone
 2. Le saisisseur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
    (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
-3. Pour chaque métier du calendrier de l'année en cours issu de la prédocumentation, l'origine de l'information est automatiquement renseignée :
-   * "Activité N-1", si le métier provient de la source "Enquête N-1 indirecte"
-   * "Document déclaratif", si le métier provient de la source "SACROIS-OBSDEB"
-4. Le saisisseur complète les données manquantes ou erronées pour chaque mois :
+3. Le saisisseur complète les données manquantes ou erronées pour chaque mois :
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
@@ -257,17 +252,19 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
    * Un ou plusieurs métiers. Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
      * Une ou deux zones. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
          * Le gradient de côte*
-         * Le gradient de profondeur : visibilité définie par une option du programme
-         * La zone proche : visibilité définie par une option du programme
-5. Le saisisseur enregistre le calendrier
-6. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
-7. L'encart sur le saisisseur s'affiche
+         * Le gradient de profondeur (visibilité définie par une option du programme)
+         * La zone proche (visibilité définie par une option du programme)
+4. Le saisisseur enregistre le calendrier
+5. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
+6. L'encart sur le saisisseur s'affiche
 
 **Variante(s) :**
 
-**Variante 1a :** Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche
+**Variante :** 
+3. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 3]
 
-**Variante 2a :** Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées
+**Variante :** 
+4. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 3]
 
 #### Détails techniques :
 * Sources de la prédocumentation :
@@ -299,6 +296,8 @@ La création d'un calendrier d'activité est accessible depuis le tableau de con
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - ISI : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
 > - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
+> - MOA : Valeur par défaut option du programme pour afficher/masquer le gradient de profondeur et la zone proche ?
+> - MOA : Champs concernés par la régionalisation ?
 
 Actions possibles sur une cellule dans l'Allegro actuel :
   * Copier
@@ -350,15 +349,10 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 
 #### Scénario principal
 
-1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Calendrier"
-2. Le saisisseur ajoute les caractéristiques relatives aux métiers (REF: COMMUN/PSFM/AJOUT)
-3. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
-4. Le saisisseur enregistre le calendrier
-5. La date de mise à jour du calendrier est actualisée
-
-> Questions :
-> - Maillages et dimensions : correspondent à celles définies dans la stratégie ?
-> - Popup d'ajout des PMFM : filtre possible sur le support engin ?
+1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Mois d'activité" et les caractéristiques associés
+2. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
+3. Le saisisseur enregistre le calendrier
+4. La date de mise à jour du calendrier est actualisée
 
 ---
 ## Calendrier d'activité > Carte
