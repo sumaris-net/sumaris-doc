@@ -13,7 +13,7 @@
 - [Sortie > Echantillonnages en métropole](#sortie-echantillonnages-en-métropole)
 - [Sortie > Echantillonnages en outremer](#sortie-echantillonnages-en-outremer)
 - [Sortie > PETS](#sortie-pets)
-- [(Alternatif) Sortie > Echantillonnages et PETS](#alternatif-sortie--echantillonnages-et-pets)
+- [(Alternatif) Sortie > Echantillonnages et PETS](#alternatif-sortie-echantillonnages-et-pets)
 - [Vente > Détails](#vente-détails)
 - [Vente > Lots espèces](#vente-lots-espèces)
 - [Vente > Lots espèces > Mesures individuelles](#vente-lots-espèces-mesures-individuelles)
@@ -364,9 +364,11 @@ Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 
 #### Scénario alternatif
 
-Regroupement des tableaux de saisie des échantillonnages et des PETS
+En cas de présence de PETS sur le lieu de la vente, le tableau regroupe la saisie des PETS et la saisie de la liste des espèces à observer.
 
-> A Détailler en cas de retenue de ce scénario par la MOA
+Un pictogramme indique la liste des PETS comme prioritaire dans la saisie. Cette liste apparait en premier dans le tableau.
+
+> Scénario à détailler en cas de retenue de ce scénario par la MOA
 
 ---
 
