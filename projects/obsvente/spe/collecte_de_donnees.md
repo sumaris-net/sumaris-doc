@@ -13,6 +13,7 @@
 - [Sortie > Echantillonnages en métropole](#sortie-echantillonnages-en-métropole)
 - [Sortie > Echantillonnages en outremer](#sortie-echantillonnages-en-outremer)
 - [Sortie > PETS](#sortie-pets)
+- [(Alternatif) Sortie > Echantillonnages et PETS](#alternatif-sortie--echantillonnages-et-pets)
 - [Vente > Détails](#vente-détails)
 - [Vente > Lots espèces](#vente-lots-espèces)
 - [Vente > Lots espèces > Mesures individuelles](#vente-lots-espèces-mesures-individuelles)
@@ -281,6 +282,7 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 >   * Cas de PETS présents sur le lieu de la vente ?
 
 ---
+
 ## Sortie > Echantillonnages en outremer
 
 **REF: OBSVENTES/SORTIE/ECH_OUTREMER**
@@ -344,7 +346,7 @@ Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 
 **Variante 4a :** Le saisisseur supprime un PETS
 
-> Qusetions :
+> Questions :
 > - MOA : Pas de PETS en outremer ?
 
 #### Détails techniques :
@@ -354,7 +356,20 @@ Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de cré
 * Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
+--- 
+
+## (Alternatif) Sortie > Echantillonnages et PETS
+
+![ui-landings-merge](/projects/obsvente/spe/images/landings-table-pets-random.svg)
+
+#### Scénario alternatif
+
+Regroupement des tableaux de saisie des échantillonnages et des PETS
+
+> A Détailler en cas de retenue de ce scénario par la MOA
+
 ---
+
 ## Vente > Détails
 
 **REF: OBSVENTES/SORTIE/VENTE/DETAILS**
