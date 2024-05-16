@@ -5,7 +5,6 @@
   {/ Général | Mois d'activité (4) | <b>Métiers (2) | Zones d'activité}
   ..
   { <&plus> <&trash> }
-  {
   {# [ ]. |Métier | {<b>Maillage de l'engin (logbook) (mm)
                 engin -
                 inconnue -
@@ -24,19 +23,8 @@
                 Déclaration d'un professionnel}
      [X]. | GTRMZZ - Trémails à poissons | 100 | 97 | 103 | .
      [ ]. | GTRNEP - Trémails à langoustines | . | 57 | . | 100
-  } | {+
-              { <font color=grey size=10>Saisisseur
-              Obs1
-              <font color=grey size=10>Groupe EI
-              --
-              <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
-              <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
-              .
-              <font color=grey size=10>Mode saisie <b>bureau
-              .
-              [ Terminer la saisie]
-              }}}
-  --
+  }
+
   { [Fermer] | [Sauvegarder] }
 }
 @endsalt

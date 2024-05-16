@@ -190,19 +190,22 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 #### Scénario principal
 
 1. Le saisisseur clique sur un calendrier d'activité
-2. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 4 onglets :
+2. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - <b>Activité Année</b>"
+3. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 4 onglets :
    * "Général", onglet par défaut
    * "Mois d'activité"
    * "Métiers"
    * "Zones d'activité"
-3. Dans l'onglet "Général", les informations suivantes sont affichées :
+4. Dans l'onglet "Général", les informations suivantes sont affichées :
    * La stratégie
    * L'état des changements des caractéristiques et des armateurs du navire
-4. Le saisisseur renseigne (par défaut les valeurs sont vides) :
+5. Le saisisseur renseigne (par défaut les valeurs sont vides) :
    * L'objectif d'enquête directe
    * L'enquête éco
    * Les caractéristiques de l'enquête
-5. Le saisisseur saisit un commentaire
+6. Le saisisseur saisit un commentaire
+7. Le saisisseur enregistre
+8. La date de mise à jour du calendrier est actualisée
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -228,7 +231,7 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 
 #### Scénario principal
 
-1. Dans l'onglet "Calendrier", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
+1. Dans l'onglet "Mois d'activité", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
    * L'activité du navire*
@@ -255,8 +258,7 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
          * Le gradient de profondeur (visibilité définie par une option du programme)
          * La zone proche (visibilité définie par une option du programme)
 4. Le saisisseur enregistre le calendrier
-5. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - Année"
-6. L'encart sur le saisisseur s'affiche
+5. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
@@ -343,8 +345,6 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 
 **REF: ACTIVITY_CALENDAR/METIERS**
 
-**Pré-conditions** : Pour que l'onglet "Métiers" soit actif, le calendrier doit être saisi et sauvegardé
-
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-metiers.svg)
 
 #### Scénario principal
@@ -353,6 +353,14 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 2. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
 3. Le saisisseur enregistre le calendrier
 4. La date de mise à jour du calendrier est actualisée
+
+**Variante(s) :**
+
+**Variante :**
+
+Cas d'un calendrier partagé où l'import des données du saisisseur 2 en local est réalisé avant la saisie du saisisseur 1
+et où la saisie du saisisseur 2 est réalisé en mode hors-ligne après la saisie du saisisseur 1 :
+2. Le saisisseur supprime les métiers en doublon. Puis ajoute un métier qu'il a supprimé par inadvertance ? [Retour en 2]
 
 ---
 ## Calendrier d'activité > Carte

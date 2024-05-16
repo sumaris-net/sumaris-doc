@@ -5,7 +5,7 @@
   {/ <b>Général | Mois d'activité | Métiers | Zones d'activité}
   ..
   .
-  {
+  {{
   <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
     {
     . | Caractéristiques des navires
@@ -22,7 +22,18 @@
     . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur
        123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
     }
-  }
+  }|{+
+                   { <font color=grey size=10>Saisisseur
+                   Obs1
+                   <font color=grey size=10>Groupe EI
+                   --
+                   <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
+                   <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
+                   .
+                   <font color=grey size=10>Mode saisie <b>bureau
+                   .
+                   [ Terminer la saisie]
+                   }}}
   .
   {
     Objectif d'enquête directe ?* | { (X) <b>Oui | () Non }
