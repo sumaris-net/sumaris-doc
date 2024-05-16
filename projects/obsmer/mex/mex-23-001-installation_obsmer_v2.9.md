@@ -34,7 +34,28 @@ RAS
 
 - grants sur `PROGRAM2LOCATION_CLASSIF`
   ```sql
-grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+  grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- Trigger sur `TR_PROGRAM_ID`
+  ```sql
+      create or replace TRIGGER TR_PROGRAM_ID
+        before insert or delete on PROGRAM
+        for each row
+  	    declare
+		  l_code VARCHAR2(40) := NULL;
+        begin
+          case
+            WHEN INSERTING THEN
+              BEGIN                
+                select CODE into l_code from M_PROGRAM where CODE = :new.CODE;
+                EXCEPTION WHEN NO_DATA_FOUND THEN
+                  insert into M_PROGRAM(CODE,ID) values (:new.CODE, M_PROGRAM_SEQ.nextval);
+                END;
+            WHEN DELETING THEN
+              delete from M_PROGRAM P where P.CODE=:old.CODE;
+          end case;
+      end;
 -```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
@@ -233,22 +254,27 @@ grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_A
 
 - Modification du trigger `TR_PROGRAM`
   ```sql
-  create or replace trigger TR_PROGRAM
-    instead of insert or update
-    on PROGRAM
-  begin
-    case
-      WHEN INSERTING THEN
-        insert into SIH2_ADAGIO_DBA.PROGRAM(CODE, NAME, DESCRIPTION, CREATION_DATE, UPDATE_DATE, TAXON_GROUP_TYPE_FK, GEAR_CLASSIFICATION_FK)
-        select :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.UPDATE_DATE, TGT.CODE, :new.GEAR_CLASSIFICATION_FK
-        from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT
-        where TGT.ID = :new.TAXON_GROUP_TYPE_FK;  
-      WHEN UPDATING THEN
-        -- PROGRAM itself
-        update SIH2_ADAGIO_DBA.PROGRAM P set P.NAME=:new.NAME, P.DESCRIPTION=:new.DESCRIPTION, P.CREATION_DATE=:new.CREATION_DATE, P.UPDATE_DATE=:new.UPDATE_DATE, P.TAXON_GROUP_TYPE_FK=:new.TAXON_GROUP_TYPE_FK, P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
-        where P.CODE = (select CODE from SIH2_ADAGIO_DBA.M_PROGRAM where ID=:new.ID);
-    end case;
-  end;
+    create or replace trigger TR_PROGRAM
+      instead of insert or update
+      on PROGRAM
+    begin
+      case
+        WHEN INSERTING THEN
+          if (:new.ID is not null) then
+            insert into SIH2_ADAGIO_DBA.M_PROGRAM(CODE,ID) values (:new.LABEL, :new.ID);
+          end if;
+
+          insert into SIH2_ADAGIO_DBA.PROGRAM(CODE, NAME, DESCRIPTION, CREATION_DATE, UPDATE_DATE, TAXON_GROUP_TYPE_FK, GEAR_CLASSIFICATION_FK)
+          select :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.UPDATE_DATE, TGT.CODE, :new.GEAR_CLASSIFICATION_FK
+          from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT
+          where TGT.ID = :new.TAXON_GROUP_TYPE_FK;
+       WHEN UPDATING THEN
+           -- PROGRAM itself		   
+           update SIH2_ADAGIO_DBA.PROGRAM P set P.NAME=:new.NAME, P.DESCRIPTION=:new.DESCRIPTION, P.CREATION_DATE=:new.CREATION_DATE, P.UPDATE_DATE=:new.UPDATE_DATE, 
+           P.TAXON_GROUP_TYPE_FK=(select CODE from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE where ID = :new.TAXON_GROUP_TYPE_FK), P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
+           where P.CODE = :new.LABEL;
+       end case;
+end;
 -```
 
 - Création du trigger `TR_PROGRAM2LOCATION_CLASSIF`

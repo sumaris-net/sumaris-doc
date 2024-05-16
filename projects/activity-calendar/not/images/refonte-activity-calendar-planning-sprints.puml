@@ -114,14 +114,14 @@ Project starts the 2024/04/08
 [TASK6]->[Testing6]
 [Demo MOA 6] happens 1 day after [Testing6]'s end
 
-[Sprint 7] as [TASK7] requires 3 weeks and starts the 2th of September 2024
+[Sprint 7] as [TASK7] requires 4 weeks and starts the 2th of September 2024
 [TASK7] is colored in Lavender/LightBlue
 [TASK6]->[TASK7]
 [TASK7]->[Testing7]
-[Testing7] requires 1 week and starts the 22th of September 2024
+[Testing7] requires 2 week and starts the 22th of September 2024
 
 
-[production] as [PROD] requires 1 week and starts the 1th of October 2024
-[PROD] is colored in red
+[validation] as [VAL] requires 2 week and starts the 15th of October 2024
+[VAL] is colored in red
 
 @endgantt

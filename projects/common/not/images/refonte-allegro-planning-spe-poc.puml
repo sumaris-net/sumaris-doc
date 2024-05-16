@@ -187,22 +187,25 @@ N(5, 8)  is colored in green
 [Formation] as [TASK2] starts the 2024/03/04 and requires 1 week
 [TASK2] is colored in lightSalmon
 
-[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 25 week
+[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 27 week
 [TASK3] is colored in orange
-[TASK3] is 30% complete
+[TASK3] is 35% complete
 
-[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 25 week
+[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 27 week
 [TASK4] is colored in blue
-[TASK4] is 30% complete
+[TASK4] is 35% complete
 
-[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 18 week
+[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 20 week
 [TASK5] is colored in green
-[TASK5] is 10% complete
+[TASK5] is 20% complete
 
 [Batchs] as [TASK6] starts the 2024/06/01 and requires 11 week
 [TASK6] is colored in red
 [TASK6] is 0% complete
 
+[Rédaction Tests] as [TASK7] starts the 2024/06/01 and requires 11 week
+[TASK7] is colored in pink
+[TASK7] is 0% complete
 
 2024-08-16 to 2024-08-30 is closed
 
@@ -212,6 +215,7 @@ legend
   |<#green> | Calendrier|
   |<#yellow> | Démo Obs.|
   |<#red> | Batchs |
+  |<#pink> | Tests Rédact. |
 end legend
 
 
