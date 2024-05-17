@@ -17,6 +17,8 @@
       .
       Début/Fin* :     | { ^jj/mm/aaaa^  |  ^hh:mm^ } { ^jj/mm/aaaa^  |  ^hh:mm^ } <i><color:blue>durée de la sortie
       .
+      Date de vente :     | { ^jj/mm/aaaa^  |  ^hh:mm^ } { ^jj/mm/aaaa^  |  ^hh:mm^ }
+      .
       Observateurs* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
       .
 

@@ -20,6 +20,7 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 - [Commun > Saisisseur](#commun-saisisseur)
 - [Commun > Enregistrement automatique](#commun-enregistrement-automatique)
 - [Commun > Suppression](#commun-suppression)
+- [Commun > Utilisation de données temporaires]()
 
 ## Spécificités techniques
 
@@ -372,3 +373,9 @@ Si tous les champs obligatoires du formulaire ont été renseignés, alors la s�
 **REF: COMMUN/SUPPRESSION**
 
 La suppression d'un élément doit être confirmé par le saisisseur via une popup de confirmation.
+
+## Commun > Utilisation de données temporaires
+
+Les données temporaires sont surtout utilisées lors des marées hauturières qui s'organisent au dernier moment et que l'observateur n'a pas encore le navire dans son portefeuille.
+
+Les données temporaires à utiliser sont les navires et les taxons/groupes si l'observateur n'identifie pas tout de suite l'espèce.

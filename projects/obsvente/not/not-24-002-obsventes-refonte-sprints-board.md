@@ -2,7 +2,7 @@
 
 ## Planning
 
-![ui-obsventes-planning](/projects/obsvente/not/images/refonte-obsventes-planning-sprints.svg)<!-- .element: style="width: 75%" -->
+![ui-obsventes-planning](/projects/obsvente/not/images/refonte-obsventes-planning-sprints.svg)<!-- .element: style="width: 100%" -->
 
 ---
 

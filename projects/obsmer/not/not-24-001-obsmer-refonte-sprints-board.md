@@ -2,7 +2,7 @@
 
 ## Planning
 
-![ui-obsmer-planning](/projects/obsmer/not/images/refonte-obsmer-planning-sprints.svg)<!-- .element: style="width: 75%" -->
+![ui-obsmer-planning](/projects/obsmer/not/images/refonte-obsmer-planning-sprints.svg)<!-- .element: style="width: 100%" -->
 
 ---
 

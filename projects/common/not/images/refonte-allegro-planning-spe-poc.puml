@@ -203,9 +203,9 @@ N(5, 8)  is colored in green
 [TASK6] is colored in red
 [TASK6] is 0% complete
 
-[Rédaction Tests] as [TASK7] starts the 2024/06/01 and requires 11 week
+[Recette MOE] as [TASK7] starts the 2024/06/01 and requires 11 week
 [TASK7] is colored in pink
-[TASK7] is 0% complete
+[TASK7] is 5% complete
 
 2024-08-16 to 2024-08-30 is closed
 
@@ -215,7 +215,7 @@ legend
   |<#green> | Calendrier|
   |<#yellow> | Démo Obs.|
   |<#red> | Batchs |
-  |<#pink> | Tests Rédact. |
+  |<#pink> | Recette / Rédact. MOE |
 end legend
 
 

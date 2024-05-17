@@ -744,9 +744,9 @@ Contrôle de la saisie d'une capture :
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
     *  Une zone de saisie du poids total (en Kg)
       *  Une case à cocher indique si la poids est estimé  (Oui si la case est coché)
-    *  Une zone de saisie du poids échantillonné (en Kg)
-    *  Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir
-       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs
+    *  ~~Une zone de saisie du poids échantillonné (en Kg)~~
+    *  ~~Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir~~
+       * ~~ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs~~
     *  Un tableau affichant la liste des espèces commerciale à saisir
 4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton :heavy_plus_sign:
 5. Il peut renseigner pour chaque espèce commerciale :
@@ -815,8 +815,8 @@ fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détai
 L'arbre PNR, Vrac détaillé contient un sous menu :
 - Ecosystèmes Marins Vulnérables
 
-L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquement renseignés :
-- Poids total
+~~L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquement renseignés :~~
+~~- Poids total~~
 
 #### Scénario principal
 
@@ -840,6 +840,9 @@ L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquemen
 3. L'observateur renseigne les éléments suivants :
     * Le poids total *, en kg
         * Une case à cochée permet d'indiquer s'il le poids a été estimé
+   *  Une zone de saisie du poids échantillonné (en Kg)
+   *  Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir
+       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs
 4. L'observateur renseigne les catégories EMV observées :
     * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catégorie d'EMV

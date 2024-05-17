@@ -183,6 +183,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Le lieu*
     * La date de début*
     * La date de fin*
+    * La date de la vente
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
@@ -258,12 +259,22 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
 7. L'encart sur le saisisseur s'affiche
 8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
+
+Liste exhaustives des raisons de la non observation
+-Pas d'apport
+-Accès au site impossible
+-Annulation observateur
+-Blocage de la profession
+-Autre
+
+
 **Variante(s) :**
 
 **Variante c :** 
 8. Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
 Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" [Retour en 8]
 
+   
 #### Détails techniques :
 * Echantillonnage : LANDING
 * Vente : SALE
