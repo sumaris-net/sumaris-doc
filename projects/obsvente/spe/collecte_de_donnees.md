@@ -260,12 +260,12 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
 8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 
-Liste exhaustives des raisons de la non observation
--Pas d'apport
--Accès au site impossible
--Annulation observateur
--Blocage de la profession
--Autre
+Liste exhaustives des raisons de la non observation : 
+   * Pas d'apport
+   * Accès au site impossible
+   * Annulation observateur
+   * Blocage de la profession
+   * Autre
 
 
 **Variante(s) :**
