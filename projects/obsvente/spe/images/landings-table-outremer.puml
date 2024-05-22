@@ -2,22 +2,20 @@
 {
   <b>Douarnenez - 08/02/2022
   --
-  {/  Détails | <b> Échantillonnages | <Autres espèces> (PETS)}
+  {/  Détails | <b> Échantillonnages}
   ..
+  { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
   .
 	{#
-
       <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Navire | <b>Zone de pêche| <b>Type de vente | . | .
-       BET - Thunnus obesus | BET - Thon obèse(=Patudo) | [X]. | 123456 - Navire 1 | Zone 1 | Enchères - HAM / Criées | . | <&tag>
-       BFT - Thunnus thynnus | BFT - Thon rouge de l'Atlantique |  [X]. | 123456 - Navire 1 | Zone 2 | Enchères - HAM / Criées | <&comment-square> | <&tag>
+       BET - Thunnus obesus | BET - Thon obèse(=Patudo) | [X]. | 123456 - Navire 1 | Zone 1 | ^Enchères - HAM / Criées^ | . | <&tag>
+       BFT - Thunnus thynnus | BFT - Thon rouge de l'Atlantique |  [X]. | 123456 - Navire 1 | Zone 2 | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
        BIL - Istiophoridae | BIL - Makaires,marlins,voiliers nca | [ ]. | . | . | . | . | <&tag>
-       BLF - Thunnus atlanticus | BLF - Thon à nageoires noires | [X]. | 456789 - Navire 2 | Zone 1 | Enchères - HAM / Criées | <&comment-square> | <&tag>
+       BLF - Thunnus atlanticus | BLF - Thon à nageoires noires | [X]. | 456789 - Navire 2 | Zone 1 | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
        BLT - Auxis rochei | BLT - Bonitou | [ ] . | . | . | . | . | .
        ... | . | [ ] . | . | . | . | . | .
-
     }
   --
-
 
   {
     [Fermer] | [Sauvegarder]

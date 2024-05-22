@@ -8,16 +8,14 @@
 - [Lignes de plan](#lignes-de-plan)
 - [Ergonomie générale](#ergonomie-générale)
 - [Sorties](#sorties)
-- [Sorties > Filtres](#sorties-filtres)
-- [Sortie > Détails](#sortie-détails)
-- [Sortie > Echantillonnages en métropole](#sortie-echantillonnages-en-métropole)
-- [Sortie > Echantillonnages en outremer](#sortie-echantillonnages-en-outremer)
-- [Sortie > PETS](#sortie-pets)
-- [(Alternatif) Sortie > Echantillonnages et PETS](#alternatif-sortie-echantillonnages-et-pets)
-- [Vente > Détails](#vente-détails)
-- [Vente > Lots espèces](#vente-lots-espèces)
-- [Vente > Lots espèces > Mesures individuelles](#vente-lots-espèces-mesures-individuelles)
-- [Sortie > Contrôle de la saisie](#sortie-contrôle-de-la-saisie)
+- [Sorties > Filtres](#sorties--filtres)
+- [Sortie > Détails](#sortie--détails)
+- [Sortie > Echantillonnages en métropole](#sortie--echantillonnages-en-métropole)
+- [Sortie > Echantillonnages en outremer](#sortie--echantillonnages-en-outremer)
+- [Vente > Détails](#vente--détails)
+- [Vente > Lots espèces](#vente--lots-espèces)
+- [Vente > Lots espèces > Mesures individuelles](#vente--lots-espèces--mesures-individuelles)
+- [Sortie > Contrôle de la saisie](#sortie--contrôle-de-la-saisie)
 - [Règles métier](#règles-métier)
 - [Importation depuis ObsDeb](#importation-depuis-obsdeb)
 - [Référentiels](#référentiels)
@@ -81,9 +79,15 @@ Résolution de tablette utilisée par VB : Samsung Active Tab (with zoom) 1920x1
 > - MOA : Revoir la gestion des droits 
 >   - Actuellement : définition d'un portefeuille de navires par utilisateur -> pb perf
 >   - Proposition 1 : définir le coordinateur selon le PROGRAM_PRIVILEGE -> Instantané. Le coordinateur a les mêmes navires que les saisisseurs de sa société, moins fin que la gestion actuelle. Peu couteux.
->   - Proposition 2 : inder les porteuilles de navires dans ES -> L'indexation est réalisée une fois par jour, la modification des droits n'est donc pas prise en compte instantanément. Fin. Couteux ?
-> - MOA : Validation des données : qui valide (responsable de programme et/ou coordinateur) ? comment ?
-> - MOA : Fonctionnalités utilisées : données temporaires (navires, personnes, taxons, groupes de taxons, engins) ?
+>   - Proposition 2 : indexer les porteuilles de navires dans ES -> L'indexation est réalisée une fois par jour, la modification des droits n'est donc pas prise en compte instantanément. Fin. Couteux ?
+
+
+Validation des données : qui valide (responsable de programme et/ou coordinateur) ? comment ?
+- L'action de "Terminer la saisie" correspond à une validation par l'observateur
+- L'action de "Validation" correspond à une validation de la société
+- L'edition du rapport lance le contrôle des données saisies 
+  - En cas d'erreur, le rapport n'est pas éditier et l'observateur est informé sur les écrans en erreur
+
 
 ---
 ## Ergonomie générale
@@ -176,14 +180,12 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 3 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
-    * "<Autres espèces> (PETS)" (visible uniquement si la caractéristique "PETS" est à "Oui")
 3. Dans l'onglet "Détails", le saisisseur sélectionne :
     * Le programme de collecte*
     * Le plan d'échantillonnage*
     * Le lieu*
     * La date de début*
     * La date de fin*
-    * La date de la vente
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
@@ -191,8 +193,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 7. Le saisisseur renseigne les caractéristiques de la sortie
 8. Le saisisseur enregistre
 9. Le bandeau de l'écran affiche "Lieu - date"
-10. Le saisisseur est positionné sur l'onglet "PETS" si la caractéristique "PETS" est à "Oui" (REF: OBSVENTES/SORTIE/ECH_AUTRES), 
-"Echantillonnages" sinon (REF: OBSVENTES/SORTIE/ECH_METROPOLE - OBSVENTES/SORTIE/ECH_OUTREMER)
+10. Le saisisseur est positionné sur l'onglet "Echantillonnage". Si la caractéristique "PETS" est à "Oui", l'onglet affiche en premier un tableau de saisie des PETS (REF: OBSVENTES/SORTIE/ECH_AUTRES), 
+puis le tableau de saisie "Tirage au sort". Sinon l'onglet affiche seulement le tableau de saisie "Tirage au sort" (REF: OBSVENTES/SORTIE/ECH_METROPOLE - OBSVENTES/SORTIE/ECH_OUTREMER)
 
 **Variante(s) :**
 
@@ -232,14 +234,65 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 
 **REF: OBSVENTES/SORTIE/ECH_METROPOLE**
 
-![ui-landings](/projects/obsvente/spe/images/landings-table.svg)
+![ui-landings](/projects/obsvente/spe/images/landings-table-pets-random.svg)
 
 Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
 La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
 
 #### Scénario principal
 
-1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
+1. Dans l'onglet "Echantillonnages", le saisisseur saisie la liste des PETS observés s'il à indiqué PETS à Oui dans la sortie. 
+2. Il renseigne aussi la liste des espèces à observer.
+
+### Sortie > Echantillonnages en métropole > Saisie de PETS
+
+**REF: OBSVENTES/SORTIE/ECH_AUTRES**
+
+**PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa révision pour la période
+2022-2027, la liste des espèces protégées à suivre est établie en vertu de la législation de l‘Union et des accords
+internationaux. Elle fait référence aux listes des deux conventions internationales OSPAR (région I à V) et UNEP
+(Méditerranée) et des organisations régionales des pêches NEAFC (=Liste OSPAR), ICCAT et GFCM (= Liste UNEP). Ces
+espèces sont des espèces d’élasmobranches et d’amphihalins, prélevées en prises accessoires ou accidentelles de la pêche
+professionnelle
+
+En cas de présence de PETS sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces
+par rapport à celles définies dans la liste des espèces à observer.
+
+#### Scénario principal
+
+1. Dans le tableau "PETS", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
+    * Espèce commerciale
+    * Espèce scientifique
+    * Navire
+    * Observé ? (par défaut coché)
+    * Zone de pêche
+    * Type de vente
+    * Commentaire
+2. Pour chaque PETS, le saisisseur renseigne :
+    * L'espèce commerciale*
+    * L'espèce scientifique
+3. Le saisisseur enregistre l'échantillon observé
+4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+
+**Variante(s) :**
+
+**Variante 4a :** Le saisisseur supprime un PETS
+
+#### Détails techniques :
+* Nom de l'onglet : il fait partie du dictionnaire thématique. Dans le cas d'ObsVentes, le nom sera "PETS"
+* Echantillonnage : LANDING
+* Vente : SALE
+* Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
+* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
+
+
+### Sortie > Echantillonnages en métropole > Espèces tirées au sort
+
+Dans l'onglet échantillonnage, l'observateur renseigne la liste des espèces à observer.
+
+#### Scénario principal
+
+1. Pour chaque espèce, les informations suivantes sont affichées :
    * Priorité
    * Espèce commerciale
    * Espèce scientifique
@@ -250,8 +303,9 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
    * Type de vente
    * Commentaire
 2. Le système affiche :
+   * Le nombre d'espèces observées
    * Le nombre d'espèces minimal à observer
-   * Le nombre d'espèces maximal à observer
+     * Un avertissement est affiché dans le cas ou le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer
 3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
 4. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation*
 5. Le saisisseur enregistre les échantillonnages
@@ -267,7 +321,6 @@ Liste exhaustives des raisons de la non observation :
    * Blocage de la profession
    * Autre
 
-
 **Variante(s) :**
 
 **Variante c :** 
@@ -282,15 +335,6 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 * Observé ? : PMFM à créer
 * Raison de non observation : PMFM à créer
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
-
-> Questions :
-> - MOA : Inverser l'ordre des onglets "Echantillonnages" et "PETS" ?
-> - MOA : Liste des raisons de non observation ?
-> - MOA : Définir la règle sur les 15 espèces à observer :
->   * Erreur ou warning ?
->   * Espèce non observée à prendre en compte ?
->   * Cas moins de 15 espèces à observer sur le lieu de la vente ?
->   * Cas de PETS présents sur le lieu de la vente ?
 
 ---
 
@@ -320,70 +364,8 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
 6. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 ---
-## Sortie > PETS
 
-**REF: OBSVENTES/SORTIE/ECH_AUTRES**
-
-**PETS** : Protected Endangered and Threatened Species. Dans le cadre de l’EU-MAP et de sa révision pour la période 
-2022-2027, la liste des espèces protégées à suivre est établie en vertu de la législation de l‘Union et des accords 
-internationaux. Elle fait référence aux listes des deux conventions internationales OSPAR (région I à V) et UNEP
-(Méditerranée) et des organisations régionales des pêches NEAFC (=Liste OSPAR), ICCAT et GFCM (= Liste UNEP). Ces 
-espèces sont des espèces d’élasmobranches et d’amphihalins, prélevées en prises accessoires ou accidentelles de la pêche 
-professionnelle
-
-![ui-landings](/projects/obsvente/spe/images/landings-others-table.svg)
-
-En cas de présence de PETS sur le lieu de la vente, le saisisseur privilégie les mensurations de ces espèces
-par rapport à celles définies dans la liste des espèces à observer.
-
-Le saisisseur accède à l'onglet "<Autres espèces> (PETS)" de l'écran de création de sortie.
-
-#### Scénario principal
-
-1. Dans l'onglet "<Autres espèces> (PETS)", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
-    * Espèce commerciale
-    * Espèce scientifique
-    * Navire
-    * Zone de pêche
-    * Type de vente
-    * Commentaire
-2. Pour chaque PETS, le saisisseur renseigne :
-   * L'espèce commerciale*
-   * L'espèce scientifique
-3. Le saisisseur enregistre l'échantillon observé
-4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
-
-**Variante(s) :**
-
-**Variante 4a :** Le saisisseur supprime un PETS
-
-> Questions :
-> - MOA : Pas de PETS en outremer ?
-
-#### Détails techniques :
-* Nom de l'onglet : il fait partie du dictionnaire thématique. Dans le cas d'ObsVentes, le nom sera "PETS"
-* Echantillonnage : LANDING
-* Vente : SALE
-* Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
-* Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
-
---- 
-
-## (Alternatif) Sortie > Echantillonnages et PETS
-
-![ui-landings-merge](/projects/obsvente/spe/images/landings-table-pets-random.svg)
-
-#### Scénario alternatif
-
-En cas de présence de PETS sur le lieu de la vente, le tableau regroupe la saisie des PETS et la saisie de la liste des espèces à observer.
-
-Un pictogramme indique la liste des PETS comme prioritaire dans la saisie. Cette liste apparait en premier dans le tableau.
-
-> Scénario à détailler en cas de retenue de ce scénario par la MOA
-
----
-
-## Vente > Détails
+## Vente > Détails.
 
 **REF: OBSVENTES/SORTIE/VENTE/DETAILS**
 
@@ -400,22 +382,32 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
 3. Sur l'onglet "Détails", le saisisseur renseigne les détails de la vente :
    * Navire*
    * Type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
-   * Lieu de vente* (automatiquement renseigné avec le lieu de la sortie)
-   * Date/heure* (automatiquement renseigné ?)
+   * Date/heure
    * Zone de pêche
    * Commentaires
-4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
+4. Une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales)
+5. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
-> Questions : 
-> - MOA : Type de vente : 
->   - Initialisé avec le type de vente défini sur la sortie
->   - Modifiable sur la vente ?
->   - Si modification du type de vente sur la sortie alors répercution sur les ventes existantes ?
+
+> Réunion 21/05/2024    
+Type de vente : 
+> - Echantillonnages en Métropole  => OK
+>  - Saisissable sur le détail de la sortie (obligatoire)
+>  - Pré-renseigné de manière automatique (détail de la sortie) et modifiable dans le tableau des espèces.
+
+> - Echantillonnages en Outre-mer
+>  - Absent de la stratégie sur le détail de la sortie => Variante à faire
+>  - Tableau d'échantillonnage : PMFM de type de vente avec bouton appliquer  => OK
+>    - Renseigné sur chaque ligne et modifiable dans le tableau des espèces 
+
+> Saisissable détail de la sortie.
+> Recopier dans la vente (non visible)
+> MOE : Enlever le lieu de vente de la maquette => OK
+
 > - MOA : Lieu de vente :
->   - Initialisé avec le lieu défini sur la sortie
->   - Modifiable sur la vente ?
->   - Si modification du lieu sur la sortie alors répercution sur les ventes existantes ?
-> - MOA : Date de vente : notion différente de la date de la sortie ? Reboucler avec les saisisseurs (action Marion)
+> Case à cocher en haut à option :  OK
+> "Remplissage automatique de l'heure de la vente"
+> Stockée dans les préférences locales
 
 ---
 ## Vente > Lots espèces
@@ -449,6 +441,7 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * Le taux échantillonné
    * Le poids échantillonné
    * Identification à confirmer
+   * Selon les cas, l'ajout d'une photo sur le 1er individu de chaque lot est obligatoire, notamment pour les 1ères sorties 
 5. Le saisisseur enregistre
 6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
 7. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
@@ -461,7 +454,13 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 > Questions :
 > - Cas des mélanges ? (ex: baudroie blanche/noire)
 > - Pas de sous-échantillonnage ?
-> - ISI : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
+> - MOE : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
+
+> Réunion 21/05/2024 - POC à réaliser
+> Ecran des mesures individuelles : 
+> Compteur total sur le nombre d'individu (dans le bandeau à droite)
+> Graphique à réaliser : Histogramme du nombre d'individu par classe de taille
+> Le bouton d'affichage du graphique est disponible sur l'écran des mesures individuelles
 
 ---
 ## Vente > Lots espèces > Mesures individuelles

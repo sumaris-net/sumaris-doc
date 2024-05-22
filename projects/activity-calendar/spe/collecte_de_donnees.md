@@ -370,7 +370,27 @@ et où la saisie du saisisseur 2 est réalisé en mode hors-ligne après la sais
 A spécifier : en attente POC
 Prévoir un mode pour afficher la carte avec l'ensemble des données
 
+## Calendrier d'activité > Rapports
+
+![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
+
+> Questions : 
+> Libellé du métier : 
+> Font de police plus petite, 
+> Sur 3 lignes, 
+> Tronquer et afficher  ...
+
+
+## Calendrier d'activité > Instanciation des calendriers vides
+
+> Propositions :
+> Dans l'application (responsable de programme) : Importer un Csv (liste navires)
+> Rajout d'une fonction d'export
+> Faible cout de développement
+> Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
+> Manque un flag enquête éco dans le format
 ---
+
 ## Historique
 
 |       Date | Sections mises à jour                                                                         |

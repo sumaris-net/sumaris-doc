@@ -15,23 +15,24 @@ saltDiagram {
          {
           <&shield><b>PETS
          } | * | * | * | * | * | * | * | * | * | *
-        [X]. | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | . | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | . | <&tag>
-        []. | ^BSH - Peau bleue^ | ^                        ^ | . | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&tag>
+        [X]. | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
+        []. | ^BSH - Peau bleue^ | ^                        ^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
         == | * | * | * | * | * | * | * | * | * | *
          {
-             <&list><b>Tirage au sort
+             <&list><b>Tirage au sort       <back:red><font color=white><i>Moins de 15 espèces observées (justifiez si non observée)
+             .
+             { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
          } | * | * | * | * | * | * | * | * | * | *
-        1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | . | <&tag>
-        2 | MNZ - Baudroie | . |  [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&tag>
+        .
+        1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
+        2 | MNZ - Baudroie | . |  [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
         3 | PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | . | . | <&tag>
-        4 | NEP - Langoustine | NEP - Nephrops norvegicus | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | <&comment-square> | <&tag>
-        5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | Enchères - HAM / Criées | . | <&tag>
+        4 | NEP - Langoustine | NEP - Nephrops norvegicus | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
+        5 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
         6 | ... | . | [ ] . | . | . | . | . | .
 
     }
-    { 15 espèces minimales observées (justifiez si non observée) }
-
-    { (max: 30 espèces) }
+    { 1 espèce(s) observées(s) (min:15)  }
 
     { ATTENTION: une même espèce peut-être tirée plusieurs fois }
   --

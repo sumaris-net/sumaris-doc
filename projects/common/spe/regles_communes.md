@@ -222,7 +222,8 @@ Le choix se fait par une case à cocher.
 4. Un bouton permet d'ajouter la mesure individuelle saisit
     * Une ligne est ajoutée au tableau
 5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
-
+6. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
+7.Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
 **Variante 1a**
 
@@ -379,3 +380,10 @@ La suppression d'un élément doit être confirmé par le saisisseur via une pop
 Les données temporaires sont surtout utilisées lors des marées hauturières qui s'organisent au dernier moment et que l'observateur n'a pas encore le navire dans son portefeuille.
 
 Les données temporaires à utiliser sont les navires et les taxons/groupes si l'observateur n'identifie pas tout de suite l'espèce.
+
+Cette utilisation de données temporaires n'est pas fréquente mais pas rare.
+Pour les espèces (doutes sur l'existence), utiliser un flag (douteux), ajouter une photo.
+
+
+
+Observateur manquant : ajouter une note dans la marée
