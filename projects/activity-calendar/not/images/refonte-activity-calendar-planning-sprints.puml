@@ -83,7 +83,7 @@ Project starts the 2024/04/08
 [TASK2]->[Testing2]
 [Demo MOA/COORD 1] happens 1 day after [Testing2]'s end
 
-[pre-prod] as [PREPROD] requires 1 week and starts the 29th of April 2024
+[pre-prod] as [PREPROD] requires 2 week and starts the 6th of May 2024
 [PREPROD] is colored in salmon
 
 [Sprint 3] as [TASK3] requires 4 weeks
@@ -118,10 +118,19 @@ Project starts the 2024/04/08
 [TASK7] is colored in Lavender/LightBlue
 [TASK6]->[TASK7]
 [TASK7]->[Testing7]
-[Testing7] requires 2 week and starts the 22th of September 2024
+[Testing7] requires 1 week and starts the 22th of September 2024
+
+[Sprint 8] as [TASK8] requires 3 weeks and starts the 1th of October 2024
+[TASK8] is colored in Lavender/LightBlue
+[TASK7]->[TASK8]
 
 
-[validation] as [VAL] requires 2 week and starts the 15th of October 2024
-[VAL] is colored in red
+
+[validation] as [VAL] requires 2 week and starts the 22th of October 2024
+[VAL] is colored in orange
+[TASK8]->[VAL]
+
+[Production] as [PROD] requires 1 week and starts the 1th of Novembre 2024
+[PROD] is colored in green
 
 @endgantt

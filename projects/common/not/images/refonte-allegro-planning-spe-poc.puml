@@ -127,6 +127,9 @@ Project starts the 2023/10/01
 [17] happen the 2024/03/17
 [17] is colored in blue
 
+[18] happen the 2024/05/21
+[18] is colored in blue
+
 [1] displays on same row as [2]
 [2] displays on same row as [3]
 [3] displays on same row as [4]
@@ -157,6 +160,9 @@ N(2, 2) is colored in orange
 N(3, 3) as [o3] happen the 2024/03/26
 N(3, 3) is colored in orange
 
+N(4, 4) as [o4] happen the 2024/05/21
+N(4, 4) is colored in orange
+
 [o1] displays on same row as [o2]
 [o2] displays on same row as [o3]
 
@@ -180,16 +186,16 @@ N(5, 8)  is colored in green
 [c3] displays on same row as [c4]
 [c4] displays on same row as [c5]
 
-[Spécifications] as [TASK1] starts the 2024/01/03 and requires 23 week
+[Spécifications] as [TASK1] starts the 2024/01/03 and requires 31 week
 [TASK1] is colored in darkTurquoise
-[TASK1] is 75% complete
+[TASK1] is 65% complete
 
 [Formation] as [TASK2] starts the 2024/03/04 and requires 1 week
 [TASK2] is colored in lightSalmon
 
 [Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 27 week
 [TASK3] is colored in orange
-[TASK3] is 35% complete
+[TASK3] is 40% complete
 
 [Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 27 week
 [TASK4] is colored in blue
@@ -203,9 +209,9 @@ N(5, 8)  is colored in green
 [TASK6] is colored in red
 [TASK6] is 0% complete
 
-[Recette MOE] as [TASK7] starts the 2024/06/01 and requires 11 week
+[Recette MOE] as [TASK7] starts the 2024/05/13 and requires 15 week
 [TASK7] is colored in pink
-[TASK7] is 5% complete
+[TASK7] is 10% complete
 
 2024-08-16 to 2024-08-30 is closed
 

@@ -29,7 +29,6 @@
 
 ---
 
-
 ## Calendrier d'activité - Sprint 1 - Issue Board
 
 - **Start date** : 08/04/2024
@@ -38,6 +37,7 @@
 - **Goal** : rights management
 - **Status** : closed
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha17&search=ACTIFLOT)
+
 ---
 
 | **Open**                                                                          | **To Do** | **Doing**                                                                         | **Done** | **Testing** | **Waiting** | **Closed** |
@@ -47,7 +47,7 @@
 
 ---
 
-Fonctionnalités sur sprint 1 :
+**Fonctionnalités sur sprint 1**
 - Droits d'accès par quartier d'immatriculation
 
 ---
@@ -58,8 +58,9 @@ Fonctionnalités sur sprint 1 :
 - **End date** : 24/05/2024
 - **Milestone** : 2.9.0-alpha18
 - **Goal** : Main screens
-- **Status** : Open
+- **Status** : Doing
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha18&search=ACTIFLOT)
+
 ---
 
 | **Open**                                                                            | **To Do** | **Doing**                                                                          | **Done** | **Testing** | **Waiting** | **Closed** |
@@ -78,7 +79,7 @@ Fonctionnalités sur sprint 1 :
 
 ---
 
-Fonctionnalités sur sprint 2 :
+**Fonctionnalités sur sprint 2**
 - Tableau de consultation des sorties
   -  Filtres sur le tableau
 - Onglets "Général", "Calendrier" de l'écran calendrier d'activité
@@ -88,3 +89,31 @@ Fonctionnalités sur sprint 2 :
 - Recette 
 
 ---
+
+## Calendrier d'activité - Sprint 3 - Issue Board
+
+- **Start date** : 27/05/2024
+- **End date** : 21/06/2024
+- **Milestone** : 2.9.0-alpha19
+- **Goal** : Filters, screens, predocumentation
+- **Status** : To do
+- [gitlab Issues board]()
+---
+
+| **Open**                                                                            | **To Do** | **Doing**                                                                          | **Done** | **Testing** | **Waiting** | **Closed** |
+|-------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------|----------|-------------|-------------|------------| 
+| Enh [#565](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/565)   |           |                                                                                    |          |             |             |            | 
+| Enh [#566](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/566)   |           |                                                                                    |          |             |             |            |
+| Enh [#567](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/567)   |           |                                                                                    |          |             |             |            |
+| Enh [#569](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/569)   |           |                                                                                    |          |             |             |            |
+| Enh [#571](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/571)   |           |                                                                                    |          |             |             |            |
+| Rec [#587](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/587)   |           |                                                                                    |          |             |             |            |             |
+<!-- .element: class="font-size-small" -->
+
+---
+
+**Fonctionnalités du sprint 3**
+- Prédocumentation
+- Tableau de saisie de l'activité
+- Recette
+
