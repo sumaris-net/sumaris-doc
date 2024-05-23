@@ -385,9 +385,14 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Date/heure
    * Zone de pêche
    * Commentaires
-4. Une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales)
-5. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
+4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
+
+**Variante(s) :**
+
+**Variante a :** 
+
+3. En mode terrain, il est possible d'activer une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales).
 
 > Réunion 21/05/2024    
 Type de vente : 
