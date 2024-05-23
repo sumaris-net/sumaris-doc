@@ -146,6 +146,7 @@ Project starts the 2023/10/01
 [14] displays on same row as [15]
 [15] displays on same row as [16]
 [16] displays on same row as [17]
+[17] displays on same row as [18]
 
 !procedure N(x,n)
 [x<size:0>n</size>]
@@ -165,6 +166,7 @@ N(4, 4) is colored in orange
 
 [o1] displays on same row as [o2]
 [o2] displays on same row as [o3]
+[o3] displays on same row as [o4]
 
 N(1, 4) as [c1] happen the 2024/02/14
 N(1, 4)  is colored in green
@@ -181,10 +183,14 @@ N(4, 7)  is colored in green
 N(5, 8) as [c5] happen the 2024/04/25
 N(5, 8)  is colored in green
 
+N(6, 9) as [c6] happen the 2024/05/23
+N(6, 9)  is colored in green
+
 [c1] displays on same row as [c2]
 [c2] displays on same row as [c3]
 [c3] displays on same row as [c4]
 [c4] displays on same row as [c5]
+[c5] displays on same row as [c6]
 
 [Spécifications] as [TASK1] starts the 2024/01/03 and requires 31 week
 [TASK1] is colored in darkTurquoise

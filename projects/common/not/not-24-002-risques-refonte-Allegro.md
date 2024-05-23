@@ -102,12 +102,12 @@
 
 ## **Matrice de risques sur la refonte Allegro**
 
-| **Risques - TECHNIQUE**                                   | Probabilité | Impact  | Criticité | Actions de mitigation                                                     |
-|-----------------------------------------------------------|-------------|---------|-----------|---------------------------------------------------------------------------|
-| Montée de version des librairies (Angular)                | Élevé       | Élevé   | Élevé     | - Mise en place de tests unitaires                                        |
-|                                                           |             |         |           | - A mettre en place en début de développement                             | 
-| Problèmes techniques                                      | Élevé       | Élevé   | Élevé     | - Revues de code régulières, tests approfondis, développement incrémental |                                                                     |
-| Régression des applicatifs sur les évolutions des schémas | Élevé       | Élevé   | Élevé     | - Mise en place d'un circuit de validation (MOE)                          |
+| **Risques - TECHNIQUE**                                   | Probabilité | Impact | Criticité | Actions de mitigation                                                               |
+|-----------------------------------------------------------|-------------|--------|-----------|-------------------------------------------------------------------------------------|
+| Montée de version des librairies (Angular)                | Élevé       | Normal | Normal     | - Mise en place de tests unitaires<br/>- A mettre en place en début de développement |
+| Problèmes techniques                                      | Normal      | Élevé  | Élevé     | - Revues de code régulières, tests approfondis, développement incrémental           |                                                                     |
+| Limitations techniques (Angular)                          | Normal      | Normal | Faible    | - Adaptation des exigences (MOA)                                                    |
+| Régression des applicatifs sur les évolutions des schémas | Élevé       | Élevé  | Élevé     | - Mise en place d'un circuit de validation (MOE)                                    |
 <!-- .element: class="font-size-extra-small" -->
 
 ---
@@ -120,26 +120,24 @@
 
 ---
 
-| **Risques - RESSOURCES**                | Probabilité | Impact    | Criticité     | Actions de mitigation                                              |
-|-----------------------------------------|-------------|-----------|---------------|--------------------------------------------------------------------|
-| Compétence de l'équipe de développement | Moyenne     | Élevé     | Élevé         | - Former, accompagner, référent technique                          |
-| Disponibilité des ressources (MOE)      | Elevé       | Moyenne   | Moyenne       | - Arbitrer les priorités                                           | 
-|                                         |             |           |               | - Augmenter le temps alloué à la refonte (+10%)                    |
-| Changements des exigences               | Élevé       | Élevé     | Élevé         | - Documentation précise des exigences et validation fréquente      |
-| Conflits d'équipe                       | Faible      | Moyenne   | Moyenne       | - Encourager la communication ouverte et la résolution de conflits |
+| **Risques - RESSOURCES**                | Probabilité | Impact    | Criticité     | Actions de mitigation                                                            |
+|-----------------------------------------|-------------|-----------|---------------|----------------------------------------------------------------------------------|
+| Compétence de l'équipe de développement | Moyenne     | Élevé     | Élevé         | - Former, accompagner, référent technique                                        |
+| Disponibilité des ressources (EIS/MOE)  | Elevé       | Moyenne   | Moyenne       | - Arbitrer les priorités<br/>- Augmenter le temps alloué à la refonte (MOE +15%) |
+| Changements des exigences               | Moyenne     | Élevé     | Élevé         | - Documentation précise des exigences et validation fréquente                    |
+| Conflits d'équipe                       | Faible      | Moyenne   | Moyenne       | - Encourager la communication ouverte et la résolution de conflits               |
 <!-- .element: class="font-size-extra-small" -->
 
 ---
 
 
-| **Risques - DELAIS**                  | Probabilité | Impact | Criticité | Actions de mitigation                                                                   |
-|---------------------------------------|-------------|--------|-----------|-----------------------------------------------------------------------------------------|
-| Retard dans la livraison des releases | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                               |   
-|                                       |             |        |           | - Rajouter des points spécifiques                                                       |
-| Retard dans la recette                | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                               |   
-|                                       |             |        |           | - Planifier/Organiser la recette                                                        | 
-| Retard dans la mise en exploitation   | Moyenne     | Élevé  | Elevé     | - Mise en pré-production à chaque release                                               |
-|                                       |             |        |           | - Mettre à jour les MEX, industrialiser les mises à jour des schémas BDD (liquide base) |
+| **Risques - DELAIS**                  | Probabilité | Impact | Criticité | Actions de mitigation                                                                                                                 |
+|---------------------------------------|-------------|--------|-----------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Retard dans la livraison des releases | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                                                                             |   
+|                                       |             |        |           | - Rajouter des points spécifiques                                                                                                     |
+| Retard dans la recette                | Moyenne     | Élevé  | Elevé     | - Affecter des ressources supplémentaires                                                                                             |   
+|                                       |             |        |           | - Planifier/Organiser la recette                                                                                                      | 
+| Retard dans la mise en exploitation   | Moyenne     | Élevé  | Elevé     | - Mise en pré-production à chaque release<br/>- Mettre à jour les MEX, industrialiser les mises à jour des schémas BDD (liquide base) |
 <!-- .element: class="font-size-extra-small" -->
 
 ---

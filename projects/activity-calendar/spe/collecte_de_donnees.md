@@ -74,6 +74,10 @@ Les saisies bureau et tablette sont envisagées.
   * PERSON2USER_PROFIL = 2
   * PROGRAM2PERSON = 2
 
+
+> Réunion du 23/05/2024 : 
+> Liste des données filtrées en fonction des droits : OK, En place 
+
 ---
 ## Ergonomie générale
 
@@ -130,8 +134,9 @@ Les informations suivantes sont affichées pour chaque calendrier :
 
 > Questions :
 > - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
-> - ISI : Stockage saisisseur en cas de saisisseurs multiples ?
-> - ISI : Prévoir traitement pour charger les calendriers vides
+> - MOE : Stockage saisisseur en cas de saisisseurs multiples ?
+
+
 
 ---
 ## Calendriers d'activité > Filtres
@@ -218,9 +223,19 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
   * Qualification de l'enquête : prévoir une option pour limiter les valeurs possibles aux QUALITATIVE_VALUE.ID = 965, 966, 967, 2555
 
-> Questions :
-> - EIS : Prévoir POC pour le commentaire/date/initiales
-> - MOA : Remonter les carac et le commentaire au-dessus de l'état des changements des carac et des armateurs ?
+> Réunion du 23/05/2024 :
+> Prévoir un onglet Général et un onglet Navires (caractéristiques, historiques des immats, couples navires-armateurs)
+> Pouvoir ajouter des photos du navire 
+> CF Capture d'écran
+
+> Réunion du 23/05/2024 :
+> Gestion des commentaires : Solution technique à faire mais spécifier le besoin avant
+> Avoir une zone commentaire - Ne pas mettre sur chaque ligne d'historique - A maquetter
+> Prévoir POC pour le commentaire/date/initiales
+
+> Réunion du 23/05/2024 :
+> Modification des spécifications : 
+> Caractéristiques des navires : Ajouter possibilité de changer l'ordre des colonnes et de sauvegarder 
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -290,16 +305,22 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 * La zone proche : table NEARBY_SPECIFIC_AREA, filtrée en fonction de la zone sélectionnée
 
 > Questions :
-> - ISI : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
-> - ISI : En mode déconnecté : quelles infos importer en local ? Prédoc ?
-> - ISI : Conserver uniquement les raccourcis CTRL+C et CTRL+V
-> - ISI : Comment fonctionne la réorganisation des métiers ?
-> - ISI/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
+> - MOE : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
+> - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
+> - MOE : Conserver uniquement les raccourcis CTRL+C et CTRL+V
+> - MOE : Comment fonctionne la réorganisation des métiers ?
+> - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
-> - ISI : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
+> - MOE : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
 > - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
-> - MOA : Valeur par défaut option du programme pour afficher/masquer le gradient de profondeur et la zone proche ?
 > - MOA : Champs concernés par la régionalisation ?
+
+> Réunion du 23/05/2024 :
+> Ergonomie de saisi : Initialiser à Actif / Inactif, à voir à l'usage
+> Affichage de la prédocumentation : l'afficher en dessous du tableau de saisi avec un bouton : OK
+> Gradient : Replier par défaut - A maquetter par EIS
+
+
 
 Actions possibles sur une cellule dans l'Allegro actuel :
   * Copier
@@ -354,6 +375,11 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 3. Le saisisseur enregistre le calendrier
 4. La date de mise à jour du calendrier est actualisée
 
+Si on enlève un métier saisi dans l'onglet Calendrier, il disparait de la liste.
+
+L'ordre des métiers du tableau dépend de l'ordre de saisi dans l'onglet Calendrier.
+
+
 **Variante(s) :**
 
 **Variante :**
@@ -374,12 +400,14 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 ![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
 
-> Questions : 
-> Libellé du métier : 
-> Font de police plus petite, 
-> Sur 3 lignes, 
+> Réunion du 23/05/2024 :
+> Libellé du métier : prendre le champ METIER.NAME
 > Tronquer et afficher  ...
 
+> Réunion du 23/05/2024 :
+> Rapport "Editer rapport"
+> Qualification de l'enquête - Tous présents (y comprit non réalisable)
+> Observateur : si + de 2, mettre Nom et prénom sur la même ligne
 
 ## Calendrier d'activité > Instanciation des calendriers vides
 
@@ -389,6 +417,24 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 > Faible cout de développement
 > Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
 > Manque un flag enquête éco dans le format
+
+> Réunion du 23/05/2024 :
+> Initialisation des calendriers sur une année : Navires inscrit au FPC
+> - Dans Allegro on ne peut pas créer de calendrier : OK
+    >   - Proposer une fonction d'importation de calendrier de l'année sur l'écran du tableau des calendriers
+>   - Mantis [61967](https://forge.ifremer.fr/mantis/view.php?id=61967): [FDR][ACTIVITE] evol : feuille de route pour l'activité 2023 en 2024
+
+---
+
+## Calendrier d'activité > Régionalisation
+
+> Réunion du 23/05/2024 :
+> Régionalisation importante pour les métiers, les zones de pêche et les ports.
+> Pas de lien métier zone de pêche. De la zone dépend le distant de gradient de distance à la côte (référentiel).
+
+> En mode tablette, activer le mode hors ligne
+> Configuration : Indiquer que l'on travail dans la zone de compétence
+
 ---
 
 ## Historique
