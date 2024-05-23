@@ -193,8 +193,7 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 7. Le saisisseur renseigne les caractéristiques de la sortie
 8. Le saisisseur enregistre
 9. Le bandeau de l'écran affiche "Lieu - date"
-10. Le saisisseur est positionné sur l'onglet "Echantillonnage". Si la caractéristique "PETS" est à "Oui", l'onglet affiche en premier un tableau de saisie des PETS (REF: OBSVENTES/SORTIE/ECH_AUTRES), 
-puis le tableau de saisie "Tirage au sort". Sinon l'onglet affiche seulement le tableau de saisie "Tirage au sort" (REF: OBSVENTES/SORTIE/ECH_METROPOLE - OBSVENTES/SORTIE/ECH_OUTREMER)
+10. Le saisisseur est positionné sur l'onglet "Echantillonnage"
 
 **Variante(s) :**
 
@@ -224,10 +223,8 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 > Questions :
 > - ISI : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
 > - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
-> - MOA : Validation observateur, Validation société : conserver ces PMFM ou les remplacer par le processus de contrôle des données de Sumaris ? 
->  * Ces champs sont-ils utilisés par les rapports Birt ?
->  * Y a t-il une validation (donnée unitaire) ou une qualification (ensemble de données) côté Ifremer ?
->  * Détail du processus de validation des données de Sumaris : l'observateur termine la saisie puis le coordinateur (prestataire) valide les données
+> - ISI : Validation observateur, Validation société : remplacer ces PMFM par le processus de contrôle des données de Sumaris, 
+rendre accessible l'édition du rapport avant terminaison de la saisie, prévoir modification ou mieux refonte des rapports birt qui doivent certainement utiliser ces pmfm
 
 ---
 ## Sortie > Echantillonnages en métropole
@@ -236,12 +233,15 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table-pets-random.svg)
 
-Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
+Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création d'une sortie.
 La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
+Si la caractéristique "PETS" est à "Oui", l'onglet affiche en premier le tableau de saisie des PETS (REF: OBSVENTES/SORTIE/ECH_AUTRES),
+puis le tableau de saisie "Tirage au sort". Sinon l'onglet affiche seulement le tableau de saisie "Tirage au sort" (REF: OBSVENTES/SORTIE/ECH_METROPOLE)
+
 
 #### Scénario principal
 
-1. Dans l'onglet "Echantillonnages", le saisisseur saisie la liste des PETS observés s'il à indiqué PETS à Oui dans la sortie. 
+1. Dans l'onglet "Echantillonnages", le saisisseur saisie la liste des PETS observés s'il à indiqué PETS à "Oui" dans la sortie. 
 2. Il renseigne aussi la liste des espèces à observer.
 
 ### Sortie > Echantillonnages en métropole > Saisie de PETS
@@ -260,26 +260,26 @@ par rapport à celles définies dans la liste des espèces à observer.
 
 #### Scénario principal
 
-1. Dans le tableau "PETS", le saisisseur ajoute les PETS observés. Les informations suivantes sont affichées pour chaque espèce :
+1. Dans le tableau "PETS", les informations suivantes sont affichées pour chaque espèce :
     * Espèce commerciale
     * Espèce scientifique
     * Navire
-    * Observé ? (par défaut coché)
+    * Observé ?
     * Zone de pêche
     * Type de vente
     * Commentaire
-2. Pour chaque PETS, le saisisseur renseigne :
+2. Le saisisseur ajoute les PETS observés. Pour chaque PETS, le saisisseur renseigne :
     * L'espèce commerciale*
     * L'espèce scientifique
-3. Le saisisseur enregistre l'échantillon observé
-4. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+3. La case à cocher "Observé ?" est automatiquement cochée
+4. Le saisisseur enregistre l'échantillon observé
+5. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 **Variante(s) :**
 
 **Variante 4a :** Le saisisseur supprime un PETS
 
 #### Détails techniques :
-* Nom de l'onglet : il fait partie du dictionnaire thématique. Dans le cas d'ObsVentes, le nom sera "PETS"
 * Echantillonnage : LANDING
 * Vente : SALE
 * Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
@@ -302,28 +302,25 @@ Dans l'onglet échantillonnage, l'observateur renseigne la liste des espèces à
    * Zone de pêche
    * Type de vente
    * Commentaire
-2. Le système affiche :
-   * Le nombre d'espèces observées
-   * Le nombre d'espèces minimal à observer
-     * Un avertissement est affiché dans le cas ou le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer
-3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
-4. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation*
-5. Le saisisseur enregistre les échantillonnages
-6. Le bandeau de l'écran affiche "Lieu - Date"
-7. L'encart sur le saisisseur s'affiche
-8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+2. Le système affiche le nombre d'espèces minimal à observer
+3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"* 
+4. Le système actualise le compteur d'espèces observées
+5. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation*
+6. Le saisisseur enregistre les échantillonnages
+7. Le bandeau de l'écran affiche "Lieu - Date"
+8. L'encart sur le saisisseur s'affiche
+9. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 
-Liste exhaustives des raisons de la non observation : 
-   * Pas d'apport
-   * Accès au site impossible
-   * Annulation observateur
-   * Blocage de la profession
-   * Autre
+Liste exhaustive des raisons de non observation : 
+
 
 **Variante(s) :**
 
-**Variante c :** 
+**Variante b :**
+2. Un warning apparait lorsque le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer [Retour en 2]
+
+**Variante a :** 
 8. Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
 Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" [Retour en 8]
 
@@ -333,7 +330,12 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 * Vente : SALE
 * Priorité : RANK_ORDER
 * Observé ? : PMFM à créer
-* Raison de non observation : PMFM à créer
+* Raison de non observation : PMFM à créer avec les valeurs qualitatives suivantes : 
+  * Pas d'apport
+  * Accès au site impossible
+  * Annulation observateur
+  * Blocage de la profession
+  * Autre
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
 ---
@@ -344,7 +346,7 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 
 ![ui-landings](/projects/obsvente/spe/images/landings-table-outremer.svg)
 
-Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création de sortie.
+Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création d'une sortie.
 La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
 
 #### Scénario principal
