@@ -74,14 +74,14 @@ Project starts the 2024/04/08
 
 [Testing1] requires 1 week
 [TASK1]->[Testing1]
-[Demo MOA 1] happens 1 day after [Testing1]'s end
+
 
 [Sprint 2] as [TASK2] requires 4 weeks
 [TASK2] is colored in green
 [TASK1]->[TASK2]
 [Testing2] requires 1 week
 [TASK2]->[Testing2]
-[Demo MOA/COORD 1] happens 1 day after [Testing2]'s end
+[Demo MOA 1] happens 3 day after [Testing2]'s end
 
 [pre-prod] as [PREPROD] requires 2 week and starts the 6th of May 2024
 [PREPROD] is colored in salmon
@@ -91,46 +91,41 @@ Project starts the 2024/04/08
 [TASK2]->[TASK3]
 [Testing3] requires 1 week
 [TASK3]->[Testing3]
-[Demo MOA 2] happens 1 day after [Testing3]'s end
+[Demo MOA 2] happens 3 day after [Testing3]'s end
 
 [Sprint 4] as [TASK4] requires 3 weeks
 [TASK4] is colored in Lavender/LightBlue
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
 [TASK4]->[Testing4]
-[Demo MOA 4] happens 1 day after [Testing4]'s end
+[Demo MOA 3] happens 3 day after [Testing4]'s end
 
 [Sprint 5] as [TASK5] requires 3 weeks
 [TASK5] is colored in Lavender/LightBlue
 [TASK4]->[TASK5]
 [Testing5] requires 1 week and starts the 5th of August 2024
 [TASK5]->[Testing5]
-[Demo MOA 5] happens 1 day after [Testing5]'s end
+[Demo MOA 4] happens 3 day after [Testing5]'s end
 
 [Sprint 6] as [TASK6] requires 4 weeks and starts the 5th of August 2024
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
-[Demo MOA 6] happens 1 day after [Testing6]'s end
+[Demo MOA 5] happens 3 day after [Testing6]'s end
 
 [Sprint 7] as [TASK7] requires 4 weeks and starts the 2th of September 2024
 [TASK7] is colored in Lavender/LightBlue
 [TASK6]->[TASK7]
 [TASK7]->[Testing7]
 [Testing7] requires 1 week and starts the 22th of September 2024
+[Demo MOA 6] happens 2 day after [Testing7]'s end
 
-[Sprint 8] as [TASK8] requires 3 weeks and starts the 1th of October 2024
-[TASK8] is colored in Lavender/LightBlue
-[TASK7]->[TASK8]
-
-
-
-[validation] as [VAL] requires 2 week and starts the 22th of October 2024
+[validation] as [VAL] requires 3 week and starts the 1th of October 2024
 [VAL] is colored in orange
-[TASK8]->[VAL]
+[Testing7]->[VAL]
 
-[Production] as [PROD] requires 1 week and starts the 1th of Novembre 2024
+[Production] as [PROD] requires 1 week and starts the 22th of October 2024
 [PROD] is colored in green
-
+[VAL]->[PROD]
 @endgantt
