@@ -56,7 +56,9 @@ const paths = {
   src_css: ['src/css/*.css'],
   src_js: ['src/**/*.js'],
   src_layout: ['src/layout/*.html'],
-  src_plantuml: folders_svg.map(dir => dir + '*/**/*.puml'),
+  src_plantuml: folders_svg.map(dir => dir + '*/**/*.puml')
+      // FIXME - Exclude gantt diagrams
+      .concat(folders_svg.map(dir => '!' + dir + '*/**/*-planning-*.puml')),
   src_svg: folders_svg.map(dir => dir + '*/**/*.svg')
 };
 
@@ -152,11 +154,18 @@ function appGenerateSvg(done) {
 
   log(colors.green('Generating SVG...'));
   var options = {
-    continueOnError: false, // default = false, true means don't emit error event
-    pipeStdout: false, // default = false, true means stdout is written to file.contents
+    continueOnError: true, // default = false, true means don't emit error event
+    pipeStdout: true, // default = false, true means stdout is written to file.contents
   };
   return gulp.src(folders_svg)
-      .pipe(exec((file) => `java -Dfile.encoding=${projectCharset} -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset ${projectCharset} -progress -duration -nometadata`, options))
+      .pipe(
+          exec((file) => `java -Dfile.encoding=${projectCharset} -jar lib/plantuml-${plantumlVersion}.jar -tsvg "${file.path}/**.puml" -charset "${projectCharset}" -progress -duration -nometadata`, options)
+      )
+      .on('error', (err) => {
+        // print the error (can also use console.log here)
+        log(colors.yellow('Erreur lors de la génération des SVG : ' + (err?.message || err)));
+        console.error('Erreur lors de la génération des SVG :', err);
+      })
       .on('end', done);
 }
 
