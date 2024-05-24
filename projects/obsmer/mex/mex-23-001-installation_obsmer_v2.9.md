@@ -37,6 +37,11 @@ RAS
   grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- grants sur `SORTING_MEASUREMENT_SEQ`
+  ```sql
+  grant SELECT on SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
 - Trigger sur `TR_PROGRAM_ID`
   ```sql
       create or replace TRIGGER TR_PROGRAM_ID
@@ -56,6 +61,13 @@ RAS
               delete from M_PROGRAM P where P.CODE=:old.CODE;
           end case;
       end;
+-```
+
+- Ajout de niveaux d'acquisition sur `ACQUISITION_LEVEL`, ``, ``
+  ```sql
+    insert into ACQUISITION_LEVEL (CODE, NAME) values ('SORTING_BATCH','Marée et vente observées - Sumaris');
+    insert into ACQUISITION_LEVEL (CODE, NAME) values ('CATCH_BATCH','Capture - Sumaris');
+    insert into ACQUISITION_LEVEL (CODE, NAME) values ('SORTING_BATCH_INDIVIDUAL','Mesure individuelle de capture- Sumaris');    
 -```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
@@ -249,9 +261,19 @@ RAS
 
 - Modification du synonyme `M_PROGRAM_SEQ` en `PROGRAM_SEQ`
   ```sql
-  create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
+    create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
 -```
 
+- Modification du synonyme `SORTING_MEASUREMENT_SEQ` en `SORTING_MEASUREMENT_B_SEQ`
+  ```sql
+    create or replace synonym SORTING_MEASUREMENT_B_SEQ for SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ;
+- ```
+  
+- Modification du synonyme `SORTING_MEASUREMENT_SEQ` en `SORTING_MEASUREMENT_P_SEQ`
+  ```sql
+    create or replace synonym SORTING_MEASUREMENT_P_SEQ for SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ;
+- ```
+  
 - Modification du trigger `TR_PROGRAM`
   ```sql
     create or replace trigger TR_PROGRAM
@@ -293,6 +315,41 @@ end;
           delete from SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF where PROGRAM_FK=(select P.CODE from SIH2_ADAGIO_DBA.M_PROGRAM P where P.ID = :old.PROGRAM_FK) and LOCATION_CLASSIFICATION_FK=:old.LOCATION_CLASSIFICATION_FK;
       end case;
   end;
+-```
+
+- Modification du trigger `TR_SORTING_MEASUREMENT_B`
+  ```sql
+    create or replace trigger TR_SORTING_MEASUREMENT_B
+      instead of insert or update or delete
+      on SORTING_MEASUREMENT_B
+    begin
+      case
+        WHEN INSERTING THEN
+          -- SORTING_MEASUREMENT_B itself
+          insert into SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_B(ID, NUMERICAL_VALUE, ALPHANUMERICAL_VALUE, DIGIT_COUNT, PRECISION_VALUE, RANK_ORDER, CONTROL_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, DEPARTMENT_FK, QUALITY_FLAG_FK,
+                                                            PMFM_FK, QUALITATIVE_VALUE_FK, SORTING_BATCH_FK)
+          values (:new.ID, :new.NUMERICAL_VALUE, :new.ALPHANUMERICAL_VALUE, :new.DIGIT_COUNT, :new.PRECISION_VALUE, :new.RANK_ORDER, :new.CONTROL_DATE, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.RECORDER_DEPARTMENT_FK,
+                  :new.QUALITY_FLAG_FK, :new.PMFM_FK, :new.QUALITATIVE_VALUE_FK, :new.BATCH_FK);
+          -- M_SORTING_MEASUREMENT_B (map columns of M_SORTING_MEASUREMENT_B for sumaris)
+          insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_SORTING_MEASUREMENT_B(ID, RANK_ORDER)
+          values (:new.ID, :new.RANK_ORDER);
+        WHEN UPDATING THEN
+          -- SORTING_MEASUREMENT_B itself
+          update SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_B M set M.NUMERICAL_VALUE=:new.NUMERICAL_VALUE, M.ALPHANUMERICAL_VALUE=:new.ALPHANUMERICAL_VALUE, M.DIGIT_COUNT=:new.DIGIT_COUNT, M.PRECISION_VALUE=:new.PRECISION_VALUE, M.RANK_ORDER=:new.RANK_ORDER,
+                                                             M.CONTROL_DATE=:new.CONTROL_DATE, M.VALIDATION_DATE=:new.VALIDATION_DATE, M.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, M.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS,
+                                                             M.DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK, M.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK, M.PMFM_FK=:new.PMFM_FK, M.QUALITATIVE_VALUE_FK=:new.QUALITATIVE_VALUE_FK
+          where M.ID = :new.ID;
+          -- M_SORTING_MEASUREMENT_B update if row exits
+          update M_SORTING_MEASUREMENT_B MSM set MSM.RANK_ORDER=:new.RANK_ORDER
+          where MSM.ID = :new.ID; 
+          -- M_SORTING_MEASUREMENT_B insert if row not exists
+          insert into M_SORTING_MEASUREMENT_B (ID, RANK_ORDER)
+          select SM.ID, :new.RANK_ORDER from SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_B SM where SM.ID = :new.ID and not exists (select * from M_SORTING_MEASUREMENT_B MSM where  MSM.ID = :new.ID);
+        WHEN DELETING THEN
+          delete from SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_B SMB where SMB.ID=:old.ID;
+          delete from M_SORTING_MEASUREMENT_B MSMB where MSMB.ID=:old.ID;
+      end case;
+    end;
 -```
 
 ## Mise à jour du programme SIH-OBSMER

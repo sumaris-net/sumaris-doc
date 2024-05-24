@@ -7,7 +7,11 @@ saltDiagram {
 
   <b>Douarnenez - 08/02/2022
   --
+
   {/  Détails | <b> Échantillonnages}
+  <back:red><font color=white><i>Moins de 15 espèces observées (justifiez si non observée)
+  .
+  { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
   { <&plus> <&trash> }
   ..
 	{#
@@ -19,9 +23,8 @@ saltDiagram {
         []. | ^BSH - Peau bleue^ | ^                        ^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
         == | * | * | * | * | * | * | * | * | * | *
          {
-             <&list><b>Tirage au sort       <back:red><font color=white><i>Moins de 15 espèces observées (justifiez si non observée)
-             .
-             { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
+             <&list><b>Tirage au sort
+
          } | * | * | * | * | * | * | * | * | * | *
         .
         1 | POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
