@@ -1,0 +1,38 @@
+@startsalt
+{
+  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
+  --
+  {/ Général | <b>Navires | Calendrier | Métiers | Zones d'activité}
+  ..
+  {/ <&clock><b>Historique | <&camera-slr>Photos}
+  ..
+  {{
+  <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
+    .
+    {
+    . | Caractéristiques des navires
+    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction | FPC | <b>...
+       123456 | 06/04/2021 | 31/12/2022 | SONNY | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
+    .
+
+    . | Historique des immatriculations navires
+    . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation | <b>...
+       123456 | 01/01/1967 | . | MA - Marseille}
+    .
+
+    . | Couples navires-armateurs
+    . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur | <b>...
+       123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
+    .
+
+    . | Photos
+    }
+  }
+
+}
+
+  .
+  --
+  { [Fermer] | [Sauvegarder] }
+}
+@endsalt

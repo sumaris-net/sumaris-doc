@@ -2,42 +2,12 @@
 {
   Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
-  {/ <b>Général | Mois d'activité | Métiers | Zones d'activité}
+  {/ <b>Général | Navires | Calendrier | Métiers | Zones d'activité}
   ..
   .
   {{
-  <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
-    {
-    . | Caractéristiques des navires
-    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction | FPC
-       123456 | 06/04/2021 | 31/12/2022 | SONNY | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
-    .
-
-    . | Historique des immatriculations navires
-    . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation
-       123456 | 01/01/1967 | . | MA - Marseille}
-    .
-
-    . | Couples navires-armateurs
-    . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur
-       123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
-    }
-  }|{+
-                   { <font color=grey size=10>Saisisseur
-                   Obs1
-                   <font color=grey size=10>Groupe EI
-                   --
-                   <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
-                   <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
-                   .
-                   <font color=grey size=10>Mode saisie <b>bureau
-                   .
-                   [ Terminer la saisie]
-                   }}}
-  .
-  {
     Objectif d'enquête directe ?* | { (X) <b>Oui | () Non }
-    Enquête éco ?* | { (X) <b>Oui | () Non }
+    Enquête éco ?* | { (X) <b>Oui | () Non }} |
   }
   .
   {
@@ -50,20 +20,35 @@
      . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
      . | Habitudes de vente à la criée : | ^         ^
      }
-  }
+  } . {+
+                           {
+                           <font color=grey size=10>Stratégie
+                           ACTIFLOT démarrage le 01/01/2019
+                           --
+                           <font color=grey size=10>Saisisseur
+                           Obs1
+                           <font color=grey size=10>Groupe EI
+                           --
+                           <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
+                           <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
+                           .
+                           <font color=grey size=10>Mode saisie <b>bureau
+                           .
+                           [ Terminer la saisie]
+                           }}
+    <b>Commentaires :
+         {+ 19.01.2017 : Appel sans réponse
+            08/03/2019 : Conversation téléphonique
+            2020 : Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS
+            de temps en temps à ERU
+            12/02/2022 : Hélice cassée fin 2022
+            .
+            .
+            .
+            .
+            .
+         }
   .
-  <b>Commentaires :
-       {+ 19.01.2017 : Appel sans réponse
-          08/03/2019 : Conversation téléphonique
-          2020 : Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS de temps en temps à ERU
-          12/02/2022 : Hélice cassée fin 2022
-          .
-          .
-          .
-          .
-          .
-       }
-
   --
   { [Fermer] | [Sauvegarder] }
 }

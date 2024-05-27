@@ -31,7 +31,7 @@
 
 ## Planning Demonstration MOA
 
-| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | Status     |
+| **Sprint** | **Milestone** | **Release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | Status     |
 |------------|---------------|---------------|--------------------------|----------------------------------|------------|
 | Sprint 1   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
 | Sprint 2   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2023               | -                                | Closed     |

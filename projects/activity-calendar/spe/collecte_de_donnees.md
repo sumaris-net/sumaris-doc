@@ -11,6 +11,7 @@
 - [Calendriers d'activité](#calendriers-dactivité)
 - [Calendriers d'activité > Filtres](#calendriers-dactivité-filtres)
 - [Calendrier d'activité > Général](#calendrier-dactivité-général)
+- [Calendrier d'activité > Navires](#calendrier-dactivité--navires)
 - [Calendrier d'activité > Calendrier](#calendrier-dactivité-calendrier)
 - [Calendrier d'activité > Métiers](#calendrier-dactivité-métiers)
 
@@ -195,18 +196,21 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 #### Scénario principal
 
 1. Le saisisseur clique sur un calendrier d'activité
-2. Le bandeau de l'écran affiche "Immatriculation du navire - Nom du navire - <b>Activité Année</b>"
-3. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 4 onglets :
+2. Le bandeau de l'écran affiche "Navire : Immatriculation du navire - Nom du navire - <b>Activité Année</b>"
+3. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 5 onglets :
    * "Général", onglet par défaut
-   * "Mois d'activité"
+   * "Navires"
+   * "Calendrier"
    * "Métiers"
    * "Zones d'activité"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
    * La stratégie
-   * L'état des changements des caractéristiques et des armateurs du navire
+   * Le nom du saisisseur
+   * La société du saisisseur
+   * Le mode de saisie (Bureau ou Déconnecté)
 5. Le saisisseur renseigne (par défaut les valeurs sont vides) :
-   * L'objectif d'enquête directe
-   * L'enquête éco
+   * L'objectif d'enquête directe (Oui / Non)
+   * L'enquête éco (Oui / Non)
    * Les caractéristiques de l'enquête
 6. Le saisisseur saisit un commentaire
 7. Le saisisseur enregistre
@@ -224,18 +228,37 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
   * Qualification de l'enquête : prévoir une option pour limiter les valeurs possibles aux QUALITATIVE_VALUE.ID = 965, 966, 967, 2555
 
 > Réunion du 23/05/2024 :
-> Prévoir un onglet Général et un onglet Navires (caractéristiques, historiques des immats, couples navires-armateurs)
-> Pouvoir ajouter des photos du navire 
-> CF Capture d'écran
-
-> Réunion du 23/05/2024 :
 > Gestion des commentaires : Solution technique à faire mais spécifier le besoin avant
 > Avoir une zone commentaire - Ne pas mettre sur chaque ligne d'historique - A maquetter
 > Prévoir POC pour le commentaire/date/initiales
 
+
+-- 
+## Calendrier d'activité > Navires
+
+**REF: ACTIVITY_CALENDAR/VESSELS**
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-vessels-history.svg)
+
+#### Scénario principal
+
+1. Le saisisseur clique sur l'onglet Navires
+2. 2 sous onglets s'affichent : 
+   * Historique
+   * Photos
+3. L'onget historique affiche, sous forme de tableau, les états des changementsdes caractéristiques et des armateurs du navire sur l'année :
+    * Un tableau sur les caractéristiques des navires
+    * Un tableau sur historisation des immatriculations navires
+    * Un tableau sur les couples navires-armateurs
+    * Un zone contenant l'historisation des photos des navires
+      * _A détailler_
+4. L'onglet photo permet d'ajouter des photos récentes du navire
+    * _A détailler_
+5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
+
 > Réunion du 23/05/2024 :
-> Modification des spécifications : 
-> Caractéristiques des navires : Ajouter possibilité de changer l'ordre des colonnes et de sauvegarder 
+> - Tableau caractéristiques des navires : afficher les caractéristiques des x dernières années ? x = 2 ? ou avoir un nb max de lignes puis une pagination ?
+> - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment, carac technique et fpc à droite
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -246,7 +269,10 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 
 #### Scénario principal
 
-1. Dans l'onglet "Mois d'activité", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
+L'écran est composé d'un tableau de saisie du calendrier d'activité, mois par mois et, en dessous, d'un tableau sur la prédocumentation.
+La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écran.
+
+1. Dans l'onglet "Calendrier", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
    * L'activité du navire*
@@ -269,11 +295,15 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * Le nombre d'hommes à bord par marée
    * Un ou plusieurs métiers. Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
      * Une ou deux zones. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
-         * Le gradient de côte*
-         * Le gradient de profondeur (visibilité définie par une option du programme)
+         * Les gradients 
+           * De côte*
+           * De profondeur (visibilité définie par une option du programme)
          * La zone proche (visibilité définie par une option du programme)
+         * Les gradients et la zone sont affichés mais repliés par défaut
 4. Le saisisseur enregistre le calendrier
-5. La date de mise à jour du calendrier est actualisée
+5. le saisisseur peut afficher/masquer la prédocumentation par un bouton
+   * La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée  
+6. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
@@ -300,8 +330,9 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 * Le nombre de jours de mer : PMFM.ID = 241
 * Le nombre de jours de pêche : PMFM.ID = 242
 * Le nombre d'hommes à bord par marée : PMFM.ID = 109
-* Le gradient de côte : filtrée en fonction de la zone sélectionnée
-* Le gradient de profondeur : table DEPTH_GRADIENT, filtrée en fonction de la zone sélectionnée
+* Les gradients 
+  * de côte : filtrée en fonction de la zone sélectionnée
+  * de profondeur : table DEPTH_GRADIENT, filtrée en fonction de la zone sélectionnée
 * La zone proche : table NEARBY_SPECIFIC_AREA, filtrée en fonction de la zone sélectionnée
 
 > Questions :
@@ -316,9 +347,8 @@ Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOA : Champs concernés par la régionalisation ?
 
 > Réunion du 23/05/2024 :
+> 
 > Ergonomie de saisi : Initialiser à Actif / Inactif, à voir à l'usage
-> Affichage de la prédocumentation : l'afficher en dessous du tableau de saisi avec un bouton : OK
-> Gradient : Replier par défaut - A maquetter par EIS
 
 
 
@@ -400,28 +430,32 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 ![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
 
-> Réunion du 23/05/2024 :
-> Libellé du métier : prendre le champ METIER.NAME
-> Tronquer et afficher  ...
+- Libellé du métier : 
+  * Prendre le champ METIER.NAME 
+  * Tronquer et afficher  ...
 
-> Réunion du 23/05/2024 :
-> Rapport "Editer rapport"
-> Qualification de l'enquête - Tous présents (y comprit non réalisable)
-> Observateur : si + de 2, mettre Nom et prénom sur la même ligne
+- Rapport "Editer rapport"
+  * Qualification de l'enquête - Tous présents (y comprit non réalisable)
+  * Observateur : si + de 2, mettre Nom et prénom sur la même ligne
 
 ## Calendrier d'activité > Instanciation des calendriers vides
 
-> Propositions :
-> Dans l'application (responsable de programme) : Importer un Csv (liste navires)
-> Rajout d'une fonction d'export
-> Faible cout de développement
-> Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
-> Manque un flag enquête éco dans le format
+Dans l'application (responsable de programme) : Importer un Csv (liste navires)
+
+Rajout d'une fonction d'export (_Faible cout de développement_)
+ 
+Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
+    * Manque un flag enquête éco dans le format
+
+Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lors de l'import
 
 > Réunion du 23/05/2024 :
 > Initialisation des calendriers sur une année : Navires inscrit au FPC
+
 > - Dans Allegro on ne peut pas créer de calendrier : OK
+> 
     >   - Proposer une fonction d'importation de calendrier de l'année sur l'écran du tableau des calendriers
+>
 >   - Mantis [61967](https://forge.ifremer.fr/mantis/view.php?id=61967): [FDR][ACTIVITE] evol : feuille de route pour l'activité 2023 en 2024
 
 ---
@@ -429,11 +463,18 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 ## Calendrier d'activité > Régionalisation
 
 > Réunion du 23/05/2024 :
+> 
 > Régionalisation importante pour les métiers, les zones de pêche et les ports.
+> 
 > Pas de lien métier zone de pêche. De la zone dépend le distant de gradient de distance à la côte (référentiel).
-
+>
 > En mode tablette, activer le mode hors ligne
+> 
 > Configuration : Indiquer que l'on travail dans la zone de compétence
+> 
+> Ajouter la zone de compétence dans la popup de configuration du mode hors-ligne
+> 
+> Réunion prévue le 06/06/2024 (avec Armelle Rouyer)
 
 ---
 

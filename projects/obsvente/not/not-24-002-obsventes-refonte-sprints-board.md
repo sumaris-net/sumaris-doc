@@ -6,6 +6,22 @@
 
 ---
 
+---
+
+## Planning Demonstration MOA - TODO
+
+| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | Status     |
+|------------|---------------|---------------|--------------------------|----------------------------------|------------|
+| Sprint 1   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
+| Sprint 2   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2023               | -                                | Closed     |
+| Sprint 3   | 21/06/2024    | 2.9.0-alpha19 | 04/07/2023               | To defined                       | On going   |
+| Sprint 4   | 12/07/2024    | 2.9.0-alpha20 | 25/07/2023               | -                                | Future     |
+| Sprint 5   | 02/08/2024    | 2.9.0-alpha21 | 16/08/2023               | -                                | Future     |
+| Sprint 6   | 30/08/2024    | 2.9.0-alpha22 | 12/09/2023               | To defined                       | Future     |
+| Sprint 7   | 27/09/2024    | 2.9.0-alpha23 | 08/10/2023               | -                                | Future     |
+<!-- .element: class="font-size-small" -->
+
+
 ## ObsVentes - Sprint 1 - Issues Board
 
 - **Start date** : 11/03/2024
