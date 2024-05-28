@@ -129,14 +129,14 @@ Résumé des craintes émit par la MOA lors de la réunion du 21/03/2024 :
 
 ---
 
-**SOCLE COMMUNE : Respecte des exigences techniques et conceptuelles**
+**SOCLE COMMUN : Respect des exigences techniques et conceptuelles**
 
 - Chaque volet dispose de sa propre sémantique thématique grace à un mécanisme de  configurable
 - Chaque volet dispose de sa propre charte graphique 
 - L'architecture modulable offre la possibilité d'utiliser directement un composant (écran) ou sinon d'en créer
-nouveau pour un besoin plus spécifique (sur la base du composant principale)
-- Les développement et les livraisons d'autres applications (pour les pêcheurs de Bretagne par exemple) n'ont pas d'impact sur les applications Ifremer
+nouveau pour un besoin plus spécifique (sur la base du composant principal)
+- Les développements et les livraisons d'autres applications (pour les pêcheurs de Bretagne par exemple) n'ont pas d'impact sur les applications Ifremer
 - Les demandes d'évolutions d'autres clients ne sont pas un frein aux évolutions et au maintien en condition opérationnelle des applications Ifremer 
 - L'Ifremer à la maitrise du modèle de données et est garant de ce modèle. Aucune décision impactante n'est appliquée sur le modèle de données sans concertation avec l'Ifremer
 
-**_A tout moment, si ces exigences ne semblent pas être respectées, il peut être décidé de diverger vers une branche séparée_**
+**_À tout moment, si ces exigences ne semblent pas être respectées, il peut être décidé de faire diverger le code des applications Ifremer vers une branche séparée_**
