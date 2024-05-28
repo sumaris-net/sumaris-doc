@@ -163,7 +163,7 @@ function appGenerateSvg(done) {
       )
       .on('error', (err) => {
         // print the error (can also use console.log here)
-        log(colors.yellow('Erreur lors de la génération des SVG : ' + (err?.message || err)));
+        log(colors.yellow('Erreur lors de la génération des SVG : ' + (err && err.message || err)));
         console.error('Erreur lors de la génération des SVG :', err);
       })
       .on('end', done);
