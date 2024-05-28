@@ -253,7 +253,7 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
     * Un zone contenant l'historisation des photos des navires
       * _A détailler_
 4. L'onglet photo permet d'ajouter des photos récentes du navire
-    * _A détailler_
+    * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
 5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
 
 > Réunion du 23/05/2024 :
@@ -430,9 +430,9 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 ![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
 
-- Libellé du métier : 
-  * Prendre le champ METIER.NAME 
-  * Tronquer et afficher  ...
+- Libellé du métier :
+  * Afficher le label METIER.LABEL et sur une autre ligne, afficher le champ METIER.NAME
+    * Si le champ METIER.NAME est trop long, tronquer et afficher ...
 
 - Rapport "Editer rapport"
   * Qualification de l'enquête - Tous présents (y comprit non réalisable)

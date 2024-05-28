@@ -6,21 +6,21 @@
 
 ---
 
----
+## Planning Demonstration MOA - Doing
 
-## Planning Demonstration MOA - TODO
-
-| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | Status     |
+| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status** |
 |------------|---------------|---------------|--------------------------|----------------------------------|------------|
-| Sprint 1   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
-| Sprint 2   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2023               | -                                | Closed     |
-| Sprint 3   | 21/06/2024    | 2.9.0-alpha19 | 04/07/2023               | To defined                       | On going   |
-| Sprint 4   | 12/07/2024    | 2.9.0-alpha20 | 25/07/2023               | -                                | Future     |
-| Sprint 5   | 02/08/2024    | 2.9.0-alpha21 | 16/08/2023               | -                                | Future     |
-| Sprint 6   | 30/08/2024    | 2.9.0-alpha22 | 12/09/2023               | To defined                       | Future     |
-| Sprint 7   | 27/09/2024    | 2.9.0-alpha23 | 08/10/2023               | -                                | Future     |
-<!-- .element: class="font-size-small" -->
+| Sprint 1   | 02/04/2024    | 2.9.0-alpha16 | -                        | -                                | Closed     |
+| Sprint 2   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
+| Sprint 3   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2024               | -                                | Closed     |
+| Sprint 4   | 21/06/2024    | 2.9.0-alpha19 | 04/07/2024               | -                                | On going   |
+| Sprint 5   | 13/08/2024    | 2.9.0-alpha20 | -                        | -                                | Future     |
+| Sprint 6   | 19/09/2024    | 2.9.0-alpha21 | 03/10/2024               | To defined                       | Future     |
+| Sprint 7   | 27/12/2024    | 2.9.0-alpha22 | 06/02/2025               | To defined                       | Future     |
+| Sprint 8   | 27/03/2025    | 2.9.0-alpha23 | 17/04/2025               | -                                | Future     |
+<!-- .element: class="font-size-extra-small" -->
 
+---
 
 ## ObsVentes - Sprint 1 - Issues Board
 
@@ -87,7 +87,7 @@ Fonctionnalités sur sprint 2 :
 ## ObsVentes - Sprint 3 - Issues Board
 
 - **Start date** : 29/04/2024
-- **End date** : 21/05/2024
+- **End date** : 24/05/2024
 - **Milestone** : 2.9.0-alpha18
 - **Goal** :
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha18)
@@ -117,7 +117,7 @@ Fonctionnalités sur sprint 3 :
 ## ObsVentes - Sprint 4 - Issues Board
 
 - **Start date** : 27/05/2024
-- **End date** : 10/06/2024
+- **End date** : 21/06/2024
 - **Milestone** : 2.9.0-alpha19
 - **Goal** :
 - [gitlab Issues board](...)
