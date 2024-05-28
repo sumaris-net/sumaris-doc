@@ -7,8 +7,9 @@ if [[ "_" == "_${PROJECT_DIR}" ]]; then
   export PROJECT_DIR
 fi;
 
+PROJECT_CHARSET=UTF-8
 JAR_DIR="${PROJECT_DIR}/lib"
-JAR_VERSION="1.2022.7"
+JAR_VERSION="1.2024.3"
 JAR_FILE="${JAR_DIR}/plantuml-${JAR_VERSION}.jar"
 JAR_URL="https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${JAR_VERSION}/plantuml-${JAR_VERSION}.jar"
 
@@ -28,5 +29,5 @@ fi;
 
 echo "--- Converting all PlatUML files from ${PROJECT_DIR} into SVG..."
 cd ${PROJECT_DIR}
-java -jar ${JAR_FILE} -tsvg "./**.puml" -charset UTF-8 -progress -duration -nometadata
+java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tsvg "./**.puml" -charset "${PROJECT_CHARSET}" -progress -duration -nometadata
 echo "Done"

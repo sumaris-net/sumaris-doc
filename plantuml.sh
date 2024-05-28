@@ -1,11 +1,17 @@
 #!/bin/bash
 
-PROJECT_DIR=`pwd`
+
+# Get to the root project
+if [[ "_" == "_${PROJECT_DIR}" ]]; then
+  SCRIPT_DIR=$(dirname $0)
+  PROJECT_DIR=$(cd "${SCRIPT_DIR}" && pwd)
+  export PROJECT_DIR
+fi;
+
 PROJECT_CHARSET=UTF-8
 JAR_DIR="${PROJECT_DIR}/lib"
 JAR_FILE="${JAR_DIR}/plantuml.jar"
 JAR_VERSION="1.2024.3"
-#JAR_VERSION="1.2022.7"
 JAR_FILENAME="plantuml-${JAR_VERSION}.jar"
 JAR_FILE="${JAR_DIR}/${JAR_FILENAME}"
 JAR_URL="https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/${JAR_VERSION}/plantuml-${JAR_VERSION}.jar"
@@ -28,12 +34,14 @@ checkJarExists() {
 
 generateSvg() {
   echo "Converting all PlatUML files from $(pwd) into SVG, using charset ${PROJECT_CHARSET}..."
+  cd ${PROJECT_DIR} || exit 1
   java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tsvg "./**.puml" -charset "${PROJECT_CHARSET}" -progress -duration -nometadata
   echo "Done"
 }
 
 generatePng() {
   echo "Converting all PlatUML files from $(pwd) into PNG, using charset ${PROJECT_CHARSET}..."
+  cd ${PROJECT_DIR} || exit 1
   java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tpng "./**.puml" -charset "${PROJECT_CHARSET}" -progress -duration -nometadata
   echo "Done"
 }
