@@ -129,7 +129,7 @@ Résumé des craintes émit par la MOA lors de la réunion du 21/03/2024 :
 
 ---
 
-**SOCLE COMMUN : Respect des exigences techniques et conceptuelles**
+## SOCLE COMMUN : Respect des exigences techniques et conceptuelles
 
 - Chaque volet dispose de sa propre sémantique thématique grace à un mécanisme de  configurable
 - Chaque volet dispose de sa propre charte graphique 
