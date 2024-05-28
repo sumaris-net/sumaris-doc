@@ -9,6 +9,7 @@ if [[ "_" == "_${PROJECT_DIR}" ]]; then
 fi;
 
 PROJECT_CHARSET=UTF-8
+PLANTUML_CHARSET=US-ASCII
 JAR_DIR="${PROJECT_DIR}/lib"
 JAR_FILE="${JAR_DIR}/plantuml.jar"
 JAR_VERSION="1.2024.3"
@@ -33,14 +34,14 @@ checkJarExists() {
 }
 
 generateSvg() {
-  echo "Converting all PlatUML files from $(pwd) into SVG, using charset ${PROJECT_CHARSET}..."
+  echo "Converting all PlatUML files from ${PROJECT_DIR} into SVG, using charset ${PROJECT_CHARSET}..."
   cd ${PROJECT_DIR} || exit 1
   java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tsvg "./**.puml" -charset "${PROJECT_CHARSET}" -progress -duration -nometadata
-  echo "Done"
+  echo "Conversion to SVG done"
 }
 
 generatePng() {
-  echo "Converting all PlatUML files from $(pwd) into PNG, using charset ${PROJECT_CHARSET}..."
+  echo "Converting all PlatUML files from ${PROJECT_DIR} into PNG, using charset ${PROJECT_CHARSET}..."
   cd ${PROJECT_DIR} || exit 1
   java -Dfile.encoding=${PROJECT_CHARSET} -jar ${JAR_FILE} -tpng "./**.puml" -charset "${PROJECT_CHARSET}" -progress -duration -nometadata
   echo "Done"
