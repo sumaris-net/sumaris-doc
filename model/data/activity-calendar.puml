@@ -28,4 +28,6 @@ ActivityCalendar "0..1" *-- "0..*" GearUseFeatures
 VesselUseFeatures "0..1" *-- "0..*" FishingArea
 GearUseFeatures "0..1" *-- "0..*" FishingArea
 
+ActivityCalendar -left-> "0..*" Person: "observers"
+
 @enduml
