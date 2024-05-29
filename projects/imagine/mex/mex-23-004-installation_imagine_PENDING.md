@@ -25,7 +25,7 @@ Liste des tickets réalisés :
   # [Optionnel] Nb years for ElasticSearch vessels indexation (used to limit vessel features/registration) 
   sumaris.elasticsearch.vessel.snapshot.scheduling.nbYears=5
   
-  # [Optionnel] Cron expression, to update the vessels indexation (Hourly by default) 
+  # [Optionnel] Cron expression, to update the vessels indexation (Daily by default) 
   sumaris.elasticsearch.vessel.snapshot.scheduling.cron=0 0 * * * ?
   
   # Limit vessel indexation/search to specific VesselType (e.g. "Fishing vessel", "Scientific vessel")
