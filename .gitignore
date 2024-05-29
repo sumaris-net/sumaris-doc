@@ -8,3 +8,4 @@ model/testdot.svg
 /dist/
 /.local/
 /node_modules
+/src/timestamp.txt
