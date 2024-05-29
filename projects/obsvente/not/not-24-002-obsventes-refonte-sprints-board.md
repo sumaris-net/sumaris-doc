@@ -22,6 +22,21 @@
 
 ---
 
+## Contenu des démonstrations MOA
+
+- Présentation de la nouvelle release (sprint)
+    * Nouvelles évolutions/corrections embarquées
+    * Limitations, bugs référencés
+
+- Planification de la release suivante
+    * Évolutions prévues (MOE)
+    * Évolutions souhaitées par la MOA (arbitrage)
+    * Corrections de bugs souhaitées par la MOA (arbitrage)
+
+**La recette MOA peut démarrer**
+
+---
+
 ## ObsVentes - Sprint 1 - Issues Board
 
 - **Start date** : 11/03/2024

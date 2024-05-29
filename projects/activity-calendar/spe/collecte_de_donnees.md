@@ -252,13 +252,25 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
     * Un tableau sur les couples navires-armateurs
     * Un zone contenant l'historisation des photos des navires
       * _A détailler_
-4. L'onglet photo permet d'ajouter des photos récentes du navire
+4. L'onglet "Historique" permet d'afficher l'historique des photos du navire
+    * Par défaut, on affiche l'historique des photos sur 3 années précédentes (date début au 1er Janvier)
+      * Ce nombre d'année est paramètrable dans les préférences
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
-5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
+5. L'onglet "Photo" permet d'ajouter des photos récentes du navire
+    * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
+6. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
+
+
+Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
 
 > Réunion du 23/05/2024 :
 > - Tableau caractéristiques des navires : afficher les caractéristiques des x dernières années ? x = 2 ? ou avoir un nb max de lignes puis une pagination ?
 > - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment, carac technique et fpc à droite
+
+
+> Questions MOA 
+
+> Filtrage de période pour l'historique des photos des navires. Combien d'année ? 
 
 ---
 ## Calendrier d'activité > Calendrier

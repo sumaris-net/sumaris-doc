@@ -1,5 +1,6 @@
 # Calendrier d'activité - Development
 
+---
 
 # Issues
 
@@ -8,10 +9,12 @@
 - [ACTIFLOT] [Calendriers d'activité] [#568] Création des filtres du tableau de consultation
 - [ACTIFLOT] [Calendriers d'activité] [#567] Création de l'onglet "Général"
 - [ACTIFLOT] [Calendriers d'activité] [#571] POC tableau de saisie de l'activité
+- [ACTIFLOT] [Technique] Mise en place env préprod - ISI
+
+---
 
 # Issues to create
 - [ACTIFLOT] [Référentiel] MAJ référentiels - SISMER
-- [ACTIFLOT] [Technique] Mise en place env préprod - ISI
 - [ACTIFLOT] [Technique] Mise en place env prod - ISI
 - [ACTIFLOT] [Gestion des droits]
 - [ACTIFLOT] [Calendrier d'activité] POC commentaire
@@ -42,6 +45,20 @@
 | Sprint 7   | 27/09/2024    | 2.9.0-alpha23 | 08/10/2024               | -                                | Future     |
 <!-- .element: class="font-size-extra-small" -->
 
+---
+
+## Contenu des démonstrations MOA
+
+- Présentation de la nouvelle release (sprint)
+  * Nouvelles évolutions/corrections embarquées
+  * Limitations, bugs référencés 
+
+- Planification de la release suivante
+  * Évolutions prévues (MOE)
+  * Évolutions souhaitées par la MOA (arbitrage)
+  * Corrections de bugs souhaitées par la MOA (arbitrage)
+
+**La recette MOA peut démarrer**
 
 ---
 
