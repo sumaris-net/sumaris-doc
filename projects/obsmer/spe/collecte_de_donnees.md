@@ -279,18 +279,17 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 **Variante(s) :** 
 
-**Variante 2a** - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (<b>A REALISER)
+**Variante 2a** - Par une option de configuration ne sont affichées que les caractéristiques  valorisés (**A REALISER**)
 
 > Questions/Remarques :
 
-> VFA -> EIS : prép-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
-
+> VFA à EIS : pré-requis : Pour que le menu "Engins" soit actif, la marée doit être saisie et enregistrée ?
 
 > **Réunion MOA 19/02/2024** :
 
-> VFA -> MOA :  le type d'engin est un complément à l'engin (il faut le laisser) : caractéristique de l'engin (PSFM)
+> VFA à MOA : le type d'engin est un complément à l'engin (il faut le laisser) : caractéristique de l'engin (PSFM)
 
-> VFA -> EIS : Mode ou on met en dur les PMFMs que l'on voir (mettre des PMFMs pour distinguer les engins)
+> VFA à EIS : Mode ou on met en dur les PMFMs que l'on voit (mettre des PMFMs pour distinguer les engins)
 
 #### Détails Techniques
 
@@ -316,7 +315,7 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
     * Le nombre d'engin attribué à la marée est affiché au niveau de l'onglet "Engin" : l'ajout d'un engin incrémente le compteur
 4. L'observateur peut charger des caractéristiques des engins existants en cliquant sur le bouton "Rechercher" (Variante 2a)
 
-> VFA -> ISI : Refaire l'IHM (fenêtre modale, voir prototype)
+> VFA à ISI : Refaire l'IHM (fenêtre modale, voir prototype)
 
 Saisie des caractéristiques d'un engin - Exemple avec un engin de type "Filet"
 
@@ -341,7 +340,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
       * Type d'engin
       * Le libellé de l'engin
       * Les caractéristiques (affichage des PSFM renseignés seulement)
-      * La période de la dernière utilisation (VFA -> MOA : A renommer)
+      * La période de la dernière utilisation (VFA à MOA : A renommer)
       * Un commentaire 
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
@@ -409,7 +408,7 @@ Le choix des dates de début/fin d'opération (filage/virage) se paramètre dans
 
 > **Réunion MOA 19/02/2024** :
  
->  VFA -> MOA : laisser a possibilité de saisir début/fin de virage (mise à l'eau), début/fin filage : date + heure + position pour ces 4 moments
+>  VFA à MOA : laisser a possibilité de saisir début/fin de virage (mise à l'eau), début/fin filage : date + heure + position pour ces 4 moments
 
 > Paramètrage via les options du programme
 
@@ -616,7 +615,7 @@ Définition de PETS).
 
 > Questions:
 
-> VFA -> MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (il manque `Obligation à débarquer`)
+> VFA à MOA : Destination du produit : PSFM `PRODUCT_DESTINATION` (il manque `Obligation à débarquer`)
 
 ---
 ## Opération > Capture > Navigation
@@ -638,7 +637,7 @@ Navigation dans l'arbre des captures
 
 **REF: OBSMER/OPERATION/CAPTURE/COPIER-COLLER**
 
-L'observateur à la possibilité de faire des "Copier-Coller" et des "Déplacer vers" d'un lot d'espèce d'une catégorie à une autre (Exemple : Appat -> Consommation humaine)
+L'observateur à la possibilité de faire des "Copier-Coller" et des "Déplacer vers" d'un lot d'espèce d'une catégorie à une autre (Exemple : Appat à Consommation humaine)
 
 #### Scénario principal
 
@@ -773,7 +772,7 @@ Il n'y a pas la possibilité d'ajouter des PSFMs dans le tableau de saisie des c
 
 > Questions :
 
-> VFA -> MOA/EIS : Compatibilité du modele d'arbre différent des données précédemment saisies : Données précédentes d'un arbre avec Macro Déchets par exemple
+> VFA à MOA/EIS : Compatibilité du modele d'arbre différent des données précédemment saisies : Données précédentes d'un arbre avec Macro Déchets par exemple
 > 
 > La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
 
@@ -1127,7 +1126,7 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 
 > Remarques :
 
-> VFA -> EIS : supprimer l'IHM ci dessous
+> VFA à EIS : supprimer l'IHM ci dessous
 
 ## Mesures individuelles (1/2)
 
