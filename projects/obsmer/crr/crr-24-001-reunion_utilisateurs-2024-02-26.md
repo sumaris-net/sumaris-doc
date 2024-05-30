@@ -6,7 +6,7 @@
 > - Vincent FACHERO (Ifremer)
 > - Marion SCAVINNER (Ifremer)
 > - Glenn PRIGENT (Ifremer)
-> - Yohann Le Traon (Ifremer)
+> - Johann Le Traon (Ifremer)
 > - Vincent BADTS (Ifremer)
 > - Benoit LAVENIER (EIS)
 > - Caroline DESTREEZ (CODRA)

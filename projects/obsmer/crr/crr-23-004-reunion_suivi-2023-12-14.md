@@ -8,7 +8,7 @@
 > - Marion SCAVINNER (Ifremer)
 > - Joanna VEGA (Ifremer)
 > - Thomas Cloatre (Ifremer)
-> - Yohann Le Traon (Ifremer)
+> - Johann Le Traon (Ifremer)
 > - Vincent BADTS (Ifremer)
 > - Benoit LAVENIER (EIS)
 
