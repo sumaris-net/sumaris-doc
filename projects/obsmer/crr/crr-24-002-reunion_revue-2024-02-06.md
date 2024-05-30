@@ -5,7 +5,7 @@
 > Présents :
 > - Vincent FACHERO (Ifremer)
 > - Caroline DESTREEZ (Codra)
-> - Yohann Le Traon (Ifremer)
+> - Johann Le Traon (Ifremer)
 > - Marion SCAVINNER (Ifremer)
 > - Vincent BADTS (Ifremer)
 

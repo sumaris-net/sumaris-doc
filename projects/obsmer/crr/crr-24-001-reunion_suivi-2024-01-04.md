@@ -11,7 +11,7 @@
 >
 > Excusés :
 > - Glenn PRIGENT (Ifremer)
-> - Yohann Le Traon (Ifremer)
+> - Johann Le Traon (Ifremer)
 > - Vincent BADTS (Ifremer)
 
 Prochaine réunion : Vendredi 12/01/2024 à 14h  
