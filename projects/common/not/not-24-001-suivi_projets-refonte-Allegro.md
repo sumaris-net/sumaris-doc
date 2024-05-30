@@ -261,7 +261,7 @@ https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_
 - ObsVentes : En mode tablette et PC
   - La saisie sur tablette est importante
   
-- ObsMer : Saisie sur PC priotiaire
+- ObsMer : Saisie sur PC prioritaire
 
 ---
 ## Point contractuel
