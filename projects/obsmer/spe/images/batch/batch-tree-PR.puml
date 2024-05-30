@@ -5,10 +5,10 @@
    {T
        + Capture    | .
        ++ Partie retenue
-       +++ Appat | <i><color:blue>[1]
        +++ Consommation humaine | <i><color:blue>[2]
-       +++ Godaille | <i><color:blue>[2]
        +++ Obligation à débarquer | <i><color:blue>[2]
+       +++ Appat | <i><color:blue>[1]
+       +++ Godaille | <i><color:blue>[2]
        ++ Partie non retenue, Vrac
        ++ Partie non retenue, Hors-Vrac
    }

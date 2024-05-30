@@ -7,6 +7,7 @@
        ++ Partie retenue
        ++ Partie non retenue, Vrac
        +++ Détaillé
+       ++++ Animaux
        ++++ <back:#DDD>Ecosystèmes Marins Vulnérables | <i><color:blue>[1]
        +++ Non détaillé | <color:black>[0]
        ++ Partie non retenue, Hors-Vrac
@@ -21,14 +22,14 @@
   } | . | {
     { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Ecosystèmes Marins Vulnérables] | (1) | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
 
-    {Poids total (kg) : | "  <i><color:blue>10   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+    {Poids total (kg) : | "  <i><color:blue>10   "  }
 
     {Coef. éch. : | " 1/1    " | . | . | . | . | . |  Poids échant (kg)* : | "     " }
 
-    { [ ] Inventaire exhaustif des espèces ? }
+    { [ ] Inventaire exhaustif ? }
     ---
-    { [ <&plus> ] | [<b>((<&plus><b>)] | [<&trash>] }
     {#
+                    <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | *
           [ ] | # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
           [ ] | 1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square> <&image>
         }

@@ -742,7 +742,7 @@ Contrôle de la saisie d'une capture :
        * Il est possible de naviguer par ce bandeau pour atteindre n'importe quel noeud de l'arbre
     *  Un compteur indique le nombre d'espèce commerciale saisie à côté du nom du devenir de l'espèce
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
-    *  Une zone de saisie du poids total (en Kg)
+    *  Une zone affichant le poids total calculé (en Kg) 
       *  Une case à cocher indique si la poids est estimé  (Oui si la case est coché)
     *  ~~Une zone de saisie du poids échantillonné (en Kg)~~
     *  ~~Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir~~
@@ -812,18 +812,42 @@ fois le tri effectué par l’équipage = Rejets détaillés + Rejets non détai
 
 **Rejets détaillés** = poissons + autres espèces commerciales.
 
-L'arbre PNR, Vrac détaillé contient un sous menu :
+L'arbre PNR, Vrac détaillé contient le sous menu suivant :
+- Animaux
 - Ecosystèmes Marins Vulnérables
-
-~~L'écran de saisi du menu PNR, Vrac contient les champs suivants, automatiquement renseignés :~~
-~~- Poids total~~
 
 #### Scénario principal
 
 1. L'observateur déroule l'arbre PNR, Vrac détaillé
 2. Le sous menu suivant s'affiche :
+    * Animaux
     * Ecosystèmes Marins Vulnérables
 3. Le menu "Détaillé" n'est pas sélectionnable
+
+--- 
+
+## Opération > Capture > PNR, Vrac > Détaillé > Animaux
+
+![ui-batch-PNR-VRAC-ANI](/projects/obsmer/spe/images/batch/batch-tree-PNR-VRAC-ANI.svg)
+
+#### Scénario principal
+
+1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Vrac détaillé
+2. La fenêtre de saisie des "Animaux" s'affiche
+3. L'observateur renseigne les espèces observées :
+    * Si le poids total est estimé, par une case à cocher
+    * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
+    * Pour chaque nouvelle espèce, il doit renseigner :
+        * Le code de l'espèce scientifique de l'espèce
+        * Le poids total, en kg
+        * Le nombre d'individu total
+        * Un bouton (en forme d'histogramme) permet d'activer l'écran de saisie de mesure individuelle pour l'espèce commerciale (OBSMER/OPERATION_CAPTURE/MI)
+        * Un commentaire
+            * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+        * Une photo (A REALISER)
+        * L'observateur peut supprimer une espèce scientifique en la sélectionnant et en cliquant sur l'icône "Poubelle"
+4. Le poids total est calculé à partir des poids saisies pour chaque EMV
+
 
 --- 
 

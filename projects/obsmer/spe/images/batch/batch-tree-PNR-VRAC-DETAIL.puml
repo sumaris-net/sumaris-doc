@@ -7,6 +7,7 @@
        ++ Partie retenue
        ++ <back:#DDD>Partie non retenue, Vrac
        +++ Détaillé
+       ++++ Animaux
        ++++ Ecosystèmes Marins Vulnérables | <color:black>[0]
        +++ Non détaillé | <color:black>[0]
        ++ Partie non retenue, Hors-Vrac
@@ -20,6 +21,10 @@
    }
   } | . | {
     { [Capture] | / | [<b>Partie non retenue, Vrac] | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+    .
+   {Poids total (kg) : | "  <i><color:blue>10   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+
+    {Coef. éch. : | " 1/1    " | . | . | . | . | . |  Poids échant (kg)* : | "     " }
 
     }
   -- | -- | --

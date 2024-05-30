@@ -22,11 +22,11 @@
   } | . | {
     { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Ecosystèmes Marins Vulnérables] | (1) | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
     .
-    {Poids total (kg) : | "  <i><color:blue>10   " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | [ ] Estimé ? }
+    {Poids total (kg) : | "  <i><color:blue>10   " }
     .
-    ---
-    { [ <&plus> ] | [<b>((<&plus><b>)] | [<&trash>] }
+    --
     {#
+          <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | * | * | * | * | * | * | *
           [ ] | # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
           [ ] | 1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square> <&image>
         }

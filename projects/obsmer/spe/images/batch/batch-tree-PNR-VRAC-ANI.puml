@@ -7,10 +7,10 @@
        ++ Partie retenue
        ++ Partie non retenue, Vrac
        +++ Détaillé
+       ++++ <back:#DDD>Animaux
+       ++++ Ecosystèmes Marins Vulnérables | <i><color:blue>[1]
        +++ Non détaillé | <color:black>[0]
        ++ Partie non retenue, Hors-Vrac
-       +++ <back:#DDD>Animaux | <i><color:blue>[2]
-       +++ Ecosystèmes Marins Vulnérables | <color:black>[0]
    }
     .
     .
@@ -20,9 +20,9 @@
       [<&checkmark> Contrôler] | [ <b><< ]
    }
   } | . | {
-    { [Capture] | / | [Partie non retenue, Hors Vrac] | [Détaillé] | [<b>Animaux] | (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
-    ---
-      {Poids total (kg) : | "  <i><color:blue>26   " }
+    { [Capture] | / | [Partie non retenue, Vrac] | [Détaillé] | [<b>Animaux] | (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | { [<&chevron-left>] | [<&chevron-right>] } }
+      {Poids total (kg) : | "  <i><color:blue>19   " }
+      { [ ] Inventaire exhaustif des espèces ? }
     ---
     {#
           <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | * | *

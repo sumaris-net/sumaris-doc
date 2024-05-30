@@ -5,10 +5,10 @@
    {T
        + Capture
        ++ Partie retenue
-       +++ <back:#DDD>Appat | <i><color:blue>[2]
        +++ Consommation humaine | <i><color:blue>[1]
-       +++ Godaille | <i><color:blue>[1]
        +++ Obligation à débarquer| <i><color:blue>[2]
+       +++ <back:#DDD>Appat | <i><color:blue>[2]
+       +++ Godaille | <i><color:blue>[1]
        ++ Partie non retenue, Vrac
        ++ Partie non retenue, Hors-Vrac
    }
@@ -22,7 +22,7 @@
   } | . | {
     { [Capture] | / | [Partie retenue] | [<b>Appat]| (2) | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |  { [<&chevron-left>] | [<&chevron-right>] }}
 
-    {Poids total (kg)* : | " 0    " | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. | [ ] Estimé ?}
+    {Poids total (kg)* : | " 0    " }
 
     { [ ] Inventaire exhaustif des espèces ?
     ---
@@ -30,10 +30,10 @@
 
 
     {#
-          . | {[ <&plus> ] | [ <&trash> ] } | . | . | . | . | . | .
-          # | <&arrow-thick-top> <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Catégorie | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
-          1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | ^Gros^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
-          2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | ^Moyen^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
+          <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | * | * | * | * | * | * | *
+          [ ] |# |  <b>Espèce commerciale  | <b>Présentation | <b>État | <b>Catégorie | <b>Poids total (kg)     |  <b>Taux échant  | <b>Poids échant. | <b>Nb indiv échant. | <&menu>
+          [ ] |1 | ^MNZ- Baudroie       ^ | ^ Entier   ^ | ^ Frais ^ | ^Gros^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
+          [ ] |2 | ^BSS - Bar européen       ^ | ^ Eviscéré ^ | ^ Frais ^ | ^Moyen^ | { "50" | [ ] Estimé ? } | .   |   { "10" | [ ] Estimé ? }          | "4" | <&bar-chart> <&comment-square> <&image>
         }
   }
 
