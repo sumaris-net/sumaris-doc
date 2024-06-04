@@ -742,12 +742,10 @@ Contrôle de la saisie d'une capture :
        * Il est possible de naviguer par ce bandeau pour atteindre n'importe quel noeud de l'arbre
     *  Un compteur indique le nombre d'espèce commerciale saisie à côté du nom du devenir de l'espèce
 3. L'écran de saisie pour la "Consommation humaine est composé des éléments suivants"
-    *  Une zone affichant le poids total calculé (en Kg) 
-      *  Une case à cocher indique si la poids est estimé  (Oui si la case est coché)
-    *  ~~Une zone de saisie du poids échantillonné (en Kg)~~
-    *  ~~Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir~~
-       * ~~ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs~~
+    * Une zone affichant le poids total calculé (en Kg) 
+    * Une case à cocher indiquant si l'inventaire des espèces est exhaustif (par défaut oui, cochée)
     *  Un tableau affichant la liste des espèces commerciale à saisir
+        *  Une case à cocher indique si la poids est estimé  (Oui si la case est coché)
 4. L'observateur peut ajouter des espèces commerciale dans le tableau en cliquant sur le bouton :heavy_plus_sign:
 5. Il peut renseigner pour chaque espèce commerciale :
     * Le nom de l'espèce
@@ -769,17 +767,15 @@ Contrôle de la saisie d'une capture :
 7. Un commentaire
    *  Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
 8. Une photo (A REALISER)
-7. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+9. L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+
+Il n'y a pas la possibilité d'ajouter des PSFMs dans le tableau de saisie des caractéristiques.
 
 > Questions :
 
 > VFA -> MOA/EIS : Compatibilité du modele d'arbre différent des données précédemment saisies : Données précédentes d'un arbre avec Macro Déchets par exemple
-La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
-
-
-> 14/03/2024 : Pas de possibilité d'ajouter des PSFMs : OK
-
-> MOA (attente confirmation Marion) : Retirer la notion d'échantillonnage : Enlever ou griser "Coef. éch." (1/1) et "Poids échant. (kg)" pour Conso, Appat, Godaille, Obligatoire à débarquer : ATTENTE
+> 
+> La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
 
 
 ---
@@ -793,11 +789,10 @@ La données prend le pas sur l'arbre : à voir (cas d'usage à faire)
 #### Scénario principal
 
 Les écrans et les scénarios sont les mêmes pour toutes les parties retenus
-- "Appat"
 - "Consommation humaine"
-- "Godaille"
 - "Obligation à débarquer"
-
+- "Appat"
+- "Godaille"
 
 ---
 
@@ -834,9 +829,12 @@ L'arbre PNR, Vrac détaillé contient le sous menu suivant :
 
 1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Vrac détaillé
 2. La fenêtre de saisie des "Animaux" s'affiche
-3. L'observateur renseigne les espèces observées :
-    * Si le poids total est estimé, par une case à cocher
+    * Une zone affiche le poids total calculé (en Kg)
+    * Une case à cocher permet d'indiquer si l'inventaire des espèces est exhaustif (par défaut oui, cochée)
+3. L'observateur peut ajouter des espèces dans le tableau en cliquant sur le bouton :heavy_plus_sign:
+4. L'observateur renseigne les espèces observées
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
+    * Une case à cocher permet d'indiquer si les poids sont estimés
     * Pour chaque nouvelle espèce, il doit renseigner :
         * Le code de l'espèce scientifique de l'espèce
         * Le poids total, en kg
@@ -845,8 +843,7 @@ L'arbre PNR, Vrac détaillé contient le sous menu suivant :
         * Un commentaire
             * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
         * Une photo (A REALISER)
-        * L'observateur peut supprimer une espèce scientifique en la sélectionnant et en cliquant sur l'icône "Poubelle"
-4. Le poids total est calculé à partir des poids saisies pour chaque EMV
+5. L'observateur peut supprimer une espèce scientifique en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 
 --- 
@@ -861,14 +858,10 @@ L'arbre PNR, Vrac détaillé contient le sous menu suivant :
 
 1. L'observateur sélectionne le menu "Ecosystèmes Marins Vulnérables" de l'arbre PNR, Vrac détaillé
 2. La fenêtre de saisie des "Ecosystèmes Marins Vulnérables" s'affiche
-3. L'observateur renseigne les éléments suivants :
-    * Le poids total *, en kg
-        * Une case à cochée permet d'indiquer s'il le poids a été estimé
-   *  Une zone de saisie du poids échantillonné (en Kg)
-   *  Une zone de saisie du taux d'échantillonnage (1/n), avec le dénominateur n à saisir
-       * ration ou % : VFA - Attente retour MOA - La question et à poser aux observateurs
-4. L'observateur renseigne les catégories EMV observées :
-    * Une case à cocher lui permet d'indiquer si l'inventaire des espèces est exhaustif
+    * Une zone affiche le poids total calculé (en Kg)
+    * Une case à cocher permet d'indiquer si l'inventaire est exhaustif (par défaut oui, cochée)
+3. L'observateur renseigne les catégories EMV observées :
+    * Une case à cochée permet d'indiquer s'il les poids sont estimés
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catégorie d'EMV
     * Un bouton ((:heavy_plus_sign:) lui permet d'ajouter toutes les catégories d'EMV
     * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
@@ -879,7 +872,7 @@ L'arbre PNR, Vrac détaillé contient le sous menu suivant :
         * Des photos (A REALISER)
           * Il n'y a pas de limitation en nombre de photos
           * Il est possible de proposer des tailles en dimensions/poids pour l'image (configurable dans les options)
-    * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
+4. L'observateur peut supprimer une catégorie d'EMV en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 ## Opération > Capture > PNR, Vrac > Non Détaillé
 
@@ -893,19 +886,20 @@ L'arbre PNR, Vrac détaillé contient le sous menu suivant :
 
 1. L'observateur sélectionne le menu "Non détaillé" de l'arbre PNR, Vrac 
 2. La fenêtre de saisie des rejets s'affiche
-3. L'observateur renseigne les éléments suivants :
-    * Une case à cochée permet d'indiquer s'il le poids a été estimé
-4. L'observateur peut remplir automatiquement toutes les espèces en cliquant sur le bouton ((:heavy_plus_sign:) :
-   * Une ligne d'EMV et une ligne d'animaux sont ajoutées
-5. L'observateur peut ajouter, un à un, un rejet en cliquant sur le bouton :heavy_plus_sign:
+   * Une zone affiche le poids total calculé (en Kg)
+     * Le poids total est calculé à partir des poids saisies pour chaque rejet
+   * Une case à cocher permet d'indiquer si l'inventaire est exhaustif (par défaut oui, cochée)
+   * Une case à cochée permet d'indiquer s'il le poids a été estimé
+3. L'observateur peut renseigner la nature des rejets en cliquant sur le bouton ((:heavy_plus_sign:) :
+    * Une ligne d'animaux et une ligne "Inerte et végétaux" sont ajoutées
+4. L'observateur peut sinon ajouter, un à un, un rejet en cliquant sur le bouton :heavy_plus_sign:
    * Une nouvelle ligne est ajoutée au tableau
-     * Le choix de la nature du rejet ("Animaux" ou "EMV") s'ouvre automatiquement pour la saisie
-6. Pour chaque rejet, l'observateur renseigne :
+     * Le choix de la nature du rejet ("Animaux" ou "Inerte et végétaux") s'ouvre automatiquement pour la saisie
+5. Pour chaque rejet, l'observateur renseigne :
    * Le poids total 
    * Un commentaire
        * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
    * Une photo (A REALISER)
-7. Le poids total est calculé à partir des poids saisies pour chaque rejet
 
 ---
 ## Opération > Capture > PNR, Hors Vrac
@@ -934,6 +928,8 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 
 1. L'observateur sélectionne le menu "Animaux" de l'arbre PNR, Hors Vrac
 2. La fenêtre de saisie des "Animaux" s'affiche
+    * Une zone affiche le poids total calculé (en Kg)
+        * Le poids total est calculé à partir des poids saisies pour chaque espèce
 3. L'observateur renseigne les espèces observées :
     * Si le poids total est estimé, par une case à cocher
     * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle espèce
@@ -961,18 +957,19 @@ Identique au scénario OBSMER/OPERATION/CAPTURE/PNR/VRAC/DETAIL
 
 1. L'observateur sélectionne le menu "Ecosystèmes Marins Vulnérables" de l'arbre PNR, Hors Vrac 
 2. La fenêtre de saisie des "Ecosystèmes Marins Vulnérables" s'affiche
-3. L'observateur renseigne les catégories EMV observées :
+    * Une zone affiche le poids total calculé (en Kg)
+      * Le poids total est calculé à partir des poids saisies pour chaque EMV
+    * Une case à cocher permet d'indiquer si l'inventaire est exhaustif (par défaut oui, cochée)
     * Si le poids total est estimé, par une case à cocher
-    * Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catgégorie d'EMV
-    * Un bouton **((**:heavy_plus_sign:**)** lui permet d'ajouter toutes les catégories d'EMV
-    * Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
-        * La catégorie
-        * Le poids total, en kg
-        * Un commentaire
-          * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
-        * Une photo (A REALISER)
-        * L'observateur peut supprimer une espèce commerciale en la sélectionnant et en cliquant sur l'icône "Poubelle"
-4. Le poids total est calculé à partir des poids saisies pour chaque EMV
+3. Un bouton :heavy_plus_sign: permet d'ajouter une nouvelle catégorie d'EMV
+4. Un bouton **((**:heavy_plus_sign:**)** lui permet d'ajouter toutes les catégories d'EMV
+5. Pour chaque nouvelle catégorie d'EMV, il doit renseigner :
+    * La catégorie
+    * Le poids total, en kg
+    * Un commentaire
+      * Une fois saisi, le commentaire s'affiche dans une info-bulle au survol de la souris
+    * Une photo (A REALISER)
+6. L'observateur peut supprimer une catégorie d'EMV en la sélectionnant et en cliquant sur l'icône "Poubelle"
 
 ---
 

@@ -29,9 +29,9 @@
     { [ ] Inventaire exhaustif ? }
     ---
     {#
-                    <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | *
-          [ ] | # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
-          [ ] | 1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square> <&image>
+                    <&arrow-thick-top> | *  | {[ <&plus> ] | [ <b>((<&plus>) ] | [ <&trash> ] | [ ] Estimé ? } | * | *
+          [ ] | Etat | # | <b>Catégorie d'EMV  | <b>Poids total (kg)     |   <&menu>
+          [ ] | <&pencil> | 1 | ^BC - Coraux noirs      ^ |  10    | <&comment-square> <&image>
         }
   }
 

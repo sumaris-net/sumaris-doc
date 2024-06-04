@@ -110,6 +110,20 @@ Le noeud est stocké dans les paramètres locaux (local setting) du navigateur.
 de sa précédente connexion.
 
 
+---
+## Commun > Gestion des droits
+
+**REF: COMMON/USERS_RIGHTS**
+
+![ui-common-rights](/projects/common/spe/images/obsmer-obsventes-users-rights.svg)
+
+(1) :
+* Si l'utilisateur est de la société Ifremer, il voit toutes les ventes
+* Si l'utilisateur n'est pas de la société Ifremer, il voit uniquement les ventes associées à sa société, en consultatio
+
+(2) : Seules les données non validées peuvent être modifiées ou supprimées
+
+
 ## Commun > Application des filtres
 
 **REF: COMMUN/FILTRES**

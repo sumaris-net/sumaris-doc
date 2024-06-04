@@ -26,9 +26,9 @@
     ---
     {#
           <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | * | *
-          [ ] | # | <b>Espèce scientifique  | <b>Poids total (kg)     |  <b>Nb indiv. total | <&menu>
-          [ ] | 1 | ^TOR - Torpille  ^ |  12   |  5   | <&bar-chart> <&comment-square> <&image>
-          [ ] | 2 | ^CON - Congar ^ |  7   |  3   |   | <&bar-chart> <&comment-square> <&image>
+          [ ] | Etat | # | <b>Espèce scientifique  | <b>Poids total (kg)     |  <b>Nb indiv. total | <&menu>
+          [ ] | <&pencil> | 1 | ^TOR - Torpille  ^ |  12   |  5   | <&bar-chart> <&comment-square> <&image>
+          [ ] | <&pencil> | 2 | ^CON - Congar ^ |  7   |  3   |   | <&bar-chart> <&comment-square> <&image>
         }
   }
 

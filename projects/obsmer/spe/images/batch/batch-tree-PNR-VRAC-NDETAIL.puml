@@ -23,14 +23,14 @@
            .
            {Poids total (kg) : | "  <i><color:blue>20  " }
 
-           { [ ] Inventaire exhaustif ? }
+           { [X] Inventaire exhaustif ? }
 
         ---
         {#
             <&arrow-thick-top> | *  | {[ <&plus> ] | [ <&trash> ] | [ ] Estimé ? } | * | *
-            [ ] | # | <b>Nature des rejets  | <b>Poids total (kg)     |  <&menu>
-            [ ] | 1 | ^ ANI - Animaux^         | 10 |  <&comment-square> <&image>
-            [ ] | 2 | ^ INV - Inerte et végétaux ^        |  10 |  <&comment-square> <&image>
+            [ ] | Etat | # | <b>Nature des rejets  | <b>Poids total (kg)     |  <&menu>
+            [ ] | <&pencil> | 1 | ^ ANI - Animaux^         | 10 |  <&comment-square> <&image>
+            [ ] | <&pencil> | 2 | ^ INV - Inerte et végétaux ^        |  10 |  <&comment-square> <&image>
           }
     }
 

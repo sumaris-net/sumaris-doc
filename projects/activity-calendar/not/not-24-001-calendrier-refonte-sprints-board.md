@@ -37,12 +37,12 @@
 | **Sprint** | **Milestone** | **Release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status** |
 |------------|---------------|---------------|--------------------------|----------------------------------|------------|
 | Sprint 1   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
-| Sprint 2   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2024               | -                                | Closed     |
-| Sprint 3   | 21/06/2024    | 2.9.0-alpha19 | 04/07/2024               | To defined                       | On going   |
-| Sprint 4   | 12/07/2024    | 2.9.0-alpha20 | - _congés MOA_           | -                                | Future     |
-| Sprint 5   | 02/08/2024    | 2.9.0-alpha21 | - _congés MOA_           | -                                | Future     |
-| Sprint 6   | 30/08/2024    | 2.9.0-alpha22 | 12/09/2024               | To defined                       | Future     |
-| Sprint 7   | 27/09/2024    | 2.9.0-alpha23 | 08/10/2024               | -                                | Future     |
+| Sprint 2   | 24/05/2024    | 2.9.0-alpha18 | 13/06/2024               | -                                | Closed     |
+| Sprint 3   | 21/06/2024    | 2.9.19        | 04/07/2024               | To defined                       | On going   |
+| Sprint 4   | 12/07/2024    | 2.9.20        | - _congés MOA_           | -                                | Future     |
+| Sprint 5   | 02/08/2024    | 2.9.21        | - _congés MOA_           | -                                | Future     |
+| Sprint 6   | 30/08/2024    | 2.9.22        | 12/09/2024               | To defined                       | Future     |
+| Sprint 7   | 27/09/2024    | 2.9.23        | 08/10/2024               | -                                | Future     |
 <!-- .element: class="font-size-extra-small" -->
 
 ---
@@ -127,7 +127,7 @@
 
 - **Start date** : 27/05/2024
 - **End date** : 21/06/2024
-- **Milestone** : 2.9.0-alpha19
+- **Milestone** : 2.9.19
 - **Goal** : Filters, screens, predocumentation
 - **Status** : To do
 - [gitlab Issues board]()

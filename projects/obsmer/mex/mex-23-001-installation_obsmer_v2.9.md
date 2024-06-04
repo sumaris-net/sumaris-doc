@@ -42,6 +42,17 @@ RAS
   grant SELECT on SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+### Creation d'un navire temporaire ? - A vérifier
+- grants sur `VESSEL_SEQ`
+  ```sql
+  grant SELECT on SIH2_ADAGIO_DBA.VESSEL_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- grants sur `M_VESSEL_REG_PERIOD_SEQ`
+  ```sql
+  grant SELECT on SIH2_ADAGIO_DBA.M_VESSEL_REG_PERIOD_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
 - Trigger sur `TR_PROGRAM_ID`
   ```sql
       create or replace TRIGGER TR_PROGRAM_ID
@@ -137,6 +148,41 @@ RAS
   inner join SIH2_ADAGIO_DBA.M_VESSEL V on S.VESSEL_FK = V.CODE
   inner join SIH2_ADAGIO_DBA.M_PROGRAM P on S.PROGRAM_FK = P.CODE
 ;
+- ```
+
+- Modification de la vue `VESSEL_FEATURES`
+  ```sql
+  create or replace view VESSEL_FEATURES as
+  select VF.ID,
+  VF.START_DATE_TIME as START_DATE,
+  VF.END_DATE_TIME as END_DATE,
+  VF.NAME,
+  VF.EXTERIOR_MARKING,
+  VF.ADMINISTRATIVE_POWER,
+  VF.GROSS_TONNAGE_GT,
+  VF.GROSS_TONNAGE_GRT,
+  VF.LOA as LENGTH_OVER_ALL,
+  --VF.LBP,
+  VF.CONSTRUCTION_YEAR,
+  VF.IRCS,
+  VF.AUXILIARY_POWER,
+  --VF.HAS_VMS,
+  VF.IS_FPC,
+  null as COMMENTS,
+  null as CONTROL_DATE,
+  null as CREATION_DATE,
+  null as VALIDATION_DATE,
+  null as QUALIFICATION_DATE,
+  null as QUALIFICATION_COMMENTS,
+  VF.UPDATE_DATE,
+  V.ID as VESSEL_FK,
+  VF.BASE_PORT_LOCATION_FK,
+  VF.HULL_MATERIAL_QV_FK,
+  null as RECORDER_DEPARTMENT_FK,
+  null as RECORDER_PERSON_FK,
+  0 as QUALITY_FLAG_FK
+  from SIH2_ADAGIO_DBA.VESSEL_FEATURES VF
+  inner join SIH2_ADAGIO_DBA.M_VESSEL V on VF.VESSEL_FK = V.CODE;
 - ```
 
 - Modification du trigger `TR_SALE`
@@ -273,6 +319,17 @@ RAS
   ```sql
     create or replace synonym SORTING_MEASUREMENT_P_SEQ for SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ;
 - ```
+
+### Creation d'un navire temporaire ? - A vérifier
+- Création du synonyme `VESSEL_SEQ`
+  ```sql
+  create or replace synonym VESSEL_SEQ for SIH2_ADAGIO_DBA.VESSEL_SEQ;
+-```
+
+- Création du synonyme `M_VESSEL_REG_PERIOD_SEQ`
+  ```sql
+  create or replace synonym VESSEL_REGISTRATION_PERIOD_SEQ for SIH2_ADAGIO_DBA.M_VESSEL_REG_PERIOD_SEQ;
+-```
   
 - Modification du trigger `TR_PROGRAM`
   ```sql
@@ -351,6 +408,8 @@ end;
       end case;
     end;
 -```
+
+
 
 ## Mise à jour du programme SIH-OBSMER
 
