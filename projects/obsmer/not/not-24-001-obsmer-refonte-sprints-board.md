@@ -19,12 +19,11 @@
 
 | **Open** | **To Do** | **Doing** |                                     **Done**                                      | **Testing** | **Waiting** | **Closed**                                                                        |
 |----------|-----------|-----------|:---------------------------------------------------------------------------------:|-------------|-------------|-----------------------------------------------------------------------------------| 
-|          |           |           |Enh [#515](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/515)  |             |             |                                                                                   |
-|          |           |           | Enh [#516](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/516) |             |             |                                                                                   |            
+|          |           |           |Enh [#515](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/515)  |             |             | Enh [#533](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/533) |
+|          |           |           | Enh [#516](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/516) |             |             | Rec [#523](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/523) |            
 |          |           |           | Enh [#519](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/519) |             |             |                                                                                   |            
 |          |           |           | Enh [#536](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/536) |             |             |                                                                                   |            
-|          |           |           | Enh [#518](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/518) |             |             |                                                                                   |            
-|          |           |           |                                                                                   |             |             | Enh [#533](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/533) |
+|          |           |           | Enh [#518](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/518) |             |             |                                                                                   |
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -53,8 +52,7 @@ Fonctionnalités sur sprint 1 :
 
 | **Open**                                                                           | **To Do**                                                                         | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
-|  |  |                                                                                   |                Enh [#535](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/535)                                                                   |             |             |            | 
-|  |                                                                                   |  |                                                                                   |             |             |    Enh [#555](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/555)        |
+|  |  |                                                                                   |                Enh [#535](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/535)                                                                   |             |             |  Enh [#555](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/555)           |
 |  |                                                                                   |  | Enh [#534](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/534) |             |             |            |
 <!-- .element: class="font-size-small" -->
 
@@ -80,8 +78,7 @@ Fonctionnalités sur sprint 2 :
 
 | **Open**                                                                          | **To Do** | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
 |-----------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
-| Enh [#584](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/584) |           |                                                                                   |                                                                                   |             |             |            | 
-|                                                                                   |           | Enh [#582](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/582) |                                                                                   |             |             |            |
+| Enh [#584](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/584) |           |                                                                      Enh [#582](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/582)              |                                                                                   |             |             |            | 
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -95,9 +92,9 @@ Fonctionnalités sur sprint 3 :
 
 ## ObsMer - Sprint 4 - Issues Board
 
-- **Start date** : XX/XX/202X
-- **End date** : XX/XX/202X
-- **Milestone** : 2.9.0-alpha19
+- **Start date** : 27/05/2024
+- **End date** : 21/06/2024
+- **Milestone** : 2.9.19
 - **Status** : Doing
 - **Goal** : NA
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha18&search=OBSMER)
@@ -106,12 +103,10 @@ Fonctionnalités sur sprint 3 :
 
 | **Open**                                                                          | **To Do** | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
 |-----------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
-| Enh [#593](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/593) |           |                                                                                   |                                                                                   |             |             |            | 
-| Enh [#591](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/591) |           | |                                                                                   |             |             |            |
+| Rec [#590](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/590) |           | Enh [#596](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596) |                                                                                   |             |             |            | 
 <!-- .element: class="font-size-small" -->
 
 ---
 
 Fonctionnalités sur sprint 4 :
-- Règle sur l'engin Pêche en bœuf et navire associé
-- Règle sur les opérations de pêche liées à l'engin (trainant / dormant)
+- Recette
