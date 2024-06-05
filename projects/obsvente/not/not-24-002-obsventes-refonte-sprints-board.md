@@ -103,7 +103,7 @@ Fonctionnalités sur sprint 2 :
 - **Milestone** : 2.9.0-alpha18
 - **Status** : Closed
 - **Goal** :
-- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha18)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=OBSVENTES&milestone_title=2.9.3-alpha18)
 
 ---
 
@@ -120,7 +120,7 @@ Fonctionnalités sur sprint 3 :
 - Ajout de l'origine dans le tableau de consultation des sorties
 - Ajout l'origine et l'état dans les filtres du tableau de consultation des sorties
 - Développement de l'onglet "PETS" de l'écran "Sortie"
-- Mettre en place la fonctionnalité pour copier-coller un lot d'espèec
+- Mettre en place la fonctionnalité pour copier-coller un lot d'espèce
 
 ---
 
@@ -132,23 +132,27 @@ Fonctionnalités sur sprint 3 :
 - **Milestone** : 2.9.19
 - **Status** : Doing
 - **Goal** :
-- [gitlab Issues board](...)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=OBSVENTES&milestone_title=2.9.19)
 
 ---
 
-| **Open** | **To Do**                                                                         | **Doing**                                                                         | **Done** | **Testing** | **Waiting** | **Closed** |
-|----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------|-------------|-------------|------------| 
-|          | Enh [#548](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/548) | Enh [#541](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/541) |          |             |             |            | 
-|          | Enh [#560](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/560) | Enh [#542](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/542) |          |             |             |            |
-|          |                                                                                   | Rec [#589](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589) |          |             |             |            |
-|          |                                                                                   | Rec [#596](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596) |          |             |             |            |
+| **Open**                                                                          | **To Do**                                                                         | **Doing**                                                                         | **Done** | **Testing** | **Waiting** | **Closed** |
+|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------|-------------|-------------|------------| 
+| Rec [#589](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589) | Enh [#548](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/548) | Enh [#541](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/541) |          |             |             |            | 
+| Rec [#596](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596) | Enh [#560](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/560) | Enh [#542](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/542) |          |             |             |            |
+|                                                                                   | Enh [#607](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/607) | Enh [#606](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/606) |          |             |             |            |
+|                                                                                   |                                                                                   | Enh [#608](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/608) |          |             |             |            |
+|                                                                                   |                                                                                   | Enh [#609](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/609) |          |             |             |            |
 <!-- .element: class="font-size-small" -->
 
 ---
 
 Fonctionnalités sur sprint 4 :
-- Gestion des droits
-- Transfert ObsDeb-ObsVentes
+- Retours de recette
+- MAJ référentiels
+- Sortie / Echantillonnage
+  - Ajout de PETS, case à cocher
+  - Outremer
 - Insérer dans Harmonie la liste des espèces à observer et la liste des PETS
 
 
