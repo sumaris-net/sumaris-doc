@@ -12,6 +12,7 @@
 - [Sortie > Détails](#sortie--détails)
 - [Sortie > Echantillonnages en métropole](#sortie--echantillonnages-en-métropole)
 - [Sortie > Echantillonnages en outremer](#sortie--echantillonnages-en-outremer)
+- [Sortie > Echantillonnages en outremer > Ajout par lot](#sortie--echantillonnages-en-outremer--ajout-par-lot)
 - [Vente > Détails](#vente--détails)
 - [Vente > Lots espèces](#vente--lots-espèces)
 - [Vente > Lots espèces > Mesures individuelles](#vente--lots-espèces--mesures-individuelles)
@@ -359,11 +360,26 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
     * Zone de pêche
     * Type de vente
     * Commentaire
-2. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
-3. Le saisisseur enregistre les échantillonnages
-4. Le bandeau de l'écran affiche "Lieu - Date"
-5. L'encart sur le saisisseur s'affiche
-6. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+2. Le saisisseur peut ajouter une espèce à échantillonner en cliquant sur le bouton :heavy_plus_sign:
+3. Le saisisseur peut ajouter un lot d'espèces à échantillonner en cliquant sur le bouton (:heavy_plus_sign:)
+    * L'écran **OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT** s'affiche
+4. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"*
+5. Le saisisseur enregistre les échantillonnages
+6. Le bandeau de l'écran affiche "Lieu - Date"
+7. L'encart sur le saisisseur s'affiche
+8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+
+---
+
+## Sortie > Echantillonnages en outremer > Ajout par lot
+
+**REF: OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT**
+
+![ui-landings](/projects/obsvente/spe/images/random-add.svg)
+
+#### Scénario principal
+
+TODO
 
 ---
 

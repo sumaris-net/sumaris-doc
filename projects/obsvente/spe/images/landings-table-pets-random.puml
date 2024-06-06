@@ -9,18 +9,18 @@ saltDiagram {
   --
 
   {/  Détails | <b> Échantillonnages}
-  <back:red><font color=white><i>Moins de 15 espèces observées (justifiez si non observée)
+  <&warning><font color=blue>Moins de 15 espèces observées (justifiez si non observée)
   .
   { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
-  { <&plus> <&trash> }
+  { <&plus> <&trash> } | <b>Y
   ..
 	{#
-	    <b>Priorité | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche| <b>Type de vente | <b>  ... | *
+	    <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche| <b>Type de vente | <b>  ... | *
          {
           <&shield><b>PETS
          } | * | * | * | * | * | * | * | * | * | * | *
-        [X]. | <&pencil> | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
-        []. | <&pencil> | ^BSH - Peau bleue^ | ^                        ^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
+        [X] 1 | <&pencil> | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | . | <&tag>
+        [] 2 | <&pencil> | ^BSH - Peau bleue^ | ^                        ^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
         == | * | * | * | * | * | * | * | * | * | *
          {
              <&list><b>Tirage au sort
