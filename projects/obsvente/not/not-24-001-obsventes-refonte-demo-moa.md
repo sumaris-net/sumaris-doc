@@ -30,7 +30,8 @@
 - Saisie d'une sortie
 
 **Limitations sur le sprint 3** 
-- [Retours de recette v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589)
+- [Retours de recette ObsVentes v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589)
+- [Retours de recette volets communs v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596)
 
 ---
 
@@ -40,12 +41,14 @@
 
 - Sumaris-ObsVentes
   - 02 Collecte de données
-     * 02.01 Consultation des sorties / Filtre sur les sorties
-     * 02.02 Saisie d'une sortie
+     * 01.01 Consultation des sorties / Filtre sur les sorties
+     * 01.02 Saisie d'une sortie
+
+L'ordre des numéros indique l'importance des tests (1 : cas nominaux)
 
 ---
 
-### Demonstration
+### Demonstration du contenu du sprint 3 d'ObsVentes
 
 ---
 
@@ -55,3 +58,47 @@
 - Démonstration - [environnement de développement](https://obsmer.sumaris.net)
   - Points réguliers d'avancement 
 - Tickets à prioriser
+
+---
+
+### Notes Réunion
+
+- Présents :
+  - Marion Scavinner (MOA/HISSEO)
+  - Johann Le Traon (MOA/HISSEO)
+  - Vincent Fachéro (MOE/ISI)
+  - Caroline Destreez (MOE/CODRA)
+
+---
+
+**Remarques MOA sur la présentation du sprint ObsVentes**
+- IMPORTANT : Que faire si le saisisseur se trompe de plan d'échantillonnage et qu'il a saisi tous les échantillonnages ?
+  - On ne doit pas être obligé de supprimer la sortie et de la refaire ! A étudier côté MOE/Equipe de développement
+
+Souhait de la MOA : convier les correspondants de façade 
+- Prévoir une démonstration en Septembre
+- ObsVentes : 4 correspondants de façade
+- ObsMer : 4 correspondants de façade
+
+---
+
+**Prévision de démo** 
+- Démo ObsVentes MOA N°3 à avancer à début Septembre
+- Démo ObsMer MOA N°3 à avancer à début Septembre
+
+Action MOE : Planning à mettre à jour (Développement/Démo MOA) - A valider avec l'équipe de développement (début de semaine 24)
+
+---
+
+**Rédaction des tests MOA pour les 3 volets**
+- Dans SquashTM
+  - Créer un dossier MOE et MOA
+  - Dupliquer les tests MOE dans le dossier MOA
+    - La MOA a ensuite toute la liberté pour modifier/enrichir les tests
+
+La MOA devra reporter les anomalies du sprint dans le ticket associé :
+- [Ticket Retours Recette ObsVentes MOA](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/614)
+
+
+
+
