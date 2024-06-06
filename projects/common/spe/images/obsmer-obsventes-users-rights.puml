@@ -1,0 +1,11 @@
+@startsalt
+{
+	{#
+     <b>Profil utilisateur | <b>Privilège de programme | <b>Consultation | <b>Création | <b>Modification | <b>Suppression | <b>Validation | <b>Accès à la prédoc
+     Administrateur de référentiels | _ | Oui | Oui | Oui(2) | Oui(2) | Oui | Oui
+     Superviseur | Responsable de programme | Oui | Oui | Oui(2) | Oui(2) | Oui | Oui
+     Observateur | Validateur | Oui(1) | Oui(1) | Oui(1)(2) | Oui(1)(2) | Oui | Oui (1)
+     Observateur | Observateur  | Oui(1) | Oui(1) | Oui(1)(2) | Oui(1)(2) | Non | Oui (1)
+    }
+}
+@endsalt
