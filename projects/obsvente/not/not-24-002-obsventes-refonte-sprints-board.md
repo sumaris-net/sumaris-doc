@@ -8,16 +8,16 @@
 
 ## Planning Demonstration MOA - Doing
 
-| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status** |
-|------------|---------------|---------------|--------------------------|----------------------------------|------------|
-| Sprint 1   | 02/04/2024    | 2.9.0-alpha16 | -                        | -                                | Closed     |
-| Sprint 2   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
-| Sprint 3   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2024               | -                                | Closed     |
-| Sprint 4   | 21/06/2024    | 2.9.19        | 04/07/2024               | -                                | On going   |
-| Sprint 5   | 13/08/2024    | 2.9.20        | -                        | -                                | Future     |
-| Sprint 6   | 19/09/2024    | 2.9.21        | 03/10/2024               | To defined                       | Future     |
-| Sprint 7   | 27/12/2024    | 2.9.22        | 06/02/2025               | To defined                       | Future     |
-| Sprint 8   | 27/03/2025    | 2.9.23        | 17/04/2025               | -                                | Future     |
+| **Sprint** | **milestone** | **release**   | **MOA Demo for testing** | **Coord. Demo for presentation**    | **Status** |
+|------------|---------------|---------------|--------------------------|-------------------------------------|------------|
+| Sprint 1   | 02/04/2024    | 2.9.0-alpha16 | -                        | -                                   | Closed     |
+| Sprint 2   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                   | Closed     |
+| Sprint 3   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2024               | -                                   | Closed     |
+| Sprint 4   | 21/06/2024    | 2.9.19        | 04/07/2024               | -                                   | On going   |
+| Sprint 5   | 13/08/2024    | 2.9.20        | -                        | -                                   | Future     |
+| Sprint 6   | 19/09/2024    | 2.9.21        | 10/09/2024               | 10/09/2024                          | Future     |
+| Sprint 7   | 27/12/2024    | 2.9.22        | 06/02/2025               | To defined                          | Future     |
+| Sprint 8   | 27/03/2025    | 2.9.23        | 17/04/2025               | -                                   | Future     |
 <!-- .element: class="font-size-extra-small" -->
 
 ---

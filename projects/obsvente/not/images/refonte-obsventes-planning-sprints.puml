@@ -78,28 +78,28 @@ Project starts the 2024/03/04
 [TASK2]->[TASK3]
 [Testing3] requires 1 week
 [TASK3]->[Testing3]
-[Demo MOA 1] happens 3 day after [Testing3]'s end
+[Demo 1 MOA] happens 3 day after [Testing3]'s end
 
 [Sprint 4] as [TASK4] requires 4 weeks and starts the 27th of May 2024
 [TASK4] is colored in green
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
 [TASK4]->[Testing4]
-[Demo MOA 2] happens 3 day after [Testing4]'s end
+[Demo 2 MOA] happens 3 day after [Testing4]'s end
 
 [Sprint 5] as [TASK5] requires 3 weeks and starts the 27th of July 2024
 [TASK5] is colored in Lavender/LightBlue
 [TASK4]->[TASK5]
 [Testing5] requires 1 week
 [TASK5]->[Testing5]
-
+[Demo 3 MOA/Corresp. (façade/régionaux)] happens 1 day after [Testing5]'s end
 [Sprint 6] as [TASK6] requires 3 weeks and starts the 1th of September 2024
 
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
-[Demo MOA 3] happens 1 day after [Testing6]'s end
+
 
 [               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
 [ActivityCalendarMEP] is colored in yellow
@@ -109,7 +109,7 @@ Project starts the 2024/03/04
 [TASK6]->[TASK7]
 [Testing7] requires 1 week
 [TASK7]->[Testing7]
-[Demo MOA 4] happens 3 day after [Testing7]'s end
+[Demo 4 MOA] happens 3 day after [Testing7]'s end
 
 [Sprint 8] as [TASK8] requires 4 weeks and starts the 1th of March 2025
 [TASK8] is colored in Lavender/LightBlue
