@@ -398,6 +398,8 @@ Les données temporaires à utiliser sont les navires et les taxons/groupes si l
 Cette utilisation de données temporaires n'est pas fréquente mais pas rare.
 Pour les espèces (doutes sur l'existence), utiliser un flag (douteux), ajouter une photo.
 
-
+> Questions MOA :
+>
+> Navires temporaires : On les tags avec le programme pour qu'ils ne soient pas prit en compte par les traitements batchs ? (OBSMER)
 
 Observateur manquant : ajouter une note dans la marée

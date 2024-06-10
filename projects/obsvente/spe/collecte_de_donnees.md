@@ -375,11 +375,48 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
 
 **REF: OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT**
 
-![ui-landings](/projects/obsvente/spe/images/random-add.svg)
+![ui-landings-random-add](/projects/obsvente/spe/images/random-add.svg)
+
+Pour ajouter des espèces à échantillonner, le saisisseur ouvre la fenêtre de sélection des espèces.
 
 #### Scénario principal
 
-TODO
+La Fenêtre est composée de 2 onglets, "Historique" et "Recherche espèces".
+
+1. Le saisisseur se positionne sur l'onglet "Historique"
+2. Un tableau affiche les informations suivantes sur les dernières espèces qui ont été échantillonnées :
+    * Une case à coche pour sélectionner l'espèce
+    * Etat de la saisie
+    * Nom commercial de l'espèce
+    * Date heure de la dernière utilisation (avec le nombre de jours distant de la date actuelle)
+    * Le nom du saisisseur ayant dernièrement utilisé l'espèce
+3. Les espèces affichées sont celles dont la date d'utilisation est inférieure à un nombre de jours (paramétrable dans les options du programme)
+4. Le saisisseur peut sélectionner une ou plusieurs espèces
+    * A la sélection, la ou les espèces sont rajoutées dans le tableau afin d'être échantillonnées
+
+    
+---
+
+## Sortie > Echantillonnages en outremer > Ajout par lot > Recherche
+
+**REF: OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT/SEARCH**
+
+![ui-landings-random-add](/projects/obsvente/spe/images/random-add-search.svg)
+
+#### Scénario principal
+
+Pour ajouter des espèces à échantillonner, le saisisseur ouvre la fenêtre de sélection des espèces.
+
+#### Scénario principal
+
+La Fenêtre est composée de 2 onglets, "Historique" et "Recherche espèces".
+
+1. Le saisisseur se positionne sur l'onglet "Recherche espèces"
+2. La liste de toutes les espèces échantillonnables apparait dans le tableau
+3. Le saisisseur peut rechercher une espèce en saisissant son code ou son libellé dans la zone de recherche
+4. La liste des espèces affichées est filtrée suivant la saisie
+5. Le saisisseur peut sélectionner l'espèce recherchée
+   * A la sélection, l'espèces est rajoutée dans le tableau afin d'être échantillonnée
 
 ---
 

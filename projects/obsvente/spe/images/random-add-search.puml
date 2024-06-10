@@ -1,0 +1,23 @@
+@startsalt
+{
+  {+
+    { | . |  <b>Sélection des espèces  }
+    --
+      {/  <&clock> Historique | <&magnifying-glass><b>Recherche espèce}
+    --
+      { <&clock> Recherche : | " code, nom " | * }
+    --
+	{#
+      <b>Etat | <&arrow-thick-top> <b>Espèces commerciale
+      <&check> | POL - Lieu jaune
+      <&check> | MNZ - Baudroie
+      <&check> | PIL - Sardive commune
+    }
+    .
+    {
+       { <font color=grey>Nombre de lignes</font> |  " 20 "  | . | . | . | . | <font color=grey>1 - 20 sur 87 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
+    }
+    { [Annuler] }
+    }
+ }
+@endsalt

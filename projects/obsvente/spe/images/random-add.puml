@@ -3,13 +3,13 @@
   {+
     { | . |  <b>Sélection des espèces  }
     --
-      {/  <&clock> <b>Historique | <&magnifying-glass>Recherche espèce | <&plus>Nouvelle espèce}
+      {/  <&clock> <b>Historique | <&magnifying-glass>Recherche espèce}
     --
 	{#
-      <b>Etat | <&arrow-thick-top> <b>Espèces commerciale    | <b>Date/heure   | <b> Saisisseur
-      <&check> | POL - Lieu jaune       | 15/05/2024 13:30<font color=grey size=10><i> il y a 6 jours | Obs1
-      <&check> | MNZ - Baudroie        | 15/05/2024 13:30<font color=grey size=10><i> il y a 6 jours | Obs1
-      <&check> | PIL - Sardive commune        | 14/05/2024 16:00<font color=grey size=10><i> il y a 7 jours | Obs1
+      # | <b>Etat | <&arrow-thick-top> <b>Espèces commerciale    | <b>Date/heure   | <b> Saisisseur
+      [ ]. | <&check> | POL - Lieu jaune       | 15/05/2024 13:30<font color=grey size=10><i> il y a 6 jours | Obs1
+      [ ]. | <&check> | MNZ - Baudroie        | 15/05/2024 13:30<font color=grey size=10><i> il y a 6 jours | Obs1
+      [ ]. | <&check> | PIL - Sardive commune        | 14/05/2024 16:00<font color=grey size=10><i> il y a 7 jours | Obs1
     }
     .
     {
