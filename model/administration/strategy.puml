@@ -4,26 +4,53 @@ hide empty members
 class Program {
 }
 
-Program "0..*" *-down-> "1" Strategy
+Program "1" *-down-> "0..*" Strategy
 
 class Strategy {
  +label
  +name
 }
 
-Strategy  --> "0..*" TaxonGroup
-Strategy  --> "0..*" ReferenceTaxon
-Strategy  --> "0..*" Gear
+class ReferenceTaxonStrategy {
+ +priorityLevel : integer [0..1]
+}
+class TaxonGroupStrategy {
+ +priorityLevel : integer [0..1]
+}
 
+Strategy --> "0..*" TaxonGroup
+Strategy --> "0..*" ReferenceTaxon
+Strategy --> "0..*" Gear
+Strategy --> "0..*" Metier
+Strategy *--> "0..*" ReferenceTaxonStrategy
+Strategy *--> "0..*" TaxonGroupStrategy
+Strategy *-- "0..*" StrategyDepartment
+
+StrategyDepartment --> "1" Department
+
+ReferenceTaxonStrategy --> "1" ReferenceTaxon
+TaxonGroupStrategy --> "1" TaxonGroup
 
 class PmfmStrategy {
-  +minValue [0..1] : double
-  +maxValue [0..1] : double
-  +defaultValue [0..1] : double
+  +minValue : double [0..1]
+  +maxValue : double [0..1]
+  +defaultValue : double [0..1]
   +acquisitionNumber: integer
   +rankOrder: integer
   +isMandatory : boolean
-  +signifFiguresNumber [0..1] : integer
+  +signifFiguresNumber : integer [0..1]
+}
+
+class AppliedStrategy {
+  +id: integer
+}
+
+class AppliedPeriod {
+  +startDate: Date
+  +endDate: Date
+}
+
+class PmfmAppliedStrategy {
 }
 
 
@@ -31,8 +58,22 @@ Strategy "1" *--> "0..*" PmfmStrategy
 PmfmStrategy "0..*" -right-> "1" Pmfm: "    "
 PmfmStrategy "0..*" -left-> "1" AcquisitionLevel
 
-PmfmStrategy  --> "0..*" TaxonGroup
-PmfmStrategy  --> "0..*" ReferenceTaxon
 PmfmStrategy  --> "0..*" Gear
+PmfmStrategy  --> "0..*" Metier
+PmfmStrategy  --> "0..*" ReferenceTaxon
+PmfmStrategy  --> "0..*" TaxonGroup
+
+Strategy "1" *-down- "1..*" AppliedStrategy
+
+AppliedStrategy "1" *-down- "1" PmfmAppliedStrategy
+
+AppliedStrategy "1" *-up- "1..*" AppliedPeriod
+
+PmfmAppliedStrategy -- "1" Pmfm
+PmfmAppliedStrategy --> "0..1" Gear
+PmfmAppliedStrategy --> "0..1" Metier
+PmfmAppliedStrategy --> "0..1" ReferenceTaxon
+PmfmAppliedStrategy --> "0..1" TaxonGroup
+PmfmAppliedStrategy -right-> "0..1" AnalysisInstrument
 
 @enduml

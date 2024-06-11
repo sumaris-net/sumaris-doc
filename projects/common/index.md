@@ -6,6 +6,7 @@ Refonte des logiciels Allegro (v2)
 
 - [Spécifications fonctionnelles](./spe) :
   * [Règles communes](./spe/regles_communes.md)
+  * [Lignes de plan d'échantillonnage](./spe/plan_echantillonnage.md)
   
 - Documentations :
   * [Notes suivi de projet](./not/not-24-001-suivi_projets-refonte-Allegro.md)
