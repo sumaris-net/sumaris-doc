@@ -59,3 +59,8 @@ This class allows to define any kind of measure type, with the precision expecte
 ### Regulation (Corpus, Fisheries and minimum size allowed)
 
 ![regulation](model/referential/regulation.svg)
+
+---
+### Spatial
+
+![spatial](model/referential/spatial.svg)

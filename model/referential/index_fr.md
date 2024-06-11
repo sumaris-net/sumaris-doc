@@ -64,3 +64,8 @@ Cette classe permet de définir tout type de mesure, avec la précision attendue
 Corpus, Pêcheries et tailles minimales autorisée
 
 ![regulation](model/referential/regulation.svg)
+
+---
+### Régionalisation
+
+![spatial](model/referential/spatial.svg)
