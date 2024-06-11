@@ -24,10 +24,12 @@
 ### Fonctionnalités / Limitations
 
 **Fonctionnalités sur le sprint 3**
-- Consultation des sorties
-- Filtre sur les sorties
+- [Consultation des sorties](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sorties
+  )
+- [Filtre sur les sorties](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sorties--filtres)
   - Ajout l'origine et l'état dans les filtres du tableau de consultation des sorties
-- Saisie d'une sortie
+- [Saisie d'une sortie](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sortie--d%C3%A9tails)
+
 
 **Limitations sur le sprint 3** 
 - [Retours de recette ObsVentes v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589)
@@ -98,6 +100,10 @@ Action MOE : Planning à mettre à jour (Développement/Démo MOA) - A valider a
 
 La MOA devra reporter les anomalies du sprint dans le ticket associé :
 - [Ticket Retours Recette ObsVentes MOA](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/614)
+
+La MOA devra reporter les incohérences sur les spécifications du sprint dans le ticket associé :
+- [Ticket Retours Spécifications ObsVentes MOA](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/616)
+
 
 
 
