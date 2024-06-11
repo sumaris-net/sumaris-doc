@@ -18,13 +18,11 @@ class TaxonGroupStrategy {
  +priorityLevel : integer [0..1]
 }
 
-Strategy --> "0..*" TaxonGroup
-Strategy --> "0..*" ReferenceTaxon
 Strategy --> "0..*" Gear
 Strategy --> "0..*" Metier
-Strategy *--> "0..*" ReferenceTaxonStrategy
-Strategy *--> "0..*" TaxonGroupStrategy
-Strategy *-- "0..*" StrategyDepartment
+Strategy *-- "0..*" ReferenceTaxonStrategy
+Strategy *-- "0..*" TaxonGroupStrategy
+Strategy *-right- "0..*" StrategyDepartment
 
 StrategyDepartment --> "1" Department
 
