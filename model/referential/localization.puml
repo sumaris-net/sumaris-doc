@@ -11,15 +11,15 @@ hide empty members
   }
 
   note top of Localization : TODO: à valider
-  note right of Localization: Exemple: Guyane, La Réunion, Mayotte, etc.
+  note right of Localization: Zone de compétence\nExemple: Guyane, La Réunion, Mayotte, etc.
 
   class Localization2Location
 
-  note left: Tous les lieux de la zone\n(terrestre et en mer)
+  note left: Lieux de la zone\n(terrestre et en mer)
 
   class Localization2LocationLevel
 
-  note right: Niveau de lieux par défaut sur la zone.
+  note right: Niveaux de lieu (par défaut) sur la zone.
 
   package referential #DDDDDD {
 
