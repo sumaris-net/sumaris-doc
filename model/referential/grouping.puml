@@ -1,0 +1,65 @@
+@startuml
+hide empty members
+
+class GroupingClassification {
+  + id : integer
+  + label : string
+  + name : string
+  + description : string [0..1]
+  + isMandatory : boolean = false
+  + comments : string [0..1]
+  + updateDate : timestamp
+  + objectReferenceQuery : string [0..1]
+}
+
+class GroupingLevel {
+  + id : integer
+  + label : string
+  + name : string
+  + description : string [0..1]
+  + comments : string [0..1]
+  + updateDate : timestamp
+}
+
+class Grouping {
+  + id : integer
+  + label : string
+  + name : string
+  + minValue : double [0..1]
+  + maxValue : double [0..1]
+  + updateDate : timestamp
+  + comments : string [0..1]
+}
+
+class GroupingItem {
+  + id : integer
+  + objectId : integer [0..1]
+  + objectCode : string [0..1]
+  + comments : string [0..1]
+}
+
+class ObjectType
+
+class Pmfm
+
+class Status
+
+class ValidityStatus
+
+interface IReferentialItem as "Any referential item"
+
+GroupingClassification "1" *-down- "*" GroupingLevel
+GroupingClassification "*" -right-> "1" ObjectType
+GroupingLevel "0..1 parentGroupingLevel" *-- "*" GroupingLevel
+GroupingLevel "*" -down--> "0..1" Pmfm: pmfm
+Grouping "1" -up-* "*" GroupingLevel
+Grouping "*" -up-> "1" GroupingClassification: "(for query optimization)"
+Grouping "0..1 parentGrouping" *-- "*" Grouping
+Grouping "*" -down-> "1" Status
+Grouping "*" -down-> "1" ValidityStatus
+GroupingItem "*" -up-* "1" Grouping
+GroupingItem ..> "1" IReferentialItem: "linked to"
+
+
+
+@enduml

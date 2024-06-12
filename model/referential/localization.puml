@@ -1,0 +1,57 @@
+@startuml
+hide empty members
+
+  class Localization {
+    + id : integer
+    + label : string
+    + name : string
+    + description: string [0..1]
+    + creationDate : Date
+    + updateDate : timestamp
+  }
+
+  note top of Localization : TODO: à valider
+  note right of Localization: Exemple: Guyane, La Réunion, Mayotte, etc.
+
+  class Localization2Location
+
+  note left: Tous les lieux de la zone\n(terrestre et en mer)
+
+  class Localization2LocationLevel
+
+  note right: Niveau de lieux par défaut sur la zone.
+
+  package referential #DDDDDD {
+
+    class Status
+
+    package location {
+      class LocationClassification
+      class LocationLevel
+      class Location
+
+      LocationClassification "1" <-right- "*" Location
+      LocationLevel "1" <-left- "*" Location
+
+    }
+
+    note bottom of LocationClassification: Permet de distinguer\nlieux terrestres et en mer.
+
+    package spatial {
+      class SpatialItem2Location
+    }
+  }
+
+
+
+  Localization "*" --> "1" Status
+  Localization "1" *-- "0..*" Localization2LocationLevel: locationLevels
+  Localization "1" *-- "0..*" Localization2Location: locations
+  Localization2LocationLevel "0..*" --> "1" LocationLevel
+  Localization2Location "0..*" --> "1" Location
+
+  SpatialItem2Location "*" -up-> "1" Location
+
+}
+
+@enduml

@@ -1,25 +1,45 @@
 @startuml
 hide empty members
 
+class LocationClassification {
+    +id: integer
+    +label: string
+    +name: string
+}
+
+class LocationLevel {
+    +id: integer
+    +label: string
+    +name: string
+}
+
+
 class Location {
-    +id: int
-    +label
-    +name
+    +id: integer
+    +label: string
+    +name: string
 }
 
-class LocationLevel
-{
-    +id: int
-    +label
-    +name
+enum "LocationClassificationEnum" #lightblue {
+    LAND: 1
+    SEA: 2
 }
 
-Location "0..*" -right-> "1" LocationLevel: "      "
-Location "0..*" --> "1" Status
-
-enum "LocationLevelIds  " {
+enum "LocationLevelEnum" #lightblue {
     COUNTRY: 1
     HARBOUR: 6
     AUCTION: 7
+    MARITIME_DISTRICT: 13
 }
+
+LocationLevel "*" -up-> "1" LocationClassification
+LocationLevel "*" --> "0..1" LocationLevel: parentLocationLevel
+Location "*" -up-> "1" LocationClassification: "(for query optimization)"
+Location "*" -up-> "1" LocationLevel
+Location "*" -down-> "1" Status
+Location "*" -down-> "1" ValidityStatus: "       "
+
+LocationClassificationEnum .left.> LocationClassification: "is an identifier of"
+LocationLevelEnum .up.> LocationLevel: "is an identifier of"
+
 @enduml

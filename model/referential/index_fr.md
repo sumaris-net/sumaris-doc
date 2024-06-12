@@ -68,4 +68,9 @@ Corpus, Pêcheries et tailles minimales autorisée
 ---
 ### Régionalisation
 
+La Régionalisation permet la **traduction en langue locale**, des listes du référentiel (espèces, métier, engins, etc.).
+Elle permet aussi la **personnalisation de ces listes** pour n'afficher que les éléments pertinents pour la région de l'utilisateur.
+
+![localization](model/referential/localization.svg)
+
 ![spatial](model/referential/spatial.svg)

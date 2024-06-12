@@ -5,13 +5,13 @@ hide empty members
     + id : integer
     + label : string
     + description : string [0..1]
-    + updateDate : timestamp [1]
+    + updateDate : timestamp
   }
 
   class SpatialItem {
-    + id : integer [1]
-    + objectid : integer [1]
-    + updateDate : timestamp [1]
+    + id : integer
+    + objectid : integer
+    + updateDate : timestamp
   }
 
   class SpatialItem2Location {
@@ -27,7 +27,15 @@ hide empty members
     class Location
   }
 
-  enum SpatialItemTypeEnum {
+  SpatialItemType "1" *-- "1..*" SpatialItem : type
+  SpatialItemType "*" --> "1" Status : status
+  SpatialItemType "*" --> "1" ObjectType : objectType
+
+  SpatialItem "0..*" *-- "0..*" SpatialItem2Location : locations
+  SpatialItem2Location "0..*" --> "1" Location
+
+
+  enum SpatialItemTypeEnum #lightblue {
     DEPTH_GRADIENT = 1
     NEARBY_SPECIFIC_AREA = 2
     DISTANCE_TO_COAST_GRADIENT = 3
@@ -38,12 +46,6 @@ hide empty members
 
   SpatialItemTypeEnum .left.> SpatialItemType: "is an\n identifier of"
 
-  SpatialItemType "1" <-- "*" SpatialItem : type
-  SpatialItemType "1" --> "*" Status : status
-  SpatialItemType "1" --> "*" ObjectType : objectType
-
-  SpatialItem "0..*" *-- "0..*" SpatialItem2Location : locations
-  SpatialItem2Location "0..*" -- "1" Location
 }
 
 @enduml
