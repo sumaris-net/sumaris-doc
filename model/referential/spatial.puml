@@ -14,36 +14,17 @@ hide empty members
     + updateDate : timestamp [1]
   }
 
-  class SpatialItemPoint {
-    + id : integer [1]
-    + localizedName : string [0..1]
-    + position : multipoint [0..1]
-  }
-
-  class SpatialItemLine {
-    + id : integer [1]
-    + localizedName : string [0..1]
-    + position : multilinestring [0..1]
-  }
-
-  class SpatialItemArea {
-    + id : integer [1]
-    + localizedName : string [0..1]
-    + position : multipolygon [0..1]
-  }
-
   class SpatialItem2Location {
     + localizedName : string [0..1]
   }
 
+  package "referential" #DDDDDD {
 
-    package "referential" #DDDDDD {
+    class Status
 
-      class Status
+    class ObjectType
 
-      class ObjectType
-
-      class Location
+    class Location
   }
 
   enum SpatialItemTypeEnum {
@@ -62,9 +43,6 @@ hide empty members
   SpatialItemType "1" --> "*" ObjectType : objectType
 
   SpatialItem "0..*" *-- "0..*" SpatialItem2Location : locations
-  SpatialItem "0..*" *-- "0..*" SpatialItemPoint : geometry
-  SpatialItem "0..*" *-- "0..*" SpatialItemLine : geometry
-  SpatialItem "0..*" *-- "0..*" SpatialItemArea : geometry
   SpatialItem2Location "0..*" -- "1" Location
 }
 
