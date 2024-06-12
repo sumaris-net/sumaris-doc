@@ -403,3 +403,52 @@ Pour les espèces (doutes sur l'existence), utiliser un flag (douteux), ajouter 
 > Navires temporaires : On les tags avec le programme pour qu'ils ne soient pas prit en compte par les traitements batchs ? (OBSMER)
 
 Observateur manquant : ajouter une note dans la marée
+
+## Commun > Régionalisation
+
+Modèle de données : ![ui-regionalisation-model](/model/referentiel/spatial.svg)
+
+Tables utilisées :
+    * SPATIAL_ITEM
+    * SPATIAL_ITEM2LOCATION
+    * SPATIAL_ITEM_TYPE
+
+Tables non utilisées (vides) mais présentes dans le modèle :
+    * SPATIAL_ITEM_AREA
+    * SPATIAL_ITEM_LINE
+    * SPATIAL_ITEM_POINT
+
+Note de la réunion du 11/06/2024 : 
+
+Fonctionnement actuel : la régionalisation permet de limiter l'affichage des référentiels ET de mettre des noms locaux (espèces et métiers)
+
+Il y a 2 types de régionalisation :
+    * A terre : ObsDeb et ActiFlot (métiers)
+    * En mer : ObsMer et ObsVente
+
+Filtre sur la liste des métiers suivant la zone de compétences
+
+Zone de compétence -> Zone en mer ou à terre -> Filtrage sur les métiers
+
+Priorité à appliquer la régionalisation dans calendrier d'activité (Mois d'activité) : Limiter les métiers, les zones de pêche, gradient de profondeur, gradient à la côte
+
+A plus grande échéance dans ObsMer :
+- Régionaliser les contrôles, régionaliser les noms des espèces (ObsMer)
+
+
+Référentiel : 
+- Armelle ne touche que SpatialItem
+- Géométrie pas utilisée 
+- Outil (Adagio Admin) pour gérer la régionalisation
+- Nom régionalisé est bien utilisé
+
+Dans l'Allegro actuel : 
+    * La régionalisation est définie par une zone de haut niveau puis affinée en zones à terre et en mer. Le contenu des 3 listes est en dur dans le code d'Allegro -> Prévoir de mettre ça au propre en intégrant ça au modèle
+    * Il n'est pas possible de modifier la régionalisation depuis les écrans de saisie
+
+Même en mode connecté, il faut une régionalisation
+
+Configuration du mode hors ligne (synchronisation) : sélectionner la zone de compétence (Ex : Guyane)
+Cas du mode terrain en tablette (synchro) : 1 seule régionalisation possible (performance meilleure si une seule). A confirmer avec la MOA.
+
+Il faut pouvoir filtrer/défiltrer les listes dans les écrans afin de pouvoir sortir de la régionalisation (sans passer par les préférences).
