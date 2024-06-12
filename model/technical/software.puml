@@ -1,0 +1,24 @@
+@startuml
+hide empty members
+
+class Software {
+    +id: int
+    +label: string
+    +name: string
+    +description: string [0..1]
+    +creationDate: Date
+    +updateDate: Timestamp
+}
+
+class SoftwareProperty {
+    +id: int
+    +label: string
+    +name: string
+    +description: int
+    +creationDate: Date
+    +updateDate: Timestamp
+}
+
+Software "1" *-- "0..*" SoftwareProperty
+
+@enduml
