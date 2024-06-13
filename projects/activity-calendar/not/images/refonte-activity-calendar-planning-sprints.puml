@@ -83,7 +83,7 @@ Project starts the 2024/04/08
 [TASK1]->[TASK2]
 [Testing2] requires 1 week
 [TASK2]->[Testing2]
-[Demo MOA 1] happens 3 day after [Testing2]'s end
+[Demo MOA 1] happens 11 day after [Testing2]'s end
 
 [pre-prod] as [PREPROD] requires 2 week and starts the 6th of May 2024
 [PREPROD] is colored in salmon
@@ -93,7 +93,7 @@ Project starts the 2024/04/08
 [TASK2]->[TASK3]
 [Testing3] requires 1 week
 [TASK3]->[Testing3]
-[Demo MOA 2] happens 3 day after [Testing3]'s end
+[Demo MOA 2] happens 9 day after [Testing3]'s end
 
 [Sprint 4] as [TASK4] requires 3 weeks
 [TASK4] is colored in Lavender/LightBlue

@@ -253,11 +253,13 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
     * Un zone contenant l'historisation des photos des navires
       * _A détailler_
 4. L'onglet "Historique" permet d'afficher l'historique des photos du navire
-    * Par défaut, on affiche l'historique des photos sur 3 années précédentes (date début au 1er Janvier)
+    * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
       * Ce nombre d'année est paramètrable dans les préférences
+      * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs 
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
 5. L'onglet "Photo" permet d'ajouter des photos récentes du navire
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
+    * Ces photos ne sont pas dans l'historique
 6. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
 
 
@@ -487,6 +489,7 @@ Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lo
 > Ajouter la zone de compétence dans la popup de configuration du mode hors-ligne
 > 
 > Réunion prévue le 06/06/2024 (avec Armelle Rouyer)
+
 
 ---
 
