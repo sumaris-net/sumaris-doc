@@ -321,10 +321,13 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
 
 **Variante(s) :**
 
-**Variante :** 
+**Variante :** Warning plus de 5 métiers
 3. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 3]
 
-**Variante :** 
+**Variante :** Erreur métier en doublon
+4. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller ou synchro), un message bloquant s'affiche. [Retour en 3]
+
+**Variante :** Vider calendrier
 4. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 3]
 
 #### Détails techniques :
@@ -344,21 +347,29 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
 * Le nombre de jours de mer : PMFM.ID = 241
 * Le nombre de jours de pêche : PMFM.ID = 242
 * Le nombre d'hommes à bord par marée : PMFM.ID = 109
-* Les gradients 
-  * de côte : filtrée en fonction de la zone sélectionnée
-  * de profondeur : table DEPTH_GRADIENT, filtrée en fonction de la zone sélectionnée
-* La zone proche : table NEARBY_SPECIFIC_AREA, filtrée en fonction de la zone sélectionnée
+* Champs concernés par la régionalisation :
+  * Métier
+  * Zone
+  * Gradient de côte : table DISTANCE_TO_COAST_GRADIENT
+  * Gradient de profondeur : table DEPTH_GRADIENT
+  * Zone proche : table NEARBY_SPECIFIC_AREA
 
 > Questions :
 > - MOE : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
 > - MOE : Conserver uniquement les raccourcis CTRL+C et CTRL+V
-> - MOE : Comment fonctionne la réorganisation des métiers ?
 > - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOE : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
 > - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
-> - MOA : Champs concernés par la régionalisation ?
+> 
+> - MOA : ajouter min/max sur les nb de jours de mer, le nb de jours de pêche et nb de personnes à bord ? (non présent dans l'allegro actuel)
+> - MOA : ajouter info bulle sur le nb de jours de mer et le nb de jours de pêche pour avoir le nb de jours et le nb d'heures ? (présent dans l'allegro actuel)
+> - MOA : répercussion de la carac "Inactivité annuelle confirmée par l'observateur" sur l'activité des mois du calendrier ?
+> - MOA : modifier l'arborescence pour avoir le gradient côté au même niveau que la zone et supprimer le chevron "plier/déplier" sur la zone ?
+> - MOA : lors de la saisie, toujours avoir un bloc métier vide pour eviter d'utiliser le bouton "+" ? (présent dans l'allegro actuel)
+> - MOA : à l'enregistrement, supprimer les lignes ayant une zone vide ? avec possibilité de rajouter une zone via un menu contextuel ? (présent dans l'allegro actuel) ou toujours afficher les 2 zones pour avoir une arborescence identique
+> - MOA : à l'enregistrement, replier l'arborescence pour voir uniquement les métiers et zones ?
 
 > Réunion du 23/05/2024 :
 > 
