@@ -1,7 +1,7 @@
 @startsalt
 {
   { Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 123456 Navire 1  | . |   {* ...
-                                                                                   ... | <&check> Remplissage de l'heure | de la vente }
+                                                                                   ... | <&check> Remplissage auto | de la date de la vente }
                                                                                                                                                                                                                           }
   --
   {/  <b>Détails | Lots }
@@ -12,7 +12,11 @@
       .
       Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
       .
-      Date de la vente :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+      Lieu de la vente* :   |  { ^ FRDRZ - Douarnenez ^ }
+      .
+      Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+      .
+      Type d'engin* : | { ^ OTT - Chalut jumeaux ^ }
       .
       Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^
       .

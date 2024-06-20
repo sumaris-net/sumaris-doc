@@ -398,11 +398,24 @@ Les données temporaires à utiliser sont les navires et les taxons/groupes si l
 Cette utilisation de données temporaires n'est pas fréquente mais pas rare.
 Pour les espèces (doutes sur l'existence), utiliser un flag (douteux), ajouter une photo.
 
-> Questions MOA :
->
-> Navires temporaires : On les tags avec le programme pour qu'ils ne soient pas prit en compte par les traitements batchs ? (OBSMER)
 
-Observateur manquant : ajouter une note dans la marée
+**Navire temporaire** : 
+
+Fonctionnement actuel : 
+    * Terminaison de la saisie impossible avec navire temporaire, il faut forcément remplacer le navire temporaire par un navire du référentiel
+    * Le saisseur ne peut pas aller jusqu'à la fin de sa saisie avec un navire temporaire
+
+Proposition (retenue) : 
+    * Insérer les navires temporaires dans la table VESSEL avec le statut temporaire (STATUS_FK = 2) et un programme dédié (OBSMER, OBSVENTE)
+        * Lister le niveau d'information minimum de saisie pour un navire temporaire
+        * Champs obligatoires : Nom, immmatriculation, .. (Cf maquette à venir)
+        * Tables renseignées : VESSEL, VESSEL_REGISTRATION_PERIOD et VESSEL_FEATURE
+    * Phase de tests : Insérer des navires temporaires en BDD et tester le programme de consolidation des navires
+    * Avoir la possibilité de désactiver cette fonctionnalité s'il y a des problèmes en production
+
+**Observateur manquant** :
+    * Ajouter une note dans la marée
+
 
 ## Commun > Régionalisation
 

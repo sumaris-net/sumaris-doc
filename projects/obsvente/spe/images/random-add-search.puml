@@ -5,13 +5,13 @@
     --
       {/  <&clock> Historique | <&magnifying-glass><b>Recherche espèce}
     --
-      { <&clock> Recherche : | " code, nom " | * }
+      { <&clock> Recherche : | " code, libellé " | * }
     --
 	{#
-      <b>Etat | <&arrow-thick-top> <b>Espèces commerciale
-      <&check> | POL - Lieu jaune
-      <&check> | MNZ - Baudroie
-      <&check> | PIL - Sardive commune
+      <b>Etat | <&arrow-thick-top> <b>Code  | <b>Libellé
+      <&check> | POL | Lieu jaune
+      <&check> | MNZ | Baudroie
+      <&check> | PIL | Sardive commune
     }
     .
     {

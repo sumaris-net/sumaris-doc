@@ -176,10 +176,15 @@ RAS
 - Modification du trigger `TR_GEAR_USE_FEATURES`
   ```sql
   create or replace trigger TR_GEAR_USE_FEATURES
-    instead of delete or update
+    instead of delete or update or insert
       on GEAR_USE_FEATURES
         begin
           case
+        WHEN INSERTING THEN
+             insert into SIH2_ADAGIO_DBA.GEAR_USE_FEATURES(ID, activity_calendar_fk, control_date, creation_date, daily_activity_calendar_fk, end_date, gear_fk,metier_fk,other_gear_fk,program_fk,qualification_comments,
+                                                           qualification_date, quality_flag_fk, rank_order, start_date, update_date, validation_date, vessel_fk)
+             values (:new.ID, :new.activity_calendar_fk, :new.control_date,:new.creation_date,:new.daily_activity_calendar_fk,:new.end_date, :new.gear_fk,:new.metier_fk,:new.other_gear_fk, (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK),
+                     :new.qualification_comments, :new.qualification_date, :new.quality_flag_fk, :new.rank_order, :new.start_date, :new.update_date, :new.validation_date, (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK));
             WHEN UPDATING THEN
               update SIH2_ADAGIO_DBA.GEAR_USE_FEATURES GUF set GUF.activity_calendar_fk=:new.activity_calendar_fk, GUF.control_date=:new.control_date, GUF.creation_date=:new.creation_date,GUF.daily_activity_calendar_fk=:new.daily_activity_calendar_fk,
                                                                GUF.end_date=:new.end_date, GUF.gear_fk=:new.gear_fk, GUF.metier_fk=:new.metier_fk, GUF.other_gear_fk=:new.other_gear_fk,
@@ -194,7 +199,7 @@ RAS
         end;
 -```
 
-- Modification du trigger `TR_GEAR_USE_FEATURES`
+- Modification du trigger `TR_GEAR_USE_MEASUREMENT`
   ```sql
   create or replace trigger TR_GEAR_USE_MEASUREMENT
     instead of insert or update or delete

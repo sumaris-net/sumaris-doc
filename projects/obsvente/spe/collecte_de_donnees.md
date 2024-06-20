@@ -115,9 +115,10 @@ Validation des données : qui valide (responsable de programme et/ou coordinateu
    * Le programme
    * L'origine
    * Le lieu de la sortie
-   * La date/heure
-   * Le ou les observateurs
-   * Le saisisseur
+   * La date/heure de début de sortie
+   * La date/heure de fin de sortie
+   * Le ou les observateur(s)
+   * Le ou les saisisseur(s)
    * Le commentaire
 3. Le saisisseur consulte le tableau des sorties
 4. Le saisisseur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
@@ -156,7 +157,7 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
    * La fin de la période
    * L'organisme du saisisseur
    * Le saisisseur
-   * L'observateur
+   * Les observateurs
 2. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES)
 
 Les critères suivants sont multiples (dev en cours sur Imagine) : 
@@ -190,7 +191,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
-6. La stratégie est automatiquement renseignée et les caractéristiques de la sortie s'affichent en fonction du programme, de la date et du lieu sélectionnés
+6. Les caractéristiques de la sortie s'affichent en fonction du programme, de la date et du lieu sélectionnés
+   *  Il est possible de choisir les libellés des PMFM (caractéristiques) via le dictionnaire thématique
 7. Le saisisseur renseigne les caractéristiques de la sortie
 8. Le saisisseur enregistre
 9. Le bandeau de l'écran affiche "Lieu - date"
@@ -211,7 +213,6 @@ Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages a
 * Sortie : OBSERVED_LOCATION
 * Origine : POC à prévoir : créer une table OBSERVED_LOCATION_ORIGIN liée à OBSERVED_LOCATION ? Non-modifiable. 
 Sera également utilisé dans Imagine pour distinguer les données Obsbio de Campagne
-* Type de vente : PMFM à créer, pointe vers SALE_TYPE
 * Disponibilité de la fiche de pré-vente : PMFM à créer, QUALITATIVE_VALUE à créer (oui/non)
 * Caractéristiques de la vente :
     * Origine : PMFM_STRATEGY avec :
@@ -221,11 +222,27 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
     * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
 
-> Questions :
-> - ISI : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> - ISI : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
-> - ISI : Validation observateur, Validation société : remplacer ces PMFM par le processus de contrôle des données de Sumaris, 
-rendre accessible l'édition du rapport avant terminaison de la saisie, prévoir modification ou mieux refonte des rapports birt qui doivent certainement utiliser ces pmfm
+> Questions/Remarques :
+> 
+> - MOE : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
+> 
+> - MOE : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
+> 
+> - MOE : Validation observateur, Validation société : remplacer ces PMFM par le processus de contrôle des données de Sumaris, 
+> 
+> - MOA : Donner la liste des libellés des caractéristiques (PMFM)
+> 
+> - MOA : Prévoir une réunion sur le protocole de "Fin de saisie" - La MOA prépare un diagramme de workflow de validation de la donnée.
+>
+> Terminaison de la saisie : 
+> 
+> - Rendre accessible l'édition du rapport avant terminaison de la saisie, prévoir modification ou mieux refonte des rapports birt qui doivent certainement utiliser ces pmfm
+> 
+> - MOA : A ANALYSER : revoir la terminaison de la saisie pour afficher un message demandant de renseigner les champs "validation observateur" et "validation observateur"
+>
+> - fournir workflow de la terminaison de la saisie - action MS, VB
+>
+> - MOE : A ANALYSER : pouvoir modifier la ligne de plan même si des échantillonnages sont associés
 
 ---
 ## Sortie > Echantillonnages en métropole
@@ -283,6 +300,7 @@ par rapport à celles définies dans la liste des espèces à observer.
 #### Détails techniques :
 * Echantillonnage : LANDING
 * Vente : SALE
+* Type de vente : SALE_TYPE
 * Espèce commerciale et scientifique : liste des PETS issue de WAO, la liste des PETS varie suivant le lot (façade maritime) (environ 15 PETS par lot en métropole)
 * Zone de pêche : PMFM à créer, prévoir une option pour définir le niveau de lieu
 
@@ -329,6 +347,7 @@ Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" 
 #### Détails techniques :
 * Echantillonnage : LANDING
 * Vente : SALE
+* Type de vente : SALE_TYPE
 * Priorité : RANK_ORDER
 * Observé ? : PMFM à créer
 * Raison de non observation : PMFM à créer avec les valeurs qualitatives suivantes : 
@@ -413,12 +432,19 @@ La Fenêtre est composée de 2 onglets, "Historique" et "Recherche espèces".
 
 1. Le saisisseur se positionne sur l'onglet "Recherche espèces"
 2. La liste de toutes les espèces échantillonnables apparait dans le tableau
+    * Il est possible de trier sur les colonnes suivantes
+      * Code de l'espèce
+      * Libellé de l'espèce
 3. Le saisisseur peut rechercher une espèce en saisissant son code ou son libellé dans la zone de recherche
 4. La liste des espèces affichées est filtrée suivant la saisie
 5. Le saisisseur peut sélectionner l'espèce recherchée
-   * A la sélection, l'espèces est rajoutée dans le tableau afin d'être échantillonnée
+   * A la sélection, l'espèce est rajoutée dans le tableau afin d'être échantillonnée
 
 ---
+
+> Question MOE/EIS :
+> 
+> Faut il conserver une colonne "Etat" ? Oui s'il y a des espèces temporaires (mais que dans ObsMer)
 
 ## Vente > Détails.
 
@@ -435,19 +461,21 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * "Détails" (onglet par défaut)
    * "Lots"
 3. Sur l'onglet "Détails", le saisisseur renseigne les détails de la vente :
-   * Navire*
-   * Type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
-   * Date/heure
-   * Zone de pêche
+   * Le navire*
+   * Le type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
+   * Le lieu de vente
+   * La date/heure de vente*
+   * Le type d'engin*
+   * La zone de pêche
    * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 
 **Variante(s) :**
 
-**Variante a :** 
+**Variante 3a :** Remplissage auto de la date de la vente 
 
-3. En mode terrain, il est possible d'activer une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales).
+En mode terrain, il est possible d'activer une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales).
 
 > Réunion 21/05/2024    
 Type de vente : 
