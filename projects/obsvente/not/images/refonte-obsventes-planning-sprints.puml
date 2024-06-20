@@ -85,7 +85,7 @@ Project starts the 2024/03/04
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
 [TASK4]->[Testing4]
-[Demo 2 MOA] happens 3 day after [Testing4]'s end
+[Demo 2 MOA] happens 9 day after [Testing4]'s end
 
 [Sprint 5] as [TASK5] requires 3 weeks and starts the 27th of July 2024
 [TASK5] is colored in Lavender/LightBlue

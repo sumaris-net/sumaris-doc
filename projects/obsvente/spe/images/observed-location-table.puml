@@ -1,13 +1,13 @@
 @startsalt
 {
-  <b>Sorties                                                                                                                                                                                 <&plus>
+  { <b>Sorties | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |.   { <&plus> <&trash> <b>Y } }
   --
-  .
-	{#
 
-     [ ]. | <b>Etat | <b>Programme | <b>Origine | <b>Lieu de la sortie | <b>Date/heure | <b>Observateurs | <b>Saisisseur | .
-     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | SIH-OBSVENTE | XDZ - Douarnenez | 25/11/2023 17:00 | obs1 | obs1
-     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | SIH-OBSDEB | XDZ - Douarnenez | 26/11/2023 17:00 | obs1, obs2 | obs1 | <&comment-square>
+
+	{#
+     [ ]. | <b>Etat | <b>Programme | <b>Origine | <b>Lieu de la sortie | <b>Date/heure début | <b>Date/heure fin | <b>Observateur(s) | <b>Saisisseur(s) | .
+     [X]. | <b>  <&pencil> | SIH-OBSVENTE | SIH-OBSVENTE | XDZ - Douarnenez | 25/11/2023 13:00 | 25/11/2023 17:00 | obs1 | obs1
+     [ ]. | <b>  <&pencil> | SIH-OBSVENTE | SIH-OBSDEB | XDZ - Douarnenez | 26/11/2023 11:00 | 26/11/2023 15:00 | obs1, obs2 | obs1 | <&comment-square>
     }
 
 }

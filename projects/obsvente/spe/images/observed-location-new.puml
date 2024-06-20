@@ -7,8 +7,10 @@
   .
   {
 
-      Programme de collecte* :    | { ^SIH-OBSVENTE                ^ } | * | {^"Stratégie"
-                                                                                              ObsVentes démarrage au 01/01/2024 <&eye> }
+      Programme de collecte* :    | { ^SIH-OBSVENTE                ^ } | * | {^"<color:grey>Stratégie"
+                                                                                              ObsVentes démarrage au 01/01/2024 <&eye>
+                                                                                              <color:grey>Saisisseur
+                                                                                              Obs1}
       Plan d'échantillonnage* :    | { ^2021_V0010 - DPMA_20_23_Lot2^}
       .
       Origine* :    | { ^SIH-OBSVENTE                ^ }
@@ -17,7 +19,7 @@
       .
       Début/Fin* :     | { ^jj/mm/aaaa^  |  ^hh:mm^ } { ^jj/mm/aaaa^  |  ^hh:mm^ } <i><color:blue>durée de la sortie
       .
-      Observateurs* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
+      Observateur(s)* :            | ^ Observateur #1             ^ | { [<&plus>] | [<&x>] }
       .
 
 
@@ -27,10 +29,9 @@
 
   {
       . | Disponibilité de la fiche de pré-vente :| ^Oui^
-      . | Stratégie d'échantillonnage : | ^Simultané : Toutes espèces commerciales - Simultané - Complet^
       . | PETS ?* : | ^Oui^
-      . | Validation observateur* : | ^Données contrôlées^
-      . | Validation société* : | ^Données valides   ^
+      . | Contrôle observateur* : | ^Données contrôlées^
+      . | Vérification société* : | ^Données valides   ^
       . | .
   }
 
