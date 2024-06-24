@@ -204,14 +204,15 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * "Métiers"
    * "Zones d'activité"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
+   * L'objectif d'enquête directe (Oui/Non - non modifiable)
+   * L'enquête éco (Oui/Non - non modifiable)
    * La stratégie
    * Le nom du saisisseur
    * La société du saisisseur
+   * La date de création
+   * La date de mise à jour
    * Le mode de saisie (Bureau ou Déconnecté)
-5. Le saisisseur renseigne (par défaut les valeurs sont vides) :
-   * L'objectif d'enquête directe (Oui / Non)
-   * L'enquête éco (Oui / Non)
-   * Les caractéristiques de l'enquête
+5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
 6. Le saisisseur saisit un commentaire
 7. Le saisisseur enregistre
 8. La date de mise à jour du calendrier est actualisée
@@ -242,25 +243,21 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 
 #### Scénario principal
 
-1. Le saisisseur clique sur l'onglet Navires
-2. 2 sous onglets s'affichent : 
-   * Historique
+1. Le saisisseur clique sur l'onglet "Navire". Il est composé de 2 sous onglets : 
+   * Historique (par défaut)
    * Photos
-3. L'onget historique affiche, sous forme de tableau, les états des changementsdes caractéristiques et des armateurs du navire sur l'année :
-    * Un tableau sur les caractéristiques des navires
-    * Un tableau sur historisation des immatriculations navires
-    * Un tableau sur les couples navires-armateurs
-    * Un zone contenant l'historisation des photos des navires
-      * _A détailler_
-4. L'onglet "Historique" permet d'afficher l'historique des photos du navire
-    * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
+2. Le saisisseur consulte l'onget "Historique", il contient les états des changements des caractéristiques et des armateurs du navire sur les X dernières années :
+    * Un tableau sur les caractéristiques du navire
+    * Un tableau sur les immatriculations du navire
+    * Un tableau sur les armateurs du navire
+    * Un zone contenant l'historisation des photos du navire
+      * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
       * Ce nombre d'année est paramètrable dans les préférences
-      * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs 
+      * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs
+3. Le saisisseur clique sur l'onglet "Photos". L'onglet contient les photos ajoutées en cours de l'année en cours de visualisation
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
-5. L'onglet "Photo" permet d'ajouter des photos récentes du navire
-    * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
-    * Ces photos ne sont pas dans l'historique
-6. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
+4. Le saisissuer ajoute des photos du navire
+5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
 
 
 Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
@@ -286,7 +283,8 @@ Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIV
 L'écran est composé d'un tableau de saisie du calendrier d'activité, mois par mois et, en dessous, d'un tableau sur la prédocumentation.
 La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écran.
 
-1. Dans l'onglet "Calendrier", le saisisseur consulte la prédocumentation. Pour chaque mois et pour les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB", les informations suivantes sont affichées :
+1. Dans l'onglet "Calendrier", le saisisseur affiche la prédocumentation par un bouton. Par défaut, les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" sont affichées. La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée. 
+2. Le saisisseur consulte la prédocumentation. Pour chaque mois et pour chaque source, les informations suivantes sont affichées :
    * L'armateur
    * Le quartier d'immatriculation
    * L'activité du navire*
@@ -297,9 +295,10 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
    * Le ou les métiers
    * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
    * Le gradient de côte rattaché à chaque zone
-2. Le saisisseur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
+3. Le saisisseur sélectionne les données de la prédocumentation à réutiliser dans le calendrier de l'année en cours 
    (un ou plusieurs mois d'une source et/ou un ou plusieurs blocs métiers)
-3. Le saisisseur complète les données manquantes ou erronées pour chaque mois :
+4. Le saisisseur masque la prédocumentation par un bouton
+5. Le saisisseur complète les données manquantes ou erronées pour chaque mois :
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation ou de rattachement
@@ -314,21 +313,19 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
            * De profondeur (visibilité définie par une option du programme)
          * La zone proche (visibilité définie par une option du programme)
          * Les gradients et la zone sont affichés mais repliés par défaut
-4. Le saisisseur enregistre le calendrier
-5. le saisisseur peut afficher/masquer la prédocumentation par un bouton
-   * La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée  
-6. La date de mise à jour du calendrier est actualisée
+6. Le saisisseur enregistre le calendrier
+7. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
 **Variante :** Warning plus de 5 métiers
-3. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 3]
+5. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 6]
 
 **Variante :** Erreur métier en doublon
-4. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller ou synchro), un message bloquant s'affiche. [Retour en 3]
+5. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller ou synchro), un message bloquant s'affiche. [Retour en 4]
 
 **Variante :** Vider calendrier
-4. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 3]
+5. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 4]
 
 #### Détails techniques :
 * Sources de la prédocumentation :

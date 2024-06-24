@@ -4,8 +4,8 @@
   --
   {/ Général | Navires | <b>Calendrier (4) | Métiers | Zones d'activité}
   ..
+  .
 
-  {Information affichée :  {[X]SACROIS-OBSDEB | [X]Enquête N-1 }}
 
   {<b>Calendrier d'activité}
 	{S-
@@ -40,7 +40,7 @@
     }
     .
     ==
-  {<b>Prédocumentation}
+  {<b>Prédocumentation</b> {[X]SACROIS-OBSDEB | [X]Enquête N-1 }}
   	{#
      . | <b>Janvier | * | <b>Février | * | ... | <b>Décembre
      . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
