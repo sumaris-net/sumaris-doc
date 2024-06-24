@@ -33,7 +33,63 @@ Il semble possible de les stocker également via les `Strategies`
 | Nb. d'observateurs minimal                                                                                             | PMFM                              | Créer PMFM (valeur numérique)                                                                                 |
 | Type de sortie                                                                                                         | PMFM                              | Classique ou Courte. Créer PMFM et QUALITATIVE_VALUE associées                                                |
 | Commentaire                                                                                                            | Strategy.comments                 |                                                                                                               |
+
                                                                                                                                      
+## Contacts
+
+* Contact : équivalents : 
+  * Sortie : lieu, date de début, date de fin
+  * Vente : navires observés, espèces observées, bordereau terrain, photos
+  * Terminaison de la saisie : validation société, validation programme
+
+| Colonne WAO                       | Colonne SUMARiS            | Questions |
+|-----------------------------------|----------------------------|-----------|
+| Création                          |                            |           |
+| Trimestre                         |                            |           |
+| Ligne de plan                     | Issue de la Ligne de plan  |           |
+| Programme                         | Issue de la Ligne de plan  |           |
+| Strate                            | Issue de la Ligne de plan  |           |
+| Lieu des sorties                  | Issue de la Ligne de plan  |           |
+| Lieu de vente                     | Issue de la Ligne de plan  |           |
+| Société                           | Issue de la Ligne de plan  |           |
+| Sociétés secondaires              | Issue de la Ligne de plan  |           |
+| Observateurs                      |                            |           |
+| Etat                              |                            |           |
+| Motif état                        |                            |           |
+| Début de l'observation            |                            |           |
+| Fin de l'observation              |                            |           |
+| Heures d'observation              |                            |           |
+| Date saisie et contrôle           |                            |           |
+| Contrôle des données observées    |                            |           |
+| Fichiers                          |                            |           |
+| Commentaire observateur           |                            |           |
+| Commentaire société               |                            |           |
+| Commentaire programme             |                            |           |
+| Qualité scientifique de la donnée |                            |           |
+| Respect du protocole              |                            |           |
+| Respect des délais                |                            |           |
+| Respect du plan d'échantillonnage |                            |           |
+| Type de pénalité                  |                            |           |
+| Pénalité                          |                            |           |
+| Coût unitaire de réalisation      |                            |           |
+| Coût unitaire saisie              |                            |           |
+| Coût final de la sortie           |                            |           |
+| Certification MOA                 |                            |           |
+| Validations société               |                            |           |
+| Validations programme             |                            |           |
+| Date de validation société        |                            |           |
+| Date de validation programme      |                            |           |
 
 
-TODO: BLA a compléter
+## Eléments spécifiques à WAO 
+
+* Gestion des actualités (texte + photo)
+* Plan d'échantillonnage :
+  * Import/Export
+  * Historique des modifications
+* Contact :
+  * Import/Export
+  * Gestion des coûts et des pénalités
+  * Tirage aléatoire des espèces avec pondération
+  * Stockage de bordeaux terrains (pdf), photos ...
+* Synthèse (graphes, stats)
