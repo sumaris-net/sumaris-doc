@@ -234,6 +234,15 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 > Prévoir POC pour le commentaire/date/initiales
 
 
+---
+## Calendrier d'activité > Général > Gestion des conflits
+
+
+
+--- 
+
+**REF: ACTIVITY_CALENDAR/GENERAL**
+
 -- 
 ## Calendrier d'activité > Navires
 

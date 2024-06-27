@@ -24,6 +24,12 @@ RAS
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.PHOTO to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- nouvelles colonnes sur `PHOTO`
+  ```sql
+  alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT CLOB;
+  alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT_TYPE varchar2(100);
+-```
+
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Appliquer les [manuels d'exploitation d'ObsMer](../../imagine/mex) (v2.9)
