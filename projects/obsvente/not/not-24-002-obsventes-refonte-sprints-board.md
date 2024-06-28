@@ -14,8 +14,8 @@
 | Sprint 2   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                   | Closed     |
 | Sprint 3   | 24/05/2024    | 2.9.0-alpha18 | 06/06/2024               | -                                   | Closed     |
 | Sprint 4   | 21/06/2024    | 2.9.19        | 09/07/2024               | -                                   | On going   |
-| Sprint 5   | 13/08/2024    | 2.9.20        | -                        | -                                   | Future     |
-| Sprint 6   | 19/09/2024    | 2.9.21        | 10/09/2024               | 10/09/2024                          | Future     |
+| Sprint 5   | 12/07/2024    | 2.9.20        | -                        | -                                   | Future     |
+| Sprint 6   | 02/08/2024    | 2.9.21        | 10/09/2024               | 10/09/2024                          | Future     |
 | Sprint 7   | 27/12/2024    | 2.9.22        | 06/02/2025               | To defined                          | Future     |
 | Sprint 8   | 27/03/2025    | 2.9.23        | 17/04/2025               | -                                   | Future     |
 <!-- .element: class="font-size-extra-small" -->

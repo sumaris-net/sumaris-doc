@@ -92,13 +92,14 @@ Project starts the 2024/03/04
 [TASK4]->[TASK5]
 [Testing5] requires 1 week
 [TASK5]->[Testing5]
-[Demo 3 MOA/Corresp. (façade/régionaux)] happens the 3th of September 2024
-[Sprint 6] as [TASK6] requires 3 weeks and starts the 1th of September 2024
+[Sprint 6] as [TASK6] requires 3 weeks and starts the 15th of July 2024
 
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
+
+[Demo 3 MOA/Corresp. (façade/régionaux)] happens the 10th of September 2024
 
 
 [               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
@@ -141,6 +142,8 @@ Project starts the 2024/03/04
 
 [CGFS 2 VFA] as [EMB] requires 3 week and starts the 31th of September 2024
 [EMB] is colored in lightgrey
+
+skinparam legendBackgroundColor with
 
 legend
   |<#lightgrey>  | Congés/Abs. MOE |
