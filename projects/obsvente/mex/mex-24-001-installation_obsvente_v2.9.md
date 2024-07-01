@@ -11,7 +11,20 @@ Liste des tickets réalisés :
 
 ## Configuration du Pod
 
-RAS  
+Enumerations 
+
+```properties
+# PMFM fonctionnels
+sumaris.enumeration.Pmfm.HAS_PETS.id=<id du PMFM "Présence de PETS ? (Booléen)">
+sumaris.enumeration.Pmfm.IS_OBSERVED.id=<id du PMFM "Espèce observé ? (Booléen)">
+sumaris.enumeration.Pmfm.NON_OBSERVATION_REASON.id=<id du PMFM "Raison de non observations">
+# PMFM techniques
+sumaris.enumeration.Pmfm.SALE_TYPE_ID.id=<id du PMFM "Type de vente (id)">
+sumaris.enumeration.Pmfm.SPECIES_LIST_ORIGIN.id=<id du PMFM "Origine de la liste des espèce (PETS/Tirage au sort)">
+sumaris.enumeration.Pmfm.PMFM_TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id)">
+sumaris.data.vessel.unknwon.id=<ID navire inconnu>
+
+```
 
 ## Schéma SIH2_ADAGIO_DBA
 
@@ -76,8 +89,8 @@ RAS
             delete from SIH2_ADAGIO_DBA.OBSERVED_LOCATION_MEASUREMENT OLM where OLM.ID=:old.ID;
             delete from M_OBS_LOCATION_MEAS MOLM where MOLM.ID=:old.ID;
         end case;
-end;
--```
+    end;
+  ```
 
 - Modification du trigger `TR_OBSERVED_LOCATION`
   ```sql
@@ -104,8 +117,19 @@ end;
           delete from SIH2_ADAGIO_DBA.OBSERVED_LOCATION OL where OL.ID=:old.ID;
       end case;
     end;
--```
+  ```
 
 ## Mise à jour du programme SIH-OBSVENTE
 
 - TODO
+
+- Options pour la stratégie "Métropole" (STRATEGY_PROPERTY) 
+
+```properties
+sumaris.observedLocation.landing.autoFill=true
+```
+
+- Options pour la stratégie "Outre-Mer" (STRATEGY_PROPERTY)
+```properties
+sumaris.observedLocation.landing.autoFill=false
+```
