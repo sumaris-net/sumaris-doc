@@ -42,43 +42,43 @@ Il semble possible de les stocker également via les `Strategies`
   * Vente : navires observés, espèces observées, bordereau terrain, photos
   * Terminaison de la saisie : validation société, validation programme
 
-| Colonne WAO                       | Colonne SUMARiS            | Questions |
-|-----------------------------------|----------------------------|-----------|
-| Création                          |                            |           |
-| Trimestre                         |                            |           |
-| Ligne de plan                     | Issue de la Ligne de plan  |           |
-| Programme                         | Issue de la Ligne de plan  |           |
-| Strate                            | Issue de la Ligne de plan  |           |
-| Lieu des sorties                  | Issue de la Ligne de plan  |           |
-| Lieu de vente                     | Issue de la Ligne de plan  |           |
-| Société                           | Issue de la Ligne de plan  |           |
-| Sociétés secondaires              | Issue de la Ligne de plan  |           |
-| Observateurs                      |                            |           |
-| Etat                              |                            |           |
-| Motif état                        |                            |           |
-| Début de l'observation            |                            |           |
-| Fin de l'observation              |                            |           |
-| Heures d'observation              |                            |           |
-| Date saisie et contrôle           |                            |           |
-| Contrôle des données observées    |                            |           |
-| Fichiers                          |                            |           |
-| Commentaire observateur           |                            |           |
-| Commentaire société               |                            |           |
-| Commentaire programme             |                            |           |
-| Qualité scientifique de la donnée |                            |           |
-| Respect du protocole              |                            |           |
-| Respect des délais                |                            |           |
-| Respect du plan d'échantillonnage |                            |           |
-| Type de pénalité                  |                            |           |
-| Pénalité                          |                            |           |
-| Coût unitaire de réalisation      |                            |           |
-| Coût unitaire saisie              |                            |           |
-| Coût final de la sortie           |                            |           |
-| Certification MOA                 |                            |           |
-| Validations société               |                            |           |
-| Validations programme             |                            |           |
-| Date de validation société        |                            |           |
-| Date de validation programme      |                            |           |
+| Colonne WAO                       | Colonne SUMARiS                                                                                                               | Commentaires                                                                                                               |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Création                          | OBSERVED_LOCATION.CREATION_DATE                                                                                               |                                                                                                                            |
+| Trimestre                         | _                                                                                                                             | Déduit de la date de création                                                                                              |
+| Ligne de plan                     | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Programme                         | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Strate                            | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Lieu des sorties                  | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Lieu de vente                     | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Société                           | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Sociétés secondaires              | Issue de la Ligne de plan                                                                                                     |                                                                                                                            |
+| Observateurs                      | OBSERVED_LOCATION.RECORDER_PERSON_FK + OBSERVED_LOCATION.RECORDER_DEPARTMENT_FK + OBSERVED_LOCATION2PERSON.OBSERVER_PERSON_FK |                                                                                                                            |
+| Etat                              | PMFM                                                                                                                          | Observation programmée, Observation réalisée, Annulée, Accès au site impossible. Créer PMFM et QUALITATIVE_VALUE associées |
+| Motif état                        | PMFM                                                                                                                          | Autre, COVID-19. Saisissable uniquement si état "Accès au site impossible". Créer PMFM et QUALITATIVE_VALUE associées      |
+| Début de l'observation            | OBSERVED_LOCATION.START_DATE_TIME                                                                                             |                                                                                                                            |
+| Fin de l'observation              | OBSERVED_LOCATION.END_DATE_TIME                                                                                               |                                                                                                                            |
+| Heures d'observation              | _                                                                                                                             | Durée de l'observation (en heures)                                                                                         |
+| Date saisie et contrôle           |                                                                                                                               |                                                                                                                            |
+| Contrôle des données observées    |                                                                                                                               |                                                                                                                            |
+| Fichiers                          |                                                                                                                               |                                                                                                                            |
+| Commentaire observateur           |                                                                                                                               |                                                                                                                            |
+| Commentaire société               |                                                                                                                               |                                                                                                                            |
+| Commentaire programme             |                                                                                                                               |                                                                                                                            |
+| Qualité scientifique de la donnée |                                                                                                                               |                                                                                                                            |
+| Respect du protocole              |                                                                                                                               |                                                                                                                            |
+| Respect des délais                |                                                                                                                               |                                                                                                                            |
+| Respect du plan d'échantillonnage |                                                                                                                               |                                                                                                                            |
+| Type de pénalité                  |                                                                                                                               |                                                                                                                            |
+| Pénalité                          |                                                                                                                               |                                                                                                                            |
+| Coût unitaire de réalisation      |                                                                                                                               |                                                                                                                            |
+| Coût unitaire saisie              |                                                                                                                               |                                                                                                                            |
+| Coût final de la sortie           |                                                                                                                               |                                                                                                                            |
+| Certification MOA                 |                                                                                                                               |                                                                                                                            |
+| Validations société               |                                                                                                                               |                                                                                                                            |
+| Validations programme             |                                                                                                                               |                                                                                                                            |
+| Date de validation société        |                                                                                                                               |                                                                                                                            |
+| Date de validation programme      |                                                                                                                               |                                                                                                                            |
 
 
 ## Eléments spécifiques à WAO 
