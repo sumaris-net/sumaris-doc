@@ -422,22 +422,22 @@ Proposition (retenue) :
 Modèle de données : ![ui-regionalisation-model](/model/referentiel/spatial.svg)
 
 Tables utilisées :
-    * SPATIAL_ITEM
-    * SPATIAL_ITEM2LOCATION
-    * SPATIAL_ITEM_TYPE
+ * SPATIAL_ITEM
+ * SPATIAL_ITEM2LOCATION
+ * SPATIAL_ITEM_TYPE
 
 Tables non utilisées (vides) mais présentes dans le modèle :
-    * SPATIAL_ITEM_AREA
-    * SPATIAL_ITEM_LINE
-    * SPATIAL_ITEM_POINT
+ * SPATIAL_ITEM_AREA
+ * SPATIAL_ITEM_LINE
+ * SPATIAL_ITEM_POINT
 
 Note de la réunion du 11/06/2024 : 
 
 Fonctionnement actuel : la régionalisation permet de limiter l'affichage des référentiels ET de mettre des noms locaux (espèces et métiers)
 
 Il y a 2 types de régionalisation :
-    * A terre : ObsDeb et ActiFlot (métiers)
-    * En mer : ObsMer et ObsVente
+ * A terre : ObsDeb et ActiFlot (métiers)
+ * En mer : ObsMer et ObsVente
 
 Filtre sur la liste des métiers suivant la zone de compétences
 
@@ -465,3 +465,9 @@ Configuration du mode hors ligne (synchronisation) : sélectionner la zone de co
 Cas du mode terrain en tablette (synchro) : 1 seule régionalisation possible (performance meilleure si une seule). A confirmer avec la MOA.
 
 Il faut pouvoir filtrer/défiltrer les listes dans les écrans afin de pouvoir sortir de la régionalisation (sans passer par les préférences).
+
+Note de la réunion du 27/06/2024 : 
+- Calendrier d'activité : Faire des propositions pour modifier la régionalisation pendant la saisie
+
+1. Dans les listes déroulantes (métiers, espèces, ...) (Cf Allegro Campagne, cf Captures d'écran)
+2. Dans l'écran de saisie du "Calendrier et afficher la zone régionalisée

@@ -81,24 +81,25 @@ Project starts the 2024/03/04
 [Demo 1 MOA] happens 3 day after [Testing3]'s end
 
 [Sprint 4] as [TASK4] requires 4 weeks and starts the 27th of May 2024
-[TASK4] is colored in green
+[TASK4] is colored in grey
 [TASK3]->[TASK4]
-[Testing4] requires 1 week
+[Testing4] requires 1 week and starts 1th of July 2024
 [TASK4]->[Testing4]
-[Demo 2 MOA] happens 9 day after [Testing4]'s end
+[Demo 2 MOA] happens 9th of July 2024
 
-[Sprint 5] as [TASK5] requires 3 weeks and starts the 27th of July 2024
+[Sprint 5] as [TASK5] requires 3 weeks and starts the 24th of June 2024
 [TASK5] is colored in Lavender/LightBlue
 [TASK4]->[TASK5]
 [Testing5] requires 1 week
 [TASK5]->[Testing5]
-[Demo 3 MOA/Corresp. (façade/régionaux)] happens 1 day after [Testing5]'s end
-[Sprint 6] as [TASK6] requires 3 weeks and starts the 1th of September 2024
+[Sprint 6] as [TASK6] requires 3 weeks and starts the 15th of July 2024
 
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
+
+[Demo 3 MOA/Corresp. (façade/régionaux)] happens the 10th of September 2024
 
 
 [               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
@@ -120,5 +121,34 @@ Project starts the 2024/03/04
 
 [validation] as [VAL] requires 2 week and starts the 15th of April 2025
 [VAL] is colored in red
+
+
+[VFA] as [CONG_VFA] requires 3 week and starts the 15th of August 2024 and requires 2 week and starts the 11 of september 2024
+[CDE] as [CONG_CDE] requires 2 week and starts the 11 of september 2024
+[VFA] is colored in lightgrey
+[CDE] is colored in lightgrey
+
+[MSC] as [CONG_MSC] requires 4 week and starts the 29 of July 2024
+[MSC] is colored in lightsteelblue
+
+[JVF] as [CONG_JVF] requires 2 week and starts the 29th of July 2024
+[JVF] is colored in plum
+
+[BLE] as [CONG_BLE] requires 3 week and starts the 5th of August 2024
+[BLE] is colored in plum
+
+[MDE] as [CONG_MDE] requires 3 week and starts the 8th of July 2024
+[MDE] is colored in plum
+
+[CGFS 2 VFA] as [EMB] requires 3 week and starts the 31th of September 2024
+[EMB] is colored in lightgrey
+
+skinparam legendBackgroundColor with
+
+legend
+  |<#lightgrey>  | Congés/Abs. MOE |
+  |<#lightsteelblue>  | Congés MOA |
+  |<#plum>   | Congés Dev |
+end legend
 
 @endgantt

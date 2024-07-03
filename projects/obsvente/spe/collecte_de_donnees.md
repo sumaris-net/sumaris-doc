@@ -488,6 +488,16 @@ Type de vente :
 >  - Tableau d'échantillonnage : PMFM de type de vente avec bouton appliquer  => OK
 >    - Renseigné sur chaque ligne et modifiable dans le tableau des espèces 
 
+
+> Proposition MOE :
+
+> Ne proposer le champs que sur la saisie d'une nouvelle vente
+
+> Garder la valeur précédente pour la saisie d'une autre vente
+
+> L'enlever du tableau et enlever la liste déroulante avec le bouton appliquer
+
+
 > Saisissable détail de la sortie.
 > Recopier dans la vente (non visible)
 > MOE : Enlever le lieu de vente de la maquette => OK

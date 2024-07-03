@@ -213,9 +213,24 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * La date de mise à jour
    * Le mode de saisie (Bureau ou Déconnecté)
 5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
+    * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, ...
 6. Le saisisseur saisit un commentaire
 7. Le saisisseur enregistre
 8. La date de mise à jour du calendrier est actualisée
+
+
+**Variante(s) :**
+
+**Variante :** Objectif d'enquête directe à "Oui"
+4. Si la valeur de l'objectif d'enquête directe est à "Oui" et la valeur du champ "Qualification de l'enquête" n'est pas "Directe"
+un warning est affiché.
+
+**Variante :** Inactivité annuelle confirmée par l'observateur" à "Oui"
+5. si la valeur de l'inactivité annuelle confirmée par l'observateur est à Oui" alors tous les mois passent à "Inactif"
+A la terminaison de la saisie, si "inactivité annuelle confirmée par l'observateur" à Oui" et au moint un mois actif alors le système affiche une erreur bloquante
+
+**Variante :** Enregistrement
+7. A l'enregistrement, si la saisie est valide, on replit la ligne des métiers, sinon, on laisse les lignes en erreur dépliées et on plie le reste (complexité à analyser)
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -234,6 +249,23 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 > Prévoir POC pour le commentaire/date/initiales
 
 
+---
+## Calendrier d'activité > Général > Gestion des conflits
+
+Réunion 27/06/2024 : 
+- Pas un vrai besoin. Pas vraiment utile. 
+- La régle : Un seul saisisseur peut saisir sur un mois.
+
+Dans le cas ou il y a un changement de quartier d'immatriculation, seul un saisisseur à les droits de saisie sur le mois du changement
+- P1 : gérer l'affichage de saisisseurs multiples
+- P2 : gestion fine des conflits (à confirmer suivant l'utilisation)
+
+Information : Il existe un annuaire des observateurs par quartier maritime pour avoir liste disponible sur le site SIH
+
+--- 
+
+
+
 -- 
 ## Calendrier d'activité > Navires
 
@@ -248,22 +280,24 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * Photos
 2. Le saisisseur consulte l'onget "Historique", il contient les états des changements des caractéristiques et des armateurs du navire sur les X dernières années :
     * Un tableau sur les caractéristiques du navire
+      * La dernière cellule de la ligne d'une caractéristique du navire permet d'ajouter/afficher des photos
     * Un tableau sur les immatriculations du navire
-    * Un tableau sur les armateurs du navire
+    * Un tableau sur les armateurs du navire (pagination avec 4-5 éléments par page pour voir les 3 tableaux sans scroller)
+      * Sur chaque tableau, toutes les années sont affichées 
+      * Les informations qui changent d'une ligne à l'autre sont mises en évidence
     * Un zone contenant l'historisation des photos du navire
       * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
       * Ce nombre d'année est paramètrable dans les préférences
       * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs
 3. Le saisisseur clique sur l'onglet "Photos". L'onglet contient les photos ajoutées en cours de l'année en cours de visualisation
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
-4. Le saisissuer ajoute des photos du navire
+4. Le saisisseur ajoute des photos du navire
 5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
 
 
 Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
 
-> Réunion du 23/05/2024 :
-> - Tableau caractéristiques des navires : afficher les caractéristiques des x dernières années ? x = 2 ? ou avoir un nb max de lignes puis une pagination ?
+> Réunion du 26/06/2024 :
 > - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment, carac technique et fpc à droite
 
 
@@ -327,6 +361,11 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
 **Variante :** Vider calendrier
 5. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 4]
 
+**Variante :** Vérification du nombre de jours en mer et de pêche
+2. A la validation, le traitement vérifie que les valeurs du nombre de jours en mer et de pêche sont comprises entre les valeurs 
+minimale et maximale (de 0 au nombre de jours maximum pour le mois). L'erreur est bloquante si cette règle n'est pas respectée.
+
+
 #### Détails techniques :
 * Sources de la prédocumentation :
   * Enquête N-1 indirecte : table ACTIVITY_CALENDAR avec :
@@ -352,25 +391,36 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
   * Zone proche : table NEARBY_SPECIFIC_AREA
 
 > Questions :
-> - MOE : Faire vidéo pou les cas d'utilisation du copier, coller, étirer, effacer
+> - MOE : Faire vidéo pour les cas d'utilisation du copier, coller, étirer, effacer
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
 > - MOE : Conserver uniquement les raccourcis CTRL+C et CTRL+V
 > - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOE : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
 > - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
-> 
-> - MOA : ajouter min/max sur les nb de jours de mer, le nb de jours de pêche et nb de personnes à bord ? (non présent dans l'allegro actuel)
-> - MOA : ajouter info bulle sur le nb de jours de mer et le nb de jours de pêche pour avoir le nb de jours et le nb d'heures ? (présent dans l'allegro actuel)
-> - MOA : répercussion de la carac "Inactivité annuelle confirmée par l'observateur" sur l'activité des mois du calendrier ?
-> - MOA : modifier l'arborescence pour avoir le gradient côté au même niveau que la zone et supprimer le chevron "plier/déplier" sur la zone ?
-> - MOA : lors de la saisie, toujours avoir un bloc métier vide pour eviter d'utiliser le bouton "+" ? (présent dans l'allegro actuel)
-> - MOA : à l'enregistrement, supprimer les lignes ayant une zone vide ? avec possibilité de rajouter une zone via un menu contextuel ? (présent dans l'allegro actuel) ou toujours afficher les 2 zones pour avoir une arborescence identique
-> - MOA : à l'enregistrement, replier l'arborescence pour voir uniquement les métiers et zones ?
+
 
 > Réunion du 23/05/2024 :
-> 
-> Ergonomie de saisi : Initialiser à Actif / Inactif, à voir à l'usage
+>
+>   Ergonomie de saisi : Initialiser à Actif / Inactif, à voir à l'usage
+
+> - **CRR : Réunion du 27/06/2024**
+>   - MOA : ajouter min/max sur les nb de jours de mer, le nb de jours de pêche et nb de personnes à bord ? (présent dans l'allegro actuel à vérifier)
+>   - **Réunion du 27/06/2024** : Oui, mettre en place un contrôle min (0) / max (nombre de jours max par mois). Le contrôle est bloquant 
+>   - MOA : ajouter info bulle sur le nb de jours de mer et le nb de jours de pêche pour avoir le nb de jours et le nb d'heures ? (présent dans l'allegro actuel)
+>   - **Réunion du 27/06/2024** : Non, pas besoin
+>   - MOA : répercussion de la carac "Inactivité annuelle confirmée par l'observateur" sur l'activité des mois du calendrier ?
+>   - Réunion du 27/06/2024** : Si inactif, tous les mois du calendrier sont en lecture seule (pas éditable). Armateur / Quartier maritime de renseigné / Port / Inactif à oui et le reste frisé (en P2). Contrôler la saisie si oui.
+>     - MOA : modifier l'arborescence pour avoir le gradient côté au même niveau que la zone et supprimer le chevron "plier/déplier" sur la zone ?
+>   - **Réunion du 27/06/2024** : Ok dév actuel
+>   - MOA : lors de la saisie, toujours avoir un bloc métier vide pour eviter d'utiliser le bouton "+" ? (présent dans l'allegro actuel)
+>   - **Réunion du 27/06/2024** : Non, pas besoin
+>   - MOA : à l'enregistrement, supprimer les lignes ayant une zone vide ? avec possibilité de rajouter une zone via un menu contextuel ? (présent dans l'allegro actuel) ou toujours afficher les 2 zones pour avoir une arborescence identique
+>   - **Réunion du 27/06/2024** : Non, ok dév actuel
+>   - MOA : à l'enregistrement, replier l'arborescence pour voir uniquement les métiers, zones ?
+>   - **Réunion du 27/06/2024** : On replie les métiers si contrôle OK, sinon si erreur de saisie, on déplie la ligne incomplète (si compliqué, en V2)
+>   - Onglet navire : Historique / Immatriculation / Armateur : 
+>   - **Réunion du 27/06/2024** : pouvoir paginer chaque tableau avec 4 affichés au minimum. Mise en évidence les éléments qui ont changés
 
 
 
