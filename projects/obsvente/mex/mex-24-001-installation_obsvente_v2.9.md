@@ -11,18 +11,20 @@ Liste des tickets réalisés :
 
 ## Configuration du Pod
 
-Enumerations 
 
+- [ ] Nouvelles options dans le fichier de configuration :
 ```properties
-# PMFM fonctionnels
+# Enumerations > PMFM fonctionnels
 sumaris.enumeration.Pmfm.HAS_PETS.id=<id du PMFM "Présence de PETS ? (Booléen)">
 sumaris.enumeration.Pmfm.IS_OBSERVED.id=<id du PMFM "Espèce observé ? (Booléen)">
 sumaris.enumeration.Pmfm.NON_OBSERVATION_REASON.id=<id du PMFM "Raison de non observations">
-# PMFM techniques
+# Enumerations > PMFM techniques
 sumaris.enumeration.Pmfm.SALE_TYPE_ID.id=<id du PMFM "Type de vente (id)">
 sumaris.enumeration.Pmfm.SPECIES_LIST_ORIGIN.id=<id du PMFM "Origine de la liste des espèce (PETS/Tirage au sort)">
 sumaris.enumeration.Pmfm.TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id)">
-sumaris.data.vessel.unknwon.id=<ID navire inconnu>
+# navire inconnu
+sumaris.data.vessel.unknown.id=<ID navire inconnu>
+sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ```
 

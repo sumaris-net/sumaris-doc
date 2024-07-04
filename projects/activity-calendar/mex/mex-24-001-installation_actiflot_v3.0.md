@@ -12,7 +12,11 @@ Liste des tickets réalisés :
 
 ## Configuration du Pod
 
-RAS  
+- [ ] Nouvelles options dans le fichier de configuration :
+```properties
+# Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
+sumaris.program.privilege.readonly=true
+```  
 
 ## Schéma SIH2_ADAGIO_DBA
 
@@ -342,6 +346,6 @@ RAS
 
 
 
-## Mise à jour du programme SIH-OBSMER
+## Mise à jour du programme SIH-ACTIFLOT
 
 - TODO
