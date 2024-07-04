@@ -6,14 +6,14 @@
   ..
   .
   {{
-    Objectif d'enquête directe ?* | { (X) <b>Oui | () Non }
+    Objectif d'enquête directe ?* | { (X) <b>Oui | () Non | . | Qualification de l'enquête* : | ^Indirecte^}
     Enquête éco ?* | { (X) <b>Oui | () Non }} |
   }
   .
   {
   <b>Caractéristiques de l'enquête
      {
-     . | Qualification de l'enquête* : | ^Indirecte^
+
      . | Fiabilité de l'enquête* : | ^Fiable   ^
      . | Inactivité annuelle confirmée par l'observateur* : | { (X) <b>Oui | () Non }
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }

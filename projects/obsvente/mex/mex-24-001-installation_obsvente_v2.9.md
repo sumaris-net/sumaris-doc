@@ -21,14 +21,23 @@ sumaris.enumeration.Pmfm.NON_OBSERVATION_REASON.id=<id du PMFM "Raison de non ob
 # PMFM techniques
 sumaris.enumeration.Pmfm.SALE_TYPE_ID.id=<id du PMFM "Type de vente (id)">
 sumaris.enumeration.Pmfm.SPECIES_LIST_ORIGIN.id=<id du PMFM "Origine de la liste des espèce (PETS/Tirage au sort)">
-sumaris.enumeration.Pmfm.PMFM_TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id)">
+sumaris.enumeration.Pmfm.TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id)">
 sumaris.data.vessel.unknwon.id=<ID navire inconnu>
 
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
 
-RAS
+- Modification de la table `M_PARAMETER`
+  ```sql
+  alter table m_parameter add is_boolean number(1);
+  alter table m_parameter add is_date number(1);
+-```  
+
+- Définition de PMFM en booléen
+  ```sql
+  update  m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
+-```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
@@ -118,6 +127,28 @@ RAS
       end case;
     end;
   ```
+
+
+
+- Ajout de la vue `PARAMETER`
+  ```sql
+  create or replace view PARAMETER as
+      select MP.ID,
+      P.CODE as LABEL,
+      P.COMMENTS,
+      P.CREATION_DATE,
+      P.DESCRIPTION,
+      P.IS_ALPHANUMERIC,
+      MP.IS_BOOLEAN,
+      MP.IS_DATE,
+      P.IS_QUALITATIVE,
+      P.NAME,
+      P.PARAMETER_GROUP_FK,
+      P.UPDATE_DATE,
+      cast(P.STATUS_FK as number(10)) as STATUS_FK
+      from SIH2_ADAGIO_DBA.PARAMETER P
+      inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on P.CODE = MP.CODE;
+```  
 
 ## Mise à jour du programme SIH-OBSVENTE
 

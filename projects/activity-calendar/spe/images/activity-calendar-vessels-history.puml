@@ -11,20 +11,21 @@
     .
     {
     . | Caractéristiques des navires
-    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction | FPC | <b>...
-       123456 | 06/04/2021 | 31/12/2022 | SONNY | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | Oui}
+    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | FPC | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction  | <b>...
+       123456 | 06/04/2021 | 31/12/2022 | SONNY | Oui | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | <&camera-slr>}
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
 
     . | Historique des immatriculations navires
     . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation | <b>...
        123456 | 01/01/1967 | . | MA - Marseille}
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
-
     . | Couples navires-armateurs
     . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur | <b>...
        123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
-
     . | Photos
     }
   }

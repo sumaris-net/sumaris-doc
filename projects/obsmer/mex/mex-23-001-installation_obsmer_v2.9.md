@@ -409,7 +409,21 @@ end;
     end;
 -```
 
-
+- Modification de la vue `VESSEL_FEATURES`
+  ```sql
+      create or replace view METHOD as
+        select ID,
+        null as COMMENTS,
+        CREATION_DATE,
+        DESCRIPTION,
+        null as IS_CALCULATED,
+        null as IS_ESTIMATED,
+        null as LABEL,
+        NAME,
+        UPDATE_DATE,
+        cast(M.STATUS_FK as number(10)) as STATUS_FK
+      from SIH2_ADAGIO_DBA.METHOD M;
+-```
 
 ## Mise à jour du programme SIH-OBSMER
 
