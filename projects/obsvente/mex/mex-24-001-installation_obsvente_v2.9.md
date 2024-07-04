@@ -128,7 +128,7 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
           delete from SIH2_ADAGIO_DBA.OBSERVED_LOCATION OL where OL.ID=:old.ID;
       end case;
     end;
-  ```
+  -```
 
 
 
@@ -150,19 +150,35 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
       cast(P.STATUS_FK as number(10)) as STATUS_FK
       from SIH2_ADAGIO_DBA.PARAMETER P
       inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on P.CODE = MP.CODE;
-```  
+-```  
 
 ## Mise à jour du programme SIH-OBSVENTE
 
-- TODO
+- Options pour le programme SIH-OBSVENTE
+
+```properties 
+sumaris.landing.rows.divider.pmfmId=3274
+```
+
+```requete sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.landing.rows.divider.pmfmId', 3274, 80 , 1, sysdate);
+```
 
 - Options pour la stratégie "Métropole" (STRATEGY_PROPERTY) 
+- A mettre dans PROGRAM_PROPERTY (temporaire)
 
-```properties
+```properties (à ajouter dans le fichier de configuration de l'application)
 sumaris.observedLocation.landing.autoFill=true
 ```
 
+```requete sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landing.autoFill', 'true', 80 , 1, sysdate)
+```
+
 - Options pour la stratégie "Outre-Mer" (STRATEGY_PROPERTY)
-```properties
+```properties 
 sumaris.observedLocation.landing.autoFill=false
+```
+```requete sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landing.autoFill', 'false', 80 , 1, sysdate)
 ```
