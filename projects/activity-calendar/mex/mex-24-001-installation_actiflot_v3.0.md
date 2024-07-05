@@ -18,6 +18,10 @@ Liste des tickets réalisés :
 sumaris.program.privilege.readonly=true
 ```  
 
+```requete sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
+```
+
 ## Schéma SIH2_ADAGIO_DBA
 
 - Modification `ACTIVITY_CALENDAR` :
@@ -32,6 +36,11 @@ sumaris.program.privilege.readonly=true
   ```sql
   alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT CLOB;
   alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT_TYPE varchar2(100);
+-```
+
+- Ajout de grant sur `ACTIVITY_CALENDAR` :
+  ```sql
+    grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
@@ -249,31 +258,57 @@ sumaris.program.privilege.readonly=true
 
 - Ajout de la vue `GEAR_PHYSICAL_FEATURES`
   ```sql
-  create or replace view GEAR_PHYSICAL_FEATURES as
-  select GPG.ID,
-  GPG.START_DATE,
-  GPG.END_DATE,
-  GPG.CREATION_DATE,
-  GPG.CONTROL_DATE,
-  GPG.VALIDATION_DATE,
-  GPG.QUALIFICATION_DATE,
-  GPG.QUALIFICATION_COMMENTS,
-  GPG.UPDATE_DATE,
-  V.ID as vessel_fk,
-  cast(GPG.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK,
-  MP.ID as program_fk,
-  GPG.PHYSICAL_GEAR_SURVEY_FK,
-  GPG.FISHING_TRIP_FK,
-  GPG.GEAR_FK,
-  GPG.RANK_ORDER,
-  GPG.OTHER_GEAR_FK,
-  GPG.ACTIVITY_CALENDAR_FK,
-  GPG.METIER_FK,
-  null as COMMENTS
-  FROM SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES GPG
-  inner join SIH2_ADAGIO_DBA.M_VESSEL V on GPG.VESSEL_FK = V.CODE
-  inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on GPG.PROGRAM_FK = MP.CODE
+    create or replace view GEAR_PHYSICAL_FEATURES as
+    select GPG.ID,
+    GPG.START_DATE,
+    GPG.END_DATE,
+    GPG.CREATION_DATE,
+    GPG.CONTROL_DATE,
+    GPG.VALIDATION_DATE,
+    GPG.QUALIFICATION_DATE,
+    GPG.QUALIFICATION_COMMENTS,
+    GPG.UPDATE_DATE,
+    V.ID as vessel_fk,
+    cast(GPG.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK,
+    MP.ID as program_fk,
+    GPG.PHYSICAL_GEAR_SURVEY_FK,
+    GPG.FISHING_TRIP_FK,
+    GPG.GEAR_FK,
+    GPG.RANK_ORDER,
+    GPG.OTHER_GEAR_FK,
+    GPG.ACTIVITY_CALENDAR_FK,
+    GPG.METIER_FK,
+    null as COMMENTS
+    FROM SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES GPG
+    inner join SIH2_ADAGIO_DBA.M_VESSEL V on GPG.VESSEL_FK = V.CODE
+    inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on GPG.PROGRAM_FK = MP.CODE
   ;
+-```
+
+- Ajout du trigger `TR_GEAR_PHYSICAL_FEATURES`
+  ```sql
+    create or replace trigger TR_GEAR_PHYSICAL_FEATURES
+      instead of insert or update or delete
+        on GEAR_PHYSICAL_FEATURES
+          begin
+            case
+              WHEN INSERTING THEN
+                -- GEAR_PHYSICAL_FEATURES itself
+                insert into SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES(ID, START_DATE, END_DATE, CREATION_DATE, CONTROL_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, PHYSICAL_GEAR_SURVEY_FK, QUALITY_FLAG_FK,
+                                                                   FISHING_TRIP_FK, GEAR_FK, RANK_ORDER, OTHER_GEAR_FK, ACTIVITY_CALENDAR_FK, METIER_FK, PROGRAM_FK, VESSEL_FK)
+                values (:new.ID, :new.START_DATE, :new.END_DATE, :new.CREATION_DATE, :new.CONTROL_DATE, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.PHYSICAL_GEAR_SURVEY_FK, :new.QUALITY_FLAG_FK,
+                        :new.FISHING_TRIP_FK, :new.GEAR_FK, :new.RANK_ORDER, :new.OTHER_GEAR_FK, :new.ACTIVITY_CALENDAR_FK, :new.METIER_FK, (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK));
+
+              WHEN UPDATING THEN
+                -- GEAR_PHYSICAL_MEASUREMENT itself
+                update SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES G set G.ID = :new.ID, G.START_DATE = :new.START_DATE, G.END_DATE = :new.END_DATE, G.CREATION_DATE = :new.CREATION_DATE, G.CONTROL_DATE = :new.CONTROL_DATE, G.VALIDATION_DATE = :new.VALIDATION_DATE, G.QUALIFICATION_DATE = :new.QUALIFICATION_DATE, G.QUALIFICATION_COMMENTS = :new.QUALIFICATION_COMMENTS, G.PHYSICAL_GEAR_SURVEY_FK = :new.PHYSICAL_GEAR_SURVEY_FK, G.QUALITY_FLAG_FK = :new.QUALITY_FLAG_FK,
+                                                                    G.FISHING_TRIP_FK = :new.FISHING_TRIP_FK, G.GEAR_FK = :new.GEAR_FK, G.RANK_ORDER = :new.RANK_ORDER, G.OTHER_GEAR_FK = :new.OTHER_GEAR_FK, G.ACTIVITY_CALENDAR_FK = :new.ACTIVITY_CALENDAR_FK, G.METIER_FK = :new.METIER_FK, G.PROGRAM_FK = (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), G.VESSEL_FK = (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK)
+                where G.ID = :new.ID;
+
+              WHEN DELETING THEN
+                delete from SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES GPF where GPF.ID=:old.ID;
+            end case;
+          end;
 -```
 
 - Ajout de la vue `GEAR_PHYSICAL_MEASUREMENT`
@@ -344,7 +379,10 @@ sumaris.program.privilege.readonly=true
       inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on GPFO.PROGRAM_FK = MP.CODE;
 -```
 
-
+- Ajout de synonme sur `GEAR_PHYSICAL_FEATURES_SEQ`
+  ```sql
+create or replace synonym GEAR_PHYSICAL_FEATURES_SEQ for SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ;
+-```
 
 ## Mise à jour du programme SIH-ACTIFLOT
 

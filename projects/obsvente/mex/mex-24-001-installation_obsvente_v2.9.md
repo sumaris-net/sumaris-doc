@@ -21,10 +21,14 @@ sumaris.enumeration.Pmfm.NON_OBSERVATION_REASON.id=<id du PMFM "Raison de non ob
 # Enumerations > PMFM techniques
 sumaris.enumeration.Pmfm.SALE_TYPE_ID.id=<id du PMFM "Type de vente (id)">
 sumaris.enumeration.Pmfm.SPECIES_LIST_ORIGIN.id=<id du PMFM "Origine de la liste des espèce (PETS/Tirage au sort)">
+sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_PETS.id=<id de la valeur qualitative "PETS" du PMFM "Origine de la liste des espèces">
+sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_RANDOM.id=<id de la valeur qualitative "Tirage au sort" du PMFM "Origine de la liste des espèces">
 sumaris.enumeration.Pmfm.TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id)">
 # navire inconnu
 sumaris.data.vessel.unknown.id=<ID navire inconnu>
 sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
+
+
 
 ```
 
