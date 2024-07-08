@@ -87,7 +87,7 @@ Validation des données : qui valide (responsable de programme et/ou coordinateu
 - L'action de "Terminer la saisie" correspond à une validation par l'observateur
 - L'action de "Validation" correspond à une validation de la société
 - L'edition du rapport lance le contrôle des données saisies 
-  - En cas d'erreur, le rapport n'est pas éditier et l'observateur est informé sur les écrans en erreur
+  - En cas d'erreur, le rapport n'est pas éditer et l'observateur est informé sur les écrans en erreur
 
 
 ---
