@@ -16,7 +16,7 @@ Liste des tickets réalisés :
 ```properties
 # Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
 sumaris.program.privilege.readonly=true
-```  
+```
 
 ```requete sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
