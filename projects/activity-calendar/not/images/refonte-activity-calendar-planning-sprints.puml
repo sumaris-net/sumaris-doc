@@ -100,35 +100,37 @@ Project starts the 2024/04/08
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
 [TASK4]->[Testing4]
-[Demo MOA 3 (annulé)] happens 3 day after [Testing4]'s end
+
 
 [Sprint 5] as [TASK5] requires 3 weeks
 [TASK5] is colored in Lavender/LightBlue
 [TASK4]->[TASK5]
 [Testing5] requires 1 week and starts the 5th of August 2024
 [TASK5]->[Testing5]
-[Demo MOA 4 (à maintenir ?)] happens 3 day after [Testing5]'s end
+[Demo MOA 3 (à définir ?)] happens 3 day after [Testing5]'s end
 
 [Sprint 6] as [TASK6] requires 4 weeks and starts the 5th of August 2024
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
-[Demo MOA 5] happens 3 day after [Testing6]'s end
+[Demo MOA 4] happens 3 day after [Testing6]'s end
 
 [Sprint 7] as [TASK7] requires 4 weeks and starts the 2th of September 2024
 [TASK7] is colored in Lavender/LightBlue
 [TASK6]->[TASK7]
 [TASK7]->[Testing7]
 [Testing7] requires 1 week and starts the 22th of September 2024
-[Demo MOA 6] happens 2 day after [Testing7]'s end
+[Demo MOA 5] happens 2 day after [Testing7]'s end
 
 [validation] as [VAL] requires 2 week and starts the 1th of October 2024
 [VAL] is colored in orange
 [Testing7]->[VAL]
 
-[VFA] as [CONG_VFA] requires 3 week and starts the 15th of August 2024 and requires 2 week and starts the 11 of september 2024
+[GPR] as [CONG_GPR] requires 4 week and starts the 19th of July 2024
+[VFA] as [CONG_VFA] requires 3 week and starts the 15th of August 2024
 [CDE] as [CONG_CDE] requires 2 week and starts the 11 of september 2024
+[GPR] is colored in lightgrey
 [VFA] is colored in lightgrey
 [CDE] is colored in lightgrey
 

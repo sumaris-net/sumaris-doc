@@ -1,4 +1,4 @@
-# ObsVentes - Demo MOA
+# ObsVentes - Demo MOA 1
 
 ## Application 
 
@@ -8,14 +8,14 @@
 
 ---
 
-## 06/06/2024 - Demo 
+## 06/06/2024 - Demo 1
 
 ### ObsVentes - Sprint 3 - Issues Board
 
 - **Sprint** : 3
 - **Start date** : 29/04/2024
 - **End date** : 24/05/2024
-- **Milestone** : 2.9.0-alpha18
+- **Milestone** : **2.9.0-alpha18**
 - **Status** : Closed
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=OBSVENTES&milestone_title=2.9.3-alpha18)
 
@@ -23,7 +23,7 @@
 
 ### Fonctionnalités / Limitations
 
-**Fonctionnalités sur le sprint 3**
+Fonctionnalités sur le sprint 3
 - [Consultation des sorties](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sorties
   )
 - [Filtre sur les sorties](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sorties--filtres)
@@ -31,7 +31,7 @@
 - [Saisie d'une sortie](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/spe/collecte_de_donnees.md#sortie--d%C3%A9tails)
 
 
-**Limitations sur le sprint 3** 
+Limitations sur le sprint 3
 - [Retours de recette ObsVentes v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/589)
 - [Retours de recette volets communs v2.9.0-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596)
 

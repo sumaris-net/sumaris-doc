@@ -1,4 +1,4 @@
-# Activity Calendar - Demo MOA
+# Activity Calendar - Demo 1 MOA
 
 ## Application 
 
@@ -8,14 +8,14 @@
 
 ---
 
-## 13/06/2024 - Demo 
+## 13/06/2024 - Demo 1 
 
 ### Activity Calendar - Sprint 2 - Issues Board
 
 - **Sprint** : 2
 - **Start date** : 29/04/2024
 - **End date** : 24/05/2024
-- **Milestone** : 2.9.3-alpha18
+- **Milestone** : **2.9.3-alpha18**
 - **Status** : Closed
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.3-alpha18)
 
@@ -23,7 +23,7 @@
 
 ### Fonctionnalités / Limitations
 
-**Fonctionnalités du sprint 2**
+Fonctionnalités du sprint 2
 - Création de l'onglet "Calendrier"
 - Prédocumentation
 - POC tableau de saisie de l'activité
@@ -37,7 +37,7 @@
 
 ---
 
-**Limitations du sprint 2** 
+Limitations du sprint 2
 - [Retours de recette ActiFlot v2.9.3-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/587)
 - [Retours de recette volets communs v2.9.3-alpha18](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596)
 
