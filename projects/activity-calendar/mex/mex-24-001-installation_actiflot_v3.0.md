@@ -16,6 +16,10 @@ Liste des tickets réalisés :
 ```properties
 # Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
 sumaris.program.privilege.readonly=true
+sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=TODO # 623 ou 1445 ?
+sumaris.enumeration.Pmfm.SURVEY_RELIABILITY.id=681
+sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=
+
 ```
 
 ```requete sql

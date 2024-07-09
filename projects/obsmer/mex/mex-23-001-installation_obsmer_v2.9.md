@@ -433,4 +433,6 @@ end;
 # Activer les rapports de marée (formulaires terrain et restitution aux professionnels)
 sumaris.trip.report.enable=true
 sumaris.trip.report.type= /* TODO */
+# Espèces cible = espèces métier national
+sumaris.trip.operation.metier.taxonGroupType.ids=3
 ```
