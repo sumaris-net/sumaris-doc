@@ -262,6 +262,7 @@ puis le tableau de saisie "Tirage au sort". Sinon l'onglet affiche seulement le 
 1. Dans l'onglet "Echantillonnages", le saisisseur saisie la liste des PETS observés s'il à indiqué PETS à "Oui" dans la sortie. 
 2. Il renseigne aussi la liste des espèces à observer.
 
+
 ### Sortie > Echantillonnages en métropole > Saisie de PETS
 
 **REF: OBSVENTES/SORTIE/ECH_AUTRES**
@@ -278,6 +279,10 @@ par rapport à celles définies dans la liste des espèces à observer.
 
 #### Scénario principal
 
+Un bouton :heavy_plus_sign:, dans le bandeau au dessus du tableau, permet d'ajouter des PETS à échantillonner.
+
+Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, permet une resynchronisation avec WAO pour recharger la liste des PETS et des espèces tirées au sort
+
 1. Dans le tableau "PETS", les informations suivantes sont affichées pour chaque espèce :
     * Espèce commerciale
     * Espèce scientifique
@@ -291,11 +296,22 @@ par rapport à celles définies dans la liste des espèces à observer.
     * L'espèce scientifique
 3. La case à cocher "Observé ?" est automatiquement cochée
 4. Le saisisseur enregistre l'échantillon observé
-5. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+5. Un bouton + permet d'ajouter un nouveau PETS à échantillonner
+6. Le saisisseur crée un lot d'espèces pour un PETS (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
 
 **Variante(s) :**
 
+**Variante 1a :** Resynchronisation avec WAO de la liste des espèces
+
+Si l'observateur se trompe de ligne de plan et qu'une saisie à déjà été effectuée :
+Le bouton :arrows_counterclockwise: permet :  
+- De complèter la liste des PETS et la liste tirée au sort avec les espèces de la nouvelle ligne de plan
+- De réordonner la liste avec les nouvelles priorités 
+  - Valable pour les espèces tirées au sort
+- De supprimer les précédentes espèces saisies (PETS et tirage au sort) qui ne sont plus dans la ligne de plan actuelle
+
 **Variante 4a :** Le saisisseur supprime un PETS
+
 
 #### Détails techniques :
 * Echantillonnage : LANDING
@@ -370,6 +386,8 @@ Le saisisseur accède à l'onglet "Echantillonnages" de l'écran de création d'
 La stratégie déterminée à partir des éléments définis sur la sortie permet de déterminer s'il s'agit d'une vente en métropole ou en outremer.
 
 #### Scénario principal
+
+Un bouton <b>((:heavy_plus_sign:), dans le bandeau au dessus du tableau, permet d'ajouter les espèces tirées au sort par lot (REF: OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT)
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
     * Espèce commerciale
@@ -465,7 +483,7 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Le type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
    * Le lieu de vente
    * La date/heure de vente*
-   * Le type d'engin*
+   * Le métier*
    * La zone de pêche
    * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)

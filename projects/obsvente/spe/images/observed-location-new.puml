@@ -30,8 +30,6 @@
   {
       . | Disponibilité de la fiche de pré-vente :| ^Oui^
       . | PETS ?* : | ^Oui^
-      . | Contrôle observateur* : | ^Données contrôlées^
-      . | Vérification société* : | ^Données valides   ^
       . | .
   }
 

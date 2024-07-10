@@ -12,7 +12,7 @@ saltDiagram {
   <&warning><font color=blue>Moins de 15 espèces observées (justifiez si non observée)
   .
   { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
-  { <&plus> <&trash> } | <b>Y
+  { <&plus> <&reload> <&trash> } | <b>Y
   ..
 	{#
 	    <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche| <b>Type de vente | <b>  ... | *

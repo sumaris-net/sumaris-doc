@@ -6,7 +6,7 @@
   ..
   { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
 
-  { <&plus> <b>(<&plus>) <&trash> } | <b>Y
+  { <&plus> <b>((<&plus>) <&trash> } | <b>Y
 	{#
       <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Navire | <b>Zone de pêche| <b>Type de vente | <b>  ... | *
       [X] 1 | <&pencil> |  BET - Thunnus obesus | BET - Thon obèse(=Patudo) | [X]. | 123456 - Navire 1 | Zone 1 | ^Enchères - HAM / Criées^ | . | <&tag>
