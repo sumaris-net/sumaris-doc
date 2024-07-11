@@ -16,9 +16,9 @@ Liste des tickets réalisés :
 ```properties
 # Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
 sumaris.program.privilege.readonly=true
-sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=TODO # 623 ou 1445 ?
+sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=<Id du PMFM dans ACTIFLOT> # 623 ou 1445 ?
 sumaris.enumeration.Pmfm.SURVEY_RELIABILITY.id=681
-sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=
+sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 ```
 
@@ -45,6 +45,13 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
 - Ajout de grant sur `ACTIVITY_CALENDAR` :
   ```sql
     grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES`
+  ```sql
+  alter table SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES add column HASH NUMBER(10);
+  alter table SIH2_ADAGIO_DBA.GEAR_USE_FEATURES add column HASH NUMBER(10);
+  alter table SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES add column HASH NUMBER(10);
 -```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
@@ -96,6 +103,7 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
   VUF.quality_flag_fk,
   VUF.start_date,
   VUF.update_date,
+  VUF.hash,
   V.ID as vessel_fk
   from SIH2_ADAGIO_DBA.vessel_use_features VUF
   inner join SIH2_ADAGIO_DBA.M_VESSEL V on VUF.VESSEL_FK = V.CODE
@@ -124,6 +132,7 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
   GUF.start_date,
   GUF.update_date,
   GUF.validation_date,
+  GUF.hash,
   V.ID as vessel_fk
   from SIH2_ADAGIO_DBA.gear_use_features GUF
   inner join SIH2_ADAGIO_DBA.M_VESSEL V on GUF.VESSEL_FK = V.CODE
@@ -282,7 +291,8 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
     GPG.OTHER_GEAR_FK,
     GPG.ACTIVITY_CALENDAR_FK,
     GPG.METIER_FK,
-    null as COMMENTS
+    null as COMMENTS,
+    GPG.hash,
     FROM SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES GPG
     inner join SIH2_ADAGIO_DBA.M_VESSEL V on GPG.VESSEL_FK = V.CODE
     inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on GPG.PROGRAM_FK = MP.CODE
@@ -299,14 +309,14 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
               WHEN INSERTING THEN
                 -- GEAR_PHYSICAL_FEATURES itself
                 insert into SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES(ID, START_DATE, END_DATE, CREATION_DATE, CONTROL_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, PHYSICAL_GEAR_SURVEY_FK, QUALITY_FLAG_FK,
-                                                                   FISHING_TRIP_FK, GEAR_FK, RANK_ORDER, OTHER_GEAR_FK, ACTIVITY_CALENDAR_FK, METIER_FK, PROGRAM_FK, VESSEL_FK)
+                                                                   FISHING_TRIP_FK, GEAR_FK, RANK_ORDER, OTHER_GEAR_FK, ACTIVITY_CALENDAR_FK, METIER_FK, HASH, PROGRAM_FK, VESSEL_FK)
                 values (:new.ID, :new.START_DATE, :new.END_DATE, :new.CREATION_DATE, :new.CONTROL_DATE, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.PHYSICAL_GEAR_SURVEY_FK, :new.QUALITY_FLAG_FK,
-                        :new.FISHING_TRIP_FK, :new.GEAR_FK, :new.RANK_ORDER, :new.OTHER_GEAR_FK, :new.ACTIVITY_CALENDAR_FK, :new.METIER_FK, (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK));
+                        :new.FISHING_TRIP_FK, :new.GEAR_FK, :new.RANK_ORDER, :new.OTHER_GEAR_FK, :new.ACTIVITY_CALENDAR_FK, :new.METIER_FK, :new.HASH, (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK));
 
               WHEN UPDATING THEN
                 -- GEAR_PHYSICAL_MEASUREMENT itself
                 update SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES G set G.ID = :new.ID, G.START_DATE = :new.START_DATE, G.END_DATE = :new.END_DATE, G.CREATION_DATE = :new.CREATION_DATE, G.CONTROL_DATE = :new.CONTROL_DATE, G.VALIDATION_DATE = :new.VALIDATION_DATE, G.QUALIFICATION_DATE = :new.QUALIFICATION_DATE, G.QUALIFICATION_COMMENTS = :new.QUALIFICATION_COMMENTS, G.PHYSICAL_GEAR_SURVEY_FK = :new.PHYSICAL_GEAR_SURVEY_FK, G.QUALITY_FLAG_FK = :new.QUALITY_FLAG_FK,
-                                                                    G.FISHING_TRIP_FK = :new.FISHING_TRIP_FK, G.GEAR_FK = :new.GEAR_FK, G.RANK_ORDER = :new.RANK_ORDER, G.OTHER_GEAR_FK = :new.OTHER_GEAR_FK, G.ACTIVITY_CALENDAR_FK = :new.ACTIVITY_CALENDAR_FK, G.METIER_FK = :new.METIER_FK, G.PROGRAM_FK = (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), G.VESSEL_FK = (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK)
+                                                                    G.FISHING_TRIP_FK = :new.FISHING_TRIP_FK, G.GEAR_FK = :new.GEAR_FK, G.RANK_ORDER = :new.RANK_ORDER, G.OTHER_GEAR_FK = :new.OTHER_GEAR_FK, G.ACTIVITY_CALENDAR_FK = :new.ACTIVITY_CALENDAR_FK, G.METIER_FK = :new.METIER_FK, G.HASH = :new.HASH, G.PROGRAM_FK = (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), G.VESSEL_FK = (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK)
                 where G.ID = :new.ID;
 
               WHEN DELETING THEN
