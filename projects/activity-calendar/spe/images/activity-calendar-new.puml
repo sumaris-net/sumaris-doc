@@ -2,7 +2,7 @@
 {
   Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
-  {/ Général | Navires | <b>Calendrier (4) | Métiers | Zones d'activité}
+  {/ Général | Navire | <b>Calendrier (4) | Métiers | Carte}
   ..
   .
 
@@ -12,58 +12,25 @@
 	{#
      . | <b>Janvier | <b>Février | <b>Mars | <b>Avril| ... | <b>Décembre
      Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | . | .
-     Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | . | .
+     Lieu d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | . | .
      Actif ?* | ^Inactif    ^| ^Inactif                       ^| ^Actif                                      ^ | ^Actif                                      ^| . | . | .
      Port d'exploitation* | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon^ | ^JMA - La Matrague de Montredon             ^ | ^JMA - La Matrague de Montredon             ^| . | . | .
      Nombre de jours de mer | . | . | 10 | 15 | . | . | .
      Nombre de jours de pêche | . | . | 10 | 15 | . | . | .
-     Nombre d'hommes à bord/marée | . | . | 2 | 2 | . | . | .
-     Métier 1 | . | . | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
-     Zone 1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
-     Gradient côte* | . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
-     Profondeur | . | . | ^30-50m - Profondeur 30 à 50 mètres         ^ | ^30-50m - Profondeur 30 à 50 mètres         ^ | . | . | .
-     Zone proche | . | . | ^Filière                                    ^ | ^Filière                                    ^ | . | . | .
-     Zone 2 | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | .
-     Profondeur | . | . | . | . | . | . | .
-     Zone proche | . | . | . | . | . | . | .
-     Métier 2 | . | . | ^GTRNEP - Trémails à langoustines           ^ | . | . | . | .
-     Zone 1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^|.| . | . | .
-     Gradient côte | . | . | ^3-12 Mil. - 3 à 12 milles                  ^|.| . | . | .
-     Profondeur | . | . | ^30-50m - Profondeur 30 à 50 mètres         ^|.| . | . | .
-     Zone proche | . | . | ^Filière                                    ^|.| . | . | .
-     Zone 2 | . | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | .
-     Profondeur | . | . | . | . | . | . | .
-     Zone proche | . | . | . | . | . | . | .
+     Nombre de personnes à bord | . | . | 2 | 2 | . | . | .
+     Métier #1 <&chevron-top> | . | . | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
+     Zone #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
+     Gradient côte* <&chevron-bottom>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
+     Zone #2 | . | . | . | . | . | .
+     Gradient côte <&chevron-bottom>| . | . | . | . | . | . | .
+     Métier #2 <&chevron-top>| . | . | ^GTRNEP - Trémails à langoustines           ^ | . | . | . | .
+     Zone #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^|.| . | . | .
+     Gradient côte <&chevron-bottom>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^|.| . | . | .
+     Zone #2 | . | . | . | . | . | . | .
+     Gradient côte <&chevron-bottom>| . | . | . | . | . | . | .
     }
     }
-    .
-    ==
-  {<b>Prédocumentation</b> {[X]SACROIS-OBSDEB | [X]Enquête N-1 }}
-  	{#
-     . | <b>Janvier | * | <b>Février | * | ... | <b>Décembre
-     . | <b>Enquête N-1 | <b>SACROIS-OBSDEB | <b>Enquête N-1 | <b>SACROIS-OBSDEB | . | .
-     Armateur | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | 12345 - DUPOND ERIC | . | .
-     Quartier d'immatriculation | MA - Marseille | MA - Marseille | MA - Marseille | MA - Marseille | . | .
-     Actif ? | Inexistant | . | Inactif | Actif | . | .
-     Port exploit. / rattach. | . | . | JMA - La Matrague de Montredon | JMA - La Matrague de Montredon | . | .
-     Nombre de jours de mer | . | . | . | 10 | . | .
-     Nombre de jours de pêche | . | . | . | 10 | . | .
-     Nombre d'hommes à bord/marée | . | . | . | 2 | . | .
-     Métier 1 | . | . | .| GTRMZZ - Trémails à poissons | . | .
-     Zone 1 | . | . | .| MD11 - 3 à 12 milles, région LR, partie Sud | . | .
-     Gradient côte | . | . | .| 3-12 Mil. - 3 à 12 milles | . | .
-     Zone 2 | . | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | .
-     Métier 2 | . | . | . | . | . | .
-     Zone 1 | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | .
-     Zone 2 | . | . | . | . | . | . | .
-     Gradient côte | . | . | . | . | . | . | .
-     }
-     .
   --
-  { [PREDOCUMENTATION <&chevron-top> ] | . | . | . | . | . | . | . | . | [Fermer] | [Sauvegarder] }
+  { [PREDOCUMENTATION <&chevron-top> ] | . | . | . | . | . | . | . | . | [Fermer] | [<&reload> Réinitialiser] | [Sauvegarder] }
 }
 @endsalt

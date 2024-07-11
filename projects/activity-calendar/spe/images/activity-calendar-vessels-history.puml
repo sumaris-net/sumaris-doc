@@ -2,28 +2,27 @@
 {
   Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
-  {/ Général | <b>Navires | Calendrier | Métiers | Zones d'activité}
+  {/ Général | <b>Navire | Calendrier | Métiers | Carte}
   ..
   {/ <&clock><b>Historique | <&camera-slr>Photos}
   ..
   {{
-  <b>Etat des changements des caractéristiques et des armateurs du navire sur 2022
-    .
+
     {
-    . | Caractéristiques des navires
-    . | {# Immatriculation | Début validité | Fin validité | Nom du navire | FPC | Port d'exploitation | Jauge brute (TJB 1/100 tx) | Jauge (GT) | Puiss. adm. (kW) | Long. H.T. (m) | Année de construction  | <b>...
-       123456 | 06/04/2021 | 31/12/2022 | SONNY | Oui | JMA - La Madrague de Montredon | 560 | 320 | 66.0 | 9 | 1967 | <&camera-slr>}
+    . | Caractéristiques navire
+    . | {# Début validité | Fin validité | Marquage extérieur | Nom | FPC ? | Puissance administrative (kW) | Longueur hors tout (m) | Tonnage jauge brute (TJB) | Tonnage (UMS) | Matériau de la coque | Port d'exploitation
+        06/04/2021 | 31/12/2022 | 123456 | SONNY | Oui | 66 | 9 | 5.6 | 3.2 | Bois | JMA - La Madrague de Montredon }
     . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
 
-    . | Historique des immatriculations navires
-    . | {# Immatriculation | Début immatriculation | Fin immatriculation | Quartier d'immatriculation | <b>...
-       123456 | 01/01/1967 | . | MA - Marseille}
+    . | Immatriculations
+    . | {# Début immatriculation | Fin immatriculation | Immatriculation | Immatriculation internationale | Quartier d'immatriculation
+       01/01/1967 | . | 123456 | FRA000123456 | MA - Marseille}
     . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
-    . | Couples navires-armateurs
-    . | {# Immatricualtion | Code armateur | Début armement | Fin armement | Nom armateur | Prénom armateur | <b>...
-       123456 | 12345 | 06/04/2021 | . | DUPOND | Eric}
+    . | Armateurs
+    . | {# Début armement | Fin armement | Code armateur |  Nom | Prénom | Début activité | Date de la retraite ...
+        06/04/2021 | . | 12345 | DUPOND | Eric | 01/01/2020 | . }
     . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
     . | Photos
@@ -34,6 +33,6 @@
 
   .
   --
-  { [Fermer] | [Sauvegarder] }
+  { [Fermer] | [<&reload> Réinitialiser] | [Sauvegarder] }
 }
 @endsalt
