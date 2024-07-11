@@ -110,8 +110,6 @@ L'interface est composée des éléments graphiques suivants :
 
 **REF: ACTIVITY_CALENDAR**
 
-Calendrier d'activité :
-
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-table.svg)
 
 #### Scénario principal
@@ -177,7 +175,10 @@ Les critères suivants sont multiples (dev en cours sur Imagine) :
   * L'organisme du saisisseur
   * Le saisisseur
 
-Variante : Le saisisseur modifie le filtre sur l'année
+**Variante(s) :**
+
+**Variante :** Le saisisseur modifie le filtre sur l'année
+
 2. Le saisisseur modifie le filtre sur l'année via la sélection de l'année ou de la valeur "vide" dans une liste déroulante [Retour en 2]
 
 ---
@@ -224,7 +225,8 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * La date de mise à jour
    * Le mode de saisie (Bureau ou Déconnecté)
 5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
-    * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, ...
+    * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, Le professionnel accepterai-il de 
+répondre à une autre enquête, Métuers déclarés dans les journeaux de bord/fiches de pêche, Habitudes de vente à la criée ...
 6. Le saisisseur saisit un commentaire
 7. Le saisisseur enregistre
 8. La date de mise à jour du calendrier est actualisée
@@ -232,16 +234,19 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
 
 **Variante(s) :**
 
-**Variante :** Objectif d'enquête directe à "Oui"
-4. Si la valeur de l'objectif d'enquête directe est à "Oui" et la valeur du champ "Qualification de l'enquête" n'est pas "Directe"
-un warning est affiché.
+**Variante :** Warning objectif d'enquête directe
 
-**Variante :** Inactivité annuelle confirmée par l'observateur" à "Oui"
-5. si la valeur de l'inactivité annuelle confirmée par l'observateur est à Oui" alors tous les mois passent à "Inactif"
-A la terminaison de la saisie, si "inactivité annuelle confirmée par l'observateur" à Oui" et au moint un mois actif alors le système affiche une erreur bloquante
+7. A l'enregistrement, si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête "Directe", 
+un warning est affiché [Retour en 8]
 
-**Variante :** Enregistrement
-7. A l'enregistrement, si la saisie est valide, on replit la ligne des métiers, sinon, on laisse les lignes en erreur dépliées et on plie le reste (complexité à analyser)
+**Variante :** Inactivité annuelle confirmée par l'observateur à "Oui"
+
+5. Si l'inactivité annuelle confirmée par l'observateur est Oui" alors tous les mois du calendrier ont le champ "Actif ?" à "Inactif" [Retour en 5]
+
+**Variante :** Erreur inactivité annuelle confirmée par l'observateur
+
+x. A la terminaison de la saisie, si l'inactivité annuelle confirmée par l'observateur est "Oui" et au moins un mois est actif une erreur bloquante s'affiche
+
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -370,25 +375,36 @@ un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation
          * Le gradient de profondeur (visible selon une option du programme)
          * La zone proche (visible selon une option du programme)
 10. Le saisisseur enregistre le calendrier
-11. La date de mise à jour du calendrier est actualisée
+11. Les blocs métiers sont repliés
+12. Les métiers présents dans le calendrier et ayant un engin associés sont automatiquement ajoutés dans l'onglet "Métiers"
+13. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
+**Variante :** Copier la prédocumentaion dans un calendrier de l'année en cours avec des données
+
+6. Le saisisseur copie la prédocumentation dans un calendrier de l'année en cours avec des données, un message de confirmation
+   s'affiche pour confirmer la suppression des données [Retour en 7]
+
 **Variante :** Warning plus de 5 métiers 
+
 9. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 9]
 
 **Variante :** Erreur métier en doublon
+
 9. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller ou synchro), un message bloquant s'affiche. [Retour en 9]
 
 **Variante :** Erreur nombre de jours en mer et de pêche 
+
 10. A la validation, le traitement vérifie que les valeurs du nombre de jours en mer et de pêche sont comprises entre les valeurs
    minimale et maximale (de 0 au nombre de jours maximum pour le mois). L'erreur est bloquante si cette règle n'est pas respectée. [Retour en 9]
 
-**Variante :** Copier la prédocumentaion dans un calendrier de l'année en cours avec des données
-6. Le saisisseur copie la prédocumentation dans un calendrier de l'année en cours avec des données, un message de confirmation 
-s'affiche pour confirmer la suppression des données [Retour en 7]
+**Variante :** Saisie non valide à l'enregistrement
+
+10. Les lignes en erreur sont dépliées, les lignes valides sont repliées [Retour en 9]
 
 **Variante :** Vider calendrier 
+
 10. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 9]
 
 
@@ -419,7 +435,6 @@ s'affiche pour confirmer la suppression des données [Retour en 7]
 > Questions :
 > - MOE : Faire vidéo pour les cas d'utilisation du copier, coller, étirer, effacer
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
-> - MOE : Conserver uniquement les raccourcis CTRL+C et CTRL+V
 > - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 > - MOE : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
@@ -505,15 +520,6 @@ Seuls les métiers avec un engin sont présents. Les métiers sont triés par or
 4. La date de mise à jour du calendrier est actualisée
 
 
-**Variante(s) :**
-
-**Variante :** Suppression d'un métier dans le calendrier
-1. Le saisisseur supprime un métier de l'onglet "Calendrier". Le métier est automaqtiquement supprimé de l'onglet "métiers" [Retour en 1]
-
-Cas d'un calendrier partagé où l'import des données du saisisseur 2 en local est réalisé avant la saisie du saisisseur 1
-et où la saisie du saisisseur 2 est réalisé en mode hors-ligne après la saisie du saisisseur 1 :
-2. Le saisisseur supprime les métiers en doublon. Puis ajoute un métier qu'il a supprimé par inadvertance ? [Retour en 2]
-
 ---
 ## Calendrier d'activité > Carte
 
@@ -533,6 +539,8 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 - Rapport "Editer rapport"
   * Qualification de l'enquête - Tous présents (y comprit non réalisable)
   * Observateur : si + de 2, mettre Nom et prénom sur la même ligne
+
+## Calendrier d'activité > Terminaison de la saisie
 
 ## Calendrier d'activité > Instanciation des calendriers vides
 
@@ -572,11 +580,3 @@ Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lo
 > 
 > Réunion prévue le 06/06/2024 (avec Armelle Rouyer)
 
-
----
-
-## Historique
-
-|       Date | Sections mises à jour                                                                         |
-|-----------:|-----------------------------------------------------------------------------------------------|
-| 21/11/2023 | Création                                                                                      |
