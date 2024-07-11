@@ -4,17 +4,16 @@
   --
   {/  Détails | <b> Échantillonnages}
   ..
-  { Type de vente : | . | ^Enchères - HAM / Criées^ | . | [Appliquer] }
 
-  { <&plus> <b>((<&plus>) <&trash> } | <b>Y
+  { <&plus> <b>((<&plus>) <&reload> <&trash> } | <b>Y
 	{#
-      <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Navire | <b>Zone de pêche| <b>Type de vente | <b>  ... | *
-      [X] 1 | <&pencil> |  BET - Thunnus obesus | BET - Thon obèse(=Patudo) | [X]. | 123456 - Navire 1 | Zone 1 | ^Enchères - HAM / Criées^ | . | <&tag>
-      [] 2 |<&pencil>  | BFT - Thunnus thynnus | BFT - Thon rouge de l'Atlantique |  [X]. | 123456 - Navire 1 | Zone 2 | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
-      [X] 3 |<&pencil>  | BIL - Istiophoridae | BIL - Makaires,marlins,voiliers nca | [ ]. | . | . | . | . | <&tag>
-      [X] 4 |<&pencil>  | BLF - Thunnus atlanticus | BLF - Thon à nageoires noires | [X]. | 456789 - Navire 2 | Zone 1 | ^Enchères - HAM / Criées^ | <&comment-square> | <&tag>
-      [] 5 |<&pencil>  | BLT - Auxis rochei | BLT - Bonitou | [ ] . | . | . | . | . | .
-      [] 6 | <&pencil>  | ... | . | [ ] . | . | . | . | . | .
+      <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Navire | <b>Zone de pêche|  <b>  ... | *
+      [X] 1 | <&pencil> |  BET - Thunnus obesus | BET - Thon obèse(=Patudo) | [X]. | 123456 - Navire 1 | Zone 1 |  . | <&tag>
+      [] 2 |<&pencil>  | BFT - Thunnus thynnus | BFT - Thon rouge de l'Atlantique |  [X]. | 123456 - Navire 1 | Zone 2 |  <&comment-square> | <&tag>
+      [X] 3 |<&pencil>  | BIL - Istiophoridae | BIL - Makaires,marlins,voiliers nca | [ ]. | . | . |  . | <&tag>
+      [X] 4 |<&pencil>  | BLF - Thunnus atlanticus | BLF - Thon à nageoires noires | [X]. | 456789 - Navire 2 | Zone 1 |  <&comment-square> | <&tag>
+      [] 5 |<&pencil>  | BLT - Auxis rochei | BLT - Bonitou | [ ] . | . | . | . | .
+      [] 6 | <&pencil>  | ... | . | [ ] . | . | . | . | .
     }
   --
 

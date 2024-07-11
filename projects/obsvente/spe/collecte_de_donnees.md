@@ -289,7 +289,6 @@ Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, perme
     * Navire
     * Observé ?
     * Zone de pêche
-    * Type de vente
     * Commentaire
 2. Le saisisseur ajoute les PETS observés. Pour chaque PETS, le saisisseur renseigne :
     * L'espèce commerciale*
@@ -335,7 +334,6 @@ Dans l'onglet échantillonnage, l'observateur renseigne la liste des espèces à
    * Raison de non observation
    * Navire
    * Zone de pêche
-   * Type de vente
    * Commentaire
 2. Le système affiche le nombre d'espèces minimal à observer
 3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"* 
@@ -389,13 +387,14 @@ La stratégie déterminée à partir des éléments définis sur la sortie perme
 
 Un bouton <b>((:heavy_plus_sign:), dans le bandeau au dessus du tableau, permet d'ajouter les espèces tirées au sort par lot (REF: OBSVENTES/SORTIE/ECH_OUTREMER/AJOUT_LOT)
 
+Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, permet une resynchronisation avec WAO pour recharger la liste des PETS et des espèces tirées au sort
+
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
     * Espèce commerciale
     * Espèce scientifique
     * Observé ? (par défaut décoché)
     * Navire
     * Zone de pêche
-    * Type de vente
     * Commentaire
 2. Le saisisseur peut ajouter une espèce à échantillonner en cliquant sur le bouton :heavy_plus_sign:
 3. Le saisisseur peut ajouter un lot d'espèces à échantillonner en cliquant sur le bouton (:heavy_plus_sign:)
@@ -405,6 +404,18 @@ Un bouton <b>((:heavy_plus_sign:), dans le bandeau au dessus du tableau, permet 
 6. Le bandeau de l'écran affiche "Lieu - Date"
 7. L'encart sur le saisisseur s'affiche
 8. Le saisisseur crée un lot d'espèces pour une espèce à observer (REF: OBSVENTES/SORTIE/VENTE/DETAILS)
+
+**Variante 1a :** Resynchronisation avec WAO de la liste des espèces
+
+Si l'observateur se trompe de ligne de plan et qu'une saisie à déjà été effectuée :
+Le bouton :arrows_counterclockwise: permet :
+- De complèter la liste des PETS et la liste tirée au sort avec les espèces de la nouvelle ligne de plan
+- De réordonner la liste avec les nouvelles priorités
+    - Valable pour les espèces tirées au sort
+- De supprimer les précédentes espèces saisies (PETS et tirage au sort) qui ne sont plus dans la ligne de plan actuelle
+
+**Variante 4a :** Le saisisseur supprime un PETS
+
 
 ---
 
@@ -480,7 +491,7 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * "Lots"
 3. Sur l'onglet "Détails", le saisisseur renseigne les détails de la vente :
    * Le navire*
-   * Le type de vente* (automatiquement renseigné avec le type de vente défini sur la sortie)
+   * Le type de vente*
    * Le lieu de vente
    * La date/heure de vente*
    * Le métier*
