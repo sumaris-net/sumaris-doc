@@ -2,7 +2,7 @@
 {
   Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
   --
-  {/ Général | Calendrier (4) | <b>Métiers (2) | Zones d'activité}
+  {/ Général | Navire | Calendrier (4) | <b>Métiers (2) | Carte}
   ..
   { <&plus> <&trash> }
   {# [ ]. |Métier | {<b>Maillage de l'engin (logbook) (mm)
@@ -25,6 +25,6 @@
      [ ]. | GTRNEP - Trémails à langoustines | . | 57 | . | 100
   }
 
-  { [Fermer] | [Sauvegarder] }
+  { [Fermer] | [<&reload> Réinitialiser] | [Sauvegarder] }
 }
 @endsalt
