@@ -86,6 +86,43 @@ RAS
 - Appliquer les [manuels d'exploitation d'Imagine](../../imagine/mex) (v2.8)
 
 - Mise à jour de la vue `IMAGE_ATTACHMENT`
+  ```sql
+  CREATE OR REPLACE FORCE VIEW "SIH2_ADAGIO_DBA_SUMARIS_MAP"."IMAGE_ATTACHMENT" ("ID", "COMMENTS", "PATH", "CONTENT", "CONTENT_TYPE", "DATE_TIME", "CREATION_DATE", "CONTROL_DATE", "VALIDATION_DATE", "QUALIFICATION_DATE", "QUALIFICATION_COMMENTS", "UPDATE_DATE", "QUALITY_FLAG_FK", "RECORDER_DEPARTMENT_FK", "OBJECT_ID", "OBJECT_TYPE_FK", "RECORDER_PERSON_FK") AS
+  select ID,
+  COMMENTS,
+  PATH,
+  CONTENT,
+  CONTENT_TYPE,
+  PHOTO_DATE as DATE_TIME,
+  null as CREATION_DATE,
+  null as CONTROL_DATE,
+  VALIDATION_DATE,
+  QUALIFICATION_DATE,
+  QUALIFICATION_COMMENTS,
+  UPDATE_DATE,
+  cast(QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK,
+  DEPARTMENT_FK as RECORDER_DEPARTMENT_FK,
+  OBJECT_ID,
+  OBJECT_TYPE_FK,
+  null as RECORDER_PERSON_FK
+  from SIH2_ADAGIO_DBA.PHOTO P;
+-```
+
+- Ajout du trigger `TR_IMAGE_ATTACHMENT`
+  ```sql
+  create or replace trigger TR_IMAGE_ATTACHMENT
+    instead of insert or delete
+      on IMAGE_ATTACHMENT
+        begin
+          case
+            WHEN INSERTING THEN
+              insert into SIH2_ADAGIO_DBA.PHOTO(ID, OBJECT_ID, COMMENTS, PATH, PHOTO_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, UPDATE_DATE, OBJECT_TYPE_FK, QUALITY_FLAG_FK, PHOTO_TYPE_FK, DEPARTMENT_FK, CONTENT, CONTENT_TYPE)
+              values (:new.ID, 0, :new.COMMENTS, '/tmp', :new.DATE_TIME, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.UPDATE_DATE, (select mot.code from SIH2_ADAGIO_DBA.m_object_type mot where mot.id = :new.OBJECT_TYPE_FK), :new.QUALITY_FLAG_FK, 'UNK', :new.RECORDER_DEPARTMENT_FK, :new.CONTENT, :new.CONTENT_TYPE);
+            WHEN DELETING THEN
+              delete SIH2_ADAGIO_DBA.PHOTO P where P.ID=:old.ID;
+          end case;
+        end;
+-```
 
 - Ajout de la vue `DENORMALIZED_SAMPLING_STRATA`
   ```sql
@@ -186,7 +223,6 @@ RAS
 - ```
 
 - Modification du trigger `TR_SALE`
-
   ```sql
   create or replace trigger TR_SALE
      instead of insert or update or delete
@@ -424,6 +460,33 @@ end;
         cast(M.STATUS_FK as number(10)) as STATUS_FK
       from SIH2_ADAGIO_DBA.METHOD M;
 -```
+
+
+- Modification de la vue `VESSEL_FEATURES`
+  ```sql
+    create or replace view PMFM as
+      select P.ID,
+      P.CREATION_DATE,
+      MP.LABEL,
+      P.MAXIMUM_NUMBER_DECIMALS,
+      P.SIGNIF_FIGURES_NUMBER,
+      P.MIN_VALUE,
+      P.MAX_VALUE,
+      P.DEFAULT_VALUE,
+      P.UPDATE_DATE,
+      P.PRECISION,
+      P.DETECTION_THRESHOLD,
+      MPA.ID as PARAMETER_FK,
+      P.MATRIX_FK,
+      P.FRACTION_FK,
+    P.METHOD_FK,
+    P.UNIT_FK,
+    cast(P.STATUS_FK as number(10)) as STATUS_FK
+  from SIH2_ADAGIO_DBA.PMFM P
+    inner join SIH2_ADAGIO_DBA.M_PARAMETER MPA on P.PARAMETER_FK = MPA.CODE
+    left outer join M_PMFM MP on MP.ID = P.ID;
+-```
+
 
 ## Mise à jour du programme SIH-OBSMER
 

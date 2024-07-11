@@ -47,6 +47,11 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
     grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- Définition de PMFM en booléen
+  ```sql
+  update  m_parameter set is_boolean = 1 where CODE in ('INACTIVTY_YEAR', 'ACCEPT_OTHER_SURVEY');
+-```
+
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Appliquer les [manuels d'exploitation d'ObsMer](../../imagine/mex) (v2.9)
@@ -179,11 +184,16 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
 - Modification du trigger `TR_VESSEL_USE_FEATURES`
   ```sql
     create or replace trigger TR_VESSEL_USE_FEATURES
-      instead of delete or update
+      instead of insert or delete or update
       on VESSEL_USE_FEATURES
-      begin
-        case
-          WHEN UPDATING THEN
+    begin
+      case
+        WHEN INSERTING THEN
+          insert into SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES(ID, activity_calendar_fk, base_port_location_fk, control_date, creation_date, daily_activity_calendar_fk, end_date ,is_active,
+                                                          program_fk, qualification_comments, qualification_date, quality_flag_fk, start_date, update_date, vessel_fk)
+          values (:new.ID, :new.activity_calendar_fk, :new.base_port_location_fk, :new.control_date, :new.creation_date, :new.daily_activity_calendar_fk, :new.end_date ,:new.is_active,
+                  (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), :new.qualification_comments, :new.qualification_date, :new.quality_flag_fk, :new.start_date, :new.update_date, (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK));
+        WHEN UPDATING THEN
             update SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES VUF set VUF.activity_calendar_fk=:new.activity_calendar_fk, VUF.base_port_location_fk=:new.base_port_location_fk,
                                                                VUF.control_date=:new.control_date, VUF.creation_date=:new.creation_date, VUF.daily_activity_calendar_fk=:new.daily_activity_calendar_fk, VUF.end_date=:new.end_date, VUF.is_active=:new.is_active,
                                                                VUF.program_fk=(select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK),
@@ -383,9 +393,16 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
       inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on GPFO.PROGRAM_FK = MP.CODE;
 -```
 
+
+
 - Ajout de synonme sur `GEAR_PHYSICAL_FEATURES_SEQ`
   ```sql
-create or replace synonym GEAR_PHYSICAL_FEATURES_SEQ for SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ;
+  create or replace synonym GEAR_PHYSICAL_FEATURES_SEQ for SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ;
+-```
+
+- Ajout de synonme sur `VESSEL_USE_FEATURES_SEQ`
+  ```sql
+  create or replace synonym VESSEL_USE_FEATURES_SEQ FOR SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES_SEQ;
 -```
 
 ## Mise à jour du programme SIH-ACTIFLOT
