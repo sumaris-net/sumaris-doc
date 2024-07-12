@@ -22,6 +22,37 @@ effectuées par les observateurs dans ObsDeb.
 <b>RG001</b> : les PMFM et valeurs qualitatives spécifiées sont configurables via des énumérations
 
 ---
+
+## Existant ObsDeb
+
+Dans ObsDeb : case à cocher pour indiquer que la marée doit être importée dans ObsVentes
+Mantis : [35221](https://forge.ifremer.fr/mantis/view.php?id=35221)
+
+Nouveau PSFM : TRANSFER_TO_OBSVENTE affecté à SURVEY_MEASUREMENT
+
+3 programmes ObsDeb : 
+- SIH-OBSDEB	Marées observées au débarquement- (essentiellement)
+- SIH-OPRDEB	Enquêtes opportunistes (17 cas)
+- SIH-TELDEB	Enquêtes téléphoniques (2 cas)
+
+Les 3 programmes peuvent être transférés dans ObsVentes.
+
+Complexifie si on distingue la provenance des 3 volets.
+
+## Point avec Christian Bonnet (IRSI/ISI) le 12/07/204
+
+Quel est le besoin : Savoir si elle vient d'ObsDeb ou savoir de quelle marée d'ObsDeb elle provient ?
+
+Si ça concerne ObsDeb, on a déjà le PSFM (garder la même logique que ObsDeb).
+
+Ajouter le PSFM TRANSFER_TO_OBSVENTE à OBSERVED_LOCATION_MEASUREMENT : Solution envisagée dans un premier temps.
+
+Ajouter l'information dans l'écran des sorties et dans l'écran détail de la sortie (caractéristiques).
+
+Si ça concerne d'autres programmes, on peut utiliser la table OBSERVED_LOCATION_ORIGIN (à confirmer).
+
+Questions posés à Marion le 12/07/2024.
+
 ## Sortie
 
 <b>RG020 - NOUVELLE REGLE</b> : Une nouvelle sortie ObsVentes est créée pour chaque sortie Obsdeb dont une marée est importée.
@@ -108,17 +139,20 @@ et positionner le type de vente "9-Indéterminé - Hors HAM / Criée" sur la ven
 Exemple dans le cas de plusieurs circuits de commercialisation pour une même espèce :  
 A partir de l'arbre de la marée ObsDeb suivant (au niveau de la capture)
 
+```
 Espèce
-| Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
-| Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
-
+├── Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
+├── Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
+```
 La procédure stockée reconstitue la vente suivante dans ObsVentes :
 
+```
 Vente "9-Indéterminé - Hors HAM / Criée"
 |____Partie Vendue
 |    |____Espèce 
 |    |    |____Etat 1/ présentation 1/ Catégorie de tri 1 (Poids 1)
 |    |    |____Etat 2/ présentation 2/ Catégorie de tri 2 (Poids 2)
+```
 
 Table SALE :
 
