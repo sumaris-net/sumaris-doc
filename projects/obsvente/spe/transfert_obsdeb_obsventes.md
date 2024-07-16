@@ -25,10 +25,10 @@ effectuées par les observateurs dans ObsDeb.
 
 ## Existant ObsDeb
 
-Dans ObsDeb : case à cocher pour indiquer que la marée doit être importée dans ObsVentes
+Dans ObsDeb : case à cocher ("Marée à transférer dans Allegro-ObsVentes") pour indiquer que la marée doit être importée dans ObsVentes
 Mantis : [35221](https://forge.ifremer.fr/mantis/view.php?id=35221)
 
-Nouveau PSFM : TRANSFER_TO_OBSVENTE affecté à SURVEY_MEASUREMENT
+Nouveau PSFM existant : TRANSFER_TO_OBSVENTE affecté à SURVEY_MEASUREMENT au niveau Débarquement > marée.
 
 3 programmes ObsDeb : 
 - SIH-OBSDEB	Marées observées au débarquement- (essentiellement)
@@ -38,6 +38,8 @@ Nouveau PSFM : TRANSFER_TO_OBSVENTE affecté à SURVEY_MEASUREMENT
 Les 3 programmes peuvent être transférés dans ObsVentes.
 
 Complexifie si on distingue la provenance des 3 volets.
+
+[Capure d'écran ObsDeb](/projects/obsvente/doc/screenshots/ObsDeb_maree_transfert_vers_ObsVentes.PNG)
 
 ## Point avec Christian Bonnet (IRSI/ISI) le 12/07/204
 

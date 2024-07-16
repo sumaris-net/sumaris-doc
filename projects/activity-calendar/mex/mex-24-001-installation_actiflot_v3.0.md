@@ -395,7 +395,7 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
 
 - Ajout de synonme sur `GEAR_PHYSICAL_FEATURES_SEQ`
   ```sql
-create or replace synonym GEAR_PHYSICAL_FEATURES_SEQ for SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ;
+  create or replace synonym GEAR_PHYSICAL_FEATURES_SEQ for SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ;
 -```
 
 ## Mise à jour du programme SIH-ACTIFLOT
