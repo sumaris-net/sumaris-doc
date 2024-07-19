@@ -392,7 +392,6 @@ Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, perme
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
     * Espèce commerciale
     * Espèce scientifique
-    * Observé ? (par défaut décoché)
     * Navire
     * Zone de pêche
     * Commentaire
