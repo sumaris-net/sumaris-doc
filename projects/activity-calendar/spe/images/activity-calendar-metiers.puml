@@ -4,8 +4,7 @@
   --
   {/ Général | Navire | Calendrier (4) | <b>Métiers (2) | Carte}
   ..
-  { <&plus> <&trash> }
-  {# [ ]. |Métier | {<b>Maillage de l'engin (logbook) (mm)
+  {# . | # |Métier | {<b>Maillage de l'engin (logbook) (mm)
                 engin -
                 inconnue -
                 Déclaration d'un professionnel} |
@@ -21,8 +20,8 @@
                 engin -
                 totale -
                 Déclaration d'un professionnel}
-     [X]. | GTRMZZ - Trémails à poissons | 100 | 97 | 103 | .
-     [ ]. | GTRNEP - Trémails à langoustines | . | 57 | . | 100
+     [ ]. | 0 | GTRMZZ - Trémails à poissons | 100 | 97 | 103 | .
+     [ ]. | 1 | GTRNEP - Trémails à langoustines | . | 57 | . | 100
   }
 
   { [Fermer] | [<&reload> Réinitialiser] | [Sauvegarder] }
