@@ -10,6 +10,15 @@ Exemple de restitution :
 - [Rapport d'avancement](/projects/activity-calendar/doc/Rapport-avancement.png)
 
 ---
+## Formulaire terrain avec données
+
+![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
+
+- Qualification de l'enquête : mettre toutes les valeurs y comprit "Non réalisable"
+- Métier : sur la 1ère ligne, afficher le label (METIER.LABEL) et sur une seconde ligne afficher le nom (METIER.NAME). Si le champ nom est trop long, le tronquer et afficher "..."
+- Observateur : si plus de 2 observateurs, mettre le nom et le prénom sur la même ligne
+
+---
 ## Rapport d'avancement
 
 Rapport utilisé par les observateurs et les supervisuers pour suivre l'avancement de la saisie des calendriers

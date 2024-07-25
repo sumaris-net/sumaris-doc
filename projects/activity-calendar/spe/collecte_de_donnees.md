@@ -136,9 +136,7 @@ Les informations suivantes sont affichées pour chaque calendrier :
   * Enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
 
 > Questions :
-> - EIS : Prévoir POC pour vérifier les perfs liées à l'affichage du portefeuille des navires
-> - MOE : Stockage saisisseur en cas de saisisseurs multiples ?
-
+> - MOE : Vérifier les perfs liées à l'affichage du portefeuille des navires
 
 
 ---
@@ -180,6 +178,24 @@ Les critères suivants sont multiples (dev en cours sur Imagine) :
 **Variante :** Le saisisseur modifie le filtre sur l'année
 
 2. Le saisisseur modifie le filtre sur l'année via la sélection de l'année ou de la valeur "vide" dans une liste déroulante [Retour en 2]
+
+
+--
+
+## Calendriers d'activité > Import des calendriers vides
+
+L'import des calendriers d'activité vides est accessibles depuis le tableau de consultation des calendriers d'activité par les administrateurs et les responsables de programme
+
+#### Scénario principal
+
+1. Le saisisseur demande l'import des calendriers d'activité présents dans un fichier csv
+
+Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
+* Manque un flag enquête éco dans le format
+
+Ajouter d'une fonction d'export (_Faible cout de développement_)
+Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lors de l'import
+
 
 ---
 ## Calendrier d'activité > Général
@@ -341,7 +357,7 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
     * Le port d'exploitation
     * Le nombre de jours de mer
     * Le nombre de jours de pêche
-    * Le nombre d'hommes à bord par marée
+    * Le nombre de personnes à bord
     * Le ou les métiers. Par défaut, les métiers sont dépliés si le calendrier est vide, repliés sinon
     * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
     * Le gradient de côte, le gradient de profondeur et la zone proche rattachés à chaque zone. Le gradient de profondeur et la zone proche sont visible selon une option du programme.
@@ -352,7 +368,7 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
    * Le port d'exploitation
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
-   * Le nombre d'hommes à bord par marée
+   * Le nombre de personnes à bord
    * Le ou les métiers
    * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
    * Le gradient de côte, le gradient de profondeur et la zone proche rattaché à chaque zone. Le gradient de profondeur et la zone proche sont visible selon une option du programme.
@@ -368,7 +384,7 @@ un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation
    * Le port d'exploitation*
    * Le nombre de jours de mer
    * Le nombre de jours de pêche
-   * Le nombre d'hommes à bord par marée
+   * Le nombre de personnes à bord
    * Un ou plusieurs métiers. Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
      * Une ou deux zones. Une zone obligatoire pour chaque métier, y compris pour les métiers sans engin. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
          * Le gradient de côte*
@@ -424,7 +440,7 @@ un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation
   * Filtré selon la zone de compétence sélectionnée
 * Le nombre de jours de mer : PMFM.ID = 241
 * Le nombre de jours de pêche : PMFM.ID = 242
-* Le nombre d'hommes à bord par marée : PMFM.ID = 109
+* Le nombre de personnes à bord : PMFM.ID = 109
 * Champs concernés par la régionalisation :
   * Métier
   * Zone
@@ -437,7 +453,6 @@ un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
 > - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
-> - MOE : Renommer le paramètre "Nb d'hommes à bord" en "Nb de personnes à bord"
 > - EIS : En mode tablette, prévoir un mode brouillon pour simplifier la saisie aux observateurs
 
 
@@ -513,7 +528,7 @@ Actions possibles sur une cellule dans l'Allegro actuel :
 
 #### Scénario principal
 
-1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Calendrier" et les caractéristiques associés. 
+1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Calendrier" et les caractéristiques physiques et de mise en oeuvre associées. 
 Seuls les métiers avec un engin sont présents. Les métiers sont triés par ordre de saisie dans l'onglet "Calendrier". 
 2. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
 3. Le saisisseur enregistre le calendrier
@@ -528,41 +543,9 @@ Seuls les métiers avec un engin sont présents. Les métiers sont triés par or
 A spécifier : en attente POC
 Prévoir un mode pour afficher la carte avec l'ensemble des données
 
-## Calendrier d'activité > Rapports
-
-![ui-activity-calendar-report](/projects/activity-calendar/doc/screenshots/Capture_rapport_engin_label.png)
-
-- Libellé du métier :
-  * Afficher le label METIER.LABEL et sur une autre ligne, afficher le champ METIER.NAME
-    * Si le champ METIER.NAME est trop long, tronquer et afficher ...
-
-- Rapport "Editer rapport"
-  * Qualification de l'enquête - Tous présents (y comprit non réalisable)
-  * Observateur : si + de 2, mettre Nom et prénom sur la même ligne
 
 ## Calendrier d'activité > Terminaison de la saisie
 
-## Calendrier d'activité > Instanciation des calendriers vides
-
-Dans l'application (responsable de programme) : Importer un Csv (liste navires)
-
-Rajout d'une fonction d'export (_Faible cout de développement_)
- 
-Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
-    * Manque un flag enquête éco dans le format
-
-Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lors de l'import
-
-> Réunion du 23/05/2024 :
-> Initialisation des calendriers sur une année : Navires inscrit au FPC
-
-> - Dans Allegro on ne peut pas créer de calendrier : OK
-> 
-    >   - Proposer une fonction d'importation de calendrier de l'année sur l'écran du tableau des calendriers
->
->   - Mantis [61967](https://forge.ifremer.fr/mantis/view.php?id=61967): [FDR][ACTIVITE] evol : feuille de route pour l'activité 2023 en 2024
-
----
 
 ## Calendrier d'activité > Régionalisation
 
