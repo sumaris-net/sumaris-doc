@@ -136,3 +136,95 @@ RANK_ORDER	4
         - _Ajouter une colonne nombre d'individu (rendre activable)_
   - [ ] Pourquoi afficher le poids (qui n'est pas renseignable de toute façon) alors que le protocole OV demande le poids global de l'espèce et pas individuel?
     - _MOE : Normalement c'est le poids calculé RTP (en italique car calculé). Manque une énumération._
+
+
+### Point MOA - 25/07/2024
+
+## Ordre du jour 
+
+Points proposés par la MOE :
+- [X] Retours de recette MOA 2.9.19
+- [X] Spécifications saisie des mensurations (cas d'usage)
+- [ ] OM : On va voir si besoin de PETS dans la stratégie mais pas sûr (Marion a un point vendredi prochain sur le sujet)
+- [X] Contenu de la présentation du 10/09 (présentation d'un cas d'usage saisie métropole et outre-mer, données réelles)
+
+Points proposés par la MOA : 
+- [ ] Ou mettre "type de vente"
+- [ ] Champs validation : revoir labels en adéquation avec CCTP : contrôle observateur, vérification société et validation programme
+- [X] Priorité ajout métiers : V1. Mais pb de plusieurs métiers : comment gérer ça ?
+- [ ] Dans les DOM : mm espèces peuvent être capturées par différents métiers
+- [ ] Revenir sur ObsVentes sans S (et Guyanne avec 2 N..) : souhait d’exploration des impacts pour corriger ces erreurs : pas très professionnel de garder tel quel
+- [ ] MAJ Phase au lieu de Stade sur maturité crevettes
+- [ ] Vue en tableau ne marche pas sur Allegro
+- [X] Retour question Vincent sur transfert ObsDeb
+
+
+## Compte rendu
+
+- Informations congés : 
+  - Congés Elise Bultel (MOA) : du 15/08/2024 au 08/09/2024
+  - Congés Johann Le Traon (MOA) : du 12/08/2024 au 24/08/2024 
+- Démonstration du 10/09/2024 
+  - Se baser sur un [formulaire terrain remplit envoyé](/projects/obsvente/doc/obsventes-doc-24-008-jeu_de_données_OBSVENTES.pdf) le 25/07/2024 par Johann Le Traon 
+  - Coeur de la saisie : saisie des mensurations - Discriminant pour la démo du 10/09/2024
+
+
+### Retours de recette MOA 2.9.19 
+
+- **Ecran des échantillonnages**
+  - Choix de la présence et de la position du champ navire
+
+- **Ecran d'une vente** : 
+  - Vente : Ajout d'un champ métier en V1 (comme dans Imagine)
+    - A voir comment gérer pour les DOMs (plusieurs métiers)
+  - Avoir un bouton controler la saisie et pouvoir supprimer les lots vides
+
+- **Ecran de saisie des lots** :
+  - Espèce commerciale : doit être automatiquement renseignée
+  - Espèce scientifique : à supprimer
+  - Mobile :
+    - Ne pas avoir la colonne nombre d'individu échantillonné mais garder le nombre sur l'icone des mesurations
+  - Bureau :
+    - Ne garder que le nombre d'individu échantillonné (ne pas garder le nombre sur l'icone des mesurations)
+  - Poids total :
+    - Pouvoir saisir le poids total calculé
+    - Pouvoir saisir la formule pour calculé le poids total (11+12+13)
+    - **Prototypage à proposer et à présenter pour validation**
+  - Poids échantillonné :
+    - Pouvoir le copier du poids RTP ou le saisir manuellement
+    - Mettre un message pour dire que le poids RTP à changé et pouvoir proposer la recopie vers le poids échantillonné
+
+  
+- **Ecran de saisie des mensurations** :
+  - Mode saisie de mensuration : rajouter un champ pour saisir le nombre d'individu pour pouvoir saisir plusieurs individus dans une même classe de taille
+    - Par défaut à 1 et le champ doit pouvoir être figé
+  - Sur ObsVentes il y a obligatoirement des mensurations (pas de dénombrement seul)
+    - En OM : peut être le besoin
+    - Le mode dénombrement actuellement présent (à renommer) peut être activé/désactivé par une option (géré dans ObsVentes Métrople/OM et dans ObsMer)
+  - Prévoir un bouton ((+) pour ajouter un tableau de mensuration avec un min/max pour que l'utilisateur saisira le nombre d'individu par classe de taille (comme dans l'allegro actuel)
+
+- **Ecran de saisie des mensurations** :
+  - Pouvoir générer un formulaire des données saisies 
+    - En attente de fourniture d'un formulaire pdf de rapport Allegro
+    - Se baser sur https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/doc/obsventes-doc-24-001-Formulaire_terrain_OBSVENTES.pdf?ref_type=heads
+    - Garder la vue en arbre des lots https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsmer/doc/obsmer-doc-24-006-Formulaire_validation_OBSMER_2020.pdf?ref_type=heads
+
+Pas de restitution aux professionnels (pour ObsVentes). A y penser pour l'OM ?
+
+
+- **Transfert ObsDeb -> ObsVentes**
+  - Besoin de faire du lien entre les programmes (OM)
+  - Plus vraiment d'actualité car la saisie sera d'abord faites sur Obsventes (saisie tablette) puis sur Obsdeb  (saisie pc)
+    - Point spécifique à faire
+
+
+### Décisions 
+
+- Maquettage à faire sur les écrans des mensurations/dénombrement (pendant le mois d'aout)
+- **Ne pas faire de démonstration aux coordinateurs de façade et aux correspondants régionaux (trop tôt)**
+  - Mail de communication sur le report, envoyé le 25/07/2024
+  - **Garder le créneau du 10/09 avec la MOA pour présenter le maquettage de la saisie des mensurations**
+
+
+
+

@@ -15,7 +15,7 @@
     {
        { <font color=grey>Nombre de lignes</font> |  " 20 "  | . | . | . | . | <font color=grey>1 - 20 sur 87 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     }
-    { [Annuler] }
+    { . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . | . |[Annuler] | [Valider] }
     }
  }
 @endsalt

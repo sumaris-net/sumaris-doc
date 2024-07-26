@@ -439,7 +439,7 @@ La Fenêtre est composée de 2 onglets, "Historique" et "Recherche espèces".
     * Le nom du saisisseur ayant dernièrement utilisé l'espèce
 3. Les espèces affichées sont celles dont la date d'utilisation est inférieure à un nombre de jours (paramétrable dans les options du programme)
 4. Le saisisseur peut sélectionner une ou plusieurs espèces
-    * A la sélection, la ou les espèces sont rajoutées dans le tableau afin d'être échantillonnées
+    * Le bouton "Valider" permet d'ajouter les espèces, précédemment sélectionnées, dans le tableau (REF : OBSVENTES/SORTIE/ECH_OUTREMER) afin qu'elles soient échantillonnées
 
     
 ---
