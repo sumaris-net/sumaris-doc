@@ -96,7 +96,7 @@ Project starts the 2024/04/08
 [Demo MOA 2] happens 9th of July 2024
 
 [Sprint 4] as [TASK4] requires 3 weeks
-[TASK4] is colored in Lavender/LightBlue
+[TASK4] is colored in lightsalmon
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
 [TASK4]->[Testing4]

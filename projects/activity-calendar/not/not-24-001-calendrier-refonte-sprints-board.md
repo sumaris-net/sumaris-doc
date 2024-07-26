@@ -10,15 +10,15 @@
 
 ## Planning Demonstration MOA
 
-| **Sprint**   | **Milestone** | **Release**     | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status** |
-|--------------|---------------|-----------------|--------------------------|----------------------------------|------------|
-| Sprint 1     | 26/04/2024    | 2.9.0-alpha17   | -                        | -                                | Closed     |
-| Sprint 2     | 24/05/2024    | 2.9.3-alpha18   | 13/06/2024               | -                                | Closed     |
-| **Sprint 3** | 21/06/2024    | 2.9.19          | 09/07/2024               | -                                | On going   |
-| Sprint 4     | 12/07/2024    | 2.9.20          | - _congés MOA_           | -                                | Future     |
-| Sprint 5     | 02/08/2024    | 2.9.21          | 20/08/2024               | -                                | Future     |
-| Sprint 6     | 30/08/2024    | 2.9.22          | 12/09/2024               | To defined                       | Future     |
-| Sprint 7     | 27/09/2024    | 2.9.23          | 08/10/2024               | -                                | Future     |
+| **Sprint** | **Milestone** | **Release**     | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status**  |
+|------------|---------------|-----------------|--------------------------|----------------------------------|-------------|
+| Sprint 1   | 26/04/2024    | 2.9.0-alpha17   | -                        | -                                | Closed      |
+| Sprint 2   | 24/05/2024    | 2.9.3-alpha18   | 13/06/2024               | -                                | Closed      |
+| Sprint 3   | 21/06/2024    | 2.9.19          | 09/07/2024               | -                                | Closed      |
+| Sprint 4 | 12/07/2024    | 2.9.20          | 20/08/2024               | -                                |  Closed  |
+| **Sprint 5**   | 02/08/2024    | **2.9.21**          | -                        | -                                | **On going**      |
+| Sprint 6   | 30/08/2024    | 2.9.22          | 12/09/2024               | To defined                       | Future      |
+| Sprint 7   | 27/09/2024    | 2.9.23          | 08/10/2024               | -                                | Future      |
 <!-- .element: class="font-size-extra-small" -->
 
 ---
@@ -45,6 +45,7 @@
 - **Milestone** : 2.9.0-alpha17
 - **Goal** : rights management
 - **Status** : closed
+- **Deployement** : Done
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.0-alpha17&search=ACTIFLOT)
 
 ---
@@ -67,7 +68,8 @@
 - **End date** : 24/05/2024
 - **Milestone** : 2.9.3-alpha18
 - **Goal** : Main screens
-- **Status** : Doing
+- **Status** : Closed
+- **Deployement** : Done
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.3-alpha18&search=ACTIFLOT)
 
 ---
@@ -113,16 +115,17 @@
 - **End date** : 21/06/2024
 - **Milestone** : 2.9.19
 - **Goal** : Filters, screens, predocumentation
-- **Status** : To do
-- [gitlab Issues board]()
+- **Status** : Closed
+- **Deployement** : Done
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.19&search=ACTIFLOT)
 ---
 
-| **Open**                                                                          | **To Do**                                                                         | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
-|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
-| Enh [#596](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/596) | Enh [#604](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/604) | Enh [#611](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/611) | Enh [#605](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/605)                                                                                  |             |             |            | 
-| Rec [#587](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/587) |  | Enh [#602](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/602) |  |             |             |            |
-| Rec [#618](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/618) |  | Enh [#612](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/612) |                                                                                   |             |             |            |
-| Rec [#617](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/617) |  | Enh [#613](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/613) |                                                                                   |             |             |            |
+| **Open**                                                                            | **To Do**                                                                             | **Doing**                                                                           | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
+|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
+| Rec [#618](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/618)   |    |  Enh [#602](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/602)    | Enh [#620](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/620) |             |             |    Enh [#605](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/605)        | 
+|    |                                                                                       |  | Enh [#621](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/621) |             |             |     Enh [#613](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/613)       |
+|   |                                                                                       |                                                                                     | Enh [#623](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/623) |             |             |    Enh [#612](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/612)         |
+|   |                                                                                       |                                                                                     |                                                                                   |             |             |    Enh [#611](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/611)        |
 
 <!-- .element: class="font-size-small" -->
 
@@ -139,3 +142,53 @@
 - Retours de recette MOE/MOA
 - Retours de spécifications MOA
 
+
+## Calendrier d'activité - Sprint 4 - Issue Board
+
+- **Start date** : 24/06/2024
+- **End date** : 12/07/2024
+- **Milestone** : 2.9.20
+- **Goal** : Bugs correction
+- **Status** : Close
+- **Deployement** : **To do**
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.20&search=ACTIFLOT)
+---
+
+| **Open**                                                                            | **To Do**                                                                             | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
+|-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
+|   |    | Enh [#625](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/625) | Enh [#617](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/617) |             |             |           | 
+|    |                                                                                       |                                                                                   | Enh [#636](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/636) |             |             |           |
+|   |                                                                                       |                                                                                   | Enh [#641](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/641) |             |             |           |
+|   |                                                                                       |                                                                                   |                                                                                   |             |             |            |
+
+<!-- .element: class="font-size-small" -->
+
+---
+
+**Fonctionnalités du sprint 4**
+- Corrections de bugs de retour de recette
+- A COMPLETER
+
+
+## Calendrier d'activité - Sprint 5 - Issue Board
+
+- **Start date** : 15/07/2024
+- **End date** : 02/08/2024
+- **Milestone** : 2.9.21
+- **Goal** : Bugs correction
+- **Status** : On going
+- **Deployement** : -
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?milestone_title=2.9.21&search=ACTIFLOT)
+---
+
+| **Open**                                                                           | **To Do** | **Doing** | **Done** | **Testing** | **Waiting** | **Closed** |
+|------------------------------------------------------------------------------------|-----------|-----------|----------|-------------|-------------|------------| 
+| Enh [#657](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/6257) |           |           |          |             |             |           | 
+
+<!-- .element: class="font-size-small" -->
+
+---
+
+**Fonctionnalités du sprint 5**
+- Corrections de bugs de retour de recette
+- A COMPLETER
