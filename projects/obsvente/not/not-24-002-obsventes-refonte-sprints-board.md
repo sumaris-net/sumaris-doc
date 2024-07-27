@@ -163,7 +163,7 @@ Fonctionnalités sur sprint 4 :
 ## ObsVentes - Sprint 5 - Issues Board
 
 - **Start date** : 24/06/2024
-- **End date** : 12/07/2024
+- **End date** : 19/07/2024
 - **Milestone** : 2.9.20
 - **Status** : Close
 - **Goal** : Ecran des échantillonnages, sauvegarde de ventes
@@ -172,13 +172,13 @@ Fonctionnalités sur sprint 4 :
 
 ---
 
-| **Open** | **To Do**                                                                         | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed** |
-|----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|------------| 
-|          | Enh [#647](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/647) | Enh [#607](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/607) | Enh [#646](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/646) |             |             |            | 
-|          |                                                                                   | Enh [#609](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/609) |                                                                                   |             |             |            |
-|          |                                                                                   | Enh [#637](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/637) |                                                                                   |             |             |            |
-|          |                                                                                   | Enh [#629](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/629) |                                                                                   |             |             |            |
-|          |                                                                                   | Enh [#653](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/653) |                                                                                   |             |             |            |
+| **Open** | **To Do**                                                                         | **Doing**                                                                         | **Done**                                                                          | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          | Enh [#647](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/647) | Enh [#607](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/607) | Enh [#646](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/646) |             |             | Enh [#636](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/636) | 
+|          |                                                                                   | Enh [#609](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/609) |                                                                                   |             |             |                                                                                   |
+|          |                                                                                   | Enh [#637](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/637) |                                                                                   |             |             |                                                                                   |
+|          |                                                                                   | Enh [#629](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/629) |                                                                                   |             |             |                                                                                   |
+|          |                                                                                   | Enh [#653](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/653) |                                                                                   |             |             |                                                                                   |
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -195,8 +195,8 @@ Fonctionnalités sur sprint 5 :
 
 ## ObsVentes - Sprint 6 - Issues Board
 
-- **Start date** : 15/07/2024
-- **End date** : 02/08/2024
+- **Start date** : 22/07/2024
+- **End date** : 09/08/2024
 - **Milestone** : 2.9.21
 - **Status** : Doing
 - **Goal** :

@@ -95,7 +95,7 @@ Project starts the 2024/04/08
 [TASK3]->[Testing3]
 [Demo MOA 2] happens 9th of July 2024
 
-[Sprint 4] as [TASK4] requires 3 weeks
+[Sprint 4] as [TASK4] requires 4 weeks
 [TASK4] is colored in lightsalmon
 [TASK3]->[TASK4]
 [Testing4] requires 1 week
@@ -127,6 +127,10 @@ Project starts the 2024/04/08
 [VAL] is colored in orange
 [Testing7]->[VAL]
 
+[Production] as [PROD] requires 1 week and starts the 25th of October 2024
+[PROD] is colored in green
+[VAL]->[PROD]
+
 [GPR] as [CONG_GPR] requires 4 week and starts the 19th of July 2024
 [VFA] as [CONG_VFA] requires 3 week and starts the 15th of August 2024
 [CDE] as [CONG_CDE] requires 2 week and starts the 11 of september 2024
@@ -151,11 +155,6 @@ Project starts the 2024/04/08
 
 [CGFS 2 VFA] as [EMB] requires 3 week and starts the 31th of September 2024
 [EMB] is colored in lightgrey
-
-
-[Production] as [PROD] requires 2 week and starts the 22th of October 2024
-[PROD] is colored in green
-[VAL]->[PROD]
 
 skinparam legendBackgroundColor with
 

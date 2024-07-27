@@ -146,7 +146,7 @@
 ## Calendrier d'activité - Sprint 4 - Issue Board
 
 - **Start date** : 24/06/2024
-- **End date** : 12/07/2024
+- **End date** : 19/07/2024
 - **Milestone** : 2.9.20
 - **Goal** : Bugs correction
 - **Status** : Close
@@ -172,8 +172,8 @@
 
 ## Calendrier d'activité - Sprint 5 - Issue Board
 
-- **Start date** : 15/07/2024
-- **End date** : 02/08/2024
+- **Start date** : 22/07/2024
+- **End date** : 09/08/2024
 - **Milestone** : 2.9.21
 - **Goal** : Bugs correction
 - **Status** : On going

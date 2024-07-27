@@ -87,7 +87,7 @@ Project starts the 2024/03/04
 [TASK4]->[Testing4]
 [Demo 2 MOA] happens 9th of July 2024
 
-[Sprint 5] as [TASK5] requires 3 weeks and starts the 24th of June 2024
+[Sprint 5] as [TASK5] requires 4 weeks and starts the 24th of June 2024
 [TASK5] is colored in lightsalmon
 [TASK4]->[TASK5]
 [Testing5] requires 1 week
