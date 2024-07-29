@@ -92,7 +92,7 @@ Project starts the 2024/03/04
 [TASK4]->[TASK5]
 [Testing5] requires 1 week
 [TASK5]->[Testing5]
-[Sprint 6] as [TASK6] requires 3 weeks and starts the 15th of July 2024
+[Sprint 6] as [TASK6] requires 4 weeks and starts the 15th of July 2024
 
 [TASK6] is colored in Lavender/LightBlue
 [TASK5]->[TASK6]
