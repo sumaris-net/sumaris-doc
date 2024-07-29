@@ -10,13 +10,14 @@
 - [Ergonomie générale](#ergonomie-générale)
 - [Calendriers d'activité](#calendriers-dactivité)
 - [Calendriers d'activité > Filtres](#calendriers-dactivité--filtres)
+- [Calendrier d'activité > Instanciation des calendriers vide](#calendrier-dactivité--import-des-calendriers-vides)
 - [Calendrier d'activité > Général](#calendrier-dactivité--général)
 - [Calendrier d'activité > Navire](#calendrier-dactivité--navire)
 - [Calendrier d'activité > Calendrier](#calendrier-dactivité--calendrier)
 - [Calendrier d'activité > Métiers](#calendrier-dactivité--métiers)
 - [Calendrier d'activité > Carte](#calendrier-dactivité--carte)
-- [Calendrier d'activité > Rapports](#calendrier-dactivité--rapports)
-- [Calendrier d'activité > Instanciation des calendriers vide](#calendrier-dactivité--instanciation-des-calendriers-vides)
+- [Calendrier d'activité > Contrôle à la saisie](#calendrier-dactivité--contrôle-à-la-saisie)
+
 
 
 ---
@@ -260,8 +261,6 @@ un warning est affiché [Retour en 8]
 5. Si l'inactivité annuelle confirmée par l'observateur est Oui" alors tous les mois du calendrier ont le champ "Actif ?" à "Inactif" [Retour en 5]
 
 **Variante :** Erreur inactivité annuelle confirmée par l'observateur
-
-x. A la terminaison de la saisie, si l'inactivité annuelle confirmée par l'observateur est "Oui" et au moins un mois est actif une erreur bloquante s'affiche
 
 
 #### Détails techniques :
@@ -538,13 +537,51 @@ Seuls les métiers avec un engin sont présents. Les métiers sont triés par or
 ---
 ## Calendrier d'activité > Carte
 
-**REF: ACTIVITY_CALENDAR/Carte**
+**REF: ACTIVITY_CALENDAR/CARTE**
 
 A spécifier : en attente POC
 Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 
-## Calendrier d'activité > Terminaison de la saisie
+## Calendrier d'activité > Contrôle à la saisie
+
+**REF: ACTIVITY_CALENDAR/CONTROL**
+
+Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calendrier d'activité via le bouton "Terminer la saisie"
+
+1. Dans l'onglet "Général", le saisisseur demande la terminaison de la saisie du calendrier
+2. Le calendrier passe à l'état "Terminé"
+3. La date de terminaison de la saisie est mise à jour
+4. Le superviseur consulte le calendrier
+5. Le superviseur valide la saisie du calendrier
+6. Le calendrier passe à l'état "Validé"
+7. La date de validation  de la saisie est mise à jour
+8. Le calendrier n'est plus éditable
+9. Le superviseur qualifie la saisie
+10. Le calendrier est qualifié
+11. La date de qualification de la saisie est mise à jour
+
+
+**Variante(s) :**
+
+**Variante :** Les 12 mois du calendrier ne sont pas saisis
+
+2. Le message "La saisie du calendrier n'est pas complète. Veuillez continuer la saisie" s'affiche [Fin]
+
+**Variante :** L'inactivité annuelle est confirmée par l'observatur et au moins un mois du calendrier est actif
+
+2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif, alors le message "L'inactivité annuelle est confirmée alors que les mois <liste_mois>> sont actifs. Veuillez corriger la saisie" s'affiche [Fin]
+
+**Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
+
+4. Le saisisseur reprend la saisie d'un calendrier terminé
+5. Le calendrier passe à l'état "En cours de saisie"
+6. La date de terminaison de la saisie est mise à jour [Retour en 1]
+
+**Variante :** Le superviseur dévalide le calendrier
+
+9. Le superviseur dévalide le calendrier
+10. Le calendrier passe à l'état "Terminé" [Fin]
 
 
 ## Calendrier d'activité > Régionalisation
