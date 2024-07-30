@@ -258,9 +258,8 @@ un warning est affiché [Retour en 8]
 
 **Variante :** Inactivité annuelle confirmée par l'observateur à "Oui"
 
-5. Si l'inactivité annuelle confirmée par l'observateur est Oui" alors tous les mois du calendrier ont le champ "Actif ?" à "Inactif" [Retour en 5]
+5. Si l'inactivité annuelle confirmée par l'observateur est Oui" alors le champ "Actif ?" de chaque mois passe à "Inactif" [Retour en 5]
 
-**Variante :** Erreur inactivité annuelle confirmée par l'observateur
 
 
 #### Détails techniques :
@@ -566,11 +565,13 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 
 **Variante :** Les 12 mois du calendrier ne sont pas saisis
 
-2. Le message "La saisie du calendrier n'est pas complète. Veuillez continuer la saisie" s'affiche [Fin]
+2. Le message "Calendrier incomplet" [Fin]
 
-**Variante :** L'inactivité annuelle est confirmée par l'observatur et au moins un mois du calendrier est actif
+**Variante :** Inactivité annuelle est confirmée par l'observatur
 
-2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif, alors le message "L'inactivité annuelle est confirmée alors que les mois <liste_mois>> sont actifs. Veuillez corriger la saisie" s'affiche [Fin]
+2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif, 
+ou si l'inactivié annuelle confirmée par l'observateur est à "Non" et tous les mois sont inactifs 
+alors le message "Inactivité annuelle à confirmer" s'affiche [Fin]
 
 **Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
 
