@@ -546,6 +546,12 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 **REF: ACTIVITY_CALENDAR/CONTROL**
 
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-in-progress.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-finished.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-validated.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-qualified.svg)
+
+
 Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calendrier d'activité via le bouton "Terminer la saisie"
 
 1. Dans l'onglet "Général", le saisisseur demande la terminaison de la saisie du calendrier
@@ -554,7 +560,7 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 4. Le superviseur consulte le calendrier
 5. Le superviseur valide la saisie du calendrier
 6. Le calendrier passe à l'état "Validé"
-7. La date de validation  de la saisie est mise à jour
+7. La date de validation de la saisie est mise à jour
 8. Le calendrier n'est plus éditable
 9. Le superviseur qualifie la saisie
 10. Le calendrier est qualifié
@@ -565,7 +571,8 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 
 **Variante :** Les 12 mois du calendrier ne sont pas saisis
 
-2. Le message "Calendrier incomplet" [Fin]
+2. L'onglet "Calendrier" s'ouvre
+3. Le message "Calendrier incomplet" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle est confirmée par l'observatur
 
@@ -577,12 +584,20 @@ alors le message "Inactivité annuelle à confirmer" s'affiche [Fin]
 
 4. Le saisisseur reprend la saisie d'un calendrier terminé
 5. Le calendrier passe à l'état "En cours de saisie"
-6. La date de terminaison de la saisie est mise à jour [Retour en 1]
+6. La date de terminaison de la saisie est supprimée [Retour en 1]
 
-**Variante :** Le superviseur dévalide le calendrier
+**Variante :** Le superviseur dévalide le calendrier non qualifié
 
 9. Le superviseur dévalide le calendrier
-10. Le calendrier passe à l'état "Terminé" [Fin]
+10. Le calendrier passe à l'état "Terminé" 
+11. La date de validation de la saisie est supprimée [Fin]
+
+
+**Variante :** Le superviseur dévalide le calendrier qualifié
+
+11. Le superviseur dévalide le calendrier
+12. Le calendrier passe à l'état "Terminé" 
+13. Les date de validation et de qualification de la saisie sont supprimées [Fin]
 
 
 ## Calendrier d'activité > Régionalisation

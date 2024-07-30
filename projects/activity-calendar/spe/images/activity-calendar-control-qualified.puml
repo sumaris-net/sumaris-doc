@@ -1,0 +1,29 @@
+@startsalt
+{
+ {+
+    {
+    <font color=grey size=10>Stratégie
+    ACTIFLOT démarrage le 01/01/2019
+      }
+ }
+ {+
+    {
+    <font color=grey size=10>Saisisseur
+    Obs1
+    <font color=grey size=10>Groupe EI
+    --
+    <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08
+    <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
+    <font color=grey size=10><&check>Terminé le 20/03/2023 18:00
+    <font color=grey size=10><&circle-check>Validé le 26/03/2023 9:37
+    .
+    <font color=grey size=10>Mode saisie <b>bureau
+    .
+    [ Dévalider              ]
+    .
+    <font color=grey size=10>Qualifié le 26/03/2023 9:38
+    [ Bonne                  ]
+    }
+ }
+}
+@endsalt

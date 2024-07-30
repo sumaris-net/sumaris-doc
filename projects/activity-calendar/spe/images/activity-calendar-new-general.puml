@@ -15,27 +15,29 @@
      {
      . | Qualification de l'enquête* : | ^Directe  ^
      . | Fiabilité de l'enquête* : | ^Fiable   ^
-     . | Inactivité annuelle confirmée par l'observateur* : | { (X) <b>Oui | () Non }
+     . | Inactivité annuelle confirmée par l'observateur : | { (X) <b>Oui | () Non }
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
      . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
      . | Habitudes de vente à la criée : | ^         ^
      }
-  } . {+
+  } . {{+
                            {
                            <font color=grey size=10>Stratégie
                            ACTIFLOT démarrage le 01/01/2019
-                           --
+                           }}
+                           {+
+                           {
                            <font color=grey size=10>Saisisseur
                            Obs1
                            <font color=grey size=10>Groupe EI
                            --
-                           <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08:31
+                           <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08
                            <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
                            .
                            <font color=grey size=10>Mode saisie <b>bureau
                            .
-                           [ Terminer la saisie]
-                           }}
+                           [ Terminer la saisie     ]
+                           }}}
     <b>Commentaires :
          {+ 19.01.2017 : Appel sans réponse
             08/03/2019 : Conversation téléphonique
