@@ -546,10 +546,10 @@ Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 **REF: ACTIVITY_CALENDAR/CONTROL**
 
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-in-progress.svg)
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-finished.svg)
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-validated.svg)
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-qualified.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-control-in-progress.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-control-finished.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-control-validated.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-control-qualified.svg)
 
 
 Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calendrier d'activité via le bouton "Terminer la saisie"
