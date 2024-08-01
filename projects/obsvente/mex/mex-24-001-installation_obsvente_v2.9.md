@@ -173,17 +173,17 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
 - A mettre dans PROGRAM_PROPERTY (temporaire)
 
 ```properties (à ajouter dans le fichier de configuration de l'application)
-sumaris.observedLocation.landing.autoFill=true
+sumaris.observedLocation.landings.autoFill=true
 ```
 
 ```requete sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landing.autoFill', 'true', 80 , 1, sysdate)
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', 80 , 1, sysdate)
 ```
 
 - Options pour la stratégie "Outre-Mer" (STRATEGY_PROPERTY)
 ```properties 
-sumaris.observedLocation.landing.autoFill=false
+sumaris.observedLocation.landings.autoFill=false
 ```
 ```requete sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landing.autoFill', 'false', 80 , 1, sysdate)
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'false', 80 , 1, sysdate)
 ```
