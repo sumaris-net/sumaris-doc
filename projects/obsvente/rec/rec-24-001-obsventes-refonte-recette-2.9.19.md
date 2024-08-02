@@ -3,6 +3,7 @@
 ## Présentation démo 2 MOA 
 
 - [Présentation](/projects/obsvente/not/not-24-004-obsventes-refonte-demo-moa-2.9.19.md)
+- [Retours de recette](#point-moa---25072024)
 
 ---
 
@@ -102,7 +103,7 @@ RANK_ORDER	4
     - _MOE : A masquer si besoin (ou mettre à la fin)_
   - [X] Au niveau de la saisie du navire, le bandeau bleu clair indique "Marquage extérieur": à remplacer par "Immatriculation"
     - _MOE : c'est corrigé (Option rajouée dans les Paramètres de l'application)_
-    - 
+    
 ![rec-obsventes-etting-immat-navire](/projects/obsvente/rec/images/rec-24-005-2.9.19.2-setting-immat-navire.png)
 
   - [ ] La liste des lots à échantillonner s'ouvre bien mais comme on est partie d'une espèces pour ouvrir la vente, on se demande pouquoi là il faut à nouveau renseigner cet élément

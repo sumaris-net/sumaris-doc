@@ -12,6 +12,12 @@
 - [Spécifications](/projects/activity-calendar/spe/collecte_de_donnees.md#calendriers-dactivité)
 - Remarques  :
   - [ ]  Le filtre "année" affiche "vide" au lieu de 2024 (année qui s'affiche quand j'ouvre le calendrier).
+    - [ ] le filtre "vide" affiche l'année N-1 au lieu de tout afficher
+
+**Rappel Spécifications** : 
+- Le filtre de l'année est automatiquement renseignée avec l'année :
+    * N-1, sur pc
+    * N, sur tablette
 
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-001-2.9.19.2-annee-vide.png)
 

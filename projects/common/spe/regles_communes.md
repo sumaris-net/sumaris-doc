@@ -20,7 +20,8 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 - [Commun > Saisisseur](#commun-saisisseur)
 - [Commun > Enregistrement automatique](#commun-enregistrement-automatique)
 - [Commun > Suppression](#commun-suppression)
-- [Commun > Utilisation de données temporaires]()
+- [Commun > Utilisation de données temporaires](#commun--utilisation-de-données-temporaires)
+- [Commun > Régionalisation](#commun--régionalisation)
 
 ## Spécificités techniques
 
@@ -431,7 +432,7 @@ Tables non utilisées (vides) mais présentes dans le modèle :
  * SPATIAL_ITEM_LINE
  * SPATIAL_ITEM_POINT
 
-Note de la réunion du 11/06/2024 : 
+**Note de la réunion du 11/06/2024** : 
 
 Fonctionnement actuel : la régionalisation permet de limiter l'affichage des référentiels ET de mettre des noms locaux (espèces et métiers)
 
@@ -448,6 +449,11 @@ Priorité à appliquer la régionalisation dans calendrier d'activité (Mois d'a
 A plus grande échéance dans ObsMer :
 - Régionaliser les contrôles, régionaliser les noms des espèces (ObsMer)
 
+**Retours de recette MOA - ObsVentes (2.9.19)** : 
+
+- Cas d'usage d'échantillonnage en Outre Mer :
+  - **En Priorité 2** : Régionaliser les types de ventes
+      - Les types de ventes seront différents dans les DOM et il n'y a pas de criée ; il faudra peut être compléter et sélectionner les options du référentiel uniquement valables pour les DOM pour alléger la saisie pour ces territoires
 
 Référentiel : 
 - Armelle ne touche que SpatialItem
