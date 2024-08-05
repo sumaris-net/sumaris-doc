@@ -119,9 +119,9 @@ L'interface est composée des éléments graphiques suivants :
 2. L'écran "Calendriers d'activité" s'ouvre. Il contient les calendriers des navires du portefeuille du saisisseur.
 Les informations suivantes sont affichées pour chaque calendrier :
    * L'état de saisie du calendrier :
-     * "Non saisi" : _réprésenté par une icône ? dans la cellule_
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
+     * "Validé" : _réprésenté par une icône :white_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
    * Le programme (code)
    * Le navire (immatriculation + nom)
@@ -181,7 +181,7 @@ Les critères suivants sont multiples (dev en cours sur Imagine) :
 2. Le saisisseur modifie le filtre sur l'année via la sélection de l'année ou de la valeur "vide" dans une liste déroulante [Retour en 2]
 
 
---
+---
 
 ## Calendriers d'activité > Import des calendriers vides
 
@@ -278,6 +278,12 @@ un warning est affiché [Retour en 8]
 > Avoir une zone commentaire - Ne pas mettre sur chaque ligne d'historique - A maquetter
 > Prévoir POC pour le commentaire/date/initiales
 
+
+---
+## Calendrier d'activité > Général > POC Commentaires
+
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments-in-progress.svg)
 
 ---
 ## Calendrier d'activité > Général > Gestion des conflits
@@ -574,11 +580,15 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 2. L'onglet "Calendrier" s'ouvre
 3. Le message "Calendrier incomplet" s'affiche [Fin]
 
-**Variante :** Inactivité annuelle est confirmée par l'observatur
+**Variante :** Inactivité annuelle incohérente
 
-2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif, 
-ou si l'inactivié annuelle confirmée par l'observateur est à "Non" et tous les mois sont inactifs 
-alors le message "Inactivité annuelle à confirmer" s'affiche [Fin]
+2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif,
+alors le message "Inactivité annuelle incohérente" s'affiche [Fin]
+
+**Variante :** Inactivité annuelle à confirmer
+
+2. Si l'inactivié annuelle confirmée par l'observateur est à "Non" et tous les mois sont inactifs
+   alors le message "Inactivité annuelle à confirmer" s'affiche [Fin]
 
 **Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
 

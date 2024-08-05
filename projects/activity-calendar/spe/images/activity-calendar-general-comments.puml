@@ -1,0 +1,73 @@
+@startsalt
+{
+  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
+  --
+  {/ <b>Général | Navire | Calendrier | Métiers | Carte}
+  ..
+  .
+  {{
+    Objectif d'enquête directe ?* | { (X) <b>Oui | () Non}
+    Enquête éco ?* | { (X) <b>Oui | () Non }} |
+  }
+  .
+  {
+  <b>Caractéristiques de l'enquête
+     {
+     . | Qualification de l'enquête* : | ^Directe  ^
+     . | Fiabilité de l'enquête* : | ^Fiable   ^
+     . | Inactivité annuelle confirmée par l'observateur : | { (X) <b>Oui | () Non }
+     . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
+     . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
+     . | Habitudes de vente à la criée : | ^         ^
+     }
+  } . {{+
+                           {
+                           <font color=grey size=10>Stratégie
+                           ACTIFLOT démarrage le 01/01/2019
+                           }}
+                           {+
+                           {
+                           <font color=grey size=10>Saisisseur
+                           Obs1
+                           <font color=grey size=10>Groupe EI
+                           --
+                           <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08
+                           <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31
+                           .
+                           <font color=grey size=10>Mode saisie <b>bureau
+                           .
+                           [ Terminer la saisie     ]
+                           }}}
+    <b><&chat> Commentaires (4)
+         {+ <font color=DarkCyan>Obs3 : <font color=black> Appel sans réponse
+            .
+            <font color=grey size=10>Il y a 7 ans                                                                                                                                              <&X>
+         }
+
+         .
+         {+ <font color=DarkCyan>Obs2 : <font color=black> Conversation téléphonique
+            .
+            <font color=grey size=10>Il y a 5 ans                                                                                                                                              <&X>
+         }
+         .
+         {+ <font color=DarkCyan>Obs2 : <font color=black> Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS
+            de temps en temps à ERU
+            .
+            <font color=grey size=10>Il y a 4 ans                                                                                                                                              <&X>
+         }
+         .
+         {+ <font color=DarkCyan>Obs1 : <font color=black> Hélice cassée fin 2021
+            .
+            <font color=grey size=10>Il y a 3 ans                                                                                                                            <&x>Supprimer
+         }
+         .
+         {+ <font color=grey size=10>Saisissez votre commentaire                                                                                                                    <&X>
+            .
+            .
+         }
+
+  .
+  --
+  { [Fermer] | [<&reload> Réinitialiser] | [Sauvegarder] }
+}
+@endsalt
