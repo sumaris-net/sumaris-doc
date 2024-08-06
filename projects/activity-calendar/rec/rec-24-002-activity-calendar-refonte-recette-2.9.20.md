@@ -29,19 +29,19 @@
   - [ ] Date de la retraite :
     - [ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000
     - [ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000 et un affichage dans l'ihm au 29/12/0001 (exemple 510764 - EMMA-LOAN année 2022)
-![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Armateur_date_retraite.png)
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Armateur_date_retraite.PNG)
 - [ ] Tooltip flèche pagination : modifier les libellés "First page" et "Last page" pour les mettre en français
 
 ### Calendrier d'activité > Calendrier
 
 - [ ] Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne (925409 - LA REVANCHE année 2022)
-![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.png)
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
 - [ ] Prédocumentation : 
   - [ ] La prédocumentation ne s'affiche pas pour certains calendriers
-![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_erreur.png)
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_erreur.PNG)
   - [ ] La case cocher "SACROIS-OBSDEB" n'est pas présente et la ligne source indique systématiquement "Enquête N-1"
   alors qu'il y a des données "Enquête N-1" et "SACROIS-OBSDEB" (exemple 669336 - TONIN année 2022)
-![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_sources.png)
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_sources.PNG)
 
 ### Calendrier d'activité > Métiers
 
