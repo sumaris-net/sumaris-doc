@@ -35,6 +35,11 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ## Schéma SIH2_ADAGIO_DBA
 
+- Update `PROGRAM_PROPERTY`
+  ```sql
+    update PROGRAM_PROPERTY set label='sumaris.observedLocation.landings.autoFill' where label='sumaris.observedLocation.landing.autoFill';
+-```
+
 - Modification de la table `M_PARAMETER`
   ```sql
   alter table m_parameter add is_boolean number(1);
