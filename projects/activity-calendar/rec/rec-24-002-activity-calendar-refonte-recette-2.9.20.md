@@ -36,6 +36,9 @@
 
 - [ ] Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne (925409 - LA REVANCHE année 2022)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
+- [ ] Lieu d'immatriculation : sur certains calendriers, le lieu d'immatriculation ne s'affiche pas tout le temps. Quand le lieu d'immatriculation est vide, tous les champs du calendrier sont grisés et la saisie est bloquée
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_lieu_immat.PNG)
+- [ ] Copier/coller : la zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
 - [ ] Prédocumentation : 
   - [ ] La prédocumentation ne s'affiche pas pour certains calendriers
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_erreur.PNG)
@@ -46,3 +49,11 @@
 ### Calendrier d'activité > Métiers
 
 - [ ] Supprimer les cases à cocher qui n'ont pas d'utilité
+
+### Calendrier d'activité > Formulaire terrain avec données
+
+- [ ] Port : Renommer "Port" en "Port d'exploitation" pour être conforme à l'ihm
+- [ ] Zone/Gradient : présence de 3 lignes "Zone/Gradient" pour le 1er métier
+- [ ] Qualification de l'enquête : pas de cases à cocher
+- [ ] Vente : pas de cases à cocher
+![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Formulaire_terrain.PNG)
