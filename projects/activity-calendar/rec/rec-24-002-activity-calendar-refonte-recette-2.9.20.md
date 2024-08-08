@@ -52,7 +52,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 - [ ] Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne (925409 - LA REVANCHE année 2022)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
 - [ ] Actif ? : 
-  - [ ] Enregistrement impossible après avoir passé le champ à "Inactif" sur des données historiques, la colonne reste en "pending"
+  - [ ] Enregistrement impossible après avoir passé le champ à "Inactif" sur des données (historiques ou non), la colonne reste en "pending"
   - [ ] Message champ obligatoire incohérents sur les mois inactifs
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_mois_inactif.PNG)
 - [ ] Lieu d'immatriculation : Sur certains calendriers, le lieu d'immatriculation ne s'affiche pas tout le temps ou est mal renseigné. Quand le lieu d'immatriculation est vide, tous les champs du calendrier sont grisés et la saisie est bloquée. Pas de cinématique
@@ -72,9 +72,9 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
 - [ ] Erreur à l'enregistrement : 
   - [ ] Violation de contrainte unique (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. 
-  Pour reproduire : sur un mois non renseigné, sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
+  Pour reproduire : sur un mois non renseigné (données historiques ou non), sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
   - [ ] Impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.GEAR_USE_FEATURES.START_DATE) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_GEAR_USE_FEATURES
-  Pour reproduire : sur un mois inactif d'un calendrier historique, passer le mois à actif, rensiegner un métier, une zone et un gradient cote puis enregistrer
+  Pour reproduire : sur un mois inactif d'un calendrier (historique ou non), passer le mois à actif, rensiegner un métier, une zone et un gradient cote puis enregistrer
 
 
 ### Calendrier d'activité > Métiers
@@ -90,7 +90,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 - [ ] Lieux d'immatriculation : Afficher plusieurs lieux d'immatriculation s'il y en a plusieurs sur l'année ? (exemple : 511079 - AR BREUR année 2022)
 - [ ] Port : Renommer "Port" en "Port d'exploitation" pour être conforme à l'ihm
 - [ ] Zone/Gradient : présence de 3 lignes "Zone/Gradient" pour le 1er métier (non systématique)
-- [ ] Qualification de l'enquête : pas de cases à cocher
+- [X] Qualification de l'enquête : pas de cases à cocher
 - [ ] Vente : pas de cases à cocher
 
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Formulaire_terrain.PNG)
