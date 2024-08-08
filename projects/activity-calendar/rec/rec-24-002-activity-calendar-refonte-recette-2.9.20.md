@@ -16,11 +16,11 @@
 
 - [ ] Programme de collecte : supprimer le filtre
 - [ ] Année : 
-  - [ ] Dans la zone de filtres : supprimer le filtre (le filtre est déjà présent dans le bandeau)
+  - [ ] [A tester dans la 2.9.21] Dans la zone de filtres : supprimer le filtre (le filtre est déjà présent dans le bandeau)
   - [ ] Dans le bandeau : lors de la sélection d'une année, on voit apparaitre puis disparaitre une date du style "MON JAN 01 2024 00:00:00 GMT+0100" (exemple pour 2024)
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Filtres_année_bandeau.PNG)
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien
-  ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Filtres_nav_nom.PNG)
+  ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Filtres_nav_noms.PNG)
 - [ ] Etat & Niveau de qualité : lorsque l'état est "Qualifié", le champ "Etat" doit garder sa taille et le champ "Niveau de qualité" doit être sous le champ "Enquêteur"
 - [ ] Objectif d'enquête directe ? & Enquête éco ? : 
   - [ ] Problème de focus : Impossible de sélectionner la valeur "Non" via le rond sans avoir préalablement sélectionner la valeur "Oui"
@@ -51,13 +51,16 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 
 - [ ] Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne (925409 - LA REVANCHE année 2022)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
-- [ ] Actif ? : enregistrement impossible après avoir passé le champ à "Inactif" sur des données historiques
+- [ ] Actif ? : 
+  - [ ] Enregistrement impossible après avoir passé le champ à "Inactif" sur des données historiques, la colonne reste en "pending"
+  - [ ] Message champ obligatoire incohérents sur les mois inactifs
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_mois_inactif.PNG)
 - [ ] Lieu d'immatriculation : Sur certains calendriers, le lieu d'immatriculation ne s'affiche pas tout le temps ou est mal renseigné. Quand le lieu d'immatriculation est vide, tous les champs du calendrier sont grisés et la saisie est bloquée. Pas de cinématique
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_lieu_immat.PNG)
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_lieu_immat2.PNG)
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ère valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
-  - [ ] Le message d'erreur sur les métiers en doublon sur un mois ne s'affiche plus, à la place il y a une erreur oracle
+  - [ ] Bloquer l'enregistrement lorsque le métier est en doublon sur un mois (actuellement il y a une erreur sur le mois et l'enregistrement génère une erreur oracle)
 - [ ] Copier/coller : 
   - [ ] La zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
   - [ ] Impossible de copier/coller un gradient côte seul 
@@ -67,10 +70,12 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_sources.PNG)
   - [ ] La saisie du calendrier impacte les données présentes dans la prédocumentation
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
-- [ ] Erreur à l'enregistrement :
+- [ ] Erreur à l'enregistrement : 
   - [ ] Violation de contrainte unique (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. 
-Pour reproduire : sur un mois non renseigné, sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
-  - 
+  Pour reproduire : sur un mois non renseigné, sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
+  - [ ] Impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.GEAR_USE_FEATURES.START_DATE) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_GEAR_USE_FEATURES
+  Pour reproduire : sur un mois inactif d'un calendrier historique, passer le mois à actif, rensiegner un métier, une zone et un gradient cote puis enregistrer
+
 
 ### Calendrier d'activité > Métiers
 
@@ -78,7 +83,7 @@ Pour reproduire : sur un mois non renseigné, sélectionner une valeur dans le c
 
 ### Calendrier d'activité > Formulaire terrain vierge
 
-- [ ] L'accès au rapport redirige vers la page d'accueil
+- [X] L'accès au rapport redirige vers la page d'accueil
 
 ### Calendrier d'activité > Formulaire terrain avec données
 
