@@ -1,0 +1,29 @@
+@startsalt
+{
+    **Lophius budegassa**
+
+  {+
+    { | . |  <b>Sélection du critère de classement numérique :  | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. }
+    --
+{
+
+      Critère de classement :    | { ^Longueur totale (LT)^ }
+
+      Méthode :    | <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
+
+      Unité :   |  { ^ cm ^ }
+
+      Minimum :   |  "17"
+
+      Maximum : | "21"
+
+      Précision de la mesure :    |  <back:lightgrey><font color=black size=12>0.5
+
+      Instrument d'analyse : { ^ ^ }
+
+  }
+      --
+    { [Valider] | [Annuler] }
+    }
+ }
+@endsalt

@@ -91,6 +91,6 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 - [ ] Port : Renommer "Port" en "Port d'exploitation" pour être conforme à l'ihm
 - [ ] Zone/Gradient : présence de 3 lignes "Zone/Gradient" pour le 1er métier (non systématique)
 - [X] Qualification de l'enquête : pas de cases à cocher
-- [ ] Vente : pas de cases à cocher
+- [X] Vente : pas de cases à cocher
 
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Formulaire_terrain.PNG)

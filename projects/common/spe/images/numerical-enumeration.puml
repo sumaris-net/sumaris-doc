@@ -1,0 +1,30 @@
+@startsalt
+ {+
+  { **Lophius budegassa** - <b>Dénombrement |  }
+  ..
+  <b>Paramètre</b> : <back:lightgrey><font color=black size=12>Longueur total (LT) cm
+  <b>Méthode d'analyse</b> : <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
+  {
+	{#
+      <b>Longueur total (LT) cm | <b>Nombre d'individu
+      17 | " "
+      17.5 | "6"
+      18 | "5"
+      18.5 | "4"
+      19 |  "3"
+      19.5| "2"
+      20| "1"
+      20.5 | "2"
+      21 | " "
+    } |
+    .
+    {
+      {#
+        <b>Nombre d'individu total | <i><color:blue>23
+        }
+     }
+
+  }
+    {[Annuler] | [Appliquer]}
+  }
+@endsalt

@@ -15,8 +15,8 @@
 | Sprint 1   | 26/04/2024    | 2.9.0-alpha17   | -                        | -                                | Closed      |
 | Sprint 2   | 24/05/2024    | 2.9.3-alpha18   | 13/06/2024               | -                                | Closed      |
 | Sprint 3   | 21/06/2024    | 2.9.19          | 09/07/2024               | -                                | Closed      |
-| Sprint 4 | 12/07/2024    | 2.9.20          | 20/08/2024               | -                                |  Closed  |
-| **Sprint 5**   | 02/08/2024    | **2.9.21**          | -                        | -                                | **On going**      |
+| Sprint 4 | 19/07/2024    | 2.9.20          | 20/08/2024               | -                                |  Closed  |
+| **Sprint 5**   | 16/08/2024    | **2.9.21**          | -                        | -                                | **On going**      |
 | Sprint 6   | 30/08/2024    | 2.9.22          | 12/09/2024               | To defined                       | Future      |
 | Sprint 7   | 27/09/2024    | 2.9.23          | 08/10/2024               | -                                | Future      |
 <!-- .element: class="font-size-extra-small" -->
@@ -174,7 +174,7 @@
 ## Calendrier d'activité - Sprint 5 - Issue Board
 
 - **Start date** : 22/07/2024
-- **End date** : 09/08/2024
+- **End date** : 16/08/2024
 - **Milestone** : 2.9.21
 - **Goal** : Bugs correction
 - **Status** : On going

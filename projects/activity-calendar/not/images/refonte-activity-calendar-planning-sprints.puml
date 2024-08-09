@@ -107,7 +107,7 @@ Project starts the 2024/04/08
 [TASK4]->[TASK5]
 [Testing5] requires 1 week and starts the 5th of August 2024
 [TASK5]->[Testing5]
-[Demo MOA 3] happens 20th of August 2024
+[Demo MOA 3] happens 27th of August 2024
 
 [r2.9.22] as [TASK6] requires 3 weeks and starts the 5th of August 2024
 [TASK6] is colored in Lavender/LightBlue

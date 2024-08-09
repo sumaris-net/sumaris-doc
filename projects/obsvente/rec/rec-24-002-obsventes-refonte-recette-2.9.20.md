@@ -35,3 +35,27 @@ A plannifier
     - Il faudrait une seule espèce
   - [ ] Si on sélectionne l'espèce commerciale et l'espèce scientifique puis que l'on change l'espèce scientifique, l'espèce commerciale n'est pas modifiée.
   On peut alors saisir une espèce commerciale et scientifique qui ne corresponde pas.
+  - [ ] L'ajout de lot n'est pas sauvegardé
+    - Quand on ajoute un lot, on sauvegarde (pas d'erreur). Quand on revient sur la vente ou que l'on rafraichit, le lot précédemment saisi n'apparait pas.
+
+log côté pod : 
+Aucune erreur
+
+
+  - [ ] Problème de label pour éditer le rapport de la vente 
+  
+![img.png](images/rec-24-006-2.9.20-bouton-rapport-vente.png)
+
+  - [ ] La validation du bouton ramène à la page d'accueil
+
+  - [ ] Erreur lors de la suppression d'une vente 
+
+![img_1.png](images/rec-24-007-2.9.20-erreur-delete-vente.png)
+
+log côté pod : 
+
+```
+2024-08-09 11:02:59,663 WARN  [http-nio-8080-exec-9] notprivacysafe.graphql.GraphQL             : Query did not validate : 'mutation DeleteSales($ids: [Int]) {
+Aug 09 11:02:59 visi-docker-val4 dockersvc_sumaris-pod[2738570]:   deleteSales(ids: $ids)
+Aug 09 11:02:59 visi-docker-val4 dockersvc_sumaris-pod[2738570]: }'
+```

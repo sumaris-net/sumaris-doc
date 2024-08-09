@@ -7,19 +7,19 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 ## Sommaire
 
 - [Spécificités techniques](#spécificités-techniques)
-- [Commun > Ergonomie > principes généraux](#commun-ergonomie-principes-généraux)
-- [Commun > Ergonomie > Connexion à l'application](#commun-ergonomie-connexion-à-l-application)
-- [Commun > Application des filtres](#commun-application-des-filtres)
-- [Commun > Epingler un élément](#commun-epingler-un-élément)
-- [Commun > Extraction](#commun-extraction)
-- [Commun > Saisie de mensuration](#commun-saisie-de-mensuration)
-- [Commun > Fin d'une saisie](#commun-fin-d-une-saisie)
-- [Commun > Ajout de PSFM](#commun-ajout-de-psfm)
-- [Commun > Stratégie](#commun-stratégie)
-- [Commun > Formulaires](#commun-formulaires)
-- [Commun > Saisisseur](#commun-saisisseur)
-- [Commun > Enregistrement automatique](#commun-enregistrement-automatique)
-- [Commun > Suppression](#commun-suppression)
+- [Commun > Ergonomie > principes généraux](#commun--ergonomie-principes-généraux)
+- [Commun > Ergonomie > Connexion à l'application](#commun--ergonomie-connexion-à-l-application)
+- [Commun > Application des filtres](#commun--application-des-filtres)
+- [Commun > Epingler un élément](#commun--epingler-un-élément)
+- [Commun > Extraction](#commun--extraction)
+- [Commun > Saisie de mensuration](#commun--saisie-de-mensuration)
+- [Commun > Fin d'une saisie](#commun--fin-d-une-saisie)
+- [Commun > Ajout de PSFM](#commun--ajout-de-psfm)
+- [Commun > Stratégie](#commun--stratégie)
+- [Commun > Formulaires](#commun--formulaires)
+- [Commun > Saisisseur](#commun--saisisseur)
+- [Commun > Enregistrement automatique](#commun--enregistrement-automatique)
+- [Commun > Suppression](#commun--suppression)
 - [Commun > Utilisation de données temporaires](#commun--utilisation-de-données-temporaires)
 - [Commun > Régionalisation](#commun--régionalisation)
 
@@ -219,34 +219,53 @@ _A mettre dans une partie validation de données_
 
 La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
 
-L'écran affiche la liste des mesures individuelles ou un dénombrement pour l'espèce commerciale.
+L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
+- Saisie de mesures individuelles (écran par défaut :memo:)
+- Saisie par dénombrement sur classement numérique (Activable par le bouton :clipboard:) 
+- _Saisie par quantité du lot (cas d'usage à confirmer)_
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
 
-Le choix se fait par une case à cocher.
+L'écran affiche par défaut la saisie de mesures individuelles.
 
-1. L'observateur coche "Mensuration".
-2. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
-3. La zone de saisie de mesure est composée des champs suivants :
+1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
+2. La zone de saisie de mesure est composée des champs suivants :
     * Le nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
     * Le sexe de l'espèce mesurée
     * La longueur totale mesurée, en cm
+    * Le nombre d'individu
+        * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, le champ sera automatiquement renseigné avec cette valeur.
     * Le poids calculé RTP (Relation taille poids) en kg
       * Ce poids RTP est automatiquement calculé (affiché en bleu en italique)
-4. Un bouton permet d'ajouter la mesure individuelle saisit
+3. Un bouton permet d'ajouter la mesure individuelle saisit
     * Une ligne est ajoutée au tableau
-5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
-6. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
-7.Un compteur est incrémenté à chaque ajout de nouvelle mensuration
+4. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
+5. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
+6. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
-**Variante 1a**
+**Variante 1a** : Saisie des mensurations par dénombrement
 
-![ui-common-mesures-enumerations](/projects/common/spe/images/enumerations.svg)
+1. L'observateur clique sur le bouton :clipboard:
+2. L'écran de création du dénombrement par classe de mensuration s'ouvre.
 
-1. L'observateur coche "Dénombrement"
-2. L'écran se retaille pour n'afficher seulement que le champ suivant :
-    * Le nombre d'individus
+![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-classification.svg)
+
+3. L'observateur renseigne les éléments suivants :
+    * Le critère de classement
+    * La méthode de classement
+    * L'unité de classement
+    * Les bornes minimale et maximale des mensurations
+    * L'instrument de mesure
+4. A la validation, la fenêtre de saisie des mensurations individuelles est remplacé par la fenêtre de dénombrement
+
+![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
+
+TODO
+
+Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
+
+**Obsolète*
 
 **Variante 1b**
 
