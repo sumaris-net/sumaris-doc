@@ -16,9 +16,10 @@ Liste des tickets réalisés :
 ```properties
 # Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
 sumaris.program.privilege.readonly=true
-sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=<Id du PMFM dans ACTIFLOT> # 623 ou 1445 ?
+sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=623
 sumaris.enumeration.Pmfm.SURVEY_RELIABILITY.id=681
 sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
+sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 ```
 
 ## Schéma SIH2_ADAGIO_DBA

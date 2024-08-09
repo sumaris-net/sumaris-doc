@@ -16,6 +16,9 @@ Retard avéré sur la livraison de la release 2.9.20 pour ActiFlot et ObsVentes*
     - Evolutions concurrentes sur le modèle adagio
         - 4.2.7 pour Campagne
         - 4.3.0 pour refonte ActiFlot et ObsVentes
+    - Problème de CI pour builder les releases
+      - sumaris-pod : OK
+      - sumaris-app : Problèmes en cours de résolution
 
 - **Actions engendrées**
     - Application du processus de validation des modifications du modèle Adagio

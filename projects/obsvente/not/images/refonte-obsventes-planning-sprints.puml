@@ -59,12 +59,12 @@ Project starts the 2024/03/04
 [Training] as [TRAIN1] requires 1 week
 [TRAIN1] is colored in Grey
 
-[Sprint 1] as [TASK1] requires 4 weeks
+[r2.9.16] as [TASK1] requires 4 weeks
 [TASK1] is colored in Grey
 [TRAIN1]->[TASK1]
 
 
-[Sprint 2] as [TASK2] requires 3 weeks
+[r2.9.17] as [TASK2] requires 3 weeks
 [TASK2] is colored in Grey
 [TASK1]->[TASK2]
 [Testing2] requires 1 week and starts the 6th of May 2024
@@ -73,28 +73,28 @@ Project starts the 2024/03/04
 [pre-prod] as [PREPROD] requires 3 week and starts the 29th of April 2024
 [PREPROD] is colored in salmon
 
-[Sprint 3] as [TASK3] requires 4 weeks
+[r2.9.18] as [TASK3] requires 4 weeks
 [TASK3] is colored in grey
 [TASK2]->[TASK3]
 [Testing3] requires 1 week
 [TASK3]->[Testing3]
 [Demo 1 MOA] happens 3 day after [Testing3]'s end
 
-[Sprint 4] as [TASK4] requires 4 weeks and starts the 27th of May 2024
+[r2.9.19.2] as [TASK4] requires 4 weeks and starts the 27th of May 2024
 [TASK4] is colored in grey
 [TASK3]->[TASK4]
 [Testing4] requires 1 week and starts 1th of July 2024
 [TASK4]->[Testing4]
 [Demo 2 MOA] happens 9th of July 2024
 
-[Sprint 5] as [TASK5] requires 4 weeks and starts the 24th of June 2024
-[TASK5] is colored in lightsalmon
+[r2.9.20] as [TASK5] requires 4 weeks and starts the 24th of June 2024
+[TASK5] is colored in grey
 [TASK4]->[TASK5]
-[Testing5] requires 1 week
+[Testing5] requires 1 week and starts the 1th of August 2024
 [TASK5]->[Testing5]
-[Sprint 6] as [TASK6] requires 4 weeks and starts the 15th of July 2024
 
-[TASK6] is colored in Lavender/LightBlue
+[r2.9.21] as [TASK6] requires 4 weeks and starts the 15th of July 2024
+[r2.9.21] is colored in green
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
@@ -105,14 +105,14 @@ Project starts the 2024/03/04
 [               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
 [ActivityCalendarMEP] is colored in yellow
 
-[Sprint 7] as [TASK7] requires 4 weeks and starts the 2th of December 2024
+[r2.9.22] as [TASK7] requires 4 weeks and starts the 2th of December 2024
 [TASK7] is colored in Lavender/LightBlue
 [TASK6]->[TASK7]
 [Testing7] requires 1 week
 [TASK7]->[Testing7]
 [Demo 4 MOA] happens 3 day after [Testing7]'s end
 
-[Sprint 8] as [TASK8] requires 4 weeks and starts the 1th of March 2025
+[r2.9.23] as [TASK8] requires 4 weeks and starts the 1th of March 2025
 [TASK8] is colored in Lavender/LightBlue
 [TASK7]->[TASK8]
 [Testing8] requires 2 week
