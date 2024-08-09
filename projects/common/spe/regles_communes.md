@@ -265,7 +265,7 @@ TODO
 
 Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
 
-**Obsolète*
+**Obsolète**
 
 **Variante 1b**
 
