@@ -262,7 +262,15 @@ L'écran affiche par défaut la saisie de mesures individuelles.
     * L'unité de classement
     * Les bornes minimale et maximale des mensurations
     * L'instrument de mesure
-4. A la validation, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de dénombrement ci dessous.
+
+Le choix du critère de classement se fait parmi une liste déroulante affichant, pour chaque critère à sélectionner
+    * Le paramètre
+    * La fraction
+    * La méthode
+
+![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
+
+4. A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous.
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 

@@ -26,7 +26,7 @@
         { | . | Sexe  | . }
         { | . | ^Femelle^  }
 
-        { | . | Longueur totale (cm) * | .  }
+        { | . | ^Longueur totale (cm)^ | .  | [ ] Figer }
         { | . | "   12  "  }
 
         { | . | Nombre d'individu * | .  }
