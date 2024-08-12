@@ -99,25 +99,27 @@ Project starts the 2024/03/04
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
 
-[Demo 3 MOA] happens the 10th of September 2024
+[Atelier/Demo 3 MOA] happens the 10th of September 2024
+
+[r2.9.22] as [TASK7] requires 3 weeks and starts the 19th of August 2024
+[TASK7] is colored in Lavender/LightBlue
+[TASK6]->[TASK7]
+[Testing7] requires 1 week
+[TASK7]->[Testing7]
+
+
 
 
 [               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
 [ActivityCalendarMEP] is colored in yellow
 
-[r2.9.22] as [TASK7] requires 4 weeks and starts the 2th of December 2024
-[TASK7] is colored in Lavender/LightBlue
-[TASK6]->[TASK7]
-[Testing7] requires 1 week
-[TASK7]->[Testing7]
-[Demo 4 MOA] happens 3 day after [Testing7]'s end
 
-[r2.9.23] as [TASK8] requires 4 weeks and starts the 1th of March 2025
+[r2.9.23] as [TASK8] requires 4 weeks and starts the 2th of December 2024
 [TASK8] is colored in Lavender/LightBlue
 [TASK7]->[TASK8]
 [Testing8] requires 2 week
 [TASK8]->[Testing8]
-[Demo MOA 5] happens 3 day after [Testing8]'s end
+[Demo MOA 4] happens 3 day after [Testing8]'s end
 
 [validation] as [VAL] requires 2 week and starts the 15th of April 2025
 [VAL] is colored in red
@@ -141,6 +143,7 @@ Project starts the 2024/03/04
 
 [JVF] as [CONG_JVF] requires 2 week and starts the 29th of July 2024
 [JVF] is colored in plum
+2024-07-29 to 2024-08-11 is colored in grey
 
 [MFA] as [CONG_MFA] requires 2 week and starts the 09th of October 2024
 [MFA] is colored in plum
