@@ -274,9 +274,7 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
 
 
-**Variante 1b**
-
-![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/numerical-classification-warning.svg)
+**Variante 1b** : Modification du type de saisie sur une saisie en cours
 
 Sur l'écran de saisi des mesures individuelles : 
 
@@ -286,6 +284,9 @@ Sur l'écran de saisi des mesures individuelles :
 4. La fenêtre de saisie de dénombrement s'ouvre
 5. Un message d'avertissement (texte de couleur blanche surligné en rouge) indique à l'observateur que des mensurations ont été saisies.
     * La saisie d'un dénombrement effacera les mensurations précédemment saisies
+
+![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/numerical-classification-warning.svg)
+
 
 **Saisie de quantité (ObsMer)**
 
