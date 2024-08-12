@@ -61,6 +61,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ère valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Bloquer l'enregistrement lorsque le métier est en doublon sur un mois (actuellement il y a une erreur sur le mois et l'enregistrement génère une erreur oracle)
+- [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Copier/coller : 
   - [ ] La zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
   - [ ] Impossible de copier/coller un gradient côte seul 
