@@ -1,0 +1,33 @@
+@startsalt
+ {+
+  { Lot MNZ - Baudroie - <b>Mesures individuelles (7) | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. | <b> ...}
+  ..
+  <&trash> <color:grey><&spreadsheet></color> <&browser>
+
+  {
+	{#
+      [].| .# | <b>Espèce scientifique | <b>Nombre d'individu
+      [].| 7 | ANK - Lophius budegassa   | 1
+      [].| 6 | ANK - Lophius budegassa   | 2
+      [X].| 5 | MON - Lophius piscatorius | 1
+      [].| 4 | ANK - Lophius budegassa    | 1
+      [].| 3 | MON - Lophius piscatorius |  1
+      [].| 2 | MON - Lophius piscatorius |  1
+      [].| 1 | ANK - Lophius budegassa   |  3
+    } |
+
+    {
+      {+
+        { | . | ()  <b>Mensurations | (X)  <b>Quantité | . | . | . | . | . }
+        --
+        { | . | Espèce scientifique *  | . }
+        { | . | ^Lophius piscatorius^   | .  | [ ] Figer }
+        .
+        { | . | Nombre d'individu * | .  }
+        { | . | "   1  "  | .   }
+        }
+     }
+    }
+    {[Annuler] | [Appliquer]}
+  }
+@endsalt

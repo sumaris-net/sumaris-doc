@@ -215,6 +215,8 @@ _A mettre dans une partie validation de données_
 
 **REF: COMMUN/MESURES**
 
+**Saisie de mesures individuelles**
+
 ![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
 
 La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
@@ -230,7 +232,7 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 
 1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
 2. La zone de saisie de mesure est composée des champs suivants :
-    * Le nom de l'espèce scientifique
+    * Le choix du nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
     * Le sexe de l'espèce mesurée
     * La longueur totale mesurée, en cm
@@ -244,6 +246,8 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 5. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
 6. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
+**Saisie de dénombrement**
+
 **Variante 1a** : Saisie des mensurations par dénombrement
 
 1. L'observateur clique sur le bouton :clipboard:
@@ -251,33 +255,55 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-classification.svg)
 
-3. L'observateur renseigne les éléments suivants :
+3. L'écran est composé des éléments suivants :
+    * Le choix du nom de l'espèce scientifique
     * Le critère de classement
     * La méthode de classement
     * L'unité de classement
     * Les bornes minimale et maximale des mensurations
     * L'instrument de mesure
-4. A la validation, la fenêtre de saisie des mensurations individuelles est remplacé par la fenêtre de dénombrement
+4. A la validation, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de dénombrement ci dessous.
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 
-TODO
+1. Le paramètre de mensuration et la méthode d'analyse sont affichés et ne sont pas modifiables
+2. L'observateur peut, pour chaque classe de mesure :
+    * Saisir un nombre d'individu
+3. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi
 
 Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
 
-**Obsolète**
 
 **Variante 1b**
 
-![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/enumerations-edit-warning.svg)
+![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/numerical-classification-warning.svg)
 
-1. L'observateur coche "Mensuration".
-2. L'observateur à saisi des mesures individuelles, présentent dans le tableau
-3. L'observateur coche "Dénombrement"
-4. L'écran affiche la saisie d'un dénombrement pour l'espèce commerciale (variante 1b)
-5. Un message d'avertissement (text de couleur blanche surligné en rouge) indique à l'observateur que des mensurations ont été saisies.
-   * La saisie d'un dénombrement effacera les mensurations précédemment saisies 
+Sur l'écran de saisi des mesures individuelles : 
 
+1. L'observateur à saisi des mesures individuelles
+2. Les mesures sont présentes dans le tableau
+3. L'observateur clique sur le bouton de saisi de dénombrement
+4. La fenêtre de saisie de dénombrement s'ouvre
+5. Un message d'avertissement (texte de couleur blanche surligné en rouge) indique à l'observateur que des mensurations ont été saisies.
+    * La saisie d'un dénombrement effacera les mensurations précédemment saisies
+
+**Saisie de quantité (ObsMer)**
+
+**Variante 1c** : Saisie des quantités 
+
+Cette option n'est **accessible** que depuis le **volet ObsMer**, ou l'on peut saisir une quantité sans aucune mesure associée.
+
+![ui-common-mesures-quantites](/projects/common/spe/images/individual-measures-quantity.svg)
+
+Sur l'écran de saisi des mesures individuelles, il est possible, par un radio bouton, de sélectionner une saisie par quantité sur l'espèce scientifique.
+
+1. L'observateur sélectionne l'option "Quantité"
+2. La fenêtre de saisie est modifiée et affiche les éléments suivants : 
+    * Le choix du nom de l'espèce scientifique
+    * Une zone de saisie du nombre d'individus observés
+3. Le tableau des mesures est modifié et 2 colonnes sont affichées :
+    * Le nom de l'espèce scientifique
+    * La quantité du nombre d'individus observés
 
 
 ## Commun > Fin d'une saisie

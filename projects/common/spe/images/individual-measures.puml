@@ -18,8 +18,7 @@
 
     {
       {+
-        { | . |  <b>Mensurations individuelles| }
-
+        { | . | (X)  <b>Mensurations | ()  <b>Quantité | . | . | . | . | . }
         --
         { | . | Espèce scientifique *  | . }
         { | . | ^Lophius piscatorius^   | .  | [ ] Figer }
@@ -31,7 +30,7 @@
         { | . | "   12  "  }
 
         { | . | Nombre d'individu * | .  }
-        { | . | "   1  "  | .  | [ ] Figer }
+        { | . | "   1  "  | .   }
 
         { | . | <i>Poids calculé RTP (kg)  | . }
         { | . | "<color:blue>0.01335 " | .  }
