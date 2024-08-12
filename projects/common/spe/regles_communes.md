@@ -263,10 +263,10 @@ L'écran affiche par défaut la saisie de mesures individuelles.
     * Les bornes minimale et maximale des mensurations
     * L'instrument de mesure
 
-Le choix du critère de classement se fait parmi une liste déroulante affichant, pour chaque critère à sélectionner
-    * Le paramètre
-    * La fraction
-    * La méthode
+Le choix du critère de classement se fait parmi une liste déroulante affichant, pour chaque critère à sélectionner : 
+- Le paramètre
+- La fraction
+- La méthode
 
 ![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
 
