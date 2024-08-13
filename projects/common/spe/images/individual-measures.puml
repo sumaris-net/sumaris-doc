@@ -2,6 +2,9 @@
  {+
   { Lot MNZ - Baudroie - <b>Mesures individuelles (7) | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |<b> ...}
   ..
+
+  { | Critère de classement : | ^Longueur totale (cm)^ | .  }
+
   <&trash> <color:grey><&spreadsheet></color> <&browser>
 
   {
@@ -26,7 +29,7 @@
         { | . | Sexe  | . }
         { | . | ^Femelle^  }
 
-        { | . | ^Longueur totale (cm)^ | .  | [ ] Figer }
+        { | . | Longueur totale (cm) | .  }
         { | . | "   12  "  }
 
         { | . | Nombre d'individu * | .  }

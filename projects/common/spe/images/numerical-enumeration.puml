@@ -6,21 +6,21 @@
   <b>Méthode d'analyse</b> : <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
   {
 	{#
-      <b>Longueur total (LT) cm | <b>Nombre d'individu
-      17 | " "
-      17.5 | "6"
-      18 | "5"
-      18.5 | "4"
-      19 |  "3"
-      19.5| "2"
-      20| "1"
-      20.5 | "2"
-      21 | " "
+      <b>Longueur total (LT) cm | <b>Nombre d'individu | <b>Poids calculé RTP (kg)
+      17 | " " | <color:blue>
+      17.5 | " " | <color:blue>
+      18 | "5" | <color:blue>1.0173
+      18.5 | "4" | <color:blue>0.9123
+      19 |  " " | <color:blue>
+      19.5| "2" | <color:blue>1.125
+      20| "1" | <color:blue>1.001
+      20.5 | "2" | <color:blue>0.896
+      21 | " " | <color:blue>
     } |
     .
     {
       {#
-        <b>Nombre d'individu total | <i><color:blue>23
+        <b>Nombre d'individu total | <i><color:blue>14
         }
      }
 

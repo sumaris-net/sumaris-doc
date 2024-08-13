@@ -51,6 +51,10 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
   update  m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
 -```
 
+- Création de PMFMs
+  - Fiche Mantis : https://forge.ifremer.fr/mantis/view.php?id=65277
+  - Script SQL de création des PMFMS : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/sql/oracle/create-pmfm.sql
+
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`

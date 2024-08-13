@@ -224,27 +224,28 @@ La création de mesures individuelles est accessible depuis les tableaux de cons
 L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
 - Saisie de mesures individuelles (écran par défaut :memo:)
 - Saisie par dénombrement sur classement numérique (Activable par le bouton :clipboard:) 
-- _Saisie par quantité du lot (cas d'usage à confirmer)_
+- _Saisie par effectif du lot (cas d'usage à confirmer)_
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
 
 L'écran affiche par défaut la saisie de mesures individuelles.
 
 1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
-2. La zone de saisie de mesure est composée des champs suivants :
+2. Une liste déroulante permet de sélectionner, pour l'espèce commerciale, le critère de classement de mesure
+3. La zone de saisie de mesure est composée des champs suivants :
     * Le choix du nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
     * Le sexe de l'espèce mesurée
-    * La longueur totale mesurée, en cm
+    * La longueur totale mesurée (dépend du choix du critère de classement)
     * Le nombre d'individu
         * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, le champ sera automatiquement renseigné avec cette valeur.
     * Le poids calculé RTP (Relation taille poids) en kg
       * Ce poids RTP est automatiquement calculé (affiché en bleu en italique)
-3. Un bouton permet d'ajouter la mesure individuelle saisit
+4. Un bouton permet d'ajouter la mesure individuelle saisit
     * Une ligne est ajoutée au tableau
-4. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
-5. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
-6. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
+5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
+6. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
+7. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
 **Saisie de dénombrement**
 
@@ -265,6 +266,7 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 
 Le choix du critère de classement se fait parmi une liste déroulante affichant, pour chaque critère à sélectionner : 
 - Le paramètre
+- Le support
 - La fraction
 - La méthode
 
@@ -276,8 +278,9 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 1. Le paramètre de mensuration et la méthode d'analyse sont affichés et ne sont pas modifiables
 2. L'observateur peut, pour chaque classe de mesure :
-    * Saisir un nombre d'individu
-3. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi
+    * Saisir un nombre d'individu 
+3. Le poids calculé RTP est automatiquement calculé pour chaque dénombrement
+4. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi
 
 Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
 
@@ -298,15 +301,16 @@ Sur l'écran de saisi des mesures individuelles :
 
 **Saisie de quantité (ObsMer)**
 
-**Variante 1c** : Saisie des quantités 
 
-Cette option n'est **accessible** que depuis le **volet ObsMer**, ou l'on peut saisir une quantité sans aucune mesure associée.
+**Variante 1c** : Saisie des effectifs 
 
-![ui-common-mesures-quantites](/projects/common/spe/images/individual-measures-quantity.svg)
+Cette option n'est **accessible** que depuis le **volet ObsMer**, ou l'on peut saisir un effectif d'une espèce scientifique sans aucune mesure associée.
 
-Sur l'écran de saisi des mesures individuelles, il est possible, par un radio bouton, de sélectionner une saisie par quantité sur l'espèce scientifique.
+![ui-common-mesures-effectives](/projects/common/spe/images/individual-measures-effective.svg)
 
-1. L'observateur sélectionne l'option "Quantité"
+Sur l'écran de saisi des mesures individuelles, il est possible, par un radio bouton, de sélectionner une saisie par effectif sur l'espèce scientifique.
+
+1. L'observateur sélectionne l'option "Effectif"
 2. La fenêtre de saisie est modifiée et affiche les éléments suivants : 
     * Le choix du nom de l'espèce scientifique
     * Une zone de saisie du nombre d'individus observés
@@ -314,6 +318,20 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
     * Le nom de l'espèce scientifique
     * La quantité du nombre d'individus observés
 
+
+### CRR Réunion du 13/08/2024 (Avec Elise Bultel)
+
+- Poids de référence: faut-il pouvoir choisir la méthode "Déclaration par un observateur"
+  - Oui pour les DOM
+- Y a t il un protocol à appliquer par espèce ? (Saisie sur sexe par exemple)
+  - Oui avec les crevettes en Outre Mer (saisie de la phase de maturité)
+  - A mettre en place
+- DOM : Pouvoir saisir plusieurs métiers pour une même espèce. Le modèle permet il de stocker cela ?
+- Terminologie du programme SIH-OBSVENTES - Souhait important de la MOA : 
+  - Etudier l'impacte d'un passage du nom de programme ObsVente à ObsVentes dans tout Harmonie (voir avec Glenn)
+  - Si complexe : faire en sorte que Sumaris affiche ObsVentes (voir avec Benoit)
+- Renommer le PMFM PARAMETER_FK like 'MATURITY_STAGE_%' : Stade en Phase (Attente retour Elise puis valider avec Armelle)
+- Génération du rapport de collecte remplit : MOA à une préférence pour la vue tableau (à confirmer le 10/09/2024)
 
 ## Commun > Fin d'une saisie
 
