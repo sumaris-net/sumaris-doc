@@ -224,7 +224,7 @@ La création de mesures individuelles est accessible depuis les tableaux de cons
 L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
 - Saisie de mesures individuelles (écran par défaut :memo:)
 - Saisie par dénombrement sur classement numérique (Activable par le bouton :clipboard:) 
-- _Saisie par effectif du lot (cas d'usage à confirmer)_
+- Saisie par effectif du lot (Cas d'usage Obsventes)
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
 
@@ -232,6 +232,7 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 
 1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
 2. Une liste déroulante permet de sélectionner, pour l'espèce commerciale, le critère de classement de mesure
+    * Dès qu'une mensuration est saisie, il n'est plus possible de modifier ce critère de classement
 3. La zone de saisie de mesure est composée des champs suivants :
     * Le choix du nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
@@ -272,7 +273,7 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 ![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
 
-4. A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous.
+4. A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 
@@ -316,7 +317,7 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
     * Une zone de saisie du nombre d'individus observés
 3. Le tableau des mesures est modifié et 2 colonnes sont affichées :
     * Le nom de l'espèce scientifique
-    * La quantité du nombre d'individus observés
+    * Le nombre de l'effectif des individus observés
 
 
 ### CRR Réunion du 13/08/2024 (Avec Elise Bultel)

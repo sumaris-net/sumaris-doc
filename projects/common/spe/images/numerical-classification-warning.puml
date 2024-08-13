@@ -4,7 +4,7 @@
 
     <back:red><font color=white><i>Des mensurations ont été saisies.
     <back:red><font color=white><i>Saisir un dénombrement les effacera.
-    <&trash> <color:grey><&spreadsheet></color> <&browser>
+    ...
 
   {+
     { | . |  <b>Sélection du critère de classement numérique :  | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. }
@@ -16,7 +16,7 @@
 
       Méthode :    | <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
 
-      Unité :   |  { ^ cm ^ }
+      Unité :   |  <back:lightgrey><font color=black size=12>cm
 
       Minimum :   |  "17"
 
