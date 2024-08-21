@@ -14,9 +14,9 @@
 
 ### Calendriers d'activité > Filtres
 
-- [ ] Programme de collecte : supprimer le filtre
+- [x] Programme de collecte : supprimer le filtre
 - [ ] Année : 
-  - [ ] Dans la zone de filtres : supprimer le filtre (le filtre est déjà présent dans le bandeau)
+  - [x] Dans la zone de filtres : supprimer le filtre (le filtre est déjà présent dans le bandeau)
   - [ ] Dans le bandeau : lors de la sélection d'une année, on voit apparaitre puis disparaitre une date du style "MON JAN 01 2024 00:00:00 GMT+0100" (exemple pour 2024)
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Filtres_année_bandeau.PNG)
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien
@@ -39,13 +39,13 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
   - [x] Port d'exploitation : tronquer et mettre "..." lorsque le libellé ne tient pas sur 2 lignes
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_port_exploit.PNG)
-- [ ] Armateurs :
+- [x] Armateurs :
   - [x] Début d'activité : supprimer cette colonne car en base le champ est renseigné au 01/01/2010 ou vide
-  - [ ] Date de la retraite :
-    - [ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000
-    - [ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000 et un affichage dans l'ihm au 29/12/0001 (exemple 510764 - EMMA-LOAN année 2022)
+  - [x] Date de la retraite : masquer la colonne (vu avec Glenn le 19/08/24)
+    - ~~[ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000~~
+    - ~~[ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000 et un affichage dans l'ihm au 29/12/0001 (exemple 510764 - EMMA-LOAN année 2022)~~
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Armateur_date_retraite.PNG)
-- [ ] Tooltip flèche pagination : modifier les libellés "First page" et "Last page" pour les mettre en français
+- [x] Tooltip flèche pagination : modifier les libellés "First page" et "Last page" pour les mettre en français
 
 ### Calendrier d'activité > Calendrier
 
@@ -55,7 +55,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
   - [x] Enregistrement impossible après avoir passé le champ à "Inactif" sur des données (historiques ou non), la colonne reste en "pending"
   - [x] Message champ obligatoire incohérents sur les mois inactifs
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_mois_inactif.PNG)
-- [ ] Lieu d'immatriculation : Sur certains calendriers, le lieu d'immatriculation ne s'affiche pas tout le temps ou est mal renseigné. Quand le lieu d'immatriculation est vide, tous les champs du calendrier sont grisés et la saisie est bloquée. Pas de cinématique
+- [x] Lieu d'immatriculation : Sur certains calendriers, le lieu d'immatriculation ne s'affiche pas tout le temps ou est mal renseigné. Quand le lieu d'immatriculation est vide, tous les champs du calendrier sont grisés et la saisie est bloquée. Pas de cinématique
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_lieu_immat.PNG)
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_lieu_immat2.PNG)
 - [ ] Métier : 
@@ -63,13 +63,13 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
   - [ ] Bloquer l'enregistrement lorsque le métier est en doublon sur un mois (actuellement il y a une erreur sur le mois et l'enregistrement génère une erreur oracle)
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Copier/coller : 
-  - [ ] La zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
+  - [x] La zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
   - [ ] Impossible de copier/coller un gradient côte seul 
 - [ ] Prédocumentation :
   - [ ] La case cocher "SACROIS-OBSDEB" n'est pas présente et la ligne source indique systématiquement "Enquête N-1"
   alors qu'il y a des données "Enquête N-1" et "SACROIS-OBSDEB" (exemple 669336 - TONIN année 2022)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Prédocumentation_sources.PNG)
-  - [ ] La saisie du calendrier impacte les données présentes dans la prédocumentation
+  - [ ] La prédocumentation affiche les données des calendriers N-1 et N
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
 - [ ] Erreur à l'enregistrement : 
   - [ ] Violation de contrainte unique (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. 
@@ -90,7 +90,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 
 - [x] Lieux d'immatriculation : Afficher plusieurs lieux d'immatriculation s'il y en a plusieurs sur l'année ? (exemple : 511079 - AR BREUR année 2022)
 - [x] Port : Renommer "Port" en "Port d'exploitation" pour être conforme à l'ihm
-- [ ] Zone/Gradient : présence de 3 lignes "Zone/Gradient" pour le 1er métier (non systématique)
+- [x] Zone/Gradient : présence de 3 lignes "Zone/Gradient" pour le 1er métier (non systématique)
 - [X] Qualification de l'enquête : pas de cases à cocher
 - [X] Vente : pas de cases à cocher
 
