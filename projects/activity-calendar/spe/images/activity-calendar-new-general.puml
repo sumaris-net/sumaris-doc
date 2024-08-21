@@ -15,7 +15,7 @@
      {
      . | Qualification de l'enquête* : | ^Directe  ^
      . | Fiabilité de l'enquête* : | ^Fiable   ^
-     . | Inactivité annuelle confirmée par l'observateur : | { (X) <b>Oui | () Non }
+     . | Inactivité annuelle confirmée par l'observateur : | ^         ^
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
      . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
      . | Habitudes de vente à la criée : | ^         ^
@@ -27,7 +27,7 @@
                            }}
                            {+
                            {
-                           <font color=grey size=10>Saisisseur
+                           <font color=grey size=10>Observateur(s)
                            Obs1
                            <font color=grey size=10>Groupe EI
                            --

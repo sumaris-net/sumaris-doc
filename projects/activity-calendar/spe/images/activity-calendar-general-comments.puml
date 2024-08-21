@@ -15,7 +15,7 @@
      {
      . | Qualification de l'enquête* : | ^Directe  ^
      . | Fiabilité de l'enquête* : | ^Fiable   ^
-     . | Inactivité annuelle confirmée par l'observateur : | { (X) <b>Oui | () Non }
+     . | Inactivité annuelle confirmée par l'observateur : | ^         ^
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
      . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
      . | Habitudes de vente à la criée : | ^         ^
@@ -27,7 +27,7 @@
                            }}
                            {+
                            {
-                           <font color=grey size=10>Saisisseur
+                           <font color=grey size=10>Observateur(s)
                            Obs1
                            <font color=grey size=10>Groupe EI
                            --
@@ -39,32 +39,37 @@
                            [ Terminer la saisie     ]
                            }}}
     <b><&chat> Commentaires (4)
-         {+ <font color=DarkCyan>Obs3 : <font color=black> Appel sans réponse
+         {+ <font color=grey size=10>Saisissez votre commentaire                                                                                                                   <&X>
             .
-            <font color=grey size=10>Il y a 7 ans                                                                                                                                              <&X>
-         }
-
-         .
-         {+ <font color=DarkCyan>Obs2 : <font color=black> Conversation téléphonique
             .
-            <font color=grey size=10>Il y a 5 ans                                                                                                                                              <&X>
-         }
-         .
-         {+ <font color=DarkCyan>Obs2 : <font color=black> Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS
-            de temps en temps à ERU
-            .
-            <font color=grey size=10>Il y a 4 ans                                                                                                                                              <&X>
          }
          .
          {+ <font color=DarkCyan>Obs1 : <font color=black> Hélice cassée fin 2021
             .
-            <font color=grey size=10>Il y a 3 ans                                                                                                                            <&x>Supprimer
+            <font color=grey size=10>Il y a 3 ans                                                                                                <&X>Répondre Modifier Supprimer
          }
          .
-         {+ <font color=grey size=10>Saisissez votre commentaire                                                                                                                    <&X>
+         {+ <font color=DarkCyan>Obs1 : <font color=black> Sort souvent avec Jean (BIBAS) --> Pêchent également sur ensemble sur BIBAS
+            de temps en temps à ERU
             .
-            .
+            <font color=grey size=10>Il y a 4 ans                                                                                                <&X>Répondre Modifier Supprimer
          }
+         .
+         {+ <font color=DarkCyan>Obs2 : <font color=black> Conversation téléphonique
+            .
+            <font color=grey size=10>Il y a 5 ans                                                                                                                                <&X>Répondre
+         }
+         .
+         {+ <font color=DarkCyan>Obs3 : <font color=black> Appel sans réponse
+            .
+            <font color=grey size=10>Il y a 7 ans                                                                                                                                 <&X>Répondre
+         }
+         }
+         .
+
+
+
+
 
   .
   --

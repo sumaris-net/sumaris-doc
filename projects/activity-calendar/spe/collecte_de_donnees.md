@@ -123,18 +123,18 @@ Les informations suivantes sont affichées pour chaque calendrier :
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
      * "Validé" : _réprésenté par une icône :white_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-   * Le programme (code)
    * Le navire (immatriculation + nom)
    * L'année
    * L'objectif d'enquête directe
-   * L'enquête éco
-   * Les saisisseurs
+   * L'objectif d'enquête éco
+   * Les observateurs
+   * Les commentaires
 3. Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
 4. Le saisisseur accède à un calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
-  * Enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
+  * Objectif d'enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
 
 > Questions :
 > - MOE : Vérifier les perfs liées à l'affichage du portefeuille des navires
@@ -157,22 +157,22 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
     * N-1, sur pc
     * N, sur tablette
 2. Le saisisseur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
-   * Le programme de collecte
    * Le lieu d'immatriculation
    * Le port d'exploitation
    * Le navire
    * L'état
+   * Le niveau de qualité (visible uniquement si l'état est "Qualifié")
    * L'objectif d'enquête directe
-   * L'enquête éco
-   * L'organisme du saisisseur
-   * Le saisisseur
+   * L'objectif d'enquête éco
+   * L'organisme de l'observateur
+   * L'observateur
 
 
 Les critères suivants sont multiples (dev en cours sur Imagine) :
   * L'état
   * Le navire
-  * L'organisme du saisisseur
-  * Le saisisseur
+  * L'organisme d'observateur
+  * L'observateur
 
 **Variante(s) :**
 
@@ -192,7 +192,7 @@ L'import des calendriers d'activité vides est accessibles depuis le tableau de 
 1. Le saisisseur demande l'import des calendriers d'activité présents dans un fichier csv
 
 Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
-* Manque un flag enquête éco dans le format
+* Manque un flag "Objectif d'enquête éco" dans le format
 
 Ajouter d'une fonction d'export (_Faible cout de développement_)
 Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lors de l'import
@@ -218,7 +218,7 @@ Un navire qui n'a participé à aucune opération de pêche au cours d'une anné
 L’opération débute quand l’engin est mis à l’eau et qu’il est pêchant, elle se termine quand l’engin est récupéré par le 
 professionnel et que l’engin n’est plus pêchant.
 
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-new-general.svg)
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments.svg)
 
 Les calendriers d'activité sont accessibles depuis le tableau de consultation des calendriers d'activité
 
@@ -234,10 +234,10 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * "Carte"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
    * L'objectif d'enquête directe (Oui/Non - non modifiable)
-   * L'enquête éco (Oui/Non - non modifiable)
+   * L'objectif d'enquête éco (Oui/Non - non modifiable)
    * La stratégie
-   * Le nom du saisisseur
-   * La société du saisisseur
+   * Le nom des observateurs
+   * La société des observateurs
    * La date de création
    * La date de mise à jour
    * Le mode de saisie (Bureau ou Déconnecté)
@@ -253,14 +253,8 @@ répondre à une autre enquête, Métuers déclarés dans les journeaux de bord/
 
 **Variante :** Warning objectif d'enquête directe
 
-7. A l'enregistrement, si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête "Directe", 
+7. Si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête autre que "Directe", 
 un warning est affiché [Retour en 8]
-
-**Variante :** Inactivité annuelle confirmée par l'observateur à "Oui"
-
-5. Si l'inactivité annuelle confirmée par l'observateur est Oui" alors le champ "Actif ?" de chaque mois passe à "Inactif" [Retour en 5]
-
-
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -272,18 +266,6 @@ un warning est affiché [Retour en 8]
     * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY 
     * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
   * Qualification de l'enquête : prévoir une option pour limiter les valeurs possibles aux QUALITATIVE_VALUE.ID = 965, 966, 967, 2555
-
-> Réunion du 23/05/2024 :
-> Gestion des commentaires : Solution technique à faire mais spécifier le besoin avant
-> Avoir une zone commentaire - Ne pas mettre sur chaque ligne d'historique - A maquetter
-> Prévoir POC pour le commentaire/date/initiales
-
-
----
-## Calendrier d'activité > Général > POC Commentaires
-
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments.svg)
-![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments-in-progress.svg)
 
 ---
 ## Calendrier d'activité > Général > Gestion des conflits
@@ -314,21 +296,38 @@ Information : Il existe un annuaire des observateurs par quartier maritime pour 
 1. Le saisisseur clique sur l'onglet "Navire". Il est composé de 2 sous onglets : 
    * Historique (par défaut)
    * Photos
-2. Le saisisseur consulte l'onget "Historique", il contient les états des changements des caractéristiques et des armateurs du navire sur les X dernières années :
-    * Un tableau sur les caractéristiques du navire
-      * La dernière cellule de la ligne d'une caractéristique du navire permet d'ajouter/afficher des photos
-    * Un tableau sur les immatriculations du navire
-    * Un tableau sur les armateurs du navire (pagination avec 4-5 éléments par page pour voir les 3 tableaux sans scroller)
-      * Sur chaque tableau, toutes les années sont affichées 
-      * Les informations qui changent d'une ligne à l'autre sont mises en évidence
-    * Un zone contenant l'historisation des photos du navire
+2. Le saisisseur consulte l'onget "Historique". Les tableaux affichent toutes les données, par défaut paginés par 5 éléments. L'onglet contient :
+    * Un tableau sur les caractéristiques du navire. Les informations qui changent d'une ligne à l'autre sont mises en gras. Le tableau contient :
+      * Début validité
+      * Fin validité
+      * Marquage extérieur
+      * Nom
+      * FPC ?
+      * Puissance administrative (kW)
+      * Longueur hors tout (m)
+      * Tonnage jauge brute (TJB)
+      * Tonnage (UMS)
+      * Matériau de la coque
+      * Port d'exploitation
+    * Un tableau sur les immatriculations du navire, il contient :
+      * Début immatriculation
+      * Fin immatriculation
+      * Immatriculation
+      * Immatriculation internationale
+      * Lieu d'immatriculation
+    * Un tableau sur les armateurs du navire, il contient :
+      * Début armement
+      * Fin armement
+      * Code armateur
+      * Nom
+      * Prénom
+    * Une zone contenant l'historisation des photos du navire
       * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
       * Ce nombre d'année est paramètrable dans les préférences
       * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs
 3. Le saisisseur clique sur l'onglet "Photos". L'onglet contient les photos ajoutées en cours de l'année en cours de visualisation
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
 4. Le saisisseur ajoute des photos du navire
-5. Il est possible de modifier l'ordre des colonnes de chaque tableau  (...) et de sauvegarder cet ordre
 
 
 Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
@@ -336,10 +335,6 @@ Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIV
 > Réunion du 26/06/2024 :
 > - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment, carac technique et fpc à droite
 
-
-> Questions MOA 
-
-> Filtrage de période pour l'historique des photos des navires. Combien d'année ? 
 
 ---
 ## Calendrier d'activité > Calendrier
@@ -583,12 +578,13 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 **Variante :** Inactivité annuelle incohérente
 
 2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif,
-alors le message "Inactivité annuelle incohérente" s'affiche [Fin]
+alors le message d'avertissement "Inactivité annuelle incohérente" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle à confirmer
 
-2. Si l'inactivié annuelle confirmée par l'observateur est à "Non" et tous les mois sont inactifs
-   alors le message "Inactivité annuelle à confirmer" s'affiche [Fin]
+2. Si tous les mois sont inactifs alors, 
+   alors l'inactivié annuelle confirmée par l'observateur est obligatoire
+   et le message "Inactivité annuelle à confirmer" s'affiche ? [Fin]
 
 **Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
 

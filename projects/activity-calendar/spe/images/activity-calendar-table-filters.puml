@@ -1,19 +1,17 @@
 @startsalt
 {
 
-  {<b>Calendriers d'activité                                                                                                                                                                                                       <&reload>}
+  {<b>Calendriers d'activité                                                                                                                                                                          <&plus> <&reload> Y {[2022 <&chevron-bottom>]}}
    --
 
     {
-        Programme de collecte : | . | ^ SIH-ACTIFLOT         ^
-        .
         Lieu d'immatriculation : | . | ^ MA - Marseille       ^ | . | . | Port d'exploitation : | . | ^JMA - La Madrague de Montredon^
         .
         Navire : | . | ^ 123456 - SONNY       ^ | . | . | Etat : | . | ^En cours de saisie            ^
         .
         Objectif d'enquête directe ? :   | . |{ (X) <b>Oui | () Non}|  . | . | Enquête éco ? :   | . | { () Oui | (X) <b>Non}
         .
-        Organisme saisisseur :   | . |^ Ifremer              ^ |  . | . | Saisisseur :   | . | ^ Nicolas DUPOND               ^
+        Organisme observateur :   | . |^ Ifremer              ^ |  . | . | Observateur :   | . | ^ Nicolas DUPOND               ^
 
     }
 

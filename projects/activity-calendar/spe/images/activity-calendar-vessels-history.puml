@@ -12,18 +12,18 @@
     . | Caractéristiques navire
     . | {# Début validité | Fin validité | Marquage extérieur | Nom | FPC ? | Puissance administrative (kW) | Longueur hors tout (m) | Tonnage jauge brute (TJB) | Tonnage (UMS) | Matériau de la coque | Port d'exploitation
         06/04/2021 | 31/12/2022 | 123456 | SONNY | Oui | 66 | 9 | 5.6 | 3.2 | Bois | JMA - La Madrague de Montredon }
-    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 5 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
 
     . | Immatriculations
-    . | {# Début immatriculation | Fin immatriculation | Immatriculation | Immatriculation internationale | Quartier d'immatriculation
+    . | {# Début immatriculation | Fin immatriculation | Immatriculation | Immatriculation internationale | Lieu d'immatriculation
        01/01/1967 | . | 123456 | FRA000123456 | MA - Marseille}
-    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 5 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
     . | Armateurs
-    . | {# Début armement | Fin armement | Code armateur |  Nom | Prénom | Début activité | Date de la retraite ...
-        06/04/2021 | . | 12345 | DUPOND | Eric | 01/01/2020 | . }
-    . | { <font color=grey>Nombre de lignes affichées</font> |  " 4 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
+    . | {# Début armement | Fin armement | Code armateur |  Nom | Prénom
+        06/04/2021 | . | 12345 | DUPOND | Eric }
+    . | { <font color=grey>Nombre de lignes affichées</font> |  " 5 "  | . | . | . | . | <font color=grey>1 - 4 sur 10 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
     .
     . | Photos
     }
