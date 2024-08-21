@@ -10,7 +10,7 @@
 - [Ergonomie générale](#ergonomie-générale)
 - [Calendriers d'activité](#calendriers-dactivité)
 - [Calendriers d'activité > Filtres](#calendriers-dactivité--filtres)
-- [Calendrier d'activité > Instanciation des calendriers vide](#calendrier-dactivité--import-des-calendriers-vides)
+- [Calendrier d'activité > Import des calendriers vides](#calendriers-dactivité--import-des-calendriers-vides)
 - [Calendrier d'activité > Général](#calendrier-dactivité--général)
 - [Calendrier d'activité > Navire](#calendrier-dactivité--navire)
 - [Calendrier d'activité > Calendrier](#calendrier-dactivité--calendrier)
@@ -240,21 +240,23 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * La société des observateurs
    * La date de création
    * La date de mise à jour
-   * Le mode de saisie (Bureau ou Déconnecté)
+   * Le mode de saisie (Bureau ou Terrain)
 5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
     * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, Le professionnel accepterai-il de 
 répondre à une autre enquête, Métuers déclarés dans les journeaux de bord/fiches de pêche, Habitudes de vente à la criée ...
 6. Le saisisseur saisit un commentaire
-7. Le saisisseur enregistre
-8. La date de mise à jour du calendrier est actualisée
+7. Le saisisseur enregistre le commentaire
+8. Le commentaire apparait en haut de la liste des commentaires
+9. Le saisisseur enregistre
+10. La date de mise à jour du calendrier est actualisée
 
 
 **Variante(s) :**
 
 **Variante :** Warning objectif d'enquête directe
 
-7. Si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête autre que "Directe", 
-un warning est affiché [Retour en 8]
+5. Si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête autre que "Directe", 
+un warning est affiché [Retour en 6]
 
 #### Détails techniques :
   * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
@@ -282,9 +284,6 @@ Information : Il existe un annuaire des observateurs par quartier maritime pour 
 
 --- 
 
-
-
--- 
 ## Calendrier d'activité > Navire
 
 **REF: ACTIVITY_CALENDAR/VESSELS**
