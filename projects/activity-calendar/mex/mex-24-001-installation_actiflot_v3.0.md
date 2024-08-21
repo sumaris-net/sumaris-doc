@@ -23,10 +23,15 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
+- Ajout dans la table `PROGRAM_PROPERTY`
+  ```requete sql
+  insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
+  ```
 
-```requete sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
-```
+- Définition de PMFM en booléen
+  ```sql
+  update  m_parameter set is_boolean = 1 where CODE in ('ACCEPT_OTHER_SURVEY');
+  ```
 
 - Modification `ACTIVITY_CALENDAR` :
   - Nouvelle colonne `ECONOMIC_SURVEY` (cf [changelog Liquibase Adagio-core](https://gitlab.ifremer.fr/sih/adagio/adagio/-/tree/feature/sumaris-obsmer/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle?ref_type=heads) (branche `feature/sumaris-obsmer`))
