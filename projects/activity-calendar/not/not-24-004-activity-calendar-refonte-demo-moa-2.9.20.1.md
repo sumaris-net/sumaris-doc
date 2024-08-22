@@ -81,7 +81,7 @@ Début recette MOA le ?
 
 ### Sprint 5 terminé (2.9.21)
 
-- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/?sort=updated_desc&state=all&milestone_title=2.9.21&label_name%5B%5D=ACTIFLOT&first_page_size=20)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.21)
 - Version en cours de génération
 - Démonstration à planifier pour Septembre
 
@@ -89,7 +89,7 @@ Début recette MOA le ?
 
 ### Sprint 6 en cours (2.9.22)
 
-- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/?sort=updated_desc&state=all&label_name%5B%5D=ACTIFLOT&milestone_title=2.9.22&first_page_size=20)
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.22)
 
 ---
 
