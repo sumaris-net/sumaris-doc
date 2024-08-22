@@ -2,15 +2,20 @@
 
 ## Retours de recette MOE
 
-### Menu de gauche
+### Arbre de navigation
 
 - [ ] Plusieurs calendriers non épinglés peuvent s'afficher alors qu'il ne faudrait que le calendrier en cours
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Menu_gauche.PNG)
+- [ ] Les calendriers épinglés restent épinglés même si on se connecte avec un autre utilisateur
+
+### Gestion des droits
+
+- [ ] Erreur lors de la consultation des calendriers avec un user qui n'est pas administrateur [#625](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/625)
 
 ### Calendriers d'activité
 
-- [ ] Enquête éco ? : La colonne est vide. Prévoir un script pour renseigner le flag sur les données historiques
-- [ ] Enquêteur(s) : La colonne est vide. Renseigner la colonne
+- ~~[ ] Enquête éco ? : La colonne est vide. Prévoir un script pour renseigner le flag sur les données historiques~~
+- [ ] Enquêteur(s) : La colonne est vide. Implémenter la fonctionnalité
 
 ### Calendriers d'activité > Filtres
 
@@ -39,7 +44,10 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
   - [x] Port d'exploitation : tronquer et mettre "..." lorsque le libellé ne tient pas sur 2 lignes
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_port_exploit.PNG)
-- [x] Armateurs :
+- [ ] Immatriculations et armateur : Dans le tableau des immatriculations et des armateurs, s'il y a plus de 5 valeurs à afficher et que le 
+nombre de lignes affichées est 5, alors les flèches de pagination sont grisées alors qu'elles devraient être actives. Les données les plus 
+anciennes ne sont donc pas visibles. Si on modifie le nombre de lignes affichées avec une valeur plus élevée, l'ensemble des données est visible.
+- [x] Armateur :
   - [x] Début d'activité : supprimer cette colonne car en base le champ est renseigné au 01/01/2010 ou vide
   - [x] Date de la retraite : masquer la colonne (vu avec Glenn le 19/08/24)
     - ~~[ ] En base, il y a des VESSEL_OWNER.RETIREMENT_DATE à 0001-01-01 00:00:00.000~~
@@ -65,6 +73,7 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 - [ ] Copier/coller : 
   - [x] La zone copier peut être étendu lorsque le menu contextuel est affiché. Pour reproduire : sélectionner une cellule, faire clic droit > copier, sur la même cellule refaire clic droit et déplacer la souris -> la zone bleue s'étend
   - [ ] Impossible de copier/coller un gradient côte seul 
+  - [ ] Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" dans le champ "Actif ?" lorsque la valeur copiée est "Inexistant"
 - [ ] Prédocumentation :
   - [ ] La case cocher "SACROIS-OBSDEB" n'est pas présente et la ligne source indique systématiquement "Enquête N-1"
   alors qu'il y a des données "Enquête N-1" et "SACROIS-OBSDEB" (exemple 669336 - TONIN année 2022)
@@ -85,6 +94,10 @@ Exemple : 919025 - MAL JOJO année 2022 (calendrier) et 511079 - AR BREUR année
 ### Calendrier d'activité > Formulaire terrain vierge
 
 - [X] L'accès au rapport redirige vers la page d'accueil
+- [ ] Renseigner les infos sur le navire (lieux d'immatriculation, immatriculation, nom)
+- [x] Dans le tableau des métiers, ajouter 4 blocs métiers vides  
+- [x] Ajouter le tableau des caractéristiques engins avec 5 colonnes pour les métiers et 2 lignes pour les PMFM. Mettre en dur les libellés 
+"Plus petit maillage étiré en mm" et "Dimension" pour les PMFM
 
 ### Calendrier d'activité > Formulaire terrain avec données
 

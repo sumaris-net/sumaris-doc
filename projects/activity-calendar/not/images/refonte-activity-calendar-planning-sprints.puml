@@ -103,14 +103,14 @@ Project starts the 2024/04/08
 
 
 [r2.9.21] as [TASK5] requires 4 weeks
-[TASK5] is colored in green
+[TASK5] is colored in grey
 [TASK4]->[TASK5]
-[Testing5] requires 1 week and starts the 5th of August 2024
+[Testing5] requires 1 week and starts the 2th of September 2024
 [TASK5]->[Testing5]
 [Demo MOA 3] happens 27th of August 2024
 
 [r2.9.22] as [TASK6] requires 3 weeks and starts the 5th of August 2024
-[TASK6] is colored in Lavender/LightBlue
+[TASK6] is colored in green
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
@@ -137,7 +137,7 @@ Project starts the 2024/04/08
 
 [GPR] as [CONG_GPR] requires 4 week and starts the 19th of July 2024
 [VFA] as [CONG_VFA] requires 3 week and starts the 15th of August 2024
-[CDE] as [CONG_CDE] requires 2 week and starts the 11 of september 2024
+[CDE] as [CONG_CDE] requires 11 days and starts the 5th of september 2024
 [GPR] is colored in lightgrey
 [VFA] is colored in lightgrey
 [CDE] is colored in lightgrey
