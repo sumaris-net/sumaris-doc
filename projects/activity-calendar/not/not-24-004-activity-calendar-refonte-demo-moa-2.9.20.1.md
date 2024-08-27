@@ -106,3 +106,42 @@ Début recette MOA le ?
   - Maxime Demarest (EIS)
 
 ---
+
+Présentation 
+- Filtres : 
+  - Colonne année absente du tableau (sera remise)
+  - Rajouter le type des navires avant le filtre sur navire
+  - Objectif d'enquête directe : Liste déroulante avec valeurs "Oui / Non / Opportuniste"
+
+- Calendrier : 
+  - Utiliser les calendriers vierges (simulation d'importation)
+    - Une seule colonne "Observateur(s)" à la place d'Enquêteurs et "Saisisseurs"
+  - Inactivité annulle : utiliser le radio button avec l'option de vidage de la valeur
+  - Saisie :
+    - Métier : Métier sans engin affiché
+    - Améliorations significatifs de options de saisie : Scroll, Copier/Coller
+      - Bug sur Etendre vers la gauche
+    - Prédocumentation 
+      - Les mois sont issues du calendrier courant
+      - Si 2 sources : Les mois affichés sont Enquête N-1 et Sacrois
+      - Copie vers le calendrier courant : demander une confirmation
+        - Le mettre sur la totalité de la copie et pas sur la copie d'une ou plusieurs cellules
+      - Il faut activer le bouton "Réinitialiser"
+      - Pouvoir sélectionner tout un mois en cliquant sur l'entête du mois. Idem pour les lignes
+      - Erreur sur un compactage de ligne :
+        - ![img.png](images/erreur-saisie-lieu-immat.png)
+          - Problème de droit ?
+      - Pas de nombre maximum de métier
+    - Type de rapport
+      - Mettre un message si erreur de saisie et si le rapport ne s'affiche pas
+      - Formulaire vierge : 
+        - Avec des informations sur le navire (depuis le tableau de consultation si un calendrier est sélectionné)
+        - Sans information (depuis le tableau de consultation si rien n'est sélectionné)
+        - Afficher uniquement les caractéristiques engins suivantes :
+          - "Plus petit maillage étiré en mm"
+          - "Dimension"
+      - Avoir un formulaire navire avec des infos sur le navire (Option à mettre dans ...)
+
+- Navires
+  - RAS
+
