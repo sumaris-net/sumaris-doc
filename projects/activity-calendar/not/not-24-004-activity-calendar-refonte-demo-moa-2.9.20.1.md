@@ -40,7 +40,7 @@ Fonctionnalités du sprint 4
 - Onglet "Calendrier"
   - Affichage de l'armateur
   - Utilisation du double-clic pour l'édition
-  - Restriction des valeurs d ela colonne "Actif ?"
+  - Restriction des valeurs de la colonne "Actif ?"
   - Affichage de la liste des métiers
   - Améliorations des fonctionnalités "Etendre" et "Copier/coller"
   - Gestion de plusieurs sources de prédoc
