@@ -131,15 +131,18 @@ Présentation
       - Erreur sur un compactage de ligne :
         - ![img.png](images/erreur-saisie-lieu-immat.png)
           - Problème de droit ?
-      - Pas de nombre maximum de métier
+      - Pas de nombre maximum de métier. Faire un erecherche en base pour avoir un ordre de grandeur 
+du nombre de calendriers avec plus de 10 métiers et récupérer les métiers pour analyse - Action CDE-VFA
     - Type de rapport
       - Mettre un message si erreur de saisie et si le rapport ne s'affiche pas
       - Formulaire vierge : 
+        - Ne pas afficher les qualifications de l'enquête "Recopie xxxx", mais les afficher sur le rapport avec données
         - Avec des informations sur le navire (depuis le tableau de consultation si un calendrier est sélectionné)
         - Sans information (depuis le tableau de consultation si rien n'est sélectionné)
         - Afficher uniquement les caractéristiques engins suivantes :
           - "Plus petit maillage étiré en mm"
           - "Dimension"
+        - Rajouter les carac liées aux engins. Voir ce que ça pourrait donner. Actuellement ces infos sont sur le site web du SIH
       - Avoir un formulaire navire avec des infos sur le navire (Option à mettre dans ...)
 
 - Navires
