@@ -6,7 +6,7 @@
   ..
   .
   {{
-    Objectif d'enquête directe ?* | { (X) <b>Oui | () Non}
+    Objectif d'enquête directe ?* | ^Oui      ^
     Enquête éco ?* | { (X) <b>Oui | () Non }} |
   }
   .

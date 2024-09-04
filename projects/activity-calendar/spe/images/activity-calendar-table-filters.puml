@@ -1,18 +1,19 @@
 @startsalt
 {
 
-  {<b>Calendriers d'activité                                                                                                                                                                                      <&plus> <&reload> Y {[2022 <&chevron-bottom>]}}
+  {<b>Calendriers d'activité                                                                                                                                                                                                          <&plus> <&reload> Y {[2022 <&chevron-bottom>]}}
    --
 
     {
-        Lieu d'immatriculation : | . | ^ MA - Marseille       ^ | . | . | Port d'exploitation : | . | ^JMA - La Madrague de Montredon^
+        Lieu d'immatriculation : | . | ^ MA - Marseille               ^ | . | . | Port d'exploitation : | . | ^JMA - La Madrague de Montredon^
         .
-        Navire : | . | ^ 123456 - SONNY       ^ | . | . | Etat : | . | ^En cours de saisie            ^
+        Type de navire : | . | ^ Navire de pêche professionnel^ | . | . | Navire : | . | ^ 123456 - SONNY               ^
         .
-        Objectif d'enquête directe ? :   | . |{ (X) <b>Oui | () Non}|  . | . | Objectif d'enquête éco ? :   | . | { () Oui | (X) <b>Non}
+        Objectif d'enquête directe ? :   | . |^Oui                           ^|  . | . | Objectif d'enquête éco ? :   | . | { () Oui | (X) <b>Non}
         .
-        Organisme observateur :   | . |^ Ifremer              ^ |  . | . | Observateur :   | . | ^ Nicolas DUPOND               ^
-
+        Organisme observateur :   | . |^ Ifremer                      ^ |  . | . | Observateur :   | . | ^ Nicolas DUPOND               ^
+        .
+        Etat : | . | ^Qualifié                      ^ |  . | . | Niveau de qualité :   | . | ^                              ^
     }
 
   --

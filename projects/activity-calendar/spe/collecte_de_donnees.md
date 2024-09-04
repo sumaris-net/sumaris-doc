@@ -159,20 +159,21 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
 2. Le saisisseur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
    * Le lieu d'immatriculation
    * Le port d'exploitation
+   * Le type de navire
    * Le navire
-   * L'état
-   * Le niveau de qualité (visible uniquement si l'état est "Qualifié")
    * L'objectif d'enquête directe
    * L'objectif d'enquête éco
    * L'organisme de l'observateur
    * L'observateur
+   * L'état
+   * Le niveau de qualité (visible uniquement si l'état est "Qualifié")
 
 
 Les critères suivants sont multiples (dev en cours sur Imagine) :
-  * L'état
   * Le navire
   * L'organisme d'observateur
   * L'observateur
+  * L'état
 
 **Variante(s) :**
 
@@ -233,7 +234,7 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * "Métiers"
    * "Carte"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
-   * L'objectif d'enquête directe (Oui/Non - non modifiable)
+   * L'objectif d'enquête directe (Oui/Non/Opportuniste - non modifiable)
    * L'objectif d'enquête éco (Oui/Non - non modifiable)
    * La stratégie
    * Le nom des observateurs
@@ -375,7 +376,7 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
 7. Le compteur de mois saisis présents sur le titre de l'onglet "Calendrier" apparait et indique le nombre de mois du calendrier avec ou l'activité du navire et le port d'exploitation sont renseignés
 8. Le saisisseur masque la prédocumentation par un bouton
 9. Le saisisseur complète les données manquantes ou erronées pour chaque mois via une saisie manuelle, un étirement de cellules ou 
-un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation. Les données concernées sont les suivantes :
+un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier ou depuis la prédocumentation. Les données concernées sont les suivantes :
    * L'activité du navire* :
      * Actif
      * Inatif : vide et rend non-modifiable les champs au-dessous sauf le port d'exploitation
@@ -399,10 +400,6 @@ un copier/coller de cellules depuis le calendrier ou depuis la prédocumentation
 
 6. Le saisisseur copie la prédocumentation dans un calendrier de l'année en cours avec des données, un message de confirmation
    s'affiche pour confirmer la suppression des données [Retour en 7]
-
-**Variante :** Warning plus de 5 métiers 
-
-9. Le saisisseur saisit plus de 5 métiers sur un mois, un message d'avertissement s'affiche. [Retour en 9]
 
 **Variante :** Erreur métier en doublon
 
