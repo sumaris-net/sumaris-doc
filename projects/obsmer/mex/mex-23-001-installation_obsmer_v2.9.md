@@ -20,22 +20,8 @@ RAS
   - PSFM `PRODUCT_DESTINATION` : il manque `Obligation à débarquer`
   - Pour la capture accidentelle il faut un PSFM supplémentaire (ex: `état de remise à l'eau`)
 
-- Modification `ACTIVITY_CALENDAR`
 
-- grants sur `PROGRAM2PERSON`
-  ```sql
-  grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.PROGRAM2PERSON to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
 
-- grants sur `PROGRAM_SEQ`
-  ```sql
-  grant SELECT on SIH2_ADAGIO_DBA.PROGRAM_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
-
-- grants sur `PROGRAM2LOCATION_CLASSIF`
-  ```sql
-  grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
 
 - grants sur `SORTING_MEASUREMENT_SEQ`
   ```sql
@@ -53,28 +39,7 @@ RAS
   grant SELECT on SIH2_ADAGIO_DBA.M_VESSEL_REG_PERIOD_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- Trigger sur `TR_PROGRAM_ID`
-  ```sql
-      create or replace TRIGGER TR_PROGRAM_ID
-        before insert or delete on PROGRAM
-        for each row
-  	    declare
-		  l_code VARCHAR2(40) := NULL;
-        begin
-          case
-            WHEN INSERTING THEN
-              BEGIN                
-                select CODE into l_code from M_PROGRAM where CODE = :new.CODE;
-                EXCEPTION WHEN NO_DATA_FOUND THEN
-                  insert into M_PROGRAM(CODE,ID) values (:new.CODE, M_PROGRAM_SEQ.nextval);
-                END;
-            WHEN DELETING THEN
-              delete from M_PROGRAM P where P.CODE=:old.CODE;
-          end case;
-      end;
--```
-
-- Ajout de niveaux d'acquisition sur `ACQUISITION_LEVEL`, ``, ``
+- Ajout de niveaux d'acquisition sur `ACQUISITION_LEVEL`
   ```sql
     insert into ACQUISITION_LEVEL (CODE, NAME) values ('SORTING_BATCH','Marée et vente observées - Sumaris');
     insert into ACQUISITION_LEVEL (CODE, NAME) values ('CATCH_BATCH','Capture - Sumaris');
@@ -317,35 +282,6 @@ RAS
   end;
 - ```
 
-- Ajout du trigger `TR_PROGRAM2PERSON`
-```sql
-  create or replace trigger TR_PROGRAM2PERSON
-    instead of insert or update or delete
-    on PROGRAM2PERSON
-  begin
-    case
-      WHEN INSERTING THEN
-        insert into SIH2_ADAGIO_DBA.PROGRAM2PERSON(ID,PROGRAM_FK,LOCATION_FK,PROGRAM_PRIVILEGE_FK,PERSON_FK,REFERENCE_PERSON_FK,UPDATE_DATE)
-        select :new.ID, P.CODE, :new.LOCATION_FK, :new.PROGRAM_PRIVILEGE_FK, :new.PERSON_FK, :new.REFERENCE_PERSON_FK, :new.UPDATE_DATE
-        from SIH2_ADAGIO_DBA.M_PROGRAM P
-        where P.ID = :new.PROGRAM_FK;
-      WHEN UPDATING THEN
-        update SIH2_ADAGIO_DBA.PROGRAM2PERSON P2P set P2P.PROGRAM_FK = (select P.CODE from SIH2_ADAGIO_DBA.M_PROGRAM P where P.ID = :new.PROGRAM_FK),
-                                                      P2P.LOCATION_FK = :new.LOCATION_FK, P2P.PROGRAM_PRIVILEGE_FK = :new.PROGRAM_PRIVILEGE_FK,
-                                                      P2P.PERSON_FK = :new.PERSON_FK, P2P.REFERENCE_PERSON_FK = :new.REFERENCE_PERSON_FK,
-                                                      P2P.UPDATE_DATE = :new.UPDATE_DATE
-        where P2P.ID = :new.ID;
-      WHEN DELETING THEN
-        delete from SIH2_ADAGIO_DBA.PROGRAM2PERSON P2P where P2P.ID=:old.ID;
-    end case;
-  end;
-- ```
-
-- Modification du synonyme `M_PROGRAM_SEQ` en `PROGRAM_SEQ`
-  ```sql
-    create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
--```
-
 - Modification du synonyme `SORTING_MEASUREMENT_SEQ` en `SORTING_MEASUREMENT_B_SEQ`
   ```sql
     create or replace synonym SORTING_MEASUREMENT_B_SEQ for SIH2_ADAGIO_DBA.SORTING_MEASUREMENT_SEQ;
@@ -367,48 +303,7 @@ RAS
   create or replace synonym VESSEL_REGISTRATION_PERIOD_SEQ for SIH2_ADAGIO_DBA.M_VESSEL_REG_PERIOD_SEQ;
 -```
   
-- Modification du trigger `TR_PROGRAM`
-  ```sql
-    create or replace trigger TR_PROGRAM
-      instead of insert or update
-      on PROGRAM
-    begin
-      case
-        WHEN INSERTING THEN
-          if (:new.ID is not null) then
-            insert into SIH2_ADAGIO_DBA.M_PROGRAM(CODE,ID) values (:new.LABEL, :new.ID);
-          end if;
 
-          insert into SIH2_ADAGIO_DBA.PROGRAM(CODE, NAME, DESCRIPTION, CREATION_DATE, UPDATE_DATE, TAXON_GROUP_TYPE_FK, GEAR_CLASSIFICATION_FK)
-          select :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.UPDATE_DATE, TGT.CODE, :new.GEAR_CLASSIFICATION_FK
-          from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT
-          where TGT.ID = :new.TAXON_GROUP_TYPE_FK;
-       WHEN UPDATING THEN
-           -- PROGRAM itself		   
-           update SIH2_ADAGIO_DBA.PROGRAM P set P.NAME=:new.NAME, P.DESCRIPTION=:new.DESCRIPTION, P.CREATION_DATE=:new.CREATION_DATE, P.UPDATE_DATE=:new.UPDATE_DATE, 
-           P.TAXON_GROUP_TYPE_FK=(select CODE from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE where ID = :new.TAXON_GROUP_TYPE_FK), P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
-           where P.CODE = :new.LABEL;
-       end case;
-end;
--```
-
-- Création du trigger `TR_PROGRAM2LOCATION_CLASSIF`
-  ```sql
-    create or replace trigger TR_PROGRAM2LOCATION_CLASSIF
-      instead of insert or delete
-      on PROGRAM2LOCATION_CLASSIF
-    begin
-      case
-        WHEN INSERTING THEN
-          insert into SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF(PROGRAM_FK, LOCATION_CLASSIFICATION_FK)
-          select P.CODE, :new.LOCATION_CLASSIFICATION_FK
-          from SIH2_ADAGIO_DBA.M_PROGRAM P
-          where P.ID = :new.PROGRAM_FK;
-        WHEN DELETING THEN
-          delete from SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF where PROGRAM_FK=(select P.CODE from SIH2_ADAGIO_DBA.M_PROGRAM P where P.ID = :old.PROGRAM_FK) and LOCATION_CLASSIFICATION_FK=:old.LOCATION_CLASSIFICATION_FK;
-      end case;
-  end;
--```
 
 - Modification du trigger `TR_SORTING_MEASUREMENT_B`
   ```sql
@@ -445,7 +340,7 @@ end;
     end;
 -```
 
-- Modification de la vue `VESSEL_FEATURES`
+- Modification de la vue `METHOD`
   ```sql
       create or replace view METHOD as
         select ID,
@@ -462,7 +357,7 @@ end;
 -```
 
 
-- Modification de la vue `VESSEL_FEATURES`
+- Modification de la vue `PMFM`
   ```sql
     create or replace view PMFM as
       select P.ID,

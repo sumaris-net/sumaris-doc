@@ -4,6 +4,8 @@
 > Date création : 20/03/2024
 > Mise à jour : 20/03/2024
 
+Appliquer les [manuels d'exploitation common](../../common/mex) (v2.9)
+
 Appliquer les [manuels d'exploitation ObsMer](../../obsmer/mex) (v2.9)
 
 Liste des tickets réalisés :
@@ -40,11 +42,6 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
     update PROGRAM_PROPERTY set label='sumaris.observedLocation.landings.autoFill' where label='sumaris.observedLocation.landing.autoFill';
 -```
 
-- Modification de la table `M_PARAMETER`
-  ```sql
-  alter table m_parameter add is_boolean number(1);
-  alter table m_parameter add is_date number(1);
--```  
 
 - Définition de PMFM en booléen
   ```sql
@@ -143,28 +140,7 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
       end case;
     end;
   -```
-
-
-
-- Ajout de la vue `PARAMETER`
-  ```sql
-  create or replace view PARAMETER as
-      select MP.ID,
-      P.CODE as LABEL,
-      P.COMMENTS,
-      P.CREATION_DATE,
-      P.DESCRIPTION,
-      P.IS_ALPHANUMERIC,
-      MP.IS_BOOLEAN,
-      MP.IS_DATE,
-      P.IS_QUALITATIVE,
-      P.NAME,
-      P.PARAMETER_GROUP_FK,
-      P.UPDATE_DATE,
-      cast(P.STATUS_FK as number(10)) as STATUS_FK
-      from SIH2_ADAGIO_DBA.PARAMETER P
-      inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on P.CODE = MP.CODE;
--```  
+  
 
 ## Mise à jour du programme SIH-OBSVENTE
 

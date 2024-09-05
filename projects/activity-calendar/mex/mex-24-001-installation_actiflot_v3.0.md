@@ -3,6 +3,8 @@
 Objectif : le document liste les étapes de migration, pour réaliser le passage 
 des calendriers d'activité en SUMARiS v3.0
 
+Appliquer les [manuels d'exploitation common](../../common/mex) (v2.9)
+
 Liste des tickets réalisés :
 - 
 
@@ -14,8 +16,6 @@ Liste des tickets réalisés :
 
 - [ ] Nouvelles options dans le fichier de configuration :
 ```properties
-# Empêcher la modification des droits d'accès d'un programme (gérer par Adagio-admin) 
-sumaris.program.privilege.readonly=true
 sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=623
 sumaris.enumeration.Pmfm.SURVEY_RELIABILITY.id=681
 sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
@@ -23,10 +23,6 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
-- Ajout dans la table `PROGRAM_PROPERTY`
-  ```requete sql
-  insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
-  ```
 
 - Définition de PMFM en booléen
   ```sql
@@ -36,17 +32,7 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 - Modification `ACTIVITY_CALENDAR` :
   - Nouvelle colonne `ECONOMIC_SURVEY` (cf [changelog Liquibase Adagio-core](https://gitlab.ifremer.fr/sih/adagio/adagio/-/tree/feature/sumaris-obsmer/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle?ref_type=heads) (branche `feature/sumaris-obsmer`))
 
-- grants sur `PHOTO`
-  ```sql
-  grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.PHOTO to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
-
-- nouvelles colonnes sur `PHOTO`
-  ```sql
-  alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT CLOB;
-  alter table SIH2_ADAGIO_DBA.PHOTO  add column CONTENT_TYPE varchar2(100);
--```
-
+  
 - Ajout de grant sur `ACTIVITY_CALENDAR` :
   ```sql
     grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
@@ -86,8 +72,6 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 -```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
-
-- Appliquer les [manuels d'exploitation d'ObsMer](../../imagine/mex) (v2.9)
 
 - Ajout de la vue `ACTIVITY_CALENDAR`
   ```sql
