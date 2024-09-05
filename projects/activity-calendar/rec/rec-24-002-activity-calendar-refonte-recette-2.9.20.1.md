@@ -156,5 +156,14 @@ Il faudra rappeler ce point lors des prochaines recettes.
 
 ### Calendrier d'activité > Métiers
 - [ ] Supprimer l'entête #
-- [ ] Manque la saisie de la caractéristique Dimension pour les métiers. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Metier_caracteristique_manquante.PNG)
+- [X] Manque la saisie de la caractéristique Dimension pour les métiers. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Metier_caracteristique_manquante.PNG)
+  - _PSFM rajouté à la stratégie_
 - [ ] Problème du message "Vous n'êtes pas autorisé à saisir sur ce lieu d'immatriculation" 
+
+### Formulaire terrain vierge
+- [ ] Supprimer les qualifications recopie 2022 et 2021, mettre dans le même ordre que la saisie dans l'onglet général.
+- [ ] Il faudrait que la tableau des caractéristiques engins s'affiche même s'il est vide. Comme ça l'observateur peut le remplir sur le terrain.
+
+### Formulaire terrain avec données
+- [X] Il manque le PSFM "dimension" en plus de "maillage"
+  - _PSFM rajouté à la stratégie_
