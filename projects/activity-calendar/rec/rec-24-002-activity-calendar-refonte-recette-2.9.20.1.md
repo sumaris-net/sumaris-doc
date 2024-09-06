@@ -121,44 +121,51 @@ Il faudra rappeler ce point lors des prochaines recettes.
 ### Calendriers d'activité
 
 - [X] Le bouton + pour ajouter un nouveau calendrier doit être enlevé
+  - _MOE : Visible que pour les Admin. Il sera enlevé quand Emilie aura ses droits_
 - [X] Filtrer l'année : par défaut "(VIDE)"
 - [X] Absence de la fonctionnalité "Importer les calendriers vides"
-  - _En 2.9.21_
+  - _MOE : En 2.9.21_
 - [X] L'année par défaut doit être l'année N-1 (actuellement c'est positionné à "Vide")
 - [X] Il faut pouvoir trier sur les colonnes suivantes : Etat
-  - _Modifier le cas d'usage (enlever l'année)_
+  - _MOE : Modifier le cas d'usage (enlever l'année)_
 
 ### Calendrier d'activité > Navire
 
 - [ ] Marquage extérieur > remplacer par immatriculation
+  - _MOE : Marquage extérieur : ce qui est inscrit sur la coque. Peut être différent de l'immatriculation. L'immatriculation est dans le tableau "Immatriculation"_.
 - [X] Supprimer la colonne "date de la retraite"
-- [ ] S'il y a plusieurs pages et que l'on affiche plus de lignes, ça ne change rien.
-  - _Non reproduit_
-- [ ] Pagination des tableaux : Parfois c'est le nombre d'éléments du tableau qui est indiqué dans le nombre de page. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Pagination_problem.PNG)
+- [X] S'il y a plusieurs pages et que l'on affiche plus de lignes, ça ne change rien.
+- [X] Pagination des tableaux : Parfois c'est le nombre d'éléments du tableau qui est indiqué dans le nombre de page. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Pagination_problem.PNG)
 
 ### Calendrier d'activité > Calendrier
 
 - [ ] Il faudrait que visuellement la première colonne soit mieux démarquée :
   - Reprendre le même coloris de fond que pour les cellules à saisir ?
   - Mettre les champs en gras de lieu d'immat à métier puis zone, gradient en non gras ?
+  - _MOE : Mettre déjà la même taille de police que l'entête des colonnes_
 - [ ] Décalage de la sélection d'une cellule. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Calendrier_decalage_selection.PNG)
-- [X] La saisie des jours de mer se fait souvent en partant de janvier puis jusqu'à dec. il faudrait pouvoir changer de cellule horizontalement par tabulation ou flèche droite et gauche sans devoir double-cliquer. Actuellement on ne peut pas saisir de façon fluide les jours de mer.
-  - Issue [#698](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/698)
+  - _MOE : A reproduire par une vidéo (dans un ticket). Action MOE_
+- [ ] La saisie des jours de mer se fait souvent en partant de janvier puis jusqu'à dec. il faudrait pouvoir changer de cellule horizontalement par tabulation ou flèche droite et gauche sans devoir double-cliquer. Actuellement on ne peut pas saisir de façon fluide les jours de mer.
+  - _MOE : A analyser_
 - [ ] Pas de possibilité de copier/coller la ligne de nombre de jours de mer vers la ligne de nombre de jours de pêche
+  - _MOE : A analyser_
 - [ ] Pas de limite de jours de mer saisis
 - [ ] A la sauvegarde, il n'y a pas de tri des métiers : 1 métier par ligne, comme dans l'allegro actuel. C'est à maintenir pour une meilleure visibilité.
-  - _A creuser_
+  - _MOE : Déjà implémenté. Il y a bien un métier par ligne. Les métiers sont triés par ordre d'apparition_
 - [ ] Problème de copier/coller : faute de Français ("Vous DE pouvez pas coller ici")
-- [ ] Le compteur de mois actif ne fonctionne pas
-- [ ] Le dénombrement des métiers ne fonctionne pas. Il ne se met à jour que lorsque que l'on clique sur l'onglet métier.
-  - _Non reproduit_
+- [X] Le compteur de mois actif ne fonctionne pas
+  - _MOE : Mauvaise compréhension du comptage. A expliquer_
+- [X] Le dénombrement des métiers ne fonctionne pas. Il ne se met à jour que lorsque que l'on clique sur l'onglet métier.
+  - _MOE : Reproduit. Comportement souhaité et validé en réunion_
 - [X] Erreur à la sauvegarde (Violation de contrainte d'unicité)
+  - Issue ?
 
 ### Calendrier d'activité > Métiers
 - [ ] Supprimer l'entête #
+  - _A masquer avec la case à cocher en plus_
 - [X] Manque la saisie de la caractéristique Dimension pour les métiers. [Capture](/projects/activity-calendar/rec/images/rec-24-002-2.9.20.1-Metier_caracteristique_manquante.PNG)
   - _PSFM rajouté à la stratégie_
-- [ ] Problème du message "Vous n'êtes pas autorisé à saisir sur ce lieu d'immatriculation" 
+- [X] Problème du message "Vous n'êtes pas autorisé à saisir sur ce lieu d'immatriculation" 
 
 ### Formulaire terrain vierge
 - [ ] Supprimer les qualifications recopie 2022 et 2021, mettre dans le même ordre que la saisie dans l'onglet général.
