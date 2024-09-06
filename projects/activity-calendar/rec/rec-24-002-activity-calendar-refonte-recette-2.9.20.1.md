@@ -158,7 +158,7 @@ Il faudra rappeler ce point lors des prochaines recettes.
 - [X] Le dénombrement des métiers ne fonctionne pas. Il ne se met à jour que lorsque que l'on clique sur l'onglet métier.
   - _MOE : Reproduit. Comportement souhaité et validé en réunion_
 - [X] Erreur à la sauvegarde (Violation de contrainte d'unicité)
-  - Issue ?
+  - Issue [678](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/678)
 
 ### Calendrier d'activité > Métiers
 - [ ] Supprimer l'entête #
