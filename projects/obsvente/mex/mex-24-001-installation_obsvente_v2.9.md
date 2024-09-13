@@ -140,6 +140,32 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
       end case;
     end;
   -```
+
+- Modification du trigger `TR_OBSERVED_LOCATION`
+  ```sql
+     create or replace TRIGGER TR_LANDING
+        instead of insert or update or delete
+           on LANDING
+             begin
+              case
+                WHEN INSERTING THEN
+                   insert into SIH2_ADAGIO_DBA.LANDING(ID, LANDING_DATE_TIME, RANK_ORDER, COMMENTS, CREATION_DATE, CONTROL_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, UPDATE_DATE, LANDING_LOCATION_FK, FISHING_TRIP_FK, RECORDER_DEPARTMENT_FK,
+                                                       PROGRAM_FK, VESSEL_FK, QUALITY_FLAG_FK, RECORDER_PERSON_FK, OBSERVED_LOCATION_FK)
+                   select :new.ID, :new.LANDING_DATE_TIME, :new.RANK_ORDER, :new.COMMENTS, :new.CREATION_DATE, :new.CONTROL_DATE, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.UPDATE_DATE, :new.LANDING_LOCATION_FK,
+                          :new.TRIP_FK, :new.RECORDER_DEPARTMENT_FK, P.CODE, V.CODE, :new.QUALITY_FLAG_FK, :new.RECORDER_PERSON_FK, :new.OBSERVED_LOCATION_FK
+                   from SIH2_ADAGIO_DBA.M_PROGRAM P, SIH2_ADAGIO_DBA.M_VESSEL V
+                   where P.ID = :new.PROGRAM_FK and V.ID = :new.VESSEL_FK;
+                WHEN UPDATING THEN
+                   update SIH2_ADAGIO_DBA.LANDING L set L.LANDING_DATE_TIME=:new.LANDING_DATE_TIME, L.RANK_ORDER=:new.RANK_ORDER, L.COMMENTS=:new.COMMENTS, L.CREATION_DATE=:new.CREATION_DATE, L.CONTROL_DATE=:new.CONTROL_DATE, L.VALIDATION_DATE=:new.VALIDATION_DATE,
+                                                        L.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, L.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS, L.UPDATE_DATE=:new.UPDATE_DATE, L.LANDING_LOCATION_FK=:new.LANDING_LOCATION_FK, L.FISHING_TRIP_FK=:new.TRIP_FK,
+                                                        L.RECORDER_DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK, L.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK, L.RECORDER_PERSON_FK=:new.RECORDER_PERSON_FK, L.OBSERVED_LOCATION_FK=:new.OBSERVED_LOCATION_FK,
+                                                        L.PROGRAM_FK = (select P.CODE from SIH2_ADAGIO_DBA.M_PROGRAM P where P.ID=:new.PROGRAM_FK), L.VESSEL_FK = (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID=:new.VESSEL_FK)
+                   where L.ID = :new.ID;
+                WHEN DELETING THEN
+                   delete from SIH2_ADAGIO_DBA.LANDING L where L.ID=:old.ID;
+              end case;
+             end;
+-```
   
 
 ## Mise à jour du programme SIH-OBSVENTE
