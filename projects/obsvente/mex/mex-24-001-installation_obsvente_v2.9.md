@@ -275,31 +275,92 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ## Mise à jour du programme SIH-OBSVENTE
 
-- Options pour le programme SIH-OBSVENTE
+### Options pour le programme SIH-OBSVENTE
 
 ```properties 
 sumaris.landing.rows.divider.pmfmId=3274
 ```
 
-```requete sql
+```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.landing.rows.divider.pmfmId', 3274, 80 , 1, sysdate);
 ```
 
-- Options pour la stratégie "Métropole" (STRATEGY_PROPERTY) 
-- A mettre dans PROGRAM_PROPERTY (temporaire)
+```sql
+UPDATE PROGRAM_PROPERTY SET NAME='spatio-temporal'
+WHERE LABEL='sumaris.data.strategy.resolution'
+AND PROGRAM_FK='SIH-OBSVENTE';
+```
+
+### Stratégie "Métropole" (STRATEGY_PROPERTY)
+
+#### Création de la stratégie "Métropole"
+Création d'une stratégie avec Code = 'OBSVENTES-2024'
+
+#### Options de la stratégie "Métropole"
+> A mettre dans PROGRAM_PROPERTY (temporaire)
 
 ```properties (à ajouter dans le fichier de configuration de l'application)
 sumaris.observedLocation.landings.autoFill=true
 ```
 
-```requete sql
+```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', 80 , 1, sysdate)
 ```
 
-- Options pour la stratégie "Outre-Mer" (STRATEGY_PROPERTY)
+#### Associations pour la résolution spatio-temporelle de la stratégie
+```sql
+INSERT INTO APPLIED_STRATEGY (STRATEGY_FK, LOCATION_FK) VALUES ((SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 401);
+```
+
+TODO : récupérer l'ID suite à l'insertion dans APPLIED_STRATEGY
+```sql
+INSERT INTO APPLIED_PERIOD (APPLIED_STRATEGY_FK, START_DATE, END_DATE) VALUES (TODO, '2023-11-01', '2025-12-01');
+```
+
+#### Protocole de collecte Métropole (PMFM_STRATEGY)
+
+| Niveau d'acquisition        | Ordre | PSFM                                                                 | Oblig ? |
+|----------------------------|-------|----------------------------------------------------------------------|---------|
+| Lieu observé               | 1     | Disponibilité de la pré-vente - vente - totale - Observation par un observateur | Non     |
+| Lieu observé               | 2     | Présence de PETS - vente - totale - Observation par un observateur           | Oui     |
+| Débarquement (non observé) | 1     | Observée ? - vente - totale - Observation par un observateur                 | Oui     |
+| Débarquement (non observé) | 2     | Raison de non observation - vente - totale - Observation par un observateur  | Oui     |
+| Débarquement (non observé) | 3     | Espèce commerciale - vente - totale - Observation par un observateur (aucune)| Oui     |
+| Débarquement (non observé) | 4     | Origine de l'espèce observée - vente - totale - Observation par un observateur | Oui     |
+
+### Stratégie "Outre-Mer" (STRATEGY_PROPERTY)
+
+#### Création de la stratégie "Outre-Mer"
+Création d'une stratégie avec Code = 'OBSVENTES-2024-O'
+
+#### Options de la stratégie "Outre-Mer"
+> A mettre dans PROGRAM_PROPERTY (temporaire)
 ```properties 
 sumaris.observedLocation.landings.autoFill=false
 ```
-```requete sql
+```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'false', 80 , 1, sysdate)
+```
+
+#### Associations pour la résolution spatio-temporelle de la stratégie
+
+TODO
+
+#### Protocole de collecte Outre-Mer (PMFM_STRATEGY)
+
+| Niveau d'acquisition        | Ordre | PSFM                                                                 | Oblig ? |
+|----------------------------|-------|----------------------------------------------------------------------|---------|
+| Lieu observé               | 1     | Disponibilité de la pré-vente - vente - totale - Observation par un observateur | Non     |
+| Débarquement (non observé) | 1     | Espèce commerciale - vente - totale - Observation par un observateur (aucune)| Oui     |
+
+### Espèces PETS et Tirage au sort
+
+#### PETS
+```sql
+INSERT INTO TAXON_GROUP_STRATEGY (TAXON_GROUP_FK, STRATEGY_FK, PRIORITY_LEVEL) VALUES (3611, (SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 0);
+```
+
+#### Tirage au sort
+```sql
+INSERT INTO TAXON_GROUP_STRATEGY (TAXON_GROUP_FK, STRATEGY_FK, PRIORITY_LEVEL) VALUES (3069, (SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 1);
 ```
