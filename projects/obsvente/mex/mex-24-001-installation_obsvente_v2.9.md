@@ -13,8 +13,7 @@ Liste des tickets réalisés :
 
 ## Configuration du Pod
 
-
-- [ ] Nouvelles options dans le fichier de configuration :
+- Nouvelles options dans le fichier de configuration :
 ```properties
 # Enumerations > PMFM fonctionnels
 sumaris.enumeration.Pmfm.HAS_PETS.id=<id du PMFM "Présence de PETS ? (Booléen)">
@@ -30,9 +29,6 @@ sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_RANDOM.id=<id de la val
 # navire inconnu
 sumaris.data.vessel.unknown.id=<ID navire inconnu>
 sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
-
-
-
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
@@ -40,17 +36,19 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 - Update `PROGRAM_PROPERTY`
   ```sql
     update PROGRAM_PROPERTY set label='sumaris.observedLocation.landings.autoFill' where label='sumaris.observedLocation.landing.autoFill';
--```
-
+  ```
 
 - Définition de PMFM en booléen
   ```sql
-  update  m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
--```
+  update m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
+  ```
 
 - Création de PMFMs
   - Fiche Mantis : https://forge.ifremer.fr/mantis/view.php?id=65277
   - Script SQL de création des PMFMS : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/sql/oracle/create-pmfm.sql
+
+- Création des options de stratégie
+TODO
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
@@ -277,18 +275,31 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ### Options pour le programme SIH-OBSVENTE
 
+#### `sumaris.landing.rows.divider.pmfmId`
 ```properties 
 sumaris.landing.rows.divider.pmfmId=3274
 ```
-
 ```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.landing.rows.divider.pmfmId', 3274, 80 , 1, sysdate);
 ```
 
+
+#### `sumaris.data.strategy.resolution`
+```properties 
+sumaris.data.strategy.resolution=spatio-temporal
+```
 ```sql
 UPDATE PROGRAM_PROPERTY SET NAME='spatio-temporal'
 WHERE LABEL='sumaris.data.strategy.resolution'
 AND PROGRAM_FK='SIH-OBSVENTE';
+```
+
+#### `sumaris.trip.operation.batch.taxonGroup.enable`
+```properties 
+sumaris.trip.operation.batch.taxonGroup.enable=false
+```
+```sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.trip.operation.batch.taxonGroup.enable', 'false', 80 , 1, sysdate);
 ```
 
 ### Stratégie "Métropole" (STRATEGY_PROPERTY)
@@ -331,7 +342,7 @@ INSERT INTO APPLIED_PERIOD (APPLIED_STRATEGY_FK, START_DATE, END_DATE) VALUES (T
 ### Stratégie "Outre-Mer" (STRATEGY_PROPERTY)
 
 #### Création de la stratégie "Outre-Mer"
-Création d'une stratégie avec Code = 'OBSVENTES-2024-O'
+Création d'une stratégie avec Code = 'OBSVENTES-2024-OM'
 
 #### Options de la stratégie "Outre-Mer"
 > A mettre dans PROGRAM_PROPERTY (temporaire)
