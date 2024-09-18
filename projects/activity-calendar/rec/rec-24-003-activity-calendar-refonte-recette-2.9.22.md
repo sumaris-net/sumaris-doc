@@ -23,12 +23,15 @@
 
 - [ ] **P0** - Année : Lors de la consultation d'un écran autre que le tableau de consultation des calendriers puis de ce tableau, le tableau ne ramène plus aucun résultat, en modifiant le filtre "Année", les résultats apparaissent de nouveau
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien
+- [ ] Quand on applique un filtre sur une année il fonctionne (Ex : "Enquêteur"). Si on change d'année, le filtre ne s'applique plus. Mais si on rafraichit la liste, le filtre est bien appliqué.
+  Le filtre devrait s'appliquer sans que l'on ait besoin de rafraichir la liste.
 - [ ] Enregistrement des filtres : composant peu visible en noir
 
 ### Calendrier d'activité > Général
 
 - [ ] Warning qualification : affichage du warning "Qualification xxx incohérente avec l'objectif" si l'objectif d'enquête directe est à "oui" et la qualification de l'enquête est "Directe" alors qu'il ne devrait pas s'afficher
 - [ ] Warning inactivité annuelle : Afficher un warning si au moins un mois est actif et valeur est "oui"
+- [ ] Plus d'avertissement si l'objectif d'enquête est à Non et si dans les caractéristiques, la qualitifcation de l'enquête est "Directe" [#686](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/686)
 
 ### Calendrier d'activité > Navire
 
@@ -44,6 +47,8 @@
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
+    Remarque Vincent : On ne peut pas saisir de métier en doublon sur un même mois
+  - [ ] Il n'y a pas de limite dans l'ajout de métier (5 maximum il me semble)
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Prédocumentation :
   - [ ] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
