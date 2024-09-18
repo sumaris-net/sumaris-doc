@@ -2,6 +2,10 @@
 
 ## Retours de recette MOE
 
+### Gestion des droits
+
+- [ ] Erreur "opérateur relationnel non valide" lors de l'affichage du tableau des calendriers avec tstq2
+
 ### Calendriers d'activité
 
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire
