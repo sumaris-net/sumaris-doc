@@ -150,6 +150,10 @@ Il faudra rappeler ce point lors des prochaines recettes.
 - [ ] Pas de possibilité de copier/coller la ligne de nombre de jours de mer vers la ligne de nombre de jours de pêche
   - _MOE : A analyser_
 - [ ] Pas de limite de jours de mer saisis
+  - _MOE : Implémentation fait. A valider avec la MOA. Issue [706](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/706)
+    - 2 niveaux : 
+      - Valeurs Min et Max sur le PMFM
+      - Limitation par nombre de jours sur le mois (calendrier annuel)
 - [ ] A la sauvegarde, il n'y a pas de tri des métiers : 1 métier par ligne, comme dans l'allegro actuel. C'est à maintenir pour une meilleure visibilité.
   - _MOE : Déjà implémenté. Il y a bien un métier par ligne. Les métiers sont triés par ordre d'apparition_
 - [ ] Problème de copier/coller : faute de Français ("Vous DE pouvez pas coller ici")

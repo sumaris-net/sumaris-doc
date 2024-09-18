@@ -95,7 +95,7 @@ Project starts the 2024/04/08
 [TASK3]->[Testing3]
 [Demo MOA 2] happens 9th of July 2024
 
-[r2.9.20] as [TASK4] requires 4 weeks
+[r2.9.20.1] as [TASK4] requires 4 weeks
 [TASK4] is colored in grey
 [TASK3]->[TASK4]
 [Testing4] requires 1 week and starts the 2th of August 2024
@@ -110,14 +110,15 @@ Project starts the 2024/04/08
 [Demo MOA 3] happens 27th of August 2024
 
 [r2.9.22] as [TASK6] requires 4 weeks and starts the 5th of August 2024
-[TASK6] is colored in green
+[TASK6] is colored in grey
 [TASK5]->[TASK6]
 [Testing6] requires 1 week
 [TASK6]->[Testing6]
-[Demo MOA 4] happens 3 day after [Testing6]'s end
+[Demo MOA 4] happens 19th of september 2024
+[Présentation Utilisateurs] happens 26th of september 2024
 
 [r2.9.23] as [TASK7] requires 3 weeks and starts the 2th of September 2024
-[TASK7] is colored in Lavender/LightBlue
+[TASK7] is colored in green
 [TASK6]->[TASK7]
 [TASK7]->[Testing7]
 [Testing7] requires 1 week and starts the 22th of September 2024

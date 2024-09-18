@@ -64,6 +64,17 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
   alter table SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES add column HASH NUMBER(10);
 -```
 
+- nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
+  ```sql
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
+-```
+
+- nouveaux processing_status
+  ```sql
+  insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('RUNNING', 'Traitement en cours.', 1);
+  insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('CANCELLED', 'Traitement annulé.', 1);
+-```
+
 ## Schéma SIH2_ADAGIO_BATCH
 
 - Ajout de synonyme sur `ACTIVITY_CALENDAR2PERSON`
@@ -99,6 +110,27 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
   INNER JOIN SIH2_ADAGIO_DBA.M_PROGRAM MP ON AC.PROGRAM_FK = MP.CODE
   ;
 -``` 
+
+- Modification du trigger `TR_VESSEL_USE_FEATURES`
+  ```sql
+  create or replace trigger TR_ACTIVITY_CALENDAR
+    instead of update or insert
+      on ACTIVITY_CALENDAR
+        begin
+          case
+            WHEN INSERTING THEN
+              insert into SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR(ID, YEAR, DIRECT_SURVEY_INVESTIGATION, ECONOMIC_SURVEY, COMMENTS, CREATION_DATE, CONTROL_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, UPDATE_DATE, SURVEY_QUALIFICATION_FK,
+                                                            RECORDER_PERSON_FK, VESSEL_FK, PROGRAM_FK, RECORDER_DEPARTMENT_FK, QUALITY_FLAG_FK)
+              values (:new.ID, :new.YEAR, :new.DIRECT_SURVEY_INVESTIGATION, :new.ECONOMIC_SURVEY, :new.COMMENTS, :new.CREATION_DATE, :new.CONTROL_DATE ,:new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.UPDATE_DATE, :new.SURVEY_QUALIFICATION_FK,
+                      :new.RECORDER_PERSON_FK, (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID =:new.VESSEL_FK), (select MP.CODE from SIH2_ADAGIO_DBA.M_PROGRAM MP where MP.ID =:new.PROGRAM_FK), :new.RECORDER_DEPARTMENT_FK, :new.QUALITY_FLAG_FK);
+            WHEN UPDATING THEN
+              update SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR AC set AC.YEAR =:new.YEAR, AC.DIRECT_SURVEY_INVESTIGATION =:new.DIRECT_SURVEY_INVESTIGATION,AC.ECONOMIC_SURVEY =:new.ECONOMIC_SURVEY,AC.COMMENTS =:new.COMMENTS,AC.CREATION_DATE =:new.CREATION_DATE,
+                                                              AC.CONTROL_DATE =:new.CONTROL_DATE,AC.VALIDATION_DATE =:new.VALIDATION_DATE,AC.QUALIFICATION_DATE =:new.QUALIFICATION_DATE,AC.QUALIFICATION_COMMENTS =:new.QUALIFICATION_COMMENTS,AC.UPDATE_DATE =:new.UPDATE_DATE,
+                                                              AC.SURVEY_QUALIFICATION_FK =:new.SURVEY_QUALIFICATION_FK,AC.RECORDER_PERSON_FK =:new.RECORDER_PERSON_FK,AC.RECORDER_DEPARTMENT_FK =:new.RECORDER_DEPARTMENT_FK,AC.QUALITY_FLAG_FK =:new.QUALITY_FLAG_FK
+              where ID = :new.ID;
+          end case;
+        end;
+-```
 
 - Ajout de la vue `VESSEL_USE_FEATURES`
   ```sql
