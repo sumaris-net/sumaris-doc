@@ -49,6 +49,7 @@
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
     Remarque Vincent : On ne peut pas saisir de métier en doublon sur un même mois
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
+- [ ] Profondeur : Trier la liste déroulante selon le rank_order
 - [ ] Prédocumentation :
   - [ ] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
