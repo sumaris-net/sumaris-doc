@@ -48,7 +48,6 @@
   - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
     Remarque Vincent : On ne peut pas saisir de métier en doublon sur un même mois
-  - [ ] Il n'y a pas de limite dans l'ajout de métier (5 maximum il me semble)
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Prédocumentation :
   - [ ] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
