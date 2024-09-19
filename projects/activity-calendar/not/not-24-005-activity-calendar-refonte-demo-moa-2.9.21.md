@@ -38,7 +38,7 @@ Fonctionnalités de la release **2.9.21**
 ---
 
 Limitations de la release **2.9.21**
-- [Retours de recette ActiFlot v2.9.21](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/rec/rec-24-003-activity-calendar-refonte-recette-2.9.22.md)
+- [Retours de recette ActiFlot v2.9.21](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/rec/rec-24-003-activity-calendar-refonte-recette-2.9.21.md)
 
 ---
 
@@ -57,7 +57,6 @@ Limitations de la release **2.9.21**
 ### Fonctionnalités / Limitations
 
 Fonctionnalités de la release **2.9.22**
-- POC Commentaire
 - Filtre : Correction de Bugs
 - Copier/coller de lignes et de colonnes
 - Saisie par la touche entrée
@@ -65,7 +64,7 @@ Fonctionnalités de la release **2.9.22**
 ---
 
 Limitations de la release **2.9.22**
-- [Retours de recette ActiFlot v2.9.22](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/rec/rec-24-003-activity-calendar-refonte-recette-2.9.22.md)
+- [Retours de recette ActiFlot v2.9.22](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/rec/rec-24-003-activity-calendar-refonte-recette-2.9.21.md)
 
 ---
 
@@ -82,7 +81,7 @@ Navigateur préconisé pour la recette : **Chrome**
     * 02 - Formulaire terrain vierge
     * 03 - Formulaire terrain avec données
 
-Recette **MOE** faite le 17/09/2024. Début recette **MOA** le ?/09/2024.
+Recette **MOE** faite le 17/09/2024. Début recette **MOA** le 25/09/2024.
 
 Démonstration au saisisseur le 26/09/2024.
 
@@ -112,6 +111,19 @@ Support (temporaire) :
   - Maxime Demarest (EIS)
 
 ---
+
+Retours de présentation 
+
+- Bug : 
+  - On peut écraser les métiers en copiant/collant une ligne du Nombre de jours de pêche
+  - La sélection ne suit pas le déplacement par les flèches (ellle reste au niveau du pointeur de souris)
+  - Rapport : 
+    - Rajouter le libellé "Métiers" dans le tableau des caractéristiques engins
+- A tester : 
+  - Ecriture concurrente sur un même mois par 2 observateurs différents
+- Export Csv à ajouter avec le menu de génération du rapport d'avancement
+- Rapport d'avancement : ajouter un filtre s'il y en a un d'appliqué
+
 
 Ordre du jour :
 - Présentation de la release 2.9.22
