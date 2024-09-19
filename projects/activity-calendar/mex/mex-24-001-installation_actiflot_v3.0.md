@@ -515,4 +515,12 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 
 ## Mise à jour du programme SIH-ACTIFLOT
 
-- TODO
+- Options pour le programme SIH-ACTIFLOT (/!\ Vérifier que l'url est bien celle de prod)
+
+```properties 
+server.app.url=https://sumaris-app.ifremer.fr/
+```
+
+```requete sql
+insert into software_property (id, label, name, software_fk, status_fk, creation_date) values (software_property_seq.nextval, 'server.app.url', 'https://sumaris-app.ifremer.fr/', 42 , 1, sysdate);
+```
