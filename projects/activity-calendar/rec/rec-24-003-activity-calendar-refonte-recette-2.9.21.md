@@ -51,7 +51,7 @@
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Profondeur : Trier la liste déroulante selon le rank_order
 - [ ] Prédocumentation :
-  - [ ] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
+  - [X] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
 - [ ] Copier/coller : Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" dans le champ "Actif ?" lorsque la valeur copiée est "Inexistant" [#687](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/687)
 - [ ] Raccourcis clavier : 
@@ -60,6 +60,7 @@
 - [ ] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES.
   Pour reproduire : sur un mois non renseigné (données historiques ou non), sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
 - [ ] **P0** - Les saisies de nombre de jours en mer, nombre de jours de pêche et nombre d'homme à bord ne sont pas sauvegardés (saisie, sauvegarde, puis F5 : les données saisies n'apparaissent plus)
+- [ ] On peut écraser les métiers en copiant/collant une ligne du Nombre de jours de pêche
 
 ### Calendrier d'activité > Métiers
 
