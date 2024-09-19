@@ -9,7 +9,7 @@
 ### Calendriers d'activité
 
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire
-- [ ] **P0** - Erreur lors de la consultation de certains calendriers (Exception while fetching data (/data) : null). Impact la prédoc de certains calendriers ne s'affiche pas.
+- [x] **P0** - Erreur lors de la consultation de certains calendriers (Exception while fetching data (/data) : null). Impact la prédoc de certains calendriers ne s'affiche pas.
   Exemple : 3224068 - BELLE VUE - année 2022 [#689](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/689)
 - [ ] Erreur oracle lors de la suppression d'un calendrier "Impossible d'effectuer une suppression à partir de la vue sans exactement une table protégée par clé"
 
@@ -21,7 +21,7 @@
 
 ### Calendriers d'activité > Filtres
 
-- [ ] **P0** - Année : Lors de la consultation d'un écran autre que le tableau de consultation des calendriers puis de ce tableau, le tableau ne ramène plus aucun résultat, en modifiant le filtre "Année", les résultats apparaissent de nouveau
+- [x] **P0** - Année : Lors de la consultation d'un écran autre que le tableau de consultation des calendriers puis de ce tableau, le tableau ne ramène plus aucun résultat, en modifiant le filtre "Année", les résultats apparaissent de nouveau
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien
 - [ ] Quand on applique un filtre sur une année il fonctionne (Ex : "Enquêteur"). Si on change d'année, le filtre ne s'applique plus. Mais si on rafraichit la liste, le filtre est bien appliqué.
   Le filtre devrait s'appliquer sans que l'on ait besoin de rafraichir la liste.
@@ -78,4 +78,4 @@
 
 ### Calendrier d'activité > Rapport d'avacement
 
-- [ ] **P0** : en attente de livraison
+- [ ] **P0** : Erreur oracle "Nombre d'arguments non valide"
