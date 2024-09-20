@@ -59,7 +59,7 @@
   - [ ] Lors de l'utilisation des flèches pour se déplacer puis de la touche "Entrée" pour entrer en édition, ce n'est pas la cellule qui a le focus qui entre en édition mais la dernière cellule cliquée
 - [ ] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES.
   Pour reproduire : sur un mois non renseigné (données historiques ou non), sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
-- [ ] **P0** - Les saisies de nombre de jours en mer, nombre de jours de pêche et nombre d'homme à bord ne sont pas sauvegardés (saisie, sauvegarde, puis F5 : les données saisies n'apparaissent plus)
+- [X] **P0** - Les saisies de nombre de jours en mer, nombre de jours de pêche et nombre d'homme à bord ne sont pas sauvegardés (saisie, sauvegarde, puis F5 : les données saisies n'apparaissent plus)
 - [ ] On peut écraser les métiers en copiant/collant une ligne du Nombre de jours de pêche
 
 ### Calendrier d'activité > Métiers
@@ -78,6 +78,6 @@
 - [ ] Le titre présent dans le bandeau ne tient pas compte de l'option "Liste déroulante > Navires" des préférences utilisateurs
 - [ ] Afficher les pmfm liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
 
-### Calendrier d'activité > Rapport d'avacement
+### Calendrier d'activité > Rapport d'avancement
 
 - [ ] **P0** : Erreur oracle "Nombre d'arguments non valide"

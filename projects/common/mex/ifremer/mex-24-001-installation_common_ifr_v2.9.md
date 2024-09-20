@@ -191,6 +191,44 @@ end;
   end;
 - ```
 
+- Création du trigger `TR_VESSEL_USE_MEASUREMENT`
+
+  ```sql
+  create or replace trigger TR_VESSEL_USE_MEASUREMENT
+     instead of insert or update or delete
+     on VESSEL_USE_MEASUREMENT
+  begin
+    case
+          WHEN INSERTING THEN
+             -- VESSEL_USE_MEASUREMENT itself
+             insert into SIH2_ADAGIO_DBA.VESSEL_USE_MEASUREMENT(ID, NUMERICAL_VALUE, ALPHANUMERICAL_VALUE, DIGIT_COUNT, PRECISION_VALUE, CONTROL_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, QUALITY_FLAG_FK,
+                                                                 DEPARTMENT_FK, PMFM_FK, QUALITATIVE_VALUE_FK, VESSEL_USE_FEATURES_FK)
+             select :new.ID, :new.NUMERICAL_VALUE, :new.ALPHANUMERICAL_VALUE, :new.DIGIT_COUNT, :new.PRECISION_VALUE, :new.CONTROL_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.QUALITY_FLAG_FK,
+                                                                 :new.RECORDER_DEPARTMENT_FK, :new.PMFM_FK, :new.QUALITATIVE_VALUE_FK, VUF.ID
+             from SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES VUF
+             where VUF.OPERATION_FK = :new.OPERATION_FK or VUF.FISHING_TRIP_FK = :new.TRIP_FK or VUF.ID = :new.VESSEL_USE_FEATURES_FK;
+             -- M_VESSEL_USE_MEASUREMENT (map columns of VESSEL_USE_MEASUREMENT for sumaris)
+             insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_VESSEL_USE_MEASUREMENT(ID, RANK_ORDER)
+             values (:new.ID, :new.RANK_ORDER);
+          WHEN UPDATING THEN
+             -- VESSEL_USE_MEASUREMENT itself
+             update SIH2_ADAGIO_DBA.VESSEL_USE_MEASUREMENT M set M.NUMERICAL_VALUE=:new.NUMERICAL_VALUE, M.ALPHANUMERICAL_VALUE=:new.ALPHANUMERICAL_VALUE, M.DIGIT_COUNT=:new.DIGIT_COUNT, M.PRECISION_VALUE=:new.PRECISION_VALUE,
+                                                                 M.CONTROL_DATE=:new.CONTROL_DATE, M.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, M.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS, M.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK,
+                                                                 M.DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK, M.PMFM_FK=:new.PMFM_FK, M.QUALITATIVE_VALUE_FK=:new.QUALITATIVE_VALUE_FK
+             where M.ID = :new.ID;
+             -- M_VESSEL_USE_MEASUREMENT update if row exists
+             update M_VESSEL_USE_MEASUREMENT MVUM set MVUM.RANK_ORDER=:new.RANK_ORDER
+             where MVUM.ID = :new.ID;
+             -- M_VESSEL_USE_MEASUREMENT insert if row not exists
+             insert into M_VESSEL_USE_MEASUREMENT (ID, RANK_ORDER)
+                          select VUM.ID, :new.RANK_ORDER from SIH2_ADAGIO_DBA.VESSEL_USE_MEASUREMENT VUM where VUM.ID = :new.ID and not exists (select * from M_VESSEL_USE_MEASUREMENT MVUM where MVUM.ID = :new.ID);
+          WHEN DELETING THEN
+             delete from SIH2_ADAGIO_DBA.VESSEL_USE_MEASUREMENT VUM where VUM.ID=:old.ID;
+             delete from M_VESSEL_USE_MEASUREMENT MVUM where MVUM.ID=:old.ID;
+    end case;
+  end;
+- ```
+
 - Modification du synonyme `M_PROGRAM_SEQ` en `PROGRAM_SEQ`
   ```sql
     create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
