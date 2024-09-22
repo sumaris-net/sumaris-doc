@@ -128,6 +128,8 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
                                                               AC.CONTROL_DATE =:new.CONTROL_DATE,AC.VALIDATION_DATE =:new.VALIDATION_DATE,AC.QUALIFICATION_DATE =:new.QUALIFICATION_DATE,AC.QUALIFICATION_COMMENTS =:new.QUALIFICATION_COMMENTS,AC.UPDATE_DATE =:new.UPDATE_DATE,
                                                               AC.SURVEY_QUALIFICATION_FK =:new.SURVEY_QUALIFICATION_FK,AC.RECORDER_PERSON_FK =:new.RECORDER_PERSON_FK,AC.RECORDER_DEPARTMENT_FK =:new.RECORDER_DEPARTMENT_FK,AC.QUALITY_FLAG_FK =:new.QUALITY_FLAG_FK
               where ID = :new.ID;
+            WHEN DELETING THEN
+              delete from SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR AC where AC.ID=:old.ID;  
           end case;
         end;
 -```

@@ -11,15 +11,15 @@
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire
 - [x] **P0** - Erreur lors de la consultation de certains calendriers (Exception while fetching data (/data) : null). Impact la prédoc de certains calendriers ne s'affiche pas.
   Exemple : 3224068 - BELLE VUE - année 2022 [#689](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/689)
-- [ ] Erreur oracle lors de la suppression d'un calendrier "Impossible d'effectuer une suppression à partir de la vue sans exactement une table protégée par clé"
+- [X] Erreur oracle lors de la suppression d'un calendrier "Impossible d'effectuer une suppression à partir de la vue sans exactement une table protégée par clé"
 
-### Calendrier d'activité > Import
+### Calendrier d'activité > Import [#715](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/715)
 
 - [ ] **P0** - Il n'y a pas d'avancement ni de rapport affiché concernant l'import des calendriers vides.
   On a bien l'horloge, dans le menu de gauche, qui indique que la tâche est en cours mais on n'a pas le rapport.
-  EN BDD, le PROCESSING_STATUS du traitement est à "CANCELLED". Les calendriers sont quand même bien importés.
+  EN BDD, le PROCESSING_STATUS du traitement est à "CANCELLED". Les calendriers sont quand même bien importés. [#715](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/715)
 
-### Calendriers d'activité > Filtres
+### Calendriers d'activité > Filtres [#716](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/716)
 
 - [x] **P0** - Année : Lors de la consultation d'un écran autre que le tableau de consultation des calendriers puis de ce tableau, le tableau ne ramène plus aucun résultat, en modifiant le filtre "Année", les résultats apparaissent de nouveau
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien
@@ -27,13 +27,13 @@
   Le filtre devrait s'appliquer sans que l'on ait besoin de rafraichir la liste.
 - [ ] Enregistrement des filtres : composant peu visible en noir
 
-### Calendrier d'activité > Général
+### Calendrier d'activité > Général [#717](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/717)
 
 - [ ] Warning qualification : affichage du warning "Qualification xxx incohérente avec l'objectif" si l'objectif d'enquête directe est à "oui" et la qualification de l'enquête est "Directe" alors qu'il ne devrait pas s'afficher
 - [ ] Warning inactivité annuelle : Afficher un warning si au moins un mois est actif et valeur est "oui"
 - [ ] Plus d'avertissement si l'objectif d'enquête est à Non et si dans les caractéristiques, la qualitifcation de l'enquête est "Directe" [#686](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/686)
 
-### Calendrier d'activité > Navire
+### Calendrier d'activité > Navire [#718](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/718)
 
 - [ ] Caractéristiques navires : Certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
@@ -43,7 +43,7 @@
 - [ ] **P0** - Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
 - [ ] Actif ? : lors du passage de actif à inactif puis inactif à actif sans enregistrer, les nb de jours en mer, nb de jours de pêche et nb de personnes à bord sont perdus alors que les métiers, zones et gradients sont conservés
-- [ ] **P0** - Lieu d'immatriculation : Lorsque de la modification d'un calendrier puis de la reconsultation de celui-ci, le lieu d'immatriculation n'est plus présent, tous les champs du calendrier sont grisés et la saisie est bloquée
+- [ ] **P0** - Lieu d'immatriculation : Lorsque de la modification d'un calendrier puis de la reconsultation de celui-ci, le lieu d'immatriculation n'est plus présent, tous les champs du calendrier sont grisés et la saisie est bloquée. [#719](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/719)
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
@@ -76,8 +76,8 @@
 ### Calendrier d'activité > Formulaire terrain avec données
 
 - [ ] Le titre présent dans le bandeau ne tient pas compte de l'option "Liste déroulante > Navires" des préférences utilisateurs
-- [ ] Afficher les pmfm liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
+- [ ] Afficher les PMFMs liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
 
 ### Calendrier d'activité > Rapport d'avancement
 
-- [ ] **P0** : Erreur oracle "Nombre d'arguments non valide"
+- [ ] **P0** : Erreur oracle "Nombre d'arguments non valide" [#720](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/720)
