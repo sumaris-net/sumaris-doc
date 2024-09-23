@@ -308,19 +308,14 @@ insert into program_property (id, label, name, program_fk, status_fk, creation_d
 Création d'une stratégie avec Code = 'OBSVENTES-2024'
 
 #### Options de la stratégie "Métropole"
-> A mettre dans PROGRAM_PROPERTY (temporaire)
-
-```properties (à ajouter dans le fichier de configuration de l'application)
-sumaris.observedLocation.landings.autoFill=true
-```
-
 ```sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', 80 , 1, sysdate)
+insert into strategy_property (id, label, name, strategy_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', (select id from strategy where name='OBSVENTES-2024') , 1, sysdate)
 ```
 
 #### Associations pour la résolution spatio-temporelle de la stratégie
 ```sql
 INSERT INTO APPLIED_STRATEGY (STRATEGY_FK, LOCATION_FK) VALUES ((SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 401);
+TODO à développer
 ```
 
 TODO : récupérer l'ID suite à l'insertion dans APPLIED_STRATEGY
@@ -345,12 +340,8 @@ INSERT INTO APPLIED_PERIOD (APPLIED_STRATEGY_FK, START_DATE, END_DATE) VALUES (T
 Création d'une stratégie avec Code = 'OBSVENTES-2024-OM'
 
 #### Options de la stratégie "Outre-Mer"
-> A mettre dans PROGRAM_PROPERTY (temporaire)
-```properties 
-sumaris.observedLocation.landings.autoFill=false
-```
 ```sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'false', 80 , 1, sysdate)
+insert into strategy_property (id, label, name, strategy_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', (select id from strategy where name='OBSVENTES-2024-OM') , 1, sysdate)
 ```
 
 #### Associations pour la résolution spatio-temporelle de la stratégie
