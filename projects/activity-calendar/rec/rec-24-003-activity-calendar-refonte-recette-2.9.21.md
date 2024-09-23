@@ -35,8 +35,10 @@
 
 ### Calendrier d'activité > Navire [#718](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/718)
 
-- [ ] Caractéristiques navires : Certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
+- [ ] Caractéristiques navires : 
+  - [ ] Certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
+  - [ ] La pagination ne tient pas compte des lignes fusionnées, il y a donc des pages vides (exemple : 667404 - BEL ESPOIR en 2024)
 
 ### Calendrier d'activité > Calendrier
 
