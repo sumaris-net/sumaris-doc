@@ -26,7 +26,7 @@ sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 
 - Définition de PMFM en booléen
   ```sql
-  update  m_parameter set is_boolean = 1 where CODE in ('ACCEPT_OTHER_SURVEY');
+  update  m_parameter set is_boolean = 1 where CODE in ('ACCEPT_OTHER_SURVEY', 'INACTIVTY_YEAR');
   ```
 
 - Modification `ACTIVITY_CALENDAR` :
