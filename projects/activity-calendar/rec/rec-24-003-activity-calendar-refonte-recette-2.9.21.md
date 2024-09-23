@@ -57,10 +57,12 @@
 - [ ] Prédocumentation :
   - [X] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
   - [ ] Lorsque la prédocumentation n'existe pas pour certains mois, la colonne est affichée avec une source vide et est affichée quelque soit la source sélectionnée (exemple : 667404 - BEL ESPOIR en 2024)
-  - [ ] Lorsqu'une seule source de prédc est sélectionner, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
+  - [ ] Lorsqu'une seule source de prédc est sélectionnée, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Predoc-sources-et-metiers.gif)
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
-- [ ] Copier/coller : Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" dans le champ "Actif ?" lorsque la valeur copiée est "Inexistant" [#687](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/687)
+- [ ] Copier/coller : 
+  - [ ] Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" dans le champ "Actif ?" lorsque la valeur copiée est "Inexistant" [#687](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/687)
+  - [ ] Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" lorsque les lignes "Nombre de jours de mer" ou "Nombre de jours de pêche" sont copiées vers les lignes "Actif ?", "Port d'exploitation", "Métier", "Zone de pêche", "Gradient côte", "Profondeur" ou "Zone proche". Actuellement ça vide la ligne
 - [ ] Raccourcis clavier : 
   - [ ] Lorsqu'une cellule a le focus, l'utilisation de la flèche bas, met le focus sur la cellule en-dessous mais décale l'ensemble du tableau vers le bas
   - [ ] Lors de l'utilisation des flèches pour se déplacer puis de la touche "Entrée" pour entrer en édition, ce n'est pas la cellule qui a le focus qui entre en édition mais la dernière cellule cliquée
