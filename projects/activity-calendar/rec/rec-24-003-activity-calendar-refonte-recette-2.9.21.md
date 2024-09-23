@@ -9,6 +9,7 @@
 ### Calendriers d'activité
 
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire
+  - Erreur Oracle : ORA-01791: cette expression n'a pas été SELECTionnée [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
 - [x] **P0** - Erreur lors de la consultation de certains calendriers (Exception while fetching data (/data) : null). Impact la prédoc de certains calendriers ne s'affiche pas.
   Exemple : 3224068 - BELLE VUE - année 2022 [#689](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/689)
 - [X] Erreur oracle lors de la suppression d'un calendrier "Impossible d'effectuer une suppression à partir de la vue sans exactement une table protégée par clé"
@@ -49,13 +50,11 @@
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
-    Remarque Vincent : On ne peut pas saisir de métier en doublon sur un même mois. Mais via copier/coller oui
   - [ ] A rediscuter avec la MOA : Après enregistrement, les métiers sont triés par ordre de saisie au lieu de l'ordre alphabétique
 - [ ] Zone de pêche/gradient côte : erreur oracle lors de l'enregistrement si un métier d'un mois a 2 zones/gradient côte identiques (violation de contrainte unique SIH2_ADAGIO_DBA.FISHING_AREA_UNIQUE_KEY). Reprendre ce qui a été fait pour le métier pour restreindre la liste déroulante pour la zone 2 et afficher un message en cas de doublon via copier/coller
 - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
 - [ ] Profondeur : Trier la liste déroulante selon le rank_order
 - [ ] Prédocumentation :
-  - [X] **P0** - La prédocumentation affiche les données des calendriers N-1 et N
   - [ ] Lorsque la prédocumentation n'existe pas pour certains mois, la colonne est affichée avec une source vide et est affichée quelque soit la source sélectionnée (exemple : 667404 - BEL ESPOIR en 2024)
   - [ ] Lorsqu'une seule source de prédc est sélectionnée, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Predoc-sources-et-metiers.gif)
@@ -68,10 +67,8 @@
   - [ ] Lors de l'utilisation des flèches pour se déplacer puis de la touche "Entrée" pour entrer en édition, ce n'est pas la cellule qui a le focus qui entre en édition mais la dernière cellule cliquée
 - [ ] Lors de l'ajout d'un nouveau bloc métier, plusieurs colonnes peuvent avoir le focus (colonne en bleu). Pour reproduire : sur le dernier bloc métier, copier une cellule sur un mois, coller la cellule sur un autre mois, entrer en édition sur un 3ème mois
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Ajout_bloc_metier.gif)
-- [ ] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES.
+- [ ] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. [#682](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/682)
   Pour reproduire : sur un mois non renseigné (données historiques ou non), sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
-- [X] **P0** - Les saisies de nombre de jours en mer, nombre de jours de pêche et nombre d'homme à bord ne sont pas sauvegardés (saisie, sauvegarde, puis F5 : les données saisies n'apparaissent plus)
-- [ ] On peut écraser les métiers en copiant/collant une ligne du Nombre de jours de pêche
 
 ### Calendrier d'activité > Métiers
 
@@ -84,7 +81,7 @@
   - [ ] Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie)
 - [ ] Vente : Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie)
 
-### Calendrier d'activité > Formulaire terrain avec données
+### Calendrier d'activité > Formulaire terrain avec données [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
 
 - [ ] Erreur lors de la consultation du rapport si ACTIVITY_CALENDAR_RECORDER_PERSON_FK est null 
 - [ ] Le titre présent dans le bandeau ne tient pas compte de l'option "Liste déroulante > Navires" des préférences utilisateurs

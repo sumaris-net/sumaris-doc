@@ -166,7 +166,112 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
               end case;
              end;
 -```
-  
+
+- Modification de la vue `BATCH`
+  ```sql
+  create or replace view BATCH as
+    select
+      B.ID,
+      B.COMMENTS,
+      B.EXHAUSTIVE_INVENTORY,
+      MB.HASH,
+      B.INDIVIDUAL_COUNT,
+      B.SUBGROUP_COUNT,
+      case when B.LABEL='0' then 'CATCH_BATCH' else B.LABEL end as LABEL,
+      B.RANK_ORDER,
+      B.SAMPLING_RATIO,
+      B.SAMPLING_RATIO_TEXT,
+      --IS_CATCH_BATCH, managed by trigger
+      B.CONTROL_DATE,
+      --B.VALIDATION_DATE,
+      B.QUALIFICATION_DATE,
+      B.QUALIFICATION_COMMENTS,
+      B.UPDATE_DATE,
+      O.ID OPERATION_FK,
+      S.ID as SALE_FK,
+      B.PARENT_BATCH_FK,
+      B.QUALITY_FLAG_FK,
+      MB.RECORDER_DEPARTMENT_FK,
+      B.REFERENCE_TAXON_FK,
+      B.TAXON_GROUP_FK
+  from SIH2_ADAGIO_DBA.BATCH B
+    left outer join SIH2_ADAGIO_DBA.OPERATION O on O.CATCH_BATCH_FK = NVL(B.ROOT_BATCH_FK, B.ID)
+    left outer join SIH2_ADAGIO_DBA.SALE S on S.CATCH_BATCH_FK = NVL(B.ROOT_BATCH_FK, B.ID)
+    left outer join SIH2_ADAGIO_DBA_SUMARIS_MAP.M_BATCH MB on B.ID = MB.ID;
+-```
+
+- Modification du trigger `TR_BATCH`
+  ```sql
+    create or replace trigger TR_BATCH
+      instead of insert or update or delete
+        on BATCH
+          begin
+            case
+              WHEN INSERTING THEN
+                if :new.ID is null then
+                  raise_application_error(-20000, 'BATCH.ID must be not null');
+                end if;
+                -- BATCH itself
+                insert into SIH2_ADAGIO_DBA.BATCH(ID, IS_CATCH_BATCH, RANK_ORDER, LABEL, INDIVIDUAL_COUNT, SUBGROUP_COUNT, EXHAUSTIVE_INVENTORY, CHILD_BATCHS_REPLICATION, COMMENTS,
+                                                  PARENT_BATCH_FK, SAMPLING_RATIO, SAMPLING_RATIO_TEXT, TAXON_GROUP_FK, REFERENCE_TAXON_FK,
+                                                  CONTROL_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, UPDATE_DATE, QUALITY_FLAG_FK)
+                values (:new.ID, case when :new.PARENT_BATCH_FK is null then 1 else 0 end, :new.RANK_ORDER, case when :new.LABEL='CATCH_BATCH' then '0' else :new.LABEL end,
+                        :new.INDIVIDUAL_COUNT, :new.SUBGROUP_COUNT, coalesce(:new.EXHAUSTIVE_INVENTORY,0), 0, :new.COMMENTS, :new.PARENT_BATCH_FK, :new.SAMPLING_RATIO, :new.SAMPLING_RATIO_TEXT,
+                        :new.TAXON_GROUP_FK, :new.REFERENCE_TAXON_FK,
+                        :new.CONTROL_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.UPDATE_DATE, :new.QUALITY_FLAG_FK);
+                if (:new.PARENT_BATCH_FK is null) then
+                  -- update OPERATION if root batch
+                    update SIH2_ADAGIO_DBA.OPERATION O set O.CATCH_BATCH_FK = :new.ID where O.ID = :new.OPERATION_FK;
+                  -- update SALE if root batch
+                    update SIH2_ADAGIO_DBA.SALE S set S.CATCH_BATCH_FK = :new.ID where S.ID = :new.SALE_FK;
+                else
+                  -- update ROOT_BATCH_FK
+                    update SIH2_ADAGIO_DBA.BATCH B set B.ROOT_BATCH_FK = (select RB.ID from SIH2_ADAGIO_DBA.BATCH RB where RB.IS_CATCH_BATCH = 1 connect by prior RB.PARENT_BATCH_FK = RB.ID start with RB.ID = :new.ID)
+                    where B.ID = :new.ID;
+                end if;
+                  -- M_BATCH (map columns of BATCH for sumaris)
+                    insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_BATCH(ID, HASH, RECORDER_DEPARTMENT_FK)
+                    values (:new.ID, :new.HASH, :new.RECORDER_DEPARTMENT_FK);
+              WHEN UPDATING THEN
+                -- BATCH itself
+                  update SIH2_ADAGIO_DBA.BATCH B set B.RANK_ORDER=:new.RANK_ORDER, B.INDIVIDUAL_COUNT=:new.INDIVIDUAL_COUNT, B.SUBGROUP_COUNT=:new.SUBGROUP_COUNT,
+                                                     B.EXHAUSTIVE_INVENTORY=coalesce(:new.EXHAUSTIVE_INVENTORY,0), B.COMMENTS=:new.COMMENTS,
+                                                     B.PARENT_BATCH_FK=:new.PARENT_BATCH_FK, B.SAMPLING_RATIO=:new.SAMPLING_RATIO, B.SAMPLING_RATIO_TEXT=:new.SAMPLING_RATIO_TEXT,
+                                                     B.TAXON_GROUP_FK=:new.TAXON_GROUP_FK, B.REFERENCE_TAXON_FK=:new.REFERENCE_TAXON_FK,
+                                                     B.CONTROL_DATE=:new.CONTROL_DATE, B.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, B.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS,
+                                                     B.UPDATE_DATE=:new.UPDATE_DATE, B.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK,
+                                                     B.IS_CATCH_BATCH = case when :new.PARENT_BATCH_FK is null then 1 else 0 end,
+                                                     B.LABEL = case when :new.LABEL='CATCH_BATCH' then '0' else :new.LABEL end
+                  where B.ID = :new.ID;
+                    if (:new.PARENT_BATCH_FK is null) then
+                      -- update OPERATION.CATCH_BATCH_FK if this batch is root
+                        update SIH2_ADAGIO_DBA.OPERATION O set O.CATCH_BATCH_FK = :new.ID where O.ID = :new.OPERATION_FK;
+                      -- update SALE.CATCH_BATCH_FK if this batch is root
+                        update SIH2_ADAGIO_DBA.SALE S set S.CATCH_BATCH_FK = :new.ID where S.ID = :new.SALE_FK;
+                    else
+                      -- update ROOT_BATCH_FK
+                        update SIH2_ADAGIO_DBA.BATCH B set B.ROOT_BATCH_FK = (select RB.ID from SIH2_ADAGIO_DBA.BATCH RB where RB.IS_CATCH_BATCH = 1 connect by prior RB.PARENT_BATCH_FK = RB.ID start with RB.ID = :new.ID)
+                        where B.ID = :new.ID;
+                    end if;
+                    -- M_BATCH update if row exists
+                      update M_BATCH MB set MB.HASH=:new.HASH, MB.RECORDER_DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK
+                      where MB.ID = :new.ID;
+                    -- M_BATCH insert if row not exists
+                      insert into M_BATCH (ID, HASH, RECORDER_DEPARTMENT_FK)
+                      select B.ID, :new.HASH, :new.RECORDER_DEPARTMENT_FK from SIH2_ADAGIO_DBA.BATCH B where B.ID = :new.ID and not exists (select * from M_BATCH MB where  MB.ID = :new.ID);
+                WHEN DELETING THEN
+                  -- update OPERATION link
+                  if (:old.PARENT_BATCH_FK is null) then
+                    update SIH2_ADAGIO_DBA.OPERATION O set O.CATCH_BATCH_FK = null where O.ID = :old.OPERATION_FK;
+                    update SIH2_ADAGIO_DBA.SALE S set S.CATCH_BATCH_FK = null where S.ID = :old.SALE_FK;
+                  end if;
+                  -- BATCH itself
+                  delete from SIH2_ADAGIO_DBA.BATCH B where B.ID = :old.ID;
+                  -- M_BATCH (map columns of BATCH for sumaris)
+                  delete from SIH2_ADAGIO_DBA_SUMARIS_MAP.M_BATCH MB where MB.ID = :old.ID;
+            end case;
+          end;
+-```
 
 ## Mise à jour du programme SIH-OBSVENTE
 
