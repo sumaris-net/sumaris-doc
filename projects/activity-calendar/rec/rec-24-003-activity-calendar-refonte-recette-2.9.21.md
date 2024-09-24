@@ -5,6 +5,7 @@
 ### Gestion des droits
 
 - [ ] P1 (pas prioritaire pour la démo et urgent à tester car la gestion des droits est souvent source de bugs!) - Erreur "opérateur relationnel non valide" lors de l'affichage du tableau des calendriers avec tstq2
+  [#729](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/729)
 
 ### Calendriers d'activité
 
@@ -43,31 +44,32 @@
 
 ### Calendrier d'activité > Calendrier
 
-- [ ] **P0** - Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne
+- [X] **P0** - Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
 - [ ] Actif ? : lors du passage de actif à inactif puis inactif à actif sans enregistrer, les nb de jours en mer, nb de jours de pêche et nb de personnes à bord sont perdus alors que les métiers, zones et gradients sont conservés
-- [ ] **P0** - Lieu d'immatriculation : Lorsque de la modification d'un calendrier puis de la reconsultation de celui-ci, le lieu d'immatriculation n'est plus présent, tous les champs du calendrier sont grisés et la saisie est bloquée. [#719](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/719)
+- [X] **P0** - Lieu d'immatriculation : Lorsque de la modification d'un calendrier puis de la reconsultation de celui-ci, le lieu d'immatriculation n'est plus présent, tous les champs du calendrier sont grisés et la saisie est bloquée. [#719](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/719)
 - [ ] Métier : 
   - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
   - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
   - [ ] A rediscuter avec la MOA : Après enregistrement, les métiers sont triés par ordre de saisie au lieu de l'ordre alphabétique
-- [ ] Zone de pêche/gradient côte : erreur oracle lors de l'enregistrement si un métier d'un mois a 2 zones/gradient côte identiques (violation de contrainte unique SIH2_ADAGIO_DBA.FISHING_AREA_UNIQUE_KEY). Reprendre ce qui a été fait pour le métier pour restreindre la liste déroulante pour la zone 2 et afficher un message en cas de doublon via copier/coller
-- [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
-- [ ] Profondeur : Trier la liste déroulante selon le rank_order
-- [ ] Prédocumentation :
+- Gradient/Zône de pêche [#725](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/725)
+  - [ ] Zone de pêche/gradient côte : erreur oracle lors de l'enregistrement si un métier d'un mois a 2 zones/gradient côte identiques (violation de contrainte unique SIH2_ADAGIO_DBA.FISHING_AREA_UNIQUE_KEY). Reprendre ce qui a été fait pour le métier pour restreindre la liste déroulante pour la zone 2 et afficher un message en cas de doublon via copier/coller
+  - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
+  - [ ] Profondeur : Trier la liste déroulante selon le rank_order
+- [ ] Prédocumentation [#724](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/724):
   - [ ] Lorsque la prédocumentation n'existe pas pour certains mois, la colonne est affichée avec une source vide et est affichée quelque soit la source sélectionnée (exemple : 667404 - BEL ESPOIR en 2024)
   - [ ] Lorsqu'une seule source de prédc est sélectionnée, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Predoc-sources-et-metiers.gif)
   - [ ] Après avoir copié la prédocumentation vers le calendrier, l'icône "copier" conserve un halo bleu
-- [ ] Copier/coller : 
+- [ ] Copier/coller [#726](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/726): 
   - [ ] Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" dans le champ "Actif ?" lorsque la valeur copiée est "Inexistant" [#687](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/687)
   - [ ] Bloquer l'action "Coller" et afficher le message "Vous ne pouvez pas coller ici" lorsque les lignes "Nombre de jours de mer" ou "Nombre de jours de pêche" sont copiées vers les lignes "Actif ?", "Port d'exploitation", "Métier", "Zone de pêche", "Gradient côte", "Profondeur" ou "Zone proche". Actuellement ça vide la ligne
-- [ ] Raccourcis clavier : 
+- [ ] Raccourcis clavier/focus cellule [#727](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/727) : 
   - [ ] Lorsqu'une cellule a le focus, l'utilisation de la flèche bas, met le focus sur la cellule en-dessous mais décale l'ensemble du tableau vers le bas
   - [ ] Lors de l'utilisation des flèches pour se déplacer puis de la touche "Entrée" pour entrer en édition, ce n'est pas la cellule qui a le focus qui entre en édition mais la dernière cellule cliquée
-- [ ] Lors de l'ajout d'un nouveau bloc métier, plusieurs colonnes peuvent avoir le focus (colonne en bleu). Pour reproduire : sur le dernier bloc métier, copier une cellule sur un mois, coller la cellule sur un autre mois, entrer en édition sur un 3ème mois
-  ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Ajout_bloc_metier.gif)
-- [ ] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. [#682](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/682)
+  - [ ] Lors de l'ajout d'un nouveau bloc métier, plusieurs colonnes peuvent avoir le focus (colonne en bleu). Pour reproduire : sur le dernier bloc métier, copier une cellule sur un mois, coller la cellule sur un autre mois, entrer en édition sur un 3ème mois
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-003-2.9.21-Ajout_bloc_metier.gif)
+- [X] **P0** - Violation de contrainte unique à l'enregistrement (SIH2_ADAGIO_DBA.VESSEL_USE_FEAT_UNIQUE_KEY) SIH2_ADAGIO_DBA_SUMARIS_MAP.TR_VESSEL_USE_FEATURES. [#682](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/682)
   Pour reproduire : sur un mois non renseigné (données historiques ou non), sélectionner une valeur dans le champ "Actif ?", enregistrer, sélectionner un port d'exploitation, enregistrer
 
 ### Calendrier d'activité > Métiers
