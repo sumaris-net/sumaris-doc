@@ -1,6 +1,6 @@
-# Activity Calendar - Recette MOE
+# Activity Calendar - Recette MOE/MOA
 
-## Retours de recette MOE
+## Retours de recette MOE - release 2.9.21
 
 ### Gestion des droits
 
@@ -44,14 +44,14 @@
 
 ### Calendrier d'activité > Calendrier
 
-- [X] **P0** - Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne
+- [X] **P0** - Gestion des droits : en admin, le message "Vous n'êtes pas autorisé à saisir sur ce lieu" s'affiche alors que la saisie et la sauvegarde fonctionne 
   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Calendrier_gestion_droits.PNG)
-- [ ] Actif ? : lors du passage de actif à inactif puis inactif à actif sans enregistrer, les nb de jours en mer, nb de jours de pêche et nb de personnes à bord sont perdus alors que les métiers, zones et gradients sont conservés
+- [ ] Actif ? : lors du passage de actif à inactif puis inactif à actif sans enregistrer, les nb de jours en mer, nb de jours de pêche et nb de personnes à bord sont perdus alors que les métiers, zones et gradients sont conservés [#736](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/736)
 - [X] **P0** - Lieu d'immatriculation : Lorsque de la modification d'un calendrier puis de la reconsultation de celui-ci, le lieu d'immatriculation n'est plus présent, tous les champs du calendrier sont grisés et la saisie est bloquée. [#719](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/719)
-- [ ] Métier : 
-  - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
-  - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
-  - [ ] A rediscuter avec la MOA : Après enregistrement, les métiers sont triés par ordre de saisie au lieu de l'ordre alphabétique
+  - [ ] Métier[#731](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/731) : 
+    - [ ] La liste déroulante affiche les x 1ères valeurs mais n'affiche pas les x valeurs suivantes lors du scroll vers le bas
+    - [ ] Le message pour indiquer qu'un métier est en doublon sur un mois ne s'affiche que quand le mois a le focus et ne bloque pas l'enregistrement
+    - [ ] A rediscuter avec la MOA : Après enregistrement, les métiers sont triés par ordre de saisie au lieu de l'ordre alphabétique
 - Gradient/Zône de pêche [#725](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/725)
   - [ ] Zone de pêche/gradient côte : erreur oracle lors de l'enregistrement si un métier d'un mois a 2 zones/gradient côte identiques (violation de contrainte unique SIH2_ADAGIO_DBA.FISHING_AREA_UNIQUE_KEY). Reprendre ce qui a été fait pour le métier pour restreindre la liste déroulante pour la zone 2 et afficher un message en cas de doublon via copier/coller
   - [ ] Gradients : bloquer la saisie du gradient côte, profondeur et zone proche lorsque la zone de pêche n'est pas renseignée
@@ -94,3 +94,32 @@
 ### Calendrier d'activité > Rapport d'avancement
 
 - [ ] **P0** : Erreur oracle "Nombre d'arguments non valide" [#720](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/720)
+
+
+## Retours de recette MOA - release 2.9.21.1
+
+Recette faite par Emilie Le Roy le 25/09/2024
+
+### Calendrier d'activité [#720](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/720)
+
+- [ ] Menu contextuel : il manque toute la partie "editer le rapport".
+- [ ] Remarque : Si on sélectionne un calendrier par coche, le menu contextuel disparait.
+
+### Calendriers d'activité > Filtres [#716](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/716)
+
+- [ ] Quand on filtre sur un lieu d'immat, que le filtre reste ouvert et que on change l'année, le filtre choisit s'efface.
+
+### Calendrier d'activité > Calendrier
+
+- [ ] Prédocumentation [#724](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/724):
+  - [ ] Pour la source "SACROIS-OBSDEB", veiller à l'écrire tel que : "Sacrois-ObsDeb
+- [ ] Métiers
+  - [ ] Remarques : Le dénombrement des métiers ne se met pas à jour au fil de la saisie (il faut sauvegarder) [#731](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/731)
+- [ ] Saisie [#734](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/734)
+  - [ ] Pour la saisie des jm/jp, on peut passer d'une cellule à l'autre avec la flèche mais comme il faut forcément double-cliquer pour saisir, il est impossoble de saisir ces valeurs de manière fluide au clavier. Obligé de reprendre la souris.
+  - [ ] Toujours au clavier, dans jm/jp, si je me deplace avec les flèche, je fais entrée pour saisir une valeur puis impossible de changer de case avec les flèches.
+
+### Calendrier d'activité > Formulaire terrain vierge [#696](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/696)
+
+- [ ] qualification de l'enquête : enlever recopies
+- [ ] caract engins : première ligne ajouter "métier(s)" dans la case vide

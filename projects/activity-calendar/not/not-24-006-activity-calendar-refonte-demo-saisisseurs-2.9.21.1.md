@@ -76,6 +76,7 @@
   - MARTIN Stephane (Saisisseur/LBH)
   - LE RU Loic (Saisisseur/LBH)
   - CORNILLE Vincent (Saisisseur/LRHBL)
+  - LAVENIER Benoit (Dév / EIS)
 
 ---
 
