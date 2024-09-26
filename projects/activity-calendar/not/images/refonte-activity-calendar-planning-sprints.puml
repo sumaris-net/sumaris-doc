@@ -1,6 +1,10 @@
 @startgantt
 hide footbox
 
+!procedure N(x,n)
+[x<size:0>n</size>]
+!endprocedure
+
 <style>
 ganttDiagram {
     unstartedTask {
@@ -70,6 +74,34 @@ title Calendrier d'activité - Development
 today is colored in forestGreen
 
 Project starts the 2024/04/08
+
+N(3, 6) as [c3] happen the 2024/04/09
+N(3, 6)  is colored in green
+
+N(4, 7) as [c4] happen the 2024/04/18
+N(4, 7)  is colored in green
+
+N(5, 8) as [c5] happen the 2024/04/25
+N(5, 8)  is colored in green
+
+N(6, 9) as [c6] happen the 2024/05/23
+N(6, 9)  is colored in green
+
+N(7, 10) as [c7] happen the 2024/06/27
+N(7, 10)  is colored in green
+
+N(8, 11) as [c8] happen the 2024/07/31
+N(8, 11)  is colored in green
+
+N(9, 12) as [c9] happen the 2024/08/20
+N(9, 12)  is colored in green
+
+[c3] displays on same row as [c4]
+[c4] displays on same row as [c5]
+[c5] displays on same row as [c6]
+[c6] displays on same row as [c7]
+[c7] displays on same row as [c8]
+[c8] displays on same row as [c9]
 
 [r2.9.17] as [TASK1] requires 3 weeks
 [TASK1] is colored in grey
@@ -164,12 +196,15 @@ Project starts the 2024/04/08
 [CGFS 2 VFA] as [EMB] requires 3 week and starts the 31th of September 2024
 [EMB] is colored in lightgrey
 
+[EMB] displays on same row as [VFA]
+
 skinparam legendBackgroundColor with
 
 legend
   |<#lightgrey>  | Congés/Abs. MOE |
   |<#lightsteelblue>  | Congés MOA |
   |<#plum>   | Congés Dev |
+  |<#green>   | Point MOA |
 end legend
 
 @endgantt
