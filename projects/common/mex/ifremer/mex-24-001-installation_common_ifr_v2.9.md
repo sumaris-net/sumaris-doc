@@ -15,16 +15,45 @@ sumaris.app.url=http://sumaris-app.isival.ifremer.fr
 
 ## Schéma SIH2_ADAGIO_DBA
 
+Passer le changelog d'adagio db-changelog-4.3.0.xml
+
+- Temporaire (dans car dans le changelog db-changelog-4.4.0.xml d'adagio)
+  ```sql
+  create table SIH2_ADAGIO_DBA.STRATEGY_PROPERTY
+  ( 
+    ID            NUMBER(10)    not null
+    constraint STRATEGY_PROPERTY_PK primary key,
+    LABEL         VARCHAR2(255) not null,
+    NAME          VARCHAR2(255) not null,
+    CREATION_DATE TIMESTAMP(6)  not null,
+    UPDATE_DATE   TIMESTAMP(6),
+    STRATEGY_FK   NUMBER(10)    not null constraint STRATEGY_PROPERTY_STRATEGY_FKC references SIH2_ADAGIO_DBA.STRATEGY,
+    STATUS_FK     VARCHAR2(1)   not null
+  );
+  /
+  comment on table SIH2_ADAGIO_DBA.STRATEGY_PROPERTY is 'Proprietes logicielles sur les strategies. Ces proprietes sont utilisees dans les logiciels afin d avoir un comportement specifique a une strategie.';
+  /
+  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.ID is 'Identifiant';
+  /
+  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.LABEL is 'Mnemonique / code de la propriete';
+  /
+  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.NAME is 'Libelle de la propriete';
+  /
+  grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+  ```
+
 - Ajout de droits sur `SIH2_ADAGIO_DBA.person`
   ```sql
   grant REFERENCES on sih2_adagio_dba.person to sih2_adagio_dba_sumaris_map;
-  ``` 
-
+  ```
 - Ajout de droits sur `SIH2_ADAGIO_DBA.department`
   ```sql
   grant REFERENCES on sih2_adagio_dba.department to sih2_adagio_dba_sumaris_map;
   ``` 
-
+- Ajout de droits sur `SIH2_ADAGIO_DBA.STRATEGY_PROPERTY`
+  ```sql
+  grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to sih2_adagio_dba_sumaris_map;
+  ```
 - Ajout dans la table `PROGRAM_PROPERTY`
   ```sql
   insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
@@ -232,4 +261,9 @@ end;
 - Modification du synonyme `M_PROGRAM_SEQ` en `PROGRAM_SEQ`
   ```sql
     create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
+-```
+
+- Ajout du synonyme `STRATEGY_PROPERTY`
+  ```sql
+    create or replace synonym STRATEGY_PROPERTY for SIH2_ADAGIO_DBA.STRATEGY_PROPERTY;
 -```
