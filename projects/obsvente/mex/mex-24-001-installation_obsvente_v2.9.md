@@ -48,14 +48,19 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
   - Script SQL de création des PMFMS : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/sql/oracle/create-pmfm.sql
 
 - Création des options de stratégie
-TODO
+  - db-changelog : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.4.0.xml?ref_type=heads
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
+- Création du synonyme `STRATEGY_PROPERTY`
+  ```sql
+  create or replace synonym STRATEGY_PROPERTY for SIH2_ADAGIO_DBA.STRATEGY_PROPERTY;
+  ```
+
 - Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`
   ```sql
-    create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
--```
+  create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
+  ```
 
 - Modification du trigger `TR_OBS_LOCATION_MEAS`
   ```sql
@@ -333,6 +338,19 @@ INSERT INTO APPLIED_PERIOD (APPLIED_STRATEGY_FK, START_DATE, END_DATE) VALUES (T
 | Débarquement (non observé) | 2     | Raison de non observation - vente - totale - Observation par un observateur  | Oui     |
 | Débarquement (non observé) | 3     | Espèce commerciale - vente - totale - Observation par un observateur (aucune)| Oui     |
 | Débarquement (non observé) | 4     | Origine de l'espèce observée - vente - totale - Observation par un observateur | Oui     |
+| Vente (non observée)       | 1     | Code du prélèvement - individu - totale - Inconnue                            | Non     |
+| Marée et vente observées   | 1     | Poids - produit/lot - totale - Mesure par un observateur (kg)  | Non    |
+| Marée et vente observées   | 2     | Poids - produit/lot - totale - Estimation par un observateur (kg)  | Non    |
+| Marée et vente observées   | 3     | Poids déterminé par calcul - produit/lot - totale - Inconnue (kg)  | Non    |
+| Marée et vente observées   | 4     | Catégorie de tri terrain - produit/lot - totale - Observation par un observateur    | Non     |
+| Marée et vente observées   | 5     | Catégorie UE - produit/lot - totale - Observation par un observateur     | Non     |
+| Marée et vente observées   | 6     | Etat  - produit/lot - totale - Diffusion par une Halle à marée  | Oui    |
+| Marée et vente observées   | 7     | Présentation - produit/lot - totale - Observation par un observateur  | Oui    |
+| Marée et vente observées   | 8     | Identification espèce à confirmer - vente - totale - Observation par un observateur  | Non    |
+| Marée et vente observées   | 9     | Poids déterminé par calcul - produit/lot - totale - Calcul par relation taille/poids (kg)  | Non    |
+| Mesure individuelle de capture- Sumaris | 1 | Sexe - produit/lot - totale - Observation par un observateur | Non |
+| Mesure individuelle de capture- Sumaris | 2 | Longueur totale (LT) - individu - totale - Mesure au cm par un observateur (cm) | Oui |
+| Mesure individuelle de capture- Sumaris | 3 | Poids - produit/lot - totale - Calcul observateur par RTP (kg) | Non |
 
 ### Stratégie "Outre-Mer" (STRATEGY_PROPERTY)
 
