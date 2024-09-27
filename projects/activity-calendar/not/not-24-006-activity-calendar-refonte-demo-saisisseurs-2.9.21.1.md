@@ -10,7 +10,8 @@
 
 **Client léger Web** : application qui fonctionne via un navigateur Web (Chrome) qui s'appuie sur des ressouces distantes (serveur)
 
-[Architecture Sumaris](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/architecture/general_architecture.md?ref_type=heads)
+- [Spécifications](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/spe/collecte_de_donnees.md?ref_type=heads)
+- [Architecture SUMARiS](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/architecture/general_architecture.md?ref_type=heads)
 
 ---
 
@@ -82,4 +83,4 @@
 
 ### Retours de présentation 
 
-- TODO
+- Souhaits saisisseur : Eviter trop de clics souris
