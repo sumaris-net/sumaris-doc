@@ -97,7 +97,7 @@ En séance, révision du protocole
 ## Avancé des développements
 
 - Saisie de la **marée** : OK
-- Saisie des caractéristiques **engins** : en cours de finition
+- Saisie des caractéristiques **engins** : **en cours**
   - Manque diamètre & composition de la ralingue 
 
 ---
