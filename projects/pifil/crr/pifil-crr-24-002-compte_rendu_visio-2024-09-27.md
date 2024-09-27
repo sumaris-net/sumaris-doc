@@ -86,6 +86,14 @@
 
 ---
 
+## Validation du protocole
+
+En séance, révision du protocole 
+- à partir du [26/09/2024 (rev QS)](projects/pifil/doc/dolphinfree-doc-24-002-protocole-2024-09-26-revQS.xlsx)
+- pour aboutir à une [nouvelle version 27/09/2024](projects/pifil/doc/dolphinfree-doc-24-002-protocole-2024-09-27.xlsx)
+
+---
+
 ## Avancé des développements
 
 - Saisie de la **marée** : OK
