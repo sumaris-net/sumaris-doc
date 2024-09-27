@@ -4,15 +4,16 @@
 > Présents :
 >
 > - Camille YOUNSI (DGAMPA)
-> - Léni GUILLOTIN (AGLIA)
-> - Quiterie SOURGET (LPDB)
 > - Glenn PRIGENT (Ifremer)
 > - Nolwenn RANNOU (Ifremer)
+> - Léni GUILLOTIN (AGLIA)
+> - Quiterie SOURGET (LPDB)
 > - Fiona BIGEY (OP VENDEE)
 > - Olivier BODERE (AGLIA)
 > - Bastien MÉRIGOT (Université de montpellier)
-> - Benoit LAVENIER (EIS)
 > - Aurélien HENNEVEUX (PDA)
+> - Benoit LAVENIER (EIS)
+> - Dorian MARCO (EIS)
 
 ---
 
@@ -27,92 +28,103 @@
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
 
-**Prochaine réunion** de suivi : 11 octobre (au plus tôt
+**Prochaine réunion** de suivi : ~11 octobre (au plus tôt) - à confirmer
 
-**ODJ** :
+**ODJ de la prochaine réunion** :
 - Pédagogie pour l'installation de l'application auprès des professionnels
 - Retour suite aux embarquements éventuels (Léni)
+- Avancés des développements
+- Point sur le rapprochement des données
 
 ---
 
 ## Point contractuel
 - CNPMEM a signé le devis pour PIFIL2.
-- DGAMPA a signé le devis pour DolphinFree.
+- DGAMPA a signé le devis pour DOLPHINFREE.
 
 ---
 
 ## Point planning
 
-- La saisie PIFIL2 a déjà commencé, pour le PAMM intermédiaire;
+- La saisie sur PIFIL2 a déjà commencé (pour le PAMM intermédiaire);
 - Finalisation du développement **fin septembre** pour assurer la phase de test;
 - Objectif de mise en production :
   - Saisie : avant le début du PAMM - **1 décembre 2024**
-  - Fonctionnalité d'extraction (CSV) : **début 2025** ?
-  - Bancarisation/Hébergement à Ifremer : **fin 2025** ?
+  - Fonctionnalité d'extraction des données : **mi 2025** ? - à valider
+  - Bancarisation/Hébergement à Ifremer : **fin 2025** ? - à valider 
 
 ---
 
-# Point exploitation des données
+# Fournitures des données
 
-- Université de Pau : traite les données PIFIL2
-- Université de Montpellier : traite les données DolphinFree
-
-
----
-
-# Rapprochement des données
-
-- Fournitures des données : 
-  - Données Pinger : OCTech
-    - Début/fin OP, présence de Cétacés (nombre), charge batterie, profondeur (à valider), etc. 
-  - Données Caméra : Sinay (projet ObsCam) et EasyFish (installation caméra)
-    - Début/Fin OP, position élémentaire, etc.
-    - /!\ **3-4 mois** de délais pour le traitement d'image
-    - Intégration des données dans le SIH ?
-  - Données ObsMer-PIFIL (Allegro)
-  - Données saisies sur **open.sumaris.net**
-- Centralise et consolide : **Ifremer** (à terme)
+- Données Pinger : OCTech
+  - Début/fin OP, présence de Cétacés (nombre), charge batterie, profondeur (à valider), etc. 
+- Données Caméra : Sinay (projet ObsCam) et EasyFish (installation caméra)
+  - Début/Fin OP, position élémentaire, etc.
+  - /!\ **3-4 mois** de délais pour le traitement d'image
+  - Intégration des données dans le SIH ?
+- Données ObsMer-PIFIL (Allegro)
+- Données d'auto-échantillonnage PIFIL et DOLPHINFREE (SUMARiS sur **open.sumaris.net**)
 
 ---
 
 # Extraction des données
 
-- Responsable : **Ifremer**
-- Plusieurs solutions : centralisation dans le SIH Ifremer (à terme) ou dans SUMARiS (moyen terme)  
+- Fonctionnalité d'extraction des données : **mi 2025** ?
+- Responsable de la consolidation : Ifremer (à terme)
+- Plusieurs solutions possibles :  
+  - import des données Caméra & Pinger directement dans la BDD SUMARiS (à court et moyen terme)
+  - centralisation dans le SIH Ifremer (à terme)
 - Professionnels doivent voir accès aux **données consolidées**
-- Échéances d'extraction : **fin avril** 2025 ?  
 
 ---
 
-## Avancé des développements (1/3)
+# Exploitation des données
+
+- Université de Pau : traite les données PIFIL2
+- Université de Montpellier : traite les données DOLPHINFREE
+
+---
+
+## Avancé des développements
 
 - Saisie de la **marée** : OK
-- Saisie des caractéristiques **engins** : OK
+- Saisie des caractéristiques **engins** : en cours de finition
+  - Manque diamètre & composition de la ralingue 
 
 ---
 
-## Avancé des développements (2/3)
-
-- Saisie de l'opération / **filage** : OK
-  * Saisie du rectangle statistique : faut-il limiter à une zone ? (non bloquant) 
-- Saisie de l'opération / **virage** : **en cours**
+- Saisie OP **filage** : OK
+  * Limitation aux rectangles statistiques d'une zone ? non prioritaire 
+- Saisie OP **virage** : **en cours**
   * Saisie du nombre de captures accidentelles de petits cétacés et d'autres espèces ?
-  * Saisie du nombre de captures accidentelles d'autres espèces ? (optionnel - priorité basse)
-- Saisie de la capture accidentelle : **en cours**
-  * "Si maillé, distance au pinger le plus proche" => à décomposer en 2 champs ? 
-  * "Espèce" : 
-    * Code FAO pour 'Dauphin non-identifié" ?
-    * Code FAO pour "Autres" : utiliser "MZZ - Poissons divers" ?
+    * Sera déduit du nombre d'individu saisis : à ignorer dans l'App 
+  * Saisie du nombre de captures accidentelles d'autres espèces ? (optionnel) => priorité basse (à reporter)
 
 ---
 
-## Avancé des développements (3/3)
+- Saisie de la capture accidentelle : **en cours**
+  * Etat de décomposition et blessures => à décomposer en 3 champs :
+    * Mort (Oui/Non)
+    * Si mort : État de décomposition (frais/légère/très décomposé/NSP)
+    * Si remontée à bord : Blessure (Oui/Non/NSP)
+  * "Si maillé, distance au pinger le plus proche" => à décomposer en 3 champs :
+    * Maillé (Oui/Non)
+    * Distance au pinger le plus proche
+    * Pinger accessible ? (Oui/Non)
+    * Numéro du pinger (obligatoire si accessible)
+  * "Espèce" : 
+    * Code FAO pour 'Dauphin non-identifié" : `UNK`
+    * Code FAO pour "Autres" : `MZZ`
+    * Ajouter `DRR - Dauphin de risso`
 
-- Au lancement de l'application : 
-  - Amélioration du choix du programme de collecte : **en cours**
-  - Amélioration du choix du noeud / base de données (à déduire du programme) : **en cours**
+---
+
 - Adaptation à iOS (iphone) : OK
-- Adaptation des petits écrans (smartphone) : **en cours**
+- Adaptation des petits écrans (smartphone) : OK
+- Au lancement de l'application : 
+  - Amélioration du choix du programme de collecte : **à faire**
+  - Amélioration du choix du noeud (déduit du programme) : **à faire**
   
 ---
 
@@ -127,10 +139,11 @@ Questions :
 ---
 ## Organisation des tests
 
-- Tests sur [open-test.sumaris.net](https://open-test.sumaris.net) (nécessite de créer un compte)
-- EIS donnera le feu vert (par email)
-- /!\ Les données saisies ne seront **PAS** conservées
 - Qui testera ?
-  - OP, 
+  - Les OP,
   - Scientifiques intéressés (extraction notamment)
-  - Camille YOUNSI fournira la liste
+  - Autres ?
+- Camille YOUNSI fournira la liste des testeurs à EIS 
+- Les tests se feront sur : [open-test.sumaris.net](https://open-test.sumaris.net) (nécessite de créer un compte)
+  - Après l'email de lancement d'EIS
+  - /!\ Les données saisies ne seront **PAS** conservées
