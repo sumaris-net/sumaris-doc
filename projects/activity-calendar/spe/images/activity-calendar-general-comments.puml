@@ -15,7 +15,7 @@
      {
      . | Qualification de l'enquête* : | ^Directe  ^
      . | Fiabilité de l'enquête* : | ^Fiable   ^
-     . | Inactivité annuelle confirmée par l'observateur : | ^         ^
+     . | Inactivité annuelle confirmée par l'observateur : | { () Oui | (X) <b>Non }
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
      . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
      . | Habitudes de vente à la criée : | ^         ^
