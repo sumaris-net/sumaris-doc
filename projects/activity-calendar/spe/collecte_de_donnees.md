@@ -60,12 +60,12 @@ Les saisies bureau et tablette sont envisagées.
 > Points de vigilance :
 > - Certains quartiers d'immatriculation sont observés par 2 sociétés de prestation
 > - Un navire peut changer de quartier d'immatriculation et donc de société de prestation et de saisisseur au cours d'une année :
->   - Chaque saisisseur voit l'ensemble des données du calendrier mais peut uniquement saisir les mois où il a les droits. Le mois du changement de QI doit être saisissable par les 2 saisisseurs. Les 2 QI doivent être affichés sur le mois du changement.
+>   - Chaque saisisseur voit l'ensemble des données du calendrier mais peut uniquement saisir les mois où il a les droits. Le mois du changement de QI doit être saisissable par le 1er saisisseur. Les 2 QI doivent être affichés sur le mois du changement.
 >   - En mode connecté : pas de synchro donc pas de problème
 >   - En mode déconnecté : synchro via les boutons "Terminer la saisie" > "Exporter", cas par onglet :
 >     - "Général" : écrasement des données
->     - "Calendrier" : gestion des données saisies sur le mois du changement ?
->     - "Métiers" : ajout des métiers, puis suppression manuelle des doublons
+>     - "Calendrier" : pas d'impact
+>     - "Métiers" : ajout des métiers manquants
 > - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 
 #### Détails techniques :
@@ -79,9 +79,6 @@ Les saisies bureau et tablette sont envisagées.
   * PERSON2USER_PROFIL = 2
   * PROGRAM2PERSON = 2
 
-
-> Réunion du 23/05/2024 : 
-> Liste des données filtrées en fonction des droits : OK, En place 
 
 ---
 ## Ergonomie générale
@@ -123,6 +120,7 @@ Les informations suivantes sont affichées pour chaque calendrier :
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
      * "Validé" : _réprésenté par une icône :white_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
+   * Le programme
    * Le navire (immatriculation + nom)
    * L'année
    * L'objectif d'enquête directe
@@ -131,10 +129,11 @@ Les informations suivantes sont affichées pour chaque calendrier :
    * Les commentaires
 3. Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
 4. Le saisisseur accède à un calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
+5. Le saisisseur importe des calendriers d'activité vides (REF: ACTIVITY_CALENDAR/IMPORT)
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
-  * Objectif d'enquête éco : donnée consultative issue de la feuille de route, cf mantis 61967
+  * Objectif d'enquête éco : donnée consultative issue de la feuille de route (cf [mantis 61967](https://forge.ifremer.fr/mantis/view.php?id=61967))
 
 > Questions :
 > - MOE : Vérifier les perfs liées à l'affichage du portefeuille des navires
@@ -157,6 +156,7 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
     * N-1, sur pc
     * N, sur tablette
 2. Le saisisseur filtre les calendriers d'activité (REF: COMMUN/FILTRES). Les critères suivants sont disponibles :
+   * Le programme de collecte
    * Le lieu d'immatriculation
    * Le port d'exploitation
    * Le type de navire
@@ -181,23 +181,31 @@ Les critères suivants sont multiples (dev en cours sur Imagine) :
 
 2. Le saisisseur modifie le filtre sur l'année via la sélection de l'année ou de la valeur "vide" dans une liste déroulante [Retour en 2]
 
+**Variante :** Le saisisseur enregistre le filtre
+
+2. Le saisisseur renseigne le titre du filtre
+3. Le saisisseur enregistre le filtre [Retour en 2]
+
+**Variante :** Le saisisseur sélectionne un filtre enregistré
+
+2. Le saisisseur sélectionne un filtre enregistré [Retour en 2]
 
 ---
 
 ## Calendriers d'activité > Import des calendriers vides
 
+**REF: ACTIVITY_CALENDAR/IMPORT**
+
 L'import des calendriers d'activité vides est accessibles depuis le tableau de consultation des calendriers d'activité par les administrateurs et les responsables de programme
+Le fichier csv d'import est basé sur la feuille de route (cf [mantis 61967](https://forge.ifremer.fr/mantis/view.php?id=61967))
 
 #### Scénario principal
 
-1. Le saisisseur demande l'import des calendriers d'activité présents dans un fichier csv
-
-Se baser sur le format "feuille de route pour l'activité 2023 en 2024" : https://forge.ifremer.fr/mantis/view.php?id=61967
-* Manque un flag "Objectif d'enquête éco" dans le format
-
-Ajouter d'une fonction d'export (_Faible cout de développement_)
-Ajouter une fonction de suppression d'un calendrier pour corriger les erreurs lors de l'import
-
+1. Le saisisseur demande l'import des calendriers d'activité
+2. Le saisisseur sélectionne le fichier csv contenant les calendriers d'activité à importer
+3. Le saisisseur consulte l'avancement de l'import
+4. Le saisisseur consulte le rapport d'import
+5. Le saisisseur consulte les calendriers d'activité
 
 ---
 ## Calendrier d'activité > Général
@@ -232,19 +240,18 @@ Les calendriers d'activité sont accessibles depuis le tableau de consultation d
    * "Navire"
    * "Calendrier"
    * "Métiers"
-   * "Carte"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
    * L'objectif d'enquête directe (Oui/Non/Opportuniste - non modifiable)
    * L'objectif d'enquête éco (Oui/Non - non modifiable)
+   * Les observateurs (visible uniquement pour les administrateurs et responsables de programme) (par défaut contient le ou les saisisseurs qui ont enregistré le calendrier)
    * La stratégie
-   * Le nom des observateurs
-   * La société des observateurs
+   * Le nom, le prénom et la société de chaque observateur
    * La date de création
    * La date de mise à jour
    * Le mode de saisie (Bureau ou Terrain)
 5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
     * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, Le professionnel accepterai-il de 
-répondre à une autre enquête, Métuers déclarés dans les journeaux de bord/fiches de pêche, Habitudes de vente à la criée ...
+répondre à une autre enquête, Métiers déclarés dans les journeaux de bord/fiches de pêche, Habitudes de vente à la criée ...
 6. Le saisisseur saisit un commentaire
 7. Le saisisseur enregistre le commentaire
 8. Le commentaire apparait en haut de la liste des commentaires
@@ -258,30 +265,6 @@ répondre à une autre enquête, Métuers déclarés dans les journeaux de bord/
 
 5. Si l'objectif d'enquête directe est à "Oui" et que le saisisseur a sélectionné la qualification de l'enquête autre que "Directe", 
 un warning est affiché [Retour en 6]
-
-#### Détails techniques :
-  * Pour faciliter les développements, pendant toute la durée des développements, le programme, l'année et le navire sont affichés sur l'écran
-  * Caractéristiques du calendrier d'activité :
-    * Origine : PMFM_STRATEGY avec :
-      * STRATEGY.PROGRAM_FK "SIH-ACTIFLOT"
-      * APPLIED_PERIOD.START_DATE <= date de vente < APPLIED_PERIOD.END_DATE + 1 où APPLIED_PERIOD.APPLIED_STRATEGY_FK = APPLIED_STRATEGY.ID 
-      * PMFM_STRATEGY.ACQUISITION_LEVEL_FK = ACTIVITY_CALENDAR
-    * Caractère obligatoire : PMFM_STRATEGY.IS_MANDATORY 
-    * Ordre d'affichage : PMFM_STRATEGY : RANK_ORDER
-  * Qualification de l'enquête : prévoir une option pour limiter les valeurs possibles aux QUALITATIVE_VALUE.ID = 965, 966, 967, 2555
-
----
-## Calendrier d'activité > Général > Gestion des conflits
-
-Réunion 27/06/2024 : 
-- Pas un vrai besoin. Pas vraiment utile. 
-- La régle : Un seul saisisseur peut saisir sur un mois.
-
-Dans le cas ou il y a un changement de quartier d'immatriculation, seul un saisisseur à les droits de saisie sur le mois du changement
-- P1 : gérer l'affichage de saisisseurs multiples
-- P2 : gestion fine des conflits (à confirmer suivant l'utilisation)
-
-Information : Il existe un annuaire des observateurs par quartier maritime pour avoir liste disponible sur le site SIH
 
 --- 
 
@@ -333,7 +316,7 @@ Information : Il existe un annuaire des observateurs par quartier maritime pour 
 Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
 
 > Réunion du 26/06/2024 :
-> - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment, carac technique et fpc à droite
+> - Tableau caractéristiques des navires : pas d'ajout de l'immat pour le moment
 
 
 ---
@@ -349,7 +332,8 @@ Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIV
 L'écran est composé d'un tableau de saisie du calendrier d'activité, mois par mois et, en dessous, d'un tableau sur la prédocumentation.
 La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écran.
 
-1. Dans l'onglet "Calendrier", le saisisseur consulte le calendrier de l'année en cours. Pour chaque mois, les informations suivantes sont affichées :
+1. Le saisisseur clique sur l'onglet "Calendrier"
+2. Dans l'onglet "Calendrier", le saisisseur consulte le calendrier de l'année en cours. Pour chaque mois, les informations suivantes sont affichées :
     * L'armateur
     * Le lieu d'immatriculation
     * L'activité du navire
@@ -359,8 +343,8 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
     * Le nombre de personnes à bord
     * Le ou les métiers. Par défaut, les métiers sont dépliés si le calendrier est vide, repliés sinon
     * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
-    * Le gradient de côte, le gradient de profondeur et la zone proche rattachés à chaque zone. Le gradient de profondeur et la zone proche sont visible selon une option du programme.
-3. Le saisisseur affiche la prédocumentation via un bouton. Par défaut, les sources "Enquête N-1 indirecte" et "SACROIS-OBSDEB" sont affichées si elles existent. La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée.
+    * Le gradient de côte, le gradient de profondeur et la zone proche rattachés à chaque zone. Le gradient de profondeur et la zone proche sont visibles selon la zone de compétence sélectionnée
+3. Le saisisseur affiche la prédocumentation. Par défaut, les sources "Enquête N-1" et "Sacrois-ObsDeb" sont affichées si elles existent. La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée.
 4. Le saisisseur consulte la prédocumentation. Pour chaque mois et pour chaque source, les informations suivantes sont affichées :
    * La source
    * L'activité du navire
@@ -370,12 +354,14 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
    * Le nombre de personnes à bord
    * Le ou les métiers
    * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
-   * Le gradient de côte, le gradient de profondeur et la zone proche rattaché à chaque zone. Le gradient de profondeur et la zone proche sont visible selon une option du programme.
+   * Le gradient de côte, le gradient de profondeur et la zone proche rattaché à chaque zone. Le gradient de profondeur et la zone proche sont visible selon la zone de compétence sélectionnée
 5. Le saisisseur désélectionne la source de la prédocumentation qu'il ne souhaite pas réutiliser dans le calendrier de l'année en cours
 6. Le saisisseur copie la prédocumentation dans le calendrier de l'année en cours
-7. Le compteur de mois saisis présents sur le titre de l'onglet "Calendrier" apparait et indique le nombre de mois du calendrier avec ou l'activité du navire et le port d'exploitation sont renseignés
-8. Le saisisseur masque la prédocumentation par un bouton
-9. Le saisisseur complète les données manquantes ou erronées pour chaque mois via une saisie manuelle, un étirement de cellules ou 
+7. Le compteur de mois saisis présents sur le titre de l'onglet "Calendrier" apparait et indique le nombre de mois du calendrier ou l'activité du navire est renseignée
+8. Les métiers présents dans le calendrier et ayant un engin associés sont automatiquement ajoutés dans l'onglet "Métiers"
+9. Le compteur de métiers présent sur le titre de l'onglet "Métiers" apparait et indique le nombre de métiers distincts et ayant un engin associé présents dans le calendrier
+10. Le saisisseur masque la prédocumentation
+11. Le saisisseur complète les données manquantes ou erronées pour chaque mois via une saisie manuelle, un étirement de cellules ou 
 un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier ou depuis la prédocumentation. Les données concernées sont les suivantes :
    * L'activité du navire* :
      * Actif
@@ -387,12 +373,14 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
    * Un ou plusieurs métiers. Pour chaque métier, le saisisseur complète les données manquantes ou erronées :
      * Une ou deux zones. Une zone obligatoire pour chaque métier, y compris pour les métiers sans engin. Pour chaque zone, le saisisseur complète les données manquantes ou erronées :
          * Le gradient de côte*
-         * Le gradient de profondeur (visible selon une option du programme)
-         * La zone proche (visible selon une option du programme)
-10. Le saisisseur enregistre le calendrier
-11. Les blocs métiers sont repliés
-12. Les métiers présents dans le calendrier et ayant un engin associés sont automatiquement ajoutés dans l'onglet "Métiers"
-13. La date de mise à jour du calendrier est actualisée
+         * Le gradient de profondeur (visible selon la zone de comptétence sélectionnée)
+         * La zone proche (visible selon la zone de comptétence sélectionnée)
+12. Le compteur de l'onglet "Calendrier" est mis à jour
+13. L'onglet "Métiers" est mis à jour avec les métiers distincts ayant un engin associé
+14. Le compteur de l'onglet "Métiers" est mis à jour
+15. Le saisisseur enregistre le calendrier
+16. Les blocs métiers sont repliés
+17. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
@@ -401,50 +389,44 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
 6. Le saisisseur copie la prédocumentation dans un calendrier de l'année en cours avec des données, un message de confirmation
    s'affiche pour confirmer la suppression des données [Retour en 7]
 
+**Variante :** Copier des données incohérentes
+
+11. Le saisisseur copie des données vers des données d'un autre type, un message bloquant s'affiche (exemple : copie du nombre de jours de mer vers le port d'exploitation) [Retour en 11]
+
+**Variante :** Erreur nombre de jours en mer et nombre de jours de pêche
+
+16. Le saisisseur saisit un nombre de jours de mer ou un nombre de jours de pêche inférieur à 0 ou supérieur à 31, un message bloquant s'affiche [Retour en 15]
+
 **Variante :** Erreur métier en doublon
 
-9. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller ou synchro), un message bloquant s'affiche. [Retour en 9]
+15. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 15]
 
-**Variante :** Erreur nombre de jours en mer et de pêche 
+**Variante :** Erreur zone en doublon
 
-10. A la validation, le traitement vérifie que les valeurs du nombre de jours en mer et de pêche sont comprises entre les valeurs
-   minimale et maximale (de 0 au nombre de jours maximum pour le mois). L'erreur est bloquante si cette règle n'est pas respectée. [Retour en 9]
+15. Le saisisseur saisit une zone deux fois sur un métier d'un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 15]
 
 **Variante :** Saisie non valide à l'enregistrement
 
-10. Les lignes en erreur sont dépliées, les lignes valides sont repliées [Retour en 9]
+16. Les lignes en erreur sont dépliées, les lignes valides sont repliées [Retour en 15]
 
 **Variante :** Vider calendrier 
 
-10. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 9]
+16. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 15]
 
 
 #### Détails techniques :
 * Sources de la prédocumentation :
-  * Enquête N-1 indirecte : table ACTIVITY_CALENDAR avec :
+  * Enquête N-1 : table ACTIVITY_CALENDAR avec :
       * PROGRAM_FK = 'SIH-ACTIFLOT'
       * YEAR = N-1
       * VESSEL_FK
-  * SACROIS-OBSDEB : table ACTIVITY_CALENDAR avec :
+  * Sacrois-ObsDeb : table ACTIVITY_CALENDAR avec :
       * PROGRAM_FK = 'SIH-ACTIPRED'
       * YEAR = N
       * VESSEL_FK
 * L'activité du navire : dans les données historiques, la valeur "Inexistant" était également possible
-* Le port d'exploitation : 
-  * LOCATION.LOCATION_LEVEL_FK = 6 (Port - Point de débarquement)
-  * Filtré selon la zone de compétence sélectionnée
-* Le nombre de jours de mer : PMFM.ID = 241
-* Le nombre de jours de pêche : PMFM.ID = 242
-* Le nombre de personnes à bord : PMFM.ID = 109
-* Champs concernés par la régionalisation :
-  * Métier
-  * Zone
-  * Gradient de côte : table DISTANCE_TO_COAST_GRADIENT
-  * Gradient de profondeur : table DEPTH_GRADIENT
-  * Zone proche : table NEARBY_SPECIFIC_AREA
 
 > Questions :
-> - MOE : Faire vidéo pour les cas d'utilisation du copier, coller, étirer, effacer
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
 > - MOE/EIS : Zones VMS visualisées avec un *, qui est déjà utilisé pour signaler les champs obligatoires. 
 Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
@@ -473,46 +455,6 @@ Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 >   - Onglet navire : Historique / Immatriculation / Armateur : 
 >   - **Réunion du 27/06/2024** : pouvoir paginer chaque tableau avec 4 affichés au minimum. Mise en évidence les éléments qui ont changés
 
-
-
-Actions possibles sur une cellule dans l'Allegro actuel :
-  * Copier
-    * Copier (CTRL + C)
-    * Copier la colonne (CTRL + E)
-    * Copier vers les mois
-    * Copier le bloc métier (CTRL + B)
-    * Copier le bloc zone/gradient
-    * Copier les blocs zone/gradient de la ligne (CTRL + D)
-    * Copier le bloc gradient
-    * Etirer jusqu'à
-    * Etirer le bloc métier jusqu'à
-    * Etirer le bloc zone/gradient jusqu'à
-    * Etirer le bloc gradient jusqu'à
-    * Copier le bloc métier vers les mois (CTRL + Q)
-    * Copier le bloc zone/gradient vers les mois
-    * Copier le bloc gradient vers les mois
-    * Copier la ligne vers [xxx] (CTRL + D) (uniquement pour les lignes "Nombre de jours de mer" et "Nombre de jours de pêche")
-  * Coller
-    * Coller (CTRL + V)
-    * Coller vers les mois
-    * Coller la colonne (CTRL + V)
-    * Coller la colonne vers les mois
-    * Coller le bloc métier (CTRL + V)
-    * Coller le bloc métier vers les mois
-    * Coller les blocs métier sur la ligne (CTRL + V)
-  * Effacer
-    * Effacer (CTRL + X)
-    * Effacer la colonne
-    * Effacer le contenu de la ligne
-    * Effacer le calendrier complet
-    * Effacer le bloc métier (CTRL + X)
-    * Effacer les blocs de ce métier des mois
-  * Ajouter un métier
-  * Ajouter un zone à ce métier
-  * Agrandir tous les métiers
-  * Réduire tous les métiers
-  * Agrandir tous les gradients côte/profondeur/zone proche
-  * Réduire tous les gradients côte/profondeur/zone proche
 
 ---
 ## Calendrier d'activité > Métiers
@@ -578,8 +520,7 @@ alors le message d'avertissement "Inactivité annuelle incohérente" s'affiche [
 
 **Variante :** Inactivité annuelle à confirmer
 
-2. Si tous les mois sont inactifs alors, 
-   alors l'inactivié annuelle confirmée par l'observateur est obligatoire
+2. Si tous les mois sont inactifs alors l'inactivié annuelle confirmée par l'observateur est obligatoire
    et le message "Inactivité annuelle à confirmer" s'affiche ? [Fin]
 
 **Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
@@ -599,7 +540,7 @@ alors le message d'avertissement "Inactivité annuelle incohérente" s'affiche [
 
 11. Le superviseur dévalide le calendrier
 12. Le calendrier passe à l'état "Terminé" 
-13. Les date de validation et de qualification de la saisie sont supprimées [Fin]
+13. Les dates de validation et de qualification de la saisie sont supprimées [Fin]
 
 
 ## Calendrier d'activité > Régionalisation
@@ -617,4 +558,11 @@ alors le message d'avertissement "Inactivité annuelle incohérente" s'affiche [
 > Ajouter la zone de compétence dans la popup de configuration du mode hors-ligne
 > 
 > Réunion prévue le 06/06/2024 (avec Armelle Rouyer)
+> 
+> * Champs concernés par la régionalisation :
+* Métier
+* Zone de pêche
+* Gradient de côte : table DISTANCE_TO_COAST_GRADIENT
+* Gradient de profondeur : table DEPTH_GRADIENT
+* Zone proche : table NEARBY_SPECIFIC_AREA
 

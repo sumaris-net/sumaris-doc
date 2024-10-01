@@ -1,22 +1,24 @@
 @startsalt
 {
 
-  {<b>Calendriers d'activité                                                                                                                                                                                                          <&plus> <&reload> Y {[2022 <&chevron-bottom>]}}
+  {<b>Calendriers d'activité                                                                                                                                                                                                   <&s>  {[Filtre <&chevron-bottom> <&book> <&trash> <&menu>]} <&plus> <&reload> Y {[2022 <&chevron-bottom>]} <&menu>}
    --
 
     {
-        Lieu d'immatriculation : | . | ^ MA - Marseille               ^ | . | . | Port d'exploitation : | . | ^JMA - La Madrague de Montredon^
+        Programme de collecte : | . | ^ SIH-ACTIFLOT - Activité des flottilles^
         .
-        Type de navire : | . | ^ Navire de pêche professionnel^ | . | . | Navire : | . | ^ 123456 - SONNY               ^
+        Lieu d'immatriculation : | . | ^ MA - Marseille                        ^ | . | . | Port d'exploitation : | . | ^JMA - La Madrague de Montredon         ^
         .
-        Objectif d'enquête directe ? :   | . |^Oui                           ^|  . | . | Objectif d'enquête éco ? :   | . | { () Oui | (X) <b>Non}
+        Type de navire : | . | ^ Navire de pêche professionnel         ^ | . | . | Navire : | . | ^ 123456 - SONNY                        ^
         .
-        Organisme observateur :   | . |^ Ifremer                      ^ |  . | . | Observateur :   | . | ^ Nicolas DUPOND               ^
+        Objectif d'enquête directe ? :   | . |^Oui                                    ^|  . | . | Objectif d'enquête éco ? :   | . | { () Oui | (X) <b>Non}
         .
-        Etat : | . | ^Qualifié                      ^ |  . | . | Niveau de qualité :   | . | ^                              ^
+        Organisme observateur :   | . |^ Ifremer                               ^ |  . | . | Observateur :   | . | ^ Nicolas DUPOND                        ^
+        .
+        Etat : | . | ^Qualifié                               ^ |  . | . | Niveau de qualité :   | . | ^                                       ^
     }
 
   --
-  {2 résultats  {}[<&caret-bottom>] | [Fermer] | [Appliquer]}}
+ {2 résultats  {}[<&caret-bottom>] | [Fermer] | [Appliquer]}}
 }
 @endsalt
