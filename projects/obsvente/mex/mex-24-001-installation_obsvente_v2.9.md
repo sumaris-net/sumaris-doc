@@ -52,11 +52,6 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
-- Création du synonyme `STRATEGY_PROPERTY`
-  ```sql
-  create or replace synonym STRATEGY_PROPERTY for SIH2_ADAGIO_DBA.STRATEGY_PROPERTY;
-  ```
-
 - Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`
   ```sql
   create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
