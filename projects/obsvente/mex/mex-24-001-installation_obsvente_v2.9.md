@@ -13,8 +13,7 @@ Liste des tickets réalisés :
 
 ## Configuration du Pod
 
-
-- [ ] Nouvelles options dans le fichier de configuration :
+- Nouvelles options dans le fichier de configuration :
 ```properties
 # Enumerations > PMFM fonctionnels
 sumaris.enumeration.Pmfm.HAS_PETS.id=<id du PMFM "Présence de PETS ? (Booléen)">
@@ -30,9 +29,6 @@ sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_RANDOM.id=<id de la val
 # navire inconnu
 sumaris.data.vessel.unknown.id=<ID navire inconnu>
 sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
-
-
-
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
@@ -40,24 +36,26 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 - Update `PROGRAM_PROPERTY`
   ```sql
     update PROGRAM_PROPERTY set label='sumaris.observedLocation.landings.autoFill' where label='sumaris.observedLocation.landing.autoFill';
--```
-
+  ```
 
 - Définition de PMFM en booléen
   ```sql
-  update  m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
--```
+  update m_parameter set is_boolean = 1 where CODE in ('IS_OBSERVED','PRESALE_AVAILABLE', 'PETS', 'UNCERTAIN_SPECIES');
+  ```
 
 - Création de PMFMs
   - Fiche Mantis : https://forge.ifremer.fr/mantis/view.php?id=65277
   - Script SQL de création des PMFMS : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/sql/oracle/create-pmfm.sql
 
+- Création des options de stratégie
+  - db-changelog : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.4.0.xml?ref_type=heads
+
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`
   ```sql
-    create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
--```
+  create or replace synonym OBSERVED_LOCATION_FEATURES_SEQ for SIH2_ADAGIO_DBA.OBSERVED_LOCATION_FEATURES_SEQ;
+  ```
 
 - Modification du trigger `TR_OBS_LOCATION_MEAS`
   ```sql
@@ -275,31 +273,109 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 
 ## Mise à jour du programme SIH-OBSVENTE
 
-- Options pour le programme SIH-OBSVENTE
+### Options pour le programme SIH-OBSVENTE
 
+#### `sumaris.landing.rows.divider.pmfmId`
 ```properties 
 sumaris.landing.rows.divider.pmfmId=3274
 ```
-
-```requete sql
+```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.landing.rows.divider.pmfmId', 3274, 80 , 1, sysdate);
 ```
 
-- Options pour la stratégie "Métropole" (STRATEGY_PROPERTY) 
-- A mettre dans PROGRAM_PROPERTY (temporaire)
 
-```properties (à ajouter dans le fichier de configuration de l'application)
-sumaris.observedLocation.landings.autoFill=true
-```
-
-```requete sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', 80 , 1, sysdate)
-```
-
-- Options pour la stratégie "Outre-Mer" (STRATEGY_PROPERTY)
+#### `sumaris.data.strategy.resolution`
 ```properties 
-sumaris.observedLocation.landings.autoFill=false
+sumaris.data.strategy.resolution=spatio-temporal
 ```
-```requete sql
-insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'false', 80 , 1, sysdate)
+```sql
+UPDATE PROGRAM_PROPERTY SET NAME='spatio-temporal'
+WHERE LABEL='sumaris.data.strategy.resolution'
+AND PROGRAM_FK='SIH-OBSVENTE';
+```
+
+#### `sumaris.trip.operation.batch.taxonGroup.enable`
+```properties 
+sumaris.trip.operation.batch.taxonGroup.enable=false
+```
+```sql
+insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.trip.operation.batch.taxonGroup.enable', 'false', 80 , 1, sysdate);
+```
+
+### Stratégie "Métropole" (STRATEGY_PROPERTY)
+
+#### Création de la stratégie "Métropole"
+Création d'une stratégie avec Code = 'OBSVENTES-2024'
+
+#### Options de la stratégie "Métropole"
+```sql
+insert into strategy_property (id, label, name, strategy_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', (select id from strategy where name='OBSVENTES-2024') , 1, sysdate)
+```
+
+#### Associations pour la résolution spatio-temporelle de la stratégie
+```sql
+INSERT INTO APPLIED_STRATEGY (STRATEGY_FK, LOCATION_FK) VALUES ((SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 401);
+TODO à développer
+```
+
+TODO : récupérer l'ID suite à l'insertion dans APPLIED_STRATEGY
+```sql
+INSERT INTO APPLIED_PERIOD (APPLIED_STRATEGY_FK, START_DATE, END_DATE) VALUES (TODO, '2023-11-01', '2025-12-01');
+```
+
+#### Protocole de collecte Métropole (PMFM_STRATEGY)
+
+| Niveau d'acquisition        | Ordre | PSFM                                                                 | Oblig ? |
+|----------------------------|-------|----------------------------------------------------------------------|---------|
+| Lieu observé               | 1     | Disponibilité de la pré-vente - vente - totale - Observation par un observateur | Non     |
+| Lieu observé               | 2     | Présence de PETS - vente - totale - Observation par un observateur           | Oui     |
+| Débarquement (non observé) | 1     | Observée ? - vente - totale - Observation par un observateur                 | Oui     |
+| Débarquement (non observé) | 2     | Raison de non observation - vente - totale - Observation par un observateur  | Oui     |
+| Débarquement (non observé) | 3     | Espèce commerciale - vente - totale - Observation par un observateur (aucune)| Oui     |
+| Débarquement (non observé) | 4     | Origine de l'espèce observée - vente - totale - Observation par un observateur | Oui     |
+| Vente (non observée)       | 1     | Code du prélèvement - individu - totale - Inconnue                            | Non     |
+| Marée et vente observées   | 1     | Poids - produit/lot - totale - Mesure par un observateur (kg)  | Non    |
+| Marée et vente observées   | 2     | Poids - produit/lot - totale - Estimation par un observateur (kg)  | Non    |
+| Marée et vente observées   | 3     | Poids déterminé par calcul - produit/lot - totale - Inconnue (kg)  | Non    |
+| Marée et vente observées   | 4     | Catégorie de tri terrain - produit/lot - totale - Observation par un observateur    | Non     |
+| Marée et vente observées   | 5     | Catégorie UE - produit/lot - totale - Observation par un observateur     | Non     |
+| Marée et vente observées   | 6     | Etat  - produit/lot - totale - Diffusion par une Halle à marée  | Oui    |
+| Marée et vente observées   | 7     | Présentation - produit/lot - totale - Observation par un observateur  | Oui    |
+| Marée et vente observées   | 8     | Identification espèce à confirmer - vente - totale - Observation par un observateur  | Non    |
+| Marée et vente observées   | 9     | Poids déterminé par calcul - produit/lot - totale - Calcul par relation taille/poids (kg)  | Non    |
+| Mesure individuelle de capture- Sumaris | 1 | Sexe - produit/lot - totale - Observation par un observateur | Non |
+| Mesure individuelle de capture- Sumaris | 2 | Longueur totale (LT) - individu - totale - Mesure au cm par un observateur (cm) | Oui |
+| Mesure individuelle de capture- Sumaris | 3 | Poids - produit/lot - totale - Calcul observateur par RTP (kg) | Non |
+
+### Stratégie "Outre-Mer" (STRATEGY_PROPERTY)
+
+#### Création de la stratégie "Outre-Mer"
+Création d'une stratégie avec Code = 'OBSVENTES-2024-OM'
+
+#### Options de la stratégie "Outre-Mer"
+```sql
+insert into strategy_property (id, label, name, strategy_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.observedLocation.landings.autoFill', 'true', (select id from strategy where name='OBSVENTES-2024-OM') , 1, sysdate)
+```
+
+#### Associations pour la résolution spatio-temporelle de la stratégie
+
+TODO
+
+#### Protocole de collecte Outre-Mer (PMFM_STRATEGY)
+
+| Niveau d'acquisition        | Ordre | PSFM                                                                 | Oblig ? |
+|----------------------------|-------|----------------------------------------------------------------------|---------|
+| Lieu observé               | 1     | Disponibilité de la pré-vente - vente - totale - Observation par un observateur | Non     |
+| Débarquement (non observé) | 1     | Espèce commerciale - vente - totale - Observation par un observateur (aucune)| Oui     |
+
+### Espèces PETS et Tirage au sort
+
+#### PETS
+```sql
+INSERT INTO TAXON_GROUP_STRATEGY (TAXON_GROUP_FK, STRATEGY_FK, PRIORITY_LEVEL) VALUES (3611, (SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 0);
+```
+
+#### Tirage au sort
+```sql
+INSERT INTO TAXON_GROUP_STRATEGY (TAXON_GROUP_FK, STRATEGY_FK, PRIORITY_LEVEL) VALUES (3069, (SELECT ID FROM STRATEGY WHERE NAME='OBSVENTES-2024'), 1);
 ```
