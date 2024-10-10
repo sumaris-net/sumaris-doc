@@ -63,9 +63,16 @@ L'application est testable sur : https://open-test.sumaris.net
 
 Sur tablette ou ordiphone Android :
 
-- Télécharger et installer le fichier APK ;
-- Au lancement, choisir le noeud : open-test.sumaris.net
+- Télécharger et installer le fichier APK :
+  - Se rendre sur "https://open-test.sumaris.net" avec votre appareil et cliquer sur "Télécharger" puis installer le fichier téléchargé.
+   
+- Au lancement, choisir le nœud réseau : 
+  - Se rendre dans les paramètres 
+  - Vérifier si le nœud réseau "open-test.sumaris.net" est présent dans la liste des nœuds réseaux proposés
+    - s'il n'est pas présent, il faudra saisir manuellement "https://open-test.sumaris.net". 
 
+Sur matériel Apple : 
+- L'application est en cours de déploiement. 
 
 ----   Remontez vos remarques   ----
 
