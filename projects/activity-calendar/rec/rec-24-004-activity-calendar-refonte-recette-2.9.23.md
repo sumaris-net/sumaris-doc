@@ -43,6 +43,9 @@
   ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_édition_touche_entrée.gif)
 - [ ] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
 - [ ] L'icône "Warning" présent sur les en-têtes de colonnes du calendrier de saisie est n'apparait plus entièrement [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
+- [ ] Etendre : [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695)
+  - [ ] La fonctionnalité "Etendre" vers la gauche ne fonctionne plus, les cellules de destination restent vides  
+  - [ ] Il n'est plus possible détendre les cellules métier, zone, gradient côte, profondeur, zone proche. Le curseur pour étendre n'est plus visible sur ces cellules
 
 ### Calendrier d'activité > Métiers
 
