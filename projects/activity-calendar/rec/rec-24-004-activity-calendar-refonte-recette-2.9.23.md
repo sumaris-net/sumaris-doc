@@ -4,28 +4,36 @@
 
 # Gestion des droits
 
-- [ ] Erreur connexion avec t1ee00 (compte extranet de tstq2)
+- [ ] Erreur connexion avec tstq2 (comptes intranet et extranet)
 
 # Calendriers d'activité
 
-- [ ] Le tri sur la colonne "Saisisseur" applique un tri sur le PERSON.ID au lieu du PERSON.LASTNAME (idem sur le tableau des marées)
+- [ ] Le tri sur la colonne "Saisisseur" applique un tri sur le PERSON.ID au lieu du PERSON.LASTNAME (idem sur le tableau des marées) [#745](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/745)
 
 # Calendriers d'activité > Filtres
 
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
+- [ ] Saisisseur/Observateur : les filtres ne remontent pas les utilisateurs ayant un PERSON.STATUS_FK = 0, exemple [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746)
+  - PETIT Oceanne : n'apparait pas dans les filtres alors qu'elle est saisisseur de calendriers notamment sur 2022
+  - LECROSNIER	Sandile : a 2 lignes dans la table PERSON. Le filtrage sur ce saisisseur en 2019,2020,2021 ne remonte aucun calendrier alors qu'elle est saisisseur de calendriers notamment sur ces années
 
-### Calendrier d'activité > Navire [#718](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/718)
+### Calendriers d'activité > Import
 
-- [ ] Caractéristiques navires :
+- [ ] Il n'y a pas d'avancement ni de rapport affiché concernant l'import des calendriers vides.
+  On a bien l'horloge, dans le menu de gauche, qui indique que la tâche est en cours mais on n'a pas le rapport.
+  EN BDD, le PROCESSING_STATUS du traitement est à "CANCELLED". Les calendriers sont quand même bien importés. [#715](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/715)
+
+### Calendrier d'activité > Navire 
+
+- [ ] Caractéristiques navires : [#718](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/718)
     - [ ] Certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
       ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
     - [ ] La pagination ne tient pas compte des lignes fusionnées, il y a donc des pages vides
 
-
 # Calendrier d'activité > Calendrier
 
-- [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire
-  - Erreur Oracle : ORA-01791: cette expression n'a pas été SELECTionnée [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
+- [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
+  - Erreur Oracle : ORA-01791: cette expression n'a pas été SELECTionnée 
 - [ ] Ajouter un contrôle avec un message bloquant si la zone 2 d'un métier n'est pas renseignée alors que le gradient côte 2 ou la profondeur 2 ou la zone proche 2 est renseigné. Actuellement cela génère une erreur oracle à l'enregistrement
   - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK) 
 - [ ] Mettre un libellé sur les messages d'erreur zone de pêche et gradient côte obligatoires
@@ -36,10 +44,32 @@
 - [ ] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
 - [ ] L'icône "Warning" présent sur les en-têtes de colonnes du calendrier de saisie est n'apparait plus entièrement [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
 
-# Calendrier d'activité > Terminaison de la saisie
+### Calendrier d'activité > Métiers
+
+- [ ] Supprimer les cases à cocher et la colonne # qui n'ont pas d'utilité [#704](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/704)
+
+# Calendrier d'activité > Terminaison de la saisie [#717](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/717)
 
 - [ ] Si l'objectif d'enquête est à "Oui" et que la qualification de l'enquêt est à "Directe", le message "Qualification Directe incohérente avec l'objectif" s'affcihe alors qu'il ne devrait pas
 - [ ] Si au moins un mois est actif et que l'innactivité annuelle à confirmer est à "Oui", le message bloquant "xxx" doit s'afficher
+
+### Calendrier d'activité > Formulaire terrain vierge [#696](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/696)
+
+- [ ] Qualification de l'enquête :
+  - [ ] Afficher uniquement les qualitatives values avec STATUS_FK = 1 (ce qui permet de ne plus afficher les "Recopie 2021" et "Recopie 2022"). Attention sur le formulaire terrain avec données, il faut garder le fonctionnement actuel, c'est-à-dire, afficher toutes les qualitatives values du pmfm
+  - [ ] Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
+- [ ] Vente : Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
+- [ ] Caractéristiques engins : première ligne ajouter "métier(s)" dans la case vide
+
+### Calendrier d'activité > Formulaire terrain avec données [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
+
+- [ ] Erreur lors de la consultation du rapport si ACTIVITY_CALENDAR_RECORDER_PERSON_FK est null
+- [ ] Revoir la pagination car le contenu du rapport peut sortir de la page
+- [ ] Le titre présent dans le bandeau ne tient pas compte de l'option "Liste déroulante > Navires" des préférences utilisateurs
+- [ ] Caractéristiques engins :
+  - [ ] Afficher les PMFMs liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
+  - [ ] Ordonner les métiers selon le même ordre que sur les onglets "Calendrier" et "Métiers" de l'écran de saisie
+- [ ] Faire apparaitre le ou les observateurs (table ACTIVITY_CALENDAR2PERSON) au lieu du saisisseur
 
 # Calendriers d'activité > Rapport d'avancement [#743](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/743)
 
