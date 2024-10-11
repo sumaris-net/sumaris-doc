@@ -1,0 +1,37 @@
+@startuml
+hide empty members
+
+class DenormalizedPmfmStrategyVO {
+    - id: Integer
+    - acquisitionLevel: String
+    - rankOrder: Integer
+    - acquisitionNumber: Integer
+    - isMandatory: Boolean
+    - isComputed: Boolean
+    - isEstimated: Boolean
+    - minValue: Double
+    - maxValue: Double
+    - defaultValue: Double
+    - updateDate: Date
+    - gearIds: List<Integer>
+    - taxonGroupIds: List<Integer>
+    - referenceTaxonIds: List<Integer>
+    - strategyId: Integer
+    - parameterId: Integer
+    - matrixId: Integer
+    - fractionId: Integer
+    - methodId: Integer
+    - unitLabel: String
+    - type: String
+    - label: String
+    - name: String
+    - completeName: String
+    - maximumNumberDecimals: Integer
+    - signifFiguresNumber: Integer
+    - detectionThreshold: Double
+    - precision: Double
+}
+
+DenormalizedPmfmStrategyVO "1" -right-> " *" QualitativeValueVO: "  qualitativeValues  "
+
+@enduml
