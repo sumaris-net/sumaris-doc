@@ -1,0 +1,28 @@
+@startuml
+hide empty members
+
+class MerkleNode {
+    - hash
+    - children: MerkleNode[]
+}
+
+object RootNode <<Dirty>> #AAAAAA
+object Node1 <<Dirty>> #AAAAAA
+object Node2 <<Unchanged>>
+object Node3 <<Unchanged>>
+object Node4 <<Dirty>> #AAAAAA
+note left: If this node changes,\nall of its ancestor nodes' hashes\nwill change. And they can be updated.
+
+
+RootNode : hash = "rootHash"
+Node1 : hash = "hash1"
+Node2 : hash = "hash2"
+Node3 : hash = "hash3"
+Node4 : hash = "hash4"
+
+Node1 -up- RootNode
+Node2 -up- RootNode
+Node3 -up- Node1
+Node4 -up- Node1
+
+@enduml
