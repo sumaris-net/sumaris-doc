@@ -45,24 +45,26 @@ L'objectif de la réunion est d'organiser la phase de test.
 
 ---
 ## Installation de l'application
-Sur Android :
-  - Aller sur https://open-test.sumaris.net
-  - Télécharger la version Android (via la bouton `Télécharger`)
+###  Android
+  - Depuis le téléphone, aller sur [open-test.sumaris.net](https://open-test.sumaris.net)
+  - Télécharger la version Android (bouton `Télécharger` en haut)
   - Installer l'application (depuis les fichiers du téléphone)
-    - /!\ Peut nécessiter une autorisation spéciale "Autoriser les sources inconnues")
+    > /!\ Peut nécessiter une autorisation spéciale ("Autoriser les sources inconnues")
+    > 
+    > Voir la documentation google : ICI >> 
 
-Sur iphone : 
+### iPhone 
   - Pas encore disponible sur l'Apple Store
 
 ---
 ## Se connecter à un compte
 
-1. Lancer l'application, puis se connecter :
+- Lancer l'application, puis se connecter :
   - Soit en **créant un compte** (nécessite une validation administrateur)
   - Soit en utilisant le **compte de test** : 
     - email : obs@sumaris.net - mot de passe : demo
 
-2. Vérifier la version dans le menu `A propos` : 2.9.23.2
+- Vérifier la version dans le menu `A propos` : 2.9.23.2
 
 ---
 ## Tester le saisie d'une marée
@@ -77,11 +79,18 @@ Sur iphone :
 5. Saisir la marée de test
 
 ---
+## Démonstration
+
+Points discutées pendant la démo :
+- Pouvoir saisir un filage (dégradé) en cas d'absence de la marée
+- Voir si on garde GPS (Oui/Non) ou si l'on met "non" par défaut
+
+---
 
 Prochaine réunion : **18/10/2024 à 10h15**
 
 ODJ prévisionnel :
+- Retour des tests v2.9.23.2
 - Pédagogie pour l'installation de l'application auprès des professionnels
 - Retour suite aux embarquements éventuels (Léni)
-- Avancés des développements
 - Point sur le rapprochement des données
