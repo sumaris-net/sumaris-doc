@@ -6,6 +6,8 @@ Cette version est un prototype, dans le cadre du programme DOLPHINFREE.
 Elle est testable sur : https://open-test.sumaris.net
 
 Le but de cette version est de valider l'ergonomie générale de la saisie sous le protocole DOLPHINFREE, de la marée jusqu'à l'arbre d'échantillonnage et des captures accidentelles.
+
+---
 ## Corrections et améliorations 
 
 Voici les améliorations par rapport aux précédentes versions de SUMARiS :
@@ -37,7 +39,8 @@ Voici les améliorations par rapport aux précédentes versions de SUMARiS :
       -[ ] Ajout du numéro du pinger
       -[ ] Ajout du poids de l'individu capturé
 
-##    Limitations  
+---
+## Limitations  
 
 - Engin :
     -[ ] La composition de la ralingue haute ne propose pas les choix suivants qui seront ajoutés par la suite :
@@ -48,8 +51,8 @@ Voici les améliorations par rapport aux précédentes versions de SUMARiS :
     -[ ] Le contrôle de fin de saisie n'est pas fonctionnel. Cela sera corriger par la suite.
     -[ ] Le label affiché dans les opérations de filage, lorsque le paramètre "Utilisation d'un GPS ?" est à faux et "Utilisation d'une caméra?" est à vrai, est incorrecte. Cela sera corriger par la suite
 
-
-##    Comment tester ?   
+---
+## Comment tester ?   
 
 L'application est testable sur : https://open-test.sumaris.net
 
@@ -71,16 +74,20 @@ Sur tablette ou ordiphone Android :
 Sur matériel Apple : 
 - L'application est en cours de déploiement. 
 
+---
+
 ##   Remontez vos remarques  
 
 Remontez les anomalies rencontrées :
 - par courriel : contact@e-is.pro et dorian.marco@e-is.pro
 - sur le portail gitlab Ifremer (inscription nécessaire) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
 
+---
 
-## Présentation démo
-- [Vidéo](https://www.youtube.com/watch?v=dW0d67LSqBU)
-- [Compte rendu](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/crr/pifil-crr-24-003-compte_rendu_visio-2024-10-11.md?ref_type=heads)
+## Replay de la dernière démonstration
+
+- [Vidéo de la visio du 11/10/2023](https://www.youtube.com/watch?v=dW0d67LSqBU)
+- [Compte-rendu de la visio du 11/10/2023](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/crr/pifil-crr-24-003-compte_rendu_visio-2024-10-11.md?ref_type=heads)
  
 Librement, 
 L'équipe SUMARiS

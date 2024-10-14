@@ -67,7 +67,7 @@ L'objectif de la réunion est d'organiser la phase de test.
 - Vérifier la version dans le menu `A propos` : 2.9.23.2
 
 ---
-## Tester le saisie d'une marée
+## Tester la saisie d'une marée
 
 1. Cliquer sur "Saisir les marées"
 2. Cliquer sur le bouton bleu "+"
@@ -81,7 +81,7 @@ L'objectif de la réunion est d'organiser la phase de test.
 ---
 ## Démonstration
 
-Points discutées pendant la démo :
+Points discutés pendant la démo :
 - Pouvoir saisir un filage (dégradé) en cas d'absence de la marée
 - Voir si on garde GPS (Oui/Non) ou si l'on met "non" par défaut
 
