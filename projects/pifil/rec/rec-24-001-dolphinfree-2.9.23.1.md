@@ -1,14 +1,12 @@
 # DOLPHINFREE - Recette
 
-## Présentation démo 
-
-##   Informations sur la version   ----
+##   Informations sur la version 
 
 Cette version est un prototype, dans le cadre du programme DOLPHINFREE.
 Elle est testable sur : https://open-test.sumaris.net
 
 Le but de cette version est de valider l'ergonomie générale de la saisie sous le protocole DOLPHINFREE, de la marée jusqu'à l'arbre d'échantillonnage et des captures accidentelles.
-----   Corrections et améliorations  ----
+## Corrections et améliorations 
 
 Voici les améliorations par rapport aux précédentes versions de SUMARiS :
 
@@ -39,21 +37,19 @@ Voici les améliorations par rapport aux précédentes versions de SUMARiS :
       -[ ] Ajout du numéro du pinger
       -[ ] Ajout du poids de l'individu capturé
 
-----   Limitations  ----
+##    Limitations  
 
-- Marée :
-    -[ ] Onglet Détails : le paramètre "Utilisation d'un GPS ?" devrais être masquer lorsque que l'on choisi "Oui" sur le paramètre "Utilisation d'une caméra ?". Ceci sera corriger par la suite.
 - Engin :
-    -[ ] La composition de la ralingue haute ne propose pas les choix suivant qui seront ajoutés par la suite:
+    -[ ] La composition de la ralingue haute ne propose pas les choix suivants qui seront ajoutés par la suite :
       ** Polyamide
       ** Polyester
       ** Flex (Mondiet)
     -[ ] Le contrôle de saisie n'est pas fonctionnel. Cela corriger par la suite.
     -[ ] Le contrôle de fin de saisie n'est pas fonctionnel. Cela sera corriger par la suite.
     -[ ] Le label affiché dans les opérations de filage, lorsque le paramètre "Utilisation d'un GPS ?" est à faux et "Utilisation d'une caméra?" est à vrai, est incorrecte. Cela sera corriger par la suite
-  
 
-----   Comment tester ?    ----
+
+##    Comment tester ?   
 
 L'application est testable sur : https://open-test.sumaris.net
 
@@ -75,12 +71,16 @@ Sur tablette ou ordiphone Android :
 Sur matériel Apple : 
 - L'application est en cours de déploiement. 
 
-----   Remontez vos remarques   ----
+##   Remontez vos remarques  
 
 Remontez les anomalies rencontrées :
 - par courriel : contact@e-is.pro et dorian.marco@e-is.pro
 - sur le portail gitlab Ifremer (inscription nécessaire) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
 
 
-Librement,
+## Présentation démo
+- [Vidéo](https://www.youtube.com/watch?v=dW0d67LSqBU)
+- [Compte rendu](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/crr/pifil-crr-24-003-compte_rendu_visio-2024-10-11.md?ref_type=heads)
+ 
+Librement, 
 L'équipe SUMARiS

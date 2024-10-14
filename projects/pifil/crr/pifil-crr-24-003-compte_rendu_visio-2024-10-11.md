@@ -69,14 +69,14 @@ L'objectif de la réunion est d'organiser la phase de test.
 ---
 ## Tester le saisie d'une marée
 
-3. Cliquer sur "Saisir les marées"
-4. Cliquer sur le bouton bleu "+"
+1. Cliquer sur "Saisir les marées"
+2. Cliquer sur le bouton bleu "+"
    - Choisir "Saisie terrain (mode hors-ligne)"
    - Une fenêtre de configuration s'ouvre
    - Choisir le programme DOLPHINFREE
    - Choisir le navire "Navire Test" et une période (15 jours)
    - Valider
-5. Saisir la marée de test
+3. Saisir la marée de test
 
 ---
 ## Démonstration
