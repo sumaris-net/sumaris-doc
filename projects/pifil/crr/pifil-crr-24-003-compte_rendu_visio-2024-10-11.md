@@ -51,7 +51,7 @@ L'objectif de la réunion est d'organiser la phase de test.
   - Installer l'application (depuis les fichiers du téléphone)
     > /!\ Peut nécessiter une autorisation spéciale ("Autoriser les sources inconnues")
     > 
-    > Voir la documentation google : ICI >> 
+    > Voir la documentation : [ici](https://www.frandroid.com/comment-faire/tutoriaux/184151_comment-installer-un-fichier-apk-sur-son-terminal-android#installer-lapk)
 
 ### iPhone 
   - Pas encore disponible sur l'Apple Store
