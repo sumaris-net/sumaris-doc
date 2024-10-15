@@ -93,7 +93,7 @@ Recette **MOE** faite le 09/10/2024. Début recette **MOA** le xx/10/2024.
 
 ---
 
-Retours de présentation 
+### Retours de présentation 
 
 - Sur le pied de page du tableau des calendriers, conserver "Nombre de lignes"
 - Nombre de calendriers 2023 sur le lieu d'immat FF - Fort de France incohérent avec les donnése d'Emilie : fonctionnement normal, les donnése de préprod datent de Mars 2024
@@ -113,7 +113,9 @@ Retours de présentation
 - Formulaire terrain avec données : le champ "Zone/Gradient" n'affiche que le LOCATION.LABEL, ajouter le DISTANCE_TO_COAST_GRADIENT.LABEL comme c'est le cas sur la prédoc du site web [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
 - Rapport d'avancement : ajouter une limite sur le nombre de calendriers pour la génération du rapport ou à minima mettre un warning. Prévoir tests de perf
 
-Organisation pour les prochains jours/semaines :
+---
+
+### Organisation pour les prochains jours/semaines :
 - MOE : 
   - Déploiement et recette de la version 2.9.23.3
   - Création des calendriers vides sur 2024 pour les tests MOA et saisisseurs
