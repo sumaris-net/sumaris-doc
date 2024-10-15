@@ -11,6 +11,10 @@ sumaris.program.privilege.readonly=true
 
 # Déclaration de l'URL de l'app
 sumaris.app.url=http://sumaris-app.isival.ifremer.fr
+
+# LDAP extranet
+spring.security.ldap.baseDn=ou=ficheannuaireextranet
+spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
 ```
 
 ## Schéma SIH2_ADAGIO_DBA
