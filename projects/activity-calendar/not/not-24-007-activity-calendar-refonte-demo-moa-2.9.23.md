@@ -28,7 +28,10 @@ Fonctionnalités de la release **2.9.23**
 
 - Mise en place de l'authentification extranet
 - Correction des droits pour les non administrateurs
-- Optimisation de l'affichage des rapports
+- Rapports :
+  - Optimisation de l'affichage
+  - Accès aux rapports depuis le tableau des calendriers
+  - Implémentation du rapport d'avancement
 - Application des filtres lors du changement d'année
 - Onglet "Calendrier" - Prédocumentation
   - Affichage du libellé "Sacrois-ObsDeb"
@@ -87,8 +90,38 @@ Recette **MOE** faite le 09/10/2024. Début recette **MOA** le xx/10/2024.
     - Caroline Destreez (MOE/CODRA)
     - Jean-Victor Famy (CODRA)
     - Benoit Lavenier (EIS)
-    - Maxime Demarest (EIS)
 
 ---
 
 Retours de présentation 
+
+- Sur le pied de page du tableau des calendriers, conserver "Nombre de lignes"
+- Nombre de calendriers 2023 sur le lieu d'immat FF - Fort de France incohérent avec les donnése d'Emilie : fonctionnement normal, les donnése de préprod datent de Mars 2024
+- Mettre en place un onglet à côté de calendriers d'activité qui reprennent les données du rapport d'avancement (V2)
+- Ajouter une valeur "Opportuniste" à l'objectif d'enquête directe (#700) ? voir pour mettre une valeur vide (obligatoire en base !) ou masquer l'info si plus rapide
+- Prévoir un script pour renseigner les observateurs avec le saisisseur pour les données historiques
+- Indiquer les zones géolocalisées ? Pas nécessaire en V1. Vérifier la véracité de l'info dans VESSEL_FEATURES.HAS_VMS. Si elle est correcte, c'est rapide à afficher
+- Calendrier d'activité > Calendrier
+  - Présence de 2 scrollbars sur le calendrier de saisie ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_2_scrollbars.gif)
+  - Modifier la fonctionnalité "Déplier tout" pour au 1er clic déplier uniquement les métiers et au second déplier les gradient de côte (V1 si le temps, sinon V2)
+  - Ajouter une fonctionnalité pour sélectionner une zone ou un métier pour les supprimer (V1 si le temps, sinon V2)
+  - Ajouter une action "Supprimer" dans le menu contextuel (V1 si le temps, sinon V2)
+  - Ajouter les raccourcis clavier dans le menu contextuel (mettre en petit)
+  - Ajouter le raccourci clavier pour l'accès à la prédoc (ctrl + P)
+  - Réorganiser les métiers si une seule source de prédoc est sélectionnée ou replier les métiers vides
+
+- Formulaire terrain avec données : le champ "Zone/Gradient" n'affiche que le LOCATION.LABEL, ajouter le DISTANCE_TO_COAST_GRADIENT.LABEL comme c'est le cas sur la prédoc du site web [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
+- Rapport d'avancement : ajouter une limite sur le nombre de calendriers pour la génération du rapport ou à minima mettre un warning. Prévoir tests de perf
+
+Organisation pour les prochains jours/semaines :
+- MOE : 
+  - Déploiement et recette de la version 2.9.23.3
+  - Création des calendriers vides sur 2024 pour les tests MOA et saisisseurs
+  - Transmission à la MOA des éléments pour que les saisisseurs puissent tester (installation vpn, url, connexion login extranet, préférences utilisateurs)
+- MOA : 
+  - Recette version 2.9.23.3 semaine 42
+  - Transmission noms saississeurs prestataires à la MOE pour demande d'accès au vpn à RIC
+- Les saisisseurs font leurs retours à la MOA, la MOA fait un retour à la MOE
+
+
+

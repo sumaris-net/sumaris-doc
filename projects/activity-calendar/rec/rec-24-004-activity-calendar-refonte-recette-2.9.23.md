@@ -4,7 +4,7 @@
 
 # Gestion des droits
 
-- [ ] Erreur connexion avec tstq2 (comptes intranet et extranet)
+- [x] Erreur connexion avec tstq2 (comptes intranet et extranet). MAJ du fichier de conf du pod
 
 # Calendriers d'activité
 
@@ -34,6 +34,8 @@
 
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
   - Erreur Oracle : ORA-01791: cette expression n'a pas été SELECTionnée 
+- [ ] Présence de 2 scrollbars sur le calendrier de saisie 
+  ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_2_scrollbars.gif)
 - [ ] Ajouter un contrôle avec un message bloquant si la zone 2 d'un métier n'est pas renseignée alors que le gradient côte 2 ou la profondeur 2 ou la zone proche 2 est renseigné. Actuellement cela génère une erreur oracle à l'enregistrement [#747](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/747)
   - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK) 
 - [ ] Mettre un libellé sur les messages d'erreur zone de pêche et gradient côte obligatoires [#747](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/747)
@@ -47,6 +49,7 @@
 - [ ] Etendre : [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695)
   - [ ] La fonctionnalité "Etendre" vers la gauche ne fonctionne plus, les cellules de destination restent vides  
   - [ ] Il n'est plus possible détendre les cellules métier, zone, gradient côte, profondeur, zone proche. Le curseur pour étendre n'est plus visible sur ces cellules
+- [ ] Lorsqu'une seule source de prédc est sélectionnée, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
 
 ### Calendrier d'activité > Métiers
 
@@ -62,6 +65,7 @@
 - [ ] Qualification de l'enquête :
   - [ ] Afficher uniquement les qualitatives values avec STATUS_FK = 1 (ce qui permet de ne plus afficher les "Recopie 2021" et "Recopie 2022"). Attention sur le formulaire terrain avec données, il faut garder le fonctionnement actuel, c'est-à-dire, afficher toutes les qualitatives values du pmfm
   - [ ] Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
+- [ ] Le champ "Zone/Gradient" n'affiche que le LOCATION.LABEL, il faut ajouter le DISTANCE_TO_COAST_GRADIENT.LABEL
 - [ ] Vente : Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
 - [ ] Caractéristiques engins : première ligne ajouter "métier(s)" dans la case vide
 
@@ -77,14 +81,14 @@
 
 # Calendriers d'activité > Rapport d'avancement [#743](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/743)
 
-- [ ] L'entrée de menu pour accéder aux rapports n'est pas présente
-- [ ] L'affichage du rapport est long (environ 35s pour 6 calendriers). Possibilité d'améliorer les perfs ?
-- [ ] Erreur lors de l'affichage de certains lots de rapports (exemple : année 2023, saisisseur ROVILLON) [#744](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/744)
-- [ ] Dans la colonne "Observateur(s)", le nom de l'observateur est répété autant de fois qu'il y a de mois renseignés
-- [ ] Suite à la modification des validateurs sur le calendrier, les contrôles et les annotations suivantes n'ont plus lieu d'être :
-  - [ ] (1) Port d'exploitation manquant
-  - [ ] (3) Zone de pêche manquante
-  - [ ] (4) Gradient côte manquant
+- [x] L'entrée de menu pour accéder aux rapports n'est pas présente -> s'il y a plusieurs programme de collecte, sélectionner le programme ACTIFLOT
+- [x] L'affichage du rapport est long (environ 35s pour 6 calendriers). Possibilité d'améliorer les perfs ?
+- [x] Erreur lors de l'affichage de certains lots de rapports (exemple : année 2023, saisisseur ROVILLON) [#744](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/744)
+- [x] Dans la colonne "Observateur(s)", le nom de l'observateur est répété autant de fois qu'il y a de mois renseignés
+- ~~[ ] Suite à la modification des validateurs sur le calendrier, les contrôles et les annotations suivantes n'ont plus lieu d'être :~~ les conserver, car le fonctionnement de l'application peut évoluer
+  - ~~[ ] (1) Port d'exploitation manquant~~
+  - ~~[ ] (3) Zone de pêche manquante~~
+  - ~~[ ] (4) Gradient côte manquant~~
 - [x] Corriger les fautes d'orthographe
   - [x] Nombre de métiers pratiqués mar mois -> Nombre de métiers pratiqués **par** mois
   - [x] Nombre de navire -> Nombre de **navires**
