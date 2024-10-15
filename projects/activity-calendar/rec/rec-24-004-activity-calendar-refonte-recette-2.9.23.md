@@ -34,15 +34,16 @@
 
 - [ ] Erreur de chargement des données lors du filtrage (lieu d'immat, port d'exploit, enquêteur ...) et du tri sur la colonne Navire [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
   - Erreur Oracle : ORA-01791: cette expression n'a pas été SELECTionnée 
-- [ ] Ajouter un contrôle avec un message bloquant si la zone 2 d'un métier n'est pas renseignée alors que le gradient côte 2 ou la profondeur 2 ou la zone proche 2 est renseigné. Actuellement cela génère une erreur oracle à l'enregistrement
+- [ ] Ajouter un contrôle avec un message bloquant si la zone 2 d'un métier n'est pas renseignée alors que le gradient côte 2 ou la profondeur 2 ou la zone proche 2 est renseigné. Actuellement cela génère une erreur oracle à l'enregistrement [#747](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/747)
   - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK) 
-- [ ] Mettre un libellé sur les messages d'erreur zone de pêche et gradient côte obligatoires
+- [ ] Mettre un libellé sur les messages d'erreur zone de pêche et gradient côte obligatoires [#747](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/747)
   ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_codes_messages.PNG)
+- [ ] A la sauvegarde, lorsqu'il y a un mois en erreur, les valeurs des pmfm sont vidées alors qu'elles devraient être conservées [#747](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/747)
 - [ ] Lors de l'entrée en édition d'une cellule via la touche "Entrée" ou le doucle-clic, sélectionner la valeur de la cellule pour permettre au saisisseur de modifier rapidement la valeur
 - [ ] Dans certains cas, la touche "Entrée" entre en édition mais en ressort aussi tôt
   ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_édition_touche_entrée.gif)
-- [ ] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
-- [ ] L'icône "Warning" présent sur les en-têtes de colonnes du calendrier de saisie est n'apparait plus entièrement [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
+- [x] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
+- [x] L'icône "Warning" présent sur les en-têtes de colonnes du calendrier de saisie est n'apparait plus entièrement [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
 - [ ] Etendre : [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695)
   - [ ] La fonctionnalité "Etendre" vers la gauche ne fonctionne plus, les cellules de destination restent vides  
   - [ ] Il n'est plus possible détendre les cellules métier, zone, gradient côte, profondeur, zone proche. Le curseur pour étendre n'est plus visible sur ces cellules
@@ -53,7 +54,7 @@
 
 # Calendrier d'activité > Terminaison de la saisie [#717](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/717)
 
-- [ ] Si l'objectif d'enquête est à "Oui" et que la qualification de l'enquêt est à "Directe", le message "Qualification Directe incohérente avec l'objectif" s'affcihe alors qu'il ne devrait pas
+- [x] Si l'objectif d'enquête est à "Oui" et que la qualification de l'enquêt est à "Directe", le message "Qualification Directe incohérente avec l'objectif" s'affcihe alors qu'il ne devrait pas
 - [ ] Si au moins un mois est actif et que l'innactivité annuelle à confirmer est à "Oui", le message bloquant "xxx" doit s'afficher
 
 ### Calendrier d'activité > Formulaire terrain vierge [#696](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/696)
@@ -84,12 +85,12 @@
   - [ ] (1) Port d'exploitation manquant
   - [ ] (3) Zone de pêche manquante
   - [ ] (4) Gradient côte manquant
-- [ ] Corriger les fautes d'orthographe
-  - [ ] Nombre de métiers pratiqués mar mois -> Nombre de métiers pratiqués **par** mois
-  - [ ] Nombre de navire -> Nombre de **navires**
-  - [ ] Navire non renseignés -> Navires non renseignés
-- [ ] Mettre en place une pagination car la zone "Synthèse de l'avancement des calendriers d'activité" peut sortir de la page s'il y a trop de calendriers
-- [ ] L'impression sort de la page à droite malgré le mode paysage
+- [x] Corriger les fautes d'orthographe
+  - [x] Nombre de métiers pratiqués mar mois -> Nombre de métiers pratiqués **par** mois
+  - [x] Nombre de navire -> Nombre de **navires**
+  - [x] Navire non renseignés -> Navires non renseignés
+- [x] Mettre en place une pagination car la zone "Synthèse de l'avancement des calendriers d'activité" peut sortir de la page s'il y a trop de calendriers
+- [x] L'impression sort de la page à droite malgré le mode paysage
 
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Rapport_avancement.PNG)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Rapport_avancement_impression.PNG)
