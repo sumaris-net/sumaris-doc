@@ -17,13 +17,13 @@
   - PETIT Oceanne : n'apparait pas dans les filtres alors qu'elle est saisisseur de calendriers notamment sur 2022
   - LECROSNIER	Sandile : a 2 lignes dans la table PERSON. Le filtrage sur ce saisisseur en 2019,2020,2021 ne remonte aucun calendrier alors qu'elle est saisisseur de calendriers notamment sur ces années
 
-### Calendriers d'activité > Import
+# Calendriers d'activité > Import
 
 - [ ] Il n'y a pas d'avancement ni de rapport affiché concernant l'import des calendriers vides.
   On a bien l'horloge, dans le menu de gauche, qui indique que la tâche est en cours mais on n'a pas le rapport.
   EN BDD, le PROCESSING_STATUS du traitement est à "CANCELLED". Les calendriers sont quand même bien importés. [#715](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/715)
 
-### Calendrier d'activité > Navire 
+# Calendrier d'activité > Navire 
 
 - [ ] Caractéristiques navires : [#718](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/718)
     - [ ] Certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
@@ -44,23 +44,23 @@
 - [ ] Lors de l'entrée en édition d'une cellule via la touche "Entrée" ou le doucle-clic, sélectionner la valeur de la cellule pour permettre au saisisseur de modifier rapidement la valeur
 - [ ] Dans certains cas, la touche "Entrée" entre en édition mais en ressort aussi tôt
   ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Calendrier_édition_touche_entrée.gif)
-- [x] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
+- [ ] La bordure du dernier mois du calendrier de saisie et de la prédoc n'est plus présente [#762](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/762)
 - [x] L'icône "Warning" présent sur les en-têtes de colonnes du calendrier de saisie est n'apparait plus entièrement [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742)
-- [ ] Etendre : [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695)
-  - [ ] La fonctionnalité "Etendre" vers la gauche ne fonctionne plus, les cellules de destination restent vides  
-  - [ ] Il n'est plus possible détendre les cellules métier, zone, gradient côte, profondeur, zone proche. Le curseur pour étendre n'est plus visible sur ces cellules
+- [ ] Etendre : 
+  - [ ] La fonctionnalité "Etendre" vers la gauche a un décalage d'une cellule [#760](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/760)
+  - [x] Il n'est plus possible détendre les cellules métier, zone, gradient côte, profondeur, zone proche. Le curseur pour étendre n'est plus visible sur ces cellules [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695)
 - [ ] Lorsqu'une seule source de prédc est sélectionnée, il n'y a pas forcément de métier dans le bloc #1. Possibilité de réorganiser les métiers ?
 
-### Calendrier d'activité > Métiers
+# Calendrier d'activité > Métiers
 
 - [ ] Supprimer les cases à cocher et la colonne # qui n'ont pas d'utilité [#704](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/704)
 
 # Calendrier d'activité > Terminaison de la saisie [#717](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/717)
 
 - [x] Si l'objectif d'enquête est à "Oui" et que la qualification de l'enquêt est à "Directe", le message "Qualification Directe incohérente avec l'objectif" s'affcihe alors qu'il ne devrait pas
-- [ ] Si au moins un mois est actif et que l'innactivité annuelle à confirmer est à "Oui", le message bloquant "xxx" doit s'afficher
+- [x] Si au moins un mois est actif et que l'innactivité annuelle à confirmer est à "Oui", le message bloquant "xxx" doit s'afficher
 
-### Calendrier d'activité > Formulaire terrain vierge [#696](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/696)
+# Calendrier d'activité > Formulaire terrain vierge [#696](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/696)
 
 - [ ] Qualification de l'enquête :
   - [ ] Afficher uniquement les qualitatives values avec STATUS_FK = 1 (ce qui permet de ne plus afficher les "Recopie 2021" et "Recopie 2022"). Attention sur le formulaire terrain avec données, il faut garder le fonctionnement actuel, c'est-à-dire, afficher toutes les qualitatives values du pmfm
@@ -68,8 +68,9 @@
 - [ ] Le champ "Zone/Gradient" n'affiche que le LOCATION.LABEL, il faut ajouter le DISTANCE_TO_COAST_GRADIENT.LABEL
 - [ ] Vente : Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
 - [ ] Caractéristiques engins : première ligne ajouter "métier(s)" dans la case vide
+- [ ] Lieux d'immat : n'est pas renseigné alors que l'immatriculation et le nom sont renseignés
 
-### Calendrier d'activité > Formulaire terrain avec données [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
+# Calendrier d'activité > Formulaire terrain avec données [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
 
 - [ ] Erreur lors de la consultation du rapport si ACTIVITY_CALENDAR_RECORDER_PERSON_FK est null
 - [ ] Revoir la pagination car le contenu du rapport peut sortir de la page
@@ -78,6 +79,7 @@
   - [ ] Afficher les PMFMs liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
   - [ ] Ordonner les métiers selon le même ordre que sur les onglets "Calendrier" et "Métiers" de l'écran de saisie
 - [ ] Faire apparaitre le ou les observateurs (table ACTIVITY_CALENDAR2PERSON) au lieu du saisisseur
+- [ ] Lieux d'immat : n'est pas renseigné alors que l'immatriculation et le nom sont renseignés
 
 # Calendriers d'activité > Rapport d'avancement [#743](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/743)
 
@@ -94,7 +96,18 @@
   - [x] Nombre de navire -> Nombre de **navires**
   - [x] Navire non renseignés -> Navires non renseignés
 - [x] Mettre en place une pagination car la zone "Synthèse de l'avancement des calendriers d'activité" peut sortir de la page s'il y a trop de calendriers
-- [x] L'impression sort de la page à droite malgré le mode paysage
+- [ ] L'impression sort de la page à droite malgré le mode paysage [#757](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/757)
+- [ ] La colonne "Observateur(s)" est vide alors que le champ est renseigné dans l'IHM [#757](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/757)
+- [ ] Lors de la génération du rapport, ajouter une limite bloquante sur le nombre de calendriers ou à minima mettre un warning pour avertir l'utilisateur que les perfs seront dégradés [#757](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/757)
+- [ ] Erreur "Cannot read properties of null (reading 'replace')" lors de la génération du rapport pour tous les calendriers 2021 (soit 6257 calendriers - lié aux perfs ?)
+  ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Rapport_avancement_erreur_volumétrie.PNG)
+- [ ] Agencer les filtres dans le même ordre que dans l'application [#757](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/757)
+- [ ] Inclure les filtres "Objectif d'enquête directe" et "Objectif d'enquête éco" [#757](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/757)
 
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Rapport_avancement.PNG)
 ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Rapport_avancement_impression.PNG)
+
+# Paramètres systèmes
+
+- [ ] Erreur à l'enregistrement lorsque l'option "Saisie > Navire : Type(s) de navire (filtre)" est renseignée
+  ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Erreur_option_type_navire.PNG)

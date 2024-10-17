@@ -511,17 +511,16 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 **Variante :** Les 12 mois du calendrier ne sont pas saisis
 
 2. L'onglet "Calendrier" s'ouvre
-3. Le message "Calendrier incomplet" s'affiche [Fin]
+3. Le message bloquant "Calendrier incomplet" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle incohérente
 
 2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif,
-alors le message d'avertissement "Inactivité annuelle incohérente" s'affiche [Fin]
+alors le message bloquant "Inactivité annuelle incohérente" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle à confirmer
 
-2. Si tous les mois sont inactifs alors l'inactivié annuelle confirmée par l'observateur est obligatoire
-   et le message "Inactivité annuelle à confirmer" s'affiche ? [Fin]
+2. Si tous les mois sont inactifs alors l'inactivié annuelle confirmée par l'observateur est obligatoire [Fin]
 
 **Variante :** Le saisisseur reprend la saisie d'un calendrier terminé
 
