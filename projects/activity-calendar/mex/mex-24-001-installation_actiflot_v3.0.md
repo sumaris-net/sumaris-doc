@@ -20,7 +20,7 @@ sumaris.enumeration.Pmfm.SURVEY_QUALIFICATION.id=623
 sumaris.enumeration.Pmfm.SURVEY_RELIABILITY.id=681
 sumaris.enumeration.Pmfm.DURATION_AT_SEA_DAYS.id=241
 sumaris.enumeration.Pmfm.FISHING_DURATION_DAYS.id=242
-sumaris.enumeration.Pmfm.AUCTION_HABIT.id=501
+sumaris.enumeration.Pmfm.AUCTION_HABIT.id=521
 sumaris.enumeration.Pmfm.INACTIVITY_YEAR.id=1395
 sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 ```
