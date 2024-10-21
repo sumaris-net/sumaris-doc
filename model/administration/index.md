@@ -38,3 +38,10 @@ This is part the generic aspect of SUMARiS tools.
 ### Sampling strata (denormalized)
 
 ![denormalizedSamplingStrata](model/administration/samplingScheme/denormalized-sampling-strata.svg)
+
+---
+### User expertise area
+The expertise areas define the users' activity zones. The **local language translation** of the repository lists (species, profession, equipment, etc.).
+Combined with regionalization, it is then possible to **restrict the repository lists** to display only the relevant elements for the user's region.
+
+![UserActivityArea](model/referential/user-activity-area.svg)

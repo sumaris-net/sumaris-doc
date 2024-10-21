@@ -1,0 +1,67 @@
+@startuml
+hide empty members
+
+  class UserExpertiseArea {
+    + id : integer
+    + label : string
+    + name : string
+    + description: string [0..1]
+    + creationDate : Date
+    + updateDate : timestamp
+  }
+
+  note top of UserExpertiseArea : TODO: à valider
+  note right of UserExpertiseArea: Zone de compétence\nExemple: Guyane, La Réunion, Mayotte, etc.
+
+  class UserExpertiseArea2Location
+
+  note left: Lieux de la zone\n(terrestre et en mer)
+
+  package referential #DDDDDD {
+
+    class Status
+
+    object AnyReferentialItem
+
+    package location {
+      class LocationClassification
+      class Location
+
+      LocationClassification "1" <-right- "*" Location
+
+    }
+
+    note bottom of LocationClassification: Permet de distinguer\nlieux terrestres et en mer.
+
+    package spatial {
+      class SpatialItemType {
+        id: integer
+        label: string
+        name: string
+        objectType: ObjectType
+      }
+
+      class SpatialItem2Location
+      class SpatialItem {
+        objectId: integer
+      }
+
+
+      SpatialItem2Location "0..*" -up-> "1" SpatialItemType
+      SpatialItem2Location "0..*" --> "1" SpatialItem
+
+      SpatialItem --> AnyReferentialItem
+    }
+  }
+
+
+
+  UserExpertiseArea "*" --> "1" Status
+  UserExpertiseArea "1" *-- "0..*" UserExpertiseArea2Location: locations
+  UserExpertiseArea2Location "0..*" --> "1" Location
+
+  SpatialItem2Location "0..*" -up-> "1" Location
+
+}
+
+@enduml

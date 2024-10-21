@@ -13,11 +13,11 @@ Chaque élément d'entité référentielle possède un identifiant numérique, u
 ![location](model/referential/location.svg)
 
 Note:
-Une localisation peut être :
-- une localisation territoriale (par exemple, Pays, port, criée...)
+Un lieu peut être :
+- un lieu territorial (par exemple, Pays, port, criée...)
 - une zone de pêche, sur n'importe quelle unité spatiale administrative en mer (par exemple, zone FAO, division ou sous-division CIEM, CGPM...)
 
-Une localisation peut avoir une géométrie spatiale (zone, ligne, ou point) qui peut être utilisée par les capacités SIG de SUMARiS.
+Un lieu peut avoir une géométrie spatiale (zone, ligne, ou point) qui peut être utilisée par les capacités SIG de SUMARiS.
 
 ---
 ### Engin
@@ -68,9 +68,7 @@ Corpus, Pêcheries et tailles minimales autorisée
 ---
 ### Régionalisation
 
-La Régionalisation permet la **traduction en langue locale**, des listes du référentiel (espèces, métier, engins, etc.).
-Elle permet aussi la **personnalisation de ces listes** pour n'afficher que les éléments pertinents pour la région de l'utilisateur.
-
-![localization](model/referential/localization.svg)
+La régionalisation permet la **traduction en langue locale** des listes du référentiel (espèces, métier, engins, etc.).
+Elle permet ensuite, via les zones de compétence, la **personnalisation de ces listes** pour n'afficher que les éléments pertinents pour la région de l'utilisateur.
 
 ![spatial](model/referential/spatial.svg)

@@ -61,11 +61,11 @@ This class allows to define any kind of measure type, with the precision expecte
 ![regulation](model/referential/regulation.svg)
 
 ---
-### Localization
+### Spatial items
 
-Localization enables the **translation into the local language** of reference lists (species, metier, gear, etc.). 
-It also allows for the **customization of these lists** to display only the elements relevant to the user's region.
+Spatial items enables the **translation into the local language** of reference lists (species, metier, gear, etc.). 
+It also allows, using the user expertise area, to **customize these lists** to display only the elements relevant to the user's region.
 
-![localization](model/referential/localization.svg)
+![UserActivityArea](model/referential/UserActivityArea.svg)
 
 ![spatial](model/referential/spatial.svg)
