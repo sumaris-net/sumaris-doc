@@ -45,4 +45,4 @@ Cela fait partie de l'aspect générique des outils SUMARiS.
 Les zones de compétences permettent de définir les zones d'activité des utilisateurs.
 Combiner avec la régionalisation, il est alors possible de **restreindre les listes du référentiel*,* pour n'afficher que les éléments pertinents pour la région de l'utilisateur.
 
-![UserActivityArea](model/referential/user-activity-area.svg)
+![ActivityArea](model/administration/expertise-area.svg)
