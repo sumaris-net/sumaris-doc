@@ -66,6 +66,4 @@ This class allows to define any kind of measure type, with the precision expecte
 Spatial items enables the **translation into the local language** of reference lists (species, metier, gear, etc.). 
 It also allows, using the user expertise area, to **customize these lists** to display only the elements relevant to the user's region.
 
-![UserActivityArea](model/referential/UserActivityArea.svg)
-
 ![spatial](model/referential/spatial.svg)
