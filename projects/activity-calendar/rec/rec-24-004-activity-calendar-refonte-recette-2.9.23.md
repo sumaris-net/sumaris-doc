@@ -118,29 +118,52 @@
 
 Recette faite par Emilie Le Roy le 17/10/2024
 
+- Profil d'Emilie Le Roy : 
+  - Table USER_PROFIL : ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR 
+  - Table PROGRAM2PERSON : Administrateur, Observateur
+- Profil de Vincent Badts : Validateur
+  - Table USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
+  - Table PROGRAM2PERSON : Validateur
+- Profil de Vincent Fachéro : 
+  - Table USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
+  - Table PROGRAM2PERSON : Observateur
+- Profil de TSTQ2 :
+- Table USER_PROFIL : ALLEGRO_UTILISATEUR
+- Table PROGRAM2PERSON : Administrateur (ajouté)
+
+
 # Calendrier d'activité > Import
 
-- [X] Dans le menu contextuel, "importer depuis un fichier..." est grisé.
+- [ ] Dans le menu contextuel, "importer depuis un fichier..." est grisé.
+  - _MOE_ : Accessible pour les Administrateurs. A modifier, doit être accessible pour les coordinateurs de programme
+    [#771](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
 
 # Calendriers d'activité
 
 - [ ] Pas de bouton rafraîchir.
-- [ ] "Editer le rapport Formulaire vierge et Formulaire avec données" > grisés même si on sélectionne un navire.
+  - _MOE_ : Visible pour les admins (à corriger) 
+    [#771](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
 - [ ] Rajouter le lieu d'immatriculation en colonne car quand on filtre sur un lieu d'immat, ce lieu n'est ensuite visible que dans l'onglet navire du calendrier.
   - [ ] Quand on ouvre le calendrier, rajouter ce lieu dans le fil d'ariane ? : lieu immat - immat - nom - activité 2024 (Ex : **Point à Pitre - 935087 - MI BIGMAC - Activité 2024**)
-    - _A valider MOE/Dév_
+    - [#768](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/768)
+    - [#769](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/769)
+    - _MOE_ : A spécifier
+
 
 # Calendriers d'activité > Filtres
 
-- [ ] Le filtre navire ne fonctionne que sur l'immat et pas sur le nom. Et quand on commence à mettre une immat, ça donne une liste bizare, cf capture.
+- [X] Le filtre navire ne fonctionne que sur l'immat et pas sur le nom. Et quand on commence à mettre une immat, ça donne une liste bizare, cf capture.
+  - _MOE_ : Pour filtrer sur le nom il faut préfixer par *
 
 ![rec-activity-calendar-filtre-vessels](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Filtre_navire.PNG)
 
 - [ ] Organismes saisisseur : on ne doit voir que les sociétés qui ont des droits sur ACTIFLOT
+  - _MOE_ : Pas abordé durant la phase de spécifications, en V1.1 si possible
 
 # Calendrier d'activité > Navire
 
 - [ ] Marquage extérieur doit être modifié en "immatriculation"
+  [#617](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/617)
 
 # Calendrier d'activité > Calendrier
 
@@ -152,8 +175,10 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
 - [ ] Il faut bloquer l'usage de la molette pour les zones de saisie d'un nombre (Ex : Nombre de jours de mer)
   - On peut utiliser la molette et mettre des nombres négatifs. Il est d'ailleurs possible d'enregister avec un nombre négatif.
+  - _MOE_ : PMFM - Min à mettre sur le PMFM (PMFM_STRATEGY)
 
 - [ ] L'icône warning s'affiche mais quand on remplit le port, elle ne disparait pas. Idem après sauvegarde. cf capture.
+  - _MOE_ : A reproduire (lister l'erreur)
 
 ![rec-activity-calendar-warning](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Warning.PNG)
 
@@ -163,26 +188,39 @@ Recette faite par Emilie Le Roy le 17/10/2024
 # Calendrier d'activité > Validation
 
 - [ ] Action de "Dévalider" et "Valider" accessible même si on n'est pas Admin ?
+  - Responsable de programme ou superviseur (à vérifier car elle doit être superviseur)
+  - Pas accès à l'import car pas responsable de programme
 
-- [ ] La liste des qualifications n'est pas adaptée au programme ActiFlot 
+- [ ] La liste des qualifications n'est pas adaptée au programme ActiFlot
+  - _MOE - Avoir une option qui adapte la liste au programme (visible que d'Emilie) : en V1.1_
 
-- [ ] Erreur dans le scénario SqushTM : Les boutons "Dévalider" et "Qualifier (état)" sont cliquables
+- [ ] Erreur dans le scénario SquashTM : Les boutons "Dévalider" et "Qualifier (état)" sont cliquables
 
-- [ ] Cas de test d'un calendrier avec le flag Innactivité annuelle confirmée par l'observateur" à "Non" ET tous les mois du calendrier à l'état "Inactif"
-  - Il n'y a pas de message d'erreur quand on termine la saisie
+- [ ] Cas de test d'un calendrier avec le flag "Inactivité annuelle confirmée par l'observateur" à "Non" ET tous les mois du calendrier à l'état "Inactif"
+  - Il n'y a pas de message d'erreur quand on termine la saisie [#770](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/770)
 
 # Calendrier d'activité > Formulaire terrain avec données
 
-- [ ] Le lieu d'immatriculation n'est pas renseigné
+- [ ] Le lieu d'immatriculation n'est pas renseigné [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
+  - On perd ensuite les lieux d'immatriculation à l'affichage du calendrier (Cf mail Caroline du 17/10/2024)
+  - _MOE : Fixé dans la 2.9.24_
 
 - [ ] Résultat du filtre incohérent et "Erreur de chargement de données"
+  - _MOE_ : Problème de tri sur navire - [#723](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/723)
+    - _MOE_ : Il faut trier sur une autre colonne pour ne plus avoir l'erreur. Bug passé en priorité "Majeure"
+  - _MOE_ : Attente de la colonne Lieu d'immat
 
 ![rec-activity-calendar-filtre](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Liste_navire_incoherents.PNG)
 
 ![rec-activity-calendar-erreur](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Plantage.PNG)
 
 - [ ] C'est aléatoire, formulaire vierge et avec données ne sont pas toujours cliquables, il faut parfois rafraichir plusieurs fois
+  - _MOE_ : Bug reproduit si on n'a pas d'année de sélectionnée ou dans le filtre. Ce sera corrigé. Les formulaires seront toujours actifs mais bloqués s'il y a trop
+    de calendrier affiché. L'utilisateur sera averti. 
+  - _MOE_ : A paramétrer : Il est possible de fixer une limite pour bloquer et de fixer une limite pour avertir sur les 
+  - _MOE_ : A spécifier
 
 # Calendrier d'activité > Formulaire vierge
 
 - [ ] Instable : L'option est parfois grisée
+  - _MOE_ : Même comportement que le formulaire avec données
