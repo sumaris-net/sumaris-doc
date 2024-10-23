@@ -111,3 +111,78 @@
 
 - [ ] Erreur à l'enregistrement lorsque l'option "Saisie > Navire : Type(s) de navire (filtre)" est renseignée
   ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-004-2.9.23-Erreur_option_type_navire.PNG)
+
+
+  
+## Retours de recette MOA - release 2.9.23.3
+
+Recette faite par Emilie Le Roy le 17/10/2024
+
+# Calendrier d'activité > Import
+
+- [X] Dans le menu contextuel, "importer depuis un fichier..." est grisé.
+
+# Calendriers d'activité
+
+- [ ] Pas de bouton rafraîchir.
+- [ ] "Editer le rapport Formulaire vierge et Formulaire avec données" > grisés même si on sélectionne un navire.
+- [ ] Rajouter le lieu d'immatriculation en colonne car quand on filtre sur un lieu d'immat, ce lieu n'est ensuite visible que dans l'onglet navire du calendrier.
+  - [ ] Quand on ouvre le calendrier, rajouter ce lieu dans le fil d'ariane ? : lieu immat - immat - nom - activité 2024 (Ex : **Point à Pitre - 935087 - MI BIGMAC - Activité 2024**)
+    - _A valider MOE/Dév_
+
+# Calendriers d'activité > Filtres
+
+- [ ] Le filtre navire ne fonctionne que sur l'immat et pas sur le nom. Et quand on commence à mettre une immat, ça donne une liste bizare, cf capture.
+
+![rec-activity-calendar-filtre-vessels](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Filtre_navire.PNG)
+
+- [ ] Organismes saisisseur : on ne doit voir que les sociétés qui ont des droits sur ACTIFLOT
+
+# Calendrier d'activité > Navire
+
+- [ ] Marquage extérieur doit être modifié en "immatriculation"
+
+# Calendrier d'activité > Calendrier
+
+- [X] Bug de saisie (remonté par Vincent Badts) [#766](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/766)
+
+- [ ] Le bandeau de prédoc débarde de l'écran et est tronqué, on ne voit pas la source Sacrois-ObsDeb
+  - _MOE : Il n'y a pas de données Sacrois-ObsDeb dans ce cas_ 
+  - _MOA : Il faudrait que le choix de cocher s'affiche pas défaut même si pas de données. Comme ça on voit pas nous-même que le calendrier de predoc est vide et que donc pas de données._
+
+- [ ] Il faut bloquer l'usage de la molette pour les zones de saisie d'un nombre (Ex : Nombre de jours de mer)
+  - On peut utiliser la molette et mettre des nombres négatifs. Il est d'ailleurs possible d'enregister avec un nombre négatif.
+
+- [ ] L'icône warning s'affiche mais quand on remplit le port, elle ne disparait pas. Idem après sauvegarde. cf capture.
+
+![rec-activity-calendar-warning](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Warning.PNG)
+
+- [X] Le dénombrement des métiers ne se fait qu'après sauvegarde et pas au fil de la saisie, c'est bien ça ?
+  - _MOE_ : Oui
+
+# Calendrier d'activité > Validation
+
+- [ ] Action de "Dévalider" et "Valider" accessible même si on n'est pas Admin ?
+
+- [ ] La liste des qualifications n'est pas adaptée au programme ActiFlot 
+
+- [ ] Erreur dans le scénario SqushTM : Les boutons "Dévalider" et "Qualifier (état)" sont cliquables
+
+- [ ] Cas de test d'un calendrier avec le flag Innactivité annuelle confirmée par l'observateur" à "Non" ET tous les mois du calendrier à l'état "Inactif"
+  - Il n'y a pas de message d'erreur quand on termine la saisie
+
+# Calendrier d'activité > Formulaire terrain avec données
+
+- [ ] Le lieu d'immatriculation n'est pas renseigné
+
+- [ ] Résultat du filtre incohérent et "Erreur de chargement de données"
+
+![rec-activity-calendar-filtre](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Liste_navire_incoherents.PNG)
+
+![rec-activity-calendar-erreur](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Plantage.PNG)
+
+- [ ] C'est aléatoire, formulaire vierge et avec données ne sont pas toujours cliquables, il faut parfois rafraichir plusieurs fois
+
+# Calendrier d'activité > Formulaire vierge
+
+- [ ] Instable : L'option est parfois grisée

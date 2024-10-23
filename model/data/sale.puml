@@ -1,0 +1,30 @@
+@startuml
+hide empty members
+
+class Vessel {
+}
+
+class Sale {
+  +id: Integer
+  +program: Program
+  +StartDateTime: Date
+  +Location: Location
+  +startDateTime: Date
+  +Type: SaleType
+}
+
+class Trip {
+    +id: Integer
+}
+
+class Landing {
+    +id: Integer
+}
+
+Sale -up-> "1" Vessel
+Sale -up-> "1" Trip
+Sale -up-> "1" Landing
+
+
+
+@enduml
