@@ -153,17 +153,23 @@ Recette faite par Emilie Le Roy le 17/10/2024
 # Calendriers d'activité > Filtres
 
 - [X] Le filtre navire ne fonctionne que sur l'immat et pas sur le nom. Et quand on commence à mettre une immat, ça donne une liste bizare, cf capture.
-  - _MOE_ : Pour filtrer sur le nom il faut préfixer par *
+  - _MOE_ : Pour filtrer sur le nom il faut préfixer par * et mettre le nom recherché en minuscule. 
+  [#737](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/737)
 
 ![rec-activity-calendar-filtre-vessels](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Filtre_navire.PNG)
 
 - [ ] Organismes saisisseur : on ne doit voir que les sociétés qui ont des droits sur ACTIFLOT
-  - _MOE_ : Pas abordé durant la phase de spécifications, en V1.1 si possible
+  - _MOE_ : **Pas abordé durant la phase de spécifications, en V1.1 si possible**
 
 # Calendrier d'activité > Navire
 
 - [ ] Marquage extérieur doit être modifié en "immatriculation"
   [#617](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/617)
+
+  _MOE_ : On a déja l'immatriculation dans le tableau ci dessous. Ce n'est pas juste un renommage de colonne dans les caractéristiques.  
+  On peut proposer : 
+  - Recopier l'immat dans le tableau des caractéristiques et enlever la colonne marquage : la colonne immat ne sera pas triable
+  - Le tableau des immatriculations est au dessus du tableau des caractéristiques
 
 # Calendrier d'activité > Calendrier
 
@@ -173,13 +179,17 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - _MOE : Il n'y a pas de données Sacrois-ObsDeb dans ce cas_ 
   - _MOA : Il faudrait que le choix de cocher s'affiche pas défaut même si pas de données. Comme ça on voit pas nous-même que le calendrier de predoc est vide et que donc pas de données._
 
-- [ ] Il faut bloquer l'usage de la molette pour les zones de saisie d'un nombre (Ex : Nombre de jours de mer)
+- [X] Il faut bloquer l'usage de la molette pour les zones de saisie d'un nombre (Ex : Nombre de jours de mer)
   - On peut utiliser la molette et mettre des nombres négatifs. Il est d'ailleurs possible d'enregister avec un nombre négatif.
-  - _MOE_ : PMFM - Min à mettre sur le PMFM (PMFM_STRATEGY)
+  - _MOE_ : PMFM - Min à mettre sur le PMFM à 1 (on ne peut pas mettre 0 en min). 
+  - _MOE_ : PMFM - positionner le 0 en BDD (PMFM_STRATEGY).
+    [772](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/772)
 
 - [ ] L'icône warning s'affiche mais quand on remplit le port, elle ne disparait pas. Idem après sauvegarde. cf capture.
   - _MOE_ : A reproduire (lister l'erreur)
-
+  - _MOE_ : Problème de recopie de la totalité de la prédoc : On perd le bloc métier de la prédoc à la sauvegarde et au rafraichissement. Ticket à ouvrir.
+    [773](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)
+  
 ![rec-activity-calendar-warning](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Warning.PNG)
 
 - [X] Le dénombrement des métiers ne se fait qu'après sauvegarde et pas au fil de la saisie, c'est bien ça ?
@@ -189,10 +199,9 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
 - [ ] Action de "Dévalider" et "Valider" accessible même si on n'est pas Admin ?
   - Responsable de programme ou superviseur (à vérifier car elle doit être superviseur)
-  - Pas accès à l'import car pas responsable de programme
 
 - [ ] La liste des qualifications n'est pas adaptée au programme ActiFlot
-  - _MOE - Avoir une option qui adapte la liste au programme (visible que d'Emilie) : en V1.1_
+  - _MOE_ - **Avoir une option qui adapte la liste au programme (visible que d'Emilie) : en V1.1**
 
 - [ ] Erreur dans le scénario SquashTM : Les boutons "Dévalider" et "Qualifier (état)" sont cliquables
 
@@ -216,9 +225,9 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
 - [ ] C'est aléatoire, formulaire vierge et avec données ne sont pas toujours cliquables, il faut parfois rafraichir plusieurs fois
   - _MOE_ : Bug reproduit si on n'a pas d'année de sélectionnée ou dans le filtre. Ce sera corrigé. Les formulaires seront toujours actifs mais bloqués s'il y a trop
-    de calendrier affiché. L'utilisateur sera averti. 
-  - _MOE_ : A paramétrer : Il est possible de fixer une limite pour bloquer et de fixer une limite pour avertir sur les 
-  - _MOE_ : A spécifier
+    de calendriers affichés. L'utilisateur sera averti. 
+  - _MOE_ : A paramétrer : Il est possible de fixer une limite pour bloquer et de fixer une limite pour avertir les saisisseurs 
+  - _MOE_ : A proposer spécifier 
 
 # Calendrier d'activité > Formulaire vierge
 
