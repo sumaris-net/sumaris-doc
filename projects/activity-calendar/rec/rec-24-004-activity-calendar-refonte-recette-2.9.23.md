@@ -118,17 +118,19 @@
 
 Recette faite par Emilie Le Roy le 17/10/2024
 
-- Profil d'Emilie Le Roy : 
-  - Table USER_PROFIL : ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR 
+# Configuration des profils
+
+- Profil d'Emilie Le Roy (Responsable de programme): 
+  - Table PERSON2USER_PROFIL : ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR 
   - Table PROGRAM2PERSON : Administrateur, Observateur
-- Profil de Vincent Badts : Validateur
-  - Table USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
-  - Table PROGRAM2PERSON : Validateur
-- Profil de Vincent Fachéro : 
-  - Table USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
+- Profil de Vincent Badts (Administrateur): 
+  - Table PERSON2USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
+  - Table PROGRAM2PERSON : 
+- Profil de Vincent Fachéro (Administrateur): 
+  - Table PERSON2USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
   - Table PROGRAM2PERSON : Observateur
-- Profil de TSTQ2 :
-- Table USER_PROFIL : ALLEGRO_UTILISATEUR
+- Profil de TSTQ2 (Responsable de programme):
+- Table PERSON2USER_PROFIL : ALLEGRO_UTILISATEUR
 - Table PROGRAM2PERSON : Administrateur (ajouté)
 
 
@@ -164,7 +166,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
 # Calendrier d'activité > Navire
 
 - [ ] Marquage extérieur doit être modifié en "immatriculation"
-  [#617](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/617)
+  [#774](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/774)
 
   _MOE_ : On a déja l'immatriculation dans le tableau ci dessous. Ce n'est pas juste un renommage de colonne dans les caractéristiques.  
   On peut proposer : 
@@ -183,12 +185,12 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - On peut utiliser la molette et mettre des nombres négatifs. Il est d'ailleurs possible d'enregister avec un nombre négatif.
   - _MOE_ : PMFM - Min à mettre sur le PMFM à 1 (on ne peut pas mettre 0 en min). 
   - _MOE_ : PMFM - positionner le 0 en BDD (PMFM_STRATEGY).
-    [772](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/772)
+    [#772](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/772)
 
 - [ ] L'icône warning s'affiche mais quand on remplit le port, elle ne disparait pas. Idem après sauvegarde. cf capture.
   - _MOE_ : A reproduire (lister l'erreur)
-  - _MOE_ : Problème de recopie de la totalité de la prédoc : On perd le bloc métier de la prédoc à la sauvegarde et au rafraichissement. Ticket à ouvrir.
-    [773](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)
+  - _MOE_ : Problème de recopie de la totalité de la prédoc : On perd le bloc métier de la prédoc à la sauvegarde et au rafraichissement.
+    [#773](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)
   
 ![rec-activity-calendar-warning](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Warning.PNG)
 
@@ -233,3 +235,81 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
 - [ ] Instable : L'option est parfois grisée
   - _MOE_ : Même comportement que le formulaire avec données
+
+
+## Retours de recette Utilisateurs - release 2.9.23.3
+
+- Lise MAS (CAPENA)
+
+- Points positifs :
+  - Merci d’avoir permis de masquer la colonne de gauche (double flèche rose en bas), cela permet de voir le calendrier en entier de janvier à décembre, ce qui n’est pas le cas si on laisse cette colonne visible.
+  - Lorsque l’on voit le calendrier en entier, on retrouve la forme que nous avions sur le logiciel Allegro habituel. Donc nickel.
+  - Je trouve ça très bien de pouvoir supprimer des cellules sans être obligée de confirmer la suppression
+
+# Calendriers d'activité et # Calendriers d'activité > Filtre
+
+- [ ] Bug : Aucun observateur de CAPENA n’apparaît dans la liste « Observateurs ». Dans le filtre, la société n'est pas trouvée.
+  - _MOE : Vérifier les requêtes côté POD_
+
+# Calendriers d'activité > Calendrier
+
+- [ ] Remarque : Pour ajouter une info dans une case, il faut double-cliquer : un simple clic ne serait-il pas mieux ?
+  - _MOE : Non, le simple clique permet de sélectionner une cellule. L'appuie de la touche "Entrée" permet de rentrer en édition._
+
+- [ ] Question : A quoi correspondent les étoiles roses en bas des mois ? Elles apparaissent dès qu’il y a une action faite sur un mois.
+  - _MOE : Elles apparaissent quand on a des modifications non enregistrées sur un mois_ 
+
+- [ ] Question : Le mois de décembre a un problème (rond rose avec point d’exclamation), mais comment puis-je connaître le problème ?
+  - _MOE : En passant la souris dessus, le message d'erreur apparait_
+
+- [ ] Bug : Dès que l’on sélectionne plusieurs cases d’un même mois ou d’un même métier, cette sélection reste apparente (tirets roses) et cette sélection reste apparente sauf si je fais une autre sélection de une ou plusieurs cases
+  - _MOE : Je le reproduis en faisant un copié. Pour que la sélection disparaisse, il faut coller la sélection ou appyuer sur "Echap" pour annuler la copie.
+
+- [ ] Bug : Lorsque l’on sélectionne une case, si on monte ou on descend, le rectangle bleu reste au même endroit et le texte monte et descend
+  - _MOE : Je ne reproduis pas ce comportement, il faudrait une démonstration_
+
+
+- Nicolas GOASCOZ (IFREMER)
+
+- Points positifs :
+  - Je trouve cela intéressant de voir l’historique du navire.  
+  - « * » fonctionne au top pour filtrer dans un champ
+
+# Calendriers d'activité 
+
+- [ ] Remarque : « l’état » (en cours, pas saisis, saisis ou synchronisés)  ne sont pas très visibles comme précédemment à part la coche
+
+- [ ] Remarque : Il ne faut qu’un seul clic pour accéder au navire alors que dans l’interface suivante il faut un double clic sur les divers champs (l’inverse serait top).
+  - _MOE : Non, le simple clique permet de sélectionner une cellule. L'appuie de la touche "Entrée" permet de rentrer en édition._
+
+# Calendriers d'activité > Calendrier
+
+- [ ] Remarque : Serait-il possible que certains raccourcis clavier fonctionne comme "tab" entre autre, après je ne sais si les autres utilisateurs sont avides des contrôles clavier. Sinon sur mon ordi, des fois ctrl+C et ctrl+V ne fonctionne pas ?!
+  - _MOE : Oui, on peut envisager d'autres raccourcis claviers._
+
+- [ ] Bugs : 
+  - [ ] Par moment un ensemble d’incohérences sur les différents référentiels apparait
+
+![rec-activity-calendar-ref](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Référentiels_incohérents.PNG)
+
+  - [ ] Quand on supprime une colonne, seul le champ « actif » ne s’efface pas
+    - _MOE : Non reproduit_
+
+  - [ ] Quand on sélectionne un champ cela sélectionne l’ensemble de la colonne
+    - _MOE : Non reproduit_
+
+  - [ ] Impossibilité de sélectionner plusieurs colonnes (pour les supprimer par exemple)
+    - _MOE : Si, en appyant sur "Shift"_
+
+  - [ ] On ne peut copier l’ensemble d’un bloc métier (avec zone, gradient côte), on ne copie juste le nom du métier
+    - _MOE : Si, en appyant sur "Shift"_
+
+  - [ ] Quand on fait F5 par erreur (ou lors d’un bug pour actualiser) cela supprime l’ensemble des mois saisis si on n’a pas sauvegardé avant !
+    - _MOE Oui. A voir pour détecter un rafraichissement et proposer une sauvegarde s'il des modifications sont en cours_
+  
+  - [ ] Des fois le champ « actif » (ou autre) me fait défaut, il affiche "ActifActifActif"
+
+![rec-activity-calendar-actif](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Actif.PNG)
+
+  - [ ] Les métiers que j'ai saisi hier n’apparaissent plus sur mon navire!
+    - _MOE : A vérifier_
