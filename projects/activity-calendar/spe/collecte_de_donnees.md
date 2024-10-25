@@ -122,6 +122,7 @@ Les informations suivantes sont affichées pour chaque calendrier :
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
    * Le programme
    * Le navire (immatriculation + nom)
+   * Le lieu d'immatriculation
    * L'année
    * L'objectif d'enquête directe
    * L'objectif d'enquête éco

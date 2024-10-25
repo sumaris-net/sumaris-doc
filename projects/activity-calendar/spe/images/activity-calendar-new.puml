@@ -1,12 +1,10 @@
 @startsalt
 {
-  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
+  Navire : <b>LIEU IMMAT - 123456 - VESSEL1 - Activité 2022
   --
-  {/ Général | Navire | <b>Calendrier (4) | Métiers | Carte}
+  {/ <&info>Général | Navire | <b><&calendar>Calendrier (4)| <&cog>Métiers (2)) | <font color=grey>Carte}
   ..
-  .
-
-
+  {<&plus> <&elevator> <&expand-down> }
   {<b>Calendrier d'activité}
 	{S-
 	{#
@@ -19,15 +17,17 @@
      Nombre de jours de pêche | . | . | 10 | 15 | . | . | .
      Nombre de personnes à bord | . | . | 2 | 2 | . | . | .
      Métier #1 <&chevron-top> | . | . | ^GTRMZZ - Trémails à poissons               ^ | ^GTRMZZ - Trémails à poissons               ^ | . | . | .
-     Zone #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
-     Gradient côte* <&chevron-bottom>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
-     Zone #2 | . | . | . | . | . | .
-     Gradient côte <&chevron-bottom>| . | . | . | . | . | . | .
+     <U+0020><U+0020>Zone de pêche #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^| ^MD11 - 3 à 12 milles, région LR, partie Sud^ | . | . | .
+     <U+0020><U+0020>Gradient côte* <&chevron-top>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^| ^3-12 Mil. - 3 à 12 milles                  ^ | . | . | .
+     <U+0020><U+0020><U+0020><U+0020>Profondeur | . | . | ^10-30m - Profondeur 10 à 30 mètres^| ^30-50m - Profondeur 30 à 50 mètres^ | . | . | .
+     <U+0020><U+0020><U+0020><U+0020>Zone proche| . | . | ^DCP^| ^Filière^ | . | . | .
+     Zone de pêche  #2 | . | . | . | . | . | .
+     Gradient côte* <&chevron-bottom>| . | . | . | . | . | . | .
      Métier #2 <&chevron-top>| . | . | ^GTRNEP - Trémails à langoustines           ^ | . | . | . | .
-     Zone #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^|.| . | . | .
-     Gradient côte <&chevron-bottom>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^|.| . | . | .
-     Zone #2 | . | . | . | . | . | . | .
-     Gradient côte <&chevron-bottom>| . | . | . | . | . | . | .
+     Zone de pêche  #1 | . | . | ^MD11 - 3 à 12 milles, région LR, partie Sud^|.| . | . | .
+     Gradient côte* <&chevron-bottom>| . | . | ^3-12 Mil. - 3 à 12 milles                  ^|.| . | . | .
+     Zone de pêche  #2 | . | . | . | . | . | . | .
+     Gradient côte* <&chevron-bottom>| . | . | . | . | . | . | .
     }
     }
   --

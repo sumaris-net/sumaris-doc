@@ -1,14 +1,19 @@
 @startsalt
 {
-  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
+  Navire : <b>LIEU IMMAT - 123456 - VESSEL1 - Activité 2022
   --
-  {/ <b>Général | Navire | Calendrier | Métiers | Carte}
+  {/ <b><&info>Général | Navire | <&calendar>Calendrier | <&cog>Métiers | <font color=grey>Carte}
   ..
   .
   {{
-    Objectif d'enquête directe ?* | ^Oui      ^
+    <font color=grey>Objectif d'enquête directe ?* | { (X) <font color=grey><b>Oui | () <font color=grey>Non }
     Enquête éco ?* | { (X) <b>Oui | () Non }} |
   }
+  .
+    <b>Observateur(s)
+       {
+       . | ^Observateur1 ^ | . |  . | . | . | . | . | <&plus> <&x>
+       }
   .
   {
   <b>Caractéristiques de l'enquête
@@ -17,8 +22,8 @@
      . | Fiabilité de l'enquête* : | ^Fiable   ^
      . | Inactivité annuelle confirmée par l'observateur : | { () Oui | (X) <b>Non }
      . | Le professionnel accepterait-il de répondre à une autre enquête ?* : | { () Oui | (X) <b>Non }
-     . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^         ^
-     . | Habitudes de vente à la criée : | ^         ^
+     . | Métiers déclarés dans les journeaux de bord/fiches de pêche : | ^Aucun^
+     . | Habitudes de vente à la criée : | ^Partie en criée^
      }
   } . {{+
                            {
@@ -29,7 +34,7 @@
                            {
                            <font color=grey size=10>Observateur(s)
                            Obs1
-                           <font color=grey size=10>Groupe EI
+                           <font color=grey size=10>Groupe XX
                            --
                            <font color=grey size=10><&calendar>Créé le 20/03/2023 17:08
                            <font color=grey size=10><&clock>Mis à jour le 20/03/2023 17:08:31

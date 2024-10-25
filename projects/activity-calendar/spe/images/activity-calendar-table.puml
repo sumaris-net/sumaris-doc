@@ -1,14 +1,14 @@
 @startsalt
 {
-  {<b>Calendriers d'activité                                                                                                                                                                <&plus> <&reload> Y {[2022 <&chevron-bottom>]} <&menu>}
+  {<b>Calendriers d'activité                                                                                                                                                                                                                              <&reload> Y {[2022 <&chevron-bottom>]} <&menu>}
   --
 	{#
 
-     [ ]. | <b># | <b>Etat | <b>Programme |  <b>Navire | <b>Année | <b>Objectif d'enquête directe ? | <b>Objectif d'enquête éco ?|<b>Observateur(s) | .
-     [ ]. | 1234 | <b>  <&check> | SIH-ACTIFLOT | 123456 - SONNY | 2022 | Oui | Oui | Obs1, Obs2 | .
-     [ ]. | 2345 | <b>  <&pencil> | SIH-ACTIFLOT | CN123456 - Vessel 3 | 2022 | Non | Non | Obs3 | <&comment-square>
-     [ ]. | 3456 | <b>  <&pencil> | SIH-ACTIFLOT | CN78946 - Vessel 2 | 2022 | Oui | Non | .
+     [ ]. | <b># | <b>Etat | <b>Programme |  <b>Navire | <b>Lieu d'immatriculation | <b>Année | <b>Objectif d'enquête directe ? | <b>Objectif d'enquête éco ?|<b>Observateur(s) | <b>Saisisseur
+     [ ]. | 1234 | <b>  <&check> | SIH-ACTIFLOT | 123456 - SONNY | CN - Caen |2022 | Oui | Oui | Obs1, Obs2 | Ifr1 |.
+     [ ]. | 2345 | <b>  <&pencil> | SIH-ACTIFLOT | CN123456 - Vessel 3 | CN - Caen | 2022 | Non | Non | Obs3 | Ifr1 | <&comment-square>
+     [ ]. | 3456 | <b>  <&pencil> | SIH-ACTIFLOT | CN78946 - Vessel 2 | CN - Caen | 2022 | Oui | Non | . | Ifr1 | .
     }
-
+     { <font color=grey>Nombre de lignes affichées</font> |  " 20 "  | . | . | . | . | <font color=grey>1 - 3 sur 3 | . | . | . | . | <&caret-left> <&chevron-left> <&chevron-right> <&caret-right> }
 }
 @endsalt

@@ -1,8 +1,9 @@
 @startsalt
 {
-  Navire : <b>SONNY - 123456 - MA - 7,81 m - 2022
+  Navire : <b>LIEU IMMAT - 123456 - VESSEL1 - Activité 2022
   --
-  {/ Général | Navire | Calendrier (4) | <b>Métiers (2) | Carte}
+  {/ <b><&info>Général | Navire | <&calendar>Calendrier | <b><&cog>Métiers (2)) | <font color=grey>Carte}
+
   ..
   {# . | # |Métier | {<b>Maillage de l'engin (logbook) (mm)
                 engin -
