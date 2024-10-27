@@ -69,6 +69,7 @@ Les saisies bureau et tablette sont envisagées.
 > - Donner la possibilité aux observateurs d'accéder à la prédoc sur le site web du SIH, actuellement ils passent par leur superviseur
 
 #### Détails techniques :
+
 * Administrateur de référentiels :
   * PERSON2USER_PROFIL = 1
   * PROGRAM2PERSON = vide
@@ -93,10 +94,11 @@ L'interface est composée des éléments graphiques suivants :
 1. Interface de gauche : Arbre du menu, interface récapitulative des onglets principaux
    * Permet de savoir ou on se trouve dans l'arbre du menu et de pouvoir naviguer dans les noeuds de l'arbre
 2. Un bandeau horizontal, récapitulatif du calendrier d'activité
-   * A la sélection d'un calendrier, le bandeau affiche les informations suivantes
+   * A la sélection d'un calendrier, le bandeau affiche les informations suivantes (séparées par un "-")
+     * Lieu d'immatriculation du navire
      * Immatriculation du navire
      * Nom du navire
-     * Année
+     * "Activité" + Année
 
 #### Scénario principal
 
@@ -120,17 +122,18 @@ Les informations suivantes sont affichées pour chaque calendrier :
      * "Terminé" : _réprésenté par une icône :heavy_check_mark: dans la cellule_
      * "Validé" : _réprésenté par une icône :white_check_mark: dans la cellule_
      * "Qualifié" : _réprésenté par une icône :checkered_flag: dans la cellule_
-   * Le programme
    * Le navire (immatriculation + nom)
    * Le lieu d'immatriculation
    * L'année
    * L'objectif d'enquête directe
    * L'objectif d'enquête éco
    * Les observateurs
+   * Les saisisseurs
    * Les commentaires
-3. Le saisisseur filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
+3. Le saisisseur peut activer un filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
 4. Le saisisseur accède à un calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)
 5. Le saisisseur importe des calendriers d'activité vides (REF: ACTIVITY_CALENDAR/IMPORT)
+   - Pour avoir cette fonctionnalité, il doit être administrateur ou responsable de programme
 
 #### Détails techniques
   * Objectif d'equête directe : donnée consultative issue de Festif
@@ -160,15 +163,14 @@ Les filtres des calendriers d'activité sont accessibles depuis le tableau de co
    * Le programme de collecte
    * Le lieu d'immatriculation
    * Le port d'exploitation
-   * Le type de navire
    * Le navire
+   * Le type de navire
+   * L'observateur
+   * L'état
    * L'objectif d'enquête directe
    * L'objectif d'enquête éco
    * L'organisme de l'observateur
-   * L'observateur
-   * L'état
-   * Le niveau de qualité (visible uniquement si l'état est "Qualifié")
-
+   * Le saisisseur
 
 Les critères suivants sont multiples (dev en cours sur Imagine) :
   * Le navire
@@ -197,7 +199,7 @@ Les critères suivants sont multiples (dev en cours sur Imagine) :
 
 **REF: ACTIVITY_CALENDAR/IMPORT**
 
-L'import des calendriers d'activité vides est accessibles depuis le tableau de consultation des calendriers d'activité par les administrateurs et les responsables de programme
+L'import des calendriers d'activité vides est accessibles depuis le tableau de consultation des calendriers d'activité par les administrateurs et les responsables de programme.
 Le fichier csv d'import est basé sur la feuille de route (cf [mantis 61967](https://forge.ifremer.fr/mantis/view.php?id=61967))
 
 #### Scénario principal
@@ -230,34 +232,37 @@ professionnel et que l’engin n’est plus pêchant.
 
 ![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-general-comments.svg)
 
-Les calendriers d'activité sont accessibles depuis le tableau de consultation des calendriers d'activité
+Les calendriers d'activité sont accessibles depuis le tableau de consultation des calendriers d'activité (REF: ACTIVITY_CALENDAR)
 
 #### Scénario principal
 
 1. Le saisisseur clique sur un calendrier d'activité
-2. Le bandeau de l'écran affiche "Navire : Immatriculation du navire - Nom du navire - <b>Activité Année</b>"
-3. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 5 onglets :
+2. Le bandeau de l'écran affiche "Lieu d'immatriculation - Immatriculation du navire - Nom du navire - <b>Activité Année</b>"
+3. L'écran "Calendrier d'activité" s'ouvre. Il est composé de 4 onglets :
    * "Général", onglet par défaut
    * "Navire"
    * "Calendrier"
    * "Métiers"
 4. Dans l'onglet "Général", les informations suivantes sont affichées :
-   * L'objectif d'enquête directe (Oui/Non/Opportuniste - non modifiable)
-   * L'objectif d'enquête éco (Oui/Non - non modifiable)
+   * L'objectif d'enquête directe ? (Oui/Non/Opportuniste - non modifiable)
+   * L'objectif d'enquête éco ? (Oui/Non - non modifiable)
    * Les observateurs (visible uniquement pour les administrateurs et responsables de programme) (par défaut contient le ou les saisisseurs qui ont enregistré le calendrier)
-   * La stratégie
-   * Le nom, le prénom et la société de chaque observateur
-   * La date de création
-   * La date de mise à jour
-   * Le mode de saisie (Bureau ou Terrain)
+     * Plusieurs observateurs peuvent être ajoutés
 5. Le saisisseur renseigne les caractéristiques de l'enquête (par défaut les valeurs sont vides)
     * Qualification de l'enquête, Fiabilité de l'enquête, Inactivité annuelle confirmée par l'observateur, Le professionnel accepterai-il de 
 répondre à une autre enquête, Métiers déclarés dans les journeaux de bord/fiches de pêche, Habitudes de vente à la criée ...
+6. Un encart, à droite, affiche les information suivantes
+    * La stratégie
+    * Le nom, le prénom et la société du saisisseur
+    * La date de création
+    * La date de mise à jour
+    * Le mode de saisie (Bureau ou Terrain)
+    * Un bouton permettant de terminer/qualifier la saisie
 6. Le saisisseur saisit un commentaire
-7. Le saisisseur enregistre le commentaire
-8. Le commentaire apparait en haut de la liste des commentaires
-9. Le saisisseur enregistre
-10. La date de mise à jour du calendrier est actualisée
+8. Le saisisseur enregistre le commentaire
+9. Le commentaire apparait en haut de la liste des commentaires
+10. Le saisisseur enregistre
+11. La date de mise à jour du calendrier est actualisée
 
 
 **Variante(s) :**
@@ -284,7 +289,7 @@ un warning est affiché [Retour en 6]
     * Un tableau sur les caractéristiques du navire. Les informations qui changent d'une ligne à l'autre sont mises en gras. Le tableau contient :
       * Début validité
       * Fin validité
-      * Marquage extérieur
+      * Marquage extérieur (supprimer pour afficher l'Immatriculation)
       * Nom
       * FPC ?
       * Puissance administrative (kW)
@@ -305,13 +310,13 @@ un warning est affiché [Retour en 6]
       * Code armateur
       * Nom
       * Prénom
-    * Une zone contenant l'historisation des photos du navire
+    * _En version 2_ : Une zone contenant l'historisation des photos du navire 
       * Par défaut, on affiche l'historique des photos sur 3 années précédentes par rapport à l'année du calendrier en cours de visualisation (date début au 1er Janvier)
       * Ce nombre d'année est paramètrable dans les préférences
       * Pour la visualisation d'un calendrier sur une année précédente, on affiche des photos sur 3 années précédentes et les photos des calendriers futurs
-3. Le saisisseur clique sur l'onglet "Photos". L'onglet contient les photos ajoutées en cours de l'année en cours de visualisation
+3. _En version 2_ : Le saisisseur clique sur l'onglet "Photos". L'onglet contient les photos ajoutées en cours de l'année en cours de visualisation
     * La date du jour peut être renseignée dans le titre de la photo (28/05/2024)
-4. Le saisisseur ajoute des photos du navire
+4. _En version 2_ : Le saisisseur ajoute des photos du navire
 
 
 Une photo est associée au navire (VESSEL.ID) et à une période (CALENDAR_ACTIVITY).
@@ -337,14 +342,14 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
 2. Dans l'onglet "Calendrier", le saisisseur consulte le calendrier de l'année en cours. Pour chaque mois, les informations suivantes sont affichées :
     * L'armateur
     * Le lieu d'immatriculation
-    * L'activité du navire
+    * L'activité du navire ("Actif ?" ou "Inactif ?")
     * Le port d'exploitation
     * Le nombre de jours de mer
     * Le nombre de jours de pêche
     * Le nombre de personnes à bord
     * Le ou les métiers. Par défaut, les métiers sont dépliés si le calendrier est vide, repliés sinon
     * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
-    * Le gradient de côte, le gradient de profondeur et la zone proche rattachés à chaque zone. Le gradient de profondeur et la zone proche sont visibles selon la zone de compétence sélectionnée
+    * Le gradient de côte, le gradient de profondeur et la zone proche rattachée à chaque zone. Le gradient de profondeur et la zone proche sont visibles selon la zone de compétence sélectionnée
 3. Le saisisseur affiche la prédocumentation. Par défaut, les sources "Enquête N-1" et "Sacrois-ObsDeb" sont affichées si elles existent. La zone d'affichage de la prédocumentation est ajustable et peut être sauvegardée.
 4. Le saisisseur consulte la prédocumentation. Pour chaque mois et pour chaque source, les informations suivantes sont affichées :
    * La source
@@ -357,12 +362,12 @@ La zone de prédocumentation s'affiche/se masque par un bouton en bas de l'écra
    * La ou les zones rattachées à chaque métier (maximum 2). Un astérisque à droite de la zone indique que celle-ci est issue de données de géolocalisation (VMS ou Recopesca)
    * Le gradient de côte, le gradient de profondeur et la zone proche rattaché à chaque zone. Le gradient de profondeur et la zone proche sont visible selon la zone de compétence sélectionnée
 5. Le saisisseur désélectionne la source de la prédocumentation qu'il ne souhaite pas réutiliser dans le calendrier de l'année en cours
+   * Les mois correspndant à la source déselectionnée n'apparaissent plus dans la prédocumentation
 6. Le saisisseur copie la prédocumentation dans le calendrier de l'année en cours
 7. Le compteur de mois saisis présents sur le titre de l'onglet "Calendrier" apparait et indique le nombre de mois du calendrier ou l'activité du navire est renseignée
-8. Les métiers présents dans le calendrier et ayant un engin associés sont automatiquement ajoutés dans l'onglet "Métiers"
-9. Le compteur de métiers présent sur le titre de l'onglet "Métiers" apparait et indique le nombre de métiers distincts et ayant un engin associé présents dans le calendrier
-10. Le saisisseur masque la prédocumentation
-11. Le saisisseur complète les données manquantes ou erronées pour chaque mois via une saisie manuelle, un étirement de cellules ou 
+8. Les métiers présents dans le calendrier et ayant un engin associés sont ajoutés dans l'onglet "Métiers" à chaque sauvegarde
+9. Le saisisseur masque la prédocumentation
+10. Le saisisseur complète les données manquantes ou erronées pour chaque mois via une saisie manuelle, un étirement de cellules ou 
 un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier ou depuis la prédocumentation. Les données concernées sont les suivantes :
    * L'activité du navire* :
      * Actif
@@ -376,12 +381,12 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
          * Le gradient de côte*
          * Le gradient de profondeur (visible selon la zone de comptétence sélectionnée)
          * La zone proche (visible selon la zone de comptétence sélectionnée)
-12. Le compteur de l'onglet "Calendrier" est mis à jour
+11. Le compteur de l'onglet "Calendrier" est mis à jour
+12. Le saisisseur enregistre le calendrier
 13. L'onglet "Métiers" est mis à jour avec les métiers distincts ayant un engin associé
 14. Le compteur de l'onglet "Métiers" est mis à jour
-15. Le saisisseur enregistre le calendrier
-16. Les blocs métiers sont repliés
-17. La date de mise à jour du calendrier est actualisée
+15. Les blocs métiers sont repliés
+16. La date de mise à jour du calendrier est actualisée
 
 **Variante(s) :**
 
@@ -392,27 +397,27 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
 
 **Variante :** Copier des données incohérentes
 
-11. Le saisisseur copie des données vers des données d'un autre type, un message bloquant s'affiche (exemple : copie du nombre de jours de mer vers le port d'exploitation) [Retour en 11]
+10. Le saisisseur copie des données vers des données d'un autre type, un message bloquant s'affiche (exemple : copie du nombre de jours de mer vers le port d'exploitation) [Retour en 11]
 
 **Variante :** Erreur nombre de jours en mer et nombre de jours de pêche
 
-16. Le saisisseur saisit un nombre de jours de mer ou un nombre de jours de pêche inférieur à 0 ou supérieur à 31, un message bloquant s'affiche [Retour en 15]
+10. Le saisisseur saisit un nombre de jours de mer ou un nombre de jours de pêche inférieur à 0 ou supérieur à 31, un message bloquant s'affiche [Retour en 15]
 
 **Variante :** Erreur métier en doublon
 
-15. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 15]
+10. Le saisisseur saisit un métier deux fois sur un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 10]
 
 **Variante :** Erreur zone en doublon
 
-15. Le saisisseur saisit une zone deux fois sur un métier d'un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 15]
+10. Le saisisseur saisit une zone deux fois sur un métier d'un mois (via copier-coller), un message s'affiche sur le ou les mois concernés et un message bloquant s'affiche à l'enregistrement. [Retour en 10]
 
 **Variante :** Saisie non valide à l'enregistrement
 
-16. Les lignes en erreur sont dépliées, les lignes valides sont repliées [Retour en 15]
+12. Les lignes en erreures sont dépliées, les lignes valides sont repliées [Retour en 16]
 
 **Variante :** Vider calendrier 
 
-16. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 15]
+16. Le saisisseur vide le calendrier, l'ensemble des données saisies dans le calendrier sont supprimées. [Retour en 10]
 
 
 #### Détails techniques :
@@ -466,9 +471,10 @@ Info présente dans P08_SACROIS_PREDOC.SECT_1_IND_GEOLOC du schéma PRESTO
 
 #### Scénario principal
 
-1. Dans l'onglet "Métiers", le saisisseur consulte les métiers sélectionnés sur l'onglet "Calendrier" et les caractéristiques physiques et de mise en oeuvre associées. 
+1. Dans l'onglet "Métiers", le saisisseur consulte les métiers renseignés sur l'onglet "Calendrier" et les caractéristiques physiques et de mise en oeuvre associées. 
 Seuls les métiers avec un engin sont présents. Les métiers sont triés par ordre de saisie dans l'onglet "Calendrier". 
 2. Pour chaque métier, le saisisseur renseigne les valeurs d'une ou plusieurs caractéristiques
+   * "Maillage étiré de l'engin (mm)", "Longueur levée (m), ..."
 3. Le saisisseur enregistre le calendrier
 4. La date de mise à jour du calendrier est actualisée
 
@@ -478,8 +484,11 @@ Seuls les métiers avec un engin sont présents. Les métiers sont triés par or
 
 **REF: ACTIVITY_CALENDAR/CARTE**
 
+En version V2
+
 A spécifier : en attente POC
-Prévoir un mode pour afficher la carte avec l'ensemble des données
+
+- Prévoir un mode pour afficher la carte avec l'ensemble des données
 
 
 ## Calendrier d'activité > Contrôle à la saisie
@@ -512,11 +521,11 @@ Le contrôle à la saisie est accessible depuis l'onglet "Général" d'un calend
 **Variante :** Les 12 mois du calendrier ne sont pas saisis
 
 2. L'onglet "Calendrier" s'ouvre
-3. Le message bloquant "Calendrier incomplet" s'affiche [Fin]
+3. Le message bloquant "Veuillez corriger le(s) mois invalide(s)" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle incohérente
 
-2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et au moins un mois est actif,
+2. Si l'inactivité annuelle confirmée par l'observateur est à "Oui" et qu'au moins un mois est actif,
 alors le message bloquant "Inactivité annuelle incohérente" s'affiche [Fin]
 
 **Variante :** Inactivité annuelle à confirmer
@@ -544,6 +553,8 @@ alors le message bloquant "Inactivité annuelle incohérente" s'affiche [Fin]
 
 
 ## Calendrier d'activité > Régionalisation
+
+Présent dans le périmètre V1
 
 > Réunion du 23/05/2024 :
 > 
