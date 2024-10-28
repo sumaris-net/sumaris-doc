@@ -130,8 +130,8 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - Table PERSON2USER_PROFIL : ALLEGRO_ADMINISTRATEUR, ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR
   - Table PROGRAM2PERSON : Observateur
 - Profil de TSTQ2 (Responsable de programme):
-- Table PERSON2USER_PROFIL : ALLEGRO_UTILISATEUR
-- Table PROGRAM2PERSON : Administrateur (ajouté)
+  - Table PERSON2USER_PROFIL : ALLEGRO_UTILISATEUR
+  - Table PROGRAM2PERSON : Administrateur (ajouté)
 
 
 # Calendrier d'activité > Import
@@ -266,7 +266,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - _MOE : Je le reproduis en faisant un copié. Pour que la sélection disparaisse, il faut coller la sélection ou appyuer sur "Echap" pour annuler la copie.
 
 - [ ] Bug : Lorsque l’on sélectionne une case, si on monte ou on descend, le rectangle bleu reste au même endroit et le texte monte et descend
-  - _MOE : Je ne reproduis pas ce comportement, il faudrait une démonstration_
+  - _MOE : L'ensemble du tableau se déplace vers le haut ou vers le bas pour permettre de toujours voir la cellule ayant le focus_
 
 
 - Nicolas GOASCOZ (IFREMER)
@@ -288,12 +288,13 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - _MOE : Oui, on peut envisager d'autres raccourcis claviers._
 
 - [ ] Bugs : 
-  - [ ] Par moment un ensemble d’incohérences sur les différents référentiels apparait
+  - [x] Par moment un ensemble d’incohérences sur les différents référentiels apparait
+    - _MOE : Lié à la traduction de la page par Chrome. Désactiver la traduction pour le site pour corriger le problème_
 
 ![rec-activity-calendar-ref](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Référentiels_incohérents.PNG)
 
-  - [ ] Quand on supprime une colonne, seul le champ « actif » ne s’efface pas
-    - _MOE : Non reproduit_
+  - [x] Quand on supprime une colonne, seul le champ « actif » ne s’efface pas
+    - _MOE : Lié à la traduction de la page par Chrome. Désactiver la traduction pour le site pour corriger le problème_
 
   - [ ] Quand on sélectionne un champ cela sélectionne l’ensemble de la colonne
     - _MOE : Non reproduit_
@@ -307,9 +308,10 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - [ ] Quand on fait F5 par erreur (ou lors d’un bug pour actualiser) cela supprime l’ensemble des mois saisis si on n’a pas sauvegardé avant !
     - _MOE Oui. A voir pour détecter un rafraichissement et proposer une sauvegarde s'il des modifications sont en cours_
   
-  - [ ] Des fois le champ « actif » (ou autre) me fait défaut, il affiche "ActifActifActif"
+  - [x] Des fois le champ « actif » (ou autre) me fait défaut, il affiche "ActifActifActif"
+    - _MOE : Lié à la traduction de la page par Chrome. Désactiver la traduction pour le site pour corriger le problème_
 
 ![rec-activity-calendar-actif](/projects/activity-calendar/rec/images/rec-24-005-2.9.23.3-Actif.PNG)
 
-  - [ ] Les métiers que j'ai saisi hier n’apparaissent plus sur mon navire!
-    - _MOE : A vérifier_
+  - [x] Les métiers que j'ai saisi hier n’apparaissent plus sur mon navire!
+    - _MOE : Lié au ticket [#733](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)_
