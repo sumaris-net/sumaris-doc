@@ -114,11 +114,11 @@
 
 
   
-## Retours de recette MOA - release 2.9.23.3
+# Retours de recette MOA - release 2.9.23.3
 
 Recette faite par Emilie Le Roy le 17/10/2024
 
-# Configuration des profils
+## Configuration des profils
 
 - Profil d'Emilie Le Roy (Responsable de programme): 
   - Table PERSON2USER_PROFIL : ALLEGRO_UTILISATEUR, ALLEGRO_SUPER_UTILISATEUR 
@@ -134,13 +134,13 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - Table PROGRAM2PERSON : Administrateur (ajouté)
 
 
-# Calendrier d'activité > Import
+## Calendrier d'activité > Import
 
 - [ ] Dans le menu contextuel, "importer depuis un fichier..." est grisé.
   - _MOE_ : Accessible pour les Administrateurs. A modifier, doit être accessible pour les coordinateurs de programme
     [#771](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
 
-# Calendriers d'activité
+## Calendriers d'activité
 
 - [ ] Pas de bouton rafraîchir.
   - _MOE_ : Visible pour les admins (à corriger) 
@@ -152,7 +152,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
     - _MOE_ : A spécifier
 
 
-# Calendriers d'activité > Filtres
+## Calendriers d'activité > Filtres
 
 - [X] Le filtre navire ne fonctionne que sur l'immat et pas sur le nom. Et quand on commence à mettre une immat, ça donne une liste bizare, cf capture.
   - _MOE_ : Pour filtrer sur le nom il faut préfixer par * et mettre le nom recherché en minuscule. 
@@ -163,7 +163,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
 - [ ] Organismes saisisseur : on ne doit voir que les sociétés qui ont des droits sur ACTIFLOT
   - _MOE_ : **Pas abordé durant la phase de spécifications, en V1.1 si possible**
 
-# Calendrier d'activité > Navire
+## Calendrier d'activité > Navire
 
 - [ ] Marquage extérieur doit être modifié en "immatriculation"
   [#774](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/774)
@@ -173,12 +173,12 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - Recopier l'immat dans le tableau des caractéristiques et enlever la colonne marquage : la colonne immat ne sera pas triable
   - Le tableau des immatriculations est au dessus du tableau des caractéristiques
 
-# Calendrier d'activité > Calendrier
+## Calendrier d'activité > Calendrier
 
 - [X] Bug de saisie (remonté par Vincent Badts) [#766](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/766)
 
-- [ ] Le bandeau de prédoc débarde de l'écran et est tronqué, on ne voit pas la source Sacrois-ObsDeb
-  - _MOE : Il n'y a pas de données Sacrois-ObsDeb dans ce cas_ 
+- [ ] Le bandeau de prédoc déborde de l'écran et est tronqué, on ne voit pas la source Sacrois-ObsDeb [#778](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/778)
+  - _MOE : Bug sur l'affichage de la source Sacrois-ObsDeb si on n'est pas administrateur_ 
   - _MOA : Il faudrait que le choix de cocher s'affiche pas défaut même si pas de données. Comme ça on voit pas nous-même que le calendrier de predoc est vide et que donc pas de données._
 
 - [X] Il faut bloquer l'usage de la molette pour les zones de saisie d'un nombre (Ex : Nombre de jours de mer)
@@ -197,7 +197,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
 - [X] Le dénombrement des métiers ne se fait qu'après sauvegarde et pas au fil de la saisie, c'est bien ça ?
   - _MOE_ : Oui
 
-# Calendrier d'activité > Validation
+## Calendrier d'activité > Validation
 
 - [ ] Action de "Dévalider" et "Valider" accessible même si on n'est pas Admin ?
   - Responsable de programme ou superviseur (à vérifier car elle doit être superviseur)
@@ -210,7 +210,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
 - [ ] Cas de test d'un calendrier avec le flag "Inactivité annuelle confirmée par l'observateur" à "Non" ET tous les mois du calendrier à l'état "Inactif"
   - Il n'y a pas de message d'erreur quand on termine la saisie [#770](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/770)
 
-# Calendrier d'activité > Formulaire terrain avec données
+## Calendrier d'activité > Formulaire terrain avec données
 
 - [ ] Le lieu d'immatriculation n'est pas renseigné [#722](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/722)
   - On perd ensuite les lieux d'immatriculation à l'affichage du calendrier (Cf mail Caroline du 17/10/2024)
@@ -231,27 +231,27 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - _MOE_ : A paramétrer : Il est possible de fixer une limite pour bloquer et de fixer une limite pour avertir les saisisseurs 
   - _MOE_ : A proposer spécifier 
 
-# Calendrier d'activité > Formulaire vierge
+## Calendrier d'activité > Formulaire vierge
 
 - [ ] Instable : L'option est parfois grisée
   - _MOE_ : Même comportement que le formulaire avec données
 
 
-## Retours de recette Utilisateurs - release 2.9.23.3
+# Retours de recette Utilisateurs - release 2.9.23.3
 
-- Lise MAS (CAPENA)
+## Lise MAS (CAPENA)
 
 - Points positifs :
   - Merci d’avoir permis de masquer la colonne de gauche (double flèche rose en bas), cela permet de voir le calendrier en entier de janvier à décembre, ce qui n’est pas le cas si on laisse cette colonne visible.
   - Lorsque l’on voit le calendrier en entier, on retrouve la forme que nous avions sur le logiciel Allegro habituel. Donc nickel.
   - Je trouve ça très bien de pouvoir supprimer des cellules sans être obligée de confirmer la suppression
 
-# Calendriers d'activité et # Calendriers d'activité > Filtre
+### Calendriers d'activité et # Calendriers d'activité > Filtre
 
-- [ ] Bug : Aucun observateur de CAPENA n’apparaît dans la liste « Observateurs ». Dans le filtre, la société n'est pas trouvée.
+- [X] Bug : Aucun observateur de CAPENA n’apparaît dans la liste « Observateurs ». Dans le filtre, la société n'est pas trouvée.
   - _MOE : Vérifier les requêtes côté POD_
 
-# Calendriers d'activité > Calendrier
+### Calendriers d'activité > Calendrier
 
 - [ ] Remarque : Pour ajouter une info dans une case, il faut double-cliquer : un simple clic ne serait-il pas mieux ?
   - _MOE : Non, le simple clique permet de sélectionner une cellule. L'appuie de la touche "Entrée" permet de rentrer en édition._
@@ -269,20 +269,20 @@ Recette faite par Emilie Le Roy le 17/10/2024
   - _MOE : L'ensemble du tableau se déplace vers le haut ou vers le bas pour permettre de toujours voir la cellule ayant le focus_
 
 
-- Nicolas GOASCOZ (IFREMER)
+## Nicolas GOASCOZ (IFREMER)
 
 - Points positifs :
   - Je trouve cela intéressant de voir l’historique du navire.  
   - « * » fonctionne au top pour filtrer dans un champ
 
-# Calendriers d'activité 
+### Calendriers d'activité 
 
 - [ ] Remarque : « l’état » (en cours, pas saisis, saisis ou synchronisés)  ne sont pas très visibles comme précédemment à part la coche
 
 - [ ] Remarque : Il ne faut qu’un seul clic pour accéder au navire alors que dans l’interface suivante il faut un double clic sur les divers champs (l’inverse serait top).
   - _MOE : Non, le simple clique permet de sélectionner une cellule. L'appuie de la touche "Entrée" permet de rentrer en édition._
 
-# Calendriers d'activité > Calendrier
+### Calendriers d'activité > Calendrier
 
 - [ ] Remarque : Serait-il possible que certains raccourcis clavier fonctionne comme "tab" entre autre, après je ne sais si les autres utilisateurs sont avides des contrôles clavier. Sinon sur mon ordi, des fois ctrl+C et ctrl+V ne fonctionne pas ?!
   - _MOE : Oui, on peut envisager d'autres raccourcis claviers._
