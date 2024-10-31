@@ -239,14 +239,19 @@
 
 ---
 
-| **Open** | **To Do** | **Doing** | **Done**                                                                          | **Testing** | **Waiting** | **Closed**                                                                        |
-|----------|-----------|-----------|-----------------------------------------------------------------------------------|-------------|-------------|-----------------------------------------------------------------------------------| 
-|          |           |           | Enh [#568](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/568) |             |             | Enh [#694](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/694) | 
-|          |           |           | Enh [#640](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/640) |             |             | Enh [#705](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/705) | 
-|          |           |           | Enh [#648](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/648) |             |             | Enh [#697](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/697) | 
-|          |           |           | Enh [#693](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/693) |             |             | Enh [#642](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/642) | 
-|          |           |           | Enh [#698](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/698) |             |             | Enh [#686](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/686) |
-|          |           |           |                                                                                   |             |             | Enh [#657](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/657) |
+| **Open** | **To Do** | **Doing** | **Done** | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|-----------|-----------|----------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          |           |           |          |             |             | Enh [#707](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/707) | 
+|          |           |           |          |             |             | Enh [#690](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/690) | 
+|          |           |           |          |             |             | Enh [#687](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/687) | 
+|          |           |           |          |             |             | Enh [#706](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/706) | 
+|          |           |           |          |             |             | Enh [#625](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/625) |
+|          |           |           |          |             |             | Enh [#682](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/682) |
+|          |           |           |          |             |             | Enh [#699](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/699) |
+|          |           |           |          |             |             | Enh [#698](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/698) |
+|          |           |           |          |             |             | Enh [#631](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/631) |
+|          |           |           |          |             |             | Enh [#705](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/705) |
+
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -260,3 +265,77 @@
   - Colonnes
 - Saisie
   - Touche entrée
+
+## Calendrier d'activité - Sprint 7 - Issue Board
+
+- **Start date** : 16/09/2024
+- **End date** : 04/10/2024
+- **Milestone** : 2.9.23, 2.9.23.3
+- **Goal** : Bugs correction, enhancements
+- **Status** : Close
+- **Deployement** : Done
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.23)
+
+---
+
+| **Open** | **To Do** | **Doing** | **Done** | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|-----------|-----------|----------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          |           |           |          |             |             | Enh [#749](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/749) | 
+|          |           |           |          |             |             | Enh [#729](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/729) | 
+|          |           |           |          |             |             | Enh [#730](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/730) | 
+|          |           |           |          |             |             | Enh [#720](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/720) | 
+|          |           |           |          |             |             | Enh [#731](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/731) | 
+|          |           |           |          |             |             | Enh [#716](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/716) | 
+|          |           |           |          |             |             | Enh [#734](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/734) | 
+|          |           |           |          |             |             | Enh [#738](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/738) | 
+|          |           |           |          |             |             | Enh [#725](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/725) | 
+|          |           |           |          |             |             | Enh [#665](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/665) | 
+|          |           |           |          |             |             | Enh [#736](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/736) | 
+|          |           |           |          |             |             | Enh [#726](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/726) | 
+|          |           |           |          |             |             | Enh [#724](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/724) | 
+|          |           |           |          |             |             | Enh [#724](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/727) | 
+|          |           |           |          |             |             | Enh [#748](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/748) | 
+|          |           |           |          |             |             | Enh [#693](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/693) | 
+|          |           |           |          |             |             | Enh [#711](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/711) | 
+|          |           |           |          |             |             | Enh [#739](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/739) | 
+|          |           |           |          |             |             | Enh [#659](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/659) | 
+|          |           |           |          |             |             | Enh [#717](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/717) | 
+|          |           |           |          |             |             | Enh [#695](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/695) | 
+|          |           |           |          |             |             | Enh [#744](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/744) | 
+|          |           |           |          |             |             | Enh [#743](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/743) | 
+|          |           |           |          |             |             | Enh [#713](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/713) | 
+|          |           |           |          |             |             | Enh [#742](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/742) | 
+---
+
+**Fonctionnalités du sprint 7**
+- Corrections de bugs
+  - Affichage
+  - Connexion tstq2
+  - Rapport d'avancement
+  - Filtre
+- Connexion extranet
+- Calendrier > Copier/Coller
+- Calendrier > Edition et flêches de navigation
+
+
+## Calendrier d'activité - Sprint 8 - Issue Board
+
+- **Start date** : 07/10/2024
+- **End date** : 31/10/2024
+- **Milestone** : 2.9.24
+- **Goal** : Bugs correction, enhancements
+- **Status** : On Going
+- **Deployement** : To Do
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.23)
+
+---
+
+| **Open** | **To Do** | **Doing** | **Done** | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|-----------|-----------|----------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          |           |           |          |             |             |  Enh [#?](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/?) |  
+<!-- .element: class="font-size-small" -->
+
+---
+
+**Fonctionnalités du sprint 8**
+TO COMPLETE
