@@ -284,8 +284,13 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
 ### Calendriers d'activité > Calendrier
 
-- [ ] Remarque : Serait-il possible que certains raccourcis clavier fonctionne comme "tab" entre autre, après je ne sais si les autres utilisateurs sont avides des contrôles clavier. Sinon sur mon ordi, des fois ctrl+C et ctrl+V ne fonctionne pas ?!
-  - _MOE : Oui, on peut envisager d'autres raccourcis claviers._
+- [ ] Evo : 
+  - [ ] Serait-il possible que certains raccourcis clavier fonctionne comme "tab" entre autre, après je ne sais si les autres utilisateurs sont avides des contrôles clavier. Sinon sur mon ordi, des fois ctrl+C et ctrl+V ne fonctionne pas ?!
+    - _MOE : Oui, on peut envisager d'autres raccourcis claviers._
+  - [ ] Par défaut activer le compactage des lignes lors de la 1ère utilisation de l'application par un utilisateur
+  - [ ] Améliorer la fonctionnalité "Etendre" pour pouvoir étendre plusieurs cellules d'un même mois
+  - [ ] Implémenter une fonctionnalité de sélection de cellules/colonnes/lignes via CTRL + clic 
+  - [ ] Afficher une popup de confirmation pour enregistrer ou supprimer les données modifiées lors de l'utilisation de la touche F5. C'est déjaà le cas avec les bouton "Fermer", "Rafraichir", "Retour", "Accueil" et "Page précédente du navigateur"
 
 - [ ] Bugs : 
   - [x] Par moment un ensemble d’incohérences sur les différents référentiels apparait
