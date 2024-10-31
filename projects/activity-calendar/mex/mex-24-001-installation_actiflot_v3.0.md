@@ -3,7 +3,7 @@
 Objectif : le document liste les étapes de migration, pour réaliser le passage 
 des calendriers d'activité en SUMARiS v3.0
 
-Appliquer le [manuels d'exploitation common](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md)
+Appliquer le [manuel d'exploitation common](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md)
 
 Liste des tickets réalisés :
 - 
@@ -33,10 +33,10 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
   ```
 
 - Modification `ACTIVITY_CALENDAR` :
-  - Nouvelle colonne `ECONOMIC_SURVEY` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
+  - Nouvelle colonne `ECONOMIC_SURVEY` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
 
-- Nouvelle table `ACTIVITY_CALENDAR2PERSON` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
+- Nouvelle table `ACTIVITY_CALENDAR2PERSON` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
 - Ajout de grant sur `ACTIVITY_CALENDAR2PERSON` :
   ```sql
@@ -48,7 +48,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
     grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- Nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
+- Nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
 
 - Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`

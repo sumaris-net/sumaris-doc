@@ -4,9 +4,7 @@
 > Date création : 20/03/2024
 > Mise à jour : 20/03/2024
 
-Appliquer les [manuels d'exploitation common](../../common/mex) (v2.9)
-
-Appliquer les [manuels d'exploitation ObsMer](../../obsmer/mex) (v2.9)
+Appliquer le [manuel d'exploitation common](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md)
 
 ## Configuration du Pod
 
