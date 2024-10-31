@@ -8,9 +8,6 @@ Appliquer les [manuels d'exploitation common](../../common/mex) (v2.9)
 
 Appliquer les [manuels d'exploitation ObsMer](../../obsmer/mex) (v2.9)
 
-Liste des tickets réalisés :
-- TODO
-
 ## Configuration du Pod
 
 - Nouvelles options dans le fichier de configuration :
@@ -48,7 +45,8 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
   - Script SQL de création des PMFMS : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/sql/oracle/create-pmfm.sql
 
 - Création des options de stratégie
-  - db-changelog : https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.4.0.xml?ref_type=heads
+  - Pending (Non validé) : [db-changelog-4.4.x-pending.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.4.x-pending.xml)
+    - Nouvelle table STRATEGY_PROPERTY
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 

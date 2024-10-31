@@ -19,32 +19,19 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
 
 ## Schéma SIH2_ADAGIO_DBA
 
-Passer le changelog d'adagio db-changelog-4.3.0.xml
+- Adagio : changelogs
+  - Passer le changelog Oracle d'Adagio [db-changelog-4.3.0.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.3.0.xml)
+    - Nouvelle table ACTIVITY_CALENDAR2PERSON
+    - Nouvelle colonne ACTIVITY_CALENDAR.ECONOMIC_SURVEY
+    - Nouvelles colonnes HASH dans VESSEL_USE_FEATURES, GEAR_USE_FEATURES, GEAR_PHYSICAL_FEATURES
+  - Passer le changelog Oracle Ifremer d'Adagio [db-changelog-4.3.0.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/ifremer/db-changelog-4.3.0.xml)
+    - Nouvelle colonne M_PARAMETER.IS_BOOLEAN
+  - Passer le changelog Oracle d'Adagio [db-changelog-4.3.1.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.3.1.xml) 
+    - Zones de compétence pour la régionalisation
 
-- Temporaire (dans car dans le changelog db-changelog-4.4.0.xml d'adagio)
-  ```sql
-  create table SIH2_ADAGIO_DBA.STRATEGY_PROPERTY
-  ( 
-    ID            NUMBER(10)    not null
-    constraint STRATEGY_PROPERTY_PK primary key,
-    LABEL         VARCHAR2(255) not null,
-    NAME          VARCHAR2(255) not null,
-    CREATION_DATE TIMESTAMP(6)  not null,
-    UPDATE_DATE   TIMESTAMP(6),
-    STRATEGY_FK   NUMBER(10)    not null constraint STRATEGY_PROPERTY_STRATEGY_FKC references SIH2_ADAGIO_DBA.STRATEGY,
-    STATUS_FK     VARCHAR2(1)   not null
-  );
-  /
-  comment on table SIH2_ADAGIO_DBA.STRATEGY_PROPERTY is 'Proprietes logicielles sur les strategies. Ces proprietes sont utilisees dans les logiciels afin d avoir un comportement specifique a une strategie.';
-  /
-  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.ID is 'Identifiant';
-  /
-  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.LABEL is 'Mnemonique / code de la propriete';
-  /
-  comment on column SIH2_ADAGIO_DBA.STRATEGY_PROPERTY.NAME is 'Libelle de la propriete';
-  /
-  grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to SIH2_ADAGIO_DBA_SUMARIS_MAP;
-  ```
+- Adagio : Mise à jour du référentiel
+  - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)
+    - Jouer le script SQL
 
 - Ajout de droits sur `SIH2_ADAGIO_DBA.person`
   ```sql

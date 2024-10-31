@@ -3,7 +3,7 @@
 Objectif : le document liste les étapes de migration, pour réaliser le passage 
 des calendriers d'activité en SUMARiS v3.0
 
-Appliquer les [manuels d'exploitation common](../../common/mex) (v2.9)
+Appliquer le [manuels d'exploitation common](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md)
 
 Liste des tickets réalisés :
 - 
@@ -33,52 +33,34 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
   ```
 
 - Modification `ACTIVITY_CALENDAR` :
-  - Nouvelle colonne `ECONOMIC_SURVEY` (cf [changelog Liquibase Adagio-core](https://gitlab.ifremer.fr/sih/adagio/adagio/-/tree/feature/sumaris-obsmer/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle?ref_type=heads) (branche `feature/sumaris-obsmer`))
+  - Nouvelle colonne `ECONOMIC_SURVEY` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
 
-  
-- Ajout de grant sur `ACTIVITY_CALENDAR` :
-  ```sql
-    grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
 
-- nouvelle table `ACTIVITY_CALENDAR2PERSON` (créée par le changelog 4.3.0)
-  ```sql
-  create table ACTIVITY_CALENDAR2PERSON(
-    ACTIVITY_CALENDAR_FK NUMBER NOT NULL ENABLE, 
-	PERSON_FK NUMBER NOT NULL ENABLE, 
-  CONSTRAINT "ACTIVITY_CALENDAR2PERSON_PK" PRIMARY KEY ("ACTIVITY_CALENDAR_FK", "PERSON_FK"),
-  CONSTRAINT "ACT_CAL2PERSON_ACT_CAL_FKC" FOREIGN KEY ("ACTIVITY_CALENDAR_FK") REFERENCES "SIH2_ADAGIO_DBA"."ACTIVITY_CALENDAR" ("ID") ENABLE, 
-  CONSTRAINT "ACT_CAL2PERSON_PERSON_FKC" FOREIGN KEY ("PERSON_FK") REFERENCES "SIH2_ADAGIO_DBA"."PERSON" ("ID") ENABLE
-  );
-  COMMENT ON COLUMN "SIH2_ADAGIO_DBA"."ACTIVITY_CALENDAR2PERSON"."ACTIVITY_CALENDAR_FK" IS 'Identifiant du calendrier';
-  COMMENT ON COLUMN "SIH2_ADAGIO_DBA"."ACTIVITY_CALENDAR2PERSON"."PERSON_FK" IS 'Identifiant de l''enquêteur';
-  COMMENT ON TABLE "SIH2_ADAGIO_DBA"."ACTIVITY_CALENDAR2PERSON"  IS 'Enquêteurs d''''un calendrier d''''activité';
--```
+- Nouvelle table `ACTIVITY_CALENDAR2PERSON` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
 
 - Ajout de grant sur `ACTIVITY_CALENDAR2PERSON` :
   ```sql
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR2PERSON to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (ajoutées par le changelog 4.3.0)
+- Ajout de grant sur `GEAR_PHYSICAL_FEATURES_SEQ` :
   ```sql
-  alter table SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES add column HASH NUMBER(10);
-  alter table SIH2_ADAGIO_DBA.GEAR_USE_FEATURES add column HASH NUMBER(10);
-  alter table SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES add column HASH NUMBER(10);
+    grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
+- Nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (appliqué par le [MEX Commun](/projects/common/mex/mex-24-001-installation_common_ifr_v2.9.md))
+
+
+- Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
   ```sql
   insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
 -```
 
-- nouveaux processing_status
+- Nouveaux processing_status
   ```sql
   insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('RUNNING', 'Traitement en cours.', 1);
   insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('CANCELLED', 'Traitement annulé.', 1);
 -```
-
-## Schéma SIH2_ADAGIO_BATCH
 
 - Ajout de synonyme sur `ACTIVITY_CALENDAR2PERSON`
   ```sql
