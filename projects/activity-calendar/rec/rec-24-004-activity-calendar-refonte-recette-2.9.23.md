@@ -341,5 +341,19 @@ Recette faite par Emilie Le Roy le 17/10/2024
 - [X] L'onglet SACROIS présent dans SUMARIS ne présente pas les mêmes caractéristiques, que l'onglet prédoc SACROIS dans ALLEGRO ou dans la prédoc téléchargée sur le site du SIH. (Lorsque j'ai regardé pour le bateau MIREN LO 425329)
   - _MOE : Différence environnement de préproduction et production_
 
-- [ ] D'ailleurs dans les prédoc sacrois du SIH et d'allegro, aux lignes "Zones" la zone de pêche est toujours suivie d'une "*" pour les bateaux géolocalisés. Cette "*" n'est pas présente dans la prédoc sacrois Sumaris, il pourrait être intéressant de la garder, car l'information est importante car fiable.
+- [ ] D'ailleurs dans les prédoc sacrois du SIH et d'allegro, aux lignes "Zones" la zone de pêche est toujours suivie d'une * pour les bateaux géolocalisés. Cette * n'est pas présente dans la prédoc sacrois Sumaris, il pourrait être intéressant de la garder, car l'information est importante car fiable.
   - [X] Prévue dans une version ultérieure
+
+# Réunion retours utilisateurs
+
+## Fonctionnalités non validés
+
+- [ ] MOA : Pas d'implémentation de la touche Ctrl pour sélectionner plusieurs cellules
+
+## Fonctionnalités validés
+
+- [ ] Proposer une aide à la saisie depuis le calendrier d'activité (PDF affichable)
+  - Premier jet à faire pour le 13/11/2024 par la MOE
+- [ ] Détecter un rafraichissement de page par les boutons du navigateur et de la touche F5
+  - Ticket en 2.9.25 [#784](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/784)
+
