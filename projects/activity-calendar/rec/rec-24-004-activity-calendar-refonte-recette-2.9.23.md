@@ -308,7 +308,7 @@ Recette faite par Emilie Le Roy le 17/10/2024
     - _MOE : Si, en appyant sur "Shift"_
 
   - [ ] On ne peut copier l’ensemble d’un bloc métier (avec zone, gradient côte), on ne copie juste le nom du métier
-    - _MOE : Si, en appyant sur "Shift"_
+    - _MOE : Si, en appuyant sur "Shift"_
 
   - [ ] Quand on fait F5 par erreur (ou lors d’un bug pour actualiser) cela supprime l’ensemble des mois saisis si on n’a pas sauvegardé avant !
     - _MOE Oui. A voir pour détecter un rafraichissement et proposer une sauvegarde s'il des modifications sont en cours_
@@ -320,3 +320,26 @@ Recette faite par Emilie Le Roy le 17/10/2024
 
   - [x] Les métiers que j'ai saisi hier n’apparaissent plus sur mon navire!
     - _MOE : Lié au ticket [#733](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)_
+
+## Laurine Prevost (Ifremer)
+
+### Calendriers d'activité > Calendrier
+
+- [X] Dans Allegro nous avions un onglet commentaires, également présent dans Sumaris, mais l'onglet dans Sumaris est vide, il serait intéressant d'avoir les commentaires également dans Sumaris, peux être est ce déjà prévu.
+
+- [X] Dans Allegro, j'utilisais beaucoup les raccourcis proposés :
+  - Etirer jusqu'à
+  - Copier vers les mois....
+  - Copier le bloc metier vers les mois..
+
+- [X] Dans allegro, nous pouvions ouvrir simultanément plusieurs bateaux, cette fonctionnalité était intéressante notamment pour comparer l'activité d'un même armateur possédant plusieurs navires, ou bien deux navires travaillant au chalut en bœuf par exemple. ou simplement garder un onglet navire ouvert parce qu'on travail dessus. Dans Sumaris j'ai l’impression qu'on est obligatoirement obligé de fermer un calendrier pour passer à un autre.
+  - _MOE_ : On peut épingler les calendrier consultés ou ouvrir plusieurs onglets dans le navigateur
+
+- [X] Il m'est arrivé de vouloir copier une colonne entière, mais les blocs métier ne se sont pas collés
+  - _MOE : Lié au ticket [#733](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/773)_
+
+- [X] L'onglet SACROIS présent dans SUMARIS ne présente pas les mêmes caractéristiques, que l'onglet prédoc SACROIS dans ALLEGRO ou dans la prédoc téléchargée sur le site du SIH. (Lorsque j'ai regardé pour le bateau MIREN LO 425329)
+  - _MOE : Différence environnement de préproduction et production_
+
+- [ ] D'ailleurs dans les prédoc sacrois du SIH et d'allegro, aux lignes "Zones" la zone de pêche est toujours suivie d'une "*" pour les bateaux géolocalisés. Cette "*" n'est pas présente dans la prédoc sacrois Sumaris, il pourrait être intéressant de la garder, car l'information est importante car fiable.
+  - [X] Prévue dans une version ultérieure
