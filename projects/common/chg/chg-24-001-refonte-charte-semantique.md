@@ -1,5 +1,9 @@
 # Activity Calendar - Charte graphique / Sémantique
 
+- Documents de référence
+  - [Charte graphique du Système d’Informations Halieutiques](/projects/common/chg/doc/89387.pdf)
+  - [Coloris actions SIH](/projects/common/chg/doc/Couleurs-converties-SIH.docx)
+
 ---
 
 ## Points à aborder sur la charte graphique
@@ -13,7 +17,7 @@
 
 ## Paramétrage de la chartre graphique dans SUMARiS
 
-- Page de connexion / page d'accueil
+- **PARAMETRAGE** de la page de connexion / page d'accueil : 
   - Nom de l'application / descriptif
     - Propre à chaque volet ?
   - Logo
@@ -26,10 +30,18 @@
 
 ---
 
-- Rapports
+- **PARAMETRAGE** de la page d'un calendrier
+  - Photo associé à un compte
+
+---
+
+![chg-accueil](/projects/common/chg/images/chg-avatar_person.png)
+
+---
+
+- **PARAMETRAGE** des rapports : formulaires terrain / vierge / rapport d'avancement
   - Logo 1 et 2
   - Pied de page
-  - ...
 
 ---
 
@@ -37,7 +49,21 @@
 
 ---
 
+- **PARAMETRAGE** des rapports - A ajouter ?
+  - La licence doit être systématiquement affichée pour les documents
+
+![chg-licence](/projects/common/chg/images/chg-licence.png)
+
+---
+
+## Paramétrage dans l'application
+
+![chg-parametrage-sumaris](/projects/common/chg/images/chg-sumaris-parametrage.png)<!-- .element: style="width: 90%" -->
+
+---
+
 ## Points à aborder sur la sémantique
 
 - Utiliser les mêmes termes (ressort MOA)
-  - Définir un nom d'application qui englobe les 3 volets (actuellement SUMARiS)
+  - Définir un nom d'application qui englobe les 3 volets (actuellement **SUMARiS**)
+  - Définir des termes commun aux différents volets (ActiFlot, ObsVentes, ObsMer)
