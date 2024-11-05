@@ -24,6 +24,8 @@
   - Images de fond
   - A propos
 
+** Commun à tous les volets**
+
 ---
 
 ![chg-accueil](/projects/common/chg/images/chg-page_connexion.png)
@@ -42,6 +44,8 @@
 - **PARAMETRAGE** des rapports : formulaires terrain / vierge / rapport d'avancement
   - Logo 1 et 2
   - Pied de page
+
+** Paramétrable pour chaque programme**
 
 ---
 
