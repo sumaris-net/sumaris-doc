@@ -1,4 +1,4 @@
-# Manuel d'utilisation de SUMARiS calendrier d'activité
+# Manuel d'utilisation de SUMARiS Calendrier d'activité
 
 ## Sommaire
 
@@ -18,8 +18,9 @@
 Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est préconisé aux utilisateurs :
 - D'utiliser Google Chrome
 - De désactiver un éventuel traducteur
-  ![traduction](./traduction_1.png)
-  ![traduction](./traduction_2.png)
+
+![traduction](./traduction_1.png)
+![traduction](./traduction_2.png)
 
 - De se régionaliser (TODO : captures d'écran)
 - De compacter les lignes du calendrier de saisie (TODO : activé par défaut ?)
@@ -30,6 +31,7 @@ Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est précon
 
 Le paramétrage des colonnes est accessible depuis le tableau de consultation des calendriers d'activité via le menu contextuel et permet de modifier 
 l'ordre (via l'icône "=") et la visibilité des colonnes (via le bouton switch).
+
 Ce paramétrage est spécifique à chaque utilisateur.
 
 ![parametrage](./paramétrage_colonnes.png)
@@ -63,6 +65,7 @@ Ce paramétrage est spécifique à chaque utilisateur.
 ### Epingler un calendrier
 
 Il est possible d'épingler un calendrier ou l'onglet d'un calendrier afin de le conserver dans le menu de gauche et de pouvoir y accéder rapidement.
+
 Pour cela, il faut consulter le calendrier souhaité puis dans le menu de gauche, cliquer sur l'icône "Epingle" du calendrier ou d'un onglet du calendrier.
 
 ![epingler](./épingler_calendrier.png)
@@ -82,7 +85,9 @@ Pour cela, il faut se positionner sur la bordure droite ou gauche de la cellule 
 ### Afficher les erreurs
 
 Lorsqu'il y a une erreur de saisie, une icône s'affiche au dessus du ou des mois concernés.
+
 Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs rencontrés sur le mois.
+
 A noter : certaines erreurs bloque la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
 
 ![erreurs](./afficher_erreurs.png)
