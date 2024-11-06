@@ -15,8 +15,11 @@ Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est précon
 
 ### Colonnes du tableau de consultation des calendriers d'activité
 
-Le paramétrage des colonnes est accessible depuis le tableau de consultation des calendriers d'activité et permet de modifier l'ordre et la visibilité des colonnes.
+Le paramétrage des colonnes est accessible depuis le tableau de consultation des calendriers d'activité via le menu contextuel et permet de modifier 
+l'ordre (via l'icône "=") et la visibilité des colonnes (via le bouton switch).
 Ce paramétrage est spécifique à chaque utilisateur.
+
+![parametrage](./paramétrage_colonnes.png)
 
 ### Champs et listes déroulantes
 
@@ -38,11 +41,16 @@ Sur l'écran "Paramètres", cliquer sur le bouton "Afficher plus" pour sélectio
 
 Ce paramétrage est spécifique à chaque utilisateur.
 
+![parametrage](./paramétrage_champs.png)
+![parametrage](./paramétrage_champs_2.png)
+
 ## Fonctionnalités
 
 ### Epingler un calendrier
 
-Il est possible d'épingler un calendrier ou l'onglet d'un calendrier afin de le conserver dans le menu de gauche et de pouvoir y accéder rapidement
+Il est possible d'épingler un calendrier ou l'onglet d'un calendrier afin de le conserver dans le menu de gauche et de pouvoir y accéder rapidement.
+
+![epingler](./épingler_calendrier.png)
 
 ### Sélectionner
 
@@ -54,11 +62,15 @@ De même il est possible de sélectionner plusieurs cellules, lignes ou colonnes
 Il est possible d'étirer une cellule vers la droite ou vers la gauche.
 Pour cela, il faut se positionner sur la bordure droite ou gauche d'une cellule jusqu'à ce qu'elle s'épaississe puis déplacer la souris.
 
+![etirer](./étirer.png)
+
 ### Afficher les erreurs
 
 Lorsqu'il y a une erreur de saisie, une icône s'affiche au dessus du ou des mois concernés.
 Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs rencontrés sur le mois.
-A noter : les erreurs bloque la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
+A noter : certaines erreurs bloque la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
+
+![erreurs](./afficher_erreurs.png)
 
 ### Raccourcis clavier
 
@@ -66,12 +78,20 @@ Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
 ### Formulaires et rapports
 
-Le formulaire vierge et le formulaire avec données sont accessibles via le menu contextuel :
-- Depuis le tableau de consultation des calendriers, en sélectionnant préalablement les calendriers dans le tableau
-- Depuis chaque calendrier d'activité
+Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier.
 
-Le rapport d'avancement est accessible via le menu contextuel depuis le tableau de consultation des calendriers en sélectionnat ou non les calendriers
+Sur le tableau de consultation des calendriers, il est nécessaire d'appliquer un filtre sur le programme de collecte "SIH-ACTIFLOT" 
+puis de sélectionner des calendriers pour pouvoir générer via le menu contextuel le formulaire vierge, le formulaire avec données et le rapport d'avancement des calendriers sélectionnés.
 
+La génération du rapport d'avancement peut également être réalisée sans sélection préalable des calendriers. 
+Dans ce cas, l'ensemble des calendriers contenus dans le tableau sera utilisé pour générer le rapport d'avancement.
+
+![rapports](./éditer_rapports_1.png)
+![rapports](./éditer_rapports_2.png)
+
+Sur un calendrier, la génération du formulaire vierge et du formulaire avec données est accessible via le menu contextuel.
+
+![rapports](./éditer_rapports.png)
 
 
 
