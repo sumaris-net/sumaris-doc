@@ -1,5 +1,18 @@
 # Manuel d'utilisation de SUMARiS calendrier d'activité
 
+## Sommaire
+
+- [Prérequis](#prérequis)
+- [Paramétrage des colonnes du tableau de consultation des calendriers d'activité](#paramétrage-des-colonnes-du-tableau-de-consultation-des-calendriers-dactivité)
+- [Paramétrage des champs et des listes déroulantes](#paramétrage-des-champs-et-des-listes-déroulantes)
+- [Epingler un calendrier](#epingler-un-calendrier)
+- [Sélectionner des cellules, des lignes et des colonnes](#sélectionner-des-cellules-des-lignes-et-des-colonnes)
+- [Etendre le contenu d'une cellule](#etendre-le-contenu-dune-cellule)
+- [Afficher les erreurs](#afficher-les-erreurs)
+- [Afficher les raccourcis clavier](#afficher-les-raccourcis-clavier)
+- [Générer les formulaires et rapports](#générer-les-formulaires-et-rapports)
+
+
 ## Prérequis
 
 Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est préconisé aux utilisateurs :
@@ -13,7 +26,7 @@ Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est précon
 
 ## Paramétrages 
 
-### Colonnes du tableau de consultation des calendriers d'activité
+### Paramétrage des colonnes du tableau de consultation des calendriers d'activité
 
 Le paramétrage des colonnes est accessible depuis le tableau de consultation des calendriers d'activité via le menu contextuel et permet de modifier 
 l'ordre (via l'icône "=") et la visibilité des colonnes (via le bouton switch).
@@ -21,17 +34,18 @@ Ce paramétrage est spécifique à chaque utilisateur.
 
 ![parametrage](./paramétrage_colonnes.png)
 
-### Champs et listes déroulantes
+### Paramétrage des champs et des listes déroulantes
 
 Il est possible de personnaliser l'affichage des champs et des listes déroulantes :
 - Navire
+- Port d'exploitation
 - Zone de pêche
 - Gradient côte
 - Profondeur 
 - Zone proche
 
 Pour cela, il faut accéder à l'écran "Paramètres" accessible depuis le menu de gauche.
-Sur l'écran "Paramètres", cliquer sur le bouton "Afficher plus" pour sélectionner une ou plusieurs options parmis les suivantes :
+Sur l'écran "Paramètres", cliquer sur le bouton "Afficher plus" pour sélectionner une ou plusieurs options parmis les suivantes, ainsi que la valeur souhaitée :
 - Liste déroulante > Navires
 - Liste déroulante > Lieux (port, etc.)
 - Liste déroulante > Zone de pêche (rectangle, etc.)
@@ -49,18 +63,19 @@ Ce paramétrage est spécifique à chaque utilisateur.
 ### Epingler un calendrier
 
 Il est possible d'épingler un calendrier ou l'onglet d'un calendrier afin de le conserver dans le menu de gauche et de pouvoir y accéder rapidement.
+Pour cela, il faut consulter le calendrier souhaité puis dans le menu de gauche, cliquer sur l'icône "Epingle" du calendrier ou d'un onglet du calendrier.
 
 ![epingler](./épingler_calendrier.png)
 
-### Sélectionner
+### Sélectionner des cellules, des lignes et des colonnes
 
 Il est possible de sélectionner une ligne ou une colonne en cliquant sur l'en-tête de ligne ou de colonne.
 De même il est possible de sélectionner plusieurs cellules, lignes ou colonnes contigues en utilisant la touche **Shift**.
 
-### Etirer
+### Etendre le contenu d'une cellule
 
-Il est possible d'étirer une cellule vers la droite ou vers la gauche.
-Pour cela, il faut se positionner sur la bordure droite ou gauche d'une cellule jusqu'à ce qu'elle s'épaississe puis déplacer la souris.
+Il est possible d'étendre le contenu d'une cellule vers la droite ou vers la gauche.
+Pour cela, il faut se positionner sur la bordure droite ou gauche de la cellule jusqu'à ce qu'elle s'épaississe puis déplacer la souris.
 
 ![etirer](./étirer.png)
 
@@ -72,11 +87,11 @@ A noter : certaines erreurs bloque la sauvegarde du calendrier, il est donc néc
 
 ![erreurs](./afficher_erreurs.png)
 
-### Raccourcis clavier
+### Afficher les raccourcis clavier
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
-### Formulaires et rapports
+### Générer les formulaires et rapports
 
 Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier.
 
