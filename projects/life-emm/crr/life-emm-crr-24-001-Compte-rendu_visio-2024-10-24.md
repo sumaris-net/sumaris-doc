@@ -3,7 +3,7 @@
 OFB
 
 > Participants:
-> - Anïs MORLON
+> - Anaïs MORLON
 > - Sidonie GIRARD
 > - Servane PARENT
 
