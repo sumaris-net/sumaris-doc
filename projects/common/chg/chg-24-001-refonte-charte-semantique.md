@@ -66,6 +66,15 @@
 
 ---
 
+## Application de coloris dans l'application
+
+- A définir
+- Exemple pour erreur de régionalisation 
+
+![chg-zone-competence](/projects/common/chg/images/chg-zone-competence.png)
+
+---
+
 ## Points à aborder sur la sémantique
 
 - Utiliser les mêmes termes (ressort MOA)

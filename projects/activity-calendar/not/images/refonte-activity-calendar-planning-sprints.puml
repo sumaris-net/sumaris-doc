@@ -167,7 +167,7 @@ N(9, 12)  is colored in green
 [TASK9] is colored in Lavender/LightBlue
 [TASK8]->[TASK9]
 
-[validation] as [VAL] requires 1 week and starts the 25th of November 2024
+[validation / Tests MCO] as [VAL] requires 1 week and starts the 25th of November 2024
 [VAL] is colored in orange
 [TASK9]->[VAL]
 
@@ -200,7 +200,7 @@ N(9, 12)  is colored in green
 [BLE] as [CONG_BLE] requires 3 week and starts the 5th of August 2024 and requires 2 week and starts the 28th of October 2024
 [BLE] is colored in plum
 
-[BLE Pat.] as [PAT_BLE] requires 3 week and starts the 28th of October 2024
+[BLE Pat.] as [PAT_BLE] requires 1 week and starts the 28th of October 2024
 [BLE Pat.] is colored in plum
 
 [BLE Pat.] displays on same row as [BLE]
