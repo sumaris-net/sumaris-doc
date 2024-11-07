@@ -51,15 +51,17 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 - Nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
 
-- Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
+- Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION` et `VESSEL_SNAPSHOTS_INDEXATION`
   ```sql
-  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION, STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION, STATUS_FK) values ('VESSEL_SNAPSHOTS_INDEXATION', 'Traitement d''indexation des navires dans ElastiSearch', 1);
 -```
 
 - Nouveaux processing_status
   ```sql
   insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('RUNNING', 'Traitement en cours.', 1);
   insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('CANCELLED', 'Traitement annulé.', 1);
+  insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('FATAL', 'Traitement arrêté à cause d'une exception.', 1);
 -```
 
 - Ajout de synonyme sur `ACTIVITY_CALENDAR2PERSON`
