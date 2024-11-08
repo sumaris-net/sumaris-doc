@@ -48,12 +48,21 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
     grant SELECT on SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- Ajout de grant sur `GEAR_PHYSICAL_FEATURES_SEQ` :
+  ```sql
+    grant SELECT on SIH2_ADAGIO_DBA.EXPERTISE_AREA_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+    grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.EXPERTISE_AREA to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+    grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
 - Nouvelles colonnes `HASH` sur `VESSEL_USE_FEATURES`, `GEAR_USE_FEATURES` et `GEAR_PHYSICAL_FEATURES` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
 
 - Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
   ```sql
   insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('DENORMALIZE_BATCH','Élever et dénormaliser l'arborescence des lots','1');
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('SUMARIS_EXTRACTION','Extraction de données','1');
 -```
 
 - Nouveaux processing_status
@@ -62,12 +71,20 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
   insert into PROCESSING_STATUS (CODE, NAME, STATUS_FK) values ('CANCELLED', 'Traitement annulé.', 1);
 -```
 
-- Ajout de synonyme sur `ACTIVITY_CALENDAR2PERSON`
-  ```sql
-  create or replace synonym ACTIVITY_CALENDAR2PERSON for SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR2PERSON;
--```
 
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
+
+- Ajout de synonymes sur `ACTIVITY_CALENDAR2PERSON`
+  ```sql
+  create or replace synonym ACTIVITY_CALENDAR2PERSON for SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR2PERSON;
+  create or replace synonym SPATIAL_ITEM_TYPE_SEQ for SIH2_ADAGIO_DBA.SPATIAL_ITEM_TYPE_SEQ;
+  create or replace synonym SPATIAL_ITEM_SEQ for SIH2_ADAGIO_DBA.SPATIAL_ITEM_SEQ;
+  create or replace synonym SPATIAL_ITEM for SIH2_ADAGIO_DBA.SPATIAL_ITEM;
+  create or replace synonym SPATIAL_ITEM2LOCATION for SIH2_ADAGIO_DBA.SPATIAL_ITEM2LOCATION;
+  create or replace synonym DENORMALIZED_SPATIAL_ITEM for SIH2_ADAGIO_DBA.DENORMALIZED_SPATIAL_ITEM;
+  create or replace synonym EXPERTISE_AREA_SEQ for SIH2_ADAGIO_DBA.EXPERTISE_AREA_SEQ;
+  create or replace synonym EXPERTISE_AREA2LOCATION for SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION;
+-```
 
 - Ajout de la vue `ACTIVITY_CALENDAR`
   ```sql
@@ -510,7 +527,65 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
            VUFO.ACQUISITION_LEVEL_FK
     FROM SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES_ORIGIN VUFO
     inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on VUFO.PROGRAM_FK = MP.CODE;
-/
+-```
+
+
+- Creation de la vue `SPATIAL_ITEM_TYPE`
+  ```sql
+    create or replace view SPATIAL_ITEM_TYPE as
+    select SIT.ID,
+           SIT.LABEL,
+           SIT.NAME,
+           SIT.DESCRIPTION,
+           MOT.ID as OBJECT_TYPE_FK,
+           SIT.CREATION_DATE,
+           SIT.UPDATE_DATE,
+           cast(SIT.STATUS_FK as number(10)) as STATUS_FK
+    from SIH2_ADAGIO_DBA.SPATIAL_ITEM_TYPE SIT
+    inner join SIH2_ADAGIO_DBA.M_OBJECT_TYPE MOT on SIT.OBJECT_TYPE_FK = MOT.CODE;
+-```
+
+- Creation de la vue `EXPERTISE_AREA`
+  ```sql
+    create or replace view EXPERTISE_AREA as
+    select ID,
+           LABEL,
+           NAME,
+           DESCRIPTION,
+           CREATION_DATE,
+           UPDATE_DATE,
+    cast(STATUS_FK as number(10)) as STATUS_FK
+    from SIH2_ADAGIO_DBA.EXPERTISE_AREA;
+-```
+
+- Creation de la vue `EXPERTISE_AREA`
+  ```sql
+    create or replace view PHYSICAL_GEAR as
+    select GPF.ID,
+           --START_DATE, TODO insertion obligatoire
+           --END_DATE,
+           GPF.QUALIFICATION_COMMENTS as COMMENTS,
+           GPF.CONTROL_DATE,
+           GPF.CREATION_DATE,
+           null as QUALIFICATION_COMMENTS,
+           GPF.QUALIFICATION_DATE,
+           GPF.RANK_ORDER,
+           GPF.UPDATE_DATE,
+           GPF.VALIDATION_DATE,
+           P.ID as PROGRAM_FK,
+           null as RECORDER_DEPARTMENT_FK,
+           null as RECORDER_PERSON_FK,
+           GPF.FISHING_TRIP_FK as TRIP_FK,
+           --VESSEL_FK, TODO insertion obligatoire
+           GPF.GEAR_FK,
+           NULL as PARENT_PHYSICAL_GEAR_FK,
+           NULL as HASH, -- TODO add HASH into a M_GEAR table ?
+           cast(GPF.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+    from SIH2_ADAGIO_DBA.GEAR_PHYSICAL_FEATURES GPF
+    inner join SIH2_ADAGIO_DBA.M_PROGRAM P on GPF.PROGRAM_FK = P.CODE;
+-```
+
+
 
 ## Mise à jour du programme SIH-ACTIFLOT
 
