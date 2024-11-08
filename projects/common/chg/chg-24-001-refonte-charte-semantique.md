@@ -19,12 +19,12 @@
 
 - **PARAMETRAGE** de la page de connexion / page d'accueil : 
   - Nom de l'application / descriptif
-    - Propre à chaque volet ?
   - Logo
   - Images de fond
   - A propos
+    - MOA : Définir le contenu
 
-** Commun à tous les volets**
+**Commun à tous les volets**
 
 ---
 
@@ -34,6 +34,7 @@
 
 - **PARAMETRAGE** de la page d'un calendrier
   - Photo associé à un compte
+  - MOA : Pour la V1, on laisse les icones actuelles
 
 ---
 
@@ -45,7 +46,10 @@
   - Logo 1 et 2
   - Pied de page
 
-** Paramétrable pour chaque programme**
+- MOA : Modifier les tirêts roses en violet (ticket à faire)
+- MOA : Formulaire vierge de toute donnée (pas rattaché à un navire)
+
+**Paramétrable pour chaque programme**
 
 ---
 
@@ -54,7 +58,9 @@
 ---
 
 - **PARAMETRAGE** des rapports - A ajouter ?
-  - La licence doit être systématiquement affichée pour les documents
+  - La licence doit être systématiquement affichée pour les documents sans le logo
+
+  **Pied du page** : _Usage obligatoire et confidentiel   ©Ifremer. Système d'informations halieutiques_
 
 ![chg-licence](/projects/common/chg/images/chg-licence.png)
 
@@ -68,10 +74,10 @@
 
 ## Application de coloris dans l'application
 
-- A définir
+- MOE : Utiliser la palette de couleur de SUMARiS
 - Exemple pour erreur de régionalisation 
 
-![chg-zone-competence](/projects/common/chg/images/chg-zone-competence.png)
+![chg-zone-competence](/projects/common/chg/images/chg-zone-competence.png)<!-- .element: style="width: 80%" -->
 
 ---
 
@@ -80,3 +86,5 @@
 - Utiliser les mêmes termes (ressort MOA)
   - Définir un nom d'application qui englobe les 3 volets (actuellement **SUMARiS**)
   - Définir des termes commun aux différents volets (ActiFlot, ObsVentes, ObsMer)
+
+**MOA : Réunion en Janvier**
