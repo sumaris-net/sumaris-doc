@@ -14,11 +14,15 @@
 
 ### Calendriers d'activité > Import
 
+- [ ] Toujours l'erreur du traitement qui tourne en boucle sans se terminer.
+
 
 ### Calendrier d'activité > Navire 
 
 
 ### Calendrier d'activité > Calendrier
+ 
+- [ ] Liste des gradients vides
 
 
 ### Calendrier d'activité > Métiers

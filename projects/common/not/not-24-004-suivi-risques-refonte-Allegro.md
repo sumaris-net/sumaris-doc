@@ -8,7 +8,7 @@
 
 **Risque identifié** :
 
-Retard avéré sur la livraison de la release 2.9.20 pour ActiFlot et ObsVentes** (déploiement en préproduction)
+Retard avéré sur la livraison de la release 2.9.20 pour ActiFlot et ObsVentes (déploiement en préproduction)
 
 **Retard d'une semaine**
 
@@ -19,12 +19,14 @@ Retard avéré sur la livraison de la release 2.9.20 pour ActiFlot et ObsVentes*
     - Problème de CI pour builder les releases
       - sumaris-pod : OK
       - sumaris-app : Problèmes en cours de résolution
+      - Beaucoup d'évolutions donc beaucoup de merge request à valider
 
 - **Actions engendrées**
     - Application du processus de validation des modifications du modèle Adagio
         - **Rappel** : EIS/ISI garant du modèle
         - Revue des modifications d'Adagio 4.2.7 par EIS
             - Réunions, modifications des développements MCO
+    - Focalisation d'EIS sur les Merge request 
 
 - **Impactes sur l'activité d'EIS**
     - **Rappel** : EIS gère les Merge Request et les releases à chaque fin de sprint
@@ -34,12 +36,15 @@ Retard avéré sur la livraison de la release 2.9.20 pour ActiFlot et ObsVentes*
         - Corrigé par EIS
 
 - **Impacte sur le déroulement de la refonte**
-  - **Niveau : limité**
+  - **Niveau : moyen**
+    - Retard récurrent sur les merge request de chaque release
     - Prochaine démonstration MOA (release 2.9.20) : le 20/08/2024 sur ActiFlot
 
 - **Conclusion**
-    - **Impacte limité**
-    - Activité de validation indispensable pour garantir la pertinence et la qualité des évolutions du modèle Adagio
+    - **Impacte moyenne**
+      - Activité de validation indispensable pour garantir la pertinence et la qualité des évolutions du modèle Adagio
+      - Temps de validation des merge request indispensable pour garantir la qualité des développements
+      - **ObsMer/ObsVentes** : Proposition de renfort CODRA avec un expert++ pour soulager EIS
 
 ---
 
@@ -51,29 +56,46 @@ Retard des dernières release, avant la MEP, du à des absences  :
 - Absence MOE (release 2.9.23) 
 - Absence développeurs sur les dernieres releases d'ActiFlot 
 
-**Release 2.9.23**
+**Impacte sur la release 2.9.23**
 
 - Absence 3 semaines MOE Vincent Fachéro - Mission CGFS Leg 2
 - Absence 2 semaines Développeur CODRA Morgan Facorat - Congés
 
-Levier :
+Leviers :
 
 - Vincent Fachéro à continué le suivi de la release en cours lors de la mission CGFS
+- Jean-Victor Famy (CODRA) à prit le relai sur ActiFlot
 
-**Release 2.9.24**
+**Impacte sur la release 2.9.24**
 
-- Absence de ? semaines Développeur EIS Benoit Lavenier - Congés paternité
+- Absence de 1 semaine, Développeur EIS Benoit Lavenier - Congés paternité
 
 Benoit Lavenier est sur la tâche critique de développement de la régionalisation pour ActiFlot.
 
 Benoit Lavenier assure en parallèle les merge request et les livraison des releases.
 
-- Levier
+- Leviers
     - Benoit à réalisé 90% de l'implémentation de la régionalisation
-    - Ludovic (EIS) prend le relai à partir de la semaine 44 pour remplacer Benoit qui reste en contact
-    
+    - Ludovic PECQUOT (EIS) prend le relai à partir de la semaine 44 pour remplacer Benoit qui reste en contact
+
+- **Conclusion**
+    - **Impacte faible**
+      - Aucune incidence sur le planning : Régionalisation finalisée dans les temps.
 
 --- 
+
+**Complexité de la MEP**
+
+**Causes** :
+- Mise à jour de schémas BDD (ADAGIO et MAP)
+- Changelog et scripts SQL à jouer
+
+**Actions engendrées** :
+- Disposer d’une instance BDD pour s’entrainer pour la MEP
+- Possiblité de rejouer la MEP en préproduction
+
+**Impactes sur le refonte** : Niveau faible
+
 |       Date | Auteur | Sections mises à jour                               |
 |-----------:|--------|-----------------------------------------------------|
 | 29/07/2024 | VFA    | Ajout risque délai livraison release                |
