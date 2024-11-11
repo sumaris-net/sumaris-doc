@@ -102,7 +102,7 @@ Project starts the 2024/03/04
 [Atelier/Demo 3 MOA] happens the 10th of September 2024
 
 [r2.9.22] as [TASK7] requires 3 weeks and starts the 19th of August 2024
-[TASK7] is colored in green
+[TASK7] is colored in grey
 [TASK6]->[TASK7]
 [Testing7] requires 1 week
 [TASK7]->[Testing7]
@@ -110,18 +110,64 @@ Project starts the 2024/03/04
 
 
 
-[               Activity Calendar VAL / MEP] as [ActivityCalendarMEP] starts 1th October 2024 and requires 9 weeks
-[ActivityCalendarMEP] is colored in yellow
+[            ActiFlot developpment] as [ActivityCalendarMEP] requires 9 week and starts 11th September 2024
+[ActivityCalendarMEP] is colored in lime
 
+[     MCO ActiFlot ] as [ActivityCalendarMCO] requires 4 week and starts 1th December 2024
+[ActivityCalendarMCO] is colored in lime
 
-[r2.9.23] as [TASK8] requires 4 weeks and starts the 2th of December 2024
+[ActivityCalendarMEP] displays on same row as [ActivityCalendarMCO]
+
+[r2.10] as [TASK8] requires 4 weeks and starts the 12th of November 2024
 [TASK8] is colored in Lavender/LightBlue
 [TASK7]->[TASK8]
-[Testing8] requires 2 week
+[Testing8] requires 1 week
 [TASK8]->[Testing8]
 [Demo MOA 4] happens 3 day after [Testing8]'s end
 
-[validation] as [VAL] requires 2 week and starts the 15th of April 2025
+
+[r2.11] as [TASK9] requires 4 weeks and starts the 9th of December 2024
+[TASK9] is colored in Lavender/LightBlue
+[TASK8]->[TASK9]
+[Testing9] requires 1 week
+[TASK9]->[Testing9]
+[Demo MOA 5] happens 3 day after [Testing9]'s end
+
+[r2.12] as [TASK10] requires 4 weeks and starts the 8th of January 2025
+[TASK10] is colored in Lavender/LightBlue
+[TASK9]->[TASK10]
+[Testing10] requires 1 week
+[TASK10]->[Testing10]
+[Demo MOA 6] happens 3 day after [Testing10]'s end
+
+[r2.13] as [TASK11] requires 4 weeks and starts the 5th of Febrary 2025
+[TASK11] is colored in Lavender/LightBlue
+[TASK10]->[TASK11]
+[Testing11] requires 1 week
+[TASK11]->[Testing11]
+[Demo MOA 7] happens 3 day after [Testing11]'s end
+
+[r2.14] as [TASK12] requires 4 weeks and starts the 4th of March 2025
+[TASK12] is colored in Lavender/LightBlue
+[TASK11]->[TASK12]
+[Testing12] requires 1 week
+[TASK12]->[Testing12]
+[Demo MOA 8] happens 3 day after [Testing12]'s end
+
+[r2.15] as [TASK13] requires 3 weeks and starts the 1th of April 2025
+[TASK13] is colored in Lavender/LightBlue
+[TASK12]->[TASK13]
+
+
+[validation / Tests MCO] as [VAL] requires 1 week and starts the 10th of April 2025
+[VAL] is colored in orange
+[TASK13]->[VAL]
+
+[Production] as [PROD] requires 1 week and starts the 2th of December 2024
+[PROD] is colored in green
+[VAL]->[PROD]
+
+[validation] as [VAL] requires 1 week and starts the 1th of April 2025
 [VAL] is colored in red
 
 
@@ -144,12 +190,17 @@ Project starts the 2024/03/04
 [JVF] as [CONG_JVF] requires 2 week and starts the 29th of July 2024
 [JVF] is colored in plum
 2024-07-29 to 2024-08-11 is colored in grey
+2024-09-11 to 2024-11-11 is colored in grey
 
 [MFA] as [CONG_MFA] requires 2 week and starts the 09th of October 2024
 [MFA] is colored in plum
 
 [BLE] as [CONG_BLE] requires 3 week and starts the 5th of August 2024
 [BLE] is colored in plum
+
+[BLE Pat] as [PAT_BLE] requires 1 week and starts the 28th of October 2024
+[BLE Pat] is colored in plum
+[BLE Pat] displays on same row as [BLE]
 
 [MDE] as [CONG_MDE] requires 3 week and starts the 8th of July 2024
 [MDE] is colored in plum

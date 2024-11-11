@@ -156,12 +156,15 @@ N(9, 12)  is colored in green
 [Testing7] requires 1 week and starts the 22th of September 2024
 [Demo MOA 5] happens 2 day after [Testing7]'s end
 
+[Tests utilisateurs] as [TASK10] requires 6 week and starts the 21th of October 2024
+[TASK10] is colored in yellow
+
 [r2.9.24] as [TASK8] requires 4 weeks and starts the 7th of October 2024
 [TASK8] is colored in green
 [TASK7]->[TASK8]
 [TASK8]->[Testing8]
 [Testing8] requires 1 week and starts the 22th of September 2024
-[Demo MOA 6] happens 2 day after [Testing8]'s end
+[Demo MOA 6] happens 3 day after [Testing8]'s end
 
 [r2.9.25] as [TASK9] requires 3 weeks and starts the 4th of November 2024
 [TASK9] is colored in Lavender/LightBlue
@@ -200,10 +203,9 @@ N(9, 12)  is colored in green
 [BLE] as [CONG_BLE] requires 3 week and starts the 5th of August 2024 and requires 2 week and starts the 28th of October 2024
 [BLE] is colored in plum
 
-[BLE Pat.] as [PAT_BLE] requires 1 week and starts the 28th of October 2024
-[BLE Pat.] is colored in plum
-
-[BLE Pat.] displays on same row as [BLE]
+[BLE Pat] as [PAT_BLE] requires 1 week and starts the 28th of October 2024
+[BLE Pat] is colored in plum
+[BLE Pat] displays on same row as [BLE]
 
 [MDE] as [CONG_MDE] requires 3 week and starts the 8th of July 2024
 [MDE] is colored in plum

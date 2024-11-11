@@ -130,6 +130,12 @@ Project starts the 2023/10/01
 [18] happen the 2024/05/21
 [18] is colored in blue
 
+[19] happen the 2024/05/30
+[19] is colored in blue
+
+[20] happen the 2024/06/18
+[20] is colored in blue
+
 [1] displays on same row as [2]
 [2] displays on same row as [3]
 [3] displays on same row as [4]
@@ -147,6 +153,8 @@ Project starts the 2023/10/01
 [15] displays on same row as [16]
 [16] displays on same row as [17]
 [17] displays on same row as [18]
+[18] displays on same row as [19]
+[19] displays on same row as [20]
 
 !procedure N(x,n)
 [x<size:0>n</size>]
@@ -164,9 +172,17 @@ N(3, 3) is colored in orange
 N(4, 4) as [o4] happen the 2024/05/21
 N(4, 4) is colored in orange
 
+N(5, 5) as [o5] happen the 2024/09/10
+N(5, 5) is colored in orange
+
+N(6, 6) as [o6] happen the 2024/08/13
+N(6, 6) is colored in orange
+
 [o1] displays on same row as [o2]
 [o2] displays on same row as [o3]
 [o3] displays on same row as [o4]
+[o4] displays on same row as [o5]
+[o5] displays on same row as [o6]
 
 N(1, 4) as [c1] happen the 2024/02/14
 N(1, 4)  is colored in green
@@ -186,38 +202,46 @@ N(5, 8)  is colored in green
 N(6, 9) as [c6] happen the 2024/05/23
 N(6, 9)  is colored in green
 
+N(7, 10) as [c7] happen the 2024/06/13
+N(7, 10)  is colored in green
+
+N(8, 11) as [c8] happen the 2024/06/27
+N(8, 11)  is colored in green
+
 [c1] displays on same row as [c2]
 [c2] displays on same row as [c3]
 [c3] displays on same row as [c4]
 [c4] displays on same row as [c5]
 [c5] displays on same row as [c6]
+[c6] displays on same row as [c7]
+[c7] displays on same row as [c8]
 
-[Spécifications] as [TASK1] starts the 2024/01/03 and requires 31 week
+[Spécifications] as [TASK1] starts the 2024/01/03 and requires 34 week
 [TASK1] is colored in darkTurquoise
-[TASK1] is 65% complete
+[TASK1] is 85% complete
 
 [Formation] as [TASK2] starts the 2024/03/04 and requires 1 week
 [TASK2] is colored in lightSalmon
 
-[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 27 week
+[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 37 week
 [TASK3] is colored in orange
-[TASK3] is 40% complete
+[TASK3] is 65% complete
 
-[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 27 week
+[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 37 week
 [TASK4] is colored in blue
-[TASK4] is 35% complete
+[TASK4] is 50% complete
 
-[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 20 week
+[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 29 week
 [TASK5] is colored in green
-[TASK5] is 20% complete
+[TASK5] is 90% complete
 
-[Batchs] as [TASK6] starts the 2024/06/01 and requires 11 week
+[Batchs] as [TASK6] starts the 2024/11/01 and requires 5 week
 [TASK6] is colored in red
 [TASK6] is 0% complete
 
-[Recette MOE] as [TASK7] starts the 2024/05/13 and requires 15 week
+[Recette MOE] as [TASK7] starts the 2024/05/13 and requires 27 week
 [TASK7] is colored in pink
-[TASK7] is 10% complete
+[TASK7] is 90% complete
 
 2024-08-16 to 2024-08-30 is closed
 
