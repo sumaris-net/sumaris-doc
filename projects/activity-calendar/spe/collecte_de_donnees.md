@@ -554,26 +554,33 @@ alors le message bloquant "Inactivité annuelle incohérente" s'affiche [Fin]
 
 ## Calendrier d'activité > Régionalisation
 
-Présent dans le périmètre V1
+**REF: ACTIVITY_CALENDAR/REGIONALISATION**
 
-> Réunion du 23/05/2024 :
-> 
-> Régionalisation importante pour les métiers, les zones de pêche et les ports.
-> 
-> Pas de lien métier zone de pêche. De la zone dépend le distant de gradient de distance à la côte (référentiel).
->
-> En mode tablette, activer le mode hors ligne
-> 
-> Configuration : Indiquer que l'on travail dans la zone de compétence
-> 
-> Ajouter la zone de compétence dans la popup de configuration du mode hors-ligne
-> 
-> Réunion prévue le 06/06/2024 (avec Armelle Rouyer)
-> 
-> * Champs concernés par la régionalisation :
-* Métier
-* Zone de pêche
-* Gradient de côte : table DISTANCE_TO_COAST_GRADIENT
-* Gradient de profondeur : table DEPTH_GRADIENT
-* Zone proche : table NEARBY_SPECIFIC_AREA
+![ui-activity-calendar](/projects/activity-calendar/spe/images/activity-calendar-regionalisation-activation.svg)
 
+La régionalisation permet de limiter le nombre de valeurs dans les listes déroulantes pour éviter les erreurs de saisie.
+
+Les champs concernés par la régionalisation sont les suivants :
+ - Métier
+ - Port
+ - Zone de pêche
+ - Gradient de côte (table DISTANCE_TO_COAST_GRADIENT)
+ - Gradient de profondeur (table DEPTH_GRADIENT)
+ - Zone proche (table NEARBY_SPECIFIC_AREA)
+
+#### Scénario principal
+
+1. Dans l'onglet calendrier, le saisisseur clique sur les options du calendrier
+2. Le saisisseur déroule le menu "Zone de compétence ..."
+3. Le saisisseur sélectionne une zone de compétence dans la liste
+4. La zone de compétence est appliquée au calendrier courant
+  * La zone de compétence est affichée dans le fil d'ariane
+  * Les champs cités plus haut sont limités dans leur valeur. Les valeurs disponibles correspondent à la zone de compétence activée.
+
+**Variante(s) :**
+
+**Variante :** Le saisisseur active une zone de compétence, sur un calendrier en cours de saisie dont le quartier d'immatriculation
+des navires n'appartient pas à la zone de compétence.
+
+4. La zone de compétence est appliquée au calendrier courant
+  * Les champs dont les valeurs n'appartiennent pas à la zone de compétence sont en avertissements (fond de la cellule en orange)
