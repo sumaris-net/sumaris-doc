@@ -8,17 +8,27 @@
 
 ### Calendriers d'activité
 
+- [ ] Le tri sur la colonne "Navire" est incohérent
+    ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Tri_navires.PNG)
+
 
 ### Calendriers d'activité > Filtres
 
+- [ ] Port d'exploitation : l'application du filtre dupplique les calendriers dans le tableau
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Duplication_calendriers.PNG)
+- [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
+- [ ] Saisisseur/Observateur : les filtres ne remontent pas les utilisateurs ayant un PERSON.STATUS_FK = 0, exemple [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746)
+  - PETIT Oceanne : n'apparait pas dans les filtres alors qu'elle est saisisseur de calendriers notamment sur 2022
+  - LECROSNIER	Sandile : a 2 lignes dans la table PERSON. Le filtrage sur ce saisisseur en 2019,2020,2021 ne remonte aucun calendrier alors qu'elle est saisisseur de calendriers notamment sur ces années
 
 ### Calendriers d'activité > Import
 
 - [ ] Toujours l'erreur du traitement qui tourne en boucle sans se terminer [#715](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/715)
 
-
 ### Calendrier d'activité > Navire 
 
+- [ ] Caractéristiques navires : certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022)
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-002-2.9.20-Carac_navire_fusion_lignes.PNG)
 
 ### Calendrier d'activité > Calendrier
  
@@ -26,6 +36,9 @@
 
 - [ ] Cas de test d'un calendrier avec le flag "Inactivité annuelle confirmée par l'observateur" à "Non" ET tous les mois du calendrier à l'état "Inactif"
     - Il n'y a pas de message d'erreur quand on termine la saisie [#770](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/770)
+    - 
+- [ ] Ajouter un contrôle avec un message bloquant si la zone de pêche 2 d'un métier n'est pas renseignée alors que la profondeur 2 ou la zone proche 2 est renseignée. Actuellement cela génère une erreur oracle à l'enregistrement
+  - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK)
 
 ### Calendrier d'activité > Métiers
 
@@ -35,15 +48,30 @@
 
 ### Calendrier d'activité > Formulaire terrain vierge 
 
-Attente options Maxime
+- [ ] Qualification de l'enquête : Afficher uniquement les qualitatives values avec STATUS_FK = 1 (ce qui permet de ne plus afficher les "Recopie 2021" et "Recopie 2022"). Attention sur le formulaire terrain avec données, il ne faut pas appliquer ce filtre et afficher toutes les qualitatives values du pmfm
+- [ ] Immatriculation : Renseigner le champ, actuellement il est vide
+- [ ] Dernier armateur : Renseigner le champ, actuellement il est vide
+- [ ] Vente : Trier les qualitatives values selon l'ordre alphabétique (pour être conforme au formulaire de saisie). Ce tri sera commun avec le formulaire terrain avec données
 
 ### Calendrier d'activité > Formulaire terrain avec données 
 
-Attente options Maxime
+- [ ] Lorsque l'option des préférences utilisateurs "Liste déroulante > Navires" n'est pas renseignée, le titre présent dans le bandeau doit afficher par défaut l'immatriculation au lieu du marquage extérieur
+- [ ] Caractéristiques engins : afficher les PMFMs liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
+- [ ] Observateurs : mettre un observater par ligne pour plus de lisibilité
+- [ ] Erreur lors de l'accès depuis le tableau de consultation des calendriers en filtrant sur le programme ACTIFLOT et en sélectionnant un calendrier
+  - Variable 'id' has an invalid value: Variable 'id' has coerced Nul value for NonNull type 'Int!'
 
 ### Calendriers d'activité > Rapport d'avancement 
 
-Attente options Maxime
+- [ ] Si l'utilisateur a les droits sur plusieurs programmes de collecte de type calendrier (ACTIFLOT et ACTIPRED) :
+  - [ ] Charger par défaut le programme ACTIFLOT et ses options
+  - [ ] Afficher un warning
+- [ ] Augmenter la largeur de la colonne "Longueur H.T (m)" pour le pas couper le mot "Longueur"
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Rapport_avancement.PNG)
+- [ ] Afficher le filtre "Objectif d'enquête directe"
+- [ ] Le filtre "Type de navire" apparait dès que le filtre "Navire" est renseigné, alors qu'il devrait apparaitre uniquement si le type de navire est renseigné
+- [ ] Le filtre "Type de navire" n'est pas pris en compte et aucun message n'apparait pour indiquer qu'il y a plus de 20 calendriers dans le rapport
+
 
 ### Paramètres systèmes
 
