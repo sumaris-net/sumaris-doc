@@ -71,6 +71,8 @@ Fonctionnalités de la release **2.9.24**
     - A enrichir pour la formation séminaire SIH
     - Prévoir une génération au format PDF (action MOE)
 
+_MOA : voir avec Johnatan Rault pour appliquer la charte graphique du SIH en markdown_
+
 ---
 
 ## Recette MOE/MOA du sprint 8 (**2.9.24**)
@@ -97,11 +99,13 @@ Navigateur préconisé pour la recette : **Chrome**
 
 - Démonstration sur ActiFlot
 
+_MOE/MOA : Ne pas communiquer sur la version client lourd pour la V1 (sauf cas particulier pour des utilisateurs)_
+
 ---
 
 Recette **MOE** faite les 08,12,13/11/2024. 
 
-Début recette **MOA** le xx/11/2024.
+Début recette **MOA** le 15/11/2024 (_MOE : Donner le GO_)
 
 ---
 
@@ -126,4 +130,16 @@ Début recette **MOA** le xx/11/2024.
 
 ### Retours de présentation 
 
-TO COMPLETE
+- Calendrier 
+  - Si le navire est inactif sur toute l'année, le champ "Inactivité annuelle confirmée par l'observateur" doit être obligatoire, peut importe la valeur saisie (Oui ou Non)
+  - Il ne faut pas donner la possibilité de valider/qualifier un calendrier avec un mois actif sans métier
+  - Désactiver la validation
+    - Paramètres Système 
+      - _Saisie > Activer le processus qualité ?_ > _Non_
+  - Revoir l'ergonomie de saisie du tableau métier
+    - En l'état la tableau ne parait pas saisissable
+
+- Régionalisation
+  - Garder le fonctionnement actuel mais déplacer l'activation/désactivation de la régionalisation dans les paramètres du saisisseur
+  - Paramétrer les niveaux pour chaque zone de compétence
+ 
