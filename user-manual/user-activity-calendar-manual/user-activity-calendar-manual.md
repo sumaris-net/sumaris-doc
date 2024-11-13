@@ -22,8 +22,11 @@ Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est précon
 ![traduction](./traduction_1.png)
 ![traduction](./traduction_2.png)
 
-- De se régionaliser (TODO : captures d'écran)
-- De compacter les lignes du calendrier de saisie (TODO : activé par défaut ?)
+- De se régionaliser :
+
+La régionalisation se définit dans les paramètres utilisateur de l'application.
+
+- De compacter les lignes du calendrier de saisie (activé par défaut)
 
 ## Paramétrages 
 
@@ -60,6 +63,12 @@ Ce paramétrage est spécifique à chaque utilisateur.
 ![parametrage](./paramétrage_champs.png)
 ![parametrage](./paramétrage_champs_2.png)
 
+### Paramétrage de la régionalisation
+
+Il faut choisir sa zone de compétence dans les paramètres utilisateur de l'application
+
+![regionalisation](./parametrage_zone_competence.png)
+
 ## Fonctionnalités
 
 ### Epingler un calendrier
@@ -82,6 +91,11 @@ Pour cela, il faut se positionner sur la bordure droite ou gauche de la cellule 
 
 ![etirer](./étirer.png)
 
+### Saisie d'un mois complet
+
+La touche **Tab** permet de se positionner verticalement, dans le sens descendant, quand, on est en édition sur une cellule.
+Cela permet de saisir un mois complet et de passer au mois suivant, toujours avec la touche **Tab**.
+
 ### Afficher les erreurs
 
 Lorsqu'il y a une erreur de saisie, une icône s'affiche au dessus du ou des mois concernés.
@@ -91,6 +105,13 @@ Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs renco
 A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
 
 ![erreurs](./afficher_erreurs.png)
+
+### Afficher les avertissements
+
+Un fond de cellule est en orange sur des caractéristiques indique un avertissement. 
+C'est par exemple lorque l'on navigue sur un calendrier dont les caractéristiques de location (Port, Zone de peche, ...) n'appartiennent pas à la zone de compétence.
+
+![avertissement](./avertissement_zone_competence.png)
 
 ### Afficher les raccourcis clavier
 
@@ -114,6 +135,9 @@ Sur un calendrier, la génération du formulaire vierge et du formulaire avec do
 
 ![rapports](./éditer_rapports.png)
 
+### Changer sa zone de compétence
 
+Dans l'écran de saisie du calendrier, il est possible de changer sa zone de compétence
 
+![regionalisation](./changement_zone_competence.png)
 
