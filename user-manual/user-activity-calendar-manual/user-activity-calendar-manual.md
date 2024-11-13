@@ -108,6 +108,7 @@ puis de générer le formulaire vierge, le formulaire avec données et le rappor
 L'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
 
 ![rapports](./éditer_rapports_1.png)
+![rapports](./éditer_rapports_2.png)
 
 Sur un calendrier, la génération du formulaire vierge et du formulaire avec données est accessible via le menu contextuel.
 
