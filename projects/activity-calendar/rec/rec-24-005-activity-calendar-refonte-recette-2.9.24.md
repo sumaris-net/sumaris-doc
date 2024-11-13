@@ -2,20 +2,15 @@
 
 ## Retours de recette MOE - release 2.9.24
 
-
-### Gestion des droits
-
-
 ### Calendriers d'activité
 
-- [ ] Le tri sur la colonne "Navire" est incohérent
-    ![rec-activity-calendar](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Tri_navires.PNG)
-
+- [ ] La colonne "Objectif d'enquête directe" affiche la valeur "Oui" à la place de "Opportuniste"
 
 ### Calendriers d'activité > Filtres
 
 - [ ] Port d'exploitation : l'application du filtre dupplique les calendriers dans le tableau
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Duplication_calendriers.PNG)
+- [ ] Type de navire : la liste n'est pas filtrée selon l'option des paramètres systèmes "Saisie > Navire : Type(s) de navire (filtre)"
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
 - [ ] Saisisseur/Observateur : les filtres ne remontent pas les utilisateurs ayant un PERSON.STATUS_FK = 0, exemple [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746)
   - PETIT Oceanne : n'apparait pas dans les filtres alors qu'elle est saisisseur de calendriers notamment sur 2022
@@ -38,13 +33,11 @@
     - Il n'y a pas de message d'erreur quand on termine la saisie [#770](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/770)
     - 
 - [ ] Ajouter un contrôle avec un message bloquant si la zone de pêche 2 d'un métier n'est pas renseignée alors que la profondeur 2 ou la zone proche 2 est renseignée. Actuellement cela génère une erreur oracle à l'enregistrement
-  - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK)
-
-### Calendrier d'activité > Métiers
-
+  - ORA-01400: impossible d'insérer NULL dans (SIH2_ADAGIO_DBA.FISHING_AREA.LOCATION_FK) [#799](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/799)
 
 ### Calendrier d'activité > Terminaison de la saisie 
 
+- [ ] Le menu contextuel et donc l'accès au rapport n'est plus accessible depuis un calendrier validé
 
 ### Calendrier d'activité > Formulaire terrain vierge 
 
@@ -57,8 +50,8 @@
 
 - [ ] Lorsque l'option des préférences utilisateurs "Liste déroulante > Navires" n'est pas renseignée, le titre présent dans le bandeau doit afficher par défaut l'immatriculation au lieu du marquage extérieur
 - [ ] Caractéristiques engins : afficher les PMFMs liés aux niveaux d'acquisition ACTIVITY_CALENDAR_GEAR_PHYSICAL_FEATURES et ACTIVITY_CALENDAR_GEAR_USE_FEATURES
-- [ ] Observateurs : mettre un observater par ligne pour plus de lisibilité
-- [ ] Erreur lors de l'accès depuis le tableau de consultation des calendriers en filtrant sur le programme ACTIFLOT et en sélectionnant un calendrier
+- [ ] Observateurs : mettre un observateur par ligne pour plus de lisibilité
+- [x] Erreur lors de l'accès depuis le tableau de consultation des calendriers en filtrant sur le programme ACTIFLOT et en sélectionnant un calendrier
   - Variable 'id' has an invalid value: Variable 'id' has coerced Nul value for NonNull type 'Int!'
 
 ### Calendriers d'activité > Rapport d'avancement 
