@@ -88,7 +88,7 @@ Lorsqu'il y a une erreur de saisie, une icône s'affiche au dessus du ou des moi
 
 Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs rencontrés sur le mois.
 
-A noter : certaines erreurs bloque la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
+A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
 
 ![erreurs](./afficher_erreurs.png)
 
@@ -96,18 +96,18 @@ A noter : certaines erreurs bloque la sauvegarde du calendrier, il est donc néc
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
+![raccourcis_clavier](./raccourcis_clavier.png)
+
 ### Générer les formulaires et rapports
 
 Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier.
 
 Sur le tableau de consultation des calendriers, il est nécessaire d'appliquer un filtre sur le programme de collecte "SIH-ACTIFLOT" 
-puis de sélectionner des calendriers pour pouvoir générer via le menu contextuel le formulaire vierge, le formulaire avec données et le rapport d'avancement des calendriers sélectionnés.
+puis de générer le formulaire vierge, le formulaire avec données et le rapport d'avancement via le menu contextuel .
 
-La génération du rapport d'avancement peut également être réalisée sans sélection préalable des calendriers. 
-Dans ce cas, l'ensemble des calendriers contenus dans le tableau sera utilisé pour générer le rapport d'avancement.
+L'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
 
 ![rapports](./éditer_rapports_1.png)
-![rapports](./éditer_rapports_2.png)
 
 Sur un calendrier, la génération du formulaire vierge et du formulaire avec données est accessible via le menu contextuel.
 
