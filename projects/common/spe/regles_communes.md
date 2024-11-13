@@ -5,7 +5,7 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 
 ---
 ## Sommaire
-
+- [test](#commun--saisie-de-mensuration)
 - [Spécificités techniques](#spécificités-techniques)
 - [Commun > Ergonomie > principes généraux](#commun--ergonomie-principes-généraux)
 - [Commun > Ergonomie > Connexion à l'application](#commun--ergonomie-connexion-à-l-application)

@@ -129,6 +129,7 @@ Les informations suivantes sont affichées pour chaque calendrier :
    * L'objectif d'enquête éco
    * Les observateurs
    * Les saisisseurs
+   * La date de modification du calendrier
    * Les commentaires
 3. Le saisisseur peut activer un filtre les calendriers d'activité (REF: ACTIVITY_CALENDAR/FILTERS)
 4. Le saisisseur accède à un calendrier d'activité (REF: ACTIVITY_CALENDAR/GENERAL)

@@ -355,4 +355,28 @@
 ---
 
 **Fonctionnalités du sprint 8**
-TO COMPLETE
+
+- Régionalisation
+
+- Onglet "Calendriers d'activité"
+  - Ajout de la colonne "Date de modification"
+  - Ajout de la colonne lieu d'immatriculation
+  - Sauvegarde des filtres
+
+- Predocumentation
+  - Visualisation des métiers
+  - Source Sacrois-ObsDeb absente
+
+- Rapports
+  - Informations navire manquantes
+  - Bugs rapport d'avancement
+  - Evolutions formulaire terrain vierge
+
+- Onglet "Calendrier"
+  - Gestion des droits - Changement de QIM
+  - Sélection de cellule décalée
+  - Amélioration de l'ergonomie
+  - Raccourcis clavier
+  - Bordure absente sur décembre
+  - Bug blocage de la saisie
+  - Affichage des différents observateurs 
