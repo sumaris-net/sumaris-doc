@@ -96,7 +96,7 @@ A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc n�
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
-![raccourcis_clavier](./raccourcis_clavier.png)
+![raccourcis_clavier](./raccourcis_clavier.PNG)
 
 ### Générer les formulaires et rapports
 
