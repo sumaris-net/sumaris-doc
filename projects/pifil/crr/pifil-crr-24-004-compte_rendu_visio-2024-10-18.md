@@ -42,28 +42,28 @@ et la définition d'une stratégie de communication auprès des professionels
 Voici les retours suite aux tests de l'application sur open-test.sumaris.net (version 2.9.23.2)
 
 - Installation :
-  - Sous Android, plusieurs personnes n'ont pas pu installer l'application (sur Samsung) 
-  - Bug de synchronisation / mode hors ligne, détecté par EIS
+  - [ ] Sous Android, plusieurs personnes n'ont pas pu installer l'application (sur Samsung) 
+  - [ ] Bug de synchronisation / mode hors ligne, détecté par EIS
 
 - Ergonomie :
-  - Icone disquette pour sauvegarder : pas intuitif pour tous
+  - [ ] Icone disquette pour sauvegarder : pas intuitif pour tous
     - Proposition d'aJouter le texte "Sauvegarder" en dessous ? 
 
 ---
 
 - Écran Marée :
-  - Ajout d'un navire (bouton "+" à droite du champ navire) :
+  - [ ] Ajout d'un navire (bouton "+" à droite du champ navire) :
     - "Lieu d'immatriculation" 
       - à suffixer avec "(QIM, Pavillon)" ?
       - La liste déroulante apparait est vide, il faut taper une recherche pour voir des éléments
  - Onglet "Opérations" pas visible sur petit écran.
-   - Proposition de réduire la largeur des titres d'onglets,
-   - Proposition d'ajouter des boutons suivant/précédent pour changer d'onglet   
+   - [ ] Proposition de réduire la largeur des titres d'onglets;
+   - [ ] Proposition d'ajouter des boutons suivant/précédent pour changer d'onglet;
 
 ---
 
 - Tableau des engins :
-  - Le bouton bleu "+" pour ajouter un engin pourrait proposer 2 choix :
+  - [x] Le bouton bleu "+" pour ajouter un engin pourrait proposer 2 choix :
     - "Rechercher un engin existant" :
       - Ouverture de la modal de recherche.
       - A la sélection de l'engin, retour à la fenêtre d'édition de l'engin pour pouvoir le modifier
@@ -72,19 +72,19 @@ Voici les retours suite aux tests de l'application sur open-test.sumaris.net (ve
 ---
 
 - Écran Opérations (filage ou virage)
-  - Bug sur la géolocalisation (un message d'attente apparait, mais ne rend pas la main)
-  - Si marée sans caméra ni sans GPS :
+  - [ ] Bug sur la géolocalisation (un message d'attente apparait, mais ne rend pas la main)
+  - [x] Si marée sans caméra ni sans GPS :
     - Remplir la date de fin automatiquement (sans heure)
     - Recopier automatiquement la zone de début dans celle de fin, si cette dernière est vide.
       Si la zone de fin n'est pas vide, alors demander confirmation à l'utilisateur avant de la mettre à jour
-  - Champ "Profondeur de l'engin (m)" à renommer en "Profondeur au filage (m)"
-  - Si "Captures accidentelles" à "Oui" : Rendre plus visible l'onglet "Captures accidentelles" 
+  - [ ] Champ "Profondeur de l'engin (m)" à renommer en "Profondeur au filage (m)"
+  - [ ] Si "Captures accidentelles" à "Oui" : Rendre plus visible l'onglet "Captures accidentelles" 
     - Proposition d'ajouter une icone d'erreur dans le titre de l'onglet, si aucune captures n'est déclarée
 
 ---
 
 - Captures accidentelles :
-  - "Référence de la marque" à renommer "Numéro de la bague Pélagis"
+  - [ ] "Référence de la marque" à renommer "Numéro de la bague Pélagis"
 
 ---
 
