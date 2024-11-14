@@ -111,7 +111,7 @@ A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc n�
 Un fond de cellule est en orange sur des caractéristiques indique un avertissement. 
 C'est par exemple lorque l'on navigue sur un calendrier dont les caractéristiques de location (Port, Zone de peche, ...) n'appartiennent pas à la zone de compétence.
 
-![avertissement](./avertissement_zone_competence.png)
+![avertissement](./avertissement_zone_competence.PNG)
 
 ### Afficher les raccourcis clavier
 
