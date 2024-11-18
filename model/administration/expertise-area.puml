@@ -16,6 +16,10 @@ hide empty members
 
   note left: Lieux de la zone\n(terrestre et en mer)
 
+  class ExpertiseArea2LocationLevel
+
+  note right: Niveaux de lieux de la zone\n(terrestre et en mer)
+
   package referential #DDDDDD {
 
     class Status
@@ -25,8 +29,10 @@ hide empty members
     package location {
       class LocationClassification
       class Location
+      class LocationLevel
 
       LocationClassification "1" <-right- "*" Location
+      LocationLevel "1" <-left- "*" Location
 
     }
 
@@ -56,6 +62,8 @@ hide empty members
   ExpertiseArea "*" --> "1" Status
   ExpertiseArea "1" *-- "0..*" ExpertiseArea2Location: locations
   ExpertiseArea2Location "0..*" --> "1" Location
+  ExpertiseArea "1" *-- "0..*" ExpertiseArea2LocationLevel: locationLevels
+  ExpertiseArea2LocationLevel "0..*" --> "1" LocationLevel
 
   SpatialItem2Location "0..*" -up-> "1" Location
 
