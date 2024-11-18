@@ -80,42 +80,44 @@
 
 - Présentation refonte ObsVentes séminaire SIH
   - Prévoir un point spécifique avec Marion
-  - Voir pour un démonstration tablette d'un outil à Benoit
+  - Présenter ObsVentes en mode bureau et en mode terrain sur des 2 espèces différentes
+    - Suivant les délais, EIS pourra nous mettre à disposition version applicative d'ObsVentes sur _test.sumaris.net plutôt_ que de déployer une version en préproduction Ifremer
 
 - PSION : prévoir un import de mensuration dans ObsVentes (format de fichier à définir)
   - En V1 mais d'abord développer les écrans de saisie des espèces pour les mensurations
-  - Contacter Blandine Brisset pour l'exploitation des données du PSION dans Allegro (moulinette existante)
+  - Contacter Blandine Brisset pour l'exploitation des données du PSION dans Allegro (informations sur la moulinette existante)
   - CF Mail Vincent Badts (14/11/2024)
   - CF Mail Marion (24/09/2024)
 
 - Mensuration / Dénombrement
-  - Pas de prélèvement ni de maturité sexuelle
-  - Certaines espèces sont à sexer
+  - Pas de prélèvement ni de maturité sexuelle (réservé ObsBio - IMAGiNE)
+  - Certaines espèces sont à sexer (cf [manuel observateur ObsVentes](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/obsvente/doc/obsventes-doc-24-003-Manuel-observateur-ObsVentes.pdf))
     - La langoustine (Nephrops norvegicus),
     - Les crustacés (araignée, tourteau, homard, langouste, etc.),
     - La lingue bleue (Molva dypterygia),
     - Les élasmobranches (raies et requins)
     - La cardine franche (Lepidorhombus whiffiagonis).
-    - RAJOUTER UNE COLONNE SEXE DANS L'IHM DU DENOMBREMENT POUR L'ESPECE CONCERNEE
+    - Action _MOE_ : RAJOUTER UNE COLONNE SEXE DANS L'IHM DU DENOMBREMENT POUR L'ESPECE CONCERNEE (Spécification)
 
 - 1 PSFM numérique ou plusieurs
-  - Oui, à prévoir (Cas des élasmobranches)
+  - _Réponse MOA_ : Oui, à prévoir (Cas des élasmobranches)
 
-- Démo du dénombrement
+- Démo du dénombrement (Codra/EIS)
 
 - Prévoir un PSFM par défaut (Ex : longueur totale) puis pouvoir rajouter un autre PSFM (par exemple s'il manque la queue)
 
-- Avoir un référentiel de taille Min/Max par espèce initialisé pour la saisie
+- Proposition _MOE/Dév_ : Avoir un référentiel de taille Min/Max par espèce initialisé pour la saisie
 de façon à ne pas saisir la taille au pavé numérique.
-  - A maquetter / construire un référentiel de classe de taille par espèce
+  - A maquetter / construire un référentiel de classe de taille par espèce (Action _MOA_)
 
 - Définir le champ qui déclenche l'enregistrement
-  - La dernière valeur saisie déclenche l'enregistrement
+  - _MOE/Dév_ : La dernière valeur saisie déclenche l'enregistrement
 
 - ObsVentes : Pas de poids individuel (que sur ObsBio sur un échantillonnage)
 
 - Le mode dénombrement a t il un sens car le mode de saisie individuel permet la même chose ?
+  - _MOE_ : A trancher lors de la prochaine présentation du prototypage
 
-- Mettre un filtre automatique si on ajoute un dénombrement sur une nouvelle espèce scientifique alors qu'une autre espèce à déjà été saisi
+- Proposition _MOE/Dév_ : Mettre un filtre automatique si on ajoute un dénombrement sur une nouvelle espèce scientifique alors qu'une autre espèce à déjà été saisi
   - Le filtre permet de se positionner sur l'espèce rajoutée pour faire la saisie
 
