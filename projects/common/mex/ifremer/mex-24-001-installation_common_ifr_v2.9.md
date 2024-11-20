@@ -28,6 +28,8 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
     - Nouvelle colonne M_PARAMETER.IS_BOOLEAN
   - Passer le changelog Oracle d'Adagio [db-changelog-4.3.1.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.3.1.xml) 
     - Zones de compétence pour la régionalisation
+  - Passer le changelog Oracle d'Adagio [db-changelog-4.3.2.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.3.2.xml)
+    - Zones de compétence et niveaux associés pour la régionalisation
 
 - Adagio : Mise à jour du référentiel
   - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)

@@ -322,10 +322,10 @@
 
 - **Start date** : 07/10/2024
 - **End date** : 31/10/2024
-- **Milestone** : 2.9.24
+- **Milestone** : 2.9.24, 2.9.24.4
 - **Goal** : Bugs correction, enhancements
 - **Status** : Closed
-- **Deployement** : On Going
+- **Deployement** : Done
 - [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.24)
 
 ---
@@ -380,3 +380,25 @@
   - Bordure absente sur décembre
   - Bug blocage de la saisie
   - Affichage des différents observateurs 
+
+
+## Calendrier d'activité - Sprint 9 - Issue Board
+
+- **Start date** : 07/10/2024
+- **End date** : 31/10/2024
+- **Milestone** : 2.9.25
+- **Goal** : Bugs correction, enhancements
+- **Status** : On going
+- **Deployement** : On going
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.25)
+
+---
+
+| **Open** | **To Do** | **Doing** | **Done** | **Testing** | **Waiting** | **Closed**                                                                        |
+|----------|-----------|-----------|----------|-------------|-------------|-----------------------------------------------------------------------------------| 
+|          |           |           |          |             |             | Enh [#772](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/772) |  
+<!-- .element: class="font-size-small" -->
+
+---
+
+**Fonctionnalités du sprint 9**

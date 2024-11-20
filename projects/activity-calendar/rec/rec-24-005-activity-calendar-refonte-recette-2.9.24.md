@@ -12,7 +12,7 @@
 
 - [ ] Masquer le programme SIH-ACTIPRED dans le volet calendrier d'activité car tous les saisisseurs de calendriers ont des droits sur les programmes SIH-ACTIFLOT et SIH-ACTIPRED [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
 - [ ] Bug d'affichage des liste déroulantes des filtres [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
-    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Bug_affichage_listes_filtres.gif)
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Bug_affichage_listes_filtres.gif)
 - [ ] Port d'exploitation : l'application du filtre duplique les calendriers dans le tableau [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Duplication_calendriers.PNG)
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
@@ -28,7 +28,7 @@
 ### Calendrier d'activité > Navire 
 
 - [ ] Caractéristiques navires : certaines lignes ne sont pas fusionnées alors qu'elles auraient dû l'être (exemple 846740 - NARVAL année 2022) [#807](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/807)
-    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Carac_navire.PNG)
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Carac_navire.PNG)
 
 ### Calendrier d'activité > Calendrier
  
@@ -53,6 +53,20 @@
 - [ ] Modifier la règle qui a été mise en place : si les 12 mois du calendrier sont inactifs, alors le champ "Inactivité annuelle confirmée par l'observateur" est obligatoire. La valeur sélectionnée peut être "Oui" ou "Non"
 - [ ] Ajouter une règle pour bloquer la terminaison de la saisie si un mois n'a pas au moins un métier
 - [ ] Le menu contextuel et donc l'accès au rapport n'est pas accessible depuis un calendrier validé
+
+- [ ] Clique sur terminer la saisie : Erreur dans l'app
+    - https://sumaris-app.isival.ifremer.fr/activity-calendar/3235048
+```
+Uncaught (in promise) TypeError: q.asObject is not a function
+    at main.e7fdd22429f644ca.js:1:322648
+    at Array.map (<anonymous>)
+    at S.asObject (main.e7fdd22429f644ca.js:1:322639)
+    at ce.asObject (3071.cd337e6958f4c8e8.js:243:16621)
+    at main.e7fdd22429f644ca.js:108:27672
+    at Generator.next (<anonymous>)
+    at r (main.e7fdd22429f644ca.js:3809:588220)
+    at M (main.e7fdd22429f644ca.js:3809:588422)
+```
 
 ### Calendrier d'activité > Formulaire terrain vierge [#804](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/804)
 
@@ -81,5 +95,75 @@
 - [ ] Le filtre "Type de navire" n'est pas pris en compte et aucun message n'apparait pour indiquer qu'il y a plus de 20 calendriers dans le rapport
 
 
-
 ## Retours de recette MOA - release 2.9.24
+
+### Calendriers d'activité > Import
+
+- [ ] Pas d'accès à la fonctionalité d'import [#771(https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
+
+### Calendriers d'activité
+
+- [X] Activer le mode hors ligne n'est pas visible mais il me semble qu'il a été masqué.
+  - _MOE_ : Cas de tests modifiés
+
+### Calendriers d'activité > Navire
+
+- [ ] Caractéristiques : je n'ai pas marquage extérieur, qui avait été corrigé. Mais je n'ai pas non plus immatriculation à la place. Je ne sais pas si c'est normal ?
+  - _MOE_ : Cas de tests modifiés
+
+### Calendriers d'activité > Régionalisation
+
+- [ ] Les choix de la liste déroulante ne semblent pas s'afficher par ordre alphabétique. Serait-il possible de mettre "zone de compétence" en premier plustôt que parmi les derniers ?
+
+- [X] Comme dis en démo, il faut enlever la case à cocher.
+
+- [ ] Métier et zone de pêche sont adaptés à la régionalisation mais le gradient n'est pas cohérent avec la zone de pêche.
+  - Ex, pour La Réunion, si je saisis la zone côtière RUSE3; le gradient côte proposé est "Etranger", c'est incohérent. Par contre-les autres gradients, profondeur et zone proche ne sont pas régionalisés dans les refs, donc pas de pb.
+  - J'ai vérifié en passant sur la zone de compétence "Manche". Idem, si je saisis 30f1T, une zone côtière, le seul gradient côte proposé est 'étranger'. 
+
+![rec-activity-calendar-gradient](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-regionalisation_gradient.PNG)
+
+- [ ] Dans les filtres sur le lieu d'immatriculation, des lieux étrangers viennent s'intercaler dans la lsite. Nous ne les voyions dans l'ancien Allegro. 
+  - Serait-il possible de les masquer ou à minma de les mettre en fin de liste ?
+
+![rec-activity-calendar-gradient](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-lieux-etrangers.PNG)
+
+### Calendrier d'activité > Contrôle de la saisie [#805](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/805)
+
+- [ ] Si on répond à cette question, le calendrier est forcément inactif toute l'année. 
+Si la réponse est oui c'est que l'observateur sait que le navire est réellement inactif. 
+Si l'observateur répond non, c'est que "inactif" a été mis par défaut car aucune info n'existe sur ce navire.
+
+- [ ] Vu en démo. Calendrier inactif toute l'année. Je réponds non à 'inactivité confirmée par l'observateur" et j'ai le message d'erreur "champ obligatoire", 
+ce qui empêche de terminer la saisie. Si je réponds, oui, ça fonctionne.
+
+- [ ] Si je clique sur valider, il ne se passe rien mais le bouton est cliquable, il n'est pas grisé.
+  - _MOE_ : Pas de bouton valider si on termine la saisie d'un calendrier
+
+- [ ] Pour le coordinateur, y aura-t-il la possibilité de valider tous les calendriers d'une année par un seul clique quelque part ?
+
+![rec-activity-calendar-valider](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-valider-saisie.PNG)
+
+- [ ] Calendrier incomplet : Au fil de la recette, je m'aperçois que lorsque l'on ouvre un calendrier, on ne voit nulle part son état. 
+Possible de le rajouter dans l'encart de droite sous la date de mise à jour ? même si le bouton "terminer la saisie" peut nous laisser penser qu'il est "en cours de saisise", ce n'est pas explicite. 
+
+![rec-activity-etat-calendrier](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-affichage-etat-calendrier.PNG)
+
+
+### Calendrier d'activité > Formulaire terrain vierge
+
+- [ ] Il manque les données du dernier armateur [#804](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/804)
+
+- [ ] Globalement, sur les 22 formulaires et sur le rapport, un seul logo du SIH suffit. En noir si possible comme tous les docs sont en noir.
+
+### Calendrier d'activité > Formulaire terrain avec données
+
+- [ ] Tout ok mais y a pas le nom de l'observeteur. 
+  - _MOE_ : Reproduit avec le calendrier id 3346311
+![rec-activity-rapport-observateur](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-formulaire-donnees-sans-observateur.PNG)
+
+
+### Calendriers d'activité > Rapport d'avancement
+
+- [ ] Il manque des observateurs :  Sur le quartier de Boulogne en 2023, seule ABIVEN Camille apparaît et je ne sais pas qui c'est ;-)
+  - _MOE_ : Reproduit sur 2023 pour des lieux d'immatriculation à Boulogne 
