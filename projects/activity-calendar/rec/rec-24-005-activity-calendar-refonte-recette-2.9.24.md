@@ -54,7 +54,7 @@
 - [ ] Ajouter une règle pour bloquer la terminaison de la saisie si un mois n'a pas au moins un métier
 - [ ] Le menu contextuel et donc l'accès au rapport n'est pas accessible depuis un calendrier validé
 
-- [ ] Clique sur terminer la saisie : Erreur dans l'app
+- [ ] Clique sur terminer la saisie : Erreur dans l'app [#825](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/825)
     - https://sumaris-app.isival.ifremer.fr/activity-calendar/3235048
 ```
 Uncaught (in promise) TypeError: q.asObject is not a function
@@ -67,6 +67,39 @@ Uncaught (in promise) TypeError: q.asObject is not a function
     at r (main.e7fdd22429f644ca.js:3809:588220)
     at M (main.e7fdd22429f644ca.js:3809:588422)
 ```
+
+
+- [ ] Erreur de validation d'un calendrier [#828](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/828)
+
+```
+Accès au serveur non autorisé
+Error: ERROR.UNAUTHORIZED
+
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]: 2024-11-21 10:37:54,214 WARN  [http-nio-8080-exec-6] n.g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/data) : Accèsefusé
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]: org.springframework.security.access.AccessDeniedException: Accès refusé
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:73)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.security.access.intercept.AbstractSecurityInterceptor.attemptAuthorization(AbstractSecurityInterceptor.java:239)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:208)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:58)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at net.sumaris.server.http.graphql.data.DataGraphQLService$$EnhancerBySpringCGLIB$$c1b13495.validateActivityCalendar(<generated>)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at io.leangen.graphql.metadata.execution.FixedMethodInvoker.execute(FixedMethodInvoker.java:22)
+Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at io.leangen.graphql.metadata.Resolver.resolve(Resolver.java:115)
+...
+```
+
+
 
 ### Calendrier d'activité > Formulaire terrain vierge [#804](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/804)
 
@@ -99,7 +132,7 @@ Uncaught (in promise) TypeError: q.asObject is not a function
 
 ### Calendriers d'activité > Import
 
-- [ ] Pas d'accès à la fonctionalité d'import [#771(https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
+- [ ] Pas d'accès à la fonctionalité d'import [#771](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/771)
 
 ### Calendriers d'activité
 
@@ -108,58 +141,63 @@ Uncaught (in promise) TypeError: q.asObject is not a function
 
 ### Calendriers d'activité > Navire
 
-- [ ] Caractéristiques : je n'ai pas marquage extérieur, qui avait été corrigé. Mais je n'ai pas non plus immatriculation à la place. Je ne sais pas si c'est normal ?
+- [X] Caractéristiques : je n'ai pas marquage extérieur, qui avait été corrigé. Mais je n'ai pas non plus immatriculation à la place. Je ne sais pas si c'est normal ?
   - _MOE_ : Cas de tests modifiés
 
-### Calendriers d'activité > Régionalisation
+### Calendriers d'activité > Régionalisation 
 
-- [ ] Les choix de la liste déroulante ne semblent pas s'afficher par ordre alphabétique. Serait-il possible de mettre "zone de compétence" en premier plustôt que parmi les derniers ?
+- [ ] Les choix de la liste déroulante ne semblent pas s'afficher par ordre alphabétique. Serait-il possible de mettre "zone de compétence" en premier plustôt que parmi les derniers ? [#826](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/826)
 
 - [X] Comme dis en démo, il faut enlever la case à cocher.
 
-- [ ] Métier et zone de pêche sont adaptés à la régionalisation mais le gradient n'est pas cohérent avec la zone de pêche.
+- [X] Métier et zone de pêche sont adaptés à la régionalisation mais le gradient n'est pas cohérent avec la zone de pêche.
   - Ex, pour La Réunion, si je saisis la zone côtière RUSE3; le gradient côte proposé est "Etranger", c'est incohérent. Par contre-les autres gradients, profondeur et zone proche ne sont pas régionalisés dans les refs, donc pas de pb.
   - J'ai vérifié en passant sur la zone de compétence "Manche". Idem, si je saisis 30f1T, une zone côtière, le seul gradient côte proposé est 'étranger'. 
 
-![rec-activity-calendar-gradient](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-regionalisation_gradient.PNG)
+![rec-activity-calendar-gradient](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-regionalisation_gradient.PNG)
 
-- [ ] Dans les filtres sur le lieu d'immatriculation, des lieux étrangers viennent s'intercaler dans la lsite. Nous ne les voyions dans l'ancien Allegro. 
-  - Serait-il possible de les masquer ou à minma de les mettre en fin de liste ?
+- [ ] Dans les filtres sur le lieu d'immatriculation, des lieux étrangers viennent s'intercaler dans la liste. Nous ne les voyions dans l'ancien Allegro. 
+  - Serait-il possible de les masquer ou à minima de les mettre en fin de liste ? [#824](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824)
 
 ![rec-activity-calendar-gradient](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-lieux-etrangers.PNG)
 
 ### Calendrier d'activité > Contrôle de la saisie [#805](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/805)
 
-- [ ] Si on répond à cette question, le calendrier est forcément inactif toute l'année. 
+- [X] Si on répond à cette question, le calendrier est forcément inactif toute l'année. 
 Si la réponse est oui c'est que l'observateur sait que le navire est réellement inactif. 
 Si l'observateur répond non, c'est que "inactif" a été mis par défaut car aucune info n'existe sur ce navire.
 
-- [ ] Vu en démo. Calendrier inactif toute l'année. Je réponds non à 'inactivité confirmée par l'observateur" et j'ai le message d'erreur "champ obligatoire", 
+- [X] Vu en démo. Calendrier inactif toute l'année. Je réponds non à 'inactivité confirmée par l'observateur" et j'ai le message d'erreur "champ obligatoire", 
 ce qui empêche de terminer la saisie. Si je réponds, oui, ça fonctionne.
 
 - [ ] Si je clique sur valider, il ne se passe rien mais le bouton est cliquable, il n'est pas grisé.
-  - _MOE_ : Pas de bouton valider si on termine la saisie d'un calendrier
+  - _MOE_ : Erreur côté POD ERROR.UNAUTHORIZED
 
 - [ ] Pour le coordinateur, y aura-t-il la possibilité de valider tous les calendriers d'une année par un seul clique quelque part ?
-
+  - _MOE_ : Oui mais besoin à creuser. En V1.1. 
 ![rec-activity-calendar-valider](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-valider-saisie.PNG)
 
 - [ ] Calendrier incomplet : Au fil de la recette, je m'aperçois que lorsque l'on ouvre un calendrier, on ne voit nulle part son état. 
 Possible de le rajouter dans l'encart de droite sous la date de mise à jour ? même si le bouton "terminer la saisie" peut nous laisser penser qu'il est "en cours de saisise", ce n'est pas explicite. 
+  - _MOE_ : Oui mais besoin à creuser. En V1.1.
+
 
 ![rec-activity-etat-calendrier](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-affichage-etat-calendrier.PNG)
 
 
 ### Calendrier d'activité > Formulaire terrain vierge
 
-- [ ] Il manque les données du dernier armateur [#804](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/804)
+- [X] Il manque les données du dernier armateur [#804](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/804)
 
-- [ ] Globalement, sur les 22 formulaires et sur le rapport, un seul logo du SIH suffit. En noir si possible comme tous les docs sont en noir.
+- [ ] Globalement, sur les 2 formulaires et sur le rapport, un seul logo du SIH suffit. En noir si possible comme tous les docs sont en noir.
+  - _MOE_ : Récupérer le logo SIH en noir [#827](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/827)
 
-### Calendrier d'activité > Formulaire terrain avec données
+### Calendrier d'activité > Formulaire terrain avec données [#754](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/754)
 
-- [ ] Tout ok mais y a pas le nom de l'observeteur. 
+- [ ] Tout ok mais y a pas le nom de l'observateur. 
   - _MOE_ : Reproduit avec le calendrier id 3346311
+  - _MOE_ : Normal car il n'y a pas d'observateur
+  - _MOE_ : Proposition à valider par la MOA, pour les calendriers historique renseigner l'observateur avec le saisisseur 
 ![rec-activity-rapport-observateur](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-formulaire-donnees-sans-observateur.PNG)
 
 
@@ -167,3 +205,4 @@ Possible de le rajouter dans l'encart de droite sous la date de mise à jour ? m
 
 - [ ] Il manque des observateurs :  Sur le quartier de Boulogne en 2023, seule ABIVEN Camille apparaît et je ne sais pas qui c'est ;-)
   - _MOE_ : Reproduit sur 2023 pour des lieux d'immatriculation à Boulogne 
+  - _MOE_ : Idem problème précédent
