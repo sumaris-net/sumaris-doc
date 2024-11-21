@@ -6,7 +6,7 @@
 
 - [ ] La colonne "Objectif d'enquête directe" affiche la valeur "Oui" à la place de "Opportuniste"
 - [ ] Le tri sur la colonne "Lieu d'immatriculation" n'est pas cohérent : pour certains calendriers, le lieu d'immat correspond à une donnée historique et pas la dernière. Lié à l'indexation des navires ?
-   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Tri_lieu_immat.PNG)
+   ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Tri_lieu_immat.PNG)
 
 ### Calendriers d'activité > Filtres
 
@@ -14,7 +14,7 @@
 - [ ] Bug d'affichage des liste déroulantes des filtres [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
     ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Bug_affichage_listes_filtres.gif)
 - [ ] Port d'exploitation : l'application du filtre duplique les calendriers dans le tableau [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
-    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Duplication_calendriers.PNG)
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Duplication_calendriers.PNG)
 - [ ] Navire : lors de la recherche par l'immat d'un navire qui a changé de nom, des fois c'est le nom actuel qui s'affiche, des fois c'est l'ancien [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
 - [ ] Type de navire : la liste n'est pas filtrée selon l'option des paramètres systèmes "Saisie > Navire : Type(s) de navire (filtre)" [#809](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/809)
 - [ ] Saisisseur/Observateur : les filtres ne remontent pas les utilisateurs ayant un PERSON.STATUS_FK = 0, exemple [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746)
@@ -122,7 +122,7 @@ Nov 21 10:37:54 visi-docker-val4 dockersvc_sumaris-pod[11124]:         at io.lea
   - [ ] Charger par défaut le programme ACTIFLOT et ses options
   - [ ] Afficher un warning
 - [ ] Augmenter la largeur de la colonne "Longueur H.T (m)" pour le pas couper le mot "Longueur"
-    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-005-2.9.24-Rapport_avancement.PNG)
+    ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-006-2.9.24-Rapport_avancement.PNG)
 - [ ] Afficher le filtre "Objectif d'enquête directe"
 - [ ] Le filtre "Type de navire" apparait dès que le filtre "Navire" est renseigné, alors qu'il devrait apparaitre uniquement si le type de navire est renseigné
 - [ ] Le filtre "Type de navire" n'est pas pris en compte et aucun message n'apparait pour indiquer qu'il y a plus de 20 calendriers dans le rapport
