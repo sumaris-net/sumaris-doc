@@ -2,6 +2,8 @@
 
 ## Retours de recette MOE - release 2.9.24
 
+[ffdfd](#retours-de-recette-moa---release-2924)
+
 ### Calendriers d'activité [#810](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/810)
 
 - [ ] La colonne "Objectif d'enquête directe" affiche la valeur "Oui" à la place de "Opportuniste"
