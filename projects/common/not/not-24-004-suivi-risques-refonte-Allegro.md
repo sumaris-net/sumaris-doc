@@ -96,6 +96,29 @@ Benoit Lavenier assure en parallèle les merge request et les livraison des rele
 
 **Impactes sur le refonte** : Niveau faible
 
+---
+
+### Compte rendu réunion - suivi des risques du 22/11/2024
+
+**Risque identifié** :
+
+Flou récurrent sur les choix d'implémentation des fonctionnalités lors des réunions MOA : 
+- Beaucoup de propositions sont faites et validées par la MOA mais aucune n'est vraiment arrêtée
+
+**Impacte sur les développements et spécifications**
+
+- Difficulté pour la MOE et les développeurs pour matérialiser les choix retenus
+
+Leviers :
+
+- Choisir une implémentation pendant la réunion 
+- Prendre un moment en fin de réunion pour retranscrire par écrits le ou les choix retenus (sumaris-doc) 
+
+- **Conclusion**
+    - **Impacte faible**
+
+---
+
 |       Date | Auteur | Sections mises à jour                               |
 |-----------:|--------|-----------------------------------------------------|
 | 29/07/2024 | VFA    | Ajout risque délai livraison release                |
