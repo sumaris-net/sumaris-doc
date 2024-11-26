@@ -65,7 +65,7 @@ tous les mois sont considérés comme modifiés et les mois non renseignés ont 
 
 - [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)  
       - On a aussi un bug sur une liste déroulante quand on enléve la régionalisation
-  ![rec-activity-calendar-bug-edition](/projects/activity-calendar/rec/images/rrec-24-007-2.9.25-Bug_edition.gif)
+  ![rec-activity-calendar-bug-edition](/projects/activity-calendar/rec/images/rec-24-007-2.9.25-Bug_edition.gif)
 
 ### Calendrier d'activité > Rapport d'avancement
 
