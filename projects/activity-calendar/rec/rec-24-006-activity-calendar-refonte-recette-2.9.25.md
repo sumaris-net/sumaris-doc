@@ -38,17 +38,21 @@
 
 - [ ] Lors de la saisie d'un métier sur un mois (déjà déclaré pour d'autres mois), on a des lignes de métier qui se rajoutent dont la plupart sont vides (jusqu'à 9 métiers)
   - https://sumaris-app.isival.ifremer.fr/activity-calendar/3415834
+  - _MOE_ : bug résolu dans develop (2.9.25.1)
 
-- [ ] Lors du passage d'un mois de "Inactif" à "Actif", les champs "Nb de jours de mer", "Nb de jours de pêche", "Nb de personnes à bord" ne sont saisissables qu'après la sélection d'un métier
+- [ ] Lors du passage d'un mois de "Inactif" à "Actif", les champs "Nb de jours de mer", "Nb de jours de pêche", "Nb de personnes à bord" ne sont saisissables qu'après la sélection d'un métier/pêche
 
-- [x] ~~Sur des calendriers 2025, j'ai une prédocumentation vide (Enquête N-1)~~ Car le calendrier 2024 a été importé mais pas renseigné
+- [X] ~~Sur des calendriers 2025, j'ai une prédocumentation vide (Enquête N-1)~~ Car le calendrier 2024 a été importé mais pas renseigné
 
-- [ ] Parfois on ne peut plus saisir les zones de pêches Quadrilatère FAO 1*1 et 5*5 (plus dans la liste)
+- [X] Parfois on ne peut plus saisir les zones de pêches Quadrilatère FAO 1*1 et 5*5 (plus dans la liste)
 
-- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)
 - [ ] Cas d'un calendrier ou seuls les 1ers mois sont renseignés : lors du copier/coller d'une ligne vers une autre dans le cas ou le copier/coller est autorisé, 
 tous les mois sont considérés comme modifiés et les mois non renseignés ont le warning "Actif ? Champ obligatoire"
-- [ ] Le message "Doublon métier" affiche le code et non le libellé
+- [ ] Le message "Doublon métier" affiche le code et non le libellé (_uniqueMetier_ affiché)
+
+- [ ] Quand on n'est pas régionalisé, la liste des zone de pêche ramenée est trop grande : elle ne tient pas compte de l'option
+  ![rec-activity-calendar-peche](/projects/activity-calendar/rec/images/rec-24-007-2.9.25-Bug_liste_zone_de_peche.png)
+
 
 ### Calendriers d'activité > Régionalisation 
 
@@ -57,10 +61,16 @@ tous les mois sont considérés comme modifiés et les mois non renseignés ont 
 
 - [ ] Le copier/coller depuis un mois de la prédocumentation ne fonctionne pas
 
+- [ ] Zone de compétence activée : Si on rafraichit (F5), il n'y a plus de zone de compétence appliquée (_Aucune zone de compétence_ sélectionnée)
+
+- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)  
+      - On a aussi un bug sur une liste déroulante quand on enléve la régionalisation
+  ![rec-activity-calendar-bug-edition](/projects/activity-calendar/rec/images/rrec-24-007-2.9.25-Bug_edition.gif)
+
 ### Calendrier d'activité > Rapport d'avancement
 
 - [ ] Corriger la faute d'orthograhe : "gradient" (avec un "e" et pas un "a")
-- [ ] Lorsqu'il y a le filtre "Objectif d'enquête directe ?" à la valeur "Opportuniste", c'est la aleur "Oui" qui s'affiche dans le filtre du rapport 
+- [ ] Lorsqu'il y a le filtre "Objectif d'enquête directe ?" à la valeur "Opportuniste", c'est la valeur "Oui" qui s'affiche dans le filtre du rapport 
 - [ ] Déplacer la date de génération du rapport pour afficher le pied de page sur une seule ligne
 - [ ] Si le filtre sur l'année est vide, le rapport d'avancement s'affiche pour l'année N-1, au lieu des années indiquées dans le tableau de consultation
 - [ ] S'il y a un filtre sur le QIM1, il faut prendre en compte les calendriers avec un navire qui a changé de QIM2 -> QIM1
