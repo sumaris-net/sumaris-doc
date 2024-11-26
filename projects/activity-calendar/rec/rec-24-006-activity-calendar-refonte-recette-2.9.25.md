@@ -8,9 +8,14 @@
   - POC à proposer : 
     - Ajout d'un bouton icône sur le champ qui permet d'activer l'affichage des observateurs/saisisseurs inactifs (status_fk=0)
     - Afficher l'état actif/inactif sur les saisisseurs dans le filtre
-- Doit-on pouvoir générer un formulaire vierge pour une année autre que l'année courante ?
+- Doit-on pouvoir générer un formulaire vierge pour une année autre que l'année courante ? 
+   si non, il y a un correction à faire sur le lieu d'immat pour afficher uniquement celui ou ceux de l'année courante (exemple : 252740 LA NOUNOUTE)
 
 ## Retours de recette MOE - release 2.9.25
+
+### Gestion des droits
+
+- [ ] Un responsable de programme doit pouvoir : importer des calendriers vides et supprimer un calendrier. Actuellement ces actions sont soient grisées soient absentes
 
 ### Calendriers d'activité > Filtres
 
@@ -34,24 +39,31 @@
 - [ ] Lors de la saisie d'un métier sur un mois (déjà déclaré pour d'autres mois), on a des lignes de métier qui se rajoutent dont la plupart sont vides (jusqu'à 9 métiers)
   - https://sumaris-app.isival.ifremer.fr/activity-calendar/3415834
 
-- [ ] Remarque : On est obligé de saisir une zone de pêche pour que la saisie des PMFMs quantitatifs (nbre de jours de mer/pêche/, nbre d'hommes à bord) soit active
-  - Reproduit sur ce calendrier : https://sumaris-app.isival.ifremer.fr/activity-calendar/3336814
-  - Comportement voulu ?
+- [ ] Lors du passage d'un mois de "Inactif" à "Actif", les champs "Nb de jours de mer", "Nb de jours de pêche", "Nb de personnes à bord" ne sont saisissables qu'après la sélection d'un métier
 
-- [ ] Sur des calendriers 2025, j'ai une prédocumentation vide (Enquête N-1)
+- [x] ~~Sur des calendriers 2025, j'ai une prédocumentation vide (Enquête N-1)~~ Car le calendrier 2024 a été importé mais pas renseigné
 
 - [ ] Parfois on ne peut plus saisir les zones de pêches Quadrilatère FAO 1*1 et 5*5 (plus dans la liste)
 
-- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs
+- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)
+- [ ] Cas d'un calendrier ou seuls les 1ers mois sont renseignés : lors du copier/coller d'une ligne vers une autre dans le cas ou le copier/coller est autorisé, 
+tous les mois sont considérés comme modifiés et les mois non renseignés ont le warning "Actif ? Champ obligatoire"
+- [ ] Le message "Doublon métier" affiche le code et non le libellé
 
 ### Calendriers d'activité > Régionalisation 
 
-- [ ] Gradient de profondeur vide
+- [ ] Gradient de côte, zone proche : pas cohérents avec Allegro, gradient de profondeur vide
   - MR pas encore faite [!339](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/merge_requests/339)
 
 - [ ] Le copier/coller depuis un mois de la prédocumentation ne fonctionne pas
 
 ### Calendrier d'activité > Rapport d'avancement
 
+- [ ] Corriger la faute d'orthograhe : "gradient" (avec un "e" et pas un "a")
+- [ ] Lorsqu'il y a le filtre "Objectif d'enquête directe ?" à la valeur "Opportuniste", c'est la aleur "Oui" qui s'affiche dans le filtre du rapport 
 - [ ] Déplacer la date de génération du rapport pour afficher le pied de page sur une seule ligne
+- [ ] Si le filtre sur l'année est vide, le rapport d'avancement s'affiche pour l'année N-1, au lieu des années indiquées dans le tableau de consultation
+- [ ] S'il y a un filtre sur le QIM1, il faut prendre en compte les calendriers avec un navire qui a changé de QIM2 -> QIM1
+     exemple avec le filtre QIM avec les valeurs "Le Harvre" et "Audierne" sur l'année 2022 : le tableau ramène 83 calendriers alors que le rapport d'avancement ramène 74 calendriers
+     exemple de navires présents dans le tableau de consultation mais pas dans le rapport d'avancement : 252740 - LA NOUNOUTE, 389179 - NOTRE DAME DE GRACE, 517697 LE BEDOUIN, ...
 

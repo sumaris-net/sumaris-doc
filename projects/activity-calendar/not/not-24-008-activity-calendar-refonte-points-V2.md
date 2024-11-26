@@ -4,6 +4,10 @@
 
 L'objectif de ce document est de lister des points remontés pendant les développements de la V1 pour voir si les fonctionnements actuels conviennent ou s'il faut les faire évoluer
 
+### Calendriers d'activité
+
+- [ ] Pouvoir valider tous les calendriers d'une année
+
 ### Calendrier d'activité > Calendrier
 
 - [ ] Modifier la fonctionnalité "Déplier tout" pour au 1er clic déplier uniquement les métiers et au second clic déplier les gradient de côte
