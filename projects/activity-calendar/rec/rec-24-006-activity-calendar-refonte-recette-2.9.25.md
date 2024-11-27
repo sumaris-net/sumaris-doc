@@ -15,7 +15,8 @@
 
 ### Gestion des droits
 
-- [ ] Un responsable de programme doit pouvoir : importer des calendriers vides et supprimer un calendrier. Actuellement ces actions sont soient grisées soient absentes
+- [ ] Un responsable de programme doit pouvoir : importer des calendriers vides et supprimer un calendrier. Actuellement ces actions sont soient grisées soient absentes [#832](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/832)
+  - L'import des calendriers est accessible en sélectionnant le programme de collecte SIH-ACTIFLOT dans les filtres
 
 ### Calendriers d'activité > Filtres
 
@@ -36,38 +37,41 @@
 
 ### Calendriers d'activité > Calendrier
 
-- [ ] Lors de la saisie d'un métier sur un mois (déjà déclaré pour d'autres mois), on a des lignes de métier qui se rajoutent dont la plupart sont vides (jusqu'à 9 métiers)
+- [X] Lors de la saisie d'un métier sur un mois (déjà déclaré pour d'autres mois), on a des lignes de métier qui se rajoutent dont la plupart sont vides (jusqu'à 9 métiers)
   - https://sumaris-app.isival.ifremer.fr/activity-calendar/3415834
   - _MOE_ : bug résolu dans develop (2.9.25.1)
 
-- [ ] Lors du passage d'un mois de "Inactif" à "Actif", les champs "Nb de jours de mer", "Nb de jours de pêche", "Nb de personnes à bord" ne sont saisissables qu'après la sélection d'un métier/pêche
+- [ ] Lors du passage d'un mois de "Inactif" à "Actif", les champs "Nb de jours de mer", "Nb de jours de pêche", "Nb de personnes à bord" 
+ne sont saisissables qu'après la sélection d'un métier/zone/gradient côte [#839](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/839)
 
 - [X] ~~Sur des calendriers 2025, j'ai une prédocumentation vide (Enquête N-1)~~ Car le calendrier 2024 a été importé mais pas renseigné
 
 - [X] Parfois on ne peut plus saisir les zones de pêches Quadrilatère FAO 1*1 et 5*5 (plus dans la liste)
 
-- [ ] Cas d'un calendrier ou seuls les 1ers mois sont renseignés : lors du copier/coller d'une ligne vers une autre dans le cas ou le copier/coller est autorisé, 
-tous les mois sont considérés comme modifiés et les mois non renseignés ont le warning "Actif ? Champ obligatoire"
-- [ ] Le message "Doublon métier" affiche le code et non le libellé (_uniqueMetier_ affiché)
+- [ ] Cas d'un calendrier ou seuls certains mois sont renseignés : lors du copier/coller d'une ligne vers une autre dans le cas ou le copier/coller est autorisé, 
+tous les mois sont considérés comme modifiés et les mois non renseignés ont le warning "Actif ? Champ obligatoire" [#840](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/840)
+
+- [X] Le message "Doublon métier" affiche le code et non le libellé (_uniqueMetier_ affiché) [#834](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/834)
 
 - [ ] Quand on n'est pas régionalisé, la liste des zone de pêche ramenée est trop grande : elle ne tient pas compte de l'option
   ![rec-activity-calendar-peche](/projects/activity-calendar/rec/images/rec-24-007-2.9.25-Bug_liste_zone_de_peche.png)
 
+- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)  [#837](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/837)
+
+- [ ] Problème d'ergonomie lors du scroll vers le bas sur la prédocumentation [#838](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/838)
+  ![rec-activity-calendar-report](/projects/activity-calendar/rec/images/rec-24-007-2.9.25-Scroll_bas_prédoc.png)
+
 
 ### Calendriers d'activité > Régionalisation 
 
-- [ ] Gradient de côte, zone proche : pas cohérents avec Allegro, gradient de profondeur vide
-  - MR pas encore faite [!339](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/merge_requests/339)
-
-- [ ] Le copier/coller depuis un mois de la prédocumentation ne fonctionne pas
-
-- [ ] Zone de compétence activée : Si on rafraichit (F5), il n'y a plus de zone de compétence appliquée (_Aucune zone de compétence_ sélectionnée)
-
-- [ ] Problème de saisie : On peut ouvrir simultanément plusieurs listes déroulantes de valeurs [#831](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/831)  
-      - On a aussi un bug sur une liste déroulante quand on enléve la régionalisation
+- [ ] Gradient de côte, zone proche : pas cohérents avec Allegro, 
+- [X] Gradient de profondeur vide : MR pas encore faite [!339](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/merge_requests/339)
+- [X] Le copier/coller depuis un mois de la prédocumentation ne fonctionne pas
+- [X] ~~Zone de compétence activée : Si on rafraichit (F5), il n'y a plus de zone de compétence appliquée (_Aucune zone de compétence_ sélectionnée)~~ il faut attendre au moins 20s pour que l'info soit enregistrée
+- [X] On a aussi un bug sur une liste déroulante quand on enlève la régionalisation
   ![rec-activity-calendar-bug-edition](/projects/activity-calendar/rec/images/rec-24-007-2.9.25-Bug_edition.gif)
 
-### Calendrier d'activité > Rapport d'avancement
+### Calendrier d'activité > Rapport d'avancement [#835](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/835)
 
 - [ ] Corriger la faute d'orthograhe : "gradient" (avec un "e" et pas un "a")
 - [ ] Lorsqu'il y a le filtre "Objectif d'enquête directe ?" à la valeur "Opportuniste", c'est la valeur "Oui" qui s'affiche dans le filtre du rapport 
