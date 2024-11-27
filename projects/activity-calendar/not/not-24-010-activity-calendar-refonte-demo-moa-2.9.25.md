@@ -1,10 +1,16 @@
 # Activity Calendar - Demo 7 MOA
 
+---
+
 ## Application
 
 - URL : https://sumaris-app.isival.ifremer.fr
 - Node choice : https://sumaris-pod.isival.ifremer.fr
 - Login : Extranet user account
+
+---
+
+![rec-activity-calendar-planning](/projects/activity-calendar/not/images/refonte-activity-calendar-planning-sprints.svg)
 
 ---
 
