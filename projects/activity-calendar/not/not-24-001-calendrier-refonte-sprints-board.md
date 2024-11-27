@@ -441,6 +441,7 @@
   - Bouton dépliage/repliage
   - Désactivation clic droit sur saisie cellule
   - Compactage par défaut activé
+  - Figer les entêtes des colonnes
 
 - Accès coordinateur de programme
 
