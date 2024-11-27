@@ -41,17 +41,20 @@ et la définition d'une stratégie de communication auprès des professionels
 ---
 ## Retour sur les tests
 
+
 Voici les retours suite aux tests de l'application sur open-test.sumaris.net (version 2.9.23.2)
-- Tableau de saisie des filages depuis la recherche des filages
-  - le tableau est validé par les participants
-- Tableau des engins :
+- [ ] Formulaire de saisie des filages depuis la recherche des filages
+  - le formulaire est validé par les participants
+- [x] Tableau des engins :
   - Le bouton bleu "+" pour ajouter un engin pourrait proposer 2 choix :
     - "Rechercher un engin existant" :
       - A la sélection de l'engin, retour à la fenêtre d'édition de l'engin pour pouvoir le modifier
     - ou "Saisir un nouvel engin" : reprendre le comportement existant
 
----
-Voici les retours suite à la proposition des rapports DOLPHINFREE:
-- https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/767
+## Formulaire terrain vierge
+
+EIS a présenté un premier prototype des formulaires terrain vierges, pour le protocole DOLPHINFREE.
+
+Un certains nombre de points sont à corriger ([cf ticket sumaris-app#767](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/767))
 
 

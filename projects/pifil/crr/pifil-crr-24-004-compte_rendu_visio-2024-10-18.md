@@ -15,7 +15,7 @@ et la définition d'une stratégie de communication auprès des professionels
 > - Quitterie SOURGET (LPDB)
 > - Fiona BIGEY (OP VENDEE)
 > - Aurélien HENNEVEUX (PDA)
-> - Bastien MÉRIGOT (Université de montpellier)
+> - Bastien MÉRIGOT (Université de Montpellier)
 > - Germain BOUSSARIE (Ifremer)
 > - Benoit LAVENIER (EIS)
 > - Dorian MARCO (EIS)
@@ -43,11 +43,11 @@ Voici les retours suite aux tests de l'application sur open-test.sumaris.net (ve
 
 - Installation :
   - [ ] Sous Android, plusieurs personnes n'ont pas pu installer l'application (sur Samsung) 
-  - [ ] Bug de synchronisation / mode hors ligne, détecté par EIS
+  - [x] Bug de synchronisation / mode hors ligne, détecté par EIS
 
 - Ergonomie :
   - [ ] Icone disquette pour sauvegarder : pas intuitif pour tous
-    - Proposition d'aJouter le texte "Sauvegarder" en dessous ? 
+    - Proposition d'ajouter le texte "Sauvegarder" en dessous ? 
 
 ---
 
@@ -57,7 +57,7 @@ Voici les retours suite aux tests de l'application sur open-test.sumaris.net (ve
       - à suffixer avec "(QIM, Pavillon)" ?
       - La liste déroulante apparait est vide, il faut taper une recherche pour voir des éléments
  - Onglet "Opérations" pas visible sur petit écran.
-   - [ ] Proposition de réduire la largeur des titres d'onglets;
+   - [x] Proposition de réduire la largeur des titres d'onglets;
    - [ ] Proposition d'ajouter des boutons suivant/précédent pour changer d'onglet;
 
 ---
@@ -72,7 +72,7 @@ Voici les retours suite aux tests de l'application sur open-test.sumaris.net (ve
 ---
 
 - Écran Opérations (filage ou virage)
-  - [ ] Bug sur la géolocalisation (un message d'attente apparait, mais ne rend pas la main)
+  - [x] Bug sur la géolocalisation (un message d'attente apparait, mais ne rend pas la main)
   - [x] Si marée sans caméra ni sans GPS :
     - Remplir la date de fin automatiquement (sans heure)
     - Recopier automatiquement la zone de début dans celle de fin, si cette dernière est vide.
