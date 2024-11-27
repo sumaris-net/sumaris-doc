@@ -165,6 +165,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Ajout de la vue `GEAR_USE_FEATURES`
   ```sql
+  create or replace view GEAR_USE_FEATURES as
   select GUF.id,
        GUF.activity_calendar_fk,
        null as comments,
@@ -327,6 +328,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Ajout de la vue `GEAR_PHYSICAL_FEATURES`
   ```sql
+  create or replace view GEAR_PHYSICAL_FEATURES AS
   select GPG.ID,
          GPG.START_DATE,
          GPG.END_DATE,
