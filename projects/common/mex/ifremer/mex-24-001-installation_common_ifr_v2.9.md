@@ -35,6 +35,16 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)
     - Jouer le script SQL
 
+- Adagio : Inserer les saisisseurs comme observateurs (données historiques)
+  - Historisation des observateurs : Mantis [66370](https://forge.ifremer.fr/mantis/view.php?id=66370)
+  ```sql
+   INSERT INTO ACTIVITY_CALENDAR2PERSON
+   (SELECT AC.ID, AC.RECORDER_PERSON_FK FROM ACTIVITY_CALENDAR AC
+   WHERE AC.PROGRAM_FK = 'SIH-ACTIFLOT'
+   AND ID NOT IN (SELECT ACTIVITY_CALENDAR_FK FROM ACTIVITY_CALENDAR2PERSON)
+   AND AC.RECORDER_PERSON_FK IS NOT NULL);
+  ```
+  
 - Ajout de droits sur `SIH2_ADAGIO_DBA.person`
   ```sql
   grant REFERENCES on sih2_adagio_dba.person to sih2_adagio_dba_sumaris_map;
