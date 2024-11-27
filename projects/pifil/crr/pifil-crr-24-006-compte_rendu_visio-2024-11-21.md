@@ -1,13 +1,12 @@
 # Compte-rendu réunion visio
 ## 21/11/2024
 
-L'objectif de la réunion est de coordonnées le rapprochement des données de PIFIL / DolphinFree
+L'objectif de la réunion est de coordonner le rapprochement des données de PIFIL / DOLPHINFREE
 
 ---
 
 > Présents :
 >
-> - Florian EXPERT (MTECP DEB)
 > - Damien LE BOULAIRE (OchTech)
 > - Glenn PRIGENT (Ifremer)
 > - Marie-claude Cote-Laurin (OFB - projet ObsCam)
@@ -21,6 +20,8 @@ L'objectif de la réunion est de coordonnées le rapprochement des données de P
 > - Fiona BIGEY (OP VENDEE)
 > - Aurélien HENNEVEUX (OP PDA)
 > - Bastien MÉRIGOT (Université de Montpellier)
+> - Florian EXPERT (MTECP DEB)
+> - Lugdiwine BURTSCHELL (DEB/ELM3)
 
 ---
 
@@ -42,11 +43,11 @@ L'objectif de la réunion est de coordonnées le rapprochement des données de P
 ---
 ## Flux de données
 
-Types de flux impliqués dans les projets PIFIL/DOLPHINFREE : 
+Types de flux impliqués dans les projets PIFIL et DOLPHINFREE : 
 
-- Saisie manuelle : 
+- Saisie manuelle (Marée, opération, captures accidentelles): 
   - Auto-échantillonnage
-  - Observateurs ObsMer
+  - Observateur embarqué (ObsMer)
 - Caméra embarquée (ObsCam)
 - Balise
 - Logbook ?
@@ -57,27 +58,29 @@ Puis à partir de ces flux :
 
 
 ---
-## Flux > Auto-échantillonnage
+## Saisie manuelle > Auto-échantillonnage
 
 - Saisie dans l'app SUMARiS (open.sumaris.net)
-  - Délais : 
-    - Non validée : quasi temps réel
-    - Validée : dépends de qui valide ?
-  - Accès aux données: API GraphQL ou fichiers CSV
+  - Délais de mise à disposition des données : 
+    - Donnée non validée : quasi temps réel
+    - Donnée validée : dépends de qui valide ?
+  - Accès aux données : 
+    - API GraphQL
+    - ou fichiers CSV
 - Ou saisie depuis des fiches terrain
-  - Délais : dépends de qui saisit ?
+  - Délais : qui saisit ? les OP ?
 
-> **Questions en suspends** :
+> **Questions** :
+> - Qui valide les données saisies manuellement ?
 > - Qui saisie les fiches terrains ?
-> - Qui valide les données saisies ?
 
 > Action :
-> - EIS - fournir la documentation du format d'export
+> - EIS - fournir la documentation des formats d'export PIFIL2 et DOLPHINFREE
 
 ---
-## Flux > Observateur ObsMer
+## Saisie manuelle > Observateur embarqué
 
-- Saisie dans Allegro-ObsMer
+- Saisie dans Allegro-ObsMer, hébergé par Ifremer
 - Protocole : Longueur, sexe, circonf., trace de capture, blessures,  bagué ou non, numéro bague mis sur la carcasse, date heure et position de la capture, et du point de remise à l'eau
 - Délais : 
   - Validation prestataire : sous 30 jours
@@ -86,14 +89,17 @@ Puis à partir de ces flux :
 > **Question en suspends** :
 > - Délai de validation programme (Ifremer) ?
 
+> Action :
+> - Ifremer - vérifier la compatibilité d'Allegro-Obsmer avec le protocole DOLPHINFREE
+
 ---
 ## Flux > Caméra embarquée (ObsCam)
 
 - Données anonymisées par défaut 
   - Demander à OFB pour accès aux données non anonymisés  
 - Sinay produit le fichier de données
-- Délais  : 
-  - acquisition: flux quotidien recu par Sinay 
+- Délais : 
+  - acquisition : flux quotidien recu par Sinay 
   - traitement : 
     - 45 navires: ~2-3 mois
     - 50-60 navires: ~2-4 mois (engagement contractuel)
@@ -101,44 +107,51 @@ Puis à partir de ces flux :
 ---
 ## Balise
 
-- OCTech produit le fichier
+- OCTech produit les fichiers
 - Délais :
   - Données récupérées quotidiennement
   - Mise à disposition à J+1
 - Accès aux données : 
   - 1 format CSV PIFIL, 1 format CSV DOLPHINFREE 
+  - API d'accès évoquée
   - Documentation à transmettre
   - Possibilité de construction d'une API
 
 > Action :
-> - OCTech - fournir la documentation des 2 formats
+> - OCTech - fournir la documentation des 2 formats CSV et/ou de l'API d'accès
 
 ---
-## Logbook ?
+## Logbook
 
 - Données d'auto-échantillonnage de captures accidentelles
-- Via flux ERS (xml)
 - Ifremer produits le fichier
+  - Recu via un flux ERS (xml)
 - Délais : 
   - Aggrégation SACROIS : un mois
   - VisioCapture (FranceAgrimer) : délais de fourniture ~1j à 2-3 mois
-- **Intéret de ces données ?** A statuer
+
+> **Questions** :
+> - Intéret de ces données ? Elles ne semblent par apporter de nouveaux éléments,
+>   **A statuer**
 
 ---
 ## Rapprochement
 
 - Responsable : Ifremer
-- Jeux de de données de test à prévoir
+- Jeux de données de test à prévoir - quels navires/périodes ?
 - Objectif de fourniture des données rapprochées : juillet 2025
 - Au moins 4 types de cas de tests : 
   - PIFIL : avec ou sans ObsCam
   - DOLPHINFREE : avec ou sans ObsCam
   - Observateurs embarqués ?
-  - ObsCam : demande d'autorisation auprès de l'OFB
-  - Balises : demande d'autorisation auprès du CNPMEN
+- ObsCam : demande d'autorisation à faire auprès de l'OFB
+- Balises : demande d'autorisation à faire auprès du CNPMEN
+
+> Action :
+> - TOUS - Définir un jeu de données de chaque flux 
 
 ---
 ## Production des résultats
 
-- Responsable : Universités( Montpellier et Pau)
+- Responsable : Universités (Montpellier et Pau)
 - Objectif : septembre 2025
