@@ -34,6 +34,8 @@ Fonctionnalités de la release **2.9.25**
 
 [Listing des Tickets](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/not/not-24-001-calendrier-refonte-sprints-board.md#calendrier-dactivité---sprint-9---issue-board) 
 
+---
+
 - Compléments régionalisation
   - Niveau de lieu par zone de compétence
   - Option en 1er dans la liste
@@ -94,8 +96,6 @@ Navigateur préconisé pour la recette : **Chrome**
 
 - [Téléchargement](https://gitlab.ifremer.fr/api/v4/projects/sih-public%2Fsumaris%2Fsumaris-app/packages/generic/sumaris-app/2.9.25.3/sumaris-app-2.9.25.3-windows-x64.exe)
 
-- Démonstration sur ActiFlot
-
 _MOE/MOA : Ne pas communiquer sur la version client lourd pour la V1 (sauf cas particulier pour des utilisateurs)_
 
 ---
@@ -110,7 +110,7 @@ Début recette **MOA** le ?/11/2024 (_MOE : Donner le GO_)
 
 Livraison d'ActiFLot avec des bugs identifiés 
 
-- [2.9.25 bugs](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/mex/mex-24-002-issues-report-2.9.md)
+[2.9.25 bugs](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/activity-calendar/mex/mex-24-002-issues-report-2.9.md)
 
 A arbitrer avec la MOA pour la version 1.0 en production et opérationnelle en Janvier 2025
 
@@ -120,8 +120,7 @@ A arbitrer avec la MOA pour la version 1.0 en production et opérationnelle en J
 
 - Présents :
     - Emilie Le Roy (MOA/HISSEO)
-    - Vincent Badts (MOA/HISSEO)
-    - Glenn Prigent (MOE/ISI)
+    - Charlène Spagnol (MOA/HISSEO)
     - Caroline Destreez (MOE/CODRA)
     - Benoit Lavenier (EIS)
 
@@ -129,4 +128,20 @@ A arbitrer avec la MOA pour la version 1.0 en production et opérationnelle en J
 
 ### Retours de présentation 
 
-TO COMPLETE
+Icone activité sur les 2 formulaires terrain et rapport avancement  [#827](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/827)
+
+En mode observateur, il faut enlever la possibilité de désactiver la régionalisation : 
+- _MOE_ : A vérifier
+
+Ajout des niveaux sur les zones de compétences : attente liste par la MOA
+
+Gradients de profondeur pas régionalisé (validé MOA)
+
+Enlever le filtre sur le saisisseur (plus utile car saisisseur=observateur) ([#846](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/846)
+Issue [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746) clos
+
+Faire un test de connexions simultanées le lundi 02/12/2024 à 15h00
+
+- Planning 
+  - Recette MOA : lundi 02/12 après-midi ou mercredi 04/12
+  - Consigne saisisseurs pour test de connexion : mardi 03/12 matin

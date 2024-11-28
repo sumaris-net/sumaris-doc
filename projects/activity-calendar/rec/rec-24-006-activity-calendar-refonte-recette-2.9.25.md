@@ -5,11 +5,17 @@
 
 - Issue [746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746)
   - Faut il pouvoir filtrer sur des saisisseurs inactifs ?
+    - _MOA_ : On ne filtre que sur les actifs
+    - _MOE_ : Enlever le saisisseur du filtre et renommer "Organisme Saisisseur" en "Organisme Observateur"
   - POC à proposer : 
+    - _MOE_ : à voir plus tard si besoin 
     - Ajout d'un bouton icône sur le champ qui permet d'activer l'affichage des observateurs/saisisseurs inactifs (status_fk=0)
     - Afficher l'état actif/inactif sur les saisisseurs dans le filtre
 - Doit-on pouvoir générer un formulaire vierge pour une année autre que l'année courante ? 
+    - _MOA_ : Non 
    si non, il y a un correction à faire sur le lieu d'immat pour afficher uniquement celui ou ceux de l'année courante (exemple : 252740 LA NOUNOUTE)
+- Question sur la validation / qualification : 
+  - _MOA_ : Pas de validation nécessaire (à prévoir plus tard - Octobre 2025)
 
 ## Retours de recette MOE - release 2.9.25
 
