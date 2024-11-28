@@ -1,5 +1,5 @@
 # Compte-rendu réunion visio
-## 18/10/2024
+## 14/11/2024
 
 L'objectif de la réunion est la remontée des tests de l'application,
 et la définition d'une stratégie de communication auprès des professionels  
