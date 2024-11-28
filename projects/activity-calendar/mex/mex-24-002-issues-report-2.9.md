@@ -30,3 +30,4 @@
 | Enh [#787](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/787) | Déconnexion             | lower        | 2.10        |              |         
 | Enh [#746](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/746) | Filtre saisisseur       | lower        | 2.10        |              |         
 | Enh [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639) | Nom navires             | medium       | 2.9.25.x    |              |         
+| Enh [#841](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/841) | Régionalisation         | major        | 2.9.25.x    |              |         
