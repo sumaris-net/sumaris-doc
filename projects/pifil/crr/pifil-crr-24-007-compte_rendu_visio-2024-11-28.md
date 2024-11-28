@@ -70,6 +70,7 @@
 ---
 ## Retours sur le formulaire terrain
 
+EIS présente un [prototype PDF de formulaire terrain](](../doc/dolphinfree-doc-24-002-Prototype_formulaire_terrain_via_App.pdf)) généré par l'application.
 En plus des autres retours déjà remontés (cf CRR précédents),
 plusieurs demandes de corrections ont été faites :
 
