@@ -1,4 +1,4 @@
-# Manuel de mise en exploitation des calendrier d'activité v3.0
+# Manuel de mise en exploitation des calendrier d'activité v2.9
 
 Objectif : le document liste les étapes de migration, pour réaliser le passage 
 des calendriers d'activité en SUMARiS v3.0
