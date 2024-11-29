@@ -131,7 +131,8 @@ A arbitrer avec la MOA pour la version 1.0 en production et opérationnelle en J
 Icone activité sur les 2 formulaires terrain et rapport avancement  [#827](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/827)
 
 En mode observateur, il faut enlever la possibilité de désactiver la régionalisation : 
-- _MOE_ : A vérifier
+- _MOE_ : A remonter à Emilie - Un observateur ne peut pas désactiver le régionalisation. Mais un super utilisateur oui (superviseur).
+- _MOE_ : A remonter à Emilie - L'évolution sur l'application de la régionalisation dans le filtrage (Lieu et port) va être disponible dans la prochaine version. 
 
 Ajout des niveaux sur les zones de compétences : attente liste par la MOA
 
