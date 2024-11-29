@@ -74,9 +74,15 @@ EIS présente un [prototype PDF de formulaire terrain](](../doc/dolphinfree-doc-
 En plus des autres retours déjà remontés (cf CRR précédents),
 plusieurs demandes de corrections ont été faites :
 
+- Général : 
+  - [ ] Ajouter les logos en entête (action Dorian) : 
+    - Logo DolphinFree à gauche
+    - Logo DGAMPA à droite
+      (note technique : à ajouter dans les assets)
 - Engins : 
-  - Quiterie Sourget propose une saisie en mode tableau (voir la faisabilité) (cf [formulaire terrain engin de PIFIL](../doc/pifil-doc-24-001-Formulaire_terrain_PAMM-engin.pdf))
-  - EIS propose d'ajouter 3 blocs de formulaire engin
+  - Quiterie Sourget propose un mode de saisie tableau (cf [formulaire terrain engin de PIFIL](../doc/pifil-doc-24-001-Formulaire_terrain_PAMM-engin.pdf))
+  - ou bien EIS propose d'ajouter 3 blocs de formulaire engin
+  - => Activer le mode "bloc" ou "tableau" suivant une option de programme
 - Opérations : 
   - [ ] Libellé de la colonne commentaires : retirer le texte spécifique à ObsMer (à rendre configuration en option)
 - Captures accidentelles : 
@@ -84,11 +90,15 @@ plusieurs demandes de corrections ont été faites :
     - [ ] Ajouter une colonne N° OP, à la place de la colonne # (numéro d'ordre)
     - [ ] Ajouter une colonne date/heure de l'OP (pour éviter les erreurs de saisis dans le N° OP)
   - [ ] Masquer "Espèces commerciales (FAO)" (suivant l'option de programme existante)
-  - [ ] Ajouter "Espèces scientifiques" (sur 2 lignes) (suivant l'option de programme existante)
+  - [ ] Ajouter "Espèce scientifique" (sur 2 lignes) (suivant l'option de programme existante)
     - [ ] Lister les codes espèces en bas de page, si pas trop d'espèces (ex : si moins de 15)
   - [ ] Réduire la largeur des colonnes `O [ ] N [ ]` en ajoutant `(Oui/Non)` dans l'entête de colonne
+  - [ ] Afficher/Masquer les valeurs qualitatives dans les cellules (suivant une option de programme)
 - Remises à l'eau
   - [ ] Il manque le tableau de saisie des remises à l'eau 
+  - [ ] Activer un mode 'multi OP' dans le tableau (via une option de programme) :
+    - [ ] Ajouter une colonne N° OP, à la place de la colonne # (numéro d'ordre)
+    - [ ] Ajouter une colonne date/heure de l'OP (pour éviter les erreurs de saisis dans le N° OP)
 
 > Actions :
 > - EIS - semaine 49 - Corriger les points bloquants et majeurs sur le formulaire
