@@ -134,6 +134,10 @@ En mode observateur, il faut enlever la possibilité de désactiver la régional
 - _MOE_ : A remonter à Emilie - Un observateur ne peut pas désactiver le régionalisation. Mais un super utilisateur oui (superviseur).
 - _MOE_ : A remonter à Emilie - L'évolution sur l'application de la régionalisation dans le filtrage (Lieu et port) va être disponible dans la prochaine version. 
 
+_MOE_ : A remonter à Emilie - Filtrage sur le navire : Faut il afficher le dernier nom du navire dans le filtre ou afficher le nom de l'année filtrée ?
+- Exemple capture d'écran [#639](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/639)
+- Spatialisation temporelle du filtrage sur les navires
+
 Ajout des niveaux sur les zones de compétences : attente liste par la MOA
 
 Gradients de profondeur pas régionalisé (validé MOA)
