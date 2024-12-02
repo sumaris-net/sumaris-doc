@@ -35,15 +35,6 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)
     - Jouer le script SQL
 
-- Adagio : Inserer les saisisseurs comme observateurs (données historiques)
-  - Historisation des observateurs : Mantis [66370](https://forge.ifremer.fr/mantis/view.php?id=66370)
-  ```sql
-   INSERT INTO ACTIVITY_CALENDAR2PERSON
-   (SELECT AC.ID, AC.RECORDER_PERSON_FK FROM ACTIVITY_CALENDAR AC
-   WHERE AC.PROGRAM_FK = 'SIH-ACTIFLOT'
-   AND ID NOT IN (SELECT ACTIVITY_CALENDAR_FK FROM ACTIVITY_CALENDAR2PERSON)
-   AND AC.RECORDER_PERSON_FK IS NOT NULL);
-  ```
   
 - Ajout de droits sur `SIH2_ADAGIO_DBA.person`
   ```sql
@@ -53,9 +44,9 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   ```sql
   grant REFERENCES on sih2_adagio_dba.department to sih2_adagio_dba_sumaris_map;
   ``` 
-- Ajout de droits sur `SIH2_ADAGIO_DBA.STRATEGY_PROPERTY`
+- **!!! Ne pas exécuter pour la MEP** : Ajout de droits sur `SIH2_ADAGIO_DBA.STRATEGY_PROPERTY`
   ```sql
-  grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to sih2_adagio_dba_sumaris_map;
+  --grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to sih2_adagio_dba_sumaris_map;
   ```
 - Ajout dans la table `PROGRAM_PROPERTY`
   ```sql
@@ -73,7 +64,22 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.PROGRAM2PERSON to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- grants sur `PROGRAM_SEQ`
+- grants sur `PROGRAM`
+  ```sql
+  grant SELECT,INSERT, UPDATE on SIH2_ADAGIO_DBA.PROGRAM to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- grants sur `M_PROGRAM`
+  ```sql
+  grant SELECT,INSERT on SIH2_ADAGIO_DBA.M_PROGRAM to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- grants sur `M_TAXON_GROUP_TYPE `
+  ```sql
+  grant SELECT on SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
+- **!!! La séquence n'existe pas** : grants sur `PROGRAM_SEQ`
   ```sql
   grant SELECT on SIH2_ADAGIO_DBA.PROGRAM_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
@@ -92,7 +98,29 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION_LEVEL to SIH2_ADAGIO_DBA_SUMARIS_MAP;  
 -```
 
-## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
+
+- Trigger sur `TR_PROGRAM_ID`
+  ```sql
+      create or replace TRIGGER TR_PROGRAM_ID
+        before insert or delete on PROGRAM
+        for each row
+  	    declare
+		  l_code VARCHAR2(40) := NULL;
+        begin
+          case
+            WHEN INSERTING THEN
+              BEGIN                
+                select CODE into l_code from M_PROGRAM where CODE = :new.CODE;
+                EXCEPTION WHEN NO_DATA_FOUND THEN
+                  insert into M_PROGRAM(CODE,ID) values (:new.CODE, M_PROGRAM_SEQ.nextval);
+                END;
+            WHEN DELETING THEN
+              delete from M_PROGRAM P where P.CODE=:old.CODE;
+          end case;
+      end;
+-```
+
+  ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Création de la séquence `NAMED_FILTER_SEQ`
   ```sql
@@ -111,7 +139,7 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
     update_date            TIMESTAMP NOT NULL,
     creation_date          TIMESTAMP NOT NULL,
     CONSTRAINT named_filter_pk PRIMARY KEY ( id )
-  );
+  )TABLESPACE "SIH2_ADAGIO_DBA_SUMARIS_DATA";
 
   ALTER TABLE sih2_adagio_dba_sumaris_map.named_filter
   ADD CONSTRAINT named_filter_recor_person_fkc FOREIGN KEY ( recorder_person_fk )
@@ -140,27 +168,6 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
       cast(P.STATUS_FK as number(10)) as STATUS_FK
       from SIH2_ADAGIO_DBA.PARAMETER P
       inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on P.CODE = MP.CODE;
--```
-
-- Trigger sur `TR_PROGRAM_ID`
-  ```sql
-      create or replace TRIGGER TR_PROGRAM_ID
-        before insert or delete on PROGRAM
-        for each row
-  	    declare
-		  l_code VARCHAR2(40) := NULL;
-        begin
-          case
-            WHEN INSERTING THEN
-              BEGIN                
-                select CODE into l_code from M_PROGRAM where CODE = :new.CODE;
-                EXCEPTION WHEN NO_DATA_FOUND THEN
-                  insert into M_PROGRAM(CODE,ID) values (:new.CODE, M_PROGRAM_SEQ.nextval);
-                END;
-            WHEN DELETING THEN
-              delete from M_PROGRAM P where P.CODE=:old.CODE;
-          end case;
-      end;
 -```
 
 - Modification du trigger `TR_PROGRAM`
@@ -230,6 +237,33 @@ end;
   end;
 - ```
 
+- Modification de la vue `VESSEL_USE_MEASUREMENT`
+  ```sql
+    create or replace view VESSEL_USE_MEASUREMENT as
+      select VUM.ID,
+             null as COMMENTS,
+             VUM.NUMERICAL_VALUE,
+             VUM.ALPHANUMERICAL_VALUE,
+             VUM.DIGIT_COUNT,
+             VUM.PRECISION_VALUE,
+             MVUM.RANK_ORDER,
+             VUM.CONTROL_DATE,
+             VUM.VALIDATION_DATE,
+             VUM.QUALIFICATION_DATE,
+             VUM.QUALIFICATION_COMMENTS,
+             null as UPDATE_DATE,
+             VUM.PMFM_FK,
+             VUF.FISHING_TRIP_FK as TRIP_FK, -- 1 VESSEL_USE_FEATURES créé en meme temps que le TRIP
+             VUF.OPERATION_FK, -- 1 VESSEL_USE_FEATURES créé en meme temps que l'OPERATION
+             VUM.VESSEL_USE_FEATURES_FK,
+             VUM.QUALITATIVE_VALUE_FK,
+             VUM.DEPARTMENT_FK as RECORDER_DEPARTMENT_FK,
+             cast(VUM.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+      from SIH2_ADAGIO_DBA.VESSEL_USE_MEASUREMENT VUM
+      inner join SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES VUF on VUM.VESSEL_USE_FEATURES_FK = VUF.ID
+      left outer join SIH2_ADAGIO_DBA_SUMARIS_MAP.M_VESSEL_USE_MEASUREMENT MVUM on VUM.ID = MVUM.ID;  
+  ```
+
 - Création du trigger `TR_VESSEL_USE_MEASUREMENT`
 
   ```sql
@@ -273,7 +307,7 @@ end;
     create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
 -```
 
-- Ajout du synonyme `STRATEGY_PROPERTY`
+- ***!!! Ne pas créer le synonyme*** : Ajout du synonyme `STRATEGY_PROPERTY`
   ```sql
     create or replace synonym STRATEGY_PROPERTY for SIH2_ADAGIO_DBA.STRATEGY_PROPERTY;
 -```
