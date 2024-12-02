@@ -12,6 +12,7 @@
 - [Saisir un mois complet](#saisir-un-mois-complet)
 - [Afficher les avertissements](#afficher-les-avertissements)
 - [Afficher les erreurs](#afficher-les-erreurs)
+- [Replier tout à la sauvegarde](#replier-tout-à-la-sauvegarde)
 - [Afficher les raccourcis clavier](#afficher-les-raccourcis-clavier)
 - [Générer les formulaires et rapports](#générer-les-formulaires-et-rapports)
 
