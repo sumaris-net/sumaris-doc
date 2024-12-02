@@ -77,7 +77,7 @@ Pour cela, il faut consulter le calendrier souhaité puis dans le menu de gauche
 
 ### Changer de zone de compétence
 
-Dans l'écran de saisie du calendrier, il est possible de changer de zone de compétence
+Il est possible de changer de zone de compétence via le menu contextuel.
 
 ![regionalisation](./changement_zone_competence.png)
 
@@ -118,6 +118,12 @@ A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc n�
 
 ![erreurs](./afficher_erreurs.png)
 
+### Replier tout à la sauvegarde
+
+Il est possible de choisir de replier ou non toutes les lignes des blocs métiers lors de la sauvegarde via le menu contextuel.
+
+![replier](./replier_tout.png)
+
 ### Afficher les raccourcis clavier
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
@@ -128,11 +134,11 @@ Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
 Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier via le menu contextuel.
 
-Sur le tableau de consultation des calendriers, l'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
+Sur le tableau de consultation des calendriers, les calendriers sélectionnés ou à défaut l'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
 
 ![rapports](./éditer_rapports_1.png)
 
-Sur un calendrier, seuls le formulaire vierge et du formulaire avec données sont accessibles.
+Sur un calendrier, seuls le formulaire vierge et le formulaire avec données sont accessibles.
 
 ![rapports](./éditer_rapports.png)
 
