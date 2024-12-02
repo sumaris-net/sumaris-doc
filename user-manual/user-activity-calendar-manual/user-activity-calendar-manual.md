@@ -24,9 +24,9 @@ Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est précon
 
 - De se régionaliser :
 
-La régionalisation se définit dans les paramètres utilisateur de l'application.
+![régionalisation](./régionalisation_1.png)
+![régionalisation](./régionalisation_2.png)
 
-- De compacter les lignes du calendrier de saisie (activé par défaut)
 
 ## Paramétrages 
 
@@ -60,7 +60,7 @@ Sur l'écran "Paramètres", cliquer sur le bouton "Afficher plus" pour sélectio
 
 Ce paramétrage est spécifique à chaque utilisateur.
 
-![parametrage](./paramétrage_champs.png)
+![parametrage](./paramétrage_champs_1.png)
 ![parametrage](./paramétrage_champs_2.png)
 
 ### Paramétrage de la régionalisation
@@ -129,7 +129,6 @@ puis de générer le formulaire vierge, le formulaire avec données et le rappor
 L'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
 
 ![rapports](./éditer_rapports_1.png)
-![rapports](./éditer_rapports_2.png)
 
 Sur un calendrier, la génération du formulaire vierge et du formulaire avec données est accessible via le menu contextuel.
 
