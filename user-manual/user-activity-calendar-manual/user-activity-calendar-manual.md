@@ -6,8 +6,11 @@
 - [Paramétrage des colonnes du tableau de consultation des calendriers d'activité](#paramétrage-des-colonnes-du-tableau-de-consultation-des-calendriers-dactivité)
 - [Paramétrage des champs et des listes déroulantes](#paramétrage-des-champs-et-des-listes-déroulantes)
 - [Epingler un calendrier](#epingler-un-calendrier)
+- [Changer de zone de compétence](#changer-de-zone-de-compétence)
 - [Sélectionner des cellules, des lignes et des colonnes](#sélectionner-des-cellules-des-lignes-et-des-colonnes)
 - [Etendre le contenu d'une cellule](#etendre-le-contenu-dune-cellule)
+- [Saisir un mois complet](#saisir-un-mois-complet)
+- [Afficher les avertissements](#afficher-les-avertissements)
 - [Afficher les erreurs](#afficher-les-erreurs)
 - [Afficher les raccourcis clavier](#afficher-les-raccourcis-clavier)
 - [Générer les formulaires et rapports](#générer-les-formulaires-et-rapports)
@@ -49,8 +52,7 @@ Il est possible de personnaliser l'affichage des champs et des listes déroulant
 - Profondeur 
 - Zone proche
 
-Pour cela, il faut accéder à l'écran "Paramètres" accessible depuis le menu de gauche.
-Sur l'écran "Paramètres", cliquer sur le bouton "Afficher plus" pour sélectionner une ou plusieurs options parmis les suivantes, ainsi que la valeur souhaitée :
+Pour cela, il faut accéder à l'écran "Paramètres" accessible depuis le menu de gauche puis sélectionner une ou plusieurs options parmis les suivantes, ainsi que la valeur souhaitée :
 - Liste déroulante > Navires
 - Liste déroulante > Lieux (port, etc.)
 - Liste déroulante > Zone de pêche (rectangle, etc.)
@@ -63,12 +65,6 @@ Ce paramétrage est spécifique à chaque utilisateur.
 ![parametrage](./paramétrage_champs_1.png)
 ![parametrage](./paramétrage_champs_2.png)
 
-### Paramétrage de la régionalisation
-
-Il faut choisir sa zone de compétence dans les paramètres utilisateur de l'application
-
-![regionalisation](./parametrage_zone_competence.png)
-
 ## Fonctionnalités
 
 ### Epingler un calendrier
@@ -79,22 +75,38 @@ Pour cela, il faut consulter le calendrier souhaité puis dans le menu de gauche
 
 ![epingler](./épingler_calendrier.png)
 
+### Changer de zone de compétence
+
+Dans l'écran de saisie du calendrier, il est possible de changer de zone de compétence
+
+![regionalisation](./changement_zone_competence.png)
+
 ### Sélectionner des cellules, des lignes et des colonnes
 
 Il est possible de sélectionner une ligne ou une colonne en cliquant sur l'en-tête de ligne ou de colonne.
+
 De même il est possible de sélectionner plusieurs cellules, lignes ou colonnes contigues en utilisant la touche **Shift**.
 
 ### Etendre le contenu d'une cellule
 
 Il est possible d'étendre le contenu d'une cellule vers la droite ou vers la gauche.
+
 Pour cela, il faut se positionner sur la bordure droite ou gauche de la cellule jusqu'à ce qu'elle s'épaississe puis déplacer la souris.
 
 ![etirer](./étirer.png)
 
-### Saisie d'un mois complet
+### Saisir un mois complet
 
-La touche **Tab** permet de se positionner verticalement, dans le sens descendant, quand, on est en édition sur une cellule.
-Cela permet de saisir un mois complet et de passer au mois suivant, toujours avec la touche **Tab**.
+Lors de l'édition d'un mois, pour réaliser la saisie d'un mois complet, les touches **Tab** et **Shift + Tab** permettent respectivement de passer à la cellule au-dessous ou au-dessus.
+En fin de moi, il est également possible de passer au mois suivant avec la touche **Tab**.
+
+### Afficher les avertissements
+
+Lorsqu'il y a une incohérence entre la saisie et la zone de compétence sélectionnée, les cellules apparaissent avec un fond jaune-orangé.
+
+Ces avertissements ne bloquent pas la sauvegarde du calendrier.
+
+![avertissement](./avertissement_zone_competence.PNG)
 
 ### Afficher les erreurs
 
@@ -106,13 +118,6 @@ A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc n�
 
 ![erreurs](./afficher_erreurs.png)
 
-### Afficher les avertissements
-
-Un fond de cellule est en orange sur des caractéristiques indique un avertissement. 
-C'est par exemple lorque l'on navigue sur un calendrier dont les caractéristiques de location (Port, Zone de peche, ...) n'appartiennent pas à la zone de compétence.
-
-![avertissement](./avertissement_zone_competence.PNG)
-
 ### Afficher les raccourcis clavier
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
@@ -121,22 +126,13 @@ Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
 ### Générer les formulaires et rapports
 
-Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier.
+Les formulaires et rapports sont accessibles depuis le tableau de consultation des calendriers et depuis chaque calendrier via le menu contextuel.
 
-Sur le tableau de consultation des calendriers, il est nécessaire d'appliquer un filtre sur le programme de collecte "SIH-ACTIFLOT" 
-puis de générer le formulaire vierge, le formulaire avec données et le rapport d'avancement via le menu contextuel .
-
-L'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
+Sur le tableau de consultation des calendriers, l'ensemble des calendriers contenus dans le tableau sera utilisé pour générer les formulaires et rapports.
 
 ![rapports](./éditer_rapports_1.png)
 
-Sur un calendrier, la génération du formulaire vierge et du formulaire avec données est accessible via le menu contextuel.
+Sur un calendrier, seuls le formulaire vierge et du formulaire avec données sont accessibles.
 
 ![rapports](./éditer_rapports.png)
-
-### Changer sa zone de compétence
-
-Dans l'écran de saisie du calendrier, il est possible de changer sa zone de compétence
-
-![regionalisation](./changement_zone_competence.png)
 
