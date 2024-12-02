@@ -43,4 +43,29 @@ Mode opératoire
    - Status : OK
 8. Déclaration de l'application dans isival
    - opus-app
+     - deploy_docker_val2 
    - opus-pod
+     - deploy_docker_val2  
+9. Paramétrage de la stratégie
+   - Iso préproduction HARMONIE_VAL
+
+### Tests de l'application 
+
+- [ ] Erreur au démarrage du pod
+```
+ Dec 02 17:03:56 visi-docker-val2 dockersvc_opus-pod[28717]: org.springframework.dao.DataRetrievalFailureException: Software with label 'sumaris' not found
+```
+
+Correction
+```sql
+ update software set label = 'sumaris' where id = 62;
+```
+
+- [ ] Erreur de sauvegarde de stratégie
+```
+select properties0_.strategy_fk as strategy_fk7_135_0_, properties0_.id as id1_135_0_, properties0_.id as id1_135_1_, properties0_.creation_date as creation_date2_135_1_, properties0_.label as label3_135_1_, properties0_.name as name4_135_1_, properties0_.status_fk as status_fk6_135_1_, properties0_.strategy_fk as strategy_fk7_135_1_, properties0_.update_date as update_date5_135_1_ from SIH2_ADAGIO_DBA_SUMARIS_MAP.strategy_property properties0_ where properties0_.strategy_fk=?
+Dec 02 17:41:10 visi-docker-val2 dockersvc_opus-pod[8867]: 2024-12-02 17:41:10,012 WARN  [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper     : SQL Error: 980, SQLState: 42000
+Dec 02 17:41:10 visi-docker-val2 dockersvc_opus-pod[8867]: 2024-12-02 17:41:10,012 ERROR [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper     : ORA-00980: la traduction de synonymes n'est plus valide
+```
+
+Manque la table strategy_property dans SIH2_ADAGIO_DBA_SUMARIS_MAP

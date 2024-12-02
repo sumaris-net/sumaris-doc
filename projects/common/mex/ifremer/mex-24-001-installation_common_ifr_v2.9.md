@@ -89,6 +89,11 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- grants sur `STRATEGY`
+  ```sql
+  grant REFERENCES on SIH2_ADAGIO_DBA.STRATEGY to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+  -```
+- 
 - grants sur la REGIONALISATION
   ```sql
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION_LEVEL to SIH2_ADAGIO_DBA_SUMARIS_MAP;
@@ -265,7 +270,6 @@ end;
   ```
 
 - Création du trigger `TR_VESSEL_USE_MEASUREMENT`
-
   ```sql
   create or replace trigger TR_VESSEL_USE_MEASUREMENT
      instead of insert or update or delete
@@ -302,6 +306,68 @@ end;
   end;
 - ```
 
+
+- Modification de la vue `VESSEL_USE_MEASUREMENT`
+ ```sql
+  create or replace view PMFM_STRATEGY2METIER as
+    select ID as PMFM_STRATEGY_FK,
+           METIER_FK
+    from SIH2_ADAGIO_DBA.PMFM_STRATEGY PS
+    where METIER_FK is not null;
+- ```
+
+- Création du trigger `TR_PMFM_STRATEGY2METIER`
+  ```sql
+  create or replace trigger TR_PMFM_STRATEGY2METIER
+    instead of insert or update or delete
+      on PMFM_STRATEGY2METIER
+        begin
+          case
+            WHEN INSERTING or UPDATING THEN
+              update SIH2_ADAGIO_DBA.PMFM_STRATEGY PS set PS.METIER_FK = :new.METIER_FK where PS.ID = :new.PMFM_STRATEGY_FK;
+            WHEN DELETING THEN
+              update SIH2_ADAGIO_DBA.PMFM_STRATEGY PS set PS.METIER_FK = null where PS.ID = :new.PMFM_STRATEGY_FK;
+          end case;
+        end;
+- ```
+
+
+- Modification de la vue `VESSEL_FEATURES`
+  ```sql
+  create or replace view VESSEL_FEATURES as
+  select VF.ID,
+  VF.START_DATE_TIME as START_DATE,
+  VF.END_DATE_TIME as END_DATE,
+  VF.NAME,
+  VF.EXTERIOR_MARKING,
+  VF.ADMINISTRATIVE_POWER,
+  VF.GROSS_TONNAGE_GT,
+  VF.GROSS_TONNAGE_GRT,
+  VF.LOA as LENGTH_OVER_ALL,
+  --VF.LBP,
+  VF.CONSTRUCTION_YEAR,
+  VF.IRCS,
+  VF.AUXILIARY_POWER,
+  --VF.HAS_VMS,
+  VF.IS_FPC,
+  null as COMMENTS,
+  null as CONTROL_DATE,
+  null as CREATION_DATE,
+  null as VALIDATION_DATE,
+  null as QUALIFICATION_DATE,
+  null as QUALIFICATION_COMMENTS,
+  VF.UPDATE_DATE,
+  V.ID as VESSEL_FK,
+  VF.BASE_PORT_LOCATION_FK,
+  VF.HULL_MATERIAL_QV_FK,
+  null as RECORDER_DEPARTMENT_FK,
+  null as RECORDER_PERSON_FK,
+  0 as QUALITY_FLAG_FK
+  from SIH2_ADAGIO_DBA.VESSEL_FEATURES VF
+  inner join SIH2_ADAGIO_DBA.M_VESSEL V on VF.VESSEL_FK = V.CODE;
+- ```
+
+
 - Modification du synonyme `M_PROGRAM_SEQ` en `PROGRAM_SEQ`
   ```sql
     create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
@@ -322,4 +388,28 @@ end;
     create or replace synonym EXPERTISE_AREA_SEQ for SIH2_ADAGIO_DBA.EXPERTISE_AREA_SEQ;
     create or replace synonym EXPERTISE_AREA2LOCATION for SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION;
     create or replace synonym EXPERTISE_AREA2LOCATION_LEVEL for SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION_LEVEL;  
+-```
+
+
+- Creation de la table `STRATEGY_PROPERTY`  
+  ```sql
+  CREATE TABLE "SIH2_ADAGIO_DBA_SUMARIS_MAP"."STRATEGY_PROPERTY" 
+   (	"ID" NUMBER(10,0) NOT NULL ENABLE, 
+	"LABEL" VARCHAR2(255 BYTE) NOT NULL ENABLE, 
+	"NAME" VARCHAR2(255 BYTE) NOT NULL ENABLE, 
+	"CREATION_DATE" TIMESTAMP (6) NOT NULL ENABLE, 
+	"UPDATE_DATE" TIMESTAMP (6), 
+	"STRATEGY_FK" NUMBER(10,0) NOT NULL ENABLE, 
+	"STATUS_FK" VARCHAR2(1 BYTE) NOT NULL ENABLE, 
+	 CONSTRAINT "STRATEGY_PROPERTY_PK" PRIMARY KEY ("ID"), 
+	 CONSTRAINT "STRATEGY_PROPERTY_STRATEGY_FKC" FOREIGN KEY ("STRATEGY_FK")
+	  REFERENCES "SIH2_ADAGIO_DBA"."STRATEGY" ("ID") ENABLE
+   ) 
+  TABLESPACE "SIH2_ADAGIO_DBA_SUMARIS_DATA" ;
+
+
+  COMMENT ON COLUMN "SIH2_ADAGIO_DBA_SUMARIS_MAP"."STRATEGY_PROPERTY"."ID" IS 'Identifiant';
+  COMMENT ON COLUMN "SIH2_ADAGIO_DBA_SUMARIS_MAP"."STRATEGY_PROPERTY"."LABEL" IS 'Mnemonique / code de la propriete';
+  COMMENT ON COLUMN "SIH2_ADAGIO_DBA_SUMARIS_MAP"."STRATEGY_PROPERTY"."NAME" IS 'Libelle de la propriete';
+  COMMENT ON TABLE "SIH2_ADAGIO_DBA_SUMARIS_MAP"."STRATEGY_PROPERTY"  IS 'Proprietes logicielles sur les strategies. Ces proprietes sont utilisees dans les logiciels afin d avoir un comportement specifique a une strategie.';
 -```

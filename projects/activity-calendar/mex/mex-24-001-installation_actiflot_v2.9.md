@@ -535,7 +535,118 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
     inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on VUFO.PROGRAM_FK = MP.CODE;
 -```
 
+- Creation de la vue `SURVEY_MEASUREMENT`
+  ```sql
+    create or replace view SURVEY_MEASUREMENT as
+    select SM.ID,
+           null as COMMENTS,
+           SM.NUMERICAL_VALUE,
+           SM.ALPHANUMERICAL_VALUE,
+           SM.DIGIT_COUNT,
+           SM.PRECISION_VALUE,
+           MSM.RANK_ORDER,
+           SM.CONTROL_DATE,
+           --VALIDATION_DATE,
+           SM.QUALIFICATION_DATE,
+           SM.QUALIFICATION_COMMENTS,
+           null as UPDATE_DATE,
+           SM.PMFM_FK,
+           SM.LANDING_FK,
+           SM.ACTIVITY_CALENDAR_FK,
+           SM.DAILY_ACTIVITY_CALENDAR_FK,
+           SM.QUALITATIVE_VALUE_FK,
+           SM.DEPARTMENT_FK as RECORDER_DEPARTMENT_FK,
+           cast(SM.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+    from SIH2_ADAGIO_DBA.SURVEY_MEASUREMENT SM
+    left outer join SIH2_ADAGIO_DBA_SUMARIS_MAP.M_SURVEY_MEASUREMENT MSM on SM.ID = MSM.ID;
+- ```
 
+- Creation du trigger `TR_SURVEY_MEASUREMENT`
+  ```sql
+   create or replace trigger TR_SURVEY_MEASUREMENT
+     instead of insert or update or delete on SURVEY_MEASUREMENT
+      begin
+       case
+        WHEN INSERTING THEN
+         -- SURVEY_MEASUREMENT itself
+         insert into SIH2_ADAGIO_DBA.SURVEY_MEASUREMENT(ID, NUMERICAL_VALUE, ALPHANUMERICAL_VALUE, DIGIT_COUNT, PRECISION_VALUE, CONTROL_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, QUALITY_FLAG_FK,
+                                                        DEPARTMENT_FK, PMFM_FK, QUALITATIVE_VALUE_FK, LANDING_FK, ACTIVITY_CALENDAR_FK, DAILY_ACTIVITY_CALENDAR_FK)
+         values (:new.ID, :new.NUMERICAL_VALUE, :new.ALPHANUMERICAL_VALUE, :new.DIGIT_COUNT, :new.PRECISION_VALUE, :new.CONTROL_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.QUALITY_FLAG_FK,
+                 :new.RECORDER_DEPARTMENT_FK, :new.PMFM_FK, :new.QUALITATIVE_VALUE_FK, :new.LANDING_FK, :new.ACTIVITY_CALENDAR_FK, :new.DAILY_ACTIVITY_CALENDAR_FK);
+         -- M_SURVEY_MEASUREMENT (map columns of SURVEY_MEASUREMENT for sumaris)
+         insert into SIH2_ADAGIO_DBA_SUMARIS_MAP.M_SURVEY_MEASUREMENT(ID, RANK_ORDER)
+         values (:new.ID, :new.RANK_ORDER);
+        WHEN UPDATING THEN
+        -- SURVEY_MEASUREMENT itself
+        update SIH2_ADAGIO_DBA.SURVEY_MEASUREMENT M set M.NUMERICAL_VALUE=:new.NUMERICAL_VALUE, M.ALPHANUMERICAL_VALUE=:new.ALPHANUMERICAL_VALUE, M.DIGIT_COUNT=:new.DIGIT_COUNT, M.PRECISION_VALUE=:new.PRECISION_VALUE,
+                                                        M.CONTROL_DATE=:new.CONTROL_DATE, M.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, M.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS, M.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK,
+                                                        M.DEPARTMENT_FK=:new.RECORDER_DEPARTMENT_FK, M.PMFM_FK=:new.PMFM_FK, M.QUALITATIVE_VALUE_FK=:new.QUALITATIVE_VALUE_FK
+        where M.ID = :new.ID;
+        -- M_SURVEY_MEASUREMENT update if condition
+        update M_SURVEY_MEASUREMENT MSM set MSM.RANK_ORDER=:new.RANK_ORDER
+        where MSM.ID = :new.ID;
+        -- M_SURVEY_MEASUREMENT insert if condition
+        insert into M_SURVEY_MEASUREMENT (ID, RANK_ORDER)
+        select :new.ID, :new.RANK_ORDER from SIH2_ADAGIO_DBA.SURVEY_MEASUREMENT SM where SM.ID = :new.ID and not exists (select * from M_SURVEY_MEASUREMENT MSM where  MSM.ID = :new.ID);
+      WHEN DELETING THEN
+       delete from SIH2_ADAGIO_DBA.SURVEY_MEASUREMENT SM where SM.ID=:old.ID;
+       delete from M_SURVEY_MEASUREMENT MSM where MSM.ID=:old.ID;
+     end case;
+  end; 
+-```
+
+- Creation de la vue `FISHING_AREA`
+  ```sql
+    create or replace view FISHING_AREA as
+      select FA.ID,
+      FA.LOCATION_FK,
+      FA.DISTANCE_TO_COAST_GRADIENT_FK,
+      FA.DEPTH_GRADIENT_FK,
+      FA.NEARBY_SPECIFIC_AREA_FK,
+      FA.QUALIFICATION_DATE,
+      FA.QUALIFICATION_COMMENTS,
+      GUF.OPERATION_FK,
+      FA.SALE_FK,
+      FA.GEAR_USE_FEATURES_FK,
+      FA.VESSEL_USE_FEATURES_FK,
+      cast(FA.QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK
+    from SIH2_ADAGIO_DBA.FISHING_AREA FA
+    left outer join SIH2_ADAGIO_DBA.GEAR_USE_FEATURES GUF on FA.GEAR_USE_FEATURES_FK = GUF.ID;
+-```
+
+- Creation du trigger `TR_FISHING_AREA`
+  ```sql
+   create or replace trigger TR_FISHING_AREA
+    instead of insert or update or delete on FISHING_AREA
+     begin
+      case
+       WHEN INSERTING THEN
+        if :new.OPERATION_FK is not null then
+          insert into SIH2_ADAGIO_DBA.FISHING_AREA(ID, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, QUALITY_FLAG_FK, LOCATION_FK,
+                                                   DISTANCE_TO_COAST_GRADIENT_FK, DEPTH_GRADIENT_FK, NEARBY_SPECIFIC_AREA_FK, SALE_FK, GEAR_USE_FEATURES_FK, VESSEL_USE_FEATURES_FK)
+          select :new.ID, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.QUALITY_FLAG_FK, :new.LOCATION_FK,
+                 :new.DISTANCE_TO_COAST_GRADIENT_FK, :new.DEPTH_GRADIENT_FK, :new.NEARBY_SPECIFIC_AREA_FK, :new.SALE_FK, GUF.ID, :new.VESSEL_USE_FEATURES_FK
+          from SIH2_ADAGIO_DBA.GEAR_USE_FEATURES GUF
+          where GUF.OPERATION_FK = :new.OPERATION_FK OR GUF.ID = :new.GEAR_USE_FEATURES_FK;
+        else
+          insert into SIH2_ADAGIO_DBA.FISHING_AREA(ID, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, QUALITY_FLAG_FK, LOCATION_FK,
+                                                   DISTANCE_TO_COAST_GRADIENT_FK, DEPTH_GRADIENT_FK, NEARBY_SPECIFIC_AREA_FK, SALE_FK, GEAR_USE_FEATURES_FK, VESSEL_USE_FEATURES_FK)
+          values(:new.ID, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.QUALITY_FLAG_FK, :new.LOCATION_FK,
+                 :new.DISTANCE_TO_COAST_GRADIENT_FK, :new.DEPTH_GRADIENT_FK, :new.NEARBY_SPECIFIC_AREA_FK, :new.SALE_FK, :new.GEAR_USE_FEATURES_FK, :new.VESSEL_USE_FEATURES_FK);
+        end if;
+       WHEN UPDATING THEN
+        update SIH2_ADAGIO_DBA.FISHING_AREA M set M.QUALIFICATION_DATE=:new.QUALIFICATION_DATE, M.QUALIFICATION_COMMENTS=:new.QUALIFICATION_COMMENTS, M.QUALITY_FLAG_FK=:new.QUALITY_FLAG_FK,
+                                                  M.LOCATION_FK=:new.LOCATION_FK, M.DISTANCE_TO_COAST_GRADIENT_FK=:new.DISTANCE_TO_COAST_GRADIENT_FK, M.DEPTH_GRADIENT_FK=:new.DEPTH_GRADIENT_FK,
+                                                  M.NEARBY_SPECIFIC_AREA_FK=:new.NEARBY_SPECIFIC_AREA_FK
+        where M.ID = :new.ID;
+        -- SALE_FK, GEAR_USE_FEATURES_FK and VESSEL_USE_FEATURES_FK should not be updated
+       WHEN DELETING THEN
+        delete from SIH2_ADAGIO_DBA.FISHING_AREA FA where FA.ID=:old.ID;
+      end case;
+  end;
+-```
+
+   
 - Creation de la vue `SPATIAL_ITEM_TYPE`
   ```sql
     create or replace view SPATIAL_ITEM_TYPE as
