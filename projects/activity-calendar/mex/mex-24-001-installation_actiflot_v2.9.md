@@ -27,6 +27,16 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 ## Schéma SIH2_ADAGIO_DBA
 
+- Adagio : Inserer les saisisseurs comme observateurs (données historiques)
+  - Historisation des observateurs : Mantis [66370](https://forge.ifremer.fr/mantis/view.php?id=66370)
+  ```sql
+   INSERT INTO ACTIVITY_CALENDAR2PERSON
+   (SELECT AC.ID, AC.RECORDER_PERSON_FK FROM ACTIVITY_CALENDAR AC
+   WHERE AC.PROGRAM_FK = 'SIH-ACTIFLOT'
+   AND ID NOT IN (SELECT ACTIVITY_CALENDAR_FK FROM ACTIVITY_CALENDAR2PERSON)
+   AND AC.RECORDER_PERSON_FK IS NOT NULL);
+  ```
+
 - Définition de PMFM en booléen
   ```sql
   update  m_parameter set is_boolean = 1 where CODE in ('ACCEPT_OTHER_SURVEY', 'INACTIVTY_YEAR');
@@ -34,7 +44,6 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Modification `ACTIVITY_CALENDAR` :
   - Nouvelle colonne `ECONOMIC_SURVEY` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
-
 
 - Nouvelle table `ACTIVITY_CALENDAR2PERSON` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
@@ -61,7 +70,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 - Nouveau processing_type `ACTIVITY_CALENDARS_IMPORTATION`
   ```sql
   insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('ACTIVITY_CALENDARS_IMPORTATION','Traitement d''importation des calendriers', '1');
-  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('DENORMALIZE_BATCH','Élever et dénormaliser l'arborescence des lots','1');
+  insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('DENORMALIZE_BATCH','Élever et dénormaliser l''arborescence des lots','1');
   insert into PROCESSING_TYPE (CODE, DESCRIPTION,  STATUS_FK) VALUES ('SUMARIS_EXTRACTION','Extraction de données','1');
 -```
 
@@ -467,12 +476,6 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 -```
 
 
-- Ajout de synonyme sur `ACTIVITY_CALENDAR2PERSON`
-  ```sql
-  create or replace synonym ACTIVITY_CALENDAR2PERSON for SIH2_ADAGIO_DBA.ACTIVITY_CALENDAR2PERSON;
--```
-
-
 - Ajout de la vue `ACTIVITY_CALENDAR2PERSON`
   ```sql
   create or replace view ACTIVITY_CALENDAR2PERSON as
@@ -483,6 +486,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Modification de la vue `METIER`
   ```sql
+    CREATE OR REPLACE VIEW METIER as
     select ID,
            COMMENTS,
            null as CREATION_DATE,
@@ -594,9 +598,10 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 - Options pour le programme SIH-ACTIFLOT (/!\ Vérifier que l'url est bien celle de prod)
 
 ```properties 
-server.app.url=https://sumaris-app.ifremer.fr/
+server.app.url=https://opus.isival.ifremer.fr/
 ```
 
-```requete sql
-insert into software_property (id, label, name, software_fk, status_fk, creation_date) values (software_property_seq.nextval, 'server.app.url', 'https://sumaris-app.ifremer.fr/', 42 , 1, sysdate);
-```
+- Requete sql 
+  ```sql
+    Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'server.app.url','https://opus.isival.ifremer.fr/',sysdate,current_timestamp,'1' from software where label = 'opus';
+-```
