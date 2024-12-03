@@ -42,6 +42,11 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
   update  m_parameter set is_boolean = 1 where CODE in ('ACCEPT_OTHER_SURVEY', 'INACTIVTY_YEAR');
   ```
 
+- Désactivation de valeurs qualitatives pour le paramètre SURVEY_QUALIFICATION
+  ```sql
+  update qualitative_value set STATUS_FK = 0 where parameter_fk = 'SURVEY_QUALIFICATION' and name in ('Recopie 2021','Recopie 2022');
+  ```
+  
 - Modification `ACTIVITY_CALENDAR` :
   - Nouvelle colonne `ECONOMIC_SURVEY` (appliqué par le [MEX Commun](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md))
 
@@ -122,7 +127,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
   ;
 -``` 
 
-- Modification du trigger `TR_VESSEL_USE_FEATURES`
+- Modification du trigger `TR_ACTIVITY_CALENDAR`
   ```sql
   create or replace trigger TR_ACTIVITY_CALENDAR
     instead of update or insert
