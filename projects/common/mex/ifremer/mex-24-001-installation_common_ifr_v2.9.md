@@ -59,6 +59,13 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   alter table m_parameter add is_date number(1);
 -```
 
+- Nouvelle entrée dans la table `PROCESSING_TYPE` : `VESSEL_SNAPSHOTS_INDEXATION`
+
+  ```sql
+  INSERT INTO PROCESSING_TYPE (CODE, DESCRIPTION, STATUS_FK) values ('VESSEL_SNAPSHOTS_INDEXATION', 'Traitement d''indexation des navires dans ElastiSearch', 1);
+  ```
+
+
 - grants sur `PROGRAM2PERSON`
   ```sql
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.PROGRAM2PERSON to SIH2_ADAGIO_DBA_SUMARIS_MAP;

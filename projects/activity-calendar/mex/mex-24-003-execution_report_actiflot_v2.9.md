@@ -46,26 +46,43 @@ Mode opératoire
      - deploy_docker_val2 
    - opus-pod
      - deploy_docker_val2  
-9. Paramétrage de la stratégie
-   - Iso préproduction HARMONIE_VAL
+9. Paramétrage du programme
+   - Script PROGRAM_PROPERTY.sql
+10. Paramétrage de la stratégie
+   - Duplication de la dernière stratégie
+   - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
+```
+delete pmfm_strategy where strategy_fk = 2364 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
+```
+  - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
+
 
 ### Tests de l'application 
 
-- [ ] Erreur au démarrage du pod
+- [X Erreur au démarrage du pod
 ```
  Dec 02 17:03:56 visi-docker-val2 dockersvc_opus-pod[28717]: org.springframework.dao.DataRetrievalFailureException: Software with label 'sumaris' not found
 ```
 
-Correction
-```sql
- update software set label = 'sumaris' where id = 62;
+Correction - Ajout de la variable d'environnement APP_NAME au run de l'image docker
+- Configuration isival
+```
+    docker_extra_opts: |-
+      -e LOG_FILENAME=opus-activity-calendar-pod.log \
+      -e APP_NAME=OPUS \
+      -e PROFILES=valOpus \
+      -e PORT=8080 \
+      -e TZ=Europe/Paris \
 ```
 
-- [ ] Erreur de sauvegarde de stratégie
+- [X] Erreur de sauvegarde de stratégie
 ```
 select properties0_.strategy_fk as strategy_fk7_135_0_, properties0_.id as id1_135_0_, properties0_.id as id1_135_1_, properties0_.creation_date as creation_date2_135_1_, properties0_.label as label3_135_1_, properties0_.name as name4_135_1_, properties0_.status_fk as status_fk6_135_1_, properties0_.strategy_fk as strategy_fk7_135_1_, properties0_.update_date as update_date5_135_1_ from SIH2_ADAGIO_DBA_SUMARIS_MAP.strategy_property properties0_ where properties0_.strategy_fk=?
 Dec 02 17:41:10 visi-docker-val2 dockersvc_opus-pod[8867]: 2024-12-02 17:41:10,012 WARN  [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper     : SQL Error: 980, SQLState: 42000
 Dec 02 17:41:10 visi-docker-val2 dockersvc_opus-pod[8867]: 2024-12-02 17:41:10,012 ERROR [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper     : ORA-00980: la traduction de synonymes n'est plus valide
 ```
 
-Manque la table strategy_property dans SIH2_ADAGIO_DBA_SUMARIS_MAP
+Correction - Ajout la table strategy_property dans SIH2_ADAGIO_DBA_SUMARIS_MAP
+
+
+- [ ] Problème de suppression des niveaux d'acquisition (Calendrier d'effort) 
