@@ -91,6 +91,11 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   grant SELECT on SIH2_ADAGIO_DBA.PROGRAM_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
+- grants sur `VESSEL_USE_FEATURES_SEQ`
+  ```sql
+  grant SELECT on SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+-```
+
 - grants sur `PROGRAM2LOCATION_CLASSIF`
   ```sql
   grant SELECT,INSERT,DELETE on SIH2_ADAGIO_DBA.PROGRAM2LOCATION_CLASSIF to SIH2_ADAGIO_DBA_SUMARIS_MAP;
@@ -100,7 +105,7 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   ```sql
   grant REFERENCES on SIH2_ADAGIO_DBA.STRATEGY to SIH2_ADAGIO_DBA_SUMARIS_MAP;
   -```
-- 
+
 - grants sur la REGIONALISATION
   ```sql
   grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.EXPERTISE_AREA2LOCATION_LEVEL to SIH2_ADAGIO_DBA_SUMARIS_MAP;
@@ -380,9 +385,9 @@ end;
     create or replace synonym PROGRAM_SEQ for SIH2_ADAGIO_DBA.M_PROGRAM_SEQ;
 -```
 
-- ***!!! Ne pas créer le synonyme*** : Ajout du synonyme `STRATEGY_PROPERTY`
+- Creation du synonyme `VESSEL_USE_FEATURES_SEQ`
   ```sql
-    create or replace synonym STRATEGY_PROPERTY for SIH2_ADAGIO_DBA.STRATEGY_PROPERTY;
+    create or replace synonym VESSEL_USE_FEATURES_SEQ FOR SIH2_ADAGIO_DBA.VESSEL_USE_FEATURES_SEQ;
 -```
 
 - Ajout de synonymes sur la REGIONALISATION
