@@ -119,9 +119,21 @@ A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc n�
 
 ![erreurs](./afficher_erreurs.png)
 
+### Déplier/Replier des lignes
+
+Il est possible de déplier/replier les lignes des blocs métiers.
+
+Un premier clic sur les boutons permet de déplier/replier le 1er niveau des blocs métiers.
+
+Un second clic permet de déplier/replier toutes les lignes des bloc métiers.
+
+![deplier](./dépler_replier.png)
+
 ### Replier tout à la sauvegarde
 
 Il est possible de choisir de replier ou non toutes les lignes des blocs métiers lors de la sauvegarde via le menu contextuel.
+
+Par défaut, toutes les lignes des blocs métiers sont repliées à la sauvegarde.
 
 ![replier](./replier_tout.png)
 
