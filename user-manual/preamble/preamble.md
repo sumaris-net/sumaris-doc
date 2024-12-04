@@ -12,7 +12,7 @@ This guide presents only a small part of the possibilities of the SUMARiS softwa
 
 ## Minimum configuration
 
-The software works under Microsoft Windows 7/10 operating systems (Family Edition, Professional, tablet-PC Edition) and Linux with Mozilla Firefox, Chromium and Google Chrome  web browsers. These last two browsers are to be favored for a better performance of SUMARiS tools.
+The software runs on Microsoft Windows (all versions), Linux, tablets or phones (Android or iOS), and web browsers (Mozilla Firefox, Chromium, Google Chrome, Safari).
 
 An internet connection with a minimum of 2Mbp/s bandwidth in receipt/issue is required.
 
