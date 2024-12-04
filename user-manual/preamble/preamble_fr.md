@@ -10,9 +10,7 @@ Ce guide ne présente qu'une petite partie des possibilités du logiciel SUMARiS
 
 ## Configuration minimum
 
-Le logiciel fonctionne sous Microsoft Windows (Toutes versions), linux et tablette Android avec les navigateurs web
-Mozilla Firefox, Chromium et Google Chrome.  
-Ces deux derniers navigateurs sont à privilégier pour optimiser les performances de SUMARiS.
+Le logiciel fonctionne sous Microsoft Windows (toutes versions), Linux, tablette ou téléphone (Android ou iOS), navigateur web (Mozilla Firefox, Chromium et Google Chrome, Safari).  
 
 Une connexion internet avec un débit minimum de 2Mbp/s montant/descendant est nécessaire.
 
