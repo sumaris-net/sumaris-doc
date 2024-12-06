@@ -108,7 +108,7 @@ Lorsqu'il y a une incohérence entre la saisie et la zone de compétence sélect
 
 Ces avertissements ne bloquent pas la sauvegarde du calendrier.
 
-![avertissement](./avertissement_zone_competence.PNG)
+![avertissement](./avertissement_zone_competence.png)
 
 ### Afficher les erreurs
 
@@ -142,7 +142,20 @@ Par défaut, toutes les lignes des blocs métiers sont repliées à la sauvegard
 
 Il est possible d'afficher la liste des raccourcis clavier via la touche "F1".
 
-![raccourcis_clavier](./raccourcis_clavier.PNG)
+![raccourcis_clavier](./raccourcis_clavier.png)
+
+### Prédocumentation
+
+Les données de la prédocumentation sont en lecture seule. Le calendrier de l'année N-1 est accessible tout comme le calendrier issue de Sacrois-ObsDeb, s'ils existent pour le navire.
+
+Il est possible de recopier les données de la prédocumentation vers le calendrier courant.
+
+Le bouton "Copier et Coller" de la prédocumentation permet de recopier l'ensemble des données vers le calendrier courant.
+
+![predoc](./predoc_copie.png)
+
+On peut aussi copier un mois entier ou une ou plusieurs cellules de la prédocumentation vers le calendrier courant en utilisant les raccourcis
+clavier ou le menu contextuel du clique droit.
 
 ### Générer les formulaires et rapports
 

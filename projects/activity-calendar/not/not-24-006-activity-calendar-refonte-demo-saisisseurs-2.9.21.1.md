@@ -17,7 +17,7 @@
 
 ### Comparatif avec l'Allegro actuel (client lourd)
 
-|                                     | **Allego Calendrier - Actuel <br> (client lourd)**                   | **SUMARiS ActiFlot - Refonte <br> (client léger)**                                                             |         
+|                                     | **Allegro Calendrier - Actuel <br> (client lourd)**                  | **SUMARiS ActiFlot - Refonte <br> (client léger)**                                                             |         
 |-------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | **Installation**                    | Sur chaque poste utilisateur                                         | Aucune                                                                                                         | 
 | **Maintenance, gestion de version** | Manuellement sur chaque poste                                        | Centralisée (côté serveur)<br>Transparent pour les utilisateurs                                                |
