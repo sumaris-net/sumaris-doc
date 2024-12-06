@@ -15,6 +15,7 @@
 - [Déplier/Replier des lignes](#déplierreplier-des-lignes)
 - [Replier tout à la sauvegarde](#replier-tout-à-la-sauvegarde)
 - [Afficher les raccourcis clavier](#afficher-les-raccourcis-clavier)
+- [Prédocumentation](#prédocumentation)
 - [Générer les formulaires et rapports](#générer-les-formulaires-et-rapports)
 
 
