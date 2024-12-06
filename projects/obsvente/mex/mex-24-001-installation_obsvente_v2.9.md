@@ -22,7 +22,6 @@ sumaris.enumeration.Pmfm.TAXON_GROUP_ID.id=<id du PMFM "Espèce commerciales (id
 sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_PETS.id=<id de la valeur qualitative "PETS" du PMFM "Origine de la liste des espèces">
 sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_RANDOM.id=<id de la valeur qualitative "Tirage au sort" du PMFM "Origine de la liste des espèces">
 # navire inconnu
-sumaris.data.vessel.unknown.id=<ID navire inconnu>
 sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 ```
 
