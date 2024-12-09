@@ -707,7 +707,23 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
     inner join SIH2_ADAGIO_DBA.M_PROGRAM P on GPF.PROGRAM_FK = P.CODE;
 -```
 
-
+- Creation du trigger `TR_EXPERTISE_AREA`
+  ```sql
+    CREATE OR REPLACE TRIGGER "SIH2_ADAGIO_DBA_SUMARIS_MAP"."TR_EXPERTISE_AREA"
+        instead of insert or update on EXPERTISE_AREA
+            begin
+                case
+                    WHEN INSERTING THEN
+                        -- EXPERTISE_AREA itself
+                        insert into SIH2_ADAGIO_DBA.EXPERTISE_AREA(ID,LABEL,NAME,DESCRIPTION,CREATION_DATE,STATUS_FK)
+                        values (:new.ID, :new.LABEL, :new.NAME, :new.DESCRIPTION, :new.CREATION_DATE, :new.STATUS_FK);
+                    WHEN UPDATING THEN
+                        -- EXPERTISE_AREA itself
+                        update SIH2_ADAGIO_DBA.EXPERTISE_AREA E set E.LABEL = :new.LABEL, E.NAME = :new.NAME, E.DESCRIPTION = :new.DESCRIPTION, E.CREATION_DATE = :new.CREATION_DATE, E.STATUS_FK = :new.STATUS_FK
+                        where E.ID = :new.ID;
+                end case;
+            end;
+-```
 
 ## Mise à jour du programme SIH-ACTIFLOT
 
