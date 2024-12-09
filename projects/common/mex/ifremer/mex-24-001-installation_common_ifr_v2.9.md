@@ -187,6 +187,25 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
       inner join SIH2_ADAGIO_DBA.M_PARAMETER MP on P.CODE = MP.CODE;
 -```
 
+- Ajout de la vue `PROGRAM`
+  ```sql
+  CREATE OR REPLACE FORCE VIEW "SIH2_ADAGIO_DBA_SUMARIS_MAP"."PROGRAM" ("ID", "COMMENTS", "CREATION_DATE", "DESCRIPTION", "LABEL", "NAME", "UPDATE_DATE", "TAXON_GROUP_TYPE_FK", "GEAR_CLASSIFICATION_FK", "STATUS_FK") AS 
+      select MP.ID,
+      null as COMMENTS,
+      P.CREATION_DATE,
+      P.DESCRIPTION,
+      P.CODE as LABEL,
+      P.NAME,
+      P.UPDATE_DATE,
+      TGT.ID as TAXON_GROUP_TYPE_FK,
+      P.GEAR_CLASSIFICATION_FK,
+      1 as STATUS_FK
+      from SIH2_ADAGIO_DBA.PROGRAM P
+      inner join SIH2_ADAGIO_DBA.M_PROGRAM MP on P.code = MP.code
+      inner join SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE TGT on P.TAXON_GROUP_TYPE_FK = TGT.CODE;
+-```
+
+
 - Modification du trigger `TR_PROGRAM`
   ```sql
     create or replace trigger TR_PROGRAM
