@@ -1,4 +1,4 @@
-# Manuel d'utilisation de SUMARiS Calendrier d'activité
+# Manuel d'utilisation de Opus Calendrier d'activité
 
 ## Sommaire
 
@@ -21,7 +21,7 @@
 
 ## Prérequis
 
-Pour un fonctionnement optimal de SUMARiS Calendrier d'activité, il est préconisé aux utilisateurs :
+Pour un fonctionnement optimal de Opus Calendrier d'activité, il est préconisé aux utilisateurs :
 - D'utiliser Google Chrome
 - De désactiver un éventuel traducteur
 
@@ -101,7 +101,7 @@ Pour cela, il faut se positionner sur la bordure droite ou gauche de la cellule 
 ### Saisir un mois complet
 
 Lors de l'édition d'un mois, pour réaliser la saisie d'un mois complet, les touches **Tab** et **Shift + Tab** permettent respectivement de passer à la cellule au-dessous ou au-dessus.
-En fin de moi, il est également possible de passer au mois suivant avec la touche **Tab**.
+En fin de mois, il est également possible de passer au mois suivant avec la touche **Tab**.
 
 ### Afficher les avertissements
 
@@ -115,7 +115,7 @@ Ces avertissements ne bloquent pas la sauvegarde du calendrier.
 
 Lorsqu'il y a une erreur de saisie, une icône s'affiche au dessus du ou des mois concernés.
 
-Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs rencontrés sur le mois.
+Le survol de l'icône permet d'avoir des précisions sur la ou les erreurs rencontrées sur le mois.
 
 A noter : certaines erreurs bloquent la sauvegarde du calendrier, il est donc nécessaire de les corriger avant de pouvoir sauvegarder.
 
@@ -127,7 +127,7 @@ Il est possible de déplier/replier les lignes des blocs métiers.
 
 Un premier clic sur les boutons permet de déplier/replier le 1er niveau des blocs métiers.
 
-Un second clic permet de déplier/replier toutes les lignes des bloc métiers.
+Un second clic permet de déplier/replier toutes les lignes des blocs métiers.
 
 ![deplier](./dépler_replier.png)
 
@@ -156,7 +156,7 @@ Le bouton "Copier et Coller" de la prédocumentation permet de recopier l'ensemb
 ![predoc](./predoc_copie.png)
 
 On peut aussi copier un mois entier ou une ou plusieurs cellules de la prédocumentation vers le calendrier courant en utilisant les raccourcis
-clavier ou le menu contextuel du clique droit.
+clavier ou le menu contextuel du clic droit.
 
 ### Générer les formulaires et rapports
 
