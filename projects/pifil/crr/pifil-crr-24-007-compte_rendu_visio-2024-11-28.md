@@ -47,7 +47,7 @@
     - Lister les acteurs qui auront accès aux données ? (ex: sous-traitants informatiques)
     - ObsMer - à voir avec Ifremer
   - Pour le long terme :
-    - ObsCam - cf "Contrat navire" en cours de rédaction (OFB)
+    - ObsCam - cf. "Contrat navire" en cours de rédaction (OFB)
     - Balises - Contrat en cours de rédaction (CNPMEM)
     - ObsMer - à voir avec Ifremer
   - Lister tous les acteurs impliqués
