@@ -39,7 +39,7 @@
 > - Emilie LEBLOND (Ifremer)
 
 ---
-## Organisation des tests en mer
+## Organisation des tests en mer (1/3)
 
 - Définir une convention d'utilisation des données, relatif aux navires impliqués 
   - Pour la fourniture des données tests (= jeu de données de test mentionné dans la réunion du 21/11/2024 sur le rapprochement des données)
@@ -51,17 +51,19 @@
     - Balises - Contrat en cours de rédaction (CNPMEM)
     - ObsMer - à voir avec Ifremer
   - Lister tous les acteurs impliqués
-- 4-5 pêcheurs sur l'ensemble des facades ont été sollicité
-  - Navire `LPDB#1`
-    - Balise PIFIL + ObsCam + Obsmer (pas sûr) + Saisie App (à faire iphone) 
-  - Navire `PDA#1`
-    - Balise Dolphinfree (4 sur 5 qui ont fonctionné) + ObsCam + ObsMer (à confirmer) + Saisie App (déjà saisie Léni - marée du 15-17/11/2024)
-  - Navire `PDA#2`
-    - Balise PIFIL + ObsCam + ObsMer (à confirmer) + Saisie App (fiche terrain marée du 06-16/11/2024)
-  - Navire `PDA#3`
-    - Balise PIFIL + ObsCam + ObsMer (à confirmer) + Saisie App (fiche terrain marée du 04-14/11/2024)
-  - Navire `PDA#4`
-    - Balise PIFIL (depuis le 28/11/2024) + ObsCam + ObsMer (à confirmer) + Pas de saisie dans l'App
+
+---
+## Organisation des tests en mer (2/3)
+
+- 4-5 navires sur l'ensemble des facades ont été sollicité
+  - **LPDB#1** : PIFIL + ObsCam + ObsMer (pas sûr) + Saisie App (à faire iphone) 
+  - **PDA#1** : Dolphinfree (4 sur 5 qui ont fonctionné) + ObsCam + ObsMer (à confirmer) + Saisie App (déjà saisie Léni - marée du 15-17/11/2024)
+  - **PDA#2** : PIFIL + ObsCam + ObsMer (à confirmer) + Saisie App (fiche terrain marée du 06-16/11/2024)
+  - **PDA#3** : PIFIL + ObsCam + ObsMer (à confirmer) + Saisie App (fiche terrain marée du 04-14/11/2024)
+  - **PDA#4** : PIFIL (depuis le 28/11/2024) + ObsCam + ObsMer (à confirmer) + Pas de saisie dans l'App
+
+---
+## Organisation des tests en mer (3/3)
 
 > Actions :
 > - Ifremer/CNPMEM/OFB - Établir une convention sur le croisement de données (test, puis long terme)
@@ -112,22 +114,22 @@ plusieurs demandes ont été faites pour faciliter la prise en main de l'App :
 
 - Lancement de l'application
   - Sélection du programme de collecte :
-    - [ ] Renommer le titre de la modale en "Initialisation" 
-    - [ ] Renommer l'onglet "Recherche" en "Programme de collecte"
-      - [ ] Revoir le texte d'explication, pour y ajouter "(...) programme **de collecte ou expérimentation** (...)" 
-    - [ ] Renommer l'onglet "Nœuds réseau" en "Base de données"
-  - Créer un compte - à la dernière étape :
+    - [x] Renommer le titre de la modale en "Démarrage" 
+    - [x] Renommer l'onglet "Recherche" en "Programme de collecte"
+      - [x] Revoir le texte d'explication, pour y ajouter "(...) programme **de collecte ou expérimentation** (...)" 
+    - [x] Renommer l'onglet "Nœuds réseau" en "Base de données"
+  - Créer un compte - à la dernière étape - **à valider** :
     - [ ] Ajouter un champ "Programme de collecte" (avec choix multiple ? à confirmer)
     - [ ] Ajouter un champ "[ ] Pêcheur professionnel ?" (à confirmer)
     - [ ] Si "Oui", ajouter un champ "Navire" (optionnel) (à confirmer)
 - Écran Marée :
   - Opérations :
-    - [ ] Si création d'un virage, alors affichage d'une demande de confirmation :
+    - [x] Si création d'un virage, alors affichage d'une demande de confirmation :
       "Pour votre première marée, veuillez commencer par un filage. Voulez-vous néanmoins continuer ?"
 - Écran opération :
-  - [ ] Retirer le PMFM "Présence de dispositif (...)" (à conserver pour `PIFIL`, et à retirer de `Dophinfree`)
-  - [ ] Création d'un virage, les positions lat/long du filage doivent être recopiées en début ET en fin de virage
-    (Activer l'option du programme qui doit déjà exister - cf programme `ACOST`) 
+  - [x] Retirer le PMFM "Présence de dispositif (...)" (à conserver pour `PIFIL2`, et à retirer de `Dophinfree`)
+  - [x] Création d'un virage, les positions lat/long du filage doivent être recopiées en début ET en fin de virage
+    (cf programme `ACOST`) 
 
 > Actions :
 > - EIS - semaine 49 - Corriger les points bloquants et majeurs de l'application

@@ -53,8 +53,7 @@ plusieurs demandes ont été faites pour faciliter la prise en main de l'App :
     - [ ] Non, les participants décident de plutôt ajouter un warning dans la modale d'engin, ave le texte : 
     > "Attention vous ne pourrez plus modifier l'engin, une fois qu'il sera utilisé par une opération"   
   - Opérations : 
-    - Si création d'un virage, alors affichage d'une demande de confirmation : 
-      "Pour votre première marée, veuillez commencer par un filage. Voulez-vous néamoins continuer ?"
+    - Affichage d'aide : "Pour votre première marée, veuillez commencer par un filage."
 - Écran "Opération" :
   - Lors de la première marée, la solution développée par EIS pour saisir une filage manquant (depuis la fenêtre de recherche de filage), **n'est finalement pas retenue**.  
 
