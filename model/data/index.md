@@ -43,6 +43,11 @@ Each collected data has a root entity, linked to a program.
   * A landing can have many trips, as children;
 
 ---
+### Sale
+
+![sale](model/data/sale.svg)
+
+---
 ### Activity calendar
 
 ![activity-calendar](model/data/activity-calendar.svg)

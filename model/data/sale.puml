@@ -1,5 +1,8 @@
 @startuml
 hide empty members
+class ObservedLocation {
+  +id: Integer
+}
 
 class Vessel {
 }
@@ -25,6 +28,6 @@ Sale -up-> "1" Vessel
 Sale -up-> "1" Trip
 Sale -up-> "1" Landing
 
-
+Landing -up-> "1" ObservedLocation
 
 @enduml

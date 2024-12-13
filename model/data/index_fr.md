@@ -43,9 +43,15 @@ Note:
   * Une sortie est définie par une date/heure (ou une période) et un site (un port, une criée, une plage);
   * Une localisation observée peut avoir de nombreux débarquements (un ou plusieurs par navire) comme sous-éléments.
 
-- Landing: Une observation d'un navire, réalisée au moment du débarquement
+- Landing : Une observation d'un navire, réalisée au moment du débarquement
   * Un débarquement peut avoir une sortie comme élément parent;
   * Un débarquement peut avoir de nombreuses marées comme sous-éléments;
+
+---
+### Ventes
+
+![sale](model/data/sale.svg)
+
 
 ---
 ### Calendrier d'activité
