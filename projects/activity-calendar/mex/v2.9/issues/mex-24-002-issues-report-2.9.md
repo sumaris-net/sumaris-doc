@@ -2,8 +2,8 @@
 
 ## Versions applicatives 
 
-- release actuelle 2.9.25.4 :
-  - release corrective : 2.9.25.6
+- release actuelle 2.9.25.9 :
+  - release corrective : 2.9.25.10
   - MEP 7 Janvier 2024
   - Ouverture de la saisie le 13 Janvier 2025
 
@@ -12,18 +12,19 @@
 
 --- 
 
-## Tickets restants sur la 2.9.25.4
+## Tickets restants sur la 2.9.25.9
 
 [Bugs issues](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/?sort=created_date&state=opened&label_name%5B%5D=ACTIFLOT&not%5Blabel_name%5D%5B%5D=Done&not%5Bmilestone_title%5D=3.0.0&not%5Bassignee_username%5D%5B%5D=cd061a4&not%5Bassignee_username%5D%5B%5D=vf22ca9&first_page_size=20)
 
-- Forecast release : 2.9.25.6
+- Forecast release : 2.9.25.10
 
-| **Issue**                                                                         | **Goal**             | **Priority** | **Release** | **Comments**                                                                                                       | 
-|-----------------------------------------------------------------------------------|----------------------|--------------|------------|--------------------------------------------------------------------------------------------------------------------|
-| Bug [#837](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/837) | Calendrier saisie    | lower        | 2.9.25.6   |                                                                                                                    |
-| Bug [#830](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/830) | Import calendriers   | major        | 2.9.25.6   |                                                                                                                    |
-| Bug [#824](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824) | Rapport Filtre       | lower        | 2.9.25.6   |                                                                                                                    |
-| Bug [#852](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/852) | Régionalisation      | major        | 2.9.25.6    |                                                                                                                    |
+| **Issue**                                                                         | **Goal**                       | **Priority** | **Release** | **Comments**                                                                                                       | 
+|-----------------------------------------------------------------------------------|--------------------------------|--------------|-------------|--------------------------------------------------------------------------------------------------------------------|
+| Bug [#868](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/837) | Bug fuseau horaire             | major        | 2.9.25.10   |                                                                                                                    |
+| Bug [#830](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/830) | Import calendriers             | major        | 2.9.25.10   |                                                                                                                    |
+| Bug [#837](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824) | Ouverture 2 listes simultanées | lower        | 2.9.25.10   |                                                                                                                    |
+| Bug [#852](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/852) | Régionalisation                | major        | 2.9.25.10   |                                                                                                                    |
+| Bug [#824](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824) | Régionalisation                | major        | 2.9.25.10   |                                                                                                                    |
 
 Echanger sur le bug [#851](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/851)
 

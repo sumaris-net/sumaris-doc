@@ -130,14 +130,14 @@ N(9, 12)  is colored in green
 [r2.9.20.1] as [TASK4] requires 4 weeks
 [TASK4] is colored in grey
 [TASK3]->[TASK4]
-[Testing4] requires 1 week and starts the 2th of August 2024
+[Testing4] requires 1 week and starts the 28th of July 2024
 [TASK4]->[Testing4]
 
 
 [r2.9.21] as [TASK5] requires 4 weeks
 [TASK5] is colored in grey
 [TASK4]->[TASK5]
-[Testing5] requires 1 week and starts the 2th of September 2024
+[Testing5] requires 1 week and starts the 20th of August 2024
 [TASK5]->[Testing5]
 [Demo MOA 3] happens 27th of August 2024
 
