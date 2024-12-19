@@ -55,9 +55,9 @@ ORA-04088: erreur lors d'exécution du déclencheur 'SIH2_ADAGIO_DBA_SUMARIS_MAP
 - [bug] Warning "!" affichés sur certains en-têtes de mois mais pas sur d'autres 
   - A tester
 
-- [bug] Bug sur la régionalisation liée à la zone proche, je ne sais pas si c'est juste un pb sur l'avertissement (cellule en jaune-orangé) ou sur les valeurs affichées dans la liste déroulante - https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/869
+- [bug] Bug sur la régionalisation liée à la zone proche, je ne sais pas si c'est juste un pb sur l'avertissement (cellule en jaune-orangé) ou sur les valeurs affichées dans la liste déroulante - [#869](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/869)
 
-- [bug] Prédoc d'un palangrier réunionnais qui travaille au large de La Réunion et également dans les ZEE non française.
+- [bug] Prédoc d'un palangrier réunionnais qui travaille au large de La Réunion et également dans les ZEE non française. - [#875](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/875)
   - Il y a des warning sur les gradients de côte "étranger" dans la prédoc.
   - Le point embêtant, c'est qu'on ne peut pas les copier dans le calendrier, il faut les retaper un par un.
   - MOE : Attente vérification
