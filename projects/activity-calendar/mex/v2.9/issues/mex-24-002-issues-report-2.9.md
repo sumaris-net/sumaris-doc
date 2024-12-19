@@ -25,6 +25,7 @@
 | Bug [#837](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824) | Ouverture 2 listes simultanées | lower        | 2.9.25.10   |                                                                                                                    |
 | Bug [#852](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/852) | Régionalisation                | major        | 2.9.25.10   |                                                                                                                    |
 | Bug [#824](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/824) | Régionalisation                | major        | 2.9.25.10   |                                                                                                                    |
+| Bug [#878](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/878) | Calendrier - Observateur       | major        | 2.9.25.10   |                                                                                                                    |
 
 Echanger sur le bug [#851](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/851)
 

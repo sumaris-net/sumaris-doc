@@ -1,16 +1,34 @@
 # Manuel de mise en exploitation des calendrier d'activité v2.9
 
+> Auteur: Benoit LAVENIER
+> Date création : 20/03/2024
+> Mise à jour : 19/12/2024
+
 Objectif : le document liste les étapes de migration, pour réaliser le passage 
-des calendriers d'activité en SUMARiS v3.0
+des calendriers d'activité en Opus 2.9
+
+## MEP
+
+- APP : 
+  - Fiche signalétique : https://dev-ops.gitlab-pages.ifremer.fr/documentation/service_datasheet/scientific/environment/harmonie/opus-app-activite/
+  - Mantis : https://forge.ifremer.fr/mantis/view.php?id=66570
+- POD : 
+  - Fiche signalétique : https://dev-ops.gitlab-pages.ifremer.fr/documentation/service_datasheet/scientific/environment/harmonie/opus-pod-activite/
+  - Mantis : https://forge.ifremer.fr/mantis/view.php?id=66569
+
+Liste des [tickets restants](../issues/mex-24-002-issues-report-2.9.md)
 
 Appliquer le [manuel d'exploitation common](/projects/common/mex/ifremer/mex-24-001-installation_common_ifr_v2.9.md)
 
-Liste des tickets réalisés :
-- 
+### Adagio : Declaration de l'application
+  - Jouer les scripts SQLs suivants :
+    - [SOFTWARE.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE.sql)
+    - [SOFTWARE_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE_PROPERTY.sql)
+    - [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/PROGRAM_PROPERTY.sql)
 
-> Auteur: Benoit LAVENIER
-> Date création : 20/03/2024
-> Mise à jour : 20/03/2024
+### Adagio : Mise à jour du référentiel
+  - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)
+    - [EXPERTISE_AREA.sql](/projects/activity-calendar/mex/v2.9/sql/EXPERTISE_AREA.sql)
 
 ## Configuration du Pod
 
