@@ -36,7 +36,7 @@ Mode opératoire
    
 7. Application des modifications ActiFlot sur les schémas SIH2_ADAGIO_DBA et SIH2_ADAGIO_DBA_SUMARIS_MAP
     - MEX ActiFlot à appliquer   
-   - Status : 
+   - Status : OK
    
 8. Fichier de configuration
     - `application-valOpusActivite.properties`
@@ -61,7 +61,7 @@ Mode opératoire
    - Duplication de la dernière stratégie
    - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
 ```
-delete pmfm_strategy where strategy_fk = 2364 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
+delete pmfm_strategy where strategy_fk = 2446 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
 ```
   - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
 
