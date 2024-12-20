@@ -142,7 +142,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 - Modification du trigger `TR_ACTIVITY_CALENDAR`
   ```sql
   create or replace trigger TR_ACTIVITY_CALENDAR
-    instead of update or insert
+    instead of update or insert or delete
       on ACTIVITY_CALENDAR
         begin
           case
