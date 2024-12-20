@@ -15,3 +15,5 @@ Insert into SIH2_ADAGIO_DBA.PROGRAM_PROPERTY (ID,LABEL,NAME,CREATION_DATE,UPDATE
 Insert into SIH2_ADAGIO_DBA.PROGRAM_PROPERTY (ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,PROGRAM_FK,STATUS_FK) values (PROGRAM_PROPERTY_SEQ.nextval,'sumaris.activityCalendar.fishingArea.location.level.ids','113,145,114,111,141,105,106',sysdate, current_timestamp,'SIH-ACTIFLOT','1');
 Insert into SIH2_ADAGIO_DBA.PROGRAM_PROPERTY (ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,PROGRAM_FK,STATUS_FK) values (PROGRAM_PROPERTY_SEQ.nextval,'sumaris.activityCalendar.report.form.header.left.logo.url','https://sumaris-app.isival.ifremer.fr/assets/img/logo/logo-sih-black.png',sysdate, current_timestamp,'SIH-ACTIFLOT','1');
 Insert into SIH2_ADAGIO_DBA.PROGRAM_PROPERTY (ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,PROGRAM_FK,STATUS_FK) values (PROGRAM_PROPERTY_SEQ.nextval,'sumaris.activityCalendar.report.progress.footer','Usage obligatoire et confidentiel   ©Ifremer. Système d''informations halieutiques',sysdate, current_timestamp,'SIH-ACTIFLOT','1');
+
+commit;

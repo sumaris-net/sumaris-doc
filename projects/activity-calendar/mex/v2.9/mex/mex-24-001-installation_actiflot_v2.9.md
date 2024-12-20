@@ -47,13 +47,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Adagio : Inserer les saisisseurs comme observateurs (données historiques)
   - Historisation des observateurs : Mantis [66370](https://forge.ifremer.fr/mantis/view.php?id=66370)
-  ```sql
-   INSERT INTO ACTIVITY_CALENDAR2PERSON
-   (SELECT AC.ID, AC.RECORDER_PERSON_FK FROM ACTIVITY_CALENDAR AC
-   WHERE AC.PROGRAM_FK = 'SIH-ACTIFLOT'
-   AND ID NOT IN (SELECT ACTIVITY_CALENDAR_FK FROM ACTIVITY_CALENDAR2PERSON)
-   AND AC.RECORDER_PERSON_FK IS NOT NULL);
-  ```
+  - Script [ACTIVITY_CALENDAR2PERSON_POPULATE.sql](/projects/activity-calendar/mex/v2.9/sql/ACTIVITY_CALENDAR2PERSON_POPULATE.sql)
 
 - Définition de PMFM en booléen
   ```sql
@@ -499,7 +493,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 -```
 
 
-- Ajout de la vue `ACTIVITY_CALENDAR2PERSON`
+- !!! Inutile car y a déjà un synonyme : Ajout de la vue `ACTIVITY_CALENDAR2PERSON`
   ```sql
   create or replace view ACTIVITY_CALENDAR2PERSON as
       select ACTIVITY_CALENDAR_FK,
@@ -747,11 +741,3 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
 
 - Options pour le programme SIH-ACTIFLOT (/!\ Vérifier que l'url est bien celle de prod)
 
-```properties 
-server.app.url=https://opus.isival.ifremer.fr/
-```
-
-- Requete sql 
-  ```sql
-    Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'server.app.url','https://opus.isival.ifremer.fr/',sysdate,current_timestamp,'1' from software where label = 'opus';
--```

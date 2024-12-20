@@ -1,6 +1,4 @@
 REM INSERTING into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY
-SET DEFINE OFF;
-
 
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.LocationLevel.COUNTRY.id','21',sysdate, current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.VesselType.FISHING_VESSEL.id','1',sysdate, current_timestamp,'1' from software where label = 'Opus-Activite';
@@ -25,7 +23,7 @@ Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATIO
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.LocationLevel.MARITIME_DISTRICT.id','13',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.data.vessel.type.ids','1,8,5',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.social.notification.icons.enable','true',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
-Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'server.app.url','https://opus.isival.ifremer.fr/',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
+Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'server.app.url','https://opus-activite.isival.ifremer.fr/',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.data.program.ids','52,54,60,80,101',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.logo','https://opus.isival.ifremer.fr/assets/img/logo/logo-sih.png',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.vessel.filter.searchAttributes','registrationCode,name',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
@@ -182,7 +180,5 @@ Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATIO
 --Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.TaxonGroupType.FAO.label','3',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 --Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.Method.OBSERVED_BY_OBSERVER.id',select id from software where label = 'Opus-Activite',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
 --Insert into SIH2_ADAGIO_DBA.SOFTWARE_PROPERTY (SOFTWARE_FK,ID,LABEL,NAME,CREATION_DATE,UPDATE_DATE,STATUS_FK) select id, SOFTWARE_PROPERTY_SEQ.nextval,'sumaris.enumeration.AcquisitionLevel.OBSERVED_LOCATION.label','OBSERVED_LOCATION',sysdate,current_timestamp,'1' from software where label = 'Opus-Activite';
-
-
 
 commit;
