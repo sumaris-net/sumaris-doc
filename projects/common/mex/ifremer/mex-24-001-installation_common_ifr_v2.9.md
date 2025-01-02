@@ -48,7 +48,7 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
   ```
 
-- Modification de la table `M_PARAMETER`
+- Modification de la table `M_PARAMETER` (!!! Inutile - A vérifier mais passé par le changelog `ifremer/db-changelog-4.3.0.xml`)
   ```sql
   alter table m_parameter add is_boolean number(1);
   alter table m_parameter add is_date number(1);
@@ -81,10 +81,6 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
   grant SELECT on SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE to SIH2_ADAGIO_DBA_SUMARIS_MAP;
 -```
 
-- **!!! La séquence n'existe pas** : grants sur `PROGRAM_SEQ`
-  ```sql
-  grant SELECT on SIH2_ADAGIO_DBA.PROGRAM_SEQ to SIH2_ADAGIO_DBA_SUMARIS_MAP;
--```
 
 - grants sur `VESSEL_USE_FEATURES_SEQ`
   ```sql
@@ -223,7 +219,7 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
            P.TAXON_GROUP_TYPE_FK=(select CODE from SIH2_ADAGIO_DBA.M_TAXON_GROUP_TYPE where ID = :new.TAXON_GROUP_TYPE_FK), P.GEAR_CLASSIFICATION_FK=:new.GEAR_CLASSIFICATION_FK
            where P.CODE = :new.LABEL;
        end case;
-end;
+  end;
 -```
 
 - Création du trigger `TR_PROGRAM2LOCATION_CLASSIF`
@@ -333,7 +329,7 @@ end;
 - ```
 
 
-- Modification de la vue `VESSEL_USE_MEASUREMENT`
+- Modification de la vue `PMFM_STRATEGY2METIER`
  ```sql
   create or replace view PMFM_STRATEGY2METIER as
     select ID as PMFM_STRATEGY_FK,
