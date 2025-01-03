@@ -27,7 +27,7 @@
 - [ ] Comment passe-t-on d'une ligne à l'autre au clavier dans le tableau des caractéristiques ? les flèches utilisées dans le calendrier ne fonctionnent pas car elles font monter/descendre les valeurs saisies.
   - _MOE : pas de possibilité de passer au métier suivant par le clavier_
 - [ ] La touche tabulation va vers les onglets de l'écran.
-  - _MOE : La touche tabulation permet de naviguer de gauche à droite dans les cellules_
+  - _MOE : La touche tabulation permet de naviguer de gauche à droite dans les cellules_ [#887](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/887)
 
 
 ### Calendriers d'activité > Régionalisation 
