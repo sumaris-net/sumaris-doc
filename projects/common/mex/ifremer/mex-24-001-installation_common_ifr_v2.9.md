@@ -30,6 +30,29 @@ spring.security.ldap.url=ldap://ldape.ifremer.fr/ou=extranet,dc=ifremer,dc=fr
     - Zones de compétence pour la régionalisation
   - Passer le changelog Oracle d'Adagio [db-changelog-4.3.2.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.3.2.xml)
     - Zones de compétence et niveaux associés pour la régionalisation
+
+
+Modifications sur le schéma SIH2_ADAGIO_DBA
+- Nouvelles tables
+  - ACTIVITY_CALENDAR2PERSON (table)
+  - EXPERTISE_AREA (table)
+  - EXPERTISE_AREA2LOCATION (table)
+  - EXPERTISE_AREA2LOCATION_LEVEL  (table)
+
+- Nouveaux champs
+  - ACTIVITY_CALENDAR.ECONOMIC_SURVEY (field)
+  - VESSEL_USE_FEATURES.HASH (field)
+  - GEAR_USE_FEATURES.HASH (field)
+  - GEAR_PHYSICAL_FEATURES.HASH (field)
+  - SPATIAL_ITEM_TYPE.CREATION_DATE (field)
+  - M_PARAMETER.IS_BOOLEAN (field)
+
+- Modification trigger   
+  - PROGRAM.TR_PROGRAM_ID (trigger)
+
+- Nouvel index
+  - VESSEL_OWNER_PERIOD.IX_VESSEL_OWNER_PER_END_DATE (index)
+  
   
 - Ajout de droits sur `SIH2_ADAGIO_DBA.person`
   ```sql

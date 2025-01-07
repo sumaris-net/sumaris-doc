@@ -14,12 +14,10 @@
   - Exemple : Sur Novembre 2023, on ne peut pas saisir 30 jours mais 29 
 
 
-- [ ] Après avoir copié/collé toute la prédoc dans le calendrier (source sacrois), quand on fait "vider le calendrier", ça ne fonctionne pas
-  - _MOE : Pas reproduit_
+- [ ] Après avoir copié/collé toute la prédoc dans le calendrier (source sacrois), quand on fait "vider le calendrier", ça ne fonctionne pas [#895](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/895)
 
 
-- [ ] Le ctrl+C/ctrl+V de toute la ligne jours/mer vers jours/peche ne fonctionne pas. Par le menu contextuel non plus.
-  - _MOE : Reproduit si on a pas les droits de saisie sur un ou plusieurs mois (comportement normal)_
+- [ ] Le ctrl+C/ctrl+V de toute la ligne jours/mer vers jours/peche ne fonctionne pas. Par le menu contextuel non plus [#896](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/896)
 
 
 ### Calendriers d'activité > Métier
@@ -33,10 +31,10 @@
 ### Calendriers d'activité > Régionalisation 
 
 - [ ] Après la saisie de la zone de pêche, aucun gradient de côte n'est proposé.
-  - _MOE : reproduit - Zone de pêche 5201047 : reproduit en 2.9.27.3
 
 - [ ] Les gradients côte semblent tous sur étranger, même ceux qui devraient être côtiers.
 
+Ticket couvrant ces 2 items : [#894](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/894)
 
 
 
