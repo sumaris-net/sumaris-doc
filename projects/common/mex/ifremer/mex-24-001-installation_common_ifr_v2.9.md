@@ -46,7 +46,8 @@ Modifications sur le schéma SIH2_ADAGIO_DBA
   - GEAR_PHYSICAL_FEATURES.HASH (field)
   - SPATIAL_ITEM_TYPE.CREATION_DATE (field)
   - M_PARAMETER.IS_BOOLEAN (field)
-
+  - M_PARAMETER.IS_DATE (field)
+  
 - Modification trigger   
   - PROGRAM.TR_PROGRAM_ID (trigger)
 
@@ -62,20 +63,11 @@ Modifications sur le schéma SIH2_ADAGIO_DBA
   ```sql
   grant REFERENCES on sih2_adagio_dba.department to sih2_adagio_dba_sumaris_map;
   ``` 
-- **!!! Ne pas exécuter pour la MEP** : Ajout de droits sur `SIH2_ADAGIO_DBA.STRATEGY_PROPERTY`
-  ```sql
-  --grant select on SIH2_ADAGIO_DBA.STRATEGY_PROPERTY to sih2_adagio_dba_sumaris_map;
-  ```
+
 - Ajout dans la table `PROGRAM_PROPERTY`
   ```sql
   insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.program.privilege.readonly', 'true', 52 , 1, sysdate);
   ```
-
-- Modification de la table `M_PARAMETER` (!!! Inutile - A vérifier mais passé par le changelog `ifremer/db-changelog-4.3.0.xml`)
-  ```sql
-  alter table m_parameter add is_boolean number(1);
-  alter table m_parameter add is_date number(1);
--```
 
 - Nouvelle entrée dans la table `PROCESSING_TYPE` : `VESSEL_SNAPSHOTS_INDEXATION`
 
@@ -130,26 +122,6 @@ Modifications sur le schéma SIH2_ADAGIO_DBA
 -```
 
 
-- Trigger sur `TR_PROGRAM_ID`
-  ```sql
-      create or replace TRIGGER TR_PROGRAM_ID
-        before insert or delete on PROGRAM
-        for each row
-  	    declare
-		  l_code VARCHAR2(40) := NULL;
-        begin
-          case
-            WHEN INSERTING THEN
-              BEGIN                
-                select CODE into l_code from M_PROGRAM where CODE = :new.CODE;
-                EXCEPTION WHEN NO_DATA_FOUND THEN
-                  insert into M_PROGRAM(CODE,ID) values (:new.CODE, M_PROGRAM_SEQ.nextval);
-                END;
-            WHEN DELETING THEN
-              delete from M_PROGRAM P where P.CODE=:old.CODE;
-          end case;
-      end;
--```
 
   ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 

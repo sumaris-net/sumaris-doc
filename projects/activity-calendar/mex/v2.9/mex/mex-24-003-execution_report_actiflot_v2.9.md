@@ -6,6 +6,8 @@
 
 Mode opératoire
 1. Exécuter le changelog 4.3.2 sur PP_HARMONIE
+
+!!! Pré-requis : Supprimer tous les changelogs liée à la BDD SFA (Indispensable)
 ```
  Update a Adagio database :
   - Edit 'conf/adagio-core-server.config' to configure Oracle connexion
@@ -58,13 +60,17 @@ Mode opératoire
    - opus-pod-activite
      - deploy_docker_val2
 10. Paramétrage de la stratégie
-   - Duplication de la dernière stratégie
+   - Duplication de la dernière stratégie (Sur opus-activite)
    - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
+     - Sur SIH2_ADAGIO_DBA
 ```
-delete pmfm_strategy where strategy_fk = 2446 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
+delete pmfm_strategy where strategy_fk = 2445 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
 ```
-  - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
-  - Modifier l'ordre du PMFM "Nombre de jour de pêche" avec la valeur "2" (sinon les 2 pmfm "Nombre de jours de mer" et "Nombre de jours de pêche" sont inversés)
+   - Supprimer les PMFMs suivants du niveau d'acquisition "Caractéristiques d'enquête" : 
+     - "Validation observateur", "validation société", "validation programme", "Hauteur filet"
+     -  Il en reste 6
+   - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
+   - Modifier l'ordre du PMFM "Nombre de jour de pêche" avec la valeur "2" (sinon les 2 pmfm "Nombre de jours de mer" et "Nombre de jours de pêche" sont inversés)
 
 
 ### Tests de l'application 

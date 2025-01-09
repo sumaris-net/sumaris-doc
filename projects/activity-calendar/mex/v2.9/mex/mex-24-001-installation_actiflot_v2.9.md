@@ -692,7 +692,7 @@ sumaris.enumeration.QualitativeValue.SURVEY_QUALIFICATION_DIRECT.id=965
     from SIH2_ADAGIO_DBA.EXPERTISE_AREA;
 -```
 
-- Creation de la vue `EXPERTISE_AREA`
+- Creation de la vue `PHYSICAL_GEAR`
   ```sql
     create or replace view PHYSICAL_GEAR as
     select GPF.ID,
