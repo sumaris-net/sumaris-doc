@@ -22,5 +22,5 @@ Refonte du logiciel Allegro (Calendrier d'activité v2)
 ---
 ## Comptes-rendu
 
-- [CRR 22/09/2023](crr/crr-23-001-reunion_suivi-2023-09-22.md) - Réunion de suivi du PoC ObsMer 
+- [CRR 22/09/2023](./crr/crr-23-001-reunion_suivi-2023-09-22.md) - Réunion de suivi du PoC ObsMer 
 

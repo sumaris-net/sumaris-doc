@@ -4,8 +4,8 @@ Auto-échantillonnage pour les Pêcheurs de Bretagne
 
 ## Documentation
 
- - Tests 
-   * [ADAP-TEST](https://adap-test.pecheursdebretagne.eu/)
+ - Tests : 
+   * A faire sur [adap-test.pecheursdebretagne.eu](https://adap-test.pecheursdebretagne.eu/)
 
  - Liens utiles :
   * Anomalies et évolutions (GitLab) : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues
@@ -16,5 +16,5 @@ Auto-échantillonnage pour les Pêcheurs de Bretagne
 
 ## Comptes-rendu
 
-- [CRR de suivi du 08/06/2022](crr/crr-22-001-reunion_suivi-2022-06-08.md)
-- [CRR de suivi du 21/06/2022](crr/crr-22-002-reunion_suivi-2022-06-21.md)
+- [CRR de suivi du 08/06/2022](./crr/crr-22-001-reunion_suivi-2022-06-08.md)
+- [CRR de suivi du 21/06/2022](./crr/crr-22-002-reunion_suivi-2022-06-21.md)
