@@ -18,7 +18,7 @@ Mode opératoire
 
 2. Exécution des scripts SQL d'alimentation sur PP_HARMONIE
    - Régionalisation 
-     - Script EXPERTISE_AREA.sql
+     - Script [EXPERTISE_AREA.sql](/projects/activity-calendar/mex/v2.9/sql/EXPERTISE_AREA.sql)
      - Status : OK
    - Alimentation historisation des observateurs
      - Script [ACTIVITY_CALENDAR2PERSON_POPULATE.sql](/projects/activity-calendar/mex/v2.9/sql/ACTIVITY_CALENDAR2PERSON_POPULATE.sql)
@@ -31,16 +31,18 @@ Mode opératoire
    - Status : OK
 5. Paramétrage du programme
     - Script [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/PROGRAM_PROPERTY.sql)
+6. Modification de la structure de la table USER_EVENT
+    - Script [USER_EVENT_MODIFICATION.sql](/projects/activity-calendar/mex/v2.9/sql/USER_EVENT_MODIFICATION.sql)
    
-6. Application des modifications communes sur les schémas SIH2_ADAGIO_DBA et SIH2_ADAGIO_DBA_SUMARIS_MAP
+7. Application des modifications communes sur les schémas SIH2_ADAGIO_DBA et SIH2_ADAGIO_DBA_SUMARIS_MAP
    - MEX commmon à appliquer  
    - Status : OK
    
-7. Application des modifications ActiFlot sur les schémas SIH2_ADAGIO_DBA et SIH2_ADAGIO_DBA_SUMARIS_MAP
+8. Application des modifications ActiFlot sur les schémas SIH2_ADAGIO_DBA et SIH2_ADAGIO_DBA_SUMARIS_MAP
     - MEX ActiFlot à appliquer   
    - Status : OK
    
-8. Fichier de configuration
+9. Fichier de configuration
     - `application-valOpusActivite.properties`
         - Configuration à la BDD
            ```
@@ -54,12 +56,12 @@ Mode opératoire
             sumaris.name=OpusActivite
         ```
     - Status : 
-9. Déclaration de l'application dans isival
+10. Déclaration de l'application dans isival
    - opus-app-activite
      - deploy_docker_val2 
    - opus-pod-activite
      - deploy_docker_val2
-10. Paramétrage de la stratégie
+11. Paramétrage de la stratégie
    - Duplication de la dernière stratégie (Sur opus-activite)
    - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
      - Sur SIH2_ADAGIO_DBA
