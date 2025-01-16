@@ -242,6 +242,7 @@ L'écran affiche par défaut la saisie de mesures individuelles.
         * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, le champ sera automatiquement renseigné avec cette valeur.
     * Le poids calculé RTP (Relation taille poids) en kg
       * Ce poids RTP est automatiquement calculé (affiché en bleu en italique)
+    * Un bouton permet d'ajouter une photo de l'individu mesuré (REF: COMMUN/PHOTOS)
 4. Un bouton permet d'ajouter la mesure individuelle saisit
     * Une ligne est ajoutée au tableau
 5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
@@ -319,6 +320,31 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
     * Le nom de l'espèce scientifique
     * Le nombre de l'effectif des individus observés
 
+
+## Commun > Ajout de photos
+
+**REF: COMMUN/PHOTOS**
+
+**Ajout de photos d'individus mesurés**
+
+![ui-common-individual-photo](/projects/common/spe/images/individual-photo.svg)
+
+L'écran permet de sélectionner des photos afin de les associer à l'individu mesuré.
+
+1. Le saisisseur clique sur l'image d'ajout de photo
+2. Une fenêtre permet de glisser/déposer une photo ou de sélectionner une photo sur le disque
+    * Le format de la photo peut être du png ou du jpg
+3. A la sélection de la photo, la fenêtre se réduit et affiche
+    * La taille du fichier est affichée
+    * Un bouton permettant d'importer l'image
+    * Un bouton permettant d'annuler l'import
+4. A l'import, la photo est ajoutée dans l'écran
+5. Le survol de la photo par la souris affiche 2 options
+    * L'édition du titre de la photo :pencil2:
+      * Une fenêtre s'ouvre pour renseigner le titre de la photo
+    * La suppression de la photo
+
+NB : Prévoir un nombre limite de photo
 
 ### CRR Réunion du 13/08/2024 (Avec Elise Bultel)
 

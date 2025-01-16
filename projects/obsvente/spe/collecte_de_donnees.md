@@ -567,10 +567,13 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * Le taux échantillonné
    * Le poids échantillonné
    * Identification à confirmer
-   * Selon les cas, l'ajout d'une photo sur le 1er individu de chaque lot est obligatoire, notamment pour les 1ères sorties 
 5. Le saisisseur enregistre
 6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
 7. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
+
+
+NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans [les spécifications communes / Mesures](/projects/common/spe/regles_communes.md#commun-saisie-de-mensuration)
+
 
 **Variante(s) :**
 
