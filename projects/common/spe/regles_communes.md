@@ -320,6 +320,19 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
     * Le nom de l'espèce scientifique
     * Le nombre de l'effectif des individus observés
 
+### CRR Réunion du 13/08/2024 (Avec Elise Bultel)
+
+- Poids de référence: faut-il pouvoir choisir la méthode "Déclaration par un observateur"
+    - Oui pour les DOM
+- Y a t il un protocol à appliquer par espèce ? (Saisie sur sexe par exemple)
+    - Oui avec les crevettes en Outre Mer (saisie de la phase de maturité)
+    - A mettre en place
+- DOM : Pouvoir saisir plusieurs métiers pour une même espèce. Le modèle permet il de stocker cela ?
+- Terminologie du programme SIH-OBSVENTES - Souhait important de la MOA :
+    - Etudier l'impacte d'un passage du nom de programme ObsVente à ObsVentes dans tout Harmonie (voir avec Glenn)
+    - Si complexe : faire en sorte que Sumaris affiche ObsVentes (voir avec Benoit)
+- Renommer le PMFM PARAMETER_FK like 'MATURITY_STAGE_%' : Stade en Phase (Attente retour Elise puis valider avec Armelle)
+- Génération du rapport de collecte remplit : MOA à une préférence pour la vue tableau (à confirmer le 10/09/2024)
 
 ## Commun > Ajout de photos
 
@@ -334,31 +347,23 @@ L'écran permet de sélectionner des photos afin de les associer à l'individu m
 1. Le saisisseur clique sur l'image d'ajout de photo
 2. Une fenêtre permet de glisser/déposer une photo ou de sélectionner une photo sur le disque
     * Le format de la photo peut être du png ou du jpg
+
+![ui-common-individual-photo](/projects/common/spe/images/photo-selection.png)
+
 3. A la sélection de la photo, la fenêtre se réduit et affiche
     * La taille du fichier est affichée
     * Un bouton permettant d'importer l'image
     * Un bouton permettant d'annuler l'import
+
+![ui-common-individual-photo](/projects/common/spe/images/photo-import.png)
+
 4. A l'import, la photo est ajoutée dans l'écran
 5. Le survol de la photo par la souris affiche 2 options
     * L'édition du titre de la photo :pencil2:
       * Une fenêtre s'ouvre pour renseigner le titre de la photo
     * La suppression de la photo
 
-NB : Prévoir un nombre limite de photo
-
-### CRR Réunion du 13/08/2024 (Avec Elise Bultel)
-
-- Poids de référence: faut-il pouvoir choisir la méthode "Déclaration par un observateur"
-  - Oui pour les DOM
-- Y a t il un protocol à appliquer par espèce ? (Saisie sur sexe par exemple)
-  - Oui avec les crevettes en Outre Mer (saisie de la phase de maturité)
-  - A mettre en place
-- DOM : Pouvoir saisir plusieurs métiers pour une même espèce. Le modèle permet il de stocker cela ?
-- Terminologie du programme SIH-OBSVENTES - Souhait important de la MOA : 
-  - Etudier l'impacte d'un passage du nom de programme ObsVente à ObsVentes dans tout Harmonie (voir avec Glenn)
-  - Si complexe : faire en sorte que Sumaris affiche ObsVentes (voir avec Benoit)
-- Renommer le PMFM PARAMETER_FK like 'MATURITY_STAGE_%' : Stade en Phase (Attente retour Elise puis valider avec Armelle)
-- Génération du rapport de collecte remplit : MOA à une préférence pour la vue tableau (à confirmer le 10/09/2024)
+NB : Prévoir un nombre limite de photos
 
 ## Commun > Fin d'une saisie
 
