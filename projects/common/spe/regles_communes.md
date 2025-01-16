@@ -340,7 +340,7 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
 
 **Ajout de photos d'individus mesurés**
 
-![ui-common-individual-photo](/projects/common/spe/images/individual-photo.svg)
+![ui-common-individual-photo](/projects/common/spe/images/individual-photo.svg)<!-- .element height="60%" width="60%" -->
 
 L'écran permet de sélectionner des photos afin de les associer à l'individu mesuré.
 
@@ -348,14 +348,14 @@ L'écran permet de sélectionner des photos afin de les associer à l'individu m
 2. Une fenêtre permet de glisser/déposer une photo ou de sélectionner une photo sur le disque
     * Le format de la photo peut être du png ou du jpg
 
-![ui-common-individual-photo](/projects/common/spe/images/photo-selection.png)
+![ui-common-individual-photo](/projects/common/spe/images/photo-selection.png)<!-- .element height="60%" width="60%" -->
 
 3. A la sélection de la photo, la fenêtre se réduit et affiche
     * La taille du fichier est affichée
     * Un bouton permettant d'importer l'image
     * Un bouton permettant d'annuler l'import
 
-![ui-common-individual-photo](/projects/common/spe/images/photo-import.png)
+![ui-common-individual-photo](/projects/common/spe/images/photo-import.png)<!-- .element height="60%" width="60%" -->
 
 4. A l'import, la photo est ajoutée dans l'écran
 5. Le survol de la photo par la souris affiche 2 options
