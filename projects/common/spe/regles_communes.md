@@ -5,7 +5,6 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 
 ---
 ## Sommaire
-- [test](#commun--saisie-de-mensuration)
 - [Spécificités techniques](#spécificités-techniques)
 - [Commun > Ergonomie > principes généraux](#commun--ergonomie-principes-généraux)
 - [Commun > Ergonomie > Connexion à l'application](#commun--ergonomie-connexion-à-l-application)
@@ -13,6 +12,7 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 - [Commun > Epingler un élément](#commun--epingler-un-élément)
 - [Commun > Extraction](#commun--extraction)
 - [Commun > Saisie de mensuration](#commun--saisie-de-mensuration)
+- [Commun > Ajout de photos](#commun--ajout-de-photos)
 - [Commun > Fin d'une saisie](#commun--fin-d-une-saisie)
 - [Commun > Ajout de PSFM](#commun--ajout-de-psfm)
 - [Commun > Stratégie](#commun--stratégie)
