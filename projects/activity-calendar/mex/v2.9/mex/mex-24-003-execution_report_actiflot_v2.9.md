@@ -87,3 +87,43 @@ Correction - Ajout de la variable d'environnement APP_NAME au run de l'image doc
       -e PORT=8080 \
       -e TZ=Europe/Paris \
 ```
+
+
+### REX de la mise en exploitation d'Opus Activité
+
+Difficultés rencontrées : 
+
+- Application des changelogs sur la BDD HARMONIE_VAL
+  - Détection de regression sur ObsDeb
+    - Conséquence : Moins d'observations affichées pour les utilisateurs 
+    - Cause : Modification de la fonction PL-SQL de recalcul des droits 
+      - Application d'un changelog SFA sur la BDD HARMONIE
+- Détection de problème concurrent de connexion IMAGiNE (intranet) / Opus (extranet)
+  - Passage d'IMAGiNE en connexion extranet
+- Retard dans la livraison de la dernière release (correction des derniers bugs)
+  - Conséquence : RIC à besoin de connaitre les versions à déployer 
+  - Causes : 
+    - Derniers bugs trouvés à corrigés, 
+    - Problème de changelog sur le schéma de mapping présent dans le pod et non appliqué
+      - Impact sur la correction de la fonction d'import des calendriers
+- Disponibilité des ressources RIC pour faire la MEP applicative
+  - Une seule personne avec un empoi du temps très chargé
+- Disponibilité des ressources ISI pour faire les tests de non régression 
+  - IMAGiNE, Synchronistation Allegro, Allegro
+  - Absence côté ISI
+
+
+Axes d'amélioration :
+
+- Améliorer le processus d'application des changelogs [#703](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/703)
+- Prévoir les demandes de MEP côté RIC très en avance
+  - Fiche signalétique, Mantis, Mail assistance
+- Fixer les release à déployer en production en avance
+  - Indispensable pour RIC
+
+Points positifs : 
+
+- 2ème environnement de préproduction pour jouer la MEP (4 fois)
+- Tests de non régression pertinent, permettant d'éviter des problèmes en production
+  - ObsDeb
+  - IMAGiNE
