@@ -1,0 +1,39 @@
+@startuml
+hide empty members
+
+class PHOTO {
+    +ID: Int
+    +OBJECT_ID: Int
+    +NAME: String [0..1]
+    +DIRECTION_DESCRIPTION: String [0..1]
+    +COMMENTS: String [0..1]
+    +PATH: String [0..1]
+    +PHOTO_DATE: Date
+    +VALIDATION_DATE: Date
+    +QUALIFICATION_DATE: Date
+    +QUALIFICATION_COMMENTS: String [0..1]
+    +UPDATE_DATE: Timestamp
+    +DEPARTMENT_FK: Int
+    +PHOTO_TYPE_FK: String [0..1]
+    +OBJECT_TYPE_FK: String [0..1]
+    +QUALITY_FLAG_FK: String [0..1]
+    +CONTENT_TYPE: String [0..1]
+    +CONTENT: Clob
+}
+
+class ACTIVITY_CALENDAR {
+    +ID: Int
+    ...
+}
+
+class SAMPLE {
+    +ID: Int
+    ...
+}
+
+class BATCH {
+    +ID: Int
+    ...
+}
+
+@enduml
