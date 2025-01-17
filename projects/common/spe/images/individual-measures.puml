@@ -23,8 +23,8 @@
       {+
         { | . |  <b>Mensurations  | . | . | . | . | . }
         --
-        { | . | Espèce scientifique *  | . }
-        { | . | ^Lophius piscatorius^   | .  | [ ] Figer }
+        { | . | Espèce scientifique * | . }
+        { | . | ^Lophius piscatorius^| .  | [ ] Figer }
 
         { | . | Sexe  | . }
         { | . | ^Femelle^  }
@@ -38,7 +38,7 @@
         { | . | <i>Poids calculé RTP (kg)  | . }
         { | . | "<color:blue>0.01335 " | .  }
         .
-        { | . | Photo | <&image>  }
+        { | . | [Ajouter une photo <&caret-bottom>]  }
         { [                     Ajouter] }
         }
      }
