@@ -365,6 +365,29 @@ L'écran permet de sélectionner des photos afin de les associer à l'individu m
 
 NB : Prévoir un nombre limite de photos
 
+Implémentation Technique : 
+
+Côté Opus-pod : 
+
+Utiliser la vue SIH2_ADAGIO_DBA_SUMARIS_MAP.IMAGE_ATTACHMENT
+
+La vue pointe sur la table SIH2_ADAGIO_DBA.PHOTO 
+
+![ui-model-photo](/model/referential/photo.svg)
+
+- CONTENT contient l'image en base64 ou PATH contient le chemin de l'image
+  - Si PATH, CONTENT à NULL et si CONTENT, PATH à NULL
+  - Cette option de stockage se paramètre au niveau du pod
+- OBJECT_TYPE indique le lien vers la classe d'objet concernée
+  - ActiFlot : ACTIVITY_CALENDAR,
+  - ObsVentes : BATCH
+  - ObsMer : SAMPLE
+- OBJECT_ID : Identifiant de l'objet (associé à la photo)
+
+Pour une photo uploadée on créé un dossier avec les 3 images correspondant à 3 niveaux de qualité (vignette, résolution basse, résolution haute).
+
+Le pod, suivant l'écran affiché, ira récupérer l'image à la bonne résolution.
+
 ## Commun > Fin d'une saisie
 
 **REF: COMMUN/SAISIE/TERMINER**
