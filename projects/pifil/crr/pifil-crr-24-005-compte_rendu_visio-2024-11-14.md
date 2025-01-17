@@ -19,6 +19,7 @@ et la définition d'une stratégie de communication auprès des professionels
 > - Germain BOUSSARIE (Ifremer)
 > - Benoit LAVENIER (EIS)
 > - Dorian MARCO (EIS)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
@@ -35,6 +36,7 @@ et la définition d'une stratégie de communication auprès des professionels
 > - Isabelle JOSSERAND (DGAMPA)
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 ## Organisation des tests en mer

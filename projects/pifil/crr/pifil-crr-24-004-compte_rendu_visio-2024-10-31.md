@@ -15,6 +15,7 @@ et la définition d'une stratégie de communication auprès des professionels
 > - Fiona BIGEY (OP VENDEE)
 > - Maxime DEMAREST (EIS)
 > - Dorian MARCO (EIS)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
@@ -37,6 +38,7 @@ et la définition d'une stratégie de communication auprès des professionels
 > - Benoit LAVENIER (EIS)
 > - Quitterie SOURGET (LPDB)
 > - Léni GUILLOTIN (AGLIA)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 ## Retour sur les tests

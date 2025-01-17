@@ -22,6 +22,7 @@ L'objectif de la réunion est de coordonner le rapprochement des données de PIF
 > - Bastien MÉRIGOT (Université de Montpellier)
 > - Florian EXPERT (MTECP DEB)
 > - Lugdiwine BURTSCHELL (DEB/ELM3)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
@@ -39,6 +40,7 @@ L'objectif de la réunion est de coordonner le rapprochement des données de PIF
 > - Isabelle JOSSERAND (DGAMPA)
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 ## Flux de données

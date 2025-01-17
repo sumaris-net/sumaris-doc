@@ -11,6 +11,7 @@
 > - Quitterie SOURGET (OP LPDB)
 > - Aurélien HENNEVEUX (OP PDA)
 > - Bastien MÉRIGOT (Université de Montpellier)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
@@ -37,6 +38,7 @@
 > - Isabelle JOSSERAND (DGAMPA)
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 ## Organisation des tests en mer (1/3)
@@ -70,7 +72,7 @@
 > - Ifremer - Demander les données ObsMer disponibles sur les navires sélectionnés pour les tests
 
 ---
-## Retours sur le formulaire terrain
+## Retours sur le formulaire terrain (1/3)
 
 EIS présente un [prototype PDF de formulaire terrain](](../doc/dolphinfree-doc-24-002-Prototype_formulaire_terrain_via_App.pdf)) généré par l'application.
 En plus des autres retours déjà remontés (cf CRR précédents),
@@ -85,7 +87,11 @@ plusieurs demandes de corrections ont été faites :
   - Quiterie Sourget propose un mode de saisie tableau (cf [formulaire terrain engin de PIFIL](../doc/pifil-doc-24-001-Formulaire_terrain_PAMM-engin.pdf))
   - ou bien EIS propose d'ajouter 3 blocs de formulaire engin
   - => Activer le mode "bloc" ou "tableau" suivant une option de programme
-- Opérations : 
+
+---
+## Retours sur le formulaire terrain (2/3)
+
+- Opérations :
   - [ ] Libellé de la colonne commentaires : retirer le texte spécifique à ObsMer (à rendre configuration en option)
 - Captures accidentelles : 
   - [ ] Activer un mode 'multi OP' dans le tableau (via une option de programme) : 
@@ -96,6 +102,11 @@ plusieurs demandes de corrections ont été faites :
     - [ ] Lister les codes espèces en bas de page, si pas trop d'espèces (ex : si moins de 15)
   - [ ] Réduire la largeur des colonnes `O [ ] N [ ]` en ajoutant `(Oui/Non)` dans l'entête de colonne
   - [ ] Afficher/Masquer les valeurs qualitatives dans les cellules (suivant une option de programme)
+
+
+---
+## Retours sur le formulaire terrain (3/3)
+
 - Remises à l'eau
   - [ ] Il manque le tableau de saisie des remises à l'eau 
   - [ ] Activer un mode 'multi OP' dans le tableau (via une option de programme) :
@@ -105,6 +116,7 @@ plusieurs demandes de corrections ont été faites :
 > Actions :
 > - EIS - semaine 49 - Corriger les points bloquants et majeurs sur le formulaire
 > - EIS - semaine 49 - Fournir un formulaire terrain à jour, pour validation (semaine 49) 
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 ## Retours sur l'application de saisie

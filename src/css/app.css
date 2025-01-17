@@ -109,12 +109,27 @@
 	background-color: transparent !important;
 }
 
-/* -- Reduce the font size on large tables -- */
-.reveal table.font-size-small {
-	font-size: 0.7em;
+/* -- Reduce the font size on large tables or paragraph -- */
+.reveal table.font-size-small,
+.reveal p.font-size-small,
+.reveal .font-size-small p,
+.reveal ul.font-size-small,
+.reveal .font-size-small ul{
+	font-size: 0.7em !important;
+}
+.reveal blockquote.font-size-small {
+	--r-block-margin: 8px !important;
 }
 
-/* -- Reduce the font size on large tables -- */
-.reveal table.font-size-extra-small {
-	font-size: 0.5em;
+/* -- Reduce the font size on large tables or paragraph -- */
+.reveal table.font-size-extra-small,
+.reveal p.font-size-extra-small,
+.reveal .font-size-extra-small p,
+.reveal ul.font-size-extra-small,
+.reveal .font-size-extra-small ul {
+	font-size: 0.5em !important;
+}
+
+.reveal blockquote.font-size-extra-small {
+	--r-block-margin: 4px !important;
 }
