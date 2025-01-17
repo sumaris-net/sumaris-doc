@@ -1,6 +1,10 @@
 # Compte-rendu réunion visio
 ## 24/05/2024
 
+**Prochaine réunion** de suivi : à planifier
+
+---
+
 > Présents :
 >
 > - Léni GUILLOTIN (AGLIA)
@@ -12,11 +16,12 @@
 > - Isabelle JOSSERAND (DGAMPA)
 > - Anne CHAUSSE (CNPMEN)
 > - Benoit LAVENIER (EIS)
+<!-- .element: class="font-size-extra-small" -->
 
 > Excusés :
+>
 > - Thomas CLOATRE (Ifremer)
-
-**Prochaine réunion** de suivi : à planifier
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 

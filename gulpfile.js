@@ -79,7 +79,13 @@ function serve(done) {
   // Launch browser
   bs.init({
     watch: true,
-    server: "./dist",
+    server: {
+      baseDir: "./dist",
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    },
     watchOptions: {
       ignoreInitial: true
     }

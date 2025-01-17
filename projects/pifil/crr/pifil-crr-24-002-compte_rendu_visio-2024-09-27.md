@@ -1,6 +1,10 @@
 # Compte-rendu réunion visio
 ## 27/09/2024
 
+**Prochaine réunion** de suivi : ~11 octobre (au plus tôt) - à confirmer
+
+---
+
 > Présents :
 >
 > - Camille YOUNSI (DGAMPA)
@@ -14,11 +18,12 @@
 > - Aurélien HENNEVEUX (PDA)
 > - Benoit LAVENIER (EIS)
 > - Dorian MARCO (EIS)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
 > Excusés :
-> 
+>
 > - Germain BOUSSARIE (Ifremer)
 > - Yves LE GALL (Ifremer)
 > - Anne CHAUSSE (CNPMEN)
@@ -27,14 +32,7 @@
 > - Isabelle JOSSERAND (DGAMPA)
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
-
-**Prochaine réunion** de suivi : ~11 octobre (au plus tôt) - à confirmer
-
-**ODJ de la prochaine réunion** :
-- Pédagogie pour l'installation de l'application auprès des professionnels
-- Retour suite aux embarquements éventuels (Léni)
-- Avancés des développements
-- Point sur le rapprochement des données
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 

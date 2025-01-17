@@ -16,6 +16,7 @@ L'objectif de la réunion est d'organiser la phase de test.
 > - Aurélien HENNEVEUX (PDA)
 > - Benoit LAVENIER (EIS)
 > - Dorian MARCO (EIS)
+<!-- .element: class="font-size-extra-small" -->
 
 ---
 
@@ -34,9 +35,10 @@ L'objectif de la réunion est d'organiser la phase de test.
 > - Thomas CLOATRE (Ifremer)
 > - Emilie LEBLOND (Ifremer)
 
+<!-- .element: class="font-size-extra-small" -->
+
 ---
 ## Organisation des tests
-
 
 
 1. Installer l'application (cf ci-dessous)
