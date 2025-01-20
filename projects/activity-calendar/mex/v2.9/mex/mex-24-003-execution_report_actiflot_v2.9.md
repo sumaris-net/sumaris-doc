@@ -66,7 +66,7 @@ Mode opératoire
    - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
      - Sur SIH2_ADAGIO_DBA
 ```
-delete pmfm_strategy where strategy_fk = 2445 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
+delete pmfm_strategy where strategy_fk = 2447 and ACQUISITION_LEVEL_FK in ('FISHING_EFFORT_CALENDAR','MONTHLY_FISHING_EFFORT','YEARLY_FISHING_EFFORT')
 ```
    - Supprimer les PMFMs suivants du niveau d'acquisition "Caractéristiques d'enquête" : 
      - "Validation observateur", "validation société", "validation programme", "Hauteur filet"
@@ -74,20 +74,23 @@ delete pmfm_strategy where strategy_fk = 2445 and ACQUISITION_LEVEL_FK in ('FISH
    - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
    - Modifier l'ordre du PMFM "Nombre de jour de pêche" avec la valeur "2" (sinon les 2 pmfm "Nombre de jours de mer" et "Nombre de jours de pêche" sont inversés)
 
+### Déploiement de l'application par RIC
+
+- Backend (Le pod) : [Mantis #66569](https://forge.ifremer.fr/mantis/view.php?id=66569)
+- Frontend (L'app) : [Mantis #66570](https://forge.ifremer.fr/mantis/view.php?id=66570)
 
 ### Tests de l'application 
 
-Correction - Ajout de la variable d'environnement APP_NAME au run de l'image docker
-- Configuration isival
-```
-    docker_extra_opts: |-
-      -e LOG_FILENAME=opus-activity-calendar-pod.log \
-      -e APP_NAME=OPUS \
-      -e PROFILES=valOpus \
-      -e PORT=8080 \
-      -e TZ=Europe/Paris \
-```
+Erreurs à l'issue de la MEP :
 
+- Problème d'erreur des upgrade des websockets : 
+  - Corrigé au niveau de la configuration du pod [Mantis 66569](https://forge.ifremer.fr/mantis/view.php?id=66569), note 0216247
+- Problème d'indexation ElasticSearch : Il manque des entrées dans ES pour les navires
+    - Exemple : Navire 104641
+        - Validation ES : 14 entrées
+        - Exploitation ES : 2 entrées
+    - Conséquence : L'importation des calendriers d'activité sur 2025 est partielle
+    - En cours d'identification. Désactivation de l'indexation ES en attendant
 
 ### REX de la mise en exploitation d'Opus Activité
 
