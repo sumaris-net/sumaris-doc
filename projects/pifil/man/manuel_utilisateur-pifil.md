@@ -1,21 +1,11 @@
-# <div style="text-align: center">Manuel de l'utilisateur</div>
+# <div style="text-align: center">Guide de démarrage rapide</div>
 
 <div style="text-align: center">
+
 
 <div class="logo">
 
 ![SUMARiS](logo_sumaris_titre.png)
-
-</div>
-
-<br>
-<br>
-
-<div style="font-size: x-large">
-
-<br>
-<br>
-<br>
 
 </div>
 
@@ -29,15 +19,17 @@ Programme PIFIL 2
 
 <br>
 <br>
+
+Version 2.9.29.3
+
+Dernière mise à jour : 20/01/2025
+
 <br>
 <br>
 
-Version 2.9.29.5
+![Bandeau logos](splash_logos.png)
 
-Dernière mise à jour : 22/01/2025
-
-![Bandeau logos](splash_pifil.png)
-
+<br>
 <br>
 <br>
 
@@ -45,6 +37,8 @@ Auteur : E-IS
 
 </div>
 
+<br>
+<br>
 <br>
 <br>
 
@@ -63,10 +57,10 @@ Table des matières
 <br>
 
 <!-- TOC -->
+* [<div style="text-align: center">Guide de démarrage rapide</div>](#div-styletext-align-centerguide-de-démarrage-rapidediv)
 * [Préambule](#préambule)
   * [Objectif de l'application](#objectif-de-lapplication)
   * [Configuration minimum](#configuration-minimum)
-* [Assistance technique](#assistance-technique)
 * [Installer l'application SUMARiS](#installer-lapplication-sumaris)
 * [Premiers pas dans l'application SUMARiS](#premiers-pas-dans-lapplication-sumaris)
   * [Première utilisation](#première-utilisation)
@@ -76,6 +70,7 @@ Table des matières
   * [Écran Authentification](#écran-authentification)
   * [Écran Réinitialisation du mot de passe](#écran-réinitialisation-du-mot-de-passe)
   * [Écran d'accueil (mode identifié)](#écran-daccueil-mode-identifié)
+    * [Choix de la langue](#choix-de-la-langue-1)
   * [Menu latéral](#menu-latéral)
   * [Écran Marées](#écran-marées)
     * [Affichage en mode bureau (mode connecté)](#affichage-en-mode-bureau-mode-connecté)
@@ -86,9 +81,6 @@ Table des matières
   * [Écran Nouvelle marée](#écran-nouvelle-marée)
     * [Onglet Détails](#onglet-détails)
     * [Onglet Engins](#onglet-engins)
-      * [Écran Recherche engin existant](#écran-recherche-engin-existant)
-      * [Écran Détails de l'engin](#écran-détails-de-lengin)
-      * [Écran Nouvel engin](#écran-nouvel-engin)
     * [Onglet Opérations](#onglet-opérations)
   * [Écran de saisie d'un filage](#écran-de-saisie-dun-filage)
   * [Écran de saisie d'un virage](#écran-de-saisie-dun-virage)
@@ -96,6 +88,7 @@ Table des matières
   * [Écran d'édition d'une marée](#écran-dédition-dune-marée)
   * [Écran Mon compte](#écran-mon-compte)
   * [Écran Paramètres](#écran-paramètres)
+* [Assistance technique](#assistance-technique)
 <!-- TOC -->
 
 <div style="page-break-after: always"></div>
@@ -129,7 +122,7 @@ ainsi qu'à la diffusion de résultats et d'agrégations.
 
 L'application fonctionne sur des terminaux mobiles (tablette ou téléphone), sur Android ou iOS, ou dans un navigateur Internet (Google Chrome ou Safari).
 
-**L'application peut fonctionner hors connexion (sans accès à Internet), notamment lors de son utilisation en mer.**
+**L'application peut fonctionner hors connexion, notamment lors de son utilisation en mer.**
 
 En revanche, comme des données doivent être synchronisées à un serveur, une connexion Internet est nécessaire dans les cas suivants :
 
@@ -138,37 +131,16 @@ En revanche, comme des données doivent être synchronisées à un serveur, une 
  * Configuration du mode hors-connexion,
  * Synchronisation des données lors du retour à terre.
 
-# Assistance technique
-
-Pour remonter les questions ou problèmes :
-
-* Contacter en priorité l'_**OP**_ (ou _**CRPMEM**_), qui est chargé de centraliser les demandes et de les remonter,
-* À défaut, contacter l'assistance technique :
-  * Par e-mail :
-    * Moyen de communication à privilégier
-    * [support@sumaris.net](mailto:support@sumaris.net)
-  * Par téléphone :
-    * Du lundi au vendredi, de 9h à 18h30
-    * [+33 (0)9 53 24 41 20](tel:+33953244120)
-
 <div style="page-break-after: always"></div>
 
 # Installer l'application SUMARiS
 
-<div style="color: #ffa500; font-size: large">
-
-**⚠ AVERTISSEMENT !**
-
-</div>
-
-_Pour l'utilisation en mer, a priori **sans connexion Internet**, il est **grandement recommandé** de ne pas utiliser la version Internet (via le navigateur) et **d'installer l'application** sur le terminal mobile, via le store d'applications de l'appareil._
-
 L'application est disponible dans les stores Android et iOS, ainsi que depuis un navigateur Internet :
 
-| [![Disponible sur Google play](google_play_badge_fr.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | [![QR Code Google Play SUMARiS](qr_code_google_play_sumaris.png)](https://play.google.com/store/apps/details?id=net.sumaris.app)  | https://play.google.com/store/apps/details?id=net.sumaris.app                                                                                                                |
-|:------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      [![Télécharger dans l'App Store](app_store_badge_fr.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)       |         [![QR Code App Store SUMARiS](qr_code_app_store_sumaris.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)         | **https://apps.apple.com/fr/app/sumaris/id6736747523**                                                                                                                       |
-|                   [![Télécharger dans l'App Store](mobile-browser-icon.png)](https://open.sumaris.net)                   |                           [![QR Code Open SUMARiS](qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net** <br><br><div style="color: #ffa500; font-size: large">**⚠ AVERTISSEMENT !**<br></div>_La saisie sans connexion Internet ne sera pas possible !_ |
+| ![Disponible sur Google play](google_play_badge_fr.png)  | [![QR Code Google Play SUMARiS](qr_code_google_play_sumaris.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | https://play.google.com/store/apps/details?id=net.sumaris.app |
+|:--------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------|
+| ![Télécharger dans l'App Store](app_store_badge_fr.png)  |        [![QR Code App Store SUMARiS](qr_code_app_store_sumaris.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)         | **https://apps.apple.com/fr/app/sumaris/id6736747523**        |
+| ![Télécharger dans l'App Store](mobile-browser-icon.png) |                          [![QR Code Open SUMARiS](qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net**                                  |
 
 <br>
 
@@ -182,6 +154,14 @@ Dans le cas de l'ouverture de l'application via le navigateur Internet, attendre
 </div>
 
 La page de l'application s'ouvre dans le store concerné, pour pouvoir procéder à l'installation.
+
+<div style="color: #ffa500; font-size: large">
+
+**⚠ AVERTISSEMENT !**
+
+</div>
+
+_Pour l'utilisation en mer, a priori sans connexion Internet, il est **grandement recommandé** de ne pas utiliser la version Internet et **d'installer l'application** sur le terminal mobile._
 
 <div style="page-break-after: always"></div>
 
@@ -210,6 +190,8 @@ Aller dans l'onglet _**Programmes de collecte**_ et sélectionner le programme _
 _Faire attention de bien sélectionner le programme **PIFIL 2**._
 
 _La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !_
+
+<br>
 
 L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié) s'affiche ensuite.
 
@@ -342,6 +324,20 @@ _Le bouton **Saisie des marées** ne sera donc pas affiché._
 
 <div style="clear:both"></div>
 
+### Choix de la langue
+
+<div style="float: right">
+
+![Choix de la langue](sumaris_choix_langue_identifie.png)
+
+</div>
+
+L'icône en haut à droite permet de choisir la langue de l'application.
+
+<div style="clear:both"></div>
+
+<div style="page-break-after: always"></div>
+
 ## Menu latéral
 
 <div style="float: right">
@@ -373,8 +369,6 @@ _L'entrée **Marées** ne sera donc pas affichée._
 
 <div style="clear:both"></div>
 
-<div style="page-break-after: always"></div>
-
 ## Écran Marées
 
 L'écran _**Marées**_ permet d'afficher la liste des marées saisies par l'utilisateur ou dans le cadre du programme.
@@ -383,13 +377,13 @@ L'icône **⁝** de la barre de titre permet d'afficher le [Menu Marées](#menu-
 
 ### Affichage en mode bureau (mode connecté)
 
-<div style="float: right">
+<div style="text-align: center">
 
 ![Marées](sumaris_marees_1.png)
 
 </div>
 
-<div style="clear:both"></div>
+<div style="page-break-after: always"></div>
 
 ### Affichage en mode terrain (hors-ligne)
 
@@ -413,8 +407,6 @@ L'écran possède deux onglets :
 
 </div>
 
-<div style="page-break-after: always"></div>
-
 Le statut des marées apparaît en haut à droite du statut des marées.
 
 Une marée en cours de saisie ne peut pas être envoyée au serveur. Il faut avoir appuyé au préalable sur le bouton _**Terminer la saisie**_ de l'[Onglet Détails](#onglet-détails)  de l'[Écran Nouvelle marée](#écran-nouvelle-marée) ou de l'[Écran d'édition d'une marée](#écran-dédition-dune-marée).
@@ -429,6 +421,8 @@ Une marée ne peut être prise en compte par les structures professionnelles et 
 
 <div style="clear:both"></div>
 
+<div style="page-break-after: always"></div>
+
 ### Ajout d'une nouvelle marée
 
 <div style="float: right">
@@ -437,14 +431,6 @@ Une marée ne peut être prise en compte par les structures professionnelles et 
 ![Ajout marée](sumaris_marees_5.png)
 
 </div>
-
-<div style="color: #ffa500; font-size: large">
-
-**⚠ AVERTISSEMENT !**
-
-</div>
-
-_Pour l'observation en mer (sans connexion Internet), **privilégier impérativement la saisie terrain (mode hors-ligne)**._
 
 L'appui sur l'icône d'ajout d'une marée ![Ajout marée](sumaris_icone_ajout.png) de l'[Écran Marées](#écran-marées) permet d'afficher les entrées suivantes :
 
@@ -457,8 +443,6 @@ L'appui sur l'icône d'ajout d'une marée ![Ajout marée](sumaris_icone_ajout.pn
     * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
 
 <div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
 
 ### Menu Marées
 
@@ -474,6 +458,8 @@ Le menu s'affiche différemment en mode terrain (hors-ligne) ou en mode bureau (
 L'entrée _**Activer le mode hors-ligne**_ ou _**Mettre à jour le mode hors-ligne**_, selon le mode en cours, permet d'afficher l'[Écran Configuration du mode hors-ligne](#écran-configuration-du-mode-hors-ligne).
 
 <div style="clear:both"></div>
+
+<div style="page-break-after: always"></div>
 
 ## Écran Configuration du mode hors-ligne
 
@@ -496,11 +482,9 @@ Sélectionner le programme _**PIFIL 2**_ puis le(s) navire(s) souhaités.
 
 _Faire attention de bien sélectionner le programme **PIFIL 2**._
 
-_L'exploitabilité des données saisies en découle !_
+_La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !_
 
 <div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
 
 <div style="float: right">
 
@@ -523,6 +507,8 @@ Valider la saisie avec l'icône **✔** de la barre de titre.
 
 <div style="clear:both"></div>
 
+<div style="page-break-after: always"></div>
+
 <div style="float: right">
 
 ![Importation des données du mode hors-ligne](sumaris_importation_donnees_hors-ligne.png)
@@ -534,8 +520,6 @@ L'[Écran Marées](#écran-marées) apparaît, avec une barre de progression de 
 À la fin de l'importation des données, l'affichage bascule vers l'[Écran Nouvelle marée](#écran-nouvelle-marée).
 
 <div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
 
 ## Écran Nouvelle marée
 
@@ -551,125 +535,31 @@ _Si le terminal mobile n'est pas connecté, seules les données préalablement t
 
 ### Onglet Détails
 
-<div style="float: right">
+<div style="text-align: center">
 
-![Saisie des détails d'une nouvelle marée](sumaris_details_nouvelle_maree_1.png)
-![Saisie des détails d'une nouvelle marée](sumaris_details_nouvelle_maree_2.png)
-
-</div>
-
-<div style="color: #ffa500; font-size: large">
-
-**⚠ AVERTISSEMENT !**
+![Saisie des détails d'une nouvelle marée](sumaris_details_nouvelle_maree.png)
 
 </div>
-
-_Faire attention de bien sélectionner le programme **PIFIL 2**._
-
-_L'exploitabilité des données saisies en découle !_
-
-Les champs marqués * sont obligatoires :
- * Programme de collecte
- * Navire
- * Port de départ
- * Date de départ
- * Heure de départ
- * Port de retour
- * Date de retour
- * Heure de retour
- * Utilisation d'un GPS
-
-Les données concernant le retour peuvent être saisies ultérieurement.
-
-<div style="clear:both"></div>
 
 ### Onglet Engins
 
-<div style="float: right">
+<div style="text-align: center">
 
 ![Saisie des engins d'une nouvelle marée](sumaris_engins_nouvelle_maree_1.png)
 ![Saisie des engins d'une nouvelle marée](sumaris_engins_nouvelle_maree_2.png)
 
 </div>
 
-L'appui sur l'icône d'ajout d'un engin ![Ajout engin](sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
-
-* Rechercher ![Rechercher engin](sumaris_icone_recherche_engin.png)
-  * Lien vers l'[Écran Engin existant](#écran-recherche-engin-existant)
-* Nouveau ![Nouvel engin](sumaris_icone_nouvel_engin.png)
-  * Lien vers l'[Écran Nouvel engin](#écran-nouvel-engin)
-
-<div style="clear:both"></div>
-
-#### Écran Recherche engin existant
-
-<div style="float: right">
-
-![Recherche d'un engin existant](sumaris_recherche_engin_existant_1.png)
-![Recherche d'un engin existant](sumaris_recherche_engin_existant_2.png)
-
-</div>
-
-Définir les date de début et de fin de période pour la recherche de l'engin.
-
-La liste se rafraîchit automatiquement.
-
-Sélectionner l'engin souhaité.
-
-L'[Écran Détails de l'engin](#écran-détails-de-lengin) s'affiche.
-
-<div style="clear:both"></div>
-
-#### Écran Détails de l'engin
-
-<div style="float: right">
-
-![Détails d'un engin existant](sumaris_details_engin_existant_1.png)
-![Détails d'un engin existant](sumaris_details_engin_existant_2.png)
-
-</div>
-
-Vérifier que les caractéristiques de l'engin correspondent bien à celui recherché.
-
-L'icône **✔** de la barre de titre permet de valider la saisie. L'[Onglet Engins](#onglet-engins) s'affiche alors avec l'engin sélectionné.
-
-L'icône **🔍** de la barre de titre permet de retourner à l'[Écran Engin existant](#écran-recherche-engin-existant).
-
-<div style="clear:both"></div>
-
 <div style="page-break-after: always"></div>
-
-#### Écran Nouvel engin
-
-<div style="float: right">
-
-![Création d'un nouvel engin](sumaris_details_nouvel_engin_1.png)
-![Création d'un nouvel engin](sumaris_details_nouvel_engin_2.png)
-
-</div>
-
-Sélectionner le code (type) d'engin souhaité.
-
-Les champs à renseigner pour la définition s'afficheront. Ils diffèrent d'un type d'engin à l'autre. 
-
-Les champs marqués * sont obligatoires.
-
-L'icône **✔** de la barre de titre permet de valider la saisie.
-
-L'[Onglet Engins](#onglet-engins) s'affiche alors avec l'engin nouvellement créé.
-
-<div style="clear:both"></div>
 
 ### Onglet Opérations
 
-<div style="float: right">
+<div style="text-align: center">
 
 ![Saisie des opérations d'une nouvelle marée](sumaris_operations_nouvelle_maree_1.png)
 ![Saisie des opérations d'une nouvelle marée](sumaris_operations_nouvelle_maree_2.png)
 
 </div>
-
-Un message d'information rappelle que toute marée doit commencer par un filage.
 
 L'appui sur l'icône d'ajout d'une opération ![Ajout opération](sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
 
@@ -684,56 +574,29 @@ L'appui sur l'icône d'ajout d'une opération ![Ajout opération](sumaris_icone_
 
 </div>
 
-_Les marées étant liées entre elles (filage et virage), elles doivent être terminées et envoyées dans le bon ordre, sans quoi la base de données les refusera._
+_Les marées étant liées entre elles (filage / virage), elles doivent être terminées / envoyées dans le bon ordre, sans quoi la base de données les refusera._
 
-_L'application affichera un avertissement, le cas échéant._
-
-_Ce point sera amélioré dans une version future._
-
-<div style="clear:both"></div>
+_L'application affichera un avertissement, le cas échéant. Ce point sera amélioré dans une version future._
 
 <div style="page-break-after: always"></div>
 
 ## Écran de saisie d'un filage
 
-<div style="float: right">
+<div style="text-align: center">
 
 ![Saisie d'un nouveau filage](sumaris_nouveau_filage_1.png)
 ![Saisie d'un nouveau filage](sumaris_nouveau_filage_2.png)
 
 </div>
 
-Les champs marqués * sont obligatoires.
-
-<div style="clear:both"></div>
-
-<div style="float: right">
-
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_3.png)
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_4.png)
-
-</div>
-
-L'icône **⌖** permet de renseigner automatiquement la position actuelle, via les données du GPS.
-
-L'icône **💾** de la barre de titre permet d'enregistrer les données renseignées.
-
-Retourner à l'[Onglet Opérations](#onglet-opérations) en appuyant sur l'icône **🡐** de la barre de titre. 
-
-<div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
-
 ## Écran de saisie d'un virage
 
-<div style="float: right">
+<div style="text-align: center">
 
 ![Saisie d'un nouveau virage](sumaris_nouveau_virage_1.png)
 ![Saisie d'un nouveau virage](sumaris_nouveau_virage_2.png)
 
 </div>
-
-Les champs marqués * sont obligatoires.
 
 <div style="color: #ffa500; font-size: large">
 
@@ -743,78 +606,25 @@ Les champs marqués * sont obligatoires.
 
 _Un virage est obligatoirement lié à un filage. Celui-ci doit impérativement avoir été saisi au préalable._
 
-<div style="clear:both"></div>
-
-<div style="float: right">
-
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_3.png)
-
-</div>
-
-Appuyer sur le champ _**Opération associée**_ afin d'afficher l'écran de sélection de filage.
-
-Sélectionner le filage souhaité.
-
-<div style="clear:both"></div>
-
 <div style="page-break-after: always"></div>
 
-<div style="float: right">
+Si le champ _**Présence de capture accidentelle**_ a la valeur _**Oui**_, l'onglet _**Captures accidentelles**_ s'affiche.
 
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_4.png)
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_5.png)
-
-</div>
-
-L'[Écran de saisie d'un virage](#écran-de-saisie-dun-virage) s'affiche de nouveau, avec le filage sélectionné.
-
-Les champs marqués * sont obligatoires.
-
-L'icône **💾** de la barre de titre permet d'enregistrer les données renseignées.
-
-<div style="clear:both"></div>
-
-<div style="float: right">
+<div style="text-align: center">
 
 ![Captures accidentelles](sumaris_captures_accidentelles.png)
 
 </div>
 
-Si le champ _**Présence de capture accidentelle**_ a la valeur _**Oui**_, l'onglet _**Captures accidentelles**_ s'affiche.
-
 L'appui sur l'icône d'ajout d'une capture accidentelle ![Ajout capture accidentelle](sumaris_icone_ajout.png) permet d'afficher l'[Écran de saisie d'une capture accidentelle](#écran-de-saisie-dune-capture-accidentelle).
-
-<div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
 
 ## Écran de saisie d'une capture accidentelle
 
-<div style="float: right">
+<div style="text-align: center">
 
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_1.png)
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_2.png)
-
-</div>
-
-Les champs marqués * sont obligatoires.
-
-L'icône **✔** de la barre de titre permet de valider la saisie.
-
-<div style="clear:both"></div>
-
-<div style="float: right">
-
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_3.png)
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_4.png)
+![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle.png)
 
 </div>
-
-L'onglet des captures accidentelles s'affiche alors avec la capture accidentelle nouvellement créée.
-
-L'icône **💾** de la barre de titre permet d'enregistrer les données renseignées.
-
-<div style="clear:both"></div>
 
 <div style="page-break-after: always"></div>
 
@@ -822,31 +632,29 @@ L'icône **💾** de la barre de titre permet d'enregistrer les données renseig
 
 Cet écran est le même que l'[Écran Nouvelle marée](#écran-nouvelle-marée).
 
-Il permet de visualiser et de modifier toutes les données d'une marée.
-
 <div style="text-align: center">
 
 ![Édition des détails d'une marée](sumaris_edition_maree_1.png)
 ![Édition des détails d'une marée](sumaris_edition_maree_2.png)
+
 ![Édition des détails d'une marée](sumaris_edition_maree_3.png)
+![Édition des détails d'une marée](sumaris_edition_maree_4.png)
 
 </div>
 
-Le bouton _**Terminer la saisie**_ permet de clôturer la marée.
-
-Le bouton _**Envoyer**_ permet, **uniquement en cas de connexion à Internet**, de la synchroniser avec le serveur et des rendre ses données disponibles aux autres utilisateurs.
+<div style="page-break-after: always"></div>
 
 ## Écran Mon compte
 
-<div style="float: right">
+L'écran _**Mon compte**_ permet principalement de pouvoir réinitialiser le mot de passe du compte utilisateur.
+
+<div style="text-align: center">
 
 ![Profil](sumaris_profil.png)
 ![Préférences](sumaris_preferences.png)
 
 </div>
 
-L'écran _**Mon compte**_ permet principalement de pouvoir réinitialiser le mot de passe du compte utilisateur.
-
 <div style="color: #ffa500; font-size: large">
 
 **⚠ AVERTISSEMENT !**
@@ -856,21 +664,19 @@ L'écran _**Mon compte**_ permet principalement de pouvoir réinitialiser le mot
 _Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
 l'application._
 
-<div style="clear:both"></div>
-
 <div style="page-break-after: always"></div>
 
 ## Écran Paramètres
 
-<div style="float: right">
+L'écran _**Paramètres**_ permet principalement de gérer le mode sombre de l'affichage.
+
+<div style="text-align: center">
 
 ![Paramètres](sumaris_parametres_1.png)
 ![Paramètres](sumaris_parametres_2.png)
 
 </div>
 
-L'écran _**Paramètres**_ permet principalement de gérer le mode sombre de l'affichage.
-
 <div style="color: #ffa500; font-size: large">
 
 **⚠ AVERTISSEMENT !**
@@ -880,4 +686,13 @@ L'écran _**Paramètres**_ permet principalement de gérer le mode sombre de l'a
 _Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
 l'application._
 
-<div style="clear:both"></div>
+<div style="page-break-after: always"></div>
+
+# Assistance technique
+
+Pour remonter les questions ou problèmes :
+
+ * Contacter en priorité l'_**OP**_ (ou _**CRPMEM**_), qui est chargé de centraliser les demandes et de les remonter,
+ * À défaut, contacter l'assistance technique _**E-IS**_ :
+   * Par e-mail (de préférence) : [support@sumaris.net](mailto:support@sumaris.net)
+   * Par téléphone : [+33 (0)9 53 24 41 20](tel:+33953244120)
