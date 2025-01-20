@@ -7,7 +7,7 @@ L'objectif de la réunion est de coordonner le rapprochement des données de PIF
 
 > Présents :
 >
-> - Damien LE BOULAIRE (OchTech)
+> - Damien LE BOULAIRE (OcTech)
 > - Glenn PRIGENT (Ifremer)
 > - Marie-claude Cote-Laurin (OFB - projet ObsCam)
 > - Chloé MALIRAT (OFB)

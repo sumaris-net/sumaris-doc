@@ -17,7 +17,7 @@
 
 > Excusés :
 >
-> - Damien LE BOULAIRE (OchTech)
+> - Damien LE BOULAIRE (OcTech)
 > - Glenn PRIGENT (Ifremer)
 > - Marie-claude Cote-Laurin (OFB - projet ObsCam)
 > - Chloé MALIRAT (OFB)
