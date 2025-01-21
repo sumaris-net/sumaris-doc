@@ -22,9 +22,9 @@ Appliquer le [manuel d'exploitation common](/projects/common/mex/ifremer/mex-24-
 
 ### Adagio : Declaration de l'application
   - Jouer les scripts SQLs suivants :
-    - [SOFTWARE.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE.sql)
-    - [SOFTWARE_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE_PROPERTY.sql)
-    - [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/PROGRAM_PROPERTY.sql)
+    - [SOFTWARE.sql](/projects/activity-calendar/mex/v2.9/sql/preproduction/SOFTWARE.sql)
+    - [SOFTWARE_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/preproduction/SOFTWARE_PROPERTY.sql)
+    - [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/preproduction/PROGRAM_PROPERTY.sql)
 
 ### Adagio : Mise à jour du référentiel
   - Régionalisation : Mantis [66247](https://forge.ifremer.fr/mantis/view.php?id=66247)

@@ -1,13 +1,16 @@
-# Rapport d'exécution de la mise exploitation des calendrier d'activité v2.9
+# Rapport d'exécution de la mise exploitation des calendriers d'activité v2.9
 
-- BDD cible : Nouvelle préproduction
-  - Instance : PP_HARMONIE
-  - Copie de la MEP du 19/12/2024
+- BDD cible : PRODUCTION
+  - Instance : HARMONIE
+
+- MEP BDD réalisée le 14/01/2025
+
+- Fiche signalétique : [sih/opus-activite](https://dev-ops.gitlab-pages.ifremer.fr/documentation/service_datasheet/scientific/environment/sih/opus-activite)
 
 Mode opératoire
 1. Exécuter le changelog 4.3.2 sur PP_HARMONIE
 
-!!! Pré-requis : Supprimer tous les changelogs liée à la BDD SFA (Indispensable)
+:warning: Pré-requis : Supprimer tous les changelogs liée à la BDD SFA (Indispensable)
 ```
  Update a Adagio database :
   - Edit 'conf/adagio-core-server.config' to configure Oracle connexion
@@ -16,7 +19,7 @@ Mode opératoire
 ```
  - Status : OK
 
-2. Exécution des scripts SQL d'alimentation sur PP_HARMONIE
+2. Exécution des scripts SQL d'alimentation sur HARMONIE
    - Régionalisation 
      - Script [EXPERTISE_AREA.sql](/projects/activity-calendar/mex/v2.9/sql/EXPERTISE_AREA.sql)
      - Status : OK
@@ -24,13 +27,13 @@ Mode opératoire
      - Script [ACTIVITY_CALENDAR2PERSON_POPULATE.sql](/projects/activity-calendar/mex/v2.9/sql/ACTIVITY_CALENDAR2PERSON_POPULATE.sql)
      - Status : OK (192 339 lignes inséré) 
 3. Déclaration de l'application Opus en BDD
-   - Script [SOFTWARE.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE.sql)
+   - Script [SOFTWARE.sql](/projects/activity-calendar/mex/v2.9/sql/mep/SOFTWARE.sql)
    - Status : OK
 4. Déclaration des propriétés de l'application Opus en BDD   
-   - Script [SOFTWARE_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/SOFTWARE_PROPERTY.sql)
+   - Script [SOFTWARE_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/mep/SOFTWARE_PROPERTY.sql)
    - Status : OK
 5. Paramétrage du programme
-    - Script [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/PROGRAM_PROPERTY.sql)
+    - Script [PROGRAM_PROPERTY.sql](/projects/activity-calendar/mex/v2.9/sql/mep/PROGRAM_PROPERTY.sql)
 6. Modification de la structure de la table USER_EVENT
     - Script [USER_EVENT_MODIFICATION.sql](/projects/activity-calendar/mex/v2.9/sql/USER_EVENT_MODIFICATION.sql)
    
@@ -43,24 +46,11 @@ Mode opératoire
    - Status : OK
    
 9. Fichier de configuration
-    - `application-valOpusActivite.properties`
-        - Configuration à la BDD
-           ```
-               spring.datasource.url=jdbc:oracle:thin:@PP_HARMONIE
-               spring.datasource.platform=oracle
-               spring.datasource.username=SIH2_ADAGIO_DBA_SUMARIS_MAP
-               spring.datasource.password=
-           ```
-    - Nom de l'application
-        ```    
-            sumaris.name=OpusActivite
-        ```
-    - Status : 
-10. Déclaration de l'application dans isival
-   - opus-app-activite
-     - deploy_docker_val2 
-   - opus-pod-activite
-     - deploy_docker_val2
+    - CF [Mantis #66569](https://forge.ifremer.fr/mantis/view.php?id=66569)
+    - Status : OK 
+10. Déclaration de l'application dans la wiz
+    - Backend (Le pod) : [Mantis #66569](https://forge.ifremer.fr/mantis/view.php?id=66569)
+    - Frontend (L'app) : [Mantis #66570](https://forge.ifremer.fr/mantis/view.php?id=66570)
 11. Paramétrage de la stratégie
    - Duplication de la dernière stratégie (Sur opus-activite)
    - Nettoyage des niveaux d'acquisition de la nouvelle stratégie (identifiant de la stratégie à renseigner)
@@ -74,11 +64,6 @@ delete pmfm_strategy where strategy_fk = 2447 and ACQUISITION_LEVEL_FK in ('FISH
    - Ajout des min/max sur les PMFMs nombre de jours d'homme et de mer
    - Modifier l'ordre du PMFM "Nombre de jour de pêche" avec la valeur "2" (sinon les 2 pmfm "Nombre de jours de mer" et "Nombre de jours de pêche" sont inversés)
 
-### Déploiement de l'application par RIC
-
-- Backend (Le pod) : [Mantis #66569](https://forge.ifremer.fr/mantis/view.php?id=66569)
-- Frontend (L'app) : [Mantis #66570](https://forge.ifremer.fr/mantis/view.php?id=66570)
-- Fiche signalétique : [sih/opus-activite](https://dev-ops.gitlab-pages.ifremer.fr/documentation/service_datasheet/scientific/environment/sih/opus-activite)
 
 ### Tests de l'application 
 
@@ -130,7 +115,7 @@ Difficultés rencontrées :
     - Problème de changelog sur le schéma de mapping présent dans le pod et non appliqué
       - Impact sur la correction de la fonction d'import des calendriers
 - Disponibilité des ressources RIC pour faire la MEP applicative
-  - Une seule personne avec un empoi du temps très chargé
+  - Une seule personne avec un emploi du temps très chargé
 - Disponibilité des ressources ISI pour faire les tests de non régression 
   - IMAGiNE, Synchronistation Allegro, Allegro
   - Absence côté ISI
@@ -146,7 +131,7 @@ Axes d'amélioration :
 
 Points positifs : 
 
-- 2ème environnement de préproduction pour jouer la MEP (4 fois)
-- Tests de non régression pertinent, permettant d'éviter des problèmes en production
+- 2ème environnement de préproduction pour jouer la MEP (jouée 4 fois)
+- Tests de non régression pertinents, permettant d'éviter des problèmes en production
   - ObsDeb
   - IMAGiNE
