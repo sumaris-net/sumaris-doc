@@ -109,6 +109,8 @@ En production et préproduction avec le cas : 2025;RU;938347;PESCA RUN
 
 Ticket réouvert [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872)
 
+> Corrigé en 2.9.29.5
+
 ### REX de la mise en exploitation d'Opus Activité
 
 Difficultés rencontrées : 
