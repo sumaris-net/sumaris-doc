@@ -81,16 +81,33 @@ delete pmfm_strategy where strategy_fk = 2447 and ACQUISITION_LEVEL_FK in ('FISH
 
 ### Tests de l'application 
 
-Erreurs à l'issue de la MEP :
+- Erreurs à l'issue de la MEP :
 
-- Problème d'erreur des upgrade des websockets : 
-  - Corrigé au niveau de la configuration du pod [Mantis 66569](https://forge.ifremer.fr/mantis/view.php?id=66569), note 0216247
-- Problème d'indexation ElasticSearch : Il manque des entrées dans ES pour les navires
-    - Exemple : Navire 104641
-        - Validation ES : 14 entrées
-        - Exploitation ES : 2 entrées
-    - Conséquence : L'importation des calendriers d'activité sur 2025 est partielle
-    - En cours d'identification. Désactivation de l'indexation ES en attendant
+  - Problème d'erreur des upgrade des websockets : 
+    - Corrigé au niveau de la configuration du pod [Mantis 66569](https://forge.ifremer.fr/mantis/view.php?id=66569), note 0216247
+  - Problème d'indexation ElasticSearch : Il manque des entrées dans ES pour les navires
+      - Exemple : Navire 104641
+          - Validation ES : 14 entrées
+          - Exploitation ES : 2 entrées
+      - Conséquence : L'importation des calendriers d'activité sur 2025 est partielle
+      - En cours d'identification. Désactivation de l'indexation ES en attendant
+
+
+- Erreur sur la création d'un calendrier et sur la création d'un navire :
+````
+select SIH2_ADAGIO_DBA_SUMARIS_MAP.vessel_seq.nextval from dual
+Jan 21 11:00:07 visi-docker02-val dockersvc_opus-activite-pod[1139907]: 2025-01-21 11:00:07,210 ERROR [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper     : ORA-02289: la séquence n'existe pas
+````
+
+Manque un grant sur vessel_seq pour SIH2_ADAGIO_DBA_SUMARIS_MAP (dans le MEX d'ObsMer)
+
+- Encore l'erreur du ticket 827:
+
+ORA-01400: impossible d'insérer NULL dans ("SIH2_ADAGIO_DBA"."FISHING_AREA"."LOCATION_FK")
+
+En production et préproduction avec le cas : 2025;RU;938347;PESCA RUN
+
+Ticket réouvert [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872)
 
 ### REX de la mise en exploitation d'Opus Activité
 
