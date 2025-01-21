@@ -78,6 +78,7 @@ delete pmfm_strategy where strategy_fk = 2447 and ACQUISITION_LEVEL_FK in ('FISH
 
 - Backend (Le pod) : [Mantis #66569](https://forge.ifremer.fr/mantis/view.php?id=66569)
 - Frontend (L'app) : [Mantis #66570](https://forge.ifremer.fr/mantis/view.php?id=66570)
+- Fiche signalétique : [sih/opus-activite](https://dev-ops.gitlab-pages.ifremer.fr/documentation/service_datasheet/scientific/environment/sih/opus-activite)
 
 ### Tests de l'application 
 
