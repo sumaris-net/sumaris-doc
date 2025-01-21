@@ -8,7 +8,7 @@
   .
   {{
 <font color=grey>Objectif d'enquête directe ?* | { (X) <font color=grey><b>Oui | () <font color=grey>Non }
-    Enquête éco ?* | { (X) <b>Oui | () Non }} |
+<font color=grey>Enquête éco ?* | { (X) <font color=grey><b>Oui | () <font color=grey>Non }} |
   }
 .
     <b>Observateur(s)

@@ -126,6 +126,7 @@ Axes d'amélioration :
 - Améliorer le processus d'application des changelogs [#703](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/703)
 - Prévoir les demandes de MEP côté RIC très en avance
   - Fiche signalétique, Mantis, Mail assistance
+- Insister auprès des développeurs / MOE pour une meilleure recette de leur correctif
 - Fixer les release à déployer en production en avance
   - Indispensable pour RIC
 
