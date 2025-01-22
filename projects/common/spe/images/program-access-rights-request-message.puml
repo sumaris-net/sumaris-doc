@@ -1,0 +1,27 @@
+@startsalt
+{
+    {+
+        {* <size:16><b>  Nouveau message}
+        .
+        { | . | . | . | . | Type d'envoi * | . | . | . | . | }
+        { | . | . | . | . | ^E-mail                                             ^ | . | . | . | . | }
+        { | . | . | . | . | Destinataire * | . | . | . | . | }
+        { | . | . | . | . | ^Managers DolphinFREE                               ^ | . | . | . | . | }
+        { | . | . | . | . | Objet * | . | . | . | . | }
+        { | . | . | . | . | {+ <size:12>Demande de droits sur le programme de collecte DolphinFREE                          </size> } | . | . | . | . | }
+        { | . | . | . | . | Message * | . | . | . | . | }
+        { | . | . | . | . | {+
+                                <size:12>Votre message...                                                                                                   </size>
+                                .
+                                .
+                                .
+                                .
+                                .
+                                .
+                            } | . | . | . | . | }
+        .
+        { | . | . | . | . | [<b>Envoyer] | [Annuler] | }
+        .
+    }
+}
+@endsalt
