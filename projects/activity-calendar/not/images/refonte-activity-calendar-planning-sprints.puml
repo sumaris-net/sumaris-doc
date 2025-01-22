@@ -166,19 +166,24 @@ N(9, 12)  is colored in green
 [Testing8] requires 1 week and starts the 22th of September 2024
 [Demo MOA 6] happens 3 day after [Testing8]'s end
 
-[r2.9.25.x (enh / bugs)] as [TASK9] requires 5 weeks and starts the 4th of November 2024
-[TASK9] is colored in green
+[r2.9.25] as [TASK9] requires 4 weeks and starts the 4th of November 2024
+[TASK9] is colored in grey
 [TASK8]->[TASK9]
 
-[Validation / MCO] as [VAL] requires 4 week and starts the 24vth of November 2024
+[2.9.29.4] as [TASK11] requires 4 weeks and starts the 4th of November 2024
+[TASK11] is colored in grey
+[TASK9]->[TASK11]
+
+
+[Validation / MCO] as [VAL] requires 4 week and starts the 2th of December 2024
 [VAL] is colored in orange
 
 2024/12/22 to 2025/01/06 is closed
 
-[MEP] as [PROD] requires 5 days and starts the 7th of January 2025
+[MEP] as [PROD] requires 15 days and starts the 07th of January 2025
 [PROD] is colored in violet
 
-[Opus Editing] as [EDIT] requires 4 weeks and starts the 13th of January 2025
+[Opus Editing] as [EDIT] requires 8 weeks and starts the 23th of January 2025
 [EDIT] is colored in violet
 
 [SIH] as [Séminaire SIH] requires 8 days and starts the 9th December 2024
