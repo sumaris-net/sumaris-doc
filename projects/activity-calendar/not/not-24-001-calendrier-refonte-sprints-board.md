@@ -10,17 +10,18 @@
 
 ## Planning Demonstration MOA
 
-| **Sprint**   | **Milestone** | **Release**       | **MOA Demo for testing** | **Coord. Demo for presentation**           | **Status**   |
-|--------------|---------------|-------------------|--------------------------|--------------------------------------------|--------------|
-| Sprint 1     | 26/04/2024    | 2.9.0-alpha17     | -                        | -                                          | Closed       |
-| Sprint 2     | 24/05/2024    | 2.9.3-alpha18     | 13/06/2024               | -                                          | Closed       |
-| Sprint 3     | 21/06/2024    | 2.9.19            | 09/07/2024               | -                                          | Closed       |
-| Sprint 4     | 19/07/2024    | 2.9.20.1          | 20/08/2024               | -                                          | Closed       |
-| Sprint 5     | 16/08/2024    | 2.9.21            | 19/09/2024               | 26/09/2024                                 | Closed       |
-| Sprint 6     | 13/09/2024    | 2.9.22            | 19/09/2024               | 26/09/2024                                 | Closed       |
-| Sprint 7     | 04/10/2024    | 2.9.23            | 15/10/2024               | -                                          | Closed       |
-| **Sprint 8** | **01/11/2024**    | **2.9.24**        | **13/11/2024**           | -                                          | **On going** |
-| Sprint 9     | 22/11/2024    | 2.9.25            | -                        | -                                          | To do        |
+| **Sprint** | **Milestone** | **Release**   | **MOA Demo for testing** | **Coord. Demo for presentation** | **Status** |
+|------------|---------------|---------------|--------------------------|----------------------------------|------------|
+| Sprint 1   | 26/04/2024    | 2.9.0-alpha17 | -                        | -                                | Closed     |
+| Sprint 2   | 24/05/2024    | 2.9.3-alpha18 |                          | -                                | Closed     |
+| Sprint 3   | 21/06/2024    | 2.9.19        | 13/06/2024               | -                                | Closed     |
+| Sprint 4   | 19/07/2024    | 2.9.20.1      | 09/07/2024               | -                                | Closed     |
+| Sprint 5   | 16/08/2024    | 2.9.21        |                          |                                  | Closed     |
+| Sprint 6   | 13/09/2024    | 2.9.22        | 20/08/2024               | -                                | Closed     |
+| Sprint 7   | 04/10/2024    | 2.9.23        | 19/09/2024               | 26/09/2024                       | Closed     |
+| Sprint 8   | 01/11/2024    | 2.9.24        | 15/10/2024               | -                                | Closed     |
+| Sprint 9   | 22/11/2024    | 2.9.25        | 13/11/2024               | -                                | Closed     |
+| Sprint 10  | 10/01/2024    | 2.9.29.4      | -                        | -                                | Closed     |
 <!-- .element: class="font-size-extra-small" -->
 
 ---
@@ -450,3 +451,17 @@
 - Rapports
   - Correction de style
   - Bugs et évolutions sur les formulaires vierge, données et avancement
+
+## Calendrier d'activité - Sprint 10 - Issue Board
+
+- **Start date** : 02/12/2024
+- **End date** : 10/01/2025
+- **Milestone** : 2.9.29.4
+- **Goal** : Bugs correction
+- **Status** : Done
+- **Deployement** : Done
+- [gitlab Issues board](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/boards/873?label_name[]=ACTIFLOT&milestone_title=2.9.29.4)
+
+**Fonctionnalités du sprint 10**
+
+- Corrections des derniers bugs
