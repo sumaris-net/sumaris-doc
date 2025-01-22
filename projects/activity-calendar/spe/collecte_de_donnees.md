@@ -19,6 +19,7 @@
 - [Calendrier d'activité > Carte](#calendrier-dactivité--carte)
 - [Calendrier d'activité > Contrôle à la saisie](#calendrier-dactivité--contrôle-à-la-saisie)
 - [Calendrier d'activité > Régionalisation](#calendrier-dactivité--régionalisation)
+- [Calendrier d'activité > Rapports](/projects/activity-calendar/spe/restitution.md)
 
 
 ---
@@ -41,9 +42,9 @@ Il faut donc compter sur une mise en production au plus tard mi janvier pour une
 
 Les saisies bureau et tablette sont envisagées.
 
-> Proposition à valider : 
-> - Dans un 1er temps : se focaliser sur la saisie bureau (pc) avec un mode déconnecté car les connexions internets ne sont pas stables en outre-mer
-> - Dans un 2nd temps : se focaliser sur la saisie terrain (tablette/smartphone) sans prédocumentation
+> Propositions validées : 
+> - Dans un 1er temps : se focaliser sur la saisie bureau (pc) 
+> - Dans un 2nd temps : se focaliser sur la saisie terrain (tablette/smartphone) sans prédocumentation et prévoir un mode déconnecté car les connexions internets ne sont pas stables en outre-mer
 
 ---
 ## Gestion des droits
@@ -215,9 +216,9 @@ Le fichier csv d'import est basé sur la feuille de route (cf [mantis 61967](htt
 #### Scénario principal
 
 1. Le responsable demande l'import des calendriers d'activité
-2. Le responsable sélectionne le fichier csv contenant les calendriers d'activité à importer
+2. Le responsable sélectionne le fichier csv contenant les calendriers d'activité à importer (Drag and Drop ou bouton "Parcourir")
 3. Le responsable consulte l'avancement de l'import
-   * L'avancement est disponible dans le bandeau de gauche dans la "liste des tâches en cours"
+   * L'avancement est disponible dans le bandeau de gauche dans la "Liste des tâches en cours"
 4. Le responsable consulte le status de l'importation dans le bandeau de gauche dans les "Notifications"
    * Le status indique "succès" ou "erreur"
    * La date d'exécution est indiquée
@@ -228,9 +229,10 @@ Le fichier csv d'import est basé sur la feuille de route (cf [mantis 61967](htt
        *  Avertissement(s) : 0
        *  Erreur(s) : 0
        *  Status: SUCCESS
+   * En cas d'erreur ou d'avertissement, le responsable peut afficher le détail en cliquant sur le bouton "Afficher le journal"
 5. Un saisisseur peut ensuite consulte et éditer les calendriers d'activité qui ont été importés
 
-Les commentaires des calendriers N-1, important pour les saisisseurs, sont recopiés vers les calendriers de l'année N qui ont été importés.
+**Persistance des commentaire** : Les commentaires des calendriers N-1, important pour les saisisseurs, sont recopiés vers les calendriers de l'année N qui ont été importés.
 
 ---
 ## Calendrier d'activité > Général
@@ -533,7 +535,7 @@ A spécifier : en attente POC
 
 **REF: ACTIVITY_CALENDAR/CONTROL**
 
-Contrôle à la saisie et à la sauvegarde. Les contrôles suivants sont implémentés à la saisie : 
+Contrôles à la saisie et à la sauvegarde. Les contrôles suivants sont implémentés à la saisie : 
   - Présence de champs obligatoires, si Inactif renseigné
     - Port d'exploitation
   - Présence de champs obligatoires, si Actif renseigné
@@ -622,12 +624,19 @@ Les champs concernés par la régionalisation sont les suivants :
 
 #### Scénario principal
 
+La zone de compétence est à initaliser à la première connexion du saisisseur, dans les paramètres de l'utilisateurs : 
+- Le saisisseur sélectionne dans le menu de gauche, l'option "Paramètres"
+- Le saisisseur clique sur le bouton "AffICHER PLUS"
+    * Il recherche l'option "Zone de compétence" dans la liste et ajoute la zone de compétence désirée
+    * Il sauvegarde les paramètres
+
+Il peut modifier la zone de compétence sur un calendrier :
+
 1. Dans l'onglet calendrier, le saisisseur clique sur les options du calendrier
 2. Le saisisseur déroule le menu "Zone de compétence ..."
 3. Le saisisseur sélectionne une zone de compétence dans la liste
 4. La zone de compétence est appliquée au calendrier courant
-  * La zone de compétence est affichée dans le fil d'ariane
-  * Les champs cités plus haut sont limités dans leur valeur. Les valeurs disponibles correspondent à la zone de compétence activée.
+  * Les champs cités plus hauts sont limités dans leur valeur. Les valeurs disponibles correspondent à la zone de compétence activée.
 
 **Variante(s) :**
 
@@ -636,3 +645,4 @@ des navires n'appartient pas à la zone de compétence.
 
 4. La zone de compétence est appliquée au calendrier courant
   * Les champs dont les valeurs n'appartiennent pas à la zone de compétence sont en avertissements (fond de la cellule en orange)
+  * La copie de la prédocumentation génére un avertissement : "Les valeurs en dehors de la zone de compétence n'ont pas été collées."

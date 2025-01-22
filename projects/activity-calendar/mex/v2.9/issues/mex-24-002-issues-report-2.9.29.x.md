@@ -21,7 +21,7 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 
 | **Issue**                                                                         | **Goal**                                                          | **Priority** | **Release** | **Assignee** | 
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------|--------------|-------------|--------------|
-| Bug [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872) | Copie prédoc (régionalisation)                                    | major        | 2.9.29.5    | DEV          |
+| Bug [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872) | Copie prédoc (régionalisation)                                    | major        | 2.9.29.6    | DEV          |
 | Bug [#914](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/914) | Erreur dans les logs                                              | lower        | 2.9.29.6    | DEV          |
 | Bug [#894](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/894) | Gradients de côte non adaptés                                     | major        | 2.9.29.30   | DEV          |
 | Bug [#875](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/875) | Warning régionalisation prédoc                                    | major        | 2.9.29.30   | DEV          |
