@@ -1,0 +1,17 @@
+@startsalt
+{
+    {+
+        .
+        { | . | . | . | . | <size:16><b>                        Bienvenue sur le site web SUMARiS ! | . | . | . | . | }
+        { | . | . | . | . | Base de données partagée pour des programmes de collecte de données halieutiques. | . | . | . | . | }
+        .
+        { | . | . | . | . | <size:12>            Vous n'avez actuellement aucun droit d'accès à un programme de collecte. | . | . | . | . | }
+        .
+        { | . | . | . | . | [<b>DEMANDER L'ACCÈS À UN PROGRAMME DE COLLECTE                ] | . | . | . | . | }
+        { | . | . | . | . | [<b>MON COMPTE                                                 ] | . | . | . | . | }
+        { | . | . | . | . | <size:12>                                                Vous n'êtes pas <b>Utilisateur</b> ? | . | . | . | . | }.
+        { | . | . | . | . | <u>                                                     Déconnecter ce compte | . | . | . | . | }.
+        .
+    }
+}
+@endsalt
