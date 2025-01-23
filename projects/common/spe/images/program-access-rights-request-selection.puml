@@ -1,13 +1,13 @@
 @startsalt
 {
     {+
-        {* <size:16><b>  Programme de collecte}
-        .
-        { | . | . | . | . | Sélectionner le programme de collecte pour lequel demander les droits d'accès : | . | . | . | . | }
-        { | . | . | . | . | ^DolphinFREE                                        ^ | . | . | . | . | }
-        .
-        { | . | . | . | . | [<b>Suivant] | [Annuler] | }
-        .
+        {* <color:dddddd> | <size:16><b>Programme de collecte} | * | * | * | * | * | * | * | *
+        . | . | . | . | . | .
+        <color:ffffff>++ | Sélectionner le programme de collecte pour lequel demander les droits d'accès : | * | * | * | <color:ffffff>++
+        . | ^DolphinFREE                                        ^ | * | * | * | .
+        . | . | . | . | . | .
+        . | [<b>Suivant] | . | [Annuler] | . | .
+        . | . | . | . | . | .
     }
 }
 @endsalt
