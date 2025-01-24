@@ -9,7 +9,6 @@ Table des matières
 <br>
 
 <!-- TOC -->
-* [Spécifications des règles de gestion des droits d'accès des utilisateurs aux programmes de collecte](#spécifications-des-règles-de-gestion-des-droits-daccès-des-utilisateurs-aux-programmes-de-collecte)
 * [Demandeur](#demandeur)
   * [Rôles éligibles](#rôles-éligibles)
   * [Écran d'accueil](#écran-daccueil)
@@ -120,7 +119,7 @@ Chaque ligne de la liste comprend les éléments suivants :
      * Hard delete ou soft delete ?
 
 La dernière ligne de la liste comprend un lien cliquable "+ Ajouter" :
- * Affichage vers la [Fenêtre de sélection du programme de collecte](#fenêtre-de-sélection-du-programme-de-collecte)
+ * Affichage de la [Fenêtre de sélection du programme de collecte](#fenêtre-de-sélection-du-programme-de-collecte)
 
 # Valideur
 
