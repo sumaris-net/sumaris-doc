@@ -3,8 +3,10 @@
     {+
         {* <color:dddddd> | <size:16><b>Programme de collecte} | * | * | * | * | * | * | * | *
         . | . | . | . | . | .
-        <color:ffffff>++ | Sélectionner le programme de collecte pour lequel demander les droits d'accès : | * | * | * | <color:ffffff>++
-        . | ^DolphinFREE                                        ^ | * | * | * | .
+        <color:ffffff>++ | Programme de collecte pour lequel demander les droits d'accès : | * | * | * | <color:ffffff>++
+        . | ^DOLPHINFREE - Programme DOLPHINFREE       ^ | * | * | * | .
+        <color:ffffff>++ | Type de droits : | * | * | * | <color:ffffff>++
+        . | ^Observateur                               ^ | * | * | * | .
         . | . | . | . | . | .
         . | [<b>Suivant] | . | [Annuler] | . | .
         . | . | . | . | . | .
