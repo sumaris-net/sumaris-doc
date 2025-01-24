@@ -71,10 +71,12 @@ delete pmfm_strategy where strategy_fk = 2447 and ACQUISITION_LEVEL_FK in ('FISH
 
   - Problème d'erreur des upgrade des websockets : 
     - Corrigé au niveau de la configuration du pod [Mantis 66569](https://forge.ifremer.fr/mantis/view.php?id=66569), note 0216247
-  - Problème d'indexation ElasticSearch : Il manque des entrées dans ES pour les navires
+  - Problème d'indexation ElasticSearch [#915](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/915): Il manque des entrées dans ES pour les navires
       - Exemple : Navire 104641
           - Validation ES : 14 entrées
           - Exploitation ES : 2 entrées
+      - Piste : augmenter le timeout dans le transfert des données 
+        - spring.elasticsearch.socket-timeout=30000 au lieu de 5s
       - Conséquence : L'importation des calendriers d'activité sur 2025 est partielle
       - En cours d'identification. Désactivation de l'indexation ES en attendant
 
@@ -96,6 +98,23 @@ En production et préproduction avec le cas : 2025;RU;938347;PESCA RUN
 Ticket réouvert [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872)
 
 > Corrigé en 2.9.29.5
+
+- Problème sur l'import de la feuille de route 
+  - Rapport de l'import 
+    - Insertion(s) : 5818
+    - Mise(s) à jour : 258
+    - Avertissement(s) : 0
+    - Erreur(s) : 0
+    - Status: SUCCESS
+
+La mise à jour des 258 calendriers à vidée les données saisie dans les tables filles.
+
+Bug [#issue 916](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/916)
+
+Procédure de récupération des données : 
+- Récupération des données : Restauration de HARMONIE sur PP_HARMONIE (date de la sauvegarde 23/01/2025 12:00) 
+- Réinjection des données (à compléter) : 
+  - Script [UPDATE_PP_HARMONIE_BACKUP.sql](/projects/activity-calendar/mex/v2.9/sql/preproduction/UPDATE_PP_HARMONIE_BACKUP.sql)
 
 ### REX de la mise en exploitation d'Opus Activité
 

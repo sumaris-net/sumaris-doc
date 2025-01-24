@@ -19,14 +19,15 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 [Bugs issues](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/?sort=created_date&state=opened&label_name%5B%5D=ACTIFLOT&not%5Blabel_name%5D%5B%5D=Done&not%5Bmilestone_title%5D=3.0.0&not%5Bmilestone_title%5D=2.10&not%5Bassignee_username%5D%5B%5D=cd061a4&not%5Bassignee_username%5D%5B%5D=vf22ca9&first_page_size=20)
 
 
-| **Issue**                                                                         | **Goal**                                                          | **Priority** | **Release** | **Assignee** | 
-|-----------------------------------------------------------------------------------|-------------------------------------------------------------------|--------------|-------------|--------------|
-| Bug [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872) | Copie prédoc (régionalisation)                                    | major        | 2.9.29.6    | DEV          |
-| Bug [#914](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/914) | Erreur dans les logs                                              | lower        | 2.9.29.6    | DEV          |
-| Bug [#894](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/894) | Gradients de côte non adaptés                                     | major        | 2.9.29.30   | DEV          |
-| Bug [#875](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/875) | Warning régionalisation prédoc                                    | major        | 2.9.29.30   | DEV          |
-| Bug [#791](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/791) | delete sur la vue SIH2_ADAGIO_DBA_SUMARIS_MAP.STRATEGY            | major        | 2.9.29.30   | MOE          |
-| Bug [#915](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/915) | Indexation ElasticSearch partielle en production                  | major        | 2.9.29.6    | MOE          |
+| **Issue**                                                                         | **Goal**                                                  | **Priority** | **Release** | **Assignee** | 
+|-----------------------------------------------------------------------------------|-----------------------------------------------------------|--------------|-------------|--------------|
+| Bug [#872](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/872) | Copie prédoc (régionalisation)                            | major        | 2.9.29.30   | DEV          |
+| Bug [#914](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/914) | Erreur dans les logs                                      | lower        | 2.9.29.30   | DEV          |
+| Bug [#894](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/894) | Gradients de côte non adaptés                             | major        | 2.9.29.30   | DEV          |
+| Bug [#875](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/875) | Warning régionalisation prédoc                            | major        | 2.9.29.30   | DEV          |
+| Bug [#791](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/791) | delete sur la vue SIH2_ADAGIO_DBA_SUMARIS_MAP.STRATEGY    | major        | 2.9.29.30   | MOE          |
+| Bug [#915](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/915) | Indexation ElasticSearch partielle en production          | major        | 2.9.29.30   | MOE          |
+| Bug [#916](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/916) | Importation > Suppression des données sur une mise à jour | severe       | 2.9.29.30   | MOE          |
 
 
 ## Tickets ouverts pour la V2
