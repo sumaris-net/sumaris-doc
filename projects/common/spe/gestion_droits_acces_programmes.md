@@ -1,14 +1,11 @@
 # Spécifications des règles de gestion des droits d'accès des utilisateurs aux programmes de collecte
 
-<div style="text-align: center; font-size: x-large">
 Table des matières
-</div>
-
-<br>
-<br>
-<br>
 
 <!-- TOC -->
+* [Rappel](#rappel)
+  * [Profils d'utilisateurs](#profils-dutilisateurs)
+  * [Privilèges d'utilisateurs](#privilèges-dutilisateurs)
 * [Demandeur](#demandeur)
   * [Rôles éligibles](#rôles-éligibles)
   * [Écran d'accueil](#écran-daccueil)
@@ -20,16 +17,40 @@ Table des matières
   * [Interface de validation](#interface-de-validation)
 <!-- TOC -->
 
+# Rappel
+
+## Profils d'utilisateurs
+
+Il y a, dans l'application SUMARiS, quatre types de profils :
+
+| Profil         | Code          |
+|:---------------|---------------|
+| Administrateur | Administrator |
+| Superviseur    | Supervisor    |
+| Observateur    | Observer      |
+| Invité         | Guest         |
+
+Le type de profil est attribué par un _**Administrateur**_.
+
+## Privilèges d'utilisateurs
+
+Il y a, dans l'application SUMARiS, cing types de privilèges :
+
+| Profil                   | Code      |
+|:-------------------------|-----------|
+| Responsable de programme | Manager   |
+| Validateur               | Validator |
+| Qualificateur            | Qualifier |
+| Observateur              | Observer  |
+| Lecture seule            | Viewer    |
+
+Le type de privilège (droit d'accès) est attribué par un _**Responsable de programme**_.
+
 # Demandeur
 
 ## Rôles éligibles
 
-Le demandeur peut avoir les rôles suivants :
-
- * _**Invité**_
- * _**Observateur**_
- * _**Superviseur**_
- * _**Administrateur**_
+Le demandeur de droits d'accès à un programme de collecte peut avoir n'importe quel rôle, y compris _**Invité**_.
 
 ## Écran d'accueil
 
@@ -53,6 +74,14 @@ Elle comprend les composants suivants :
  * Liste déroulante _**Programmes de collecte**_
    * Sélection multiple
    * Affiche tous les programmes de collecte actifs de la base de données
+* Liste déroulante _**Type de droits**_
+    * Affiche tous les privilèges disponibles
+      * Responsable de programme
+      * Validateur
+      * Qualificateur
+      * Observateur
+      * Lecture seule
+    * "Observateur" par défaut
  * Bouton _**Suivant**_
    * Affichage de la [Fenêtre d'envoi d'un message de demande de droits](#fenêtre-denvoi-dun-message-de-demande-de-droits)
  * Bouton _**Annuler**_
@@ -103,7 +132,7 @@ Elle comprend les composants suivants :
 
 ## Écran Mon compte
 
-L'utilisateur aura accès, dans les données de son compte, à la liste des programmes de collecte auxquels il a souscrit.
+L'utilisateur a accès, dans les données de son compte, à la liste des programmes de collecte auxquels il a souscrit.
 
 ![Sélection du programme de collecte](images/program-access-rights-management-account.svg)
 
@@ -125,11 +154,6 @@ La dernière ligne de la liste comprend un lien cliquable "+ Ajouter" :
 
 ## Rôles éligibles
 
-Le valideur peut avoir les rôles suivants :
-
- * _**Superviseur**_
- * _**Administrateur**_
-
-S'il est _**Superviseur**_, il doit, en outre, avoir pour lui-même les droits d'accès pour le programme auquel il veut donner les droits à un autre utilisateur.
+Le valideur quelque soit son rôle, doit être _**Responsable de programme**_ pour le programme concerné.
 
 ## Interface de validation
