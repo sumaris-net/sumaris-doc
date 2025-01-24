@@ -7,8 +7,8 @@
         . | . | . | . | . | . | . | . | . | . | .
         . | <color:ffffff>++++ | Vous n'avez actuellement aucun droit d'accès à un programme de collecte. | * | * | * | * | * | * | <color:ffffff>++++ | .
         . | . | . | . | . | . | . | . | . | . | .
-        . | [<b>DEMANDER L'ACCÈS À UN PROGRAMME DE COLLECTE              ] | * | * | * | * | * | * | * | * | .
-        . | [<b>MON COMPTE                                               ] | * | * | * | * | * | * | * | * | .
+        . | [<b><size:14><&account-login></size> DEMANDER L'ACCÈS À UN PROGRAMME DE COLLECTE           ] | * | * | * | * | * | * | * | * | .
+        . | [<b><size:14><&person></size> MON COMPTE                                            ] | * | * | * | * | * | * | * | * | .
         . | . | . | <color:ffffff>++++++++ | Vous n'êtes pas <b>John DOE</b> ? | * | * | <color:ffffff>+++++++++ | . | . | .
         . | . | . | . | <color:ffffff>++ | <u>Déconnecter ce compte | <color:ffffff>++ | . | . | . | .
         . | . | . | . | . | . | . | . | . | . | .
