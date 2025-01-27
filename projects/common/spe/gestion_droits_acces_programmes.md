@@ -138,6 +138,7 @@ L'utilisateur a accès, dans les données de son compte, à la liste des program
 
 Chaque ligne de la liste comprend les éléments suivants :
  * Nom du programme de collecte
+ * Type de droits d'accès
  * Statut des droits d'accès
    * "Actif"
    * "En cours de validation"
