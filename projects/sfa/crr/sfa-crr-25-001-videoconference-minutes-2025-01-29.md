@@ -93,13 +93,13 @@ Query to be done :
 ## Troubleshooting : Vessels already observed list malfunction
 
 - Issue
-  - List is far too long to display on some locations
-    - Victoria
-    - Providence
-  - ![Vessel list screenshot](sfa-crr-25-001-img-01.png)
+  - List content seems not to be accurate
+    - Always the same, whatever the location
+    - ![Vessel list screenshot](sfa-crr-25-001-img-01.png)
+  - No possibility to select all the items at once
 - Requested fix
-  - Limiting list to a certain length
-    - TBD
+  - Restoring list accuracy
+  - Adding _**Select all**_ checkbox on top of the list
 
 > Questions :
 > - ?
