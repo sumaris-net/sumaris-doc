@@ -1,6 +1,6 @@
 # Projet PIFIL et DolphinFree
 
-"Captures accidebntelles de dauphins"
+"Captures accidentelles de dauphins"
 
 ## Documentation
 
