@@ -31,6 +31,8 @@
 - [Opération > Capture > Captures accidentelles > Remise à l'eau](#opération-capture-captures-accidentelles-remise-à-l-eau)
 - [Opération > Capture > Mesures indivuelles](#opération-capture-mesures-indivuelles)
 
+<!-- .element: class="font-size-extra-small" -->
+
 ---
 ## Documents
 
@@ -103,6 +105,7 @@ Un voyage peut présenter une marée observée (en mer, au débarquement), qui d
 
 ![ui-trip-table](/projects/obsmer/spe/images/trips-table.svg)
 
+---
 #### Scénario principal
 
 1. L'observateur sélectionne le menu "Marées" dans l'interface de l'arbre du menu.

@@ -20,8 +20,11 @@ All documents and source code are under [License GPL v3](./LICENSE), except user
 
 ## Launch slides
 
-- Run 
+- Install NodeJS (18+)
+
+- Install dependencies 
 ```
+cd <sumaris-doc>
 npm install
 npm run start
 ```
