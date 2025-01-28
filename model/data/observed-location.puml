@@ -1,0 +1,23 @@
+@startuml
+hide empty members
+
+class Vessel {
+}
+
+class ObservedLocation {
+  +id: Integer
+  +program: Program
+  +startDateTime: Date
+  +endDateTime: Date
+  +location: Location
+}
+
+ObservedLocation -up-> "1" Vessel
+ObservedLocation "1" *-right- "0..*" Landing
+ObservedLocation -left-> "0..*" Person: "observers"
+ObservedLocation "1" *-down- "0..*" ObservedLocationMeasurement: "     "
+
+Landing "1" *-down- "0..*" LandingMeasurement: "     "
+
+
+@enduml
