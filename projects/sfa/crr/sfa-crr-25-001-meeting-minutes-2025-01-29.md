@@ -26,34 +26,101 @@ SIH updates follow-up
 -->
 
 ---
-## Extraction queries creation
 
-Queries done (1/2) : 
-- Fichier flotte
-- P03_OBSDEB_CALENDRIER_MAREE
-- P03_OBSDEB_CALENDRIER
-- P03_OBSDEB_CAPTURE
-- P03_OBSDEB_CAPTURE_LOT
-- P03_OBSDEB_CAPTURE_INDIVIDU
-- P03_OBSDEB_COUT_VARIABLE
+## Logbook programs
 
----
-## Extraction queries creation
+- _**Sea Cucumber Fishery**_
+- _**Dropline Fishery**_
+- _**Lobster Fishery**_
+- _**Artisanal Fishery**_
+- _**Sport Fishery**_
+- _**Spanner Crab Fishery**_ (new)
+- _**Octopus Fishery**_ (new)
 
-Queries done (2/2) :
-- P03_OBSDEB_MAREE
-- P03_OBSDEB_OBSERVATEUR
-- P03_OBSDEB_OBSERVATION
-- P03_OBSDEB_OBSERVATION_OBS
-- P03_OBSDEB_OBSERVATION_NAVIRE
-- P03_OBSDEB_OPERATION
-- P03_OBSDEB_VENTES
+> Questions :
+> - _**Sea Cucumber**_ logbook to be renamed to _**JMA**_?
+> - _**GMA**_ logbook to be deleted?
 
 ---
+
+## Logbook programs
+
+- _**Operation**_ & _**Catch**_ screens
+  - _**Expenses**_
+    - Development ongoing
+  - _**Sales**_
+    - To be discussed with Landing data screen (next slide)
+- _**Sampling data**_ screen
+  - Programs settings to be done
+ 
+> Actions :
+> - Provide commercial species list for _**Sampling data screen**_ (SFA)
+
+---
+
+## Logbook programs
+
+- _**Landing data**_ screen
+- _**Sales**_ screen
+
+> Questions :
+> - Are landing data already entered in _**OBSDEB**_ program?
+> - Should landing data be linked to the logbook?
+> - Is logbook entered in DB after landing data?
+> - If no, what should be the procedure?
+
+---
+
+## Logbook programs
+
+- _**Commercial trip**_ and _**Research trip**_ identifier
+
+> Actions :
+> - New parameter to be added (EIS)
+
+---
+
+## Expenses UI
+
+- ?
+
+---
+
+## Sales UI
+
+- ?
+
+---
+
 ## Extraction queries creation
 
-Query to be done :
-- Deducted_Artisanal_Finss
+- Queries under development (1/2) :
+  - [ ] _**Fichier flotte**_
+  - [ ] _**P03_OBSDEB_CALENDRIER_MAREE**_
+  - [ ] _**P03_OBSDEB_CALENDRIER**_
+  - [ ] _**P03_OBSDEB_CAPTURE**_
+  - [ ] _**P03_OBSDEB_CAPTURE_LOT**_
+  - [ ] _**P03_OBSDEB_CAPTURE_INDIVIDU**_
+  - [ ] _**P03_OBSDEB_COUT_VARIABLE**_
+
+---
+
+## Extraction queries creation
+
+- Queries under development (2/2) :
+  - [ ] _**P03_OBSDEB_MAREE**_
+  - [ ] _**P03_OBSDEB_OBSERVATEUR**_
+  - [ ] _**P03_OBSDEB_OBSERVATION**_
+  - [ ] _**P03_OBSDEB_OBSERVATION_OBS**_
+  - [ ] _**P03_OBSDEB_OBSERVATION_NAVIRE**_
+  - [ ] _**P03_OBSDEB_OPERATION**_
+  - [ ] _**P03_OBSDEB_VENTES**_
+- Query to be done :
+  - [ ] _**Deducted_Artisanal_Finss**_
+
+---
+
+## Extraction queries creation
 
 > Questions :
 > - ?
@@ -62,22 +129,18 @@ Query to be done :
 > - ?
 
 ---
-## Adding vessel search option on _**Occasions**_ page
+
+## Adding vessel search option on _**Occasions**_ screen
 
 - New feature
 - Purpose
   - Facilitate staff to search for a vessel at any landing site
     - Some vessels can often move location
   - Easily locate a vessel whatever its actual location is
-- Feasibility
-  - TDB
-- Cost
-  - TDB
-- Schedule
-  - TBD
 
 ---
-## Adding vessel search option on _**Occasions**_ page
+
+## Adding vessel search option on _**Occasions**_ screen
 
 > Questions :
 > - ?
@@ -86,21 +149,17 @@ Query to be done :
 > - ?
 
 ---
-## Adding biological sampling on packet page
+
+## Adding biological sampling on _**Packets**_ screen
 
 - New feature
-  - Checkbox addition to the packet page
+  - Checkbox addition to _**Packets**_ screen
 - Purpose
   - Marking packets for biological sampling
-- Feasibility
-  - TDB
-- Cost
-  - TDB
-- Schedule
-  - TBD
 
 ---
-## Adding biological sampling on packet page
+
+## Adding biological sampling on _**Packets**_ screen
 
 > Questions :
 > - ?
@@ -109,7 +168,8 @@ Query to be done :
 > - ?
 
 ---
-## Vessels already observed list malfunction
+
+## _**Vessels already observed**_ list malfunction
 
 - Issue
   - List content seems not to be accurate
@@ -118,6 +178,7 @@ Query to be done :
   - No possibility to select all the items at once
 
 ---
+
 ## Vessels already observed list malfunction
 
 - Requested fix
@@ -131,28 +192,28 @@ Query to be done :
 > - ?
 
 ---
+
 ## Former tablet user name remaining
 
 - Issue
-  - Former enumerator name remaining on tablet as Recorder
+  - Former enumerator name remaining on tablet as _**Recorder**_
 ![Screenshot](/projects/sfa/crr/sfa-crr-25-001-img-02.png)
   - Jëlle Perrine
     - Former user of the tablet (no longer with SFA)
     - Should no longer appear on new entries
   - Graig Barbe
     - Current user of the tablet
-    - Should appear as Recorder on new entries
+    - Should appear as _**Recorder**_ on new entries
 
 ---
+
 ## Former tablet user name remaining
 
 > Questions :
-> - Is Craig Barbe identified with his own account on this tablet?
-
-> Actions :
-> - ?
+> - Is Graig Barbe identified with his own account on this tablet?
 
 ---
+
 ## SIH upgrade
 
 SIH upgrade from 2.8.12 to 2.9.29
