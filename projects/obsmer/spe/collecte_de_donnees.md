@@ -512,13 +512,17 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
 
 **Variante 3c** - Engin dormant (A REALISER)
 
-3. Si l'engin choisi est un engin dormant : autoriser date de début OP AVANT marée 
+3. Si l'engin choisi est un engin dormant alors la date de fin de l'opération doit être incluse dans la période de début et de fin de la marée mais la date de début de l'opération peut commencer avant le début de la marée
+   > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=6005
 
 **Variante 3d** - Engin traînant (A REALISER)
 
-3. Si l'engin choisi est un engin traînant : Empêcher date de début OP en dehors de la période de la marée
+3. Si l'engin choisi est un engin traînant alors 
+ - les dates de début et de fin de l'opération doivent être incluses dans la période de début et de fin de la marée
+ - les dates de début et de fin de l'opération ne doivent pas se chevaucher avec les dates de début et de fin d'une autre opération avec un engin traînant
+   > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=6005
 
-**Variante 3e** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+**Variante 3d** - Pêche en bœuf et navire associé (DEV A RÉALISER)
 
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
    Alors il devient obligatoire de saisir l'immatriculation du navire associé à l'opération.
