@@ -141,14 +141,13 @@ Query to be done :
     - Should no longer appear on new entries
   - Graig Barbe
     - Current user of the tablet
-    - Should also appear as Recorder on new entries
+    - Should appear as Recorder on new entries
 
 ---
 ## Former tablet user name remaining
 
 > Questions :
-> - How to set Craig Barbe as default Recorder on this tablet?
-> - How to avoid the issue to appear on any oncoming user tablet change? 
+> - Is Craig Barbe identified with his own account on this tablet?
 
 > Actions :
 > - ?
