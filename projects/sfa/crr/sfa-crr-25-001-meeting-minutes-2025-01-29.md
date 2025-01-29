@@ -211,7 +211,7 @@ SIH upgrade from 2.8.12 to 2.9.29
 - Pending issues
   - Modal windows to be developed
 - Schedule
-  - Tests to be performed
+  - Tests to be performed soon
 
 > Questions :
 > - ?
