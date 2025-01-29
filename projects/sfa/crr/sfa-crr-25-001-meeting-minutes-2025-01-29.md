@@ -50,11 +50,19 @@ SIH updates follow-up
     - Development ongoing
   - _**Sales**_
     - To be discussed with Landing data screen (next slide)
+
+---
+
+## Logbook programs
+
 - _**Sampling data**_ screen
-  - Programs settings to be done
+  - Programs settings to be done?
+
+> Questions :
+> - Are the biological sampling performed by fisherman or by an observer?
  
 > Actions :
-> - Provide commercial species list for _**Sampling data screen**_ (SFA)
+> - If by fisherman, provide commercial species list for _**Sampling data**_ screen (SFA)
 
 ---
 
@@ -63,12 +71,8 @@ SIH updates follow-up
 - _**Landing data**_ screen
 - _**Sales**_ screen
 
-> Questions :
-> - Are landing data already entered in _**OBSDEB**_ program?
->   - If so, _**Sales**_ screen is already existing
-> - Should landing data be linked to the logbook?
-> - Is logbook entered in DB after landing data?
-> - If no, what should be the procedure?
+> Actions :
+> - Using _**OBSDEB**_ program to collect landing and sales data
 
 ---
 
@@ -112,7 +116,7 @@ SIH updates follow-up
 ## Extraction queries creation
 
 > Questions :
-> - ?
+> - Some files have very close result (i.e. P03_OBSDEB_OBSERVATION and P03_OBSDEB_OBSERVATION_OBS). Can we merge them?
 
 > Actions : 
 > - ?
@@ -152,7 +156,7 @@ SIH updates follow-up
 
 > Questions :
 > - Which parameters to be collected?
-> - Individual or grouped parameters?
+> - Individual measurement (by species) or grouped evaluation (whole packet)?
 
 > Actions :
 > - To be quoted (EIS)
@@ -172,11 +176,10 @@ SIH updates follow-up
 ## Vessels already observed list malfunction
 
 - Requested fix
-  - Restoring list accuracy
-  - Adding _**Select all**_ checkbox on top of the list
+  - Restoring list accuracy by selected landing site
 
 > Questions :
-> - ?
+> - Adding _**Select all**_ button? or let the observer choose them one by one?
 
 > Actions :
 > - ?
@@ -209,7 +212,7 @@ SIH updates follow-up
 SIH upgrade from 2.8.12 to 2.9.29
 
 - Pending issues
-  - Modal windows to be developed
+  - Modal windows to be fixed
 - Schedule
   - Tests to be performed soon
 
