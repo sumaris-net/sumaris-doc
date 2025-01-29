@@ -45,7 +45,7 @@ SIH updates follow-up
 
 ## Logbook programs
 
-- _**Operation**_ & _**Catch**_ screens
+- _**Operation**_ and _**Catch**_ screens
   - _**Expenses**_
     - Development ongoing
   - _**Sales**_
@@ -65,6 +65,7 @@ SIH updates follow-up
 
 > Questions :
 > - Are landing data already entered in _**OBSDEB**_ program?
+>   - If so, _**Sales**_ screen is already existing
 > - Should landing data be linked to the logbook?
 > - Is logbook entered in DB after landing data?
 > - If no, what should be the procedure?
@@ -77,18 +78,6 @@ SIH updates follow-up
 
 > Actions :
 > - New parameter to be added (EIS)
-
----
-
-## Expenses UI
-
-- ?
-
----
-
-## Sales UI
-
-- ?
 
 ---
 
@@ -130,7 +119,7 @@ SIH updates follow-up
 
 ---
 
-## Adding vessel search option on _**Occasions**_ screen
+## Adding vessel search option on _**Occasion**_ screen
 
 - New feature
 - Purpose
@@ -140,7 +129,7 @@ SIH updates follow-up
 
 ---
 
-## Adding vessel search option on _**Occasions**_ screen
+## Adding vessel search option on _**Occasion**_ screen
 
 > Questions :
 > - ?
@@ -150,22 +139,23 @@ SIH updates follow-up
 
 ---
 
-## Adding biological sampling on _**Packets**_ screen
+## Adding biological sampling on _**Packet**_ screen
 
 - New feature
-  - Checkbox addition to _**Packets**_ screen
+  - 📊 button addition to _**Packet**_ screen
 - Purpose
   - Marking packets for biological sampling
 
 ---
 
-## Adding biological sampling on _**Packets**_ screen
+## Adding biological sampling on _**Packet**_ screen
 
 > Questions :
-> - ?
+> - Which parameters to be collected?
+> - Individual or grouped parameters?
 
 > Actions :
-> - ?
+> - To be quoted (EIS)
 
 ---
 
@@ -219,9 +209,9 @@ SIH updates follow-up
 SIH upgrade from 2.8.12 to 2.9.29
 
 - Pending issues
-  - ?
+  - Modal windows
 - Schedule
-  - ?
+  - Tests to be performed
 
 > Questions :
 > - ?
