@@ -9,7 +9,6 @@ SIH updates follow-up
 >
 > - Emilie AUGUSTIN (SFA)
 > - Juliette LUCAS (SFA)
-> - Claire PIERRE-LOUIS (SFA)
 > - Cindy ASSAN (SFA)
 > - Ludovic PECQUOT (EIS)
 > - Dorian MARCO (EIS)
@@ -20,81 +19,59 @@ SIH updates follow-up
 > Excused :
 >
 > - Benoît LAVENIER (EIS)
+> - Claire PIERRE-LOUIS (SFA)
 
 <!--
-> - Annisha LESPERANCE (SFA)
+ - Annisha LESPERANCE (SFA)
 -->
 
 ---
 
 ## Logbook programs
 
-- _**Sea Cucumber Fishery**_
-- _**Dropline Fishery**_
-- _**Lobster Fishery**_
-- _**Artisanal Fishery**_
-- _**Sport Fishery**_
-- _**Spanner Crab Fishery**_ (new)
-- _**Octopus Fishery**_ (new)
-
-> Questions :
-> - _**Sea Cucumber**_ logbook to be renamed to _**JMA**_?
-> - _**GMA**_ logbook to be deleted?
+- Logbooks list
+  - _**Sea Cucumber Fishery**_
+  - _**Dropline Fishery**_
+  - _**Lobster Fishery**_
+  - _**Artisanal Fishery**_
+  - _**Sport Fishery**_
+  - _**Spanner Crab Fishery**_ (new)
+  - _**Octopus Fishery**_ (new)
 
 ---
 
-## Logbook programs
-
-- _**Operation**_ & _**Catch**_ screens
+- _**Operation**_ and _**Catch**_ screens
   - _**Expenses**_
     - Development ongoing
   - _**Sales**_
     - To be discussed with Landing data screen (next slide)
-- _**Sampling data**_ screen
+- _**Sampling data**_ and _**Sales**_ screens
   - Programs settings to be done
- 
-> Actions :
-> - Provide commercial species list for _**Sampling data screen**_ (SFA)
+- _**Commercial trip**_ and _**Research trip**_ identifier to be added
 
 ---
 
-## Logbook programs
-
-- _**Landing data**_ screen
-- _**Sales**_ screen
-
-> Questions :
-> - Are landing data already entered in _**OBSDEB**_ program?
-> - Should landing data be linked to the logbook?
-> - Is logbook entered in DB after landing data?
-> - If no, what should be the procedure?
+> Statements :
+> - _**JMA**_ is an additional logbook for _**Sea Cucumber fishery**_
+> - Biological sampling performed by an observer (SFA staff)
+> - Logbook data and sampling data are two different documents
 
 ---
-
-## Logbook programs
-
-- _**Commercial trip**_ and _**Research trip**_ identifier
 
 > Actions :
-> - New parameter to be added (EIS)
-
----
-
-## Expenses UI
-
-- ?
-
----
-
-## Sales UI
-
-- ?
+> - _**GMA**_ logbook to be renamed _**JMA**_
+> - _**Octopus Fishery**_ logbook similar to _**Artisanal Fishery**_
+>   - Template to be shared (SFA)
+> - _**Spanner Crab Fishery**_ logbook new version to be shared (SFA)
+> - Bait table to be shared (SFA)
+> - Activate, adjust settings and re-test _**SIH-OPRDEB**_ (EIS)
+> - New optional parameter (commercial / research) to be added (EIS)
 
 ---
 
 ## Extraction queries creation
 
-- Queries under development (1/2) :
+- Queries under development :
   - [ ] _**Fichier flotte**_
   - [ ] _**P03_OBSDEB_CALENDRIER_MAREE**_
   - [ ] _**P03_OBSDEB_CALENDRIER**_
@@ -102,12 +79,6 @@ SIH updates follow-up
   - [ ] _**P03_OBSDEB_CAPTURE_LOT**_
   - [ ] _**P03_OBSDEB_CAPTURE_INDIVIDU**_
   - [ ] _**P03_OBSDEB_COUT_VARIABLE**_
-
----
-
-## Extraction queries creation
-
-- Queries under development (2/2) :
   - [ ] _**P03_OBSDEB_MAREE**_
   - [ ] _**P03_OBSDEB_OBSERVATEUR**_
   - [ ] _**P03_OBSDEB_OBSERVATION**_
@@ -115,22 +86,29 @@ SIH updates follow-up
   - [ ] _**P03_OBSDEB_OBSERVATION_NAVIRE**_
   - [ ] _**P03_OBSDEB_OPERATION**_
   - [ ] _**P03_OBSDEB_VENTES**_
+ 
+---
+
 - Query to be done :
   - [ ] _**Deducted_Artisanal_Finss**_
 
 ---
 
-## Extraction queries creation
-
-> Questions :
-> - ?
-
 > Actions : 
-> - ?
+> - Share a list of queries to be merged (EIS)
+> - Validate above list of queries from EIS (SFA)
+> - Merge _**P03_OBSDEB_OBSERVATION**_ and _**P03_OBSDEB_OBSERVATION_OBS**_ (EIS)
 
 ---
 
-## Adding vessel search option on _**Occasions**_ screen
+## Extraction logbook
+
+> Actions :
+> - Check and fix extraction for _**Dropline Fishery**_ logbook (EIS)
+
+---
+
+## Adding vessel search option on _**Occasion**_ screen
 
 - New feature
 - Purpose
@@ -138,34 +116,29 @@ SIH updates follow-up
     - Some vessels can often move location
   - Easily locate a vessel whatever its actual location is
 
----
-
-## Adding vessel search option on _**Occasions**_ screen
-
-> Questions :
-> - ?
-
 > Actions :
-> - ?
+> - Quick evaluation of work to be done (EIS)
 
 ---
 
-## Adding biological sampling on _**Packets**_ screen
+## Adding biological sampling on _**Packet**_ screen
 
 - New feature
-  - Checkbox addition to _**Packets**_ screen
+  - 📊 button addition to _**Packet**_ screen
 - Purpose
-  - Marking packets for biological sampling
+  - Entering biological sampling into packet
+
+![Biological sampling button addition](/projects/sfa/crr/sfa-crr-25-001-img-03.png)
 
 ---
 
-## Adding biological sampling on _**Packets**_ screen
-
-> Questions :
-> - ?
+> Statements :
+> - Individual measurements
+> - Only whole length (for all species) to be measured
+> - Adding 📊 button just before action button column
 
 > Actions :
-> - ?
+> - To be quoted (EIS)
 
 ---
 
@@ -179,17 +152,11 @@ SIH updates follow-up
 
 ---
 
-## Vessels already observed list malfunction
-
-- Requested fix
-  - Restoring list accuracy
-  - Adding _**Select all**_ checkbox on top of the list
-
-> Questions :
-> - ?
+> Statements :
+> - No need of _**Select all**_ function
 
 > Actions :
-> - ?
+> - Restoring list accuracy by selected landing site (EIS)
 
 ---
 
@@ -207,10 +174,9 @@ SIH updates follow-up
 
 ---
 
-## Former tablet user name remaining
-
-> Questions :
-> - Is Graig Barbe identified with his own account on this tablet?
+> Statements :
+> - User logged in with wrong account
+> - Issue already solved by SFA
 
 ---
 
@@ -219,12 +185,22 @@ SIH updates follow-up
 SIH upgrade from 2.8.12 to 2.9.29
 
 - Pending issues
-  - ?
+  - Database migration evaluation
+  - Modal windows to be fixed
+  - Specific screens to be evaluated
 - Schedule
-  - ?
-
-> Questions :
-> - ?
+  - Tests to be performed soon
 
 > Actions :
-> - ?
+> - SFA database copy for test data update
+> - Non regression tests to be performed (EIS)
+ 
+---
+
+## SFA name and logo change
+
+> Actions :
+> - SFA new logo to be shared (SFA)
+>   - SVG (preferred) or PNG format
+> - Logo to be updated (EIS)
+> - Name to be changed to _**Seychelles Fisheries Authority**_ (EIS)
