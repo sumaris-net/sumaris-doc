@@ -13,12 +13,16 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 ## Bonnes pratiques
 
 - Ne pas écrire à harmonie@ifremer.fr si cela ne nécessite pas de suivi par un ticket
+  - Passer par le formulaire de remonter d'incident
 - Attention à ne pas doublonner les tickets
 - Affecter les tickets aux bonnes personnes 
   - MOA : besoin de réponse sur un comportement
   - MOE : besoin analyse/correction sur bug/limitation
 - Ne pas créer de Mantis (suivi par gitlab issue)
-- Ajouter en copie Charlène et Soizic dans le suivi des bugs
+
+Workflow des tickets du guichet Opus Activité -> Assistance 1 SISMER -> Exploitation (Xavier) -> MOA (Emilie) -> MOE (Vincent) -> Equipe Dév.
+
+![ui-workflow](/projects/activity-calendar/mex/v2.9/otrs/images/guichet-workflow.svg)
 
 ---
 
@@ -36,12 +40,12 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 
 | **Number**                                                                             | **Content**                                  | **Priority** | **Nom / Prénom**           | **Comments**                                            | **Status**                                                                                | **Release OpusVal** |
 |----------------------------------------------------------------------------------------|----------------------------------------------|--------------|----------------------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------------|
-| [500420](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500420) | Perte du contenu de calendrier               | Urgent       | Evano Hugues               | restauré le 28/01/2025                                  | Résolu                                                                                    | Calendriers dispos  |
+| [500420](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500420) | Perte du contenu de calendrier               | Urgent       | Evano Hugues               | restauré le 28/01/2025                                  | Done                                                                                      | Calendriers dispos  |
 | [500520](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500520) | rapport d'avancement/Nb enquêtes directes    | Moyen        | LARRANAGA Soizic           | A analyser et corriger                                  | [bug] Issue [#917](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/917) | Yes                 |
 | [500745](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500745) | Filtration navires/Port d'exploitation       | Moyen        | Martin Stéphane            | A implémenter                                           | [enh] Issue [#920](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/920) | No                  |
-| [500923](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500923) | Gradient de profondeur                       | Moyen        | LARRANAGA Soizic           | Comportement normal                                     |                                                                                           |                     |
-| [501008](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501008) | Saisie port étranger                         | Faible       | HOURCADE DA COSTA Mallorie | Solution à analyser                                     |                                                                                           |                     |
-| [501089](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501089) | Filtre navire AD 804676                      | Urgent       | Le Roy Emilie              | Sans l'indexation ES, le filtre est un peu lent parfois | Prévoir d'activer ES                                                                      |                     |
-| [501090](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501090) | Terminer la saisie - incohérence bloquante   | Urgent       | Le Mestre Sophie           | Comportement normal, pas de blocage                     |                                                                                           |                     |
-| [501167](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501167) | gradient zone incohérent                     | Urgent       | Lazard Coline              | Contrôle à mettre en place pour bloquer la saisie ?     |                                                                                           |                     | 
+| [500923](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500923) | Gradient de profondeur                       | Moyen        | LARRANAGA Soizic           | Comportement normal                                     | Nothing to do                                                                             | -                   |
+| [501008](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501008) | Saisie port étranger                         | Faible       | HOURCADE DA COSTA Mallorie | Solution à analyser                                     | Paramétrage de la zone de compétence                                                      | -                   |
+| [501089](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501089) | Filtre navire AD 804676                      | Urgent       | Le Roy Emilie              | Sans l'indexation ES, le filtre est un peu lent parfois | Prévoir d'activer ES                                                                      | ES activé           |
+| [501090](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501090) | Terminer la saisie - incohérence bloquante   | Urgent       | Le Mestre Sophie           | Comportement normal, pas de blocage                     | Nothing to do                                                                             | -                   |
+| [501167](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=501167) | gradient zone incohérent                     | Urgent       | Lazard Coline              | Contrôle à mettre en place pour bloquer la saisie ?     | Ticket à créer                                                                            | Waiting             | 
 

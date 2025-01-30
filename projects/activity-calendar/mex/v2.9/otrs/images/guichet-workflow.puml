@@ -1,0 +1,32 @@
+@startuml
+:MOA: as MOA
+:MOE: as MOE
+
+rectangle Opus-Activité {
+}
+
+(Ticket OTRS) as (bug)
+(issue gitlab) as (enh)
+
+Observateur ---> (bug)
+
+(bug) ---> (MOA)
+
+note right of bug : Assigned MOA
+
+note right of MOA : 1 - Ticket analysis
+
+note right of MOE : 3 - Analyse evolution/bug
+
+MOE ---> (enh)
+
+note "2 - Answer Observateur" as answer
+(Observateur) .. answer
+answer .. (MOA)
+
+note "Fix or enh needed" as fix
+(MOA) .. fix
+fix .. (MOE)
+
+
+@enduml
