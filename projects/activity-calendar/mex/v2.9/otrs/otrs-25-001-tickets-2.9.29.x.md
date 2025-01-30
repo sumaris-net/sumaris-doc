@@ -25,7 +25,9 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 ## Saisie dans Opus et arrêt Allegro
 
 > Arrêt de saisie dans Allegro (par contre il faut que les utilisateurs ayant commencé à saisir dans Allegro poussent leur données dans Harmonie)
+> 
 > De notre côté bascule des données saisies dans Allegro pour affichage dans Opus ( caractéristiques engin)
+> 
 > Utilisation d'Opus pour tout le monde
 
 ---
