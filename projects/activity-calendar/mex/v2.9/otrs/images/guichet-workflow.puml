@@ -24,7 +24,7 @@ note "2 - Answer Observateur" as answer
 (Observateur) .. answer
 answer .. (MOA)
 
-note "Fix or enh needed" as fix
+note "3 - Nécessite une correction/evolution" as fix
 (MOA) .. fix
 fix .. (MOE)
 
