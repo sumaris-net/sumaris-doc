@@ -29,3 +29,4 @@ Liste des évolutions 2025
     - Possibilité d'installer un client lourd (avec un installer .exe ou .deb)
   - Améliorations fonctionnelle :
     - Le tableau des SAMPLE (utilisé dans la page d'échantillonnage d'Imagine) peut gérer les photos (en attente d'une évolution coté POD, pour les sauvegarder en fichiers)
+  - Indexation ElastiSearch 
