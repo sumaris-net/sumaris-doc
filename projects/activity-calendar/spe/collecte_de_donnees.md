@@ -239,7 +239,7 @@ Le fichier csv d'import est basé sur la feuille de route (cf [mantis 61967](htt
 
 **REF: ACTIVITY_CALENDAR/GENERAL**
 
-Notions importantes 
+**Notions importantes** 
 
 ![ui-concepts](/projects/activity-calendar/spe/images/important-concepts.png)
 
@@ -478,8 +478,6 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
       * YEAR = N
       * VESSEL_FK
 * L'activité du navire : dans les données historiques, la valeur "Inexistant" était également possible
-
-# VFA ICI
 
 > Questions :
 > - MOE : En mode déconnecté : quelles infos importer en local ? Prédoc ?
