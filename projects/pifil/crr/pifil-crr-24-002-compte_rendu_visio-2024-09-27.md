@@ -113,7 +113,7 @@ En séance, révision du protocole
   * Etat de décomposition et blessures => à décomposer en 3 champs :
     * Mort (Oui/Non)
     * Si mort : État de décomposition (frais/légère/très décomposé/NSP)
-    * Si remontée à bord : Blessure (Oui/Non/NSP)
+    * Si remontée à bord : Blessures (Oui/Non/NSP)
   * "Si maillé, distance au pinger le plus proche" => à décomposer en 3 champs :
     * Maillé (Oui/Non)
     * Distance au pinger le plus proche
