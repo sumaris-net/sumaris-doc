@@ -13,8 +13,8 @@ Application Opus - Calendrier d'activité en production le 20/01/2025
 ## MEP corrective
 
 1. Le 06/02/2025 (11h30-11h40)
-   2. release du pod **2.9.30.1**
-   3. release de l'app **2.9.30**
+   - release du pod **2.9.30.1**
+   - release de l'app **2.9.30**
    
 
 ## Bonnes pratiques
