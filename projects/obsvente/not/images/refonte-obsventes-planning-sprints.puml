@@ -88,16 +88,16 @@ N(9, 9) is colored in orange
 N(10, 10) as [o10] happen the 2025/02/27
 N(10, 10) is colored in orange
 
-N(11, 11) as [o11] happen the 2025/03/13
+N(11, 11) as [o11] happen the 2025/03/18
 N(11, 11) is colored in orange
 
 N(12, 12) as [o12] happen the 2025/03/27
 N(12, 12) is colored in orange
 
-N(13, 13) as [o13] happen the 2025/04/10
+N(13, 13) as [o13] happen the 2025/04/24
 N(13, 13) is colored in orange
 
-N(14, 14) as [o14] happen the 2025/04/24
+N(14, 14) as [o14] happen the 2025/04/29
 N(14, 14) is colored in orange
 
 [o1] displays on same row as [o2]
@@ -293,8 +293,8 @@ legend
 | Meeting 10 happen the 2025/02/27 : Metropole utilisateurs |
 | Meeting 11 happen the 2025/03/13 : OM utilisateurs |
 | Meeting 12 happen the 2025/03/27 : Metropole utilisateurs |
-| Meeting 13 happen the 2025/04/10 : OM utilisateurs |
-| Meeting 14 happen the 2025/04/24 : Metropole et OM |
+| Meeting 13 happen the 2025/04/24 : OM utilisateurs |
+| Meeting 14 happen the 2025/04/29 : Metropole et OM |
 end legend
 
 skinparam legendBackgroundColor with
