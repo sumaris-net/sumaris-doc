@@ -20,7 +20,7 @@ enum VesselUseFeaturesIsActiveEnum {
     +NOT_EXISTS = 2
 }
 
-VesselUseFeatures  .right.> VesselUseFeaturesIsActiveEnum: "use"
+VesselUseFeatures  .right.> VesselUseFeaturesIsActiveEnum: use
 
 VesselUseFeatures -up-> "1" Vessel
 

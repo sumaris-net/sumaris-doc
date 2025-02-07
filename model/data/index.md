@@ -13,6 +13,11 @@ Each collected data has a root entity, linked to a program.
   * A quality flag (e.g. Good, Bad, Out of stats, ...) used to exclude bad data on exports or map products; 
 
 ---
+### Vessel
+
+![vessel](/model/data/vessel.svg)
+
+---
 ### Scientific cruise
 
 ![scientific-cruise](model/data/scientific-cruise.svg)

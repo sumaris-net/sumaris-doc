@@ -13,6 +13,10 @@ Chaque donnée collectée a une entité racine, liée à un programme.
   * Une date de mise à jour, pour identifier la version exacte ;
   * Un département et une personne saisisseur ;
   * Un indicateur de qualité (par exemple, Bon, Mauvais, Hors stats, ...) utilisé pour exclure les mauvaises données lors des exportations ou des produits cartographiques ;
+---
+### Vessel
+
+![vessel](/model/data/vessel.svg)
 
 ---
 ### Campagnes scientifiques en mer

@@ -1,0 +1,70 @@
+@startuml
+hide empty members
+
+    class Vessel {
+        +id
+        +updateDate: Timestamp
+    }
+
+    class VesselRegistrationPeriod {
+        +id
+        +startDate: Date
+        +endDate: Date[0..1]
+    }
+
+    class VesselFeatures {
+        +id
+        +startDate: Date
+        +endDate: Date[0..1]
+        +name: String
+        +exteriorMarking: String
+        +administrativePower: Integer
+        +auxiliaryPower: Integer
+        +constructionYear: Integer
+        +grossTonnageGRT: Integer
+        +grossTonnageGT: Integer
+        +hasVMS: Boolean
+        +IRCS: String
+        +isFPC: Boolean
+        +lengthBetweenPerpendiculars: Integer
+        +lengthOverAll: Integer
+        +updateDate: Timestamp
+    }
+
+    class VesselFleetEvent {
+        +id
+        +eventDate: Date
+    }
+
+    Program "1" <-left- "*" Vessel
+
+    Vessel "1" -- "0..*" VesselRegistrationPeriod : <identifier>
+    Vessel "1" -- "0..*" VesselFeatures : <identifier>
+    Vessel "1" -- "0..*" VesselFleetEvent : <identifier>
+
+
+
+
+    package "referential" #DDDDDD {
+        Vessel "*" --> "1" VesselType : use
+        Vessel "*" --> "1" Status : use
+
+        VesselRegistrationPeriod "*" --> "1" Location : registrationLocation
+        VesselFeatures "*" --> "0..1" Location : basePortLocation
+        VesselFeatures "*" --> "1" QualitativeValue : hullMaterial
+        VesselFleetEvent "*" --> "1" QualitativeValue : eventType
+        VesselType .right.> VesselTypeEnum: use
+
+        enum VesselTypeEnum {
+            +UNK = 0
+            +FISHING_VESSEL = 1
+            +SCIENTIFIC_RESEARCH_VESSEL = 2
+            +FISHING_VESSEL_GROUP = 3
+            +PLEASURE_BOAT = 4
+            +SAILING_YACHT = 5
+            +TRADITIONAL = 6
+            +OTHER = 7
+        }
+    }
+
+@enduml
