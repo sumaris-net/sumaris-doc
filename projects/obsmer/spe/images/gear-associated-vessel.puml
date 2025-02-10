@@ -22,13 +22,20 @@
       . | Dispositifs de répulsif* : | ^Pas d'info^
       . | <&plus> Autres caractéristiques (cf "Grille de saisie")
     }
-  ---
-    <font color=grey><&plus> <&minus> Navire associé
-  ---
+  --
+    <b><&plus> <&minus> Navire associé
+    {
+    . | Immatriculation : | "68564" | . | . | . | . | . | Nom : | "Vessel 3"
+    . | Quartie d'immatriculation : | "SN - Saint Nazaire" | . | . | . | . | . | Longueur hors tout (m) : | "2280"
+    . | Capteur remontée sur le navire de l'observateur : | ^Oui^ | . | . | . | . | . | Longueur hors tout (m) : | "2280"
+    . | Commentaire :
+    . |  { "                                  "}
+    }
+  --
     {
         <b>Commentaire :
 
-        { "                                                                    "}
+        { "                                                                                  "}
     }
 
   --

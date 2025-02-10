@@ -3,33 +3,33 @@
 ---
 
 ## Sommaire
-- [Ergonomie : principes généraux et connexion](#ergonomie-principes-généraux-et-connexion)
+- [Ergonomie : principes généraux et connexion](#ergonomie--principes-généraux-et-connexion)
 - [Ergonomie générale](#ergonomie-générale)
 - [Marées](#marées)
-- [Marées > filtres](#marées-filtres)
-- [Marée > Détails](#marée-détails)
-- [Marée > Engins](#marée-engins)
-- [Marée > Engin > Détails](#marée-engin-détails)
-- [Marée > Opérations](#marée-opérations)
-- [Marée > Opérations > filtres](#marée-opération-filtres)
-- [Marée > Opération > Détails](#marée-opération-détails)
-- [Marée > Opération > Historique](#marée-opération-historique)
-- [Opération > Capture > Saisie](#opération-capture-saisie)
-- [Opération > Capture > Navigation](#opération-capture-navigation)
-- [Opération > Capture > Copier-Coller](#opération-capture-copier-coller)
-- [Opération > Capture > Contrôle](#opération-capture-contrôle)
-- [Opération > Capture > PR](#opération-capture-pr)
-- [Opération > Capture > PR > Consommation humaine](#opération-capture-pr-consommation-humaine)
-- [Opération > Capture > PR > Appat](#opération-capture-pr-appat)
-- [Opération > Capture > PNR, Vrac > Détaillé](#opération-capture-pnr-Vrac-détaillé)
-- [Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables](#opération-capture-pnr-vrac-détaillé-ecosystèmes-marins-vulnérables)
-- [Opération > Capture > PNR, Vrac > Non Détaillé](#opération-capture-pnr-vrac-non-détaillé)
-- [Opération > Capture > PNR, Hors Vrac](#opération-capture-pnr-hors-vrac)
-- [Opération > Capture > PNR, Hors Vrac > Animaux](#opération-capture-pnr-hors-vrac-animaux)
-- [Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables](#opération-capture-pnr-hors-vrac-ecosystèmes-marins-vulnérables)
-- [Opération > Capture > Captures accidentelles](#opération-capture-captures-accidentelles)
-- [Opération > Capture > Captures accidentelles > Remise à l'eau](#opération-capture-captures-accidentelles-remise-à-l-eau)
-- [Opération > Capture > Mesures indivuelles](#opération-capture-mesures-indivuelles)
+- [Marées > filtres](#marées--filtres)
+- [Marée > Détails](#marée--détails)
+- [Marée > Engins](#marée--engins-)
+- [Marée > Engin > Détails](#marée--engin--détails)
+- [Marée > Opérations](#marée--opérations)
+- [Marée > Opérations > filtres](#marée--opérations--filtres)
+- [Marée > Opération > Détails](#marée--opération--détails)
+- [Marée > Opération > Historique](#marée--opération--historique)
+- [Opération > Capture > Saisie](#opération--capture--saisie-)
+- [Opération > Capture > Navigation](#opération--capture--navigation)
+- [Opération > Capture > Copier-Coller](#opération--capture--copier-coller)
+- [Opération > Capture > Contrôle](#opération--capture--contrôle-)
+- [Opération > Capture > PR](#opération--capture--pr)
+- [Opération > Capture > PR > Consommation humaine](#opération--capture--pr--consommation-humaine)
+- [Opération > Capture > PR > Appat](#opération--capture--pr--appat)
+- [Opération > Capture > PNR, Vrac > Détaillé](#opération--capture--pnr-vrac--détaillé--ecosystèmes-marins-vulnérables)
+- [Opération > Capture > PNR, Vrac > Détaillé > Ecosystèmes Marins Vulnérables](#opération--capture--pnr-hors-vrac--ecosystèmes-marins-vulnérables)
+- [Opération > Capture > PNR, Vrac > Non Détaillé](#opération--capture--pnr-vrac--non-détaillé)
+- [Opération > Capture > PNR, Hors Vrac](#opération--capture--pnr-hors-vrac)
+- [Opération > Capture > PNR, Hors Vrac > Animaux](#opération--capture--pnr-hors-vrac--animaux)
+- [Opération > Capture > PNR, Hors Vrac > Ecosystèmes Marins Vulnérables](#opération--capture--pnr-hors-vrac--ecosystèmes-marins-vulnérables)
+- [Opération > Capture > Captures accidentelles](#opération--capture--captures-accidentelles)
+- [Opération > Capture > Captures accidentelles > Remise à l'eau](#opération--capture--captures-accidentelles--remise-à-leau)
+- [Opération > Capture > Mesures indivuelles](#opération--capture--mesures-indivuelles)
 
 <!-- .element: class="font-size-extra-small" -->
 
@@ -371,6 +371,30 @@ C'est une option liée au programme de collecte (A REALISER)
 > - [ ] ~~Optimiser le chargement de la stratégie~~
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
 > - [ ] Libellé d'engin ?
+
+
+Variante 4a – L'observateur saisit un navire associé à l'opération. 
+
+![ui-gear-associated-vessel](/projects/obsmer/spe/images/gear-associated-vessel.svg)
+
+Par exemple, quand des navires travaillent en paires (ou en bœufs)
+
+L'opération est effectuée en association avec un autre navire (travail "en boeuf"). 
+
+Navires :
+- PTB Chaluts boeufs de fond
+- PTM Chaluts boeufs pélagiques
+
+L'utilisateur choisit le navire associé parmi la liste des navires (cf. CU « Sélectionner un/des navires », avec une restriction sur les navires dont l’état est ‘valide’ ou ‘temporaire’). Par défaut, la liste est composée des navires rattachés au portefeuille de l'utilisateur, mais peut être étendue à aux autres tous les navires disponibles présents dans le système (navires temporaires compris).
+TODO à confirmer : Par défaut, la liste est composée des navires sur lesquels l'utilisateur à les droits d’écriture, mais peut être étendue à tous les navires disponibles présents dans le système (navires temporaires compris).
+
+L'utilisateur renseigne les informations suivantes, non saisissables si aucun navire n'a été associé :
+
+- Capture remontée sur le navire de l'observateur ?  (Oui/Non) (Obligatoire, si navire associé), vide par défaut.
+- Commentaire sur la nature de l'association avec ce navire.
+
+
+
 
 ---
 
