@@ -1,0 +1,15 @@
+@startuml
+    start
+        :Saisie des données;
+        ->//Observateur//;
+        :Rattachement du\ncatalogue de la vente;
+        ->//Observateur//;
+        repeat
+            ->//Observateur//;
+            :Contrôle des données;
+            ->//Observateur//;
+            :Demande de validation;
+            ->//Validateur//;
+        repeat while (Validation) is (Non) not (Oui)
+    stop
+@enduml
