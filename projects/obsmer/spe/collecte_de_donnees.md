@@ -348,6 +348,7 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
    * si l'application est en mode déconnecté , la recherche se fait parmis les données synchronisées
+5. L'observateur peut saisir un navire associé à l'opération, pour des navires qui travaillent en paire
 
 **Variante(s) :**
 
@@ -373,7 +374,7 @@ C'est une option liée au programme de collecte (A REALISER)
 > - [ ] Libellé d'engin ?
 
 
-Variante 4a – L'observateur saisit un navire associé à l'opération. 
+Variante 5a – L'observateur saisit un navire associé à l'opération. 
 
 ![ui-gear-associated-vessel](/projects/obsmer/spe/images/gear-associated-vessel.svg)
 
