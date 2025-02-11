@@ -21,9 +21,9 @@ class PhysicalGear {
 class Operation {
     +id: Integer
     +startDateTime: Date
-    +endDateTime: Date
     +fishingStartDateTime: Date [0..1]
     +fishingEndDateTime: Date [0..1]
+    +endDateTime: Date
 }
 
 class VesselPosition {
@@ -31,6 +31,12 @@ class VesselPosition {
     +dateTime: Date
     +latitude: Double
     +longitude: Double
+}
+
+class OperationVesselAssociation {
+    +vessel: Vessel
+    +isCatchOnOperationVessel: Boolean
+    +comments: String [0..1]
 }
 
 Trip -up-> "1" Vessel
@@ -41,6 +47,10 @@ Trip -left-> "0..*" Person: "observers"
 Operation "1" *-right- "0..*" OperationMeasurement: "     "
 Operation "0..*" -up-> "1" PhysicalGear
 Operation "0..1" *-down- "2..*" VesselPosition
+
+Operation "0..1" *-down- "1..*" FishingArea
+
+Operation "1" *-left- "*" OperationVesselAssociation: identifier
 
 PhysicalGear "1" *-right- "0..*" PhysicalGearMeasurement: "      "
 
