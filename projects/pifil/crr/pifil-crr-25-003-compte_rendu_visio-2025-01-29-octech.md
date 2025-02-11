@@ -22,13 +22,13 @@ Point sur la récupération des données avec OcTech / EIS
 
 OcTech et EIS sont motivés pour travailler ensemble, en bonne intelligence.
 
-OcTech a développer Randy (platform cloud) pour le suivi.
+OcTech a développé Randy (platform cloud) pour le suivi.
 
 ---
 # Concentrateur
 
-Balises installé tous les 500 mètres, sur le filet.
-Le concentrateur est dans la cabine. Connexion en BluetoothLE (+10 mètres de portée).
+Balises installées tous les 500 mètres, sur le filet.
+Le concentrateur est dans la cabine. Connexion en Bluetooth LE (+10 mètres de portée).
 
 - Les balises publient leur ID (pendant une heure maximum après la sortie de l'eau).
   - L'ID publié est toujours le même (dolphinfree).  
@@ -36,12 +36,12 @@ Le concentrateur est dans la cabine. Connexion en BluetoothLE (+10 mètres de po
   - récupérer les données,
   - supprimer les anciennes données, 
   - mettre à jour le logiciel.
-  Le concentrateur se connecte pour associé l'adresse Mac et l'ID.
+  Le concentrateur se connecte pour associer l'adresse Mac et l'ID.
   (2-3 minutes de synchronisation)
 - Il est prévu une mise en veille des balises, après la synchronisation.
 - Il existe une liste de balises par concentrateur.
 
-La concentrateur a une balise GPS, mais elle n'est utilisée uniquement pour l'horodatage.
+Le concentrateur a une balise GPS, mais elle n'est utilisée uniquement pour l'horodatage.
 
 ---
 # Batterie
@@ -49,7 +49,7 @@ Le niveau de batterie : un mois d'autonomie.
 Il faut avertir une semaine avant, en cas de batterie faible.
 
 Une balise sans batterie ne plus pas dire qu'elle n'a plus de batterie.
-Il faut donc avertir qu'elle n'émet pas depuix X jours.
+Il faut donc avertir qu'elle n'émet pas depuis X jours.
 
 L'information de batterie, se dégrade avec le temps.
 
@@ -89,7 +89,7 @@ Control path
   - Identifiant unique du navire
   - Ping ou non, date/heure
 - API pour requêter le concentrateur en Bluetooth :
-  - OCtech indique que c'est possible 
+  - OcTech indique que c'est possible 
 - Autonomie d'une balise : 
   - Un mois par balise
   - 4h de charge (par recommandé en mer)
