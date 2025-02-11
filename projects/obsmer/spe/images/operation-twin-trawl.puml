@@ -4,7 +4,7 @@
   {/ <b> Détails | Capture }
   .
     {
-      { Engin / espèce ciblée : | ^ OTT - Chalut jumeau à panneaux ^ | ^ Espèce cible ^ }
+      { Engin / espèce ciblée : | ^ PTB - Chaluts boeufs de fond ^ | ^ Espèce cible ^ }
         .
       {
         Début de filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
@@ -31,8 +31,8 @@
     <b>Navire associé :
 
     {
-        Navire associé*:                   | { ^852752 - JOLIE COEUR ^ }
-        Capture remontée sur le navire observé ?*: | { (X) <b>Oui | () Non }
+        Navire associé*:                   | { ^852752 - JOLIE COEUR ^ } | Lieu d'immatriculation : {+ "BR - Brest"}
+        Capture remontée sur le navire observé ?*: | { () <b>Oui | (X) Non } | .
     }
 
     {
