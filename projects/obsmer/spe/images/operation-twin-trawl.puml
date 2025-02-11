@@ -2,27 +2,39 @@
 {
 
   {/ <b> Détails | Capture }
-  ..
-
+  .
     {
-      { Engin / espèce ciblée : | ^ FPN - Filet ^ | ^ Espèce cible ^ }
-       .
+      { Engin / espèce ciblée : | ^ OTT - Chalut jumeau à panneaux ^ | ^ Espèce cible ^ }
+        .
       {
         Début de filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Début de pêche (Fin Filage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Fin de pêche (Début Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Fin de virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        . | <i><color:blue>durée de l'opération | . | <i><color:blue>distance parcourue
       }
     }
     .
+    {
+    <b>Zone d'activité : <i><color:blue>22E7
+    }
+    .
+
     <b>Caractéristiques :
 
     {
-      . | Mesures individuelles ? { (X) <b>Oui | () Non }
+      . | Opération échantillonnée ? { (X) <b>Oui | () Non }
       . | Déroulement normal ? { (X) <b>Oui | () Non }
       . | . | + Autres caractéristiques (cf "Grille de saisie")
     }
-    .
+
+    <b>Navire associé :
+
+    {
+        Navire associé*:                   | { ^852752 - JOLIE COEUR ^ }
+        Capture remontée sur le navire observé ?*: | { (X) <b>Oui | () Non }
+    }
+
     {
         <b>Commentaire :
 

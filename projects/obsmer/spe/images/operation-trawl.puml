@@ -4,13 +4,13 @@
   {/ <b> Détails | Capture }
   .
     {
-      { Engin / espèce ciblée : | ^ OTT - Chalut jumeau à panneaux ^ | ^ Espèce cible ^ }
+      { Engin / espèce ciblée : | ^ OTB - Chalut de fond à panneaux^ | ^ Espèce cible ^ }
         .
       {
-        Début de l'opération (Filage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        Fin de l'opération (Filage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        Début de l'opération (Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
-        Fin de l'opération (Virage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de filage : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Début de pêche (Fin Filage) :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de pêche (Début Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
+        Fin de virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         . | <i><color:blue>durée de l'opération | . | <i><color:blue>distance parcourue
       }
     }

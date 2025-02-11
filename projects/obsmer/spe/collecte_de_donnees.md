@@ -348,7 +348,6 @@ L'observateur clique sur le bouton rechercher, dans la fenêtre "Nouvel engin"
 3. L'observateur sélectionne un engin
 4. L'engin et ses caractéristiques sont renseignés dans la fenêtre de saisie d'un nouvel engin
    * si l'application est en mode déconnecté , la recherche se fait parmis les données synchronisées
-5. L'observateur peut saisir un navire associé à l'opération, pour des navires qui travaillent en paire
 
 **Variante(s) :**
 
@@ -373,7 +372,7 @@ C'est une option liée au programme de collecte (A REALISER)
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
 > - [ ] Libellé d'engin ?
 
-
+<!--
 Variante 5a – L'observateur saisit un navire associé à l'opération. 
 
 ![ui-gear-associated-vessel](/projects/obsmer/spe/images/gear-associated-vessel.svg)
@@ -394,7 +393,7 @@ L'utilisateur renseigne les informations suivantes, non saisissables si aucun na
 - Capture remontée sur le navire de l'observateur ?  (Oui/Non) (Obligatoire, si navire associé), vide par défaut.
 - Commentaire sur la nature de l'association avec ce navire.
 
-
+-->
 
 
 ---
@@ -483,7 +482,7 @@ Référence : ERGONOMIE/FILTRES
 
 **Fenêtre principale de saisie d'une opération**
 
-![ui-operation](/projects/obsmer/spe/images/operation.svg)
+![ui-operation-trawl](/projects/obsmer/spe/images/operation-trawl.svg)
 
 #### Scénario principal
 
@@ -547,7 +546,7 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
  - les dates de début et de fin de l'opération ne doivent pas se chevaucher avec les dates de début et de fin d'une autre opération avec un engin traînant
    > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=6005
 
-**Variante 3d** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+**Variante 3e** - Pêche en bœuf et navire associé (DEV A RÉALISER)
 
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
    Alors il devient obligatoire de saisir l'immatriculation du navire associé à l'opération.
@@ -562,7 +561,9 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
 
 > MOA : Comment est filtrée la liste des navires  ? Regarder dans Allegro comment c'est fait.
 
-**Variante 3e** - Filtrer les métier pratiqués - PAS PRIORITAIRE
+![ui-operation-twin-trawl](/projects/obsmer/spe/images/operation-twin-trawl.svg)
+
+**Variante 3f** - Filtrer les métier pratiqués - PAS PRIORITAIRE
 
 3. Le système filtre les espèces cibles en fonction des données historiques déjà saisies.
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
