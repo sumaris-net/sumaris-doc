@@ -372,30 +372,6 @@ C'est une option liée au programme de collecte (A REALISER)
 > - [ ] Conserver uniquement les colonnes PSFM ayant une valeur
 > - [ ] Libellé d'engin ?
 
-<!--
-Variante 5a – L'observateur saisit un navire associé à l'opération. 
-
-![ui-gear-associated-vessel](/projects/obsmer/spe/images/gear-associated-vessel.svg)
-
-Par exemple, quand des navires travaillent en paires (ou en bœufs)
-
-L'opération est effectuée en association avec un autre navire (travail "en boeuf"). 
-
-Navires :
-- PTB Chaluts boeufs de fond
-- PTM Chaluts boeufs pélagiques
-
-L'utilisateur choisit le navire associé parmi la liste des navires (cf. CU « Sélectionner un/des navires », avec une restriction sur les navires dont l’état est ‘valide’ ou ‘temporaire’). Par défaut, la liste est composée des navires rattachés au portefeuille de l'utilisateur, mais peut être étendue à aux autres tous les navires disponibles présents dans le système (navires temporaires compris).
-TODO à confirmer : Par défaut, la liste est composée des navires sur lesquels l'utilisateur à les droits d’écriture, mais peut être étendue à tous les navires disponibles présents dans le système (navires temporaires compris).
-
-L'utilisateur renseigne les informations suivantes, non saisissables si aucun navire n'a été associé :
-
-- Capture remontée sur le navire de l'observateur ?  (Oui/Non) (Obligatoire, si navire associé), vide par défaut.
-- Commentaire sur la nature de l'association avec ce navire.
-
--->
-
-
 ---
 
 ## Marée > Opérations
@@ -534,34 +510,36 @@ _Développement à réaliser_
 **Variante 3b** - Il doit possible de forcer la saisie de mensuration pour une opération non échantillonnée.
 Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
 
-**Variante 3c** - Engin dormant (A REALISER)
+**Variante 3c** - Engin dormant (A RÉALISER)
 
 3. Si l'engin choisi est un engin dormant alors la date de fin de l'opération doit être incluse dans la période de début et de fin de la marée mais la date de début de l'opération peut commencer avant le début de la marée
    > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=6005
 
-**Variante 3d** - Engin traînant (A REALISER)
+**Variante 3d** - Engin traînant (A RÉALISER)
 
 3. Si l'engin choisi est un engin traînant alors 
  - les dates de début et de fin de l'opération doivent être incluses dans la période de début et de fin de la marée
  - les dates de début et de fin de l'opération ne doivent pas se chevaucher avec les dates de début et de fin d'une autre opération avec un engin traînant
    > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=6005
 
-**Variante 3e** - Pêche en bœuf et navire associé (DEV A RÉALISER)
+**Variante 3e** - Pêche en bœuf et navire associé (A RÉALISER)
 
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
-   Alors il devient obligatoire de saisir l'immatriculation du navire associé à l'opération.
-   L'observateur doit aussi indiquer si la capture est remontée sur le navire de l'observateur. 
-   > cf mantis Allegro: https://forge.ifremer.fr/mantis/view.php?id=41410
+   Alors il devient obligatoire de saisir le navire associé à l'opération (cf mantis [#41410](https://forge.ifremer.fr/mantis/view.php?id=41410))
+   - L'utilisateur choisit le navire associé parmi la liste des navires;
+   - L'utilisateur renseigne les informations suivantes, non saisissables si aucun navire n'a été associé :
+     - Capture remontée sur le navire de l'observateur ?  (Oui/Non) (Obligatoire, si navire associé), vide par défaut.
+     - Commentaire sur la nature de l'association avec ce navire.
+
+   Interface (à valider avec la MOA):
+   ![ui-operation-pair-trawl](/projects/obsmer/spe/images/operation-pair-trawl.svg)
+
 
 > **Réunion MOA 19/02/2024** :
+> - MOA : Il faut saisir obligatoirement le second navire
+> - MOA : Indiquer l'immatriculation et indiquer si la capture est remontée sur le navire observateur
+> - MOA : Comment est filtrée la liste des navires  ? Regarder dans Allegro comment c'est fait.
 
-> MOA : Il faut saisir obligatoirement le second navire  
-
-> MOA : Indiquer l'immatriculation et indiquer si la capture est remontée sur le navire observateur
-
-> MOA : Comment est filtrée la liste des navires  ? Regarder dans Allegro comment c'est fait.
-
-![ui-operation-twin-trawl](/projects/obsmer/spe/images/operation-twin-trawl.svg)
 
 **Variante 3f** - Filtrer les métier pratiqués - PAS PRIORITAIRE
 

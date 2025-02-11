@@ -12,14 +12,16 @@
         Fin de pêche (Début Virage) : | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         Fin de virage :   | ^ Date / Heure ^ | "Latitude   " | "Longitude   "
         . | <i><color:blue>durée de l'opération | . | <i><color:blue>distance parcourue
+        Navire associé*:  | { ^852752 - JOLIE COEUR ^ } | Lieu d'immatriculation : {+ "BR - Brest"}
+        . | Capture remontée sur le navire observé ?*: | { () <b>Oui | (X) Non } | .
       }
     }
+
     .
     {
     <b>Zone d'activité : <i><color:blue>22E7
     }
     .
-
     <b>Caractéristiques :
 
     {
@@ -28,12 +30,6 @@
       . | . | + Autres caractéristiques (cf "Grille de saisie")
     }
 
-    <b>Navire associé :
-
-    {
-        Navire associé*:                   | { ^852752 - JOLIE COEUR ^ } | Lieu d'immatriculation : {+ "BR - Brest"}
-        Capture remontée sur le navire observé ?*: | { () <b>Oui | (X) Non } | .
-    }
 
     {
         <b>Commentaire :
