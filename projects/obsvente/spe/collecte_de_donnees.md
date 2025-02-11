@@ -535,6 +535,15 @@ Type de vente :
 > "Remplissage automatique de l'heure de la vente"
 > Stockée dans les préférences locales
 
+
+> 11/02/2025 :
+
+> - Zône : Pouvoir ajouter plusieurs zones (avec un +) ou aucune
+
+> - Métier : Pouvoir saisir plusieurs métiers (avec un +), voir s'il faut un max
+
+![img.png](img.png)
+
 ---
 ## Vente > Lots espèces
 

@@ -134,7 +134,7 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
     end;
   -```
 
-- Modification du trigger `TR_OBSERVED_LOCATION`
+- Modification du trigger `TR_LANDING`
   ```sql
      create or replace TRIGGER TR_LANDING
         instead of insert or update or delete

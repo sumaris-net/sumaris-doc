@@ -492,23 +492,20 @@ _Développement à réaliser_
 
 #### Détails Techniques
 
-- La zone d'activité du navire correspond au niveau de lieu Sous Rectangle Statistique (LOCATION_LEVEL.ID = 114)
+- La zone d'activité du navire correspond au niveau de lieu Rectangle Statistique (A IMPLEMENTER)
 - L'état de la mer est définit par le PMFM - SEA_STATE (ID = 194 ou 1087)
 
 > **Réunion MOA 19/02/2024** :
 
 > MOA : Y a t il un référentiel des espèces (Métier/Engin => espèces cibles) : OUI
 
-> MOA : Mise en place de la régionalisation (zone d'activité) : 
+> MOA : Mise en place de la régionalisation (zone d'activité) :
 
-> MOA : Forcer la saisie de mensuration même si c'est une opération non échantillonnée. Texte de 4~5 lignes pour expliquer le concept à EIS.
+**Variante 3b** - Opération non échantillonnée :
 
-> Question pour MOA : Si opération non échantillonnée, on peut saisir quand même des mensurations uniquement pour la partie débarquée ? 
+Il ne doit avoir que des données de mensurations pour des captures accidentelles pour une opération non échantillonnée 
 
-> ISI : A ajouter : Bouton + pour permettre la saisie de mensuration 
-
-**Variante 3b** - Il doit possible de forcer la saisie de mensuration pour une opération non échantillonnée.
-Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
+[Cf protocole non échantillonnée](/projects/obsmer/doc/obsmer-doc-24-002-schema_op_non_ech-v2.pdf)
 
 **Variante 3c** - Engin dormant (A RÉALISER)
 
@@ -526,20 +523,14 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
 
 3. Si l'engin choisit est dans une liste (`PTB - Chaluts bœufs de fond`, `PTM - Chaluts bœufs pélagiques`)
    Alors il devient obligatoire de saisir le navire associé à l'opération (cf mantis [#41410](https://forge.ifremer.fr/mantis/view.php?id=41410))
-   - L'utilisateur choisit le navire associé parmi la liste des navires;
+   - L'utilisateur choisit le navire associé parmi la liste des navires (navire actif ou temporaire)
    - L'utilisateur renseigne les informations suivantes, non saisissables si aucun navire n'a été associé :
      - Capture remontée sur le navire de l'observateur ?  (Oui/Non) (Obligatoire, si navire associé), vide par défaut.
+       - Si la capture n'est pas remontée sur le navire observé (Cocher Non)
+         - L'opération échantillonnée est à Non [Marée > Opération > Détails](#marée--opération--détails) et donc il n'y a rien à échantillonner
      - Commentaire sur la nature de l'association avec ce navire.
 
-   Interface (à valider avec la MOA):
    ![ui-operation-pair-trawl](/projects/obsmer/spe/images/operation-pair-trawl.svg)
-
-
-> **Réunion MOA 19/02/2024** :
-> - MOA : Il faut saisir obligatoirement le second navire
-> - MOA : Indiquer l'immatriculation et indiquer si la capture est remontée sur le navire observateur
-> - MOA : Comment est filtrée la liste des navires  ? Regarder dans Allegro comment c'est fait.
-
 
 **Variante 3f** - Filtrer les métier pratiqués - PAS PRIORITAIRE
 
@@ -547,6 +538,12 @@ Dans ce cas un bouton :heavy_plus_sign: permet l'ajout de mensuration.
    L'utilisateur peut retirer ce filtre pour faire une recherche sur le référentiel complet. 
 
 > MOA : à réaliser en P2
+
+
+---
+## Marée > Opération > Cartographie
+
+TODO - A spécifier
 
 ---
 ## Marée > Opération > Historique

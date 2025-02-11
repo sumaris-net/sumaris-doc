@@ -24,9 +24,18 @@
 Cas particuliers (DOM) : 
 - Cas des caisses de mélange : peut-on déroger à la liste d'espèces scientifiques par rapport à l'espèce commerciale (pouvoir lever la règle espèce commerciale / espèce scientifique)?
 
+> 11/02/2025 : Oui 
+> Décocher figer et avoir un autre bouton pour filtrer sur d'autres espèces scientifique 
+
+> Filtre bleu : D'autres espèces scientifiques sont disponibles
+
+> Filtre noir : Seulement la liste des espèces scientifiques associées à l'espèce commerciale
+
 
 - Régionalisation : 
-  - Régionaliser la liste des espèces
+  - Régionaliser la liste des espèces 
+
+> 11/02/2025 : Vérifier si ticket déjà créé
 
 - Référentiel : 
   - Avoir un référentiel espèces / catégories
