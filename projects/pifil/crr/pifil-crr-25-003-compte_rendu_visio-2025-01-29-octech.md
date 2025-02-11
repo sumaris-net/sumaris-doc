@@ -8,10 +8,10 @@ Point sur la récupération des données avec OcTech / EIS
 > Présents :
 >
 > - Damien LE BOULAIRE (OcTech)
-> - Eric COHEN (OcTech - informaticien concentrateur/maj balises/décente configuration)
+> - Élie COHEN (OcTech - informaticien concentrateur/maj balises/décente configuration)
 > - Serge NOËL (? - Ancien Asten)
-> - Benoit LAVENIER (EIS)
-> - Etienne DE CHAVAGNAC (EIS)
+> - Benoît LAVENIER (EIS)
+> - Étienne de CHAVAGNAC (EIS)
 <!-- .element: class="font-size-extra-small" -->
 
 > Excusés :
