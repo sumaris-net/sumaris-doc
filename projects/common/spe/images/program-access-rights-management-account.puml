@@ -2,9 +2,9 @@
 {
     {+
         {* <color:dddddd> | <size:16><b>Mon compte} | * | * | * | * | * | * | *
-        <color:ffffff>++ | {/ <size:16> </size><size:18><&person></size><size:14><b> Profil                              </b></size> | <size:16> </size><size:18><&cog></size><size:14> Préférences                    </size> } | * | * | * | * | * | <color:ffffff>++
-        . | . | . | . | . | . | . | .
-        . | <color:ffffff>++ | Voici les données enregistrées concernant votre compte : | * | * | * | * | .
+        . | {/ <size:16> </size><size:18><&person></size><size:14><b> Profil                              </b></size> | <size:16> </size><size:18><&cog></size><size:14> Préférences                    </size> } | * | * | * | * | * | .
+        <color:ffffff>++ | <color:ffffff>++ | . | . | . | . | . | <color:ffffff>++
+        . | . | Voici les données enregistrées concernant votre compte : | * | * | * | * | .
         . | . | . | . | . | . | . | .
         . | . | E-mail | * | * | * | * | .
         . | . | {+ <color:#9a9a9a>john.doe@ifremer.fr                                                                                                                                                            </color>} | * | * | * | * | .
