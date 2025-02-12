@@ -2,8 +2,8 @@
 {
     {+
         {* <color:dddddd> | <size:16><b>Nouveau message} | * | * | * | * | *
-        . | . | . | . | . | .
-        <color:ffffff>++ |  Type d'envoi * | * | * | * | <color:ffffff>++
+        <color:ffffff>++ | . | . | . | . | <color:ffffff>++
+        . |  Type d'envoi * | * | * | * | .
         . | ^<color:#9a9a9a>E-mail                                                   ^ | * | * | * | .
         . | Destinataire * | * | * | * | .
         . | {+ <color:#9a9a9a>Responsables de programme DolphinFREE                                                                       </color> } | * | * | * | .
