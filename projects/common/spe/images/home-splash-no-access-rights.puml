@@ -1,16 +1,16 @@
 @startsalt
 {
     {+
-        <color:ffffff>++ | . | . | . | . | . | . | . | . | . | <color:ffffff>++
-        . | . | <color:ffffff>++++++++ | <size:16><b>Bienvenue sur le site web SUMARiS ! | * | * | * | * | <color:ffffff>++++++++ | . | .
+        <color:ffffff>++ | <color:ffffff>++++ | <color:ffffff>++++++++ | <color:ffffff>+++++++++ | <color:ffffff>++ | . | <color:ffffff>++ | <color:ffffff>+++++++++ | <color:ffffff>++++++++ | <color:ffffff>++++ | <color:ffffff>++
+        . | . | . | <size:16><b>Bienvenue sur le site web SUMARiS ! | * | * | * | * | . | . | .
         . | Base de données partagée pour des programmes de collecte de données halieutiques. | * | * | * | * | * | * | * | * | .
         . | . | . | . | . | . | . | . | . | . | .
-        . | <color:ffffff>++++ | Vous n'avez actuellement aucun droit d'accès à un programme de collecte. | * | * | * | * | * | * | <color:ffffff>++++ | .
+        . | . | Vous n'avez actuellement aucun droit d'accès à un programme de collecte. | * | * | * | * | * | * | . | .
         . | . | . | . | . | . | . | . | . | . | .
         . | [<b><size:14><&account-login></size> DEMANDER L'ACCÈS À UN PROGRAMME DE COLLECTE           ] | * | * | * | * | * | * | * | * | .
         . | [<b><size:14><&person></size> MON COMPTE                                            ] | * | * | * | * | * | * | * | * | .
-        . | . | . | <color:ffffff>++++++++ | Vous n'êtes pas <b>John DOE</b> ? | * | * | <color:ffffff>+++++++++ | . | . | .
-        . | . | . | . | <color:ffffff>++ | <u>Déconnecter ce compte | <color:ffffff>++ | . | . | . | .
+        . | . | . | . | Vous n'êtes pas <b>John DOE</b> ? | * | * | . | . | . | .
+        . | . | . | . | . | <u>Déconnecter ce compte | . | . | . | . | .
         . | . | . | . | . | . | . | . | . | . | .
     }
 }
