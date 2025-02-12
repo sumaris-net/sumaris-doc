@@ -493,8 +493,14 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Le type de vente*
    * Le lieu de vente
    * La date/heure de vente*
-   * Le métier*
-   * La zone de pêche
+   * Les métiers*
+     * La liste des métiers est régionalisée  
+     * Il est possible de rajouter plusieurs métiers (:heavy_plus_sign:)
+     * Il est possible de supprimer des métiers (:heavy_multiplication_x:)
+   * Les zones de pêche
+     * La liste des zônes de pêche est régionalisée
+     * Il est possible de rajouter plusieurs zones de pêche (:heavy_plus_sign:)
+     * Il est possible de supprimer des zones de pêche (:heavy_multiplication_x:)
    * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
@@ -535,15 +541,6 @@ Type de vente :
 > "Remplissage automatique de l'heure de la vente"
 > Stockée dans les préférences locales
 
-
-> 11/02/2025 :
-
-> - Zône : Pouvoir ajouter plusieurs zones (avec un +) ou aucune
-
-> - Métier : Pouvoir saisir plusieurs métiers (avec un +), voir s'il faut un max
-
-![img.png](img.png)
-
 ---
 ## Vente > Lots espèces
 
@@ -578,7 +575,9 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * Identification à confirmer
 5. Le saisisseur enregistre
 6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
-7. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
+7. Le saisisseur peut ajouter des photos de la caisse du lot
+8. Le Saisisseur peut saisir un commentaire sur le lot
+9. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
 
 
 NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans [les spécifications communes / Mesures](/projects/common/spe/regles_communes.md#commun-saisie-de-mensuration)
@@ -590,7 +589,6 @@ NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans
 4. Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie [Retour en 5]
 
 > Questions :
-> - Cas des mélanges ? (ex: baudroie blanche/noire)
 > - Pas de sous-échantillonnage ?
 > - MOE : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
 
@@ -667,6 +665,8 @@ effectuées par les observateurs dans ObsDeb.
 ## Référentiels
 
 (en cours de rédaction)
+
+- Ajouter la régionalisation des métiers/espèces/zones de pêche
 
 ---
 ## Historique

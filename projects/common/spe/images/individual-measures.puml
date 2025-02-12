@@ -24,7 +24,7 @@
         { | . |  <b>Mensurations  | . | . | . | . | . }
         --
         { | . | Espèce scientifique * | . }
-        { | . | ^Lophius piscatorius^| .  | [ ] Figer }
+        { | . | ^Lophius piscatorius^| .  | <color:blue><b>Y | [ ] Figer }
 
         { | . | Sexe  | . }
         { | . | ^Femelle^  }

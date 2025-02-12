@@ -13,3 +13,6 @@ select id from person where id = 2749;
 
 -- Insertion de la pubkey pour l'utilisateur qui n'arrive pas à se connecter
 insert into m_person values (2749, null, '3T4K8UvcDPe3LWvQnq6iGR8zErzCoZAeVmUqeszyWCxz', null);
+
+-- Insertion de la pubkey pour l'utilisateur tstq2
+insert into m_person values (482, null, 'ChDkpKbYePt8EmRLSzogXRmmmn69GMhbeKy33tJLgWyH', null);

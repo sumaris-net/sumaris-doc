@@ -16,9 +16,11 @@
       .
       Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
       .
-      Métier* : | { ^ OTBBSE - Chaluts de fond à bars ^ }
+      Métier* : | { ^ OTBBSE - Chaluts de fond à bars ^ } | <&plus> <&x>
       .
-      Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^
+      Métier* : | { ^ OTBCOD - Chaluts de fond à morue ^ } | <&plus> <&x>
+      .
+      Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x>
       .
   }
 

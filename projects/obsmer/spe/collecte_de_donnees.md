@@ -197,11 +197,12 @@ Référence : [COMMUN/FILTRES](../../common/spe/regles_communes.md#commun--appli
     * Le lieu de retour * (_saisie des 3 premières lettres, Référentiel des LIEUX_)
     * La date* et l'heure * de début de marée
     * La durée de la marée est automatiquement calculée et affichée après la saisie des dates/heures de début et de fin
-    * Les détails sur la vente 
+    * Les détails sur les ventes 
+      * Le type * de vente
       * Le lieu * de vente 
       * La date * et l'heure de vente 
         * L'heure de vente peut être saisit mais elle n'est pas obligatoire
-      * Le type * de vente 
+      * Une case à cocher permet d'indiquer si la vente est escomptée
     * Des caractéristiques (PSFM définit par la stratégie appliquée)
      * L'observateur à la possibilité de rajouter des caractéristiques à la marée : 
        * Nombre d'hommes à bord
@@ -236,8 +237,14 @@ Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à
 
 #### Détails techniques :
 
+- Stockage de la vente : 
+  - Vente exclusive : Table SALE
+  - Vente escomptée : Table EXPECTED_SALE
+
 - Type de vente : 
   - Table SALE_TYPE
+
+
 
 > Modèle de données de Marée : https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/model/data/trip.svg
 
@@ -1217,8 +1224,9 @@ Les saisisseurs doivent pouvoir visualiser une synthèse des poids, par lots par
 ## Historique
 
 |       Date | Auteur | Sections mises à jour                                             |
-|-----------:|--------|-------------------------------------------------------------------|
-| 11/09/2023 | BLA    | Création                                                          |
-| 10/11/2023 | BLA    | Ajout écrans Marée, Engins et OP                                  |
-| 19/01/2024 | VFA    | Ajout de cas d'utilisation (Marées, Marée, Opérations, Opération) |
-| 25/01/2024 | BLA    | Mise à jour des écrans de Capture                                 |
+|-----------:|-------|-------------------------------------------------------------------|
+| 11/09/2023 | BLA   | Création                                                          |
+| 10/11/2023 | BLA   | Ajout écrans Marée, Engins et OP                                  |
+| 19/01/2024 | VFA   | Ajout de cas d'utilisation (Marées, Marée, Opérations, Opération) |
+| 25/01/2024 | BLA   | Mise à jour des écrans de Capture                                 |
+| 11/02/2025 | VFA   | Mise à jour des écrans de Capture                                 |

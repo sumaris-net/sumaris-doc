@@ -249,6 +249,21 @@ L'écran affiche par défaut la saisie de mesures individuelles.
 6. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
 7. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
+
+**Cas des caisses de mélange**
+
+**Variante 3a** : Sélection d'espèce scientifique différente de l'espèce commerciale
+
+L'observateur peut avoir des mélanges d'espèces dans sa caisse.
+
+Exemple d'un rouget ou maquereau parmis une caisse de baudroie.
+
+1. L'observateur clique sur l'icône entonnoir, à côté de la liste de sélection de l'espèce scientifique
+2. Si l'icône est activée, par défaut (rendu bleue), l'observateur peut sélectionner l'espèce scientifique en correspondance avec l'espèce commerciale
+3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner l'espèce scientifique parmi la liste des espèces régionalisées pour sa façade
+
+
+
 **Saisie de dénombrement**
 
 **Variante 1a** : Saisie des mensurations par dénombrement
@@ -338,11 +353,11 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
 
 **REF: COMMUN/PHOTOS**
 
-**Ajout de photos d'individus mesurés**
+**Ajout de photos d'individus mesurés et ajout de photos d'un lot (caisse)**
 
 ![ui-common-individual-photo](/projects/common/spe/images/individual-photo.svg)<!-- .element height="60%" width="60%" -->
 
-L'écran permet de sélectionner des photos afin de les associer à l'individu mesuré.
+L'écran permet de sélectionner des photos afin de les associer à l'individu mesuré ou à un lot (suivant l'écran d'origine)
 
 1. Le saisisseur clique sur l'image d'ajout de photo
 2. Une fenêtre permet de glisser/déposer une photo ou de sélectionner une photo sur le disque

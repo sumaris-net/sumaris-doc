@@ -25,8 +25,9 @@ Démarrage au 01/01/2023 }
       . | . | <i><color:blue>durée de la marée |
       .
       .
-      Vente*:     | { ^Type de vente        ^ } | { ^ jj/mm/aaaa^ } | { ^ hh:mm^ } | .
-      .          { ^Lieu de vente        ^ }
+      .
+      Vente*:     | { ^Type de vente        ^ }  [] Vente escomptée | <&plus> <&x> | .
+      .          { ^Lieu de vente        ^ } | { ^ jj/mm/aaaa^ } | { ^ hh:mm^ } |
 
   }
 
