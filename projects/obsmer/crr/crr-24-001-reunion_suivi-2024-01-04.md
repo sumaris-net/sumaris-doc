@@ -5,7 +5,7 @@
 > - Vincent FACHERO (Ifremer)
 > - Marion SCAVINNER (Ifremer)
 > - Joanna VEGA (Ifremer)
-> - Thomas Cloatre (Ifremer)
+> - Thomas CLOATRE (Ifremer)
 > - Armelle  (Ifremer)
 > - Benoit LAVENIER (EIS)
 >
