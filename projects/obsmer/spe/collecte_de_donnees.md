@@ -235,6 +235,12 @@ La stratégie est trouvée suivant les éléments précédemment saisis :
 Un écran de sélection des PSFM s'ouvre. Il sélectionne les PSFM à ajouter à la marée.
 
 
+**Variante 3b** - Prédocumentation sur les lieux (ventes, ports, ...)
+    - TODO VFA : proposer à la MOA et vérifier dans Allegro
+
+
+
+
 #### Détails techniques :
 
 - Stockage de la vente : 

@@ -16,7 +16,7 @@
         { | . | ()  <b>Mensurations | (X)  <b>Effectif | . | . | . | . | . }
         --
         { | . | Espèce scientifique *  | . }
-        { | . | ^Lophius piscatorius^   | .  | [ ] Figer }
+        { | . | ^Lophius piscatorius^   |  <color:blue><b>Y  | . | [ ] Figer }
         .
         { | . | Nombre d'individu * | .  }
         { | . | "   1  "  | .   }

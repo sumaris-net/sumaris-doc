@@ -262,7 +262,7 @@ Exemple d'un rouget ou maquereau parmis une caisse de baudroie.
 2. Si l'icône est activée, par défaut (rendu bleue), l'observateur peut sélectionner l'espèce scientifique en correspondance avec l'espèce commerciale
 3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner l'espèce scientifique parmi la liste des espèces régionalisées pour sa façade
 
-
+Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
 **Saisie de dénombrement**
 
@@ -334,6 +334,15 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
 3. Le tableau des mesures est modifié et 2 colonnes sont affichées :
     * Le nom de l'espèce scientifique
     * Le nombre de l'effectif des individus observés
+
+**Variante 2a** : Sélection d'espèce scientifique différente de l'espèce commerciale
+
+1. L'observateur clique sur l'icône entonnoir, à côté de la liste de sélection de l'espèce scientifique
+2. Si l'icône est activée, par défaut (rendu bleue), l'observateur peut sélectionner l'espèce scientifique en correspondance avec l'espèce commerciale
+3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner l'espèce scientifique parmi la liste des espèces régionalisées pour sa façade
+
+Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
+
 
 ### CRR Réunion du 13/08/2024 (Avec Elise Bultel)
 
