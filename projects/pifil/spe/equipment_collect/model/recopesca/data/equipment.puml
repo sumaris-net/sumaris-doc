@@ -1,0 +1,47 @@
+@startuml
+hide empty members
+
+class Equipment {
+    + id: Identifier
+    + serialNumber: String [0..1]
+    + deliveryDate: Date
+    + daysBetweenTwoCalibrations: Integer
+    + lastCalibrationDate: Date [0..1]
+    + docRef: String [0..1]
+    + comments: String [0..1]
+}
+
+class EquipmentModel {
+}
+
+class EquipmentDeliveryState {
+}
+
+class EquipmentOnBoardPlatform {
+    + id: Identifier
+    + startDateTime: DateTime
+    + endDateTime: DateTime [0..1]
+    + comments: String [0..1]
+}
+
+class Gear {
+}
+
+class Platform {
+}
+
+class EquipmentConfiguration {
+    + id: Identifier
+    + startDate: Date
+    + fileName: String
+    + configurationVersion: String [0..1]
+}
+
+EquipmentConfiguration "*" -up-> "1" EquipmentOnBoardPlatform: equipmentOnBoardPlatform
+EquipmentOnBoardPlatform "*" -right-> "1" Platform: platform
+EquipmentOnBoardPlatform "*" -left-> "0..1" Gear: gear
+EquipmentOnBoardPlatform "*" -up-> "1" Equipment: equipment
+Equipment "*" -left-> "1" EquipmentModel: model
+Equipment "*" -right-> "1" EquipmentDeliveryState: equipmentDeliveryState
+
+@enduml

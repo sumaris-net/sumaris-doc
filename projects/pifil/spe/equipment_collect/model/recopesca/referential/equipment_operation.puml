@@ -1,0 +1,17 @@
+@startuml
+hide empty members
+
+class EquipmentTaskType {
+    + id: Identifier
+    + label: String
+    + name: String
+    + comments: String [0..1]
+}
+
+class Motivation {
+    + id: Identifier
+    + name: String
+    + comments: String [0..1]
+}
+
+@enduml

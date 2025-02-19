@@ -1,0 +1,12 @@
+@startuml
+hide empty members
+
+class PlatformType {
+    + id: Identifier
+    + label: String
+    + name: String
+    + isFishingPlatform: Boolean
+    + comments: String [0..1]
+}
+
+@enduml

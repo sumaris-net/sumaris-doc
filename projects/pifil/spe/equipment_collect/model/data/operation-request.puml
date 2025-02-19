@@ -1,0 +1,54 @@
+@startuml
+hide empty members
+
+class Platform {
+}
+
+class RequestEquipmentConfiguration {
+    + id: Identifier
+    + content: String
+    + comments: String [0..1]
+}
+
+class OperationRequest {
+    + id: Identifier
+    + requestDate: Date
+    + fileName: String [0..1]
+    + isFirstInstallation: Boolean
+    + comments: String [0..1]
+}
+
+class EquipmentOperationRequest {
+    + id: Identifier
+    + comments: String [0..1]
+}
+
+class Location {
+}
+
+class Person {
+}
+
+class Gear {
+}
+
+class EquipmentModel {
+}
+
+class Equipment {
+}
+
+class Motivation {
+}
+
+OperationRequest "0..*" -up-> "0..1" Platform: platform
+OperationRequest "*" -left-> "0..1" Location: location
+OperationRequest "*" -right-> "1" Person: recorderPerson
+OperationRequest "1" *-down- "*" EquipmentOperationRequest: operationRequest
+EquipmentOperationRequest "1" *-left- "0..1" RequestEquipmentConfiguration: requestEquipmentConfig
+EquipmentOperationRequest "*" -right-> "0..1" Gear: gear
+EquipmentOperationRequest "*" --> "0..1" EquipmentModel: equipmentModel
+EquipmentOperationRequest "*" --> "0..1" Equipment: equipment
+EquipmentOperationRequest "*" --> "0..1" Motivation: motivation
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+hide empty members
+
+class EquipmentConfigurationTemplate {
+    + id: Identifier
+    + content: String
+    + comments: String [0..1]
+}
+
+class EquipmentModel {
+    + id: Identifier
+    + label: String
+    + name: String
+    + comments: String [0..1]
+    + isGearAttached: Boolean
+}
+
+class EquipmentType {
+    + id: Identifier
+    + label: String
+    + name: String
+    + isHub: Boolean
+    + comments: String [0..1]
+}
+
+class EquipmentFormat {
+    + id: Identifier
+    + label: String
+    + comments: String [0..1]
+}
+
+class EquipmentProvider {
+    + id: Identifier
+    + name: String
+    + comments: String [0..1]
+}
+
+class EquipmentState {
+    + id: Identifier
+    + label: String
+    + name: String
+    + comments: String [0..1]
+}
+
+class EquipmentDeliveryState {
+    + id: Identifier
+    + label: String
+    + name: String
+    + comments: String [0..1]
+}
+
+EquipmentModel "1..*" -left-> "0..1" EquipmentConfigurationTemplate: configurationTemplate
+EquipmentModel "*" -right-> "1" EquipmentType: equipmentType
+EquipmentModel "*" --> "0..1" EquipmentFormat: format
+EquipmentModel "*" --> "0..1" EquipmentProvider: provider
+EquipmentFormat -[hidden]down-> EquipmentState
+EquipmentProvider -[hidden]down-> EquipmentDeliveryState
+
+@enduml

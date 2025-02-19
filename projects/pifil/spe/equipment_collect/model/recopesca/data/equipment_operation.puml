@@ -1,0 +1,55 @@
+@startuml
+hide empty members
+
+class EquipmentOperation {
+    + id: Identifier
+    + operationDate: Date
+    + docRef: String [0..1]
+    + comments: String [0..1]
+}
+
+class Location {
+}
+
+class Person {
+}
+
+class OperationRequest {
+}
+
+class EquipmentTask {
+    + id: Identifier
+    + docRef: String [0..1]
+    + comments: String [0..1]
+}
+
+class Equipment {
+    + id: Identifier
+    + serialNumber: String [0..1]
+    + deliveryDate: Date
+    + daysBetweenTwoCalibrations: Integer
+    + lastCalibrationDate: Date [0..1]
+    + docRef: String [0..1]
+    + comments: String [0..1]
+}
+
+class EquipmentState {
+    + id: Identifier
+    + label: String
+    + name: String
+    + comments: String [0..1]
+}
+
+class EquipmentTaskType {
+}
+
+EquipmentTask "*" --> "1" Equipment: equipment
+EquipmentTask "*" -left-> "1" EquipmentTaskType: equipmentTaskType
+EquipmentTask "*" -right-> "1" EquipmentState: equipmentState
+EquipmentTask "1..*" -up-* "1" EquipmentOperation: operation
+EquipmentOperation "*" -left-> "0..1" OperationRequest: operationRequest
+EquipmentOperation "*" -right-> "0..1" Location: location
+EquipmentOperation "*" -right-> "0..1" Person: intervenant
+EquipmentOperation "*" -right-> "0..1" Person: recorderPerson
+
+@enduml

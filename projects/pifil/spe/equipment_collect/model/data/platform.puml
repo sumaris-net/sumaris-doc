@@ -1,0 +1,28 @@
+@startuml
+hide empty members
+
+class PlatformType {
+    + id: Identifier
+    + label: String
+    + name: String
+    + isFishingPlatform: Boolean
+    + comments: String [0..1]
+}
+
+class Platform {
+    + id: Identifier
+    + name: String
+    + label: String
+}
+
+class Person {
+}
+
+class Vessel {
+}
+
+Platform "*" -left-> "1" PlatformType: platformType
+Platform "0..*" --> "0..1" Vessel: vessel
+Platform "0..*" -right-> "0..1" Person: localContact
+
+@enduml
