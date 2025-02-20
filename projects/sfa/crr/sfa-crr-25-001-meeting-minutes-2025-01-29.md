@@ -59,7 +59,7 @@ SIH updates follow-up
 ---
 
 > Actions :
-> - _**GMA**_ logbook to be renamed _**JMA**_
+> - _**GMA**_ logbook to be renamed _**JMA**_ (EIS)
 > - _**Octopus Fishery**_ logbook similar to _**Artisanal Fishery**_
 >   - Template to be shared (SFA)
 > - _**Spanner Crab Fishery**_ logbook new version to be shared (SFA)
@@ -192,7 +192,7 @@ SIH upgrade from 2.8.12 to 2.9.29
   - Tests to be performed soon
 
 > Actions :
-> - SFA database copy for test data update
+> - SFA database copy for test data update (EIS)
 > - Non regression tests to be performed (EIS)
  
 ---
