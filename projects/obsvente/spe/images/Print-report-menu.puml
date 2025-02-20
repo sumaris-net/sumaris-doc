@@ -1,0 +1,13 @@
+@startsalt
+{
+    {
+    **Éditer le rapport...**
+    }|{}|->|.|
+    {^
+      **Types de rapports**
+      ""
+      Formulaire vierge
+      Formulaire avec données
+    }
+}
+@endsalt
