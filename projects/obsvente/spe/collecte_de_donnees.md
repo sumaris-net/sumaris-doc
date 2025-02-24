@@ -20,7 +20,7 @@
 - [Règles métier](#règles-métier)
 - [Importation depuis ObsDeb](#importation-depuis-obsdeb)
 - [Référentiels](#référentiels)
-
+- [Restitution](/projects/obsvente/spe/restitution.md)
 
 ---
 ## Documents
@@ -126,10 +126,10 @@ Validation des données : qui valide (responsable de programme et/ou coordinateu
 
 **Variante(s) :**
 
-**Variante a :** 
+**Variante 4a :** 
 4. Le saisisseur consulte une sortie existante [Retour en 4]
 
-**Variante b :** 
+**Variante 4b :** 
 4. Le saisisseur supprime une sortie existante [Retour en 4]
 
 > Questions :
@@ -200,13 +200,13 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 
 **Variante(s) :**
 
-**Variante a :** 
+**Variante 3a :** 
 3. Les champs suivants sont automatiquement renseignés lorsque le filtre "Programme de collecte" sur le tableau des sorties est renseigné [Retour en 3] :
   * Programme de collecte 
   * Observateur 
   * Date
 
-**Variante b :** 
+**Variante 3b :** 
 Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages associés
 
 #### Détails techniques :
@@ -350,10 +350,10 @@ Liste exhaustive des raisons de non observation :
 
 **Variante(s) :**
 
-**Variante b :**
+**Variante 2b :**
 2. Un warning apparait lorsque le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer [Retour en 2]
 
-**Variante a :** 
+**Variante 8a :** 
 8. Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
 Le warning peut être omis en cliquant sur la case à cocher "Ne plus afficher" [Retour en 8]
 
@@ -587,7 +587,7 @@ NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans
 
 **Variante(s) :**
 
-**Variante a :** 
+**Variante 4a :** 
 4. Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie [Retour en 5]
 
 > Questions :
