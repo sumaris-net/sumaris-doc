@@ -8,6 +8,7 @@ Cette partie décrit les règles d'ergonomie communes aux applications <b>ObsMer
 - [Spécificités techniques](#spécificités-techniques)
 - [Commun > Ergonomie > principes généraux](#commun--ergonomie-principes-généraux)
 - [Commun > Ergonomie > Connexion à l'application](#commun--ergonomie-connexion-à-l-application)
+- [Commun > Préférences utilisateurs](#commun--utilisateurs--préférences)
 - [Commun > Application des filtres](#commun--application-des-filtres)
 - [Commun > Epingler un élément](#commun--epingler-un-élément)
 - [Commun > Extraction](#commun--extraction)
@@ -109,6 +110,16 @@ Le noeud est stocké dans les paramètres locaux (local setting) du navigateur.
 
 **Variante 3a** - Connexion suivantes : Aux connexionx suivantes, l'observateur est directement positionné sur le précédent noeud qu'il avait choisit lors
 de sa précédente connexion.
+
+## Commun > Utilisateurs > Préférences
+
+Dans "Paramètres", le saisisseur dispose d'une case à cocher "Utiliser les préférences de mon compte utilisateur"
+
+- Si le saisisseur coche l'option, ce sont les préférence de son compte qui s'applique (Langue, format lat/long). 
+  - Le saisisseur doit aller les modifier dans les préférences de "Son compte" (puis elle sont sauvegardées dans USER_SETTINGS)
+    
+- si c'est décoché, le saisisseur peut les changer, mais cela n'est pas sauvegardé en distant (dans USER_SETTINGS)
+
 
 
 ---
