@@ -2,50 +2,58 @@
 ## Spécifications (ObsVente)
 
 ---
-## Documents fournis
-
-- Exemple de restitution : 
-  - [Formulaire terrain vierge (métropole)](/projects/obsvente/doc/obsventes-doc-24-001-Formulaire_terrain_OBSVENTES.pdf)
-  - [Formulaire terrain vierge (Outre-mer)](/projects/obsvente/doc/obsventes-doc-24-009-formulaire_outre-mer.pdf)
-  - [Formulaire avec données (arbre)](/projects/obsvente/doc/obsventes-doc-24-005-Formulaire_terrain_v1-valide_arbre.pdf)  
+L’accès à la fonctionnalité de génération de rapports est disponible depuis la liste des sorties via l’icône située en haut à droite de l’écran.
+Il est possible de générer les formulaires vierges ou terrain avec données depuis [l'écran des sorties](/projects/obsvente/spe/collecte_de_donnees.md#sorties) ou depuis la [consultation d'une sortie](/projects/obsvente/spe/collecte_de_donnees.md#sortie--détails).
 
 ---
+
+## Documents fournis
+
+- Exemple de restitution :
+    - [Formulaire terrain vierge (métropole)](/projects/obsvente/doc/obsventes-doc-24-001-Formulaire_terrain_OBSVENTES.pdf)
+    - [Formulaire terrain vierge (Outre-mer)](/projects/obsvente/doc/obsventes-doc-24-009-formulaire_outre-mer.pdf)
+    - [Formulaire avec données (arbre)](/projects/obsvente/doc/obsventes-doc-24-005-Formulaire_terrain_v1-valide_arbre.pdf)
+
+---
+
 ## Questions
 
 - Les observateurs présents sur un même bateau sont-ils toujours de la même société (il n'y a qu'un seul champ de saisie pour la société) ?
 
 - Les options de configuration du formulaire terrain suivantes, doivent-elles être maintenues ? :
-  - Afficher les erreurs de saisie des ventes,
-  - Afficher les erreurs de saisie des lots,
-  - Afficher les erreurs de saisie des prélèvements.
+    - Afficher les erreurs de saisie des ventes,
+    - Afficher les erreurs de saisie des lots,
+    - Afficher les erreurs de saisie des prélèvements.
+
 ---
-## Accès à la fonctionnalité de génération de rapports
 
-Il est possible de générer les formulaires vierges ou terrain avec données depuis [l'écran des sorties](/projects/obsvente/spe/collecte_de_donnees.md#sorties) ou depuis la [consultation d'une sortie](/projects/obsvente/spe/collecte_de_donnees.md#sortie--détails).
+### **Scénario principal**
 
-Par défaut la génération des formulaires est active. Depuis l'écran de la liste des sorties, il est possible de bloquer cette génération ou d'avertir le saisisseur si trop de sorties vont constituer les rapports :
-- Une limite du nombre de sorties est paramétrable, avec un blocage de la génération en avertissant le saisisseur si cette limite est atteinte.
-- Une limite du nombre de sorties est paramétrable, avec un simple avertissement sur le temps de génération pouvant être long si cette limite est atteinte.
+1. L’observateur demande l’édition d’un rapport.
+2. Un sous-menu s’ouvre avec les options suivantes :
+    * **"Éditer le rapport…"**
+        * **"Types de rapport"**
+            * **"Formulaire vierge"** *(affiché selon la zone géographique de l’observateur : métropole ou outre-mer)*
+            * **"Formulaire avec données"**
+3. L’observateur sélectionne une option du sous-menu.
+4. En fonction de la sélection effectuée :
+    * Si l’observateur **n’a sélectionné aucune sortie** dans la liste, il peut éditer un formulaire vierge ou avec données, à condition que le nombre total de sorties ne dépasse pas un seuil prédéfini.
+    * Si le **seuil est dépassé**, un **message d’alerte** l’informe qu’il doit réduire la sélection.
+    * Si l’observateur a **sélectionné une ou plusieurs sorties**, l’édition du formulaire portera uniquement sur ces sorties.
+5. Si l’observateur se trouve sur la **page de détail d’une sortie**, il peut également éditer un formulaire vierge ou avec données.
+6. Lors de l’édition d’un **formulaire avec données**, un **contrôle de validation** est effectué sur les informations saisies.
+7. **En cas d’erreur de saisie**, l’édition du formulaire est bloquée et un **message d’information** informe l’observateur des erreurs à corriger.
 
-L’accès à la génération de rapports se fait via un bouton situé en haut à droite de la fenêtre affichant la liste des sorties. [Bouton accès rapport](/projects/obsvente/spe/images/observed-location-PrintButton.svg).
+---
 
-L’appui sur ce bouton ouvre un sous-menu proposant les options suivantes :
+### **Variante(s) :**
 
-- Éditer le rapport… [Interface graphique](/projects/obsvente/spe/images/Print-report-menu.svg)
-	- Types de rapport
-	  - Formulaire vierge (choix entre métropole et outre-mer selon la zone de l’observateur)
-	  - Formulaire avec données
-# Conditions d’édition des formulaires
-## Sans sélection de sorties
-Si aucune sortie n’est sélectionnée, l’observateur peut éditer un formulaire vierge ou avec données, à condition que le nombre total de sorties affichées ne dépasse pas un seuil prédéfini.
-Si le seuil est dépassé, un message d’alerte informe l’observateur qu’il doit réduire la sélection avant de poursuivre.
+**Variante 4a :**  
+Si l’observateur a appliqué un **filtre "Programme de collecte"** dans la liste des sorties, certains champs sont préremplis automatiquement :
+* **Programme de collecte**
+* **Observateur**
+* **Date**  
+  [Retour en 3]
 
-## Avec sélection de sorties
-Lorsque l’observateur sélectionne une ou plusieurs sorties dans la liste, l’édition des formulaires vierges ou avec données portera uniquement sur les sorties sélectionnées.
-
-## Depuis la page de détail d’une sortie
-Lorsqu’une sortie est ouverte en détail, l’observateur peut également éditer un formulaire vierge ou avec données depuis cette page.
-
-# Contrôle des données lors de l’édition d’un formulaire avec données
-Lors de l’édition d’un formulaire avec données, un contrôle de validation est effectué sur les informations saisies.
-En cas d’erreur, l’édition du formulaire est bloquée et un message d’information indique à l’observateur les erreurs à corriger avant de poursuivre.
+**Variante 4b :**  
+Le **formulaire avec données** n’est pas modifiable si des échantillonnages sont déjà associés.
