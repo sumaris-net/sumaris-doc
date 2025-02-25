@@ -1,0 +1,36 @@
+@startgantt
+    <style>
+        ganttDiagram {
+            timeline {
+                LineColor transparent
+                FontColor transparent
+            }
+            milestone {
+                FontStyle bold
+            }
+        }
+    </style>
+    hide footbox
+    [**Batch #1** delivery on test server] requires 21 days and is colored in LightSkyBlue
+        [28/03/2025] happens at [**Batch #1** delivery on test server]'s end
+        [SIH upgrade to 2.9.xx] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [New logbooks creation] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Commercial / scientific cruise parameter addition] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [OPRDEB program for Landed catches (packets enabled)] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [OPRDEB program for Sales (packets enabled)] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [SFA name and logo update] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Vessels already observed list restored] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Extraction for Dropline Fishery logbook to be fixed] starts 1 day after [**Batch #1** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+    [**Batch #2** delivery on test server] starts 1 day after [**Batch #1** delivery on test server]'s end and requires 21 days and is colored in PaleGreen
+        [30/04/2025] happens at [**Batch #2** delivery on test server]'s end
+        [OPRDEB program for Landed catches (packets disabled)] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [OPRDEB program for Sales (packets disabled)] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Expenses tab creation] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Individual measurements tab addition to Packets screen] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Vessel search option addition to Occasions screen] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+        [Adding biological sampling on Packets screen] starts 1 day after [**Batch #2** delivery on test server]'s start and lasts 19 days and is colored in PapayaWhip
+    [**Batch #3** delivery on test server] starts 1 day after [**Batch #2** delivery on test server]'s end and requires 14 days and is colored in SandyBrown
+        [27/06/2025] happens at [**Batch #3** delivery on test server]'s end
+        [P03 extractions tool migration] starts 1 day after [**Batch #3** delivery on test server]'s start and lasts 12 days and is colored in PapayaWhip
+        [P03 extractions queries creation] starts 1 day after [**Batch #3** delivery on test server]'s start and lasts 12 days and is colored in PapayaWhip
+@endgantt
