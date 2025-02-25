@@ -156,9 +156,13 @@ Pour remonter les questions ou problèmes :
 
 # Formulaire terrain
 
-En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**PIFIL 2**_, un formulaire terrain est disponible en ligne, [en cliquant sur ce lien](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/doc/pifil-doc-25-002-Formulaire_terrain-PIFIL-v1.2.pdf).
+En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**PIFIL 2**_, un formulaire terrain est téléchargeable en ligne, en cliquant sur l'icône ci-dessous.
 
-[Lien téléchargement direct](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/pifil-doc-25-002-Formulaire_terrain-PIFIL-v1.2.pdf?inline=false)
+<div style="text-align: center">
+
+[![PDF](pdf_file_icon.png)](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/pifil-doc-25-002-Formulaire_terrain-PIFIL-v1.2.pdf?inline=false)
+
+</div>
 
 # Installer l'application SUMARiS
 
