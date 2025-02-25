@@ -144,7 +144,7 @@ Pour remonter les questions ou problèmes :
 
 # Formulaire terrain
 
-En cas d'impossibilité d'utiliser l'application _**SUMARiS**_, un formulaire terrain est disponible en ligne, [en cliquant sur ce lien](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/doc/dolphinfree-doc-25-002-Formulaire_terrain-DOLPHINFREE-v1.2.pdf).
+En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**DolphinFREE**_, un formulaire terrain est disponible en ligne, [en cliquant sur ce lien](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/doc/dolphinfree-doc-25-002-Formulaire_terrain-DOLPHINFREE-v1.2.pdf).
 
 [Lien téléchargement direct](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/dolphinfree-doc-25-002-Formulaire_terrain-DOLPHINFREE-v1.2.pdf?inline=false)
 
