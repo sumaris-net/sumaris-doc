@@ -142,7 +142,7 @@ SIH updates follow-up
 > - Bonito and Bonit are the same baits
 
 > Actions :
-> - Share which fishery use tuna as bait (SFA)
+> - Share which fishery uses tuna as bait (SFA)
 
 ---
 
