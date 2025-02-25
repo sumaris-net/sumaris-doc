@@ -32,9 +32,9 @@ Programme PIFIL 2
 <br>
 <br>
 
-Version 2.9.29.5
+Version 2.9.30
 
-Dernière mise à jour : 22/01/2025
+Dernière mise à jour : 25/02/2025
 
 ![Bandeau logos](splash_pifil.png)
 
@@ -67,6 +67,7 @@ Table des matières
   * [Objectif de l'application](#objectif-de-lapplication)
   * [Configuration minimum](#configuration-minimum)
 * [Assistance technique](#assistance-technique)
+* [Formulaire terrain](#formulaire-terrain)
 * [Installer l'application SUMARiS](#installer-lapplication-sumaris)
 * [Premiers pas dans l'application SUMARiS](#premiers-pas-dans-lapplication-sumaris)
   * [Première utilisation](#première-utilisation)
@@ -116,7 +117,7 @@ _**SUMARiS**_ est un outil de saisie en ligne de données halieutiques, dévelop
 
 </div>
 
-Ce document a pour objet d'aider efficacement le nouvel utilisateur à découvrir l'application _**SUMARiS**_, dans le cadre du programme _**PIFIL**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Observateur**_. 
+Ce document a pour objet d'aider efficacement le nouvel utilisateur à découvrir l'application _**SUMARiS**_, dans le cadre du programme _**PIFIL**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Observateur**_.
 
 Ce guide ne présente que les éléments permettant une première utilisation rapide de l'application _**SUMARiS**_ et ne doit pas être considéré comme un manuel complet.
 
@@ -133,10 +134,10 @@ L'application fonctionne sur des terminaux mobiles (tablette ou téléphone), su
 
 En revanche, comme des données doivent être synchronisées à un serveur, une connexion Internet est nécessaire dans les cas suivants :
 
- * Installation de l'application,
- * Première connexion à l'application,
- * Configuration du mode hors-connexion,
- * Synchronisation des données lors du retour à terre.
+* Installation de l'application,
+* Première connexion à l'application,
+* Configuration du mode hors-connexion,
+* Synchronisation des données lors du retour à terre.
 
 # Assistance technique
 
@@ -152,6 +153,16 @@ Pour remonter les questions ou problèmes :
     * [+33 (0)9 53 24 41 20](tel:+33953244120)
 
 <div style="page-break-after: always"></div>
+
+# Formulaire terrain
+
+En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**PIFIL 2**_, un formulaire terrain est téléchargeable en ligne, en cliquant sur l'icône ci-dessous.
+
+<div style="text-align: center">
+
+[![PDF](pdf_file_icon.png)](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/pifil-doc-25-002-Formulaire_terrain-PIFIL-v1.2.pdf?inline=false)
+
+</div>
 
 # Installer l'application SUMARiS
 
@@ -226,9 +237,9 @@ L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié)
 Deux boutons sont disponibles :
 
 * _**S'inscrire**_
-    * Lien vers l'[Écran Inscription](#écran-inscription)
+  * Lien vers l'[Écran Inscription](#écran-inscription)
 * _**Se connecter**_
-    * Lien vers l'[Écran Authentification](#écran-authentification)
+  * Lien vers l'[Écran Authentification](#écran-authentification)
 
 <div style="clear:both"></div>
 
@@ -352,18 +363,18 @@ _Le bouton **Saisie des marées** ne sera donc pas affiché._
 
 Le menu latéral comporte les éléments suivants :
 
- * Identité de l'utilisateur
-   * Lien vers l'[Écran Mon compte](#écran-mon-compte)
- * Icône de notification ![Notification](sumaris_icone_notification.png)
-   * Affichage de la pop-up de notifications
- * Marées
-   * Lien vers l'[Écran Marées](#écran-marées)
- * Navires
- * Messages
- * Paramètres
-   * Lien vers l'[Écran Paramètres](#écran-paramètres)
- * À propos
- * Se déconnecter
+* Identité de l'utilisateur
+  * Lien vers l'[Écran Mon compte](#écran-mon-compte)
+* Icône de notification ![Notification](sumaris_icone_notification.png)
+  * Affichage de la pop-up de notifications
+* Marées
+  * Lien vers l'[Écran Marées](#écran-marées)
+* Navires
+* Messages
+* Paramètres
+  * Lien vers l'[Écran Paramètres](#écran-paramètres)
+* À propos
+* Se déconnecter
 
 **NB :**
 
@@ -401,8 +412,8 @@ L'icône **⁝** de la barre de titre permet d'afficher le [Menu Marées](#menu-
 </div>
 
 L'écran possède deux onglets :
- * _**Non envoyées**_
- * _**Envoyées**_
+* _**Non envoyées**_
+* _**Envoyées**_
 
 <div style="clear:both"></div>
 
@@ -449,12 +460,12 @@ _Pour l'observation en mer (sans connexion Internet), **privilégier impérative
 L'appui sur l'icône d'ajout d'une marée ![Ajout marée](sumaris_icone_ajout.png) de l'[Écran Marées](#écran-marées) permet d'afficher les entrées suivantes :
 
 * Saisie terrain (mode hors-ligne) ![Ajout marée terrain](sumaris_icone_ajout_maree_terrain.png)
-    * Si le mode hors-ligne n'a pas été configuré :
-        * Lien vers l'[Écran Configuration du mode hors-ligne](#écran-configuration-du-mode-hors-ligne)
-    * Si le mode hors-ligne a été configuré :
-        * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
-* Saisie bureau (mode connecté) ![Ajout marée bureau](sumaris_icone_ajout_maree_bureau.png)
+  * Si le mode hors-ligne n'a pas été configuré :
+    * Lien vers l'[Écran Configuration du mode hors-ligne](#écran-configuration-du-mode-hors-ligne)
+  * Si le mode hors-ligne a été configuré :
     * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
+* Saisie bureau (mode connecté) ![Ajout marée bureau](sumaris_icone_ajout_maree_bureau.png)
+  * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
 
 <div style="clear:both"></div>
 
@@ -569,15 +580,15 @@ _Faire attention de bien sélectionner le programme **PIFIL 2**._
 _L'exploitabilité des données saisies en découle !_
 
 Les champs marqués * sont obligatoires :
- * Programme de collecte
- * Navire
- * Port de départ
- * Date de départ
- * Heure de départ
- * Port de retour
- * Date de retour
- * Heure de retour
- * Utilisation d'un GPS
+* Programme de collecte
+* Navire
+* Port de départ
+* Date de départ
+* Heure de départ
+* Port de retour
+* Date de retour
+* Heure de retour
+* Utilisation d'un GPS
 
 Les données concernant le retour peuvent être saisies ultérieurement.
 
@@ -650,7 +661,7 @@ L'icône **🔍** de la barre de titre permet de retourner à l'[Écran Engin ex
 
 Sélectionner le code (type) d'engin souhaité.
 
-Les champs à renseigner pour la définition s'afficheront. Ils diffèrent d'un type d'engin à l'autre. 
+Les champs à renseigner pour la définition s'afficheront. Ils diffèrent d'un type d'engin à l'autre.
 
 Les champs marqués * sont obligatoires.
 
@@ -674,9 +685,9 @@ Un message d'information rappelle que toute marée doit commencer par un filage.
 L'appui sur l'icône d'ajout d'une opération ![Ajout opération](sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
 
 * Filage ![Ajout filage](sumaris_icone_ajout_filage.png)
-   * Lien vers l'[Écran de saisie d'un filage](#écran-de-saisie-dun-filage)
+  * Lien vers l'[Écran de saisie d'un filage](#écran-de-saisie-dun-filage)
 * Virage ![Ajout virage](sumaris_icone_ajout_virage.png)
-   * Lien vers l'[Écran de saisie d'un virage](#écran-de-saisie-dun-virage)
+  * Lien vers l'[Écran de saisie d'un virage](#écran-de-saisie-dun-virage)
 
 <div style="color: #ffa500; font-size: large">
 
@@ -718,7 +729,7 @@ L'icône **⌖** permet de renseigner automatiquement la position actuelle, via 
 
 L'icône **💾** de la barre de titre permet d'enregistrer les données renseignées.
 
-Retourner à l'[Onglet Opérations](#onglet-opérations) en appuyant sur l'icône **🡐** de la barre de titre. 
+Retourner à l'[Onglet Opérations](#onglet-opérations) en appuyant sur l'icône **🡐** de la barre de titre.
 
 <div style="clear:both"></div>
 
