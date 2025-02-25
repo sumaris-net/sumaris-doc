@@ -20,9 +20,9 @@
 
 <br>
 
-Version 2.9.29.5
+Version 2.9.30
 
-Dernière mise à jour : 22/01/2025
+Dernière mise à jour : 25/02/2025
 
 ![Bandeau logos](splash_pifil.png)
 
@@ -55,6 +55,7 @@ Table des matières
   * [Objectif de l'application](#objectif-de-lapplication)
   * [Configuration minimum](#configuration-minimum)
 * [Assistance technique](#assistance-technique)
+* [Formulaire terrain](#formulaire-terrain)
 * [Installer l'application SUMARiS](#installer-lapplication-sumaris)
 * [Premiers pas dans l'application SUMARiS](#premiers-pas-dans-lapplication-sumaris)
   * [Première utilisation](#première-utilisation)
@@ -140,6 +141,12 @@ Pour remonter les questions ou problèmes :
     * [+33 (0)9 53 24 41 20](tel:+33953244120)
 
 <div style="page-break-after: always"></div>
+
+# Formulaire terrain
+
+En cas d'impossibilité d'utiliser l'application _**SUMARiS**_, un formulaire terrain est disponible en ligne, [en cliquant sur ce lien](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/blob/master/projects/pifil/doc/dolphinfree-doc-25-002-Formulaire_terrain-DOLPHINFREE-v1.2.pdf).
+
+[Lien téléchargement direct](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/dolphinfree-doc-25-002-Formulaire_terrain-DOLPHINFREE-v1.2.pdf?inline=false)
 
 # Installer l'application SUMARiS
 
