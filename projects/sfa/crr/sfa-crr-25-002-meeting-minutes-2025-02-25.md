@@ -64,8 +64,8 @@ SIH updates follow-up
 > - Test on tablets will be performed with browser emulation
 
 > Actions :
-> - Tell whether _**SFA**_ test server is still up and running or not (SFA)
-> - Tell whether there is a test database or if test application is using production database (SFA)
+> - Share whether _**SFA**_ test server is still up and running or not (SFA)
+> - Share whether there is a test database or if test application is using production database (SFA)
 
 ---
 
