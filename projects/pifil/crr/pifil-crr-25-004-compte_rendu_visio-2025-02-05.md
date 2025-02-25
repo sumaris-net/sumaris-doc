@@ -1,7 +1,7 @@
 # Compte-rendu réunion visio
 ## 05/02/2025
 
-Point sur la formulaire terrain PIFIL et DOLPHINFREE
+Point sur les formulaires terrain PIFIL et DOLPHINFREE
 
 ---
 
@@ -12,17 +12,17 @@ Point sur la formulaire terrain PIFIL et DOLPHINFREE
 <!-- .element: class="font-size-extra-small" -->
 
 ---
-# Adaptation des formulaire terrain
+# Adaptation des formulaires terrain
 
-Suite au mail de Quiterie et Fiona du 29/01/2025, les points remontés par les OP sont revus avec la DGAMPA. 
+Suite au mail de Quitterie et Fiona du 29/01/2025, les points remontés par les OP sont revus avec la DGAMPA. 
 
 
 ---
 ## PIFIL
 
 - Marée :
-  - [ ] Ajouter "Utilisation d'une caméra ?" (obligatoire)
-  - [ ] Vérifier que le virage se saisit bien (actuellement il n'y a plus de date saisissable)
+  - [x] Ajouter "Utilisation d'une caméra ?" (obligatoire)
+  - [x] Vérifier que le virage se saisit bien (actuellement il n'y a plus de date saisissable)
 - Captures :
   - [x] Retirer "Distance à la bouée la plus proche"
 
@@ -33,7 +33,7 @@ Engin :
 - [x] Équipementier - Yves Le Gall (Ifremer) en a besoin (et c'est facultatif)
 
 Opération :
-- [ ] Autre disposition de la filière - à masquer sur le rapport
+- [x] Autre disposition de la filière - à masquer sur le rapport
 - Déroulement normal => à retirer
 - Dysfonctionnement de l'OP => pas de commentaire
 - Dysfonctionnement du dispositif technique => à mettre en facultatif
@@ -41,5 +41,5 @@ Opération :
 Captures
 - [x] "Blessures" ? à renommer en "Blessé ?"
 - [x] "Traces de capture ?" => à retirer
-- [ ] Agrandir la colonne "Numéro du pinger"
+- [x] Agrandir la colonne "Numéro du pinger"
 - 
