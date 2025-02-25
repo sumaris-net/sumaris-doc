@@ -178,15 +178,14 @@ SIH updates follow-up
 
 <span style="font-size:x-large">
 
-| _**Fichier flotte**_                | _**Deducted_Artisanal_Finss**_   |
-|:------------------------------------|:---------------------------------|
-| _**P03_OBSDEB_CALENDRIER_MAREE**_   | _**P03_OBSDEB_CALENDRIER**_      |
-| _**P03_OBSDEB_CAPTURE**_            | _**P03_OBSDEB_CAPTURE_LOT**_     |
-| _**P03_OBSDEB_CAPTURE_INDIVIDU**_   | _**P03_OBSDEB_COUT_VARIABLE**_   |
-| _**P03_OBSDEB_MAREE**_              | _**P03_OBSDEB_OBSERVATEUR**_     |
-| _**P03_OBSDEB_OBSERVATION**_        | _**P03_OBSDEB_OBSERVATION_OBS**_ |
-| _**P03_OBSDEB_OBSERVATION_NAVIRE**_ | _**P03_OBSDEB_OPERATION**_       |
-| _**P03_OBSDEB_VENTES**_             |                                  |
+| _**Fichier flotte**_              | _**Deducted_Artisanal_Finss**_      |
+|:----------------------------------|:------------------------------------|
+| _**P03_OBSDEB_CALENDRIER_MAREE**_ | _**P03_OBSDEB_CALENDRIER**_         |
+| _**P03_OBSDEB_CAPTURE**_          | _**P03_OBSDEB_CAPTURE_LOT**_        |
+| _**P03_OBSDEB_CAPTURE_INDIVIDU**_ | _**P03_OBSDEB_COUT_VARIABLE**_      |
+| _**P03_OBSDEB_MAREE**_            | _**P03_OBSDEB_OBSERVATEUR**_        |
+| _**P03_OBSDEB_OBSERVATION**_      | _**P03_OBSDEB_OBSERVATION_NAVIRE**_ |
+| _**P03_OBSDEB_OPERATION**_        | _**P03_OBSDEB_VENTES**_             |
 
 </span>
 
