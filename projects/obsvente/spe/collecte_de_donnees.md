@@ -19,7 +19,7 @@
 - [Sortie > Contrôle de la saisie](#sortie--contrôle-de-la-saisie)
 - [Règles métier](#règles-métier)
 - [Importation depuis ObsDeb](#importation-depuis-obsdeb)
-- [Référentiels](#référentiels)
+- [Référentiels régionalisés](#référentiels-régionalisés)
 - [Restitution](/projects/obsvente/spe/restitution.md)
 
 ---
@@ -664,11 +664,25 @@ effectuées par les observateurs dans ObsDeb.
    [Spécification transfert ObsDeb ObsVentes](/projects/obsvente/spe/transfert_obsdeb_obsventes.md))
 
 ---
-## Référentiels
+## Référentiels régionalisés
 
-(en cours de rédaction)
+- Ajouter la régionalisation sur : 
+  - Les métiers
+  - Les lieux de sorties
+  - Les lieux de ventes
+  - Les zones de pêche
+  - Les espèces
 
-- Ajouter la régionalisation des métiers/espèces/zones de pêche
+- Ecran "Sortie"
+    - Régionaliser le lieu de sortie (ports)
+
+- Ecran "Ventes"
+    - Régionaliser les lieux de vente (criées)
+    - Régionaliser les métiers
+    - Régionaliser les zones de pêche
+
+- Ecran "Mesures"
+    - Régionaliser les espèces
 
 ---
 ## Historique
