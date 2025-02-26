@@ -34,7 +34,7 @@ Programme PIFIL 2
 
 Version 2.9.30
 
-Dernière mise à jour : 25/02/2025
+Dernière mise à jour : 26/02/2025
 
 ![Bandeau logos](splash_pifil.png)
 
@@ -67,7 +67,7 @@ Table des matières
   * [Objectif de l'application](#objectif-de-lapplication)
   * [Configuration minimum](#configuration-minimum)
 * [Assistance technique](#assistance-technique)
-* [Formulaire terrain](#formulaire-terrain)
+* [Fiche d'autoéchantillonnage](#fiche-dautoéchantillonnage)
 * [Installer l'application SUMARiS](#installer-lapplication-sumaris)
 * [Premiers pas dans l'application SUMARiS](#premiers-pas-dans-lapplication-sumaris)
   * [Première utilisation](#première-utilisation)
@@ -154,13 +154,13 @@ Pour remonter les questions ou problèmes :
 
 <div style="page-break-after: always"></div>
 
-# Formulaire terrain
+# Fiche d'autoéchantillonnage
 
-En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**PIFIL 2**_, un formulaire terrain est téléchargeable en ligne, en cliquant sur l'icône ci-dessous.
+En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du protocole _**PIFIL 2**_, une _**Fiche d'autoéchantillonnage du protocole PIFIL**_ est téléchargeable depuis le site officiel https://mer.gouv.fr/cetaces, en cliquant sur l'icône ci-dessous.
 
 <div style="text-align: center">
 
-[![PDF](pdf_file_icon.png)](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-doc/-/raw/master/projects/pifil/doc/pifil-doc-25-002-Formulaire_terrain-PIFIL-v1.2.pdf?inline=false)
+[![PDF](pdf_file_icon.png)](https://mer.gouv.fr/sites/default/files/2025-02/pifil-doc-25-002-formulaire_terrain-pifil-v1.2.pdf)
 
 </div>
 
@@ -179,7 +179,7 @@ L'application est disponible dans les stores Android et iOS, ainsi que depuis un
 | [![Disponible sur Google play](google_play_badge_fr.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | [![QR Code Google Play SUMARiS](qr_code_google_play_sumaris.png)](https://play.google.com/store/apps/details?id=net.sumaris.app)  | https://play.google.com/store/apps/details?id=net.sumaris.app                                                                                                                |
 |:------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      [![Télécharger dans l'App Store](app_store_badge_fr.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)       |         [![QR Code App Store SUMARiS](qr_code_app_store_sumaris.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)         | **https://apps.apple.com/fr/app/sumaris/id6736747523**                                                                                                                       |
-|                   [![Télécharger dans l'App Store](mobile-browser-icon.png)](https://open.sumaris.net)                   |                           [![QR Code Open SUMARiS](qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net** <br><br><div style="color: #ffa500; font-size: large">**⚠ AVERTISSEMENT !**<br></div>_La saisie sans connexion Internet ne sera pas possible !_ |
+|                   [![Télécharger dans l'App Store](mobile_browser_icon.png)](https://open.sumaris.net)                   |                           [![QR Code Open SUMARiS](qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net** <br><br><div style="color: #ffa500; font-size: large">**⚠ AVERTISSEMENT !**<br></div>_La saisie sans connexion Internet ne sera pas possible !_ |
 
 <br>
 
