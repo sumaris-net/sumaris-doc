@@ -55,6 +55,7 @@ Workflow des tickets du guichet Opus Activité -> Assistance 1 SISMER -> Exploit
 - https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=500959 : Urgent - Loic LE RU - bateau sur plusieurs quartiers (changement de propriétaire)
 - https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=504751 : Non urgent - Shani LACOMBE - suivi"
 - https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=503643 : Non urgent - Etienne GIRARDIN - Questions globales d'utilisation
+- Métier par ligne : Impose de remplir toutes les zones+ gradient pour sauvegarder et ensuite avoir un calendrier lisible Non urgent - Coline LAZARD
 
 ---
 
