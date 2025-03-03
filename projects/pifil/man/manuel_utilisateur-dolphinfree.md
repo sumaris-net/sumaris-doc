@@ -22,7 +22,7 @@
 
 Version 2.9.30
 
-Dernière mise à jour : 26/02/2025
+Dernière mise à jour : 03/03/2025
 
 ![Bandeau logos](splash_pifil.png)
 
