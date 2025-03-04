@@ -49,7 +49,7 @@ L’accès à la fonctionnalité de **génération de rapports** est disponible 
 
 Il est possible de générer **les formulaires vierges ou terrain avec données** depuis :  
 - [L’écran des calendriers d'activité](/projects/activity-calendar/spe/collecte_de_donnees.md#calendriers-dactivité).  
-- La [consultation d'un calendrier d'activité](/projects/activity-calendar/spe/collecte_de_donnees.md#calendrier-dactivité--calendrier).  
+- [La consultation d'un calendrier d'activité](/projects/activity-calendar/spe/collecte_de_donnees.md#calendrier-dactivité--calendrier).  
 
 ⚠️ **Le rapport d'avancement n'est pas disponible** lorsque l’utilisateur se trouve sur la consultation d’un calendrier d’activité.  
 
@@ -57,9 +57,9 @@ Il est possible de générer **les formulaires vierges ou terrain avec données*
 
 ## **Paramétrages - Options de programme**  
 
-- Il est possible de paramétrer, dans les **options de programme**, un ou plusieurs types de **rapports accessibles** pour un observateur [Rapports accessibles](/projects/activity-calendar/doc/screenshots/reporting/Configuration-TypesOfReports.png).
-- Il est également possible de définir un **nombre maximal de lignes de calendriers** au-delà duquel un **avertissement** est affiché lors de la tentative de génération du rapport (prévention des lenteurs de traitement) [Seuil avertissement](/projects/activity-calendar/doc/screenshots/reporting/Configuration-Warn_NbMaxCalendards.png).
-- Enfin, un **seuil de calendriers** peut être défini, au-delà duquel **la génération de rapport est refusée** [Seuil génération refusée](/projects/activity-calendar/doc/screenshots/reporting/Configuration-NbMaxCalendards.png).
+- Il est possible de paramétrer, dans les **options de programme**, un ou plusieurs types de **rapports accessibles** pour un observateur ![Rapports accessibles](/projects/activity-calendar/doc/screenshots/reporting/Configuration-TypesOfReports.png)
+- Il est également possible de définir un **nombre maximal de lignes de calendriers** au-delà duquel un **avertissement** est affiché lors de la tentative de génération du rapport (prévention des lenteurs de traitement) ![Seuil avertissement](/projects/activity-calendar/doc/screenshots/reporting/Configuration-Warn_NbMaxCalendards.png)
+- Enfin, un **seuil de calendriers** peut être défini, au-delà duquel **la génération de rapport est refusée** ![Seuil génération refusée](/projects/activity-calendar/doc/screenshots/reporting/Configuration-NbMaxCalendards.png)
 
 ---
 
