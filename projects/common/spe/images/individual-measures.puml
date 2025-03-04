@@ -2,10 +2,7 @@
  {+
   { Lot MNZ - Baudroie - <b>Mesures individuelles (7) | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |<b> ...}
   ..
-
-  { | Critère de classement : | ^Longueur totale (cm)^ | .  }
-
-  <&trash> <color:grey><&spreadsheet></color> <&browser>
+  <&trash> <&plus>
 
   {
 	{#
@@ -21,19 +18,20 @@
 
     {
       {+
-        { | . |  <b>Mensurations  | . | . | . | . | . }
+        { | . |  (X)<b>Mensurations  | . | ()Dénombrement | . | . | . | . }
         --
+        Ajouter un mesure :
         { | . | Espèce scientifique * | . }
         { | . | ^Lophius piscatorius^| .  | <color:blue><b>Y | [ ] Figer }
 
         { | . | Sexe  | . }
-        { | . | ^Femelle^  }
+        { | . | ^Femelle^ | [ ] Figer }
 
-        { | . | Longueur totale (cm) | .  }
+        { | . | Longueur totale (cm)* | .  }
         { | . | "   12  "  }
 
         { | . | Nombre d'individu * | .  }
-        { | . | "   1  "  | .   }
+        { | . | "   1  "  | . | [ ] <font size=10>Saisie manuelle    }
 
         { | . | <i>Poids calculé RTP (kg)  | . }
         { | . | "<color:blue>0.01335 " | .  }
@@ -43,6 +41,6 @@
         }
      }
     }
-    {[Annuler] | [Appliquer]}
+
   }
 @endsalt

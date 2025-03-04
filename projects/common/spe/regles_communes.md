@@ -226,39 +226,42 @@ _A mettre dans une partie validation de données_
 
 **REF: COMMUN/MESURES**
 
-**Saisie de mesures individuelles**
+### Saisie de mesures individuelles - Mode terrain et bureau
 
 ![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
 
 La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
 
 L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
-- Saisie de mesures individuelles (écran par défaut :memo:)
-- Saisie par dénombrement sur classement numérique (Activable par le bouton :clipboard:) 
-- Saisie par effectif du lot (Cas d'usage Obsventes)
+- Saisie de mesures individuelles (**Mensurations**, option par défaut)
+- Saisie par dénombrement sur classement numérique (**Dénombrement**) 
+- Saisie par effectif du lot (Cas d'usage ObsMer)
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
 
-L'écran affiche par défaut la saisie de mesures individuelles.
+L'écran affiche, par défaut, la saisie de mesures individuelles.
 
-1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesures.
-2. Une liste déroulante permet de sélectionner, pour l'espèce commerciale, le critère de classement de mesure
-    * Dès qu'une mensuration est saisie, il n'est plus possible de modifier ce critère de classement
-3. La zone de saisie de mesure est composée des champs suivants :
+1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesure
+2. La zone de saisie de mesure est composée des champs suivants :
     * Le choix du nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
     * Le sexe de l'espèce mesurée
-    * La longueur totale mesurée (dépend du choix du critère de classement)
+      * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
+    * le mesure correspondant au critère de classement (Par exemple : La longueur totale mesurée)
+      * Ce critère est définit pour chaque espèce (_MOE : partie technique à détailler_)
     * Le nombre d'individu
-        * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, le champ sera automatiquement renseigné avec cette valeur.
+        * Par défaut non modifiable et initialisé à 1
+        * Une case à cocher permet de rendre modifiable la zone à saisir pour renseigner une valeur supérieure à 1
     * Le poids calculé RTP (Relation taille poids) en kg
       * Ce poids RTP est automatiquement calculé (affiché en bleu en italique)
     * Un bouton permet d'ajouter une photo de l'individu mesuré (REF: COMMUN/PHOTOS)
-4. Un bouton permet d'ajouter la mesure individuelle saisit
+3. Un bouton permet d'ajouter la mesure individuelle saisit
     * Une ligne est ajoutée au tableau
-5. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
-6. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
-7. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
+    * Si une précédente mesure identique avait déjà été saisit, la ligne est mise à jour
+4. Une case à cocher permet de sélectionner une ou plusieurs mesures pour ensuite les supprimer en cliquant sur l'icône "corbeille"
+5. Un bouton permet d'afficher un graphique présentant le nomnbre d'individu par classe de taille (histogramme)
+    * _MOE : à détailler (spécification et création de ticket)_
+6. Un compteur est incrémenté à chaque ajout de nouvelle mensuration
 
 
 **Cas des caisses de mélange**
@@ -275,22 +278,27 @@ Exemple d'un rouget ou maquereau parmis une caisse de baudroie.
 
 Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
-**Saisie de dénombrement**
+### Saisie de dénombrement - Mode bureau
 
-**Variante 1a** : Saisie des mensurations par dénombrement
+**Variante 1a** : Saisie des mensurations par dénombrement (cas d'usage : mode **bureau**)
 
-1. L'observateur clique sur le bouton :clipboard:
-2. L'écran de création du dénombrement par classe de mensuration s'ouvre.
+1. L'observateur sélectionne l'option **Dénombrement** pour la saisie de ses mensurations
+2. L'écran de création du dénombrement par classe de mensuration s'affiche à la place de l'écran de saisie de mensuration.
+3. Le tableau des mesurations, s'il est renseigné, devient non modifiable
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-classification.svg)
 
 3. L'écran est composé des éléments suivants :
-    * Le choix du nom de l'espèce scientifique
-    * Le critère de classement
+    * Le choix du nom de l'espèce scientifique*
+    * Le critère de classement*
     * La méthode de classement
-    * L'unité de classement
-    * Les bornes minimale et maximale des mensurations
-    * L'instrument de mesure
+    * Les bornes minimale* et maximale* des mensurations
+      * Si des mesures individuelles ont été saisie auparavant, les bornes min et max sont celles des mensurations
+      * Sinon elles sont issues du référentiel statistique des classes de tailles min et max de chaque espèce (A SPECIFIER ET DEVELOPPER)
+    * La précision de la mesure 
+      * Non modifiable et dépend du critère numérique sélectionné
+    * Un critère secondaire de classement
+      * Exemple : le sexe des individus à mesurer
 
 Le choix du critère de classement se fait parmi une liste déroulante affichant, pour chaque critère à sélectionner : 
 - Le paramètre
@@ -300,37 +308,26 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 ![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
 
+S'il existait des mensurations individuelles déjà saisit, elles sont grisées de façon à ne pas pouvoir les modifier lorsque le mode dénombrement est activé.
+
+
 4. A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 
-1. Le paramètre de mensuration et la méthode d'analyse sont affichés et ne sont pas modifiables
+1. S'il existait des mesures individuelles en dehors de la classe de taille créée, elles sont masquées
+    * Un message indique à l'observateur que certaines données sont masquées
 2. L'observateur peut, pour chaque classe de mesure :
-    * Saisir un nombre d'individu 
-3. Le poids calculé RTP est automatiquement calculé pour chaque dénombrement
-4. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi
-
-Un clique sur le bouton :memo: permet à l'observateur d'afficher le mode de saisie de mesures individuelles.
+    * Saisir un nombre d'individu dans le ou les critères de classement
+    * Saisir un nombre d'individu dans le ou les critères secondaires qualitatifs
+4. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi, sur chaque critère de classement
 
 
-**Variante 1b** : Modification du type de saisie sur une saisie en cours
+### Saisie de quantité (ObsMer)
 
-Sur l'écran de saisi des mesures individuelles : 
+_MOE_ 
 
-1. L'observateur à saisi des mesures individuelles
-2. Les mesures sont présentes dans le tableau
-3. L'observateur clique sur le bouton de saisi de dénombrement
-4. La fenêtre de saisie de dénombrement s'ouvre
-5. Un message d'avertissement (texte de couleur blanche surligné en rouge) indique à l'observateur que des mensurations ont été saisies.
-    * La saisie d'un dénombrement effacera les mensurations précédemment saisies
-
-![ui-common-mesures-enumerations-edit-warning](/projects/common/spe/images/numerical-classification-warning.svg)
-
-
-**Saisie de quantité (ObsMer)**
-
-
-**Variante 1c** : Saisie des effectifs 
+**Variante 1b** : Saisie des effectifs 
 
 Cette option n'est **accessible** que depuis le **volet ObsMer**, ou l'on peut saisir un effectif d'une espèce scientifique sans aucune mesure associée.
 

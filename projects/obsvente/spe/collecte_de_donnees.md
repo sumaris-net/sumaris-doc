@@ -493,14 +493,15 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Le type de vente*
    * Le lieu de vente
    * La date/heure de vente*
-   * Les métiers*
+   * Les métiers (non obligatoire)
      * La liste des métiers est régionalisée
      * Il est possible de rajouter plusieurs métiers (:heavy_plus_sign:)
        * Le premier métier constitue le métier principal. Il est obligatoire
        * Les autres métiers ajoutés constituent les métiers secondaires
      * Il est possible de supprimer des métiers (:heavy_multiplication_x:)
-   * Les zones de pêche
+   * Les zones de pêche (non obligatoire)
      * La liste des zônes de pêche est régionalisée
+       * Zones CUEM
      * Il est possible de rajouter plusieurs zones de pêche (:heavy_plus_sign:)
      * Il est possible de supprimer des zones de pêche (:heavy_multiplication_x:)
    * Commentaires

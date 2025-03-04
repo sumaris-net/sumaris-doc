@@ -18,7 +18,7 @@
       Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
       .
       . | <font color=grey size=10><i>Métier principale</i>
-       Métier* : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
+       Métier : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
 
       . | <font color=grey size=10><i>Métier secondaire</i>
       . | { ^ OTBCOD - Chaluts de fond à morue ^ } |  <&plus> <&x>
