@@ -235,7 +235,7 @@ La création de mesures individuelles est accessible depuis les tableaux de cons
 L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
 - Saisie de mesures individuelles (**Mensurations**, option par défaut)
 - Saisie par dénombrement sur classement numérique (**Dénombrement**) 
-- Saisie par effectif du lot (Cas d'usage ObsMer)
+- Saisie par effectif du lot (**Effectif**, cas d'usage ObsMer)
 
 L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
 
@@ -266,15 +266,15 @@ L'écran affiche, par défaut, la saisie de mesures individuelles.
 
 **Cas des caisses de mélange**
 
-**Variante 3a** : Sélection d'espèce scientifique différente de l'espèce commerciale
+**Variante 2a** : Sélection d'une espèce scientifique différente de l'espèce commerciale
 
 L'observateur peut avoir des mélanges d'espèces dans sa caisse.
 
-Exemple d'un rouget ou maquereau parmis une caisse de baudroie.
+Exemple : des rougets ou des maquereaux parmi une caisse de baudroie.
 
-1. L'observateur clique sur l'icône entonnoir, à côté de la liste de sélection de l'espèce scientifique
-2. Si l'icône est activée, par défaut (rendu bleue), l'observateur peut sélectionner l'espèce scientifique en correspondance avec l'espèce commerciale
-3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner l'espèce scientifique parmi la liste des espèces régionalisées pour sa façade
+1. L'observateur clique sur l'icône entonnoir **Y**, à côté de la liste de sélection de l'espèce scientifique
+2. Si l'icône est activée, par défaut (rendu bleu), l'observateur peut sélectionner le ou les espèces scientifiques en corrélation avec l'espèce commerciale
+3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner une espèce scientifique parmi la liste des espèces régionalisées pour sa façade (non corrélée avec l'espèce commerciale)
 
 Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
@@ -290,6 +290,7 @@ Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'e
 
 3. L'écran est composé des éléments suivants :
     * Le choix du nom de l'espèce scientifique*
+      * Un filtre permet de sélectionner l'espèce scientifique qui n'est pas en corrélation avec l'espèce commerciale du lot à échantillonner
     * Le critère de classement*
     * La méthode de classement
     * Les bornes minimale* et maximale* des mensurations
@@ -310,8 +311,7 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 S'il existait des mensurations individuelles déjà saisit, elles sont grisées de façon à ne pas pouvoir les modifier lorsque le mode dénombrement est activé.
 
-
-4. A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
+A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 
@@ -320,12 +320,20 @@ S'il existait des mensurations individuelles déjà saisit, elles sont grisées 
 2. L'observateur peut, pour chaque classe de mesure :
     * Saisir un nombre d'individu dans le ou les critères de classement
     * Saisir un nombre d'individu dans le ou les critères secondaires qualitatifs
-4. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi, sur chaque critère de classement
+3. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi, sur chaque critère de classement
+
+**Variante 3a** : Sélection d'espèce scientifique différente de l'espèce commerciale
+
+1. L'observateur clique sur l'icône entonnoir, à côté de la liste de sélection de l'espèce scientifique
+2. Si l'icône est activée, par défaut (rendu bleue), l'observateur peut sélectionner l'espèce scientifique en correspondance avec l'espèce commerciale
+3. Si l'icône est désactivée (rendu noir), l'observateur peut sélectionner l'espèce scientifique parmi la liste des espèces régionalisées pour sa façade
+
+Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
 
 ### Saisie de quantité (ObsMer)
 
-_MOE_ 
+_MOE à détailler_
 
 **Variante 1b** : Saisie des effectifs 
 
@@ -338,6 +346,7 @@ Sur l'écran de saisi des mesures individuelles, il est possible, par un radio b
 1. L'observateur sélectionne l'option "Effectif"
 2. La fenêtre de saisie est modifiée et affiche les éléments suivants : 
     * Le choix du nom de l'espèce scientifique
+      * Un filtre permet de sélectionner l'espèce scientifique qui n'est pas en corrélation avec l'espèce commerciale du lot à échantillonner
     * Une zone de saisie du nombre d'individus observés
 3. Le tableau des mesures est modifié et 2 colonnes sont affichées :
     * Le nom de l'espèce scientifique
@@ -359,12 +368,9 @@ Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'e
 - Y a t il un protocol à appliquer par espèce ? (Saisie sur sexe par exemple)
     - Oui avec les crevettes en Outre Mer (saisie de la phase de maturité)
     - A mettre en place
-- DOM : Pouvoir saisir plusieurs métiers pour une même espèce. Le modèle permet il de stocker cela ?
 - Terminologie du programme SIH-OBSVENTES - Souhait important de la MOA :
     - Etudier l'impacte d'un passage du nom de programme ObsVente à ObsVentes dans tout Harmonie (voir avec Glenn)
     - Si complexe : faire en sorte que Sumaris affiche ObsVentes (voir avec Benoit)
-- Renommer le PMFM PARAMETER_FK like 'MATURITY_STAGE_%' : Stade en Phase (Attente retour Elise puis valider avec Armelle)
-- Génération du rapport de collecte remplit : MOA à une préférence pour la vue tableau (à confirmer le 10/09/2024)
 
 ## Commun > Ajout de photos
 
