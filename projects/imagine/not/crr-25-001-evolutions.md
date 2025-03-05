@@ -6,6 +6,9 @@ Liste des évolutions 2025
     S'il fallait faire le lien il faudrait revoir la persistance pour Imagine. On a les tables pas besoin d'en créer, mais plusieurs possibilités pour les utiliser et arriver à rapprocher une observation d'une capture avec un métier
     Comme d'habitude, il faut se rapprocher d'eux et voir ce qu'ils veulent avoir comme info. Est-ce qu'ils veulent pouvoir associer des observations à un métier en particulier ?
 
+- Correction retours recette [2.9.30](/projects/imagine/rec/rec-25-001-imagine-recette-2.9.30.md)
+  - Issue [#980](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/980)
+
 - Améliorations de la 2.9
 
   - Socle technique :
