@@ -4,7 +4,7 @@
 
 <div class="logo">
 
-![SUMARiS](logo_sumaris_titre.png)
+![SUMARiS](img/common/logo_sumaris_titre.png)
 
 </div>
 
@@ -12,7 +12,7 @@
 
 <div class="logo">
 
-![DolphinFREE](logo_dolphinfree.png)
+![DolphinFREE](img/common/logo_dolphinfree.png)
 
 </div>
 
@@ -22,9 +22,9 @@
 
 Version 2.9.30
 
-Dernière mise à jour : 03/03/2025
+Dernière mise à jour : 04/03/2025
 
-![Bandeau logos](splash_pifil.png)
+![Bandeau logos](img/common/splash_pifil.png)
 
 <br>
 <br>
@@ -93,7 +93,7 @@ Table des matières
 
 <div style="text-align: center">
 
-[![SUMARiS](logo_sumaris.png)](https://open.sumaris.net)
+[![SUMARiS](img/common/logo_sumaris.png)](https://open.sumaris.net)
 
 </div>
 
@@ -101,7 +101,7 @@ _**SUMARiS**_ est un outil de saisie en ligne de données halieutiques, dévelop
 
 <div style="text-align: center">
 
-[![E-IS](eis.png)](https://www.e-is.pro)
+[![E-IS](img/common/eis.png)](https://www.e-is.pro)
 
 </div>
 
@@ -148,7 +148,7 @@ En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du 
 
 <div style="text-align: center">
 
-[![PDF](pdf_file_icon.png)](https://mer.gouv.fr/sites/default/files/2025-02/dolphinfree-doc-25-002-formulaire_terrain-dolphinfree-v1.2.pdf)
+[![PDF](img/common/pdf_file_icon.png)](https://mer.gouv.fr/sites/default/files/2025-02/dolphinfree-doc-25-002-formulaire_terrain-dolphinfree-v1.2.pdf)
 
 </div>
 
@@ -160,14 +160,14 @@ En cas d'impossibilité d'utiliser l'application _**SUMARiS**_ pour le suivi du 
 
 </div>
 
-_Pour l'utilisation en mer, a priori **sans connexion Internet**, il est **grandement recommandé** de ne pas utiliser la version Internet (via le navigateur) et **d'installer l'application** sur le terminal mobile, via le store d'applications de l'appareil._
+> Pour l'utilisation en mer, a priori **sans connexion Internet**, il est **grandement recommandé** de ne pas utiliser la version Internet (via le navigateur) et **d'installer l'application** sur le terminal mobile, via le store d'applications de l'appareil.
 
 L'application est disponible dans les stores Android et iOS, ainsi que depuis un navigateur Internet :
 
-| [![Disponible sur Google play](google_play_badge_fr.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | [![QR Code Google Play SUMARiS](qr_code_google_play_sumaris.png)](https://play.google.com/store/apps/details?id=net.sumaris.app)  | https://play.google.com/store/apps/details?id=net.sumaris.app                                                                                                                |
-|:------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      [![Télécharger dans l'App Store](app_store_badge_fr.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)       |         [![QR Code App Store SUMARiS](qr_code_app_store_sumaris.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)         | **https://apps.apple.com/fr/app/sumaris/id6736747523**                                                                                                                       |
-|                   [![Télécharger dans l'App Store](mobile_browser_icon.png)](https://open.sumaris.net)                   |                           [![QR Code Open SUMARiS](qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net** <br><br><div style="color: #ffa500; font-size: large">**⚠ AVERTISSEMENT !**<br></div>_La saisie sans connexion Internet ne sera pas possible !_ |
+| [![Disponible sur Google play](img/common/google_play_badge_fr.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | [![QR Code Google Play SUMARiS](img/common/qr_code_google_play_sumaris.png)](https://play.google.com/store/apps/details?id=net.sumaris.app) | https://play.google.com/store/apps/details?id=net.sumaris.app                                                                                                              |
+|:-----------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      [![Télécharger dans l'App Store](img/common/app_store_badge_fr.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)       |        [![QR Code App Store SUMARiS](img/common/qr_code_app_store_sumaris.png)](https://apps.apple.com/fr/app/sumaris/id6736747523)         | **https://apps.apple.com/fr/app/sumaris/id6736747523**                                                                                                                     |
+|                   [![Télécharger dans l'App Store](img/common/mobile_browser_icon.png)](https://open.sumaris.net)                   |                          [![QR Code Open SUMARiS](img/common/qr_code_open_sumaris.png)](https://open.sumaris.net)                           | **https://open.sumaris.net** <br><br><div style="color: #ffa500; font-size: large">**⚠ AVERTISSEMENT !**<br></div>La saisie sans connexion Internet ne sera pas possible ! |
 
 <br>
 
@@ -175,8 +175,8 @@ Dans le cas de l'ouverture de l'application via le navigateur Internet, attendre
 
 <div style="text-align: center">
 
-![Télécharger pour Android](sumaris_bandeau_telechargement_Android.png)
-![Télécharger pour iOS](sumaris_bandeau_telechargement_iOS.png)
+![Télécharger pour Android](img/common/sumaris_bandeau_telechargement_Android.png)
+![Télécharger pour iOS](img/common/sumaris_bandeau_telechargement_iOS.png)
 
 </div>
 
@@ -190,8 +190,8 @@ La page de l'application s'ouvre dans le store concerné, pour pouvoir procéder
 
 <div style="float: right">
 
-![Écran  de démarrage](sumaris_demarrage_1.png)
-![Écran  de démarrage](sumaris_demarrage_2_df.png)
+![Écran  de démarrage](img/mobile/sumaris_demarrage_1.png)
+![Écran  de démarrage](img/mobile/sumaris_demarrage_2_df.png)
 
 </div>
 
@@ -205,9 +205,9 @@ Aller dans l'onglet _**Programmes de collecte**_ et sélectionner le programme _
 
 </div>
 
-_Faire attention de bien sélectionner le programme **DolphinFREE**._
-
-_La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !_
+> Faire attention de bien sélectionner le programme **DolphinFREE**.
+>
+> La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !
 
 L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié) s'affiche ensuite.
 
@@ -217,7 +217,7 @@ L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié)
 
 <div style="float: right">
 
-![Écran d'accueil](sumaris_accueil_non_identifie.png)
+![Écran d'accueil](img/mobile/sumaris_accueil_non_identifie.png)
 
 </div>
 
@@ -236,7 +236,7 @@ Deux boutons sont disponibles :
 
 <div style="float: right">
 
-![Choix de la langue](sumaris_choix_langue_non_identifie.png)
+![Choix de la langue](img/mobile/sumaris_choix_langue_non_identifie.png)
 
 </div>
 
@@ -257,9 +257,9 @@ _Le champ _**Organisme**_ correspond à l'**OP** de l'observateur ou, à défaut
 
 <div style="text-align: center">
 
-![Création d'un compte](sumaris_inscription_1.png)
-![Création d'un compte](sumaris_inscription_2.png)
-![Création d'un compte](sumaris_inscription_3.png)
+![Création d'un compte](img/mobile/sumaris_inscription_1.png)
+![Création d'un compte](img/mobile/sumaris_inscription_2.png)
+![Création d'un compte](img/mobile/sumaris_inscription_3.png)
 
 </div>
 
@@ -275,11 +275,11 @@ Chaque utilisateur authentifié a, au départ, un statut d'invité qui lui perme
 
 </div>
 
-_L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**._
-
-_Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès._
-
-_Avant cela, le bouton de **Saisie des marées** ne sera pas affiché, et la saisie de marées ne sera pas possible._
+> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.
+>
+> Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.
+>
+> Avant cela, le bouton de **Saisie des marées** ne sera pas affiché, et la saisie de marées ne sera pas possible.
 
 À l'issue de l'inscription, l'utilisateur est automatiquement redirigé vers l'[Écran Authentification](#écran-authentification).
 
@@ -287,7 +287,7 @@ _Avant cela, le bouton de **Saisie des marées** ne sera pas affiché, et la sai
 
 <div style="float: right">
 
-![Authentification](sumaris_connexion.png)
+![Authentification](img/mobile/sumaris_connexion.png)
 
 </div>
 
@@ -305,8 +305,8 @@ Le lien _**Réinitialiser votre mot de passe**_ permet d'afficher l'[Écran Réi
 
 <div style="float: right">
 
-![Réinitialisation du mot de passe](sumaris_reinitialisation_mot_de_passe_1.png)
-![Réinitialisation du mot de passe](sumaris_reinitialisation_mot_de_passe_2.png)
+![Réinitialisation du mot de passe](img/mobile/sumaris_reinitialisation_mot_de_passe_1.png)
+![Réinitialisation du mot de passe](img/mobile/sumaris_reinitialisation_mot_de_passe_2.png)
 
 </div>
 
@@ -322,8 +322,8 @@ Aller consulter les e-mails et cliquer sur le lien de récupération.
 
 <div style="float: right">
 
-![Écran d'accueil](sumaris_accueil_identifie_attente_droits.png)
-![Écran d'accueil](sumaris_accueil_identifie.png)
+![Écran d'accueil](img/mobile/sumaris_accueil_identifie_attente_droits.png)
+![Écran d'accueil](img/mobile/sumaris_accueil_identifie.png)
 
 </div>
 
@@ -346,7 +346,7 @@ _Le bouton **Saisie des marées** ne sera donc pas affiché._
 
 <div style="float: right">
 
-![Menu latéral](sumaris_menu_lateral_identifie.png)
+![Menu latéral](img/mobile/sumaris_menu_lateral_identifie.png)
 
 </div>
 
@@ -354,7 +354,7 @@ Le menu latéral comporte les éléments suivants :
 
  * Identité de l'utilisateur
    * Lien vers l'[Écran Mon compte](#écran-mon-compte)
- * Icône de notification ![Notification](sumaris_icone_notification.png)
+ * Icône de notification ![Notification](img/common/sumaris_icone_notification.png)
    * Affichage de la pop-up de notifications
  * Marées
    * Lien vers l'[Écran Marées](#écran-marées)
@@ -383,7 +383,7 @@ L'icône **⁝** de la barre de titre permet d'afficher le [Menu Marées](#menu-
 
 <div style="float: right">
 
-![Marées](sumaris_marees_1.png)
+![Marées](img/mobile/sumaris_marees_1.png)
 
 </div>
 
@@ -395,8 +395,8 @@ L'icône **⁝** de la barre de titre permet d'afficher le [Menu Marées](#menu-
 
 <div style="float: right">
 
-![Marées](sumaris_marees_3.png)
-![Marées](sumaris_marees_4.png)
+![Marées](img/mobile/sumaris_marees_3.png)
+![Marées](img/mobile/sumaris_marees_4.png)
 
 </div>
 
@@ -408,8 +408,8 @@ L'écran possède deux onglets :
 
 <div style="float: right">
 
-![Marées](sumaris_marees_6_df.png)
-![Marées](sumaris_marees_7.png)
+![Marées](img/mobile/sumaris_marees_6_df.png)
+![Marées](img/mobile/sumaris_marees_7.png)
 
 </div>
 
@@ -433,8 +433,8 @@ Une marée ne peut être prise en compte par les structures professionnelles et 
 
 <div style="float: right">
 
-![Ajout marée](sumaris_marees_2.png)
-![Ajout marée](sumaris_marees_5.png)
+![Ajout marée](img/mobile/sumaris_marees_2.png)
+![Ajout marée](img/mobile/sumaris_marees_5.png)
 
 </div>
 
@@ -444,16 +444,16 @@ Une marée ne peut être prise en compte par les structures professionnelles et 
 
 </div>
 
-_Pour l'observation en mer (sans connexion Internet), **privilégier impérativement la saisie terrain (mode hors-ligne)**._
+> Pour l'observation en mer (sans connexion Internet), **privilégier impérativement la saisie terrain (mode hors-ligne)**._
 
-L'appui sur l'icône d'ajout d'une marée ![Ajout marée](sumaris_icone_ajout.png) de l'[Écran Marées](#écran-marées) permet d'afficher les entrées suivantes :
+L'appui sur l'icône d'ajout d'une marée ![Ajout marée](img/common/sumaris_icone_ajout.png) de l'[Écran Marées](#écran-marées) permet d'afficher les entrées suivantes :
 
-* Saisie terrain (mode hors-ligne) ![Ajout marée terrain](sumaris_icone_ajout_maree_terrain.png)
+* Saisie terrain (mode hors-ligne) ![Ajout marée terrain](img/common/sumaris_icone_ajout_maree_terrain.png)
     * Si le mode hors-ligne n'a pas été configuré :
         * Lien vers l'[Écran Configuration du mode hors-ligne](#écran-configuration-du-mode-hors-ligne)
     * Si le mode hors-ligne a été configuré :
         * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
-* Saisie bureau (mode connecté) ![Ajout marée bureau](sumaris_icone_ajout_maree_bureau.png)
+* Saisie bureau (mode connecté) ![Ajout marée bureau](img/common/sumaris_icone_ajout_maree_bureau.png)
     * Lien vers l'[Écran Nouvelle marée](#écran-nouvelle-marée)
 
 <div style="clear:both"></div>
@@ -462,8 +462,8 @@ L'appui sur l'icône d'ajout d'une marée ![Ajout marée](sumaris_icone_ajout.pn
 
 <div style="float: right">
 
-![Menu Marées](sumaris_menu_marees_connecte.png)
-![Menu Marées](sumaris_menu_marees_hors-ligne.png)
+![Menu Marées](img/mobile/sumaris_menu_marees_connecte.png)
+![Menu Marées](img/mobile/sumaris_menu_marees_hors-ligne.png)
 
 </div>
 
@@ -479,8 +479,8 @@ L'entrée _**Activer le mode hors-ligne**_ ou _**Mettre à jour le mode hors-lig
 
 <div style="float: right">
 
-![Configuration du mode hors-ligne](sumaris_configuration_mode_hors-ligne_1.png)
-![Configuration du mode hors-ligne](sumaris_configuration_mode_hors-ligne_2_df.png)
+![Configuration du mode hors-ligne](img/mobile/sumaris_configuration_mode_hors-ligne_1.png)
+![Configuration du mode hors-ligne](img/mobile/sumaris_configuration_mode_hors-ligne_2_df.png)
 
 </div>
 
@@ -494,16 +494,16 @@ Sélectionner le programme _**DolphinFREE**_ puis le(s) navire(s) souhaités.
 
 </div>
 
-_Faire attention de bien sélectionner le programme **DolphinFREE**._
-
-_L'exploitabilité des données saisies en découle !_
+> Faire attention de bien sélectionner le programme **DolphinFREE**.
+>
+> L'exploitabilité des données saisies en découle !
 
 <div style="clear:both"></div>
 
 <div style="float: right">
 
-![Configuration du mode hors-ligne](sumaris_configuration_mode_hors-ligne_3_df.png)
-![Configuration du mode hors-ligne](sumaris_configuration_mode_hors-ligne_4_df.png)
+![Configuration du mode hors-ligne](img/mobile/sumaris_configuration_mode_hors-ligne_3_df.png)
+![Configuration du mode hors-ligne](img/mobile/sumaris_configuration_mode_hors-ligne_4_df.png)
 
 </div>
 
@@ -515,7 +515,7 @@ Il est possible d'importer l'historique des données déjà saisies, dans le cad
 
 </div>
 
-_Les données importées peuvent représenter un volume conséquent qui risque d'augmenter le temps de téléchargement au moment de la création, ainsi que de prendre de la place dans l'espace de stockage du terminal mobile._
+> Les données importées peuvent représenter un volume conséquent qui risque d'augmenter le temps de téléchargement au moment de la création, ainsi que de prendre de la place dans l'espace de stockage du terminal mobile.
 
 Valider la saisie avec l'icône **✔** de la barre de titre.
 
@@ -525,7 +525,7 @@ Valider la saisie avec l'icône **✔** de la barre de titre.
 
 <div style="float: right">
 
-![Importation des données du mode hors-ligne](sumaris_importation_donnees_hors-ligne.png)
+![Importation des données du mode hors-ligne](img/mobile/sumaris_importation_donnees_hors-ligne.png)
 
 </div>
 
@@ -543,16 +543,16 @@ L'[Écran Marées](#écran-marées) apparaît, avec une barre de progression de 
 
 </div>
 
-_Si le terminal mobile est connecté, les menus déroulants du formulaire de saisie contiendront toutes les entrées disponibles dans la base de données._
-
-_Si le terminal mobile n'est pas connecté, seules les données préalablement téléchargées seront disponibles._
+> Si le terminal mobile est connecté, les menus déroulants du formulaire de saisie contiendront toutes les entrées disponibles dans la base de données.
+>
+> Si le terminal mobile n'est pas connecté, seules les données préalablement téléchargées seront disponibles.
 
 ### Onglet Détails
 
 <div style="float: right">
 
-![Saisie des détails d'une nouvelle marée](sumaris_details_nouvelle_maree_1.png)
-![Saisie des détails d'une nouvelle marée](sumaris_details_nouvelle_maree_2_df.png)
+![Saisie des détails d'une nouvelle marée](img/mobile/sumaris_details_nouvelle_maree_1.png)
+![Saisie des détails d'une nouvelle marée](img/mobile/sumaris_details_nouvelle_maree_2_df.png)
 
 </div>
 
@@ -562,9 +562,9 @@ _Si le terminal mobile n'est pas connecté, seules les données préalablement t
 
 </div>
 
-_Faire attention de bien sélectionner le programme **DolphinFREE**._
+> Faire attention de bien sélectionner le programme **DolphinFREE**.
 
-_L'exploitabilité des données saisies en découle !_
+> L'exploitabilité des données saisies en découle !
 
 Les champs marqués * sont obligatoires :
  * Programme de collecte
@@ -588,16 +588,16 @@ Les données concernant le retour peuvent être saisies ultérieurement.
 
 <div style="float: right">
 
-![Saisie des engins d'une nouvelle marée](sumaris_engins_nouvelle_maree_1.png)
-![Saisie des engins d'une nouvelle marée](sumaris_engins_nouvelle_maree_2.png)
+![Saisie des engins d'une nouvelle marée](img/mobile/sumaris_engins_nouvelle_maree_1.png)
+![Saisie des engins d'une nouvelle marée](img/mobile/sumaris_engins_nouvelle_maree_2.png)
 
 </div>
 
-L'appui sur l'icône d'ajout d'un engin ![Ajout engin](sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
+L'appui sur l'icône d'ajout d'un engin ![Ajout engin](img/common/sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
 
-* Rechercher ![Rechercher engin](sumaris_icone_recherche_engin.png)
+* Rechercher ![Rechercher engin](img/common/sumaris_icone_recherche_engin.png)
   * Lien vers l'[Écran Engin existant](#écran-recherche-engin-existant)
-* Nouveau ![Nouvel engin](sumaris_icone_nouvel_engin.png)
+* Nouveau ![Nouvel engin](img/common/sumaris_icone_nouvel_engin.png)
   * Lien vers l'[Écran Nouvel engin](#écran-nouvel-engin)
 
 <div style="clear:both"></div>
@@ -606,8 +606,8 @@ L'appui sur l'icône d'ajout d'un engin ![Ajout engin](sumaris_icone_ajout.png) 
 
 <div style="float: right">
 
-![Recherche d'un engin existant](sumaris_recherche_engin_existant_1.png)
-![Recherche d'un engin existant](sumaris_recherche_engin_existant_2.png)
+![Recherche d'un engin existant](img/mobile/sumaris_recherche_engin_existant_1.png)
+![Recherche d'un engin existant](img/mobile/sumaris_recherche_engin_existant_2.png)
 
 </div>
 
@@ -627,8 +627,8 @@ L'[Écran Détails de l'engin](#écran-détails-de-lengin) s'affiche.
 
 <div style="float: right">
 
-![Détails d'un engin existant](sumaris_details_engin_existant_1_df.png)
-![Détails d'un engin existant](sumaris_details_engin_existant_2_df.png)
+![Détails d'un engin existant](img/mobile/sumaris_details_engin_existant_1_df.png)
+![Détails d'un engin existant](img/mobile/sumaris_details_engin_existant_2_df.png)
 
 </div>
 
@@ -644,8 +644,8 @@ L'icône **🔍** de la barre de titre permet de retourner à l'[Écran Engin ex
 
 <div style="float: right">
 
-![Création d'un nouvel engin](sumaris_details_nouvel_engin_1_df.png)
-![Création d'un nouvel engin](sumaris_details_nouvel_engin_2_df.png)
+![Création d'un nouvel engin](img/mobile/sumaris_details_nouvel_engin_1_df.png)
+![Création d'un nouvel engin](img/mobile/sumaris_details_nouvel_engin_2_df.png)
 
 </div>
 
@@ -667,18 +667,18 @@ L'[Onglet Engins](#onglet-engins) s'affiche alors avec l'engin nouvellement cré
 
 <div style="float: right">
 
-![Saisie des opérations d'une nouvelle marée](sumaris_operations_nouvelle_maree_1.png)
-![Saisie des opérations d'une nouvelle marée](sumaris_operations_nouvelle_maree_2.png)
+![Saisie des opérations d'une nouvelle marée](img/mobile/sumaris_operations_nouvelle_maree_1.png)
+![Saisie des opérations d'une nouvelle marée](img/mobile/sumaris_operations_nouvelle_maree_2.png)
 
 </div>
 
 Un message d'information rappelle que toute marée doit commencer par un filage.
 
-L'appui sur l'icône d'ajout d'une opération ![Ajout opération](sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
+L'appui sur l'icône d'ajout d'une opération ![Ajout opération](img/common/sumaris_icone_ajout.png) permet d'afficher les entrées suivantes :
 
-* Filage ![Ajout filage](sumaris_icone_ajout_filage.png)
+* Filage ![Ajout filage](img/common/sumaris_icone_ajout_filage.png)
    * Lien vers l'[Écran de saisie d'un filage](#écran-de-saisie-dun-filage)
-* Virage ![Ajout virage](sumaris_icone_ajout_virage.png)
+* Virage ![Ajout virage](img/common/sumaris_icone_ajout_virage.png)
    * Lien vers l'[Écran de saisie d'un virage](#écran-de-saisie-dun-virage)
 
 <div style="color: #ffa500; font-size: large">
@@ -687,11 +687,11 @@ L'appui sur l'icône d'ajout d'une opération ![Ajout opération](sumaris_icone_
 
 </div>
 
-_Les marées étant liées entre elles (filage et virage), elles doivent être terminées et envoyées dans le bon ordre, sans quoi la base de données les refusera._
-
-_L'application affichera un avertissement, le cas échéant._
-
-_Ce point sera amélioré dans une version future._
+> Les marées étant liées entre elles (filage et virage), elles doivent être terminées et envoyées dans le bon ordre, sans quoi la base de données les refusera.
+>
+> L'application affichera un avertissement, le cas échéant.
+>
+> Ce point sera amélioré dans une version future.
 
 <div style="clear:both"></div>
 
@@ -699,8 +699,8 @@ _Ce point sera amélioré dans une version future._
 
 <div style="float: right">
 
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_1_df.png)
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_2_df.png)
+![Saisie d'un nouveau filage](img/mobile/sumaris_nouveau_filage_1_df.png)
+![Saisie d'un nouveau filage](img/mobile/sumaris_nouveau_filage_2_df.png)
 
 </div>
 
@@ -712,8 +712,8 @@ Les champs marqués * sont obligatoires.
 
 <div style="float: right">
 
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_3_df.png)
-![Saisie d'un nouveau filage](sumaris_nouveau_filage_4_df.png)
+![Saisie d'un nouveau filage](img/mobile/sumaris_nouveau_filage_3_df.png)
+![Saisie d'un nouveau filage](img/mobile/sumaris_nouveau_filage_4_df.png)
 
 </div>
 
@@ -727,8 +727,8 @@ Retourner à l'[Onglet Opérations](#onglet-opérations) en appuyant sur l'icôn
 
 <div style="float: right">
 
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_1_df.png)
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_2_df.png)
+![Saisie d'un nouveau virage](img/mobile/sumaris_nouveau_virage_1_df.png)
+![Saisie d'un nouveau virage](img/mobile/sumaris_nouveau_virage_2_df.png)
 
 </div>
 
@@ -740,7 +740,7 @@ Les champs marqués * sont obligatoires.
 
 </div>
 
-_Un virage est obligatoirement lié à un filage. Celui-ci doit impérativement avoir été saisi au préalable._
+> Un virage est obligatoirement lié à un filage. Celui-ci doit impérativement avoir été saisi au préalable.
 
 <div style="clear:both"></div>
 
@@ -748,8 +748,8 @@ _Un virage est obligatoirement lié à un filage. Celui-ci doit impérativement 
 
 <div style="float: right">
 
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_3_df.png)
-![Saisie d'un nouveau virage](sumaris_nouveau_virage_4_df.png)
+![Saisie d'un nouveau virage](img/mobile/sumaris_nouveau_virage_3_df.png)
+![Saisie d'un nouveau virage](img/mobile/sumaris_nouveau_virage_4_df.png)
 
 </div>
 
@@ -767,13 +767,13 @@ L'icône **💾** de la barre de titre permet d'enregistrer les données renseig
 
 <div style="float: right">
 
-![Captures accidentelles](sumaris_captures_accidentelles_df.png)
+![Captures accidentelles](img/mobile/sumaris_captures_accidentelles_df.png)
 
 </div>
 
 Si le champ _**Présence de capture accidentelle**_ a la valeur _**Oui**_, l'onglet _**Captures accidentelles**_ s'affiche.
 
-L'appui sur l'icône d'ajout d'une capture accidentelle ![Ajout capture accidentelle](sumaris_icone_ajout.png) permet d'afficher l'[Écran de saisie d'une capture accidentelle](#écran-de-saisie-dune-capture-accidentelle).
+L'appui sur l'icône d'ajout d'une capture accidentelle ![Ajout capture accidentelle](img/common/sumaris_icone_ajout.png) permet d'afficher l'[Écran de saisie d'une capture accidentelle](#écran-de-saisie-dune-capture-accidentelle).
 
 <div style="clear:both"></div>
 
@@ -783,8 +783,8 @@ L'appui sur l'icône d'ajout d'une capture accidentelle ![Ajout capture accident
 
 <div style="float: right">
 
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_1_df.png)
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_2_df.png)
+![Saisie d'une nouvelle capture accidentelle](img/mobile/sumaris_nouvelle_capture_accidentelle_1_df.png)
+![Saisie d'une nouvelle capture accidentelle](img/mobile/sumaris_nouvelle_capture_accidentelle_2_df.png)
 
 </div>
 
@@ -796,8 +796,8 @@ L'icône **✔** de la barre de titre permet de valider la saisie.
 
 <div style="float: right">
 
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_3_df.png)
-![Saisie d'une nouvelle capture accidentelle](sumaris_nouvelle_capture_accidentelle_4_df.png)
+![Saisie d'une nouvelle capture accidentelle](img/mobile/sumaris_nouvelle_capture_accidentelle_3_df.png)
+![Saisie d'une nouvelle capture accidentelle](img/mobile/sumaris_nouvelle_capture_accidentelle_4_df.png)
 
 </div>
 
@@ -817,9 +817,9 @@ Il permet de visualiser et de modifier toutes les données d'une marée.
 
 <div style="text-align: center">
 
-![Édition des détails d'une marée](sumaris_edition_maree_1_df.png)
-![Édition des détails d'une marée](sumaris_edition_maree_2_df.png)
-![Édition des détails d'une marée](sumaris_edition_maree_3_df.png)
+![Édition des détails d'une marée](img/mobile/sumaris_edition_maree_1_df.png)
+![Édition des détails d'une marée](img/mobile/sumaris_edition_maree_2_df.png)
+![Édition des détails d'une marée](img/mobile/sumaris_edition_maree_3_df.png)
 
 </div>
 
@@ -831,8 +831,8 @@ Le bouton _**Envoyer**_ permet, **uniquement en cas de connexion à Internet**, 
 
 <div style="float: right">
 
-![Profil](sumaris_profil.png)
-![Préférences](sumaris_preferences.png)
+![Profil](img/mobile/sumaris_profil.png)
+![Préférences](img/mobile/sumaris_preferences.png)
 
 </div>
 
@@ -844,8 +844,8 @@ L'écran _**Mon compte**_ permet principalement de pouvoir réinitialiser le mot
 
 </div>
 
-_Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
-l'application._
+> Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
+l'application.
 
 <div style="clear:both"></div>
 
@@ -855,8 +855,8 @@ l'application._
 
 <div style="float: right">
 
-![Paramètres](sumaris_parametres_1.png)
-![Paramètres](sumaris_parametres_2.png)
+![Paramètres](img/mobile/sumaris_parametres_1.png)
+![Paramètres](img/mobile/sumaris_parametres_2.png)
 
 </div>
 
@@ -868,7 +868,7 @@ L'écran _**Paramètres**_ permet principalement de gérer le mode sombre de l'a
 
 </div>
 
-_Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
-l'application._
+> Les autres paramètres ne sont à utiliser qu'en connaissance de cause, au risque de détériorer les fonctionnalités de
+l'application.
 
 <div style="clear:both"></div>
