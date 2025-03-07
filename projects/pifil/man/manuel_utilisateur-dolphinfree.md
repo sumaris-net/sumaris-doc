@@ -20,9 +20,9 @@
 
 <br>
 
-Version 2.9.30
+Version 2.9.34.1
 
-Dernière mise à jour : 04/03/2025
+Dernière mise à jour : 07/03/2025
 
 ![Bandeau logos](img/common/splash_pifil.png)
 
