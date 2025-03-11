@@ -103,16 +103,6 @@ NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans
 **Variante 4a :** 
 4. Le saisisseur copie/colle un lot pour faire une nouvelle saisie via la case à cocher d'une ligne puis l'icône de recopie [Retour en 5]
 
-> Questions :
-> - Pas de sous-échantillonnage ?
-> - MOE : cas d'usage à faire sur le contrôle des données : Détecter les lots saisis en doublons, créer une clé unique à partir de la stratégie
-
-> Réunion 21/05/2024 - POC à réaliser
-> Ecran des mesures individuelles : 
-> Compteur total sur le nombre d'individu (dans le bandeau à droite)
-> Graphique à réaliser : Histogramme du nombre d'individu par classe de taille
-> Le bouton d'affichage du graphique est disponible sur l'écran des mesures individuelles
-
 ---
 ## Vente > Lots espèces > Mesures individuelles
 
