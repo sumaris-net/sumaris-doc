@@ -1,0 +1,32 @@
+@startsalt
+{
+  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun - 123456 Navire 1  | . |
+                                                                                                                                                                                                                          }
+  --
+  {/  <b>Détails | Lots }
+
+  ..
+  {+
+    .
+      Navire* :    | { ^123456 - Navire 1                  ^ }
+
+      Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
+      Lieu de la vente* :   |  { ^ FRDRZ - Douarnenez ^ }
+      Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+
+      . | <font color=grey size=10><i>Métier principale</i>
+       Métier : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
+      . | <font color=grey size=10><i>Métier secondaire</i>
+      . | { ^ OTBCOD - Chaluts de fond à morue ^ } |  <&plus> <&x>
+
+      Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x>
+      .
+  } | . | <size:17><&plus> <size:17><&x>
+ ..
+  Commentaires
+  {+ .
+          "                                                    "
+  }
+
+}
+@endsalt
