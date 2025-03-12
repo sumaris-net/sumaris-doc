@@ -46,11 +46,15 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
      * Il est possible de supprimer des zones de pêche (:heavy_multiplication_x:)
    * Commentaires
 4. Le saisisseur peut ajouter plusieurs ventes si l'espèce provient de différents bateaux (:heavy_plus_sign:)
+
+![ui-obsvente](/projects/obsvente/spe/images/med/sale-mediterranee-vessels-details.svg)
+
    * A chaque ajout, une nouvelle vente est créée, associée à un nouveau navire
      * Un onglet "Lots _#X_" est créé
    * Le libellé du navire est incrémenté (_#X_)
    * Il n'est pas possible de choisir un navire déjà renseigné dans une vente existante
    * Le saisisseur renseigne les détails de la nouvelle vente (retour en 3)
+
 5. Le saisisseur peut supprimer une vente (:heavy_multiplication_x:)
 6. Le saisisseur clique sur l'onglet d'un lot "Lots _#X_" (REF: OBSVENTES/SORTIE/VENTE/LOT#)
 
