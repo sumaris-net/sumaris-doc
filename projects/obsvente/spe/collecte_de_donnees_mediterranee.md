@@ -53,6 +53,7 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
      * Un onglet "Lots _#X_" est créé
    * Le libellé du navire est incrémenté (_#X_)
    * Il n'est pas possible de choisir un navire déjà renseigné dans une vente existante
+   * Les informations en dessous du navire, sur les ventes précédemment créées, sont repliées pour une meilleure visibilité
    * Le saisisseur renseigne les détails de la nouvelle vente (retour en 3)
 
 5. Le saisisseur peut supprimer une vente (:heavy_multiplication_x:)
