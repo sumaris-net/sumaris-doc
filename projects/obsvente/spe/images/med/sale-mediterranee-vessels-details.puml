@@ -1,0 +1,37 @@
+@startsalt
+{
+  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun  | . |
+                                                                                                                                                                                                                          }
+  --
+  {/  <b>Détails | Lots #1 - 123456 Navire 1 | Lots #2 - 7891234 Navire 2 }
+
+  ..
+  {+
+    .
+      Navire #1* :    | { ^123456 - Navire 1                  ^ } | . | . | . | . | . | . | . | . | . | . | . | . | . | . |     <&chevron-bottom>
+  .
+  } | . | <size:17><&plus> <size:17><&x>
+  .
+{+
+    .
+      Navire #2* :    | { ^7891234 - Navire 2                  ^ }
+
+      Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
+      Lieu de la vente* :   |  { ^ DMA - La Ciotat ^ }
+      Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
+
+      . | <font color=grey size=10><i>Métier principale</i>
+       Métier : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
+
+
+      Zone de pêche :            | ^ MLCO - Large Corse (>12 milles)^ | <&plus> <&x>
+      .
+  } | . | <size:17><&plus> <size:17><&x>
+ ..
+  Commentaires
+  {+ .
+          "                                                    "
+  }
+
+}
+@endsalt

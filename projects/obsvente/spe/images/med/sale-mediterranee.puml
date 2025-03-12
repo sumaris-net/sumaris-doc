@@ -1,0 +1,16 @@
+@startsalt
+{
+  <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun
+  --
+  {/  Détails | <b>Lots #1 - 123456 Navire 1 | Lots #2 - 7891234 Navire 2}
+  ..
+  { <&plus> <&trash> <&chevron-bottom> }
+
+  {#
+     # | <b>Espèce commerciale |  <b>Catégorie de tri terrain | <b>Catégorie UE | <b>Etat | <b>Présentation  | <b>Taux échant. | <b>Poids échant. | <b>Nb ind. échant. | <b>Identification à confirmer ?| <&menu>
+     [ ] . | MAC - Maquereau commun | 20 | Cat UE20 | FRE - Frais | WHL - Entier | 1 | 2 | 15 | [ ]. | <&bar-chart> <&comment-square> <&image>
+     [X] . | MAC - Maquereau commun | 30 | Cat UE30 | FRE - Frais | WHL - Entier | 1 | 3 | 11 | [X]. | <&bar-chart> <&comment-square> <&image>
+   }
+
+}
+@endsalt

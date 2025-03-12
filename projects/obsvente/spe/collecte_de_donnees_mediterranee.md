@@ -10,13 +10,13 @@
 
 ---
 
-## Vente > Détails.
+## Vente > Détails
 
 **REF: OBSVENTES/SORTIE/VENTE/DETAILS**
 
-![ui-obsvente](/projects/obsvente/spe/images/sale-mediterranee-details.svg)
+![ui-obsvente](/projects/obsvente/spe/images/med/sale-mediterranee-details.svg)
 
-La création d'un lot d'espèces, pour la façade Méditerranée, est accessible depuis le tableau des échantillonnages en cliquant sur l'icône :page_facing_up:
+La création de lots d'espèces, pour la façade Méditerranée, est accessible depuis le tableau des échantillonnages en cliquant sur l'icône :page_facing_up:
 
 La particularité de la collecte de données en Méditerranée est qu'une espèce commerciale, de différentes tailles, peut provenir de plusieurs bateaux.
 
@@ -27,9 +27,9 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
 1. Le saisisseur demande la création d'un lot d'espèces
 2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
    * "Détails" (onglet par défaut)
-   * "Lots"
-3. Sur l'onglet "Détails", le saisisseur renseigne les détails d'une vente* ou de plusieurs ventes :
-   * Le navire*
+   * "Lots #1" (onglet du lot correspondant au premier navire à renseigner)
+3. Sur l'onglet "Détails", le saisisseur renseigne les détails d'une vente* ou de plusieurs ventes (un bateau est associé à une vente) :
+   * Le navire #1*
    * Le type de vente*
    * Le lieu de vente
    * La date/heure de vente*
@@ -41,13 +41,18 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
      * Il est possible de supprimer des métiers (:heavy_multiplication_x:)
    * Les zones de pêche (non obligatoire)
      * La liste des zônes de pêche est régionalisée
-       * Zones CUEM
+       * Zones CIEM ?
      * Il est possible de rajouter plusieurs zones de pêche (:heavy_plus_sign:)
      * Il est possible de supprimer des zones de pêche (:heavy_multiplication_x:)
    * Commentaires
 4. Le saisisseur peut ajouter plusieurs ventes si l'espèce provient de différents bateaux (:heavy_plus_sign:)
+   * A chaque ajout, une nouvelle vente est créée, associée à un nouveau navire
+     * Un onglet "Lots _#X_" est créé
+   * Le libellé du navire est incrémenté (_#X_)
+   * Il n'est pas possible de choisir un navire déjà renseigné dans une vente existante
+   * Le saisisseur renseigne les détails de la nouvelle vente (retour en 3)
 5. Le saisisseur peut supprimer une vente (:heavy_multiplication_x:)
-6. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
+6. Le saisisseur clique sur l'onglet d'un lot "Lots _#X_" (REF: OBSVENTES/SORTIE/VENTE/LOT#)
 
 
 **Variante(s) :**
@@ -59,17 +64,16 @@ En mode terrain, il est possible d'activer une case à cocher, dans le bandeau d
 ---
 ## Vente > Lots espèces
 
-**REF: OBSVENTES/SORTIE/VENTE/LOT**
+**REF: OBSVENTES/SORTIE/VENTE/LOTS#**
 
-![ui-obsvente](/projects/obsvente/spe/images/sale-mediterranee.svg)
+![ui-obsvente](/projects/obsvente/spe/images/med/sale-mediterranee.svg)
 
 Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 
 #### Scénario principal
 
-1. L'onglet "Lots" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
+1. L'onglet "Lots _#X_" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
    * L'espèce commerciale
-   * Le navire d'ou provient la caisse à échantillonner
    * La catégorie de tri terrain
    * La catégorie UE
    * L'état*
@@ -80,7 +84,6 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 2. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
 3. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
 4. Pour chaque lot, le saisisseur renseigne :
-   * Le saisisseur sélectionne le navire* d'ou provient la caisse à échantillonner, s'il y en a plusieurs
    * La catégorie de tri terrain
    * La catégorie UE
    * L'état*
@@ -119,6 +122,4 @@ La création de mesures individuelles est accessible depuis le tableau de consul
 
 |       Date | Sections mises à jour                                                                 |
 |-----------:|---------------------------------------------------------------------------------------|
-| 11/09/2023 | Création                                                                              |
-| 10/11/2023 | Ajout écrans Marée, Engins et OP                                                      |
-| 14/12/2023 | Tableau des échantillonnages : distinction colonnes espèce commerciale/scientifique   |
+| 11/03/2025 | Création                                                                              |
