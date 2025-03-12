@@ -22,7 +22,7 @@
 
 Version 2.9.34.1
 
-Dernière mise à jour : 07/03/2025
+Dernière mise à jour : 12/03/2025
 
 ![Bandeau logos](img/common/splash_pifil.png)
 
@@ -205,8 +205,7 @@ Aller dans l'onglet _**Programmes de collecte**_ et sélectionner le programme _
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.
->
+> Faire attention de bien sélectionner le programme **DolphinFREE**.  
 > La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !
 
 L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié) s'affiche ensuite.
@@ -253,7 +252,7 @@ minuscules, nombres, caractères spéciaux...) puis de valider.
 
 **NB :**
 
-_Le champ _**Organisme**_ correspond à l'**OP** de l'observateur ou, à défaut, à son **CRPMEM**._
+> Le champ _**Organisme**_ correspond à l'**OP** de l'observateur ou, à défaut, à son **CRPMEM**.
 
 <div style="text-align: center">
 
@@ -275,10 +274,8 @@ Chaque utilisateur authentifié a, au départ, un statut d'invité qui lui perme
 
 </div>
 
-> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.
->
-> Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.
->
+> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.  
+> Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.  
 > Avant cela, le bouton de **Saisie des marées** ne sera pas affiché, et la saisie de marées ne sera pas possible.
 
 À l'issue de l'inscription, l'utilisateur est automatiquement redirigé vers l'[Écran Authentification](#écran-authentification).
@@ -287,7 +284,7 @@ Chaque utilisateur authentifié a, au départ, un statut d'invité qui lui perme
 
 <div style="float: right">
 
-![Authentification](img/mobile/sumaris_connexion.png)
+![Authentification](img/mobile/sumaris_authentification.png)
 
 </div>
 
@@ -334,9 +331,8 @@ Deux boutons sont disponibles :
 
 **NB :**
 
-_Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée._
-
-_Le bouton **Saisie des marées** ne sera donc pas affiché._
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
+> Le bouton **Saisie des marées** ne sera donc pas affiché.
 
 <div style="clear:both"></div>
 
@@ -367,9 +363,8 @@ Le menu latéral comporte les éléments suivants :
 
 **NB :**
 
-_Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée._
-
-_L'entrée **Marées** ne sera donc pas affichée._
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
+> L'entrée **Marées** ne sera donc pas affichée.
 
 <div style="clear:both"></div>
 
@@ -444,7 +439,7 @@ Une marée ne peut être prise en compte par les structures professionnelles et 
 
 </div>
 
-> Pour l'observation en mer (sans connexion Internet), **privilégier impérativement la saisie terrain (mode hors-ligne)**._
+> Pour l'observation en mer (sans connexion Internet), **privilégier impérativement la saisie terrain (mode hors-ligne)**.
 
 L'appui sur l'icône d'ajout d'une marée ![Ajout marée](img/common/sumaris_icone_ajout.png) de l'[Écran Marées](#écran-marées) permet d'afficher les entrées suivantes :
 
@@ -494,8 +489,7 @@ Sélectionner le programme _**DolphinFREE**_ puis le(s) navire(s) souhaités.
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.
->
+> Faire attention de bien sélectionner le programme **DolphinFREE**.  
 > L'exploitabilité des données saisies en découle !
 
 <div style="clear:both"></div>
@@ -543,8 +537,7 @@ L'[Écran Marées](#écran-marées) apparaît, avec une barre de progression de 
 
 </div>
 
-> Si le terminal mobile est connecté, les menus déroulants du formulaire de saisie contiendront toutes les entrées disponibles dans la base de données.
->
+> Si le terminal mobile est connecté, les menus déroulants du formulaire de saisie contiendront toutes les entrées disponibles dans la base de données.  
 > Si le terminal mobile n'est pas connecté, seules les données préalablement téléchargées seront disponibles.
 
 ### Onglet Détails
@@ -562,8 +555,7 @@ L'[Écran Marées](#écran-marées) apparaît, avec une barre de progression de 
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.
-
+> Faire attention de bien sélectionner le programme **DolphinFREE**.  
 > L'exploitabilité des données saisies en découle !
 
 Les champs marqués * sont obligatoires :
@@ -687,10 +679,8 @@ L'appui sur l'icône d'ajout d'une opération ![Ajout opération](img/common/sum
 
 </div>
 
-> Les marées étant liées entre elles (filage et virage), elles doivent être terminées et envoyées dans le bon ordre, sans quoi la base de données les refusera.
->
-> L'application affichera un avertissement, le cas échéant.
->
+> Les marées étant liées entre elles (filage et virage), elles doivent être terminées et envoyées dans le bon ordre, sans quoi la base de données les refusera.  
+> L'application affichera un avertissement, le cas échéant.  
 > Ce point sera amélioré dans une version future.
 
 <div style="clear:both"></div>

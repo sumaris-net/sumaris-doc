@@ -20,9 +20,9 @@
 
 <br>
 
-Version 2.9.30
+Version 2.9.34.1
 
-Dernière mise à jour : 05/03/2025
+Dernière mise à jour : 12/03/2025
 
 ![Bandeau logos](img/common/splash_pifil.png)
 
@@ -55,8 +55,13 @@ Table des matières
   * [Objectif de l'application](#objectif-de-lapplication)
   * [Pré-requis](#pré-requis)
 * [Assistance technique](#assistance-technique)
-* [Utilisation de l'application SUMARiS](#utilisation-de-lapplication-sumaris)
-  * [Écran d'accueil](#écran-daccueil)
+* [Accéder à l'application SUMARiS](#accéder-à-lapplication-sumaris)
+  * [Écran d'accueil (mode non-identifié)](#écran-daccueil-mode-non-identifié)
+  * [Fenêtre Inscription](#fenêtre-inscription)
+  * [Fenêtre Authentification](#fenêtre-authentification)
+  * [Fenêtre Réinitialisation du mot de passe](#fenêtre-réinitialisation-du-mot-de-passe)
+* [Utiliser l'application SUMARiS](#utiliser-lapplication-sumaris)
+  * [Écran d'accueil (mode identifié)](#écran-daccueil-mode-identifié)
   * [Gérer les droits d'accès des utilisateurs à un programme de collecte](#gérer-les-droits-daccès-des-utilisateurs-à-un-programme-de-collecte)
     * [Écran Programmes](#écran-programmes)
     * [Écran de paramétrage d'un programme](#écran-de-paramétrage-dun-programme)
@@ -90,13 +95,12 @@ _**SUMARiS**_ est un outil de saisie en ligne de données halieutiques, dévelop
 
 </div>
 
-Ce document a pour objet d'aider efficacement le superviseur à affecter des droits d'accès, dans le cadre du programme _**DolphinFREE**_, à des utilisateurs ayant un compte dans dans l'application _**SUMARiS**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Responsable de programme**_ (_**Manager privilege**_). 
+Ce document a pour objet d'aider efficacement le superviseur à affecter des droits d'accès, dans le cadre du programme _**DolphinFREE**_, à des utilisateurs ayant un compte dans l'application _**SUMARiS**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Responsable de programme**_ (_**Manager privilege**_). 
 
 ## Objectif de l'application
 
 _**SUMARiS**_ est un système d'information en ligne destiné à la collecte, au traitement et à l'extraction de données
 ainsi qu'à la diffusion de résultats et d'agrégations.
-
 
 ## Pré-requis
 
@@ -122,19 +126,133 @@ Pour remonter les questions ou problèmes :
 
 <div style="page-break-after: always"></div>
 
-# Utilisation de l'application SUMARiS
+# Accéder à l'application SUMARiS
 
-## Écran d'accueil
+L'application est disponible, depuis un navigateur Internet, à l'adresse suivante : https://open.sumaris.net/. 
 
-Une fois connecté, l'utilisateur se retrouve sur l'[Écran d'accueil](#écran-daccueil).
+## Écran d'accueil (mode non-identifié)
 
-Le menu latéral est visible sur la partie gauche de l'écran.
+![Écran d'accueil](img/desktop/sumaris_accueil_non_identifie_desktop.png)
 
-<div style="float: right">
+Deux boutons sont disponibles :
 
-![Écran d'accueil](img/desktop/sumaris_accueil_desktop.png)
+* _**S'inscrire**_
+  * Lien vers la [Fenêtre Inscription](#fenêtre-inscription)
+* _**Se connecter**_
+  * Lien vers la [Fenêtre Authentification](#fenêtre-authentification)
+
+## Fenêtre Inscription
+
+Lors de la première utilisation de l'application, il est nécessaire de créer un compte utilisateur pour s'authentifier.
+
+![Création d'un compte](img/desktop/sumaris_inscription_desktop_1.png)
+
+Renseigner deux fois l'adresse e-mail. Elle doit obligatoirement être valide.
+
+Appuyer sur le bouton _**Suivant**_.
+
+![Création d'un compte](img/desktop/sumaris_inscription_desktop_2.png)
+
+Renseigner deux fois le mot de passe. Il doit être sécurisé, à savoir, comprendre différents types de caractères (majuscules,
+minuscules, nombres, caractères spéciaux...).
+
+Appuyer sur le bouton _**Suivant**_.
+
+![Création d'un compte](img/desktop/sumaris_inscription_desktop_3.png)
+
+Renseigner les nom, prénom et organisme de du compte utilisateur à créer.
+
+**NB :**
+
+> Le champ _**Organisme**_ correspond à l'**OP** du nouvel utilisateur ou, à défaut, à son **CRPMEM**.
+
+À l'issue de l'inscription, l'utilisateur est automatiquement redirigé vers l'[Écran d'accueil (mode identifié)](#écran-daccueil-mode-identifié).
+
+<div style="color: #ffa500; font-size: large">
+
+**⚠ AVERTISSEMENT !**
 
 </div>
+
+> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.  
+> Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.  
+> Avant cela, la saisie de marées ne sera pas possible.
+
+À la création du compte, un e-mail automatique est envoyé au nouvel utilisateur afin de valider l'adresse.
+
+<div style="color: #ffa500; font-size: large">
+
+**⚠ AVERTISSEMENT !**
+
+</div>
+
+> Si le nouvel utilisateur ne reçoit pas immédiatement d'e-mail de confirmation d'inscription, il doit impérativement aller vérifier ses messages indésirables.
+
+Chaque utilisateur authentifié a, au départ, un statut d'invité qui lui permet de visualiser mais pas de saisir de données.
+
+Une fois que le nouvel utilisateur a validé son compte en cliquant sur lien de l'e-mail de confirmation d'inscription, il est redirigé vers l'application.
+
+![Écran d'accueil](img/desktop/sumaris_finalisation_inscription_desktop.png)
+
+Il obtient alors le statut d'observateur, à moins que son superviseur ne lui octroie les privilèges de superviseur.
+
+## Fenêtre Authentification
+
+![Authentification](img/desktop/sumaris_authentification_desktop.png)
+
+Renseigner l'adresse e-mail et le mot de passe puis valider la saisie en appuyant sur le bouton _**Se connecter**_.
+
+Une fois connecté, l'utilisateur est redirigé vers l'[Écran d'accueil (mode identifié)](#écran-daccueil-mode-identifié).
+
+Le lien _**Créer un compte**_ permet d'afficher la [Fenêtre Inscription](#fenêtre-inscription).
+
+Le lien _**Réinitialiser votre mot de passe**_ permet d'afficher la [Fenêtre Réinitialisation du mot de passe](#fenêtre-réinitialisation-du-mot-de-passe).
+
+## Fenêtre Réinitialisation du mot de passe
+
+Renseigner l'adresse e-mail puis valider la saisie en appuyant sur le bouton _**Envoyer la demande**_.
+
+![Réinitialisation du mot de passe](img/desktop/sumaris_reinitialisation_mot_de_passe_desktop_1.png)
+
+Un message de confirmation d'envoi d'e-mail s'affiche en haut de l'écran.
+
+![Réinitialisation du mot de passe](img/desktop/sumaris_reinitialisation_mot_de_passe_desktop_2.png)
+
+Aller consulter les e-mails et cliquer sur le lien de récupération.
+
+<div style="color: #ffa500; font-size: large">
+
+**⚠ AVERTISSEMENT !**
+
+</div>
+
+> Si l'utilisateur ne reçoit pas immédiatement d'e-mail de réinitialisation de mot de passe, il doit impérativement aller vérifier ses messages indésirables.
+
+<div style="page-break-after: always"></div>
+
+Le lien présent dans le message envoyé redirige vers la fenêtre de saisie du nouveau mot de passe.
+
+![Réinitialisation du mot de passe](img/desktop/sumaris_reinitialisation_mot_de_passe_desktop_3.png)
+
+Saisir le nouveau mot de passe deux fois et appuyer sur le bouton _**Valider**_ de la fenêtre.
+
+# Utiliser l'application SUMARiS
+
+## Écran d'accueil (mode identifié)
+
+Si l'utilisateur n'a pas validé son compte, il n'aura aucun droit d'accès. Il accèdera à l'écran ci-dessous, qui ne permet aucune action.
+
+![Écran d'accueil](img/desktop/sumaris_accueil_identifie_attente_droits_desktop.png)
+
+Une fois son compte validé, il pourra accéder à toutes les fonctionnalités permises par ses privilèges utilisateur.
+
+![Écran d'accueil](img/desktop/sumaris_accueil_identifie_desktop.png)
+
+**NB :**
+
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée, ni intervenir en quoi que ce soit sur un programme de collecte.
+
+Le menu latéral est visible sur la partie gauche de l'écran.
 
 Le superviseur peut effectuer les actions suivantes :
 - [Gérer les droits d'accès des utilisateurs à un programme de collecte](#gérer-les-droits-daccès-des-utilisateurs-à-un-programme-de-collecte)
@@ -142,6 +260,10 @@ Le superviseur peut effectuer les actions suivantes :
     - Si celle-ci n'est pas visible, contacter un autre superviseur du programme ou l'[Assistance technique](#assistance-technique) pour obtenir droits nécessaires.
 - [Gérer les navires](#gérer-les-navires)
   - Accès à l'[Écran Navires](#écran-navires) via l'entrée _**Navires**_ du menu latéral
+- Se déconnecter
+  - Depuis l'entrée _**Se déconnecter**_ du menu latéral
+  - Déconnexion du compte utilisateur
+  - Redirection vers l'[Écran d'accueil (mode non-identifié)](#écran-daccueil-mode-non-identifié)
 
 <div style="page-break-after: always"></div>
 
@@ -173,10 +295,8 @@ Il s'ouvre par défaut sur l'onglet [_**Détails**_](#onglet-détails).
 
 </div>
 
-> Les privilèges affectés au superviseur donnent, pour l'instant accès à tous les onglets.
->
-> Ne modifier des données que dans l'onglet **Droits** d'accès.
->
+> Les privilèges affectés au superviseur donnent, pour l'instant accès à tous les onglets.  
+> Ne modifier des données que dans l'onglet **Droits** d'accès.  
 > Modifier les autres données pourrait rendre le programme de collecte inopérant.
 
 <div style="page-break-after: always"></div>
@@ -238,8 +358,7 @@ Une fois la saisie terminée, la ligne passe en bleu.
 
 </div>
 
-> À ce stade, l'ajout de l'utilisateur n'est pas encore enregistré en base de données.
-> 
+> À ce stade, l'ajout de l'utilisateur n'est pas encore enregistré en base de données.  
 > L'ajout de l'utilisateur ne sera effectif qu'après l'appui sur le bouton _**Sauvegarder**_.
 
 ![Ajout d'un utilisateur](img/desktop/sumaris_ajout_utilisateur_programme_desktop_3.png)
@@ -274,8 +393,7 @@ Effacer le contenu du champ _**Privilège**_ puis sélectionner la nouvelle vale
 
 </div>
 
-> À ce stade, la modification effectuée n'est pas encore enregistrée en base de données.
->
+> À ce stade, la modification effectuée n'est pas encore enregistrée en base de données.  
 > La modification ne sera effective qu'après l'appui sur le bouton _**Sauvegarder**_.
 
 ![Modification des droits d'un utilisateur](img/desktop/sumaris_modification_droits_utilisateur_programme_desktop_3.png)
@@ -308,8 +426,7 @@ La ou les lignes à supprimer disparaissent alors de l'affichage de la liste.
 
 </div>
 
-> À ce stade, la suppression n'est pas encore enregistrée en base de données.
->
+> À ce stade, la suppression n'est pas encore enregistrée en base de données.  
 > La suppression ne sera effective qu'après l'appui sur le bouton _**Sauvegarder**_.
 
 ![Suppression des droits d'un utilisateur](img/desktop/sumaris_suppression_droits_utilisateur_programme_desktop_2.png)
@@ -337,6 +454,8 @@ L'appui sur une ligne affiche l'[Écran Détails d'un navire](#écran-détails-d
 L'appui sur l'icône ![Ajout navire](img/desktop/sumaris_icone_ajout_bleu_desktop.png) affiche la [Fenêtre Nouveau navire](#fenêtre-nouveau-navire).
 
 L'appui sur l'icône ![Rafraîchir](img/desktop/sumaris_icone_rafraichir_desktop.png) rafraîchit la liste des navires.
+
+<div style="page-break-after: always"></div>
 
 L'appui sur l'icône ![Filtres](img/desktop/sumaris_icone_filtres_desktop.png) affiche le volet des filtres.
 
