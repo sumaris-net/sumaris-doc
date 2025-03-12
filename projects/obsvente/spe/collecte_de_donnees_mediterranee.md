@@ -36,7 +36,7 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
    * Les métiers (non obligatoire)
      * La liste des métiers est régionalisée
      * Il est possible de rajouter plusieurs métiers (:heavy_plus_sign:)
-       * Le premier métier constitue le métier principal. Il est obligatoire
+       * Le premier métier constitue le métier principal
        * Les autres métiers ajoutés constituent les métiers secondaires
      * Il est possible de supprimer des métiers (:heavy_multiplication_x:)
    * Les zones de pêche (non obligatoire)
