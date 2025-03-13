@@ -27,9 +27,9 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
 1. Le saisisseur demande la création d'un lot d'espèces
 2. L'écran "Nouveau lot" s'ouvre, il est composé de 2 onglets :
    * "Détails" (onglet par défaut)
-   * "Lots #1" (onglet du lot correspondant au premier navire à renseigner)
+   * "Lots" (onglet du lot correspondant au premier navire à renseigner)
 3. Sur l'onglet "Détails", le saisisseur renseigne les détails d'une vente* ou de plusieurs ventes (un bateau est associé à une vente) :
-   * Le navire #1*
+   * Le navire
    * Le type de vente*
    * Le lieu de vente
    * La date/heure de vente*
@@ -50,14 +50,13 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
 ![ui-obsvente](/projects/obsvente/spe/images/med/sale-mediterranee-vessels-details.svg)
 
    * A chaque ajout, une nouvelle vente est créée, associée à un nouveau navire
-     * Un onglet "Lots _#X_" est créé
-   * Le libellé du navire est incrémenté (_#X_)
+     * Un onglet "Lots _Nom navire_" est créé
    * Il n'est pas possible de choisir un navire déjà renseigné dans une vente existante
    * Les informations en dessous du navire, sur les ventes précédemment créées, sont repliées pour une meilleure visibilité
    * Le saisisseur renseigne les détails de la nouvelle vente (retour en 3)
 
 5. Le saisisseur peut supprimer une vente (:heavy_multiplication_x:)
-6. Le saisisseur clique sur l'onglet d'un lot "Lots _#X_" (REF: OBSVENTES/SORTIE/VENTE/LOT#)
+6. Le saisisseur clique sur l'onglet d'un lot "Lots _Nom navire_" (REF: OBSVENTES/SORTIE/VENTE/LOT#)
 
 
 **Variante(s) :**
@@ -69,7 +68,7 @@ En mode terrain, il est possible d'activer une case à cocher, dans le bandeau d
 ---
 ## Vente > Lots espèces
 
-**REF: OBSVENTES/SORTIE/VENTE/LOTS#**
+**REF: OBSVENTES/SORTIE/VENTE/LOTS**
 
 ![ui-obsvente](/projects/obsvente/spe/images/med/sale-mediterranee.svg)
 
@@ -77,7 +76,7 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 
 #### Scénario principal
 
-1. L'onglet "Lots _#X_" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
+1. L'onglet "Lots _Nom navire_" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
    * L'espèce commerciale
    * La catégorie de tri terrain
    * La catégorie UE
@@ -97,7 +96,7 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * Le poids échantillonné
    * Identification à confirmer
 5. Le saisisseur enregistre
-6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
+6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (nom)"
 7. Le saisisseur peut ajouter des photos de la caisse du lot
 8. Le Saisisseur peut saisir un commentaire sur le lot
 9. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)

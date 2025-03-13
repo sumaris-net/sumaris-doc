@@ -1,14 +1,14 @@
 @startsalt
 {
-  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun  | . |
+  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun</b>  - 123456 Navire 1| . |
                                                                                                                                                                                                                           }
   --
-  {/  <b>Détails | Lots #1 - 123456 Navire 1 }
+  {/  <b>Détails | Lots }
 
   ..
   {+
     .
-      Navire #1* :    | { ^123456 - Navire 1                  ^ }
+      Navire* :    | { ^123456 - Navire 1                  ^ }
 
       Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
       Lieu de la vente* :   |  { ^ DMA - La Ciotat ^ }

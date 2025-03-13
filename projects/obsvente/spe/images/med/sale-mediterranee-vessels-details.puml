@@ -1,20 +1,20 @@
 @startsalt
 {
-  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun  | . |
+  { <b>La Ciotat</b> - 08/02/2022 - <b>MAC - Maquereau commun</b> - Navire 1, Navire 2  | . |
                                                                                                                                                                                                                           }
   --
-  {/  <b>Détails | Lots #1 - 123456 Navire 1 | Lots #2 - 7891234 Navire 2 }
+  {/  <b>Détails | Lots - 123456 Navire 1 | Lots - 7891234 Navire 2 }
 
   ..
   {+
     .
-      Navire #1* :    | { ^123456 - Navire 1                  ^ } | . | . | . | . | . | . | . | . | . | . | . | . | . | . |     <&chevron-bottom>
+      Navire * :    | { ^123456 - Navire 1                  ^ } | . | . | . | . | . | . | . | . | . | . | . | . | . | . |     <&chevron-bottom>
   .
   } | . | <size:17><&plus> <size:17><&x>
   .
 {+
     .
-      Navire #2* :    | { ^7891234 - Navire 2                  ^ }
+      Navire * :    | { ^7891234 - Navire 2                  ^ }
 
       Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
       Lieu de la vente* :   |  { ^ DMA - La Ciotat ^ }
