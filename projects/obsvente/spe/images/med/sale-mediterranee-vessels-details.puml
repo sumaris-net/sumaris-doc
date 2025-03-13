@@ -22,7 +22,8 @@
 
       . | <font color=grey size=10><i>Métier principale</i>
        Métier : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
-
+      . | <font color=grey size=10><i>Métier secondaire</i>
+      . | { ^ OTBCOD - Chaluts de fond à morue ^ } |  <&plus> <&x>
 
       Zone de pêche :            | ^ MLCO - Large Corse (>12 milles)^ | <&plus> <&x>
       .

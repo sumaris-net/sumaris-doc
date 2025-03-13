@@ -56,7 +56,7 @@ Il convient donc de créer autant de vente qu'il y a de bateau, ayant pêché l'
    * Le saisisseur renseigne les détails de la nouvelle vente (retour en 3)
 
 5. Le saisisseur peut supprimer une vente (:heavy_multiplication_x:)
-6. Le saisisseur clique sur l'onglet d'un lot "Lots _Nom navire_" (REF: OBSVENTES/SORTIE/VENTE/LOT#)
+6. Le saisisseur clique sur l'onglet d'un lot "Lots _Nom navire_" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
 
 **Variante(s) :**
