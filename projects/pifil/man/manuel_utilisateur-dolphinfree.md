@@ -205,7 +205,7 @@ Aller dans l'onglet _**Programmes de collecte**_ et sélectionner le programme _
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.  
+> Faire attention de bien sélectionner le programme _**DolphinFREE**_.  
 > La bonne utilisation de l'application et l'exploitabilité des données saisies en découlent !
 
 L'[Écran d'accueil (mode non identifié)](#écran-daccueil-mode-non-identifié) s'affiche ensuite.
@@ -252,7 +252,7 @@ minuscules, nombres, caractères spéciaux...) puis de valider.
 
 **NB :**
 
-> Le champ _**Organisme**_ correspond à l'**OP** de l'observateur ou, à défaut, à son **CRPMEM**.
+> Le champ _**Organisme**_ correspond à l'_**OP**_ de l'observateur ou, à défaut, à son _**CRPMEM**_.
 
 <div style="text-align: center">
 
@@ -274,9 +274,9 @@ Chaque utilisateur authentifié a, au départ, un statut d'invité qui lui perme
 
 </div>
 
-> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.  
+> L'utilisateur doit impérativement demander à son _**OP**_ (ou _**CRPMEM**_) de lui donner les droits de saisie sur le programme _**DolphinFREE**_.  
 > Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.  
-> Avant cela, le bouton de **Saisie des marées** ne sera pas affiché, et la saisie de marées ne sera pas possible.
+> Avant cela, le bouton de _**Saisie des marées**_ ne sera pas affiché, et la saisie de marées ne sera pas possible.
 
 À l'issue de l'inscription, l'utilisateur est automatiquement redirigé vers l'[Écran Authentification](#écran-authentification).
 
@@ -331,8 +331,8 @@ Deux boutons sont disponibles :
 
 **NB :**
 
-> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
-> Le bouton **Saisie des marées** ne sera donc pas affiché.
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'_**OP**_ (ou _**CRPMEM**_), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
+> Le bouton _**Saisie des marées**_ ne sera donc pas affiché.
 
 <div style="clear:both"></div>
 
@@ -363,8 +363,8 @@ Le menu latéral comporte les éléments suivants :
 
 **NB :**
 
-> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
-> L'entrée **Marées** ne sera donc pas affichée.
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'_**OP**_ (ou _**CRPMEM**_), l'utilisateur ne pourra ni saisir, ni visualiser de marée.  
+> L'entrée _**Marées**_ ne sera donc pas affichée.
 
 <div style="clear:both"></div>
 
@@ -489,7 +489,7 @@ Sélectionner le programme _**DolphinFREE**_ puis le(s) navire(s) souhaités.
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.  
+> Faire attention de bien sélectionner le programme _**DolphinFREE**_.  
 > L'exploitabilité des données saisies en découle !
 
 <div style="clear:both"></div>
@@ -555,7 +555,7 @@ L'[Écran Marées](#écran-marées) apparaît, avec une barre de progression de 
 
 </div>
 
-> Faire attention de bien sélectionner le programme **DolphinFREE**.  
+> Faire attention de bien sélectionner le programme _**DolphinFREE**_.  
 > L'exploitabilité des données saisies en découle !
 
 Les champs marqués * sont obligatoires :

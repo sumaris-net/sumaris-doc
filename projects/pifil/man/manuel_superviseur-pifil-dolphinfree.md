@@ -9,15 +9,27 @@
 </div>
 
 <br>
+<br>
 
-<div class="logo">
+<div style="font-size: x-large">
 
-![DolphinFREE](img/common/logo_dolphinfree.png)
+<br>
+<br>
+<br>
+
+</div>
+
+<div style="font-size: xx-large">
+
+Programmes PIFIL 2 et DolphinFREE
 
 </div>
 
 <div style="font-size: x-large">
 
+<br>
+<br>
+<br>
 <br>
 
 Version 2.9.34.1
@@ -95,7 +107,7 @@ _**SUMARiS**_ est un outil de saisie en ligne de données halieutiques, dévelop
 
 </div>
 
-Ce document a pour objet d'aider efficacement le superviseur à affecter des droits d'accès, dans le cadre du programme _**DolphinFREE**_, à des utilisateurs ayant un compte dans l'application _**SUMARiS**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Responsable de programme**_ (_**Manager privilege**_). 
+Ce document a pour objet d'aider efficacement le superviseur à affecter des droits d'accès, dans le cadre des programmes _**PIFIL 2**_ et _**DolphinFREE**_, à des utilisateurs ayant un compte dans l'application _**SUMARiS**_. Il s'adresse exclusivement aux utilisateurs ayant un compte de type _**Responsable de programme**_ (_**Manager privilege**_). 
 
 ## Objectif de l'application
 
@@ -164,7 +176,7 @@ Renseigner les nom, prénom et organisme de du compte utilisateur à créer.
 
 **NB :**
 
-> Le champ _**Organisme**_ correspond à l'**OP** du nouvel utilisateur ou, à défaut, à son **CRPMEM**.
+> Le champ _**Organisme**_ correspond à l'_**OP**_ du nouvel utilisateur ou, à défaut, à son _**CRPMEM**_.
 
 À l'issue de l'inscription, l'utilisateur est automatiquement redirigé vers l'[Écran d'accueil (mode identifié)](#écran-daccueil-mode-identifié).
 
@@ -174,7 +186,7 @@ Renseigner les nom, prénom et organisme de du compte utilisateur à créer.
 
 </div>
 
-> L'utilisateur doit impérativement demander à son **OP** (ou **CRPMEM**) de lui donner les droits de saisie sur le programme **DolphinFREE**.  
+> L'utilisateur doit impérativement demander à son _**OP**_ (ou _**CRPMEM**_) de lui donner les droits de saisie sur le programme _**PIFIL 2**_ ou _**DolphinFREE**_.  
 > Sous quelques jours, il sera notifié par e-mail de l'attribution des droits d'accès.  
 > Avant cela, la saisie de marées ne sera pas possible.
 
@@ -250,7 +262,7 @@ Une fois son compte validé, il pourra accéder à toutes les fonctionnalités p
 
 **NB :**
 
-> Tant que les droits d'accès n'ont pas été attribués au compte par l'**OP** (ou **CRPMEM**), l'utilisateur ne pourra ni saisir, ni visualiser de marée, ni intervenir en quoi que ce soit sur un programme de collecte.
+> Tant que les droits d'accès n'ont pas été attribués au compte par l'_**OP**_ (ou _**CRPMEM**_), l'utilisateur ne pourra ni saisir, ni visualiser de marée, ni intervenir en quoi que ce soit sur un programme de collecte.
 
 Le menu latéral est visible sur la partie gauche de l'écran.
 
@@ -275,7 +287,7 @@ L'écran _**Programmes**_ permet d'afficher la liste des programmes de collecte 
 
 ![Écran Programmes](img/desktop/sumaris_programmes_desktop.png)
 
-Cliquer sur la ligne du programme _**DolphinFREE**_ pour accéder à l'[Écran de paramétrage d'un programme](#écran-de-paramétrage-dun-programme). 
+Cliquer sur la ligne du programme désiré (_**PIFIL 2**_ ou _**DolphinFREE**_) pour accéder à l'[Écran de paramétrage d'un programme](#écran-de-paramétrage-dun-programme). 
 
 ### Écran de paramétrage d'un programme
 
@@ -296,7 +308,7 @@ Il s'ouvre par défaut sur l'onglet [_**Détails**_](#onglet-détails).
 </div>
 
 > Les privilèges affectés au superviseur donnent, pour l'instant accès à tous les onglets.  
-> Ne modifier des données que dans l'onglet **Droits** d'accès.  
+> Ne modifier des données que dans l'onglet _**Droits d'accès**_.  
 > Modifier les autres données pourrait rendre le programme de collecte inopérant.
 
 <div style="page-break-after: always"></div>
