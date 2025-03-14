@@ -22,7 +22,7 @@
 
 Version 2.9.34.1
 
-Dernière mise à jour : 12/03/2025
+Dernière mise à jour : 14/03/2025
 
 ![Bandeau logos](img/common/splash_pifil.png)
 
@@ -483,6 +483,11 @@ Les champs marqués <strong>*</strong> sont obligatoires.
 
 Renseigner le champ _**État**_ avec la valeur "Actif à la saisie" afin que le navire soit visible par tous les utilisateurs.
 
+**Rappel:**
+- Le champ _**Immatriculation**_ doit impérativement comporter six chiffres.
+- Le champ _**Marquage extérieur**_ doit comporter les deux lettres du quartier d'immatriculation ainsi que les six chiffres de l'immatriculation.
+  - Afin de faciliter la recherche dans les écrans de l'application, ne pas saisir d'espace entre les lettres du quartier d'immatriculation et les chiffres de l'immatriculation. 
+
 Renseigner les caractéristiques du navire et appuyer sur le bouton _**Ajouter**_ pour terminer la création du navire.
 
 ### Écran Détails d'un navire
@@ -490,6 +495,8 @@ Renseigner les caractéristiques du navire et appuyer sur le bouton _**Ajouter**
 L'écran affiche, en lecture seule les caractéristiques du navire.
 
 ![Écran Détails d'un navire](img/desktop/sumaris_details_navire_desktop.png)
+
+<div style="page-break-after: always"></div>
 
 <div style="float: right">
 
@@ -500,8 +507,6 @@ L'écran affiche, en lecture seule les caractéristiques du navire.
 Si l'utilisateur n'a accès au navire qu'en lecture seule, le bouton _**Modifier**_ est désactivé.
 
 <div style="clear:both"></div>
-
-<div style="page-break-after: always"></div>
 
 <div style="float: right">
 
