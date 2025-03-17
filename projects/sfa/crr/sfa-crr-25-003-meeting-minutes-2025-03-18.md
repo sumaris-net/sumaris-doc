@@ -95,6 +95,18 @@ SIH updates follow-up
 > - All logbook templates latest versions to be shared (SFA)
 > - List of unusable gears in _**SIH**_ to be fulfilled with target species (SFA)
 
+### _**Logbook**_ screen
+
+- Expenses tab creation for logbook programs
+
+> Questions :
+> - Is _**Bait**_ tab needed in _**Expenses**_ tab for logbooks?
+
+> Actions :
+> - Share which fishery uses tuna as bait (SFA)
+
+---
+
 ---
 
 ### _**OPRDEB**_ program in _**Landed catches**_ and _**Sales**_ screens
@@ -122,18 +134,6 @@ SIH updates follow-up
 ---
 
 ## Batch #2 (30/04/2025)
-
-### _**Trips**_ screen
-
-- Expenses tab creation for logbook programs
-
-> Statements :
-> - Bonito and Bonit are the same baits
-
-> Actions :
-> - Share which fishery uses tuna as bait (SFA)
-
----
 
 #### Adding biological sampling on _**Packets**_ screen
 
