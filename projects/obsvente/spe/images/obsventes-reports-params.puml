@@ -1,0 +1,6 @@
+@startsalt
+{+
+    {Option* }
+		Sortie > Rapport : Types de rapport autorisés : |[Formulaire terrain]|[Formulaire avec données]
+}
+@endsalt

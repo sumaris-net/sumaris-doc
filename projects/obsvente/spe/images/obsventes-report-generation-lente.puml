@@ -1,0 +1,6 @@
+@startsalt
+{+
+    {Option* }
+    Sortie > | ^Limite de résultats pour avertissement de génération lente (0 = pas de limite)^ |:  600
+}
+@endsalt

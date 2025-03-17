@@ -1,6 +1,10 @@
 # Restitution des données
 ## Spécifications (ObsVente)
 
+**REF: `OBSVENTE/INTERFACE/FORMULAIRES`**
+
+![ui-obsventes-report-activation](/projects/obsvente/spe/images/obsventes-report-activation.svg)
+
 ---
 L’accès à la fonctionnalité de génération de rapports est disponible depuis la liste des sorties via l’icône située en haut à droite de l’écran.
 Il est possible de générer les formulaires vierges ou terrain avec données depuis [l'écran des sorties](/projects/obsvente/spe/collecte_de_donnees.md#sorties) ou depuis la [consultation d'une sortie](/projects/obsvente/spe/collecte_de_donnees.md#sortie--détails).
@@ -26,7 +30,13 @@ Il est possible de générer les formulaires vierges ou terrain avec données de
     - Afficher les erreurs de saisie des prélèvements.
 
 ---
+## **Paramétrages - Options de programme**
 
+- Il est possible de paramétrer, dans les **options de programme**, un ou plusieurs types de **rapports accessibles** pour un observateur ![Rapports accessibles](/projects/obsvente/spe/images/obsventes-reports-params.svg)
+- Il est également possible de définir un **nombre maximal de lignes de calendriers** au-delà duquel un **avertissement** est affiché lors de la tentative de génération du rapport (prévention des lenteurs de traitement) ![Seuil avertissement](/projects/obsvente/spe/images/obsventes-report-generation-lente.svg)
+- Enfin, un **seuil de calendriers** peut être défini, au-delà duquel **la génération de rapport est refusée** ![Seuil génération refusée](/projects/obsvente/spe/images/obsventes-report-nb-generation.svg)
+
+---
 ### **Scénario principal**
 
 1. L’observateur demande l’édition d’un rapport.
