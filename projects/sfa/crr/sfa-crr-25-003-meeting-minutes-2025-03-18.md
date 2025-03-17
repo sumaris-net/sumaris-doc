@@ -1,5 +1,5 @@
 # Videoconference meeting minutes
-## 25/02/2025
+## 18/03/2025
 
 SIH updates follow-up
 
@@ -8,6 +8,7 @@ SIH updates follow-up
 > Attending :
 >
 > - Juliette LUCAS (SFA)
+> - Emilie AUGUSTIN (SFA)
 > - Cindy ASSAN (SFA)
 > - Ludovic PECQUOT (EIS)
 > - Étienne de CHAVAGNAC (EIS)
@@ -16,7 +17,6 @@ SIH updates follow-up
 
 > Excused :
 >
-> - Emilie AUGUSTIN (SFA)
 > - Benoît LAVENIER (EIS)
 > - Dorian MARCO (EIS)
 
@@ -24,44 +24,34 @@ SIH updates follow-up
 
 ## Performed actions since previous meeting
 
-- _**GMA**_ logbook to be renamed _**JMA**_ (EIS)
-- _**JMA**_ logbook specific substrate type list to be shared (SFA)
-- _**JMA**_ logbook specific substrate type list to be implemented (EIS)
-- _**Spanner Crab Fishery**_ logbook new version to be shared (SFA)
-- _**Spanner Crab Fishery**_ bait table to be shared (SFA)
-- New optional parameter (commercial / research) to be added (EIS)
-- _**P03_OBSDEB_OBSERVATION**_ and _**P03_OBSDEB_OBSERVATION_OBS**_ to be merged (EIS)
-- _**SFA**_ database to be copied for test data update (EIS)
-- _**SFA**_ new logo (_**SVG**_ (preferred) or _**PNG**_ format) to be shared (SFA)
+- _**Octopus Fishery**_ logbook (similar to _**Artisanal Fishery**_) template to be shared (SFA)
+- _**Vessels already observed**_ list accuracy by selected landing site to be restored (EIS)
 
 ---
 
 ## Pending actions since previous meeting
 
-- _**Octopus Fishery**_ logbook (similar to _**Artisanal Fishery**_) template to be shared (SFA)
+- Share whether _**SFA**_ test server is still up and running or not (SFA)
+- Share whether there is a test database or if test application is using production database (SFA)
+- All logbook templates latest versions to be shared (SFA)
+- List of unusable gears in _**SIH**_ to be fulfilled with target species (SFA)
 - _**OPRDEB**_ to be activated, settings adjusted and re-tested (EIS)
-- List of _**P03**_ queries to be merged to be shared (EIS)
-- List of _**P03**_ queries to be merged (from _**EIS**_) to be validated (SFA)
-- Extraction for _**Dropline Fishery**_ logbook to be checked and fixed (EIS)
-- Adding vessel search option on _**Occasions**_ screen quick evaluation of work to be done (EIS)
-- _**Packets**_ screen individual measurements to be quoted (EIS)
-- _**Vessels already observed**_ list accuracy by selected landing site to be restored (EIS)
-- Non regression tests to be performed (EIS)
 - _**SFA**_ logo to be updated (EIS)
 - _**SFA**_ name to be changed to _**Seychelles Fisheries Authority**_ (EIS)
+- Extraction for _**Dropline Fishery**_ logbook to be checked and fixed (EIS)
+- Share which fishery uses tuna as bait (SFA)
+- _**Packets**_ screen individual measurements to be quoted (EIS)
+- Adding vessel search option on _**Occasions**_ screen quick evaluation of work to be done (EIS)
+- List of _**P03**_ queries to be merged to be shared (EIS)
+- List of _**P03**_ queries to be merged (from _**EIS**_) to be validated (SFA)
 
 ---
 
 ## Provisional delivery schedule
 
-![Delivery schedule](/projects/sfa/crr/sfa-25-002-gantt.svg)
+![Delivery schedule](/projects/sfa/crr/sfa-25-003-gantt.svg)
 
 ---
-
-> Statements :
-> - IT person in charge
->   - Jude Gabriel
-> - Test on tablets will be performed with browser emulation
 
 > Actions :
 > - Share whether _**SFA**_ test server is still up and running or not (SFA)
@@ -102,7 +92,8 @@ SIH updates follow-up
 ---
 
 > Actions :
-> - _**Octopus Fishery**_ logbook (similar to _**Artisanal Fishery**_) template to be shared (SFA)
+> - All logbook templates latest versions to be shared (SFA)
+> - List of unusable gears in _**SIH**_ to be fulfilled with target species (SFA)
 
 ---
 
@@ -125,7 +116,6 @@ SIH updates follow-up
 > Actions :
 > - _**SFA**_ logo update (EIS)
 > - _**SFA**_ name change to _**Seychelles Fisheries Authority**_ (EIS)
-> - _**Vessels already observed**_ list accuracy by landing site to be restored (EIS)
 > - Extraction for _**Dropline Fishery**_ logbook to be fixed (EIS)
 > - Miscellaneous bug fixes according to remaining time (EIS)
 
@@ -198,7 +188,7 @@ SIH updates follow-up
 
 ## Next meeting
 
-### Tuesday, **March 18<sup>th</sup>, 2025**
+### Tuesday, **April 15<sup>th</sup>, 2025**
 
 | **Seychelles** | **France** |
 |:--------------:|:----------:|
