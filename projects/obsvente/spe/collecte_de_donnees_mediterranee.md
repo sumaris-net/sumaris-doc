@@ -81,9 +81,9 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * La catégorie de tri terrain
    * La catégorie UE
    * L'état*
-   * La présentation*
-   * Le taux échantillonné
-   * Le poids échantillonné
+   * La présentation
+   * Le poids total (sur l'échantillon)
+   * Le nombre d'individu total (sur l'échantillon)
    * Identification à confirmer
 2. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
 3. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
