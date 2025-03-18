@@ -9,14 +9,12 @@ SIH updates follow-up
 >
 > - Juliette LUCAS (SFA)
 > - Emilie AUGUSTIN (SFA)
-> - Cindy ASSAN (SFA)
 > - Ludovic PECQUOT (EIS)
 > - Étienne de CHAVAGNAC (EIS)
 
----
-
 > Excused :
 >
+> - Cindy ASSAN (SFA)
 > - Benoît LAVENIER (EIS)
 > - Dorian MARCO (EIS)
 
@@ -53,12 +51,6 @@ SIH updates follow-up
 
 ---
 
-> Actions :
-> - Share whether _**SFA**_ test server is still up and running or not (SFA)
-> - Share whether there is a test database or if test application is using production database (SFA)
-
----
-
 ## Batch #1 (28/03/2025)
 
 ### SIH upgrade from 2.8.12 to 2.9.xx
@@ -70,7 +62,14 @@ SIH updates follow-up
 - Schedule
   - Tests ongoing
 
+---
+> Statement :
+> - _**SFA**_ test server probably not existing any more
+
 > Actions :
+> - Application server (10.9.8.55) specifications to be shared (SFA)
+> - Application server ability to run both test and production to be stated (EIS)
+> - Database to be duplicated on database server, for test purpose (SFA)
 > - Non regression tests to be performed (EIS)
 
 ---
@@ -91,28 +90,43 @@ SIH updates follow-up
 
 ---
 
+- _**Spanner Crab Fishery**_ logbook template
+
+![Spanner Crab logbook](/projects/sfa/crr/sfa-crr-25-003-img-01.png)
+
+> Statements :
+> - _**Type of trip**_ parameter is mandatory
+>   - No default value
+> - _**Spanner Crab Fishery**_
+>    - _**Tangle net set (No.)**_ and _**Tangle net haul (No.)**_ are quantities
+>    - Three digits maximum (one per cell on paper datasheet)
+
+---
+
 > Actions :
 > - All logbook templates latest versions to be shared (SFA)
+> - List of all gears in _**SIH**_ to be shared with _**SFA**_ (EIS)
 > - List of unusable gears in _**SIH**_ to be fulfilled with target species (SFA)
+
+---
 
 ### _**Logbook**_ screen
 
 - Expenses tab creation for logbook programs
 
-> Questions :
-> - Is _**Bait**_ tab needed in _**Expenses**_ tab for logbooks?
+> Statement :
+> _**Artisanal Fishery**_ uses tuna as bait (SFA)
 
 > Actions :
-> - Share which fishery uses tuna as bait (SFA)
-
----
+> - _**Baits**_ tab to be added in _**Expenses**_ tab for all logbooks (EIS)
+> - Baits list (common, as much as possible) for all logbooks to be shared (SFA)
+> - Gears list (common, as much as possible) for all logbooks to be shared (SFA)
 
 ---
 
 ### _**OPRDEB**_ program in _**Landed catches**_ and _**Sales**_ screens
 
 - _**Efforts**_ and _**Catches**_ screens
-  - _**Sampling data**_ and _**Sales**_ OK
 
 > Statements :
 > - Packets functionality will temporarily be enabled in _**Batch #1**_
@@ -183,12 +197,26 @@ SIH updates follow-up
 > Actions :
 > - List of _**P03**_ queries to be merged to be shared (EIS)
 > - List of _**P03**_ queries to be merged (from _**EIS**_) to be validated (SFA)
+
+---
+
+## _**SWIOFish**_ and _**IOTC**_ perspectives
+
+- _**SWIOFish2**_ has resumed in 2024
+- No _**SWIOFish3**_ perspective so far
+- Upcoming _**IOTC**_ conferences
+  - _**Working Party on Data Collection and Statistics**_ (WPDCS)
+    - 25/11/2025 to 29/11/2025 
+    - China
+  - _**Scientific Committee**_ (SC)
+    - 01/12/2025 to 05/12/2025
+    - China
  
 ---
 
 ## Next meeting
 
-### Tuesday, **April 15<sup>th</sup>, 2025**
+### Tuesday, **April 22<sup>nd</sup>, 2025**
 
 | **Seychelles** | **France** |
 |:--------------:|:----------:|
