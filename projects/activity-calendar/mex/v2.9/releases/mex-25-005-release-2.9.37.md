@@ -2,7 +2,7 @@
 
 ## Versions applicatives 
 
-Application Opus - Calendrier d'activité en production le xx/03/2025 11h30
+Application Opus - Calendrier d'activité en production le 20/03/2025 11h30
 
 - release livrée du pod **2.9.37**
 - release livrée de l'app **2.9.37**
@@ -18,6 +18,6 @@ Application Opus - Calendrier d'activité en production le xx/03/2025 11h30
 | Bug [#986](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/986)   | Calendriers d'activité > Etat incomplet sur navire entré en cours d'année                                          | [509238](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=509238) | TODO    |
 | Bug [#976](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/976)   | Calendriers d'activité > Filtre > Pagination > Navires sur plusieurs pages                                         | [507797](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=507797) | TODO    |
 | Bug [#1004](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/1004) | Calendrier d'activité > Saisie des personnes / jours de pêche, mer                                         | -                                                                                      | TODO    |
-| Bug [#975](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/975) | Calendriers d'activité > Filtre navire > Erreur                                         | https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=504809           | TODO    |
+| Bug [#975](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/975) | Calendriers d'activité > Filtre navire > Erreur                                         | [504809](https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=504809) | TODO    |
 | Bug [#958](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/958) | Calendrier d'activité > Calendrier > Armateur manquant                                       | -                                                                                      | TODO    |
 
