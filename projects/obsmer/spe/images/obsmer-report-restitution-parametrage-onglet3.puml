@@ -1,0 +1,41 @@
+@startsalt
+{  <b>Paramétrages
+  ..
+ {/ <b>Prises accidentelles et souvenirs |  }
+ .
+    {^"Prises accidentelles et/ou exceptionnelles "
+        .
+        [X] Activer
+        .
+        <&bold> <&italic> <&underline> <b><s>S</s> <u:red>A</u>  <u:green>A</u> <u:blue>A</u> <&delete> 
+        .
+        {SI
+        
+            "x" "mammifère marin, sélacien non commercial, requin" a(ont) été pêché(s) pendant cette observation. Il(s) a(ont)
+            été remis à l'eau vivant(s)/mort(s). Si marqué(s), le préciser ainsi que l'endroit du marquage.
+            .
+            L'observateur devra décrire le cas de capture d'espèces atypiques, grands sélaciens, même si l'espèce a été
+            commercialisée en suite.
+           .
+        }
+    }
+    .
+        {^"Souvenirs de la marée "
+        .
+        [X] Activer
+        .
+        <&bold> <&italic> <&underline> <b><s>S</s> <u:red>A</u>  <u:green>A</u> <u:blue>A</u> <&delete> 
+        .
+        {SI
+        
+           Rajouter dans cette rubrique, tous les faits autres faits marquants, anecdotes, photos, etc. 
+           .
+           Photographies confidentielles.
+           .
+        }
+        .
+        Photo n°1  |"                                          "| [...]
+        Photo n°2  |"                                          "| [...]
+    }
+}
+@endsalt

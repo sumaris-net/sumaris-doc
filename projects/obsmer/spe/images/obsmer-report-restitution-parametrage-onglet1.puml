@@ -1,0 +1,50 @@
+@startsalt
+{
+  <b>Paramétrages
+  ..
+ {/ <b>Sélection des espèces et métiers |  }
+ .
+ {^"Choix du mode d'affichage : "
+ .
+    .. | () Affichage standard | { (X) Affichage détaillé | () Affichage simplifié } | . }
+ {^"Métiers échantillonnés à représenter : "
+ .
+     {SI
+        [X] GNSWHG - Filets maillants à merlan
+        [X] GTRSOX - Trémails à soles
+        [] Autres...
+     }
+ }
+ 
+ {^"Répartition des poids: espèces de la PR à représenter : "
+  .
+    {SI 
+        [X] Merlan (31.5 kg)
+        [X] Araignée européenne (25.9 kg)
+        [] Autres...    
+    } 
+ }
+ {^"Répartition des poids: espèces de la PNR à représenter : "
+ .
+     {SI
+        [X] Merlan (31.5 kg)                                    
+        [X] Araignée européenne (25.9 kg).. 
+        [] Autres...
+     }
+ }
+ {^"Histogrammes des tailles: espèces à représenter : "
+ .
+     {SI
+        [X] Petite roussette (Scyliorhinus canicula) (44.1 kg)                                    
+        [X] Merlan (Merlangius merlangus) (32.6 kg).. 
+        [] Autres...
+     }
+ }    
+ ..
+ {^"Seuils de regroupement des espèces en catégorie 'Divers' (en %)"
+    |...................................................................    Partie retenue totale: | "1.0"  
+    |...................................................................    Fraction retenue : | "1.0" 
+    |...................................................................    Fraction remise à la mer : | "1.0"
+ }
+}
+@endsalt

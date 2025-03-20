@@ -1,0 +1,6 @@
+@startsalt
+{+
+    {Option* }
+        Marée > | ^Nombre de sorties maximum pour génération (0 = aucune limite)^ |:  1400
+}
+@endsalt

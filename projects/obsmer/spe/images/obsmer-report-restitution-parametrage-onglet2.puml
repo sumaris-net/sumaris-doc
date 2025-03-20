@@ -1,0 +1,44 @@
+@startsalt
+{  <b>Paramétrages
+  ..
+ {/ <b>Lieu et contexte marée |  }
+ .
+    {^"Description du métier observé"
+        .
+        <&bold> <&italic> <&underline> <b><s>S</s> <u:red>A</u>  <u:green>A</u> <u:blue>A</u> <&delete> 
+        .
+        {SI
+        
+           Vous avez été sollicité dans le cadre du programme "Osbservation à la mer" pour observer le métier "METIER" de la
+           façade "FACADE" (espèce cible "ESPECE_CIBLE", engin "ENGIN").
+           .
+           
+        }
+    }
+    .
+        {^"Localisation géographique de la marée"
+        .
+        <&bold> <&italic> <&underline> <b><s>S</s> <u:red>A</u>  <u:green>A</u> <u:blue>A</u> <&delete> 
+        .
+        {SI
+        
+           Rappeler ici le contexte particulier, rapporter tout élément présentant la spécificité de la marée observée ou facteur
+           ayant influencé de manière significative la marée.
+            - vent,
+            - houle,
+            - avarie sur un engin,
+            - météo,
+            - etc.
+           ainsi que:
+            - la capture d'un mammifère marin,
+            - une invasion de méduses,
+            - etc
+           Attention: si votre texte est trop long, il se peut que la mise en page ne soit pas bonne. Si besoin, faire plusieurs
+           tests de génération du document.
+           .
+           .
+           
+        }
+    }
+}
+@endsalt
