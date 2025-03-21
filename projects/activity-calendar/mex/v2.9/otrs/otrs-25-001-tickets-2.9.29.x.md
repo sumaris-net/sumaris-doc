@@ -59,6 +59,7 @@ Workflow des tickets du guichet Opus Activité -> Assistance 1 SISMER -> Exploit
 - Revoir la gestion des mois sans armateur et des mois inactifs
 - Métier par ligne : Impose de remplir toutes les zones+ gradient pour sauvegarder et ensuite avoir un calendrier lisible Non urgent - Coline LAZARD
 - Pouvoir désactiver la zone de compétence pour n'importe quel utilisateur
+- https://otrs.ifremer.fr/otrs/index.pl?Action=AgentTicketZoom;TicketID=509559 : Stratégie de saisi des jours de mer/pêche
 
 ---
 
