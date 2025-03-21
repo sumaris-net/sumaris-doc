@@ -447,7 +447,7 @@ un copier/coller de cellules, d'une colonne ou d'une ligne depuis le calendrier 
 
 **Variante :** Erreur nombre de jours en mer et nombre de jours de pêche
 
-10. Le saisisseur saisit un nombre de jours de mer ou un nombre de jours de pêche inférieur à 1 ou supérieur à 31, un message bloquant s'affiche [Retour en 15]
+10. Le saisisseur saisit un nombre de jours de mer 0 à 1 ou supérieur à 31 ou un nombre de jours de pêche supérieur à 31, un message bloquant s'affiche [Retour en 15]
 
 **Variante :** Erreur métier en doublon
 
