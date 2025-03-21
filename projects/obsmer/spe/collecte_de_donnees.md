@@ -1210,6 +1210,16 @@ Au niveau de la marée, pour stocker les bordereaux de saisie
 
 Les saisisseurs doivent pouvoir visualiser une synthèse des poids, par lots parents
 
+Info MOA 
+
+> Le document de validation est actuellement utile dans Allegro pour la vérification des données par les sociétés avant export ultime vers Harmonie.
+>
+> Nous avons aujourd'hui l'outil Valparaiso pour valider les données mais le volet ObsMer n'est pas encore développé de manière optimale mais ne sera pas avant au moins la fin d'année 2025.
+>
+> Cela permettra in fine de rendre plus efficace la validation des données côté prestataires et Ifremer.
+>
+> Et comme sur OPUS, nous n'avons pas encore bien abordé les moyens de contrôler les données via l'application, je ne peux pas te répondre avec certitude, je pense que cela demande une discussion entre-nous lors d'un prochain point.
+
 ---
 ## Validation des données
 
