@@ -223,17 +223,17 @@ N(8, 11)  is colored in green
 [Formation] as [TASK2] starts the 2024/03/04 and requires 1 week
 [TASK2] is colored in lightSalmon
 
-[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 37 week
+[Developpements ObsVentes] as [TASK3] starts the 2024/03/11 and requires 40 week
 [TASK3] is colored in orange
-[TASK3] is 65% complete
+[TASK3] is 75% complete
 
-[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 37 week
+[Developpements ObsMer] as [TASK4] starts the 2024/03/11 and requires 40 week
 [TASK4] is colored in blue
-[TASK4] is 50% complete
+[TASK4] is 56% complete
 
-[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 29 week
+[Developpements Calendrier] as [TASK5] starts the 2024/04/30 and requires 33 week
 [TASK5] is colored in green
-[TASK5] is 90% complete
+[TASK5] is 100% complete
 
 [Batchs] as [TASK6] starts the 2024/09/01 and requires 14 week
 [TASK6] is colored in red

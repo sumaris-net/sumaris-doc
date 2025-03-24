@@ -1,0 +1,186 @@
+@startgantt
+hide footbox
+hide ressources names
+
+<style>
+ganttDiagram {
+  legend {
+    FontColor black
+    BackGroundColor White
+    FontSize 15
+    FontStyle italic
+    LineColor Grey
+  }
+    unstartedTask {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkBlue
+    }
+    task {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    milestone {
+        FontColor black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor yellow
+        LineColor FireBrick
+    }
+    note {
+        FontColor DarkGreen
+        FontSize 10
+        LineColor OrangeRed
+    }
+    arrow {
+        FontName Helvetica
+        FontColor red
+        FontSize 18
+        FontStyle bold
+        BackGroundColor GreenYellow
+        LineColor pink
+        LineStyle 8.0;13.0
+        LineThickness 3.0
+    }
+    separator {
+        BackgroundColor OliveDrab
+        LineStyle 8.0;3.0
+        LineColor Gray
+        LineThickness 1.0
+        FontSize 16
+        FontStyle bold
+        FontColor White
+        Margin 5
+        Padding 6
+    }
+    timeline {
+        BackgroundColor Snow
+    }
+    closed {
+        BackgroundColor grey
+        FontColor red
+    }
+}
+</style>
+
+printscale weekly
+projectscale weekly
+
+title Refonte Allegro - Spécifications / Prototypes / Développements
+
+Project starts the 2025/01/07
+
+!procedure N(x,n)
+[x<size:0>n</size>]
+!endprocedure
+
+N(9, 9) as [o9] happen the 2025/02/11
+N(9, 9) is colored in orange
+
+N(10, 10) as [o10] happen the 2025/02/27
+N(10, 10) is colored in orange
+
+N(11, 11) as [o11] happen the 2025/03/13
+N(11, 11) is colored in orange
+
+N(12, 12) as [o12] happen the 2025/03/27
+N(12, 12) is colored in orange
+
+N(13, 13) as [o13] happen the 2025/04/24
+N(13, 13) is colored in orange
+
+N(14, 14) as [o14] happen the 2025/04/29
+N(14, 14) is colored in orange
+
+N(21, 21) as [o21] happen the 2025/04/14
+N(21, 21) is colored in blue
+
+N(22, 22) as [o22] happen the 2025/05/20
+N(22, 22) is colored in blue
+
+N(23, 23) as [o23] happen the 2025/06/20
+N(23, 23) is colored in blue
+
+N(9, 9) as [o9] happen the 2025/06/05
+N(9, 9) is colored in green
+
+N(10, 10) as [o10] happen the 2025/06/25
+N(10, 10) is colored in green
+
+[o11] displays on same row as [o12]
+[o12] displays on same row as [o13]
+[o13] displays on same row as [o14]
+
+[o21] displays on same row as [o22]
+[o22] displays on same row as [o23]
+
+[o9] displays on same row as [o10]
+
+[Spécifications] as [TASK1] starts the 2025/02/20 and requires 17 week
+[TASK1] is colored in darkTurquoise
+[TASK1] is 16% complete
+
+[Developpements ObsVentes] as [TASK3] starts the 2025/03/11 and requires 18 week
+[TASK3] is colored in orange
+[TASK3] is 27% complete
+
+[MEP ObsVentes] as [TASK8] starts the 2025/09/25 and requires 2 weeks
+[TASK8] is colored in orange
+[TASK8] is 0% complete
+[TASK8] displays on same row as [TASK3]
+[TASK3]->[TASK8]
+
+[Developpements ObsMer] as [TASK4] starts the 2025/03/01 and requires 29 week
+[TASK4] is colored in blue
+[TASK4] is 10% complete
+
+[MEP ObsMer] as [TASK9] starts the 2025/12/01 and requires 2 weeks
+[TASK9] is colored in blue
+[TASK9] is 0% complete
+[TASK9] displays on same row as [TASK4]
+[TASK4]->[TASK9]
+
+[Batchs] as [TASK6] starts the 2025/04/01 and requires 6 week
+[TASK6] is colored in red
+[TASK6] is 0% complete
+
+[MEP/Support ActiFlot releases 2.9.3x] as [TASK11] starts the 2025/01/07 and requires 11 weeks
+[TASK11] is colored in green
+[TASK11] is 100% complete
+
+[Developpements ActiFlot release 3.0] as [TASK5] starts the 2025/06/15 and requires 9 week
+[TASK5] is colored in green
+[TASK5] is 0% complete
+[TASK11] displays on same row as [TASK5]
+
+[MEP ActiFlot] as [TASK10] starts the 2025/11/01 and requires 2 weeks
+[TASK10] is colored in orange
+[TASK10] is 0% complete
+[TASK10] displays on same row as [TASK5]
+[TASK5]->[TASK10]
+
+
+[Recette MOE/MOA, déploiement] as [TASK7] starts the 2025/03/20 and requires 35 week
+[TASK7] is colored in pink
+[TASK7] is 6% complete
+
+2025-08-08 to 2025-08-30 is closed
+
+legend
+  |<#orange>   | ObsVentes |
+  |<#blue>  | ObsMer|
+  |<#green> | Calendrier release 3.0|
+  |<#red> | Batchs |
+  |<#pink> | Recette / Rédact. MOE |
+end legend
+
+
+
+@endgantt
