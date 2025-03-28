@@ -1,11 +1,11 @@
 @startsalt
 {
-  { Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 123456 Navire 1  | . |   {* ...
+  { Sortie : Douarnenez - 08/02/2022 - <b>MAC - Maquereau commun - 123456 Navire 1  | . |   {* ...
                                                                                    ... | <&check> Remplissage auto | de la date de la vente }
                                                                                                                                                                                                                           }
   --
 
-  {/  <b>Détails | Lots }
+  {/  <b><&info>Détails | <&box>Lots <font color=blue size=8><b>(2) }
   ..
   {
 
@@ -18,12 +18,12 @@
       Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
       .
       . | <font color=grey size=10><i>Métier principale</i>
-       Métier : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
+       Métiers : | { ^ OTBBSE - Chaluts de fond à bars ^ } |  <&x>
 
-      . | <font color=grey size=10><i>Métier secondaire</i>
+      . | <font color=grey size=10><i>Métier secondaire #1</i>
       . | { ^ OTBCOD - Chaluts de fond à morue ^ } |  <&plus> <&x>
-      .
-      Zone de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x>
+      . | <font color=grey size=10><i>Zone de pêche #1</i>
+      Zones de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x>
       .
   }
 

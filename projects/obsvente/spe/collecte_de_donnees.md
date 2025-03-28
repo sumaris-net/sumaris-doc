@@ -106,7 +106,7 @@ Validation des données : qui valide (responsable de programme et/ou coordinateu
 
 #### Scénario principal
 
-1. Le saisisseur sélectionne le menu "Sorties" dans l'interface de l'arbre du menu
+1. L'observateur sélectionne le menu "Sorties" dans l'interface de l'arbre du menu
 2. L'écran "Sorties" s'ouvre. Les informations suivantes sont affichées pour chaque sortie :
    * L'état de saisie de la sortie :
      * "En cours de saisie" : _réprésenté par une icône :pencil2: dans la cellule_
@@ -115,14 +115,13 @@ Validation des données : qui valide (responsable de programme et/ou coordinateu
    * Le programme
    * L'origine
    * Le lieu de la sortie
-   * La date/heure de début de sortie
-   * La date/heure de fin de sortie
+   * La date/heure de début de sortie (non obligatoire)
+   * La date/heure de fin de sortie (non obligatoire)
    * Le ou les observateur(s)
-   * Le ou les saisisseur(s)
    * Le commentaire
-3. Le saisisseur consulte le tableau des sorties
-4. Le saisisseur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
-5. Le saisisseur crée une nouvelle sortie (REF: OBSVENTES/SORTIE/DETAILS)
+3. L'observateur consulte le tableau des sorties
+4. L'observateur filtre les sorties (REF: OBSVENTES/SORTIES/FILTRES)
+5. L'observateur crée une nouvelle sortie (REF: OBSVENTES/SORTIE/DETAILS)
 
 **Variante(s) :**
 
@@ -149,22 +148,20 @@ Les filtres des sorties sont accessibles depuis le tableau de consultation des s
 #### Scénario principal
 
 1. Les filtres du tableau "Sorties" s'ouvrent. Les critères suivants sont disponibles :
-   * Le programme de collecte
+   * Le programme de collecte (non saisissable)
    * L'origine
    * L'état de saisie
    * Le lieu de la sortie
    * La début de la période
    * La fin de la période
    * L'organisme du saisisseur
-   * Le saisisseur
    * Les observateurs
 2. Le saisisseur filtre les sorties (REF: COMMUN/FILTRES)
 
 Les critères suivants sont multiples (dev en cours sur Imagine) : 
   * L'origine
   * L'état de saisie
-  * L'organisme du saisisseur 
-  * Le saisisseur 
+  * L'organisme de l'observateur
   * L'observateur 
 
 ---
@@ -179,20 +176,24 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 #### Scénario principal
 
 1. Le saisisseur demande la création d'une nouvelle sortie
-2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 3 onglets :
+2. L'écran "Nouvelle sortie" s'ouvre, il est composé de 2 onglets :
     * "Détails" (onglet par défaut)
     * "Echantillonnages" (visible uniquement si le programme est renseigné)
 3. Dans l'onglet "Détails", le saisisseur sélectionne :
-    * Le programme de collecte*
+    * Le programme de collecte* (renseigné par défaut "SIH-OBSVENTE" et non modifiable)
     * Le plan d'échantillonnage*
+    * L'origine (ObsVentes ou ObsDeb) 
     * Le lieu*
     * La date de début*
     * La date de fin*
     * Le ou les observateurs*
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
+    - _MOE_ : A approfondir [#537](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/537)
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
 6. Les caractéristiques de la sortie s'affichent en fonction du programme, de la date et du lieu sélectionnés
-   *  Il est possible de choisir les libellés des PMFM (caractéristiques) via le dictionnaire thématique
+   * La disponibilité de la pré-vente (case à cocher)
+   * La présence de PETS (case à cocher)
+     * Cette option conditionne le fait de pouvoir ajouter des PETS dans le tableau d'échantillonnage de la sortie
 7. Le saisisseur renseigne les caractéristiques de la sortie
 8. Le saisisseur enregistre
 9. Le bandeau de l'écran affiche "Lieu - date"
@@ -225,9 +226,7 @@ Sera également utilisé dans Imagine pour distinguer les données Obsbio de Cam
 > Questions/Remarques :
 > 
 > - MOE : Programme de rattachement : Information doublonnée (SALE + SALE_MEASUREMENT) pour la stratégie depuis 2017 ?
-> 
-> - MOE : Liste d'espèces à observer + liste PETS : traitement qui intègre les données dans SAMPLING_STRATA ou DENORMALIZED_SAMPLING_STRATA ? A approfondir
-> 
+>
 > - MOE : Validation observateur, Validation société : remplacer ces PMFM par le processus de contrôle des données de Sumaris, 
 > 
 > - MOA : Donner la liste des libellés des caractéristiques (PMFM)
@@ -260,7 +259,7 @@ puis le tableau de saisie "Tirage au sort". Sinon l'onglet affiche seulement le 
 #### Scénario principal
 
 1. Dans l'onglet "Echantillonnages", le saisisseur saisie la liste des PETS observés s'il à indiqué PETS à "Oui" dans la sortie. 
-2. Il renseigne aussi la liste des espèces à observer.
+2. La liste des espèces à observer est automatiquement renseignée, elle est issue du plan d'échantillonnage précédemment sélectionné.
 
 
 ### Sortie > Echantillonnages en métropole > Saisie de PETS
@@ -292,7 +291,6 @@ Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, perme
     * Commentaire
 2. Le saisisseur ajoute les PETS observés. Pour chaque PETS, le saisisseur renseigne :
     * L'espèce commerciale*
-    * L'espèce scientifique
 3. La case à cocher "Observé ?" est automatiquement cochée
 4. Le saisisseur enregistre l'échantillon observé
 5. Un bouton + permet d'ajouter un nouveau PETS à échantillonner
@@ -324,21 +322,22 @@ Le bouton :arrows_counterclockwise: permet :
 
 Dans l'onglet échantillonnage, l'observateur renseigne la liste des espèces à observer.
 
+Cette liste est issue du plan d'échantillonnage (WAO)
+
 #### Scénario principal
 
 1. Pour chaque espèce, les informations suivantes sont affichées :
    * Priorité
    * Espèce commerciale
-   * Espèce scientifique
    * Observé ? (par défaut décoché)
    * Raison de non observation
    * Navire
    * Zone de pêche
    * Commentaire
 2. Le système affiche le nombre d'espèces minimal à observer
-3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"* 
+3. Pour chaque espèce observée, le saisisseur coche la case "Observé ?"
 4. Le système actualise le compteur d'espèces observées
-5. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation*
+5. Pour chaque espèce non observée, le saisisseur sélectionne une raison de non observation
 6. Le saisisseur enregistre les échantillonnages
 7. Le bandeau de l'écran affiche "Lieu - Date"
 8. L'encart sur le saisisseur s'affiche
@@ -347,11 +346,17 @@ Dans l'onglet échantillonnage, l'observateur renseigne la liste des espèces à
 
 Liste exhaustive des raisons de non observation : 
 
+- Accès au site impossible
+- Annulation Observateur
+- Autre
+- Blocage de la profession
+- Pas d'apport
+
 
 **Variante(s) :**
 
 **Variante 2b :**
-2. Un warning apparait lorsque le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer [Retour en 2]
+2. Un warning apparait lorsque le nombre d'espèces observées est inférieur au nombre minimal d'espèces à observer (15) [Retour en 2]
 
 **Variante 8a :** 
 8. Un warning apparait lorsque le saisisseur accède à la vente d'une espèce sans avoir coché la case "Observé ?".
@@ -391,7 +396,6 @@ Un bouton :arrows_counterclockwise:, dans le bandeau au dessus du tableau, perme
 
 1. Dans l'onglet "Echantillonnages", le saisisseur consulte la liste des espèces à observer. Pour chaque espèce, les informations suivantes sont affichées :
     * Espèce commerciale
-    * Espèce scientifique
     * Navire
     * Zone de pêche
     * Commentaire
@@ -491,7 +495,7 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
 3. Sur l'onglet "Détails", le saisisseur renseigne les détails de la vente :
    * Le navire*
    * Le type de vente*
-   * Le lieu de vente
+   * Le lieu de vente*
    * La date/heure de vente*
    * Les métiers (non obligatoire)
      * La liste des métiers est régionalisée
@@ -507,23 +511,17 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
+Des cases à cocher, en face des champs, suivants permettent de figer les valeurs pour automatiquement pré-renseigner l'écran de saisie
+d'une nouvelle vente : 
+* Navire
+* Type de vente
+* Lieu de vente
 
 **Variante(s) :**
 
 **Variante 3a :** Remplissage auto de la date de la vente 
 
 En mode terrain, il est possible d'activer une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales).
-
-> Réunion 21/05/2024    
-Type de vente : 
-> - Echantillonnages en Métropole  => OK
->  - Saisissable sur le détail de la sortie (obligatoire)
->  - Pré-renseigné de manière automatique (détail de la sortie) et modifiable dans le tableau des espèces.
-
-> - Echantillonnages en Outre-mer
->  - Absent de la stratégie sur le détail de la sortie => Variante à faire
->  - Tableau d'échantillonnage : PMFM de type de vente avec bouton appliquer  => OK
->    - Renseigné sur chaque ligne et modifiable dans le tableau des espèces 
 
 
 > Proposition MOE :
@@ -532,16 +530,8 @@ Type de vente :
 
 > Garder la valeur précédente pour la saisie d'une autre vente
 
-> L'enlever du tableau et enlever la liste déroulante avec le bouton appliquer
-
-
-> Saisissable détail de la sortie.
-> Recopier dans la vente (non visible)
-> MOE : Enlever le lieu de vente de la maquette => OK
-
-> - MOA : Lieu de vente :
-> Case à cocher en haut à option :  OK
 > "Remplissage automatique de l'heure de la vente"
+
 > Stockée dans les préférences locales
 
 ---
@@ -556,15 +546,17 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 #### Scénario principal
 
 1. L'onglet "Lots" s'ouvre. Les informations suivantes sont affichées pour chaque lot :
-   * L'espèce commerciale
-   * La catégorie de tri terrain
-   * La catégorie UE
+   * L'espèce commerciale (FAO)
+   * La catégorie de tri terrain*
+   * La catégorie UE*
    * L'état*
    * La présentation*
    * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
    * Le taux échantillonné
    * Le poids échantillonné
+   * Le nombre d'individu échantillonné
    * Identification à confirmer
+   * La présence de photo (icone photo bleue avec le nombre de photos)
 2. Le saisisseur demande la création d'un nouveau lot via l'icône :heavy_plus_sign:
 3. L'espèce commerciale est automatiquement renseignée avec l'espèce du tableau des espèces à observer
 4. Pour chaque lot, le saisisseur renseigne :
@@ -572,9 +564,8 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
    * La catégorie UE
    * L'état*
    * La présentation*
-   * Le poids total (kg)* (saisit ou calculé à partir du taux et du poids échantillonnés)
+   * Le poids total (kg) (le poids de la débarque de toute l'espèce) 
    * Le taux échantillonné
-   * Le poids échantillonné
    * Identification à confirmer
 5. Le saisisseur enregistre
 6. Le bandeau de l'écran affiche "Lieu de sortie / Espèce / Navire (Immatriculation et nom)"
@@ -582,6 +573,11 @@ Le saisisseur accède à l'onglet "Lots" de l'écran de création des lots.
 8. Le Saisisseur peut saisir un commentaire sur le lot
 9. Le saisisseur ajoute des mesures individuelles (REF: OBSVENTES/SORTIE/VENTE/LOT/MESURES)
 
+Le poids échantillonné est automatiquement renseigné  : 
+    * Saisit ou calculé à partir du taux et du poids échantillonnés, dans l'écran des mensurations 
+
+Le nombre d'individu échantillonné
+    * Issu du nombre d'individu mesuré dans l'écran des mensurations
 
 NB : La fonctionnalité d'ajout d'une photo sur chaque individu est décrit dans [les spécifications communes / Mesures](/projects/common/spe/regles_communes.md#commun-saisie-de-mensuration)
 

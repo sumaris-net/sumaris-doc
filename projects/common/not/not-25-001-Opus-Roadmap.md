@@ -14,7 +14,8 @@
 - [Priorité / Planning](#gestion-des-priorités---planning-2025)
 - [Développement ObsVentes](#développement-obsventes)
 - [Développement ObsMer](#développement-obsmer)
-- [Tâches Transverse](#tâches-transverses)
+- [Développement ActiFlot](#développement-calendriers-dactivités)
+- [Tâches Transverses](#tâches-transverses)
 - [Questions/Remarques](#questionsremarques)
 
 ---
@@ -101,6 +102,15 @@ _2 ETP développeurs_
 - Reprise des ateliers MOA fin Avril
 
 _1 ETP développeur_ (+0.5 ETP)
+
+---
+
+### **Développement Calendriers d'Activités**
+
+- Point MOA à faire pour cibler les évolutions
+- Point MOE/MOA/Dév 
+
+_1 ETP développeur_ 
 
 ---
 

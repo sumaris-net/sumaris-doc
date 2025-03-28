@@ -8,36 +8,35 @@ saltDiagram {
   <b>Douarnenez - 08/02/2022
   --
 
-  {/  Détails | <b> Échantillonnages}
+  {/  <&info>Détails | <b> Échantillonnages <font color=blue size=8><b>(5)}
   <&warning><font color=blue>Moins de 15 espèces observées (justifiez si non observée)
 
   { <&plus> <&reload> <&trash> } | <b>Y
   ..
 	{#
-	    <&arrow-thick-top> | <b>Etat | <b>Espèce commerciale | <b>Espèce scientifique  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche |  <b>  ... | *
+	    <&arrow-thick-top> | <b>Etat | <b>Navire  | <b>Espèce commerciale  | <b>Observé ? | <b>Raison de non observation | <b>Navire | <b>Zone de pêche |  <b>  ... | *
          {
           <&shield><b>PETS
          } | * | * | * | * | * | * | * | * | * | * | *
-        [X] 1 | <&pencil> | ^GAG - Requin-hâ ^ | ^GAG - Galeorhinus galeus^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | . | <&tag>
-        [] 2 | <&pencil> | ^BSH - Peau bleue^ | ^                        ^ | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) |  <&comment-square> | <&tag>
+        [X] 1 | <&pencil> | Navire 1 |^GAG - Requin-hâ ^  | <color:grey>Oui | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | . | <&tag>
+        [] 2 | <&pencil> | Navire 1 | ^BSH - Peau bleue^ |  <color:grey>Oui | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) |  <&comment-square> | <&tag>
         == | * | * | * | * | * | * | * | * | * | *
          {
              <&list><b>Tirage au sort
 
          } | * | * | * | * | * | * | * | * | * | * | *
-        1 | <&pencil> |POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | . | <&tag>
-        2 | <&pencil> |MNZ - Baudroie | . |  [X]. | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) |  <&comment-square> | <&tag>
-        3 | <&pencil> |PIL - Sardine commune | PIL - Sardina pilchardus | [ ]. | ^ Espèce absente  ^  | . | . | . |  <&tag>
-        4 | <&pencil> |NEP - Langoustine | NEP - Nephrops norvegicus | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) |  <&comment-square> | <&tag>
-        5 | <&pencil> |POL - Lieu jaune | POL - Pollachius pollachius | [X]. | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | . | <&tag>
-        6 | <&pencil> |... | . | [ ] . | . | . | . | .
+        1 | <&pencil> | Navire 1 | POL - Lieu jaune | Oui | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) | . | <&tag>
+        2 | <&pencil> | Navire 1  |MNZ - Baudroie  |  Oui | . | 123456 - Navire 1 | 008B00 - CIEM VIIIb (Sud Gascogne) |  <&comment-square> | <&tag>
+        3 | <&pencil> | Navire 2 | PIL - Sardine commune  | Non | ^ Espèce absente  ^  | . | . | . |  <&tag>
+        4 | <&pencil> | Navire 2 | NEP - Langoustine  | Oui | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) |  <&comment-square> | <&tag>
+        5 | <&pencil> | Navire 1 | POL - Lieu jaune  | Oui | . | 456789 - Navire 2 | 008B00 - CIEM VIIId (Centre Gascogne) | . | <&tag>
+        6 | <&pencil> |... |  . | Non | . | . | . | .
 
     }
     { 4 espèce(s) observées(s) (min:15)  }
 
-    { ATTENTION: une même espèce peut-être tirée plusieurs fois }
+    { <font size=9>ATTENTION: une même espèce peut-être tirée plusieurs fois }
   --
-
 
   {
     [Fermer] | [Sauvegarder]
