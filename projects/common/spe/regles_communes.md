@@ -226,25 +226,26 @@ _A mettre dans une partie validation de données_
 
 **REF: COMMUN/MESURES**
 
-### Saisie de mesures individuelles - Mode terrain et bureau
+### Saisie de mensurations - Mode terrain et bureau
 
 ![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
 
-La création de mesures individuelles est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
+La création de mensurations est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
 
 L'écran affiche 3 choix de saisie de mensuration pour l'espèce commerciale : 
-- Saisie de mesures individuelles (**Mensurations**, option par défaut)
-- Saisie par dénombrement sur classement numérique (**Dénombrement**) 
+- Saisie de mensurations (**Mensurations**, option par défaut)
+- Saisie par intervalle de taille (**Intervalle de taille**) 
 - Saisie par effectif du lot (**Effectif**, cas d'usage ObsMer)
 
-L'écran permet de saisir soit des mesures individuelles, soit un dénombrement.
+Pour ObsVentes, l'écran permet de saisir soit des mensurations soit un intervalle de taille.
 
-L'écran affiche, par défaut, la saisie de mesures individuelles.
+L'écran affiche, par défaut, la saisie de mensurations.
 
 1. L'écran est composé d'un tableau des mesures et d'une zone de saisie de mesure
 2. La zone de saisie de mesure est composée des champs suivants :
     * Le choix du nom de l'espèce scientifique
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
+      * Un filtre, actif, limitant la sélection de l'espèce scientifique en corrélation avec l'espèce commerciale 
     * Le sexe de l'espèce mesurée
       * Une case à cocher permet de figer la valeur sélectionnée. En cas de nouvel ajout, la liste sera automatiquement positionnée sur cette valeur.
     * le mesure correspondant au critère de classement (Par exemple : La longueur totale mesurée)
@@ -280,11 +281,13 @@ Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'e
 
 ### Saisie de dénombrement - Mode bureau
 
-**Variante 1a** : Saisie des mensurations par dénombrement (cas d'usage : mode **bureau**)
+**Variante 1a** : Saisie des mensurations par intervalle de taille (cas d'usage : mode **bureau**)
 
-1. L'observateur sélectionne l'option **Dénombrement** pour la saisie de ses mensurations
-2. L'écran de création du dénombrement par classe de mensuration s'affiche à la place de l'écran de saisie de mensuration.
-3. Le tableau des mesurations, s'il est renseigné, devient non modifiable
+1. L'observateur sélectionne l'option **Intervalle de taille** pour la saisie de ses mensurations
+2. L'écran de création de l'ntervalle de taille s'affiche à la place de l'écran de saisie de mensuration.
+3. Le tableau des mensurations, s'il est renseigné, affiche des onglets
+    * Un onglet par espèce
+    * Le titre de l'onglet est le nom de l'espèce scientifique suivit du nombre d'individu mesuré
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-classification.svg)
 
@@ -292,7 +295,7 @@ Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'e
     * Le choix du nom de l'espèce scientifique*
       * Un filtre permet de sélectionner l'espèce scientifique qui n'est pas en corrélation avec l'espèce commerciale du lot à échantillonner
     * Le critère de classement*
-    * La méthode de classement
+    * La méthode de classement (automatiquement renseignée par le critère de classement)
     * Les bornes minimale* et maximale* des mensurations
       * Si des mesures individuelles ont été saisie auparavant, les bornes min et max sont celles des mensurations
       * Sinon elles sont issues du référentiel statistique des classes de tailles min et max de chaque espèce (A SPECIFIER ET DEVELOPPER)
@@ -309,9 +312,10 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 ![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
 
-S'il existait des mensurations individuelles déjà saisit, elles sont grisées de façon à ne pas pouvoir les modifier lorsque le mode dénombrement est activé.
+S'il existait des mensurations individuelles déjà saisit, elles sont repartis par espèce scientique dans des onglets (un par espèce)
 
-A la validation de la fenêtre de création de classe de dénombrement, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
+ICI
+A la validation de la fenêtre de création d'intervalle de taille, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
 
 ![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
 

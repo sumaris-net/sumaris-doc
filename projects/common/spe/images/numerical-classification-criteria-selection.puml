@@ -1,16 +1,16 @@
 @startsalt
 {
-    **Lot MNZ - Baudroie - <b>Dénombrement**
+    Lot MNZ - Baudroie - Cat.1 - Cat. UE0 - Etat : Frais - Prés. : Vivant - <b>Mensurations
 
   {+
-    { | ()Mensurations  | . | . |  (X)<b>Dénombrement | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. }
+    { | ()Mode rafale  | . | . |  (X)<b>Intervalle de taille | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. }
     --
 {
-      Espèce scientifique* :    | { ^Lophius piscatorius^ }
+      Espèce scientifique* :    | { ^Lophius piscatorius^ | <color:blue><b>Y}
 
-      Critère de classement* :    | { ^Longueur totale (LT)^^<b>Paramètre,   Support, Fraction,  Méthode^^Longueur totale (LT), individu, totale, Mesure au 1/2 cm par un observateur^ }
+      Critère de numérique* :    | { ^Longueur totale (LT)^^<b>Paramètre,   Support, Fraction,  Méthode^^Longueur totale (LT), individu, totale, Mesure au 1/2 cm par un observateur^ }
 
-      Méthode :    | <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
+      Méthode de collecte:    | <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
 
       Minimum* <font size=10>(cm) :   |  "17"
 
@@ -18,7 +18,7 @@
 
       Précision de la mesure <font size=10>(cm) :    |  <back:lightgrey><font color=black size=12>0.5
 
-      Critère secondaire <font size=10>(qualitatif): { ^ Sexe ^ }
+      Critère secondaire <font size=10>(qualitatif): { ^ Sexe ^ | [X]<font size=10>Tout sélectionner}
 
       { [   Appliquer] }
 

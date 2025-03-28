@@ -1,12 +1,12 @@
 @startsalt
  {+
-  { Lot MNZ - Baudroie - <b>Mesures individuelles (7) | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |<b> ...}
+  { Lot MNZ - Baudroie - Cat.1 - Cat. UE0 - Etat : Frais - Prés. : Vivant - <b>Mensurations | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |<b> ...}
   ..
   <&trash> <&plus>
 
   {
 	{#
-      [].| .# | <b>Espèce scientifique | <b>Sexe | <b>Longueur totale (cm) | <b>Nombre d'individu | <b>Poids calculé RTP (kg) | .
+      [].| .# | <b>Espèce scientifique | <b>Sexe | <b>Longueur totale (cm) | <b>Nombre d'individu | <b>Poids calculé RTP (kg) | ...
       [].| 7 | ANK - Lophius budegassa   | Male | 46 | 1 | <color:blue>1.0173 | <&image>
       [].| 6 | ANK - Lophius budegassa   | Male | 41 | 2 |<color:blue>0.965 | .
       [X].| 5 | MON - Lophius piscatorius | Male | 20 | 1 | <color:blue>0.5874 | <&image>
@@ -18,7 +18,7 @@
 
     {
       {+
-        { | . |  (X)<b>Mensurations  | . | ()Dénombrement | . | . | . | . }
+        { | . |  (X)<b>Mode rafale  | . | ()Intervalle de taille | . | . | . | . }
         --
         Ajouter un mesure :
         { | . | Espèce scientifique * | . }
@@ -27,14 +27,20 @@
         { | . | Sexe  | . }
         { | . | ^Femelle^ | [ ] Figer }
 
-        { | . | Longueur totale (cm)* | .  }
+        { | . | Longueur totale (<font size=9>cm</font>)* | .  }
         { | . | "   12  "  }
 
         { | . | Nombre d'individu * | .  }
         { | . | "   1  "  | . | [ ] <font size=10>Saisie manuelle    }
 
-        { | . | <i>Poids calculé RTP (kg)  | . }
+        { | . | <i><font color=grey>Poids calculé RTP</font> <font color=grey size=9>(kg)</font>  | . }
         { | . | "<color:blue>0.01335 " | .  }
+
+        { | . | <i>Poids du lot mesuré (<font size=9>kg</font>)  | . }
+        { | . | "         " | .  }
+
+        { | . | <i><font color=grey>Poids total calculé RTP <font color=grey size=9>(kg)</font>  | . }
+        { | . | "<color:blue>4.526545 " | . | [X] <font size=10>Prendre le poids RTP }
         .
         { | . | [Ajouter une photo <&caret-bottom>]  }
         { [                     Ajouter] }
