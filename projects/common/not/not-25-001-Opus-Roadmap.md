@@ -9,11 +9,10 @@
 
 ## **Sommaire**
 
-- [Equipe Opus](#equipe-de-développement-opus)
-- [REX Opus Activité](#rex-opus---calendrier-dactivité)
-- [Priorité / Planning](#gestion-des-priorités---planning-2025)
-- [Développement ObsVentes](#développement-obsventes)
-- [Développement ObsMer](#développement-obsmer)
+- [Rappel de l'équipe Opus](#equipe-de-développement-opus)
+- [REX sur Opus Activité](#rex-opus---calendrier-dactivité)
+- [Planning Opus / Priorité](#gestion-des-priorités---planning-2025)
+- [Développement ObsVentes / ObsMer](#développement-obsventes)
 - [Développement ActiFlot](#développement-calendriers-dactivités)
 - [Tâches Transverses](#tâches-transverses)
 - [Questions/Remarques](#questionsremarques)
@@ -40,12 +39,13 @@
 - Application ouverte aux saisisseurs le 23/01/2025
 - Glissement de 1.5 mois sur l'ouverture en exploitation
   - [REX sur la mise en exploitation et l'ouverture aux saisisseurs](/projects/activity-calendar/mex/v2.9/mex/mex-24-003-execution_report_actiflot_v2.9.md#rex-de-la-mise-en-exploitation-dopus-activité)
-- 95% de calendriers saisit
-- Assistance MOE - guichet saisisseurs (en cours)
+- 98% de calendriers saisis
+- Assistance / guichet saisisseurs (MOE, toujours en cours mais moins de sollicitation)
   - Réponses directes aux utilisateurs (51 utilisateurs)
-  - Visio avec les utilisateurs (8 visios)
-  - Point suivi MOA (à chaque release corrective)
-  - Tickets (78, beaucoup de doublons) et release correctives (5 releases)
+  - 8 visioconférences avec les utilisateurs
+  - 78 Tickets (beaucoup de doublons et de paramétrage) 
+  - 5 release correctives depuis la MEP
+  - Point suivi MOA, à chaque release corrective
 
 > **Réunion bilan Opus Activité le 11/04/2025**
 
@@ -56,10 +56,10 @@
   - Glissement de 1.5 mois
     - Ateliers de cadrage utilisateurs ObsVentes (Métropole, DOM, MED)
     - Assistance/release Opus Activité
-    - REX Opus Activité (recette des outils du SI HARMONIE)
+    - Recette des outils du SI HARMONIE
   - Décalage de la livraison et de la mise en exploitation entre les volets
-    - Sécurisation du périmètre 
-      - Développements 
+    - Sécurisation du périmètre de chaque volet
+      - Développements  
       - Recette 
       - MEP
       - Arrêt saisie Allegro
@@ -69,12 +69,14 @@
 
 ### Gestion des priorités - Planning 2025
 
+## Présenté / validé - Réunion MOA le 27/03/2025
+
 | **Volets** | **Priorité** | **Avancement** | **Périmètre**              | **Livraison validation** | **MEP**       | **Ouverture saisie** |
-|------------|--------------|----------------|----------------------------|--------------------------|---------------|----------------------|
-| ObsVentes  | P1/P2        | 70%            | Iso fonctionnel            | Juillet 2025             | Octobre 2025  | Novembre 2025        |
-| ObsMer     | P2/P1        | 80%            | Iso fonctionnel            | Octobre 2025             | Décembre 2025 | Janvier 2026         |
-| Batchs     | P1           | 10%            | ObsVentes WAO              |                          |               |
-| Calendrier | P3           | 0%             | Correction et amélioration | Septembre 2025           | Novembre 2025 | Décembre 2025        |
+|------------|--------------|--------------|----------------------------|--------------------------|---------------|----------------------|
+| ObsVentes  | P1/P2        | _70%_        | Iso fonctionnel            | juillet 2025             | octobre 2025  | novembre 2025        |
+| ObsMer     | P2/P1        | _80%_        | Iso fonctionnel            | octobre 2025             | décembre 2025 | janvier 2026         |
+| Batchs     | P1           | 10%          | ObsVentes WAO              | juin 2025                |               |
+| Calendrier | P3           | 0%           | Correction et amélioration | Septembre 2025           | novembre 2025 | décembre 2025        |
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -89,8 +91,10 @@
 
 - Ateliers MOA/Utilisateurs (présentation, avancement, cadrage)
   - Métropole (2)
-  - Façade Méditérranéenne (1)
+  - Façade Méditerranéenne (1)
   - Outre Mer (2)
+- Développement en cours
+- Rédactions des cas de tests en cours
 
 _2 ETP développeurs_
 
@@ -98,8 +102,10 @@ _2 ETP développeurs_
 
 ### **Développement ObsMer**
 
-- Point avancement début Avril (MOE/Equipe de développement)
-- Reprise des ateliers MOA fin Avril
+- Point d'avancement début Avril (MOE/Equipe de développement)
+- Reprise des ateliers MOA fin avril
+- Développement en cours
+- Rédaction des cas de tests en cours
 
 _1 ETP développeur_ (+0.5 ETP)
 
@@ -107,10 +113,10 @@ _1 ETP développeur_ (+0.5 ETP)
 
 ### **Développement Calendriers d'Activités**
 
-- Point MOA à faire pour cibler les évolutions
-- Point MOE/MOA/Dév 
+- Point MOA/AMOA à faire pour cibler les évolutions/améliorations
+- Point MOE/MOA/Dév pour fixer le périmètre
 
-_1 ETP développeur_ 
+_1 ETP développeur (prévisionnel)_ 
 
 ---
 
