@@ -228,7 +228,7 @@ _A mettre dans une partie validation de données_
 
 ### Saisie de mensurations - Mode terrain et bureau
 
-![ui-common-mesures](/projects/common/spe/images/individual-measures.svg)
+![ui-common-mesures](/projects/common/spe/images/measurements.svg)
 
 La création de mensurations est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
 
@@ -279,17 +279,17 @@ Exemple : des rougets ou des maquereaux parmi une caisse de baudroie.
 
 Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
-### Saisie de dénombrement - Mode bureau
+### Saisie d'intervalle de taille - Mode bureau
 
 **Variante 1a** : Saisie des mensurations par intervalle de taille (cas d'usage : mode **bureau**)
 
 1. L'observateur sélectionne l'option **Intervalle de taille** pour la saisie de ses mensurations
-2. L'écran de création de l'ntervalle de taille s'affiche à la place de l'écran de saisie de mensuration.
+2. L'écran de création de l'intervalle de taille s'affiche à la place de l'écran de saisie de mensuration.
 3. Le tableau des mensurations, s'il est renseigné, affiche des onglets
     * Un onglet par espèce
     * Le titre de l'onglet est le nom de l'espèce scientifique suivit du nombre d'individu mesuré
 
-![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-classification.svg)
+![ui-common-mesures-enumerations](/projects/common/spe/images/interval-size.svg)
 
 3. L'écran est composé des éléments suivants :
     * Le choix du nom de l'espèce scientifique*
@@ -312,19 +312,18 @@ Le choix du critère de classement se fait parmi une liste déroulante affichant
 
 ![ui-common-mesures-enumerations-criteria-selection](/projects/common/spe/images/numerical-classification-criteria-selection.svg)
 
-S'il existait des mensurations individuelles déjà saisit, elles sont repartis par espèce scientique dans des onglets (un par espèce)
+S'il existait des mensurations individuelles déjà saisit, elles sont repartis par espèce scientique dans des onglets (un onglet par espèce)
 
-ICI
-A la validation de la fenêtre de création d'intervalle de taille, la fenêtre de saisie des mensurations individuelles est remplacée par la fenêtre de saisie des dénombrements ci dessous :
+A la validation de la fenêtre de création d'intervalle de taille sur une ou plusieurs espèces présentes dans le filtre, la fenêtre de saisie des mensurations est enrichie de nouveaux onglets.
+- Un onglet par espèce présente dans le filtre. 
+- Une colonne par valeur qualitative sélectionnée sur le critère de classement.
 
-![ui-common-mesures-enumerations](/projects/common/spe/images/numerical-enumeration.svg)
+![ui-common-mesures-enumerations](/projects/common/spe/images/interval-size-new.svg)
 
-1. S'il existait des mesures individuelles en dehors de la classe de taille créée, elles sont masquées
-    * Un message indique à l'observateur que certaines données sont masquées
-2. L'observateur peut, pour chaque classe de mesure :
-    * Saisir un nombre d'individu dans le ou les critères de classement
-    * Saisir un nombre d'individu dans le ou les critères secondaires qualitatifs
-3. Un compteur, auto incrémenté et non modifiable, rappel le nombre d'invididu total saisi, sur chaque critère de classement
+1. L'observateur peut ainsi saisir un nombre d'individu dans les nouveaux onglets :
+    * Dans chaque critères secondaires qualitatifs s'ils en existent, correspondant à la taille de l'individu
+2. Un compeur, auto incrémenté et non modifiable en bas de chaque colonne qualitatives, indique le nombre d'individu total 
+3. Un compteur, auto incrémenté et non modifiable dans l'onglet, indique le nombre d'invididu total saisi, sur chaque espèce
 
 **Variante 3a** : Sélection d'espèce scientifique différente de l'espèce commerciale
 
@@ -335,7 +334,7 @@ A la validation de la fenêtre de création d'intervalle de taille, la fenêtre 
 Si l'espèce commerciale n'a pas d'espèce scientifique associée, le filtre n'est pas activé et toutes les espèces scientifiques, régionalisées, sont disponibles à la sélection.
 
 
-### Saisie de quantité (ObsMer)
+### Saisie de quantité (mode de saisie réservé à ObsMer)
 
 _MOE à détailler_
 
@@ -343,7 +342,7 @@ _MOE à détailler_
 
 Cette option n'est **accessible** que depuis le **volet ObsMer**, ou l'on peut saisir un effectif d'une espèce scientifique sans aucune mesure associée.
 
-![ui-common-mesures-effectives](/projects/common/spe/images/individual-measures-effective.svg)
+![ui-common-mesures-effectives](/projects/common/spe/images/measurements-effective.svg)
 
 Sur l'écran de saisi des mesures individuelles, il est possible, par un radio bouton, de sélectionner une saisie par effectif sur l'espèce scientifique.
 
