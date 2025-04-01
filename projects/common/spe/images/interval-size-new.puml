@@ -1,0 +1,46 @@
+@startsalt
+ {+
+  { Lot MNZ - Baudroie - Cat.1 - Cat. UE0 - Etat : Frais - Prés. : Vivant - <b>Mensurations | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. | <b> ...}
+  ..
+  <color:grey><&trash> <color:grey><&plus>
+
+  {
+  {/ <b>Lophius piscatorius <font color=white size=9><back:orange>(0) | Lophius budegassa <font color=white size=9><back:blue>(11) }
+	{#
+      [].| .# | <b>Longueur totale <font size=9>(cm) | <b>Male <font size=9>(Nb. Indiv)  | <b>Femelle <font size=9>(Nb. Indiv)
+      [].| 1 | 17   | " " | " " |  .
+      [].| 2 | 18   | " " | " " | .
+      [X].| 3 | 19  | " " | " " | .
+      [].| 4 | 20   | " " | " " | .
+      [].| 5 | 21  | " " | " " | .
+      | . | . | . | <b>0 | <b>0 | .
+    } |
+
+
+ {+
+    { | ()Mode rafale   | . | . |  (X)<b>Intervalle de taille | . | . | . | . | . | . | . | . | . |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. |. }
+    --
+{
+      Espèce scientifique* :    | { ^Lophius piscatorius^ | <color:blue><b>Y}
+
+      Critère de numérique* :    | { ^Longueur totale (LT)^ }
+
+      Méthode de collecte :    | <back:lightgrey><font color=black size=12>Mesure au 1/2 cm par un observateur
+
+      Minimum* <font size=10>(cm) :   |  "17"
+
+      Maximum* <font size=10>(cm): | "21"
+
+      Précision de la mesure <font size=10>(cm) :    |  <back:lightgrey><font color=black size=12>0.5
+
+      Critère secondaire <font size=10>(qualitatif): { ^Female, Male ^ | [X]<font size=10>Tout sélectionner}
+
+      { [   Appliquer] }
+
+  }
+
+    }
+    }
+
+  }
+@endsalt

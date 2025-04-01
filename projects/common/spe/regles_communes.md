@@ -228,7 +228,7 @@ _A mettre dans une partie validation de données_
 
 ### Saisie de mensurations - Mode terrain et bureau
 
-![ui-common-mesures](/projects/common/spe/images/measurements.svg)
+![ui-common-measurements](/projects/common/spe/images/measurements.svg)
 
 La création de mensurations est accessible depuis les tableaux de consultation des lots en cliquant sur l'icône :bar_chart:
 
