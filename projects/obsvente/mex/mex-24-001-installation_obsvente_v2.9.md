@@ -45,6 +45,10 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
   - Pending (Non validé) : [db-changelog-4.4.x-pending.xml](https://gitlab.ifremer.fr/sih/adagio/adagio/-/blob/develop/core/src/main/resources/fr/ifremer/adagio/core/db/changelog/oracle/db-changelog-4.4.x-pending.xml)
     - Nouvelle table STRATEGY_PROPERTY
 
+  ```sql
+  grant SELECT,INSERT,UPDATE,DELETE on SIH2_ADAGIO_DBA.OPERATION_VESSEL_ASSOCIATION to SIH2_ADAGIO_DBA_SUMARIS_MAP;
+  ```
+
 ## Schéma SIH2_ADAGIO_DBA_SUMARIS_MAP
 
 - Création du synonyme `OBSERVED_LOCATION_FEATURES_SEQ`
@@ -264,6 +268,37 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
                   delete from SIH2_ADAGIO_DBA_SUMARIS_MAP.M_BATCH MB where MB.ID = :old.ID;
             end case;
           end;
+-```
+
+- Modification de la vue `OPERATION_VESSEL_ASSOCIATION`
+  ```sql
+    create or replace view OPERATION_VESSEL_ASSOCIATION as
+      select MV.ID as VESSEL_FK,
+             OVA.OPERATION_FK,
+             OVA.IS_CATCH_ON_OPERATION_VESSEL
+      from SIH2_ADAGIO_DBA.OPERATION_VESSEL_ASSOCIATION OVA
+      inner join SIH2_ADAGIO_DBA.M_VESSEL MV on OVA.VESSEL_FK = MV.CODE;
+-```
+
+- Modification du trigger `TR_OPERATION_VESSEL_ASSOC`
+  ```sql
+      create or replace trigger TR_OPERATION_VESSEL_ASSOC
+        instead of insert or delete
+          on OPERATION_VESSEL_ASSOCIATION
+            begin
+              case
+                WHEN INSERTING THEN
+                  -- OPERATION_VESSEL_ASSOCIATION itself
+                  insert into SIH2_ADAGIO_DBA.OPERATION_VESSEL_ASSOCIATION(VESSEL_FK, OPERATION_FK, IS_CATCH_ON_OPERATION_VESSEL)
+                  select V.CODE, :new.OPERATION_FK, :new.IS_CATCH_ON_OPERATION_VESSEL
+                  from SIH2_ADAGIO_DBA.M_VESSEL V
+                  where V.ID = :new.VESSEL_FK;
+                WHEN DELETING THEN
+                  delete from SIH2_ADAGIO_DBA.OPERATION_VESSEL_ASSOCIATION
+                  where OPERATION_FK = :old.OPERATION_FK
+                  and VESSEL_FK = (select V.CODE from SIH2_ADAGIO_DBA.M_VESSEL V where V.ID = :old.VESSEL_FK);
+              end case;
+            end;
 -```
 
 ## Mise à jour du programme SIH-OBSVENTE
