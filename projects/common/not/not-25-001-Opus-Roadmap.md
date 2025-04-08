@@ -71,12 +71,12 @@
 
 ## Présenté / validé - Réunion MOA le 27/03/2025
 
-| **Volets** | **Priorité** | **Avancement** | **Périmètre**              | **Livraison validation** | **MEP**       | **Ouverture saisie** |
-|------------|--------------|--------------|----------------------------|--------------------------|---------------|----------------------|
-| ObsVentes  | P1/P2        | _70%_        | Iso fonctionnel            | juillet 2025             | octobre 2025  | novembre 2025        |
-| ObsMer     | P2/P1        | _80%_        | Iso fonctionnel            | octobre 2025             | décembre 2025 | janvier 2026         |
-| Batchs     | P1           | 10%          | ObsVentes WAO              | juin 2025                |               |
-| Calendrier | P3           | 0%           | Correction et amélioration | Septembre 2025           | novembre 2025 | décembre 2025        |
+| **Volets** | **Priorité** | **Avancement** | **Périmètre**                                            | **Livraison validation** | **MEP**       | **Ouverture saisie** |
+|------------|--------------|--------------|----------------------------------------------------------|--------------------------|---------------|----------------------|
+| ObsVentes  | P1/P2        | _70%_        | Iso fonctionnel <br> Hors PSION <br> Hors saisisseur MED | juillet 2025             | octobre 2025  | novembre 2025        |
+| ObsMer     | P2/P1        | _80%_        | Iso fonctionnel                                          | octobre 2025             | décembre 2025 | janvier 2026         |
+| Batchs     | P1           | 10%          | ObsVentes WAO                                            | juin 2025                |               |
+| Calendrier | P3           | 0%           | Correction et amélioration                               | Septembre 2025           | novembre 2025 | décembre 2025        |
 <!-- .element: class="font-size-small" -->
 
 ---
@@ -108,6 +108,32 @@ _2 ETP développeurs_
 - Rédaction des cas de tests en cours
 
 _1 ETP développeur_ (+0.5 ETP)
+
+--- 
+
+### **RAF ObsMer**
+
+- Multi Ventes : dév. en cours OMA
+- Tableau Engin : Fini
+- Tableau Opération : Manque navire associé sur PTM (Boeuf pélagiques). MR 390 pas mergée
+- Onglet prélèvement : Option de programme
+- Onglet Captures accidentelles : revoir le terme mensuration
+- Onglet Capture à finaliser
+- Mode déconnécté à finaliser (déjà en place)
+- Compatibilité données historique
+- Règles PSFMs
+- Saisie OK mais manque les contrôles
+- Elévation des poids à faire (parcours de l'arbre et afficher dans l'arbre des captures)
+- Rapports à finaliser, si données terminées (à envoyer à la MOA)
+    - Manque la restitution aux professionnels (ticket à créer)
+- Régionalisation (ticket à créer)
+
+Pour activer en attendant les dévs : https://opus-obsventes.isival.ifremer.fr/trips/21791169/report/form
+
+
+- Erreur :
+  - Augmenter la taille du BATCH.LABEL -> Impacte sur les synchronisations Allegro ObsMer ou AJouter une nouvelle colonne dans BATCH pour Opus (puis quand on débranche Allegro on rebascule
+  sur la colonne LABEL dont la taille sera modifiée)
 
 ---
 
