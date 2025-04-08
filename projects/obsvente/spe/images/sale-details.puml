@@ -9,11 +9,11 @@
   ..
   {
 
-      Navire* :    | { ^123456 - Navire 1                  ^ }
+      Navire* :    | { ^123456 - Navire 1                  ^ } <color:blue><&star>
       .
-      Type de vente* :    | { ^Enchères - HAM / Criées            ^ }
+      Type de vente* :    | { ^Enchères - HAM / Criées            ^ } <color:blue><&star>
       .
-      Lieu de la vente* :   |  { ^ FRDRZ - Douarnenez ^ }
+      Lieu de la vente* :   |  { ^ FRDRZ - Douarnenez ^ } <&star>
       .
       Date de la vente* :   |  { ^ jj/mm/aaaa^  |  ^ hh:mm^ }
       .
@@ -23,7 +23,7 @@
       . | <font color=grey size=10><i>Métier secondaire #1</i>
       . | { ^ OTBCOD - Chaluts de fond à morue ^ } |  <&plus> <&x>
       . | <font color=grey size=10><i>Zone de pêche #1</i>
-      Zones de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x>
+      Zones de pêche :            | ^ 008B00 - CIEM VIIIb (Sud Gascogne)^ | <&plus> <&x> | <&star>
       .
   }
 

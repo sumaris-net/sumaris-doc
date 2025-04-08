@@ -511,17 +511,21 @@ La création d'un lot d'espèces est accessible depuis le tableau des échantill
    * Commentaires
 4. Le saisisseur clique sur l'onglet "Lots" (REF: OBSVENTES/SORTIE/VENTE/LOT)
 
-Des cases à cocher, en face des champs, suivants permettent de figer les valeurs pour automatiquement pré-renseigner l'écran de saisie
-d'une nouvelle vente : 
-* Navire
-* Type de vente
-* Lieu de vente
-
 **Variante(s) :**
 
 **Variante 3a :** Remplissage auto de la date de la vente 
 
 En mode terrain, il est possible d'activer une case à cocher, dans le bandeau de l'écran, permet d'initialiser la date/heure de la vente avec la date/heure courante (stocké dans les préférences locales).
+
+**Variante 3b :** Ajout en "Favoris" des détails de la vente
+
+Une étoile, en face des champs, suivants permettent de positionner les valeurs en favoris, pour automatiquement les retrouver dans  les écrans de saisie
+d'une nouvelle vente :
+* Navire
+* Type de vente
+* Lieu de vente
+
+Si l'option "Favori" du champ est activée, l'étoile est de couleur bleue.
 
 
 > Proposition MOE :
