@@ -210,6 +210,16 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
 **Variante 3b :** 
 Le plan d'échantillonnage n'est pas modifiable s'il y a des échantillonnages associés
 
+**Variante 3c :**
+A la sélection du plan d'échantillonnage, un cartouche affiche les informations du plan d'échantillonnage sélectionné :
+
+![ui-obsventes-start](/projects/obsvente/spe/images/observed-location-new-strat-details.svg)
+
+Les informations suivantes sont affichées : 
+- Lieu de la vente
+- Type de lieu
+- _Attente retours MOA sur la liste à afficher (Mail du 14/04/2025)_
+
 #### Détails techniques :
 * Sortie : OBSERVED_LOCATION
 * Origine : POC à prévoir : créer une table OBSERVED_LOCATION_ORIGIN liée à OBSERVED_LOCATION ? Non-modifiable. 
