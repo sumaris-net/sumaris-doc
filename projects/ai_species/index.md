@@ -6,7 +6,7 @@ Module de SUMARiS et application mobile indépendante
 
 ## Documentation
 
-- [Spécifications fonctionnelles](spe/ai_species_recognition.md)
+- [Spécifications fonctionnelles](spe/ai_species)
 
 - Liens utiles :
   * Documentation :
