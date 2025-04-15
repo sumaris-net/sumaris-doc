@@ -1,0 +1,53 @@
+@startsalt
+{
+    {
+        🛜 WiFi_DolphinFREE | * | * | * | * | * | *
+        . | . | . | <color:#ffffff>+++</color> | . | . | .
+        [<size:24> <&data-transfer-download> </size>] | . |
+            {
+                Dernière récupération:
+                17/02/2025 07:32
+            } | . | [<size:24> <&data-transfer-upload> </size>] | . |
+            {
+                Dernier envoi:
+                16/02/2025 16:48
+            }
+    }
+    {
+        {
+            Plate-forme
+            ^Tous           ^
+        } |
+        <color:#ffffff>+</color> |
+        {
+            Événement
+            ^Tous           ^
+        } |
+        <color:#ffffff>+</color> | [<size:24> <&star> </size>]
+    }
+    {SI
+        **☆** | **❗** | **Date**<color:#ffffff>+++++++++</color> | **Matériel**<color:#ffffff>+++</color> | <color:#ffffff>++++</color> | **Libellé**<color:#ffffff>+++++</color> | <size:30><color:#ffffff><&circle-check>
+        ★ | ❗ | <color:red>//17/02/25 07:50//</color> | <color:red>//Balise DF//</color> | <size:24><color:red>//<&warning>//</color> | <color:red>//Non détecté//</color> | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 07:41// | //Balise DF// | <size:24>//<&battery-full>// | //81 %// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 07:29// | //Balise DF// | <size:24>//<&battery-full>// | //63 %// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 07:23// | //Balise DF// | <size:24>//<&battery-full>// | //72 %// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 07:15// | //Balise DF// | <size:24>//<&battery-full>// | //87 %// | <size:30><color:#ffffff><&circle-check>
+        ★ | ❗ | <color:orange>//17/02/25 07:09//</color> | <color:orange>//Balise DF//</color> | <size:24><color:orange>//<&battery-full>//</color> | <color:orange>//12 %//</color> | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 06:29// | //Balise DF// | <size:24>//<&audio-spectrum>// | //Émission// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 06:28// | //Balise DF// | <size:24>//<&audio-spectrum>// | //Détection// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 06:24// | //Balise DF// | <size:24>//<&audio-spectrum>// | //Émission// | <size:30><color:#ffffff><&circle-check>
+        ★ | . | //17/02/25 06:23// | //Balise DF// | <size:24>//<&audio-spectrum>// | //Détection// | <size:30><color:#ffffff><&circle-check>
+        ☆ | . | 16/02/25 14:48 | Balise DF | <size:24><&audio-spectrum> | Émission | <size:30><color:#ffffff><&circle-check>
+        ☆ | . | 16/02/25 14:32 | Balise DF | <size:24><&battery-full> | 66 % | <size:30><color:#ffffff><&circle-check>
+        ☆ | . | 16/02/25 14:25 | Balise DF | <size:24><&audio-spectrum> | Détection | <size:30><color:#ffffff><&circle-check>
+        … | … | … | … | … | … | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+        . | . | . | . | . | . | <size:30><color:#ffffff><&circle-check>
+    }
+}
+@endsalt

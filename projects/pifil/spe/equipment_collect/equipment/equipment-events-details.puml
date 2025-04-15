@@ -1,0 +1,15 @@
+@startsalt
+{
+    {
+        <color:#ffffff>++ | . | <color:#ffffff>+ | . | .
+        . | **Date** | . | 17/02/25 07:09 | <size:36><color:#ffffff><&circle-check>
+        . | **Plate-forme** | . | OCT_27B4 | <size:36><color:#ffffff><&circle-check>
+        . | **Matériel** | . | Balise DF | <size:36><color:#ffffff><&circle-check>
+        . | **Identifiant** | . | O-CSDF-A-2346-000238 | <size:36><color:#ffffff><&circle-check>
+        . | **Événement** | . | Batterie | <size:36><color:#ffffff><&circle-check>
+        . | **Libellé** | . | 12% | <size:36><color:#ffffff><&circle-check>
+        . | . | . | .
+        . | . | [    OK    ] | * | *
+    }
+}
+@endsalt
