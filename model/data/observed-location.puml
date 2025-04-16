@@ -5,7 +5,7 @@ class Vessel {
 }
 
 class ObservedLocation {
-  +id: Integer
+  +id: integer
   +program: Program
   +startDateTime: Date
   +endDateTime: Date

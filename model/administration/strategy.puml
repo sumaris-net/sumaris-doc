@@ -22,9 +22,16 @@ Strategy --> "0..*" Gear
 Strategy --> "0..*" Metier
 Strategy *-- "0..*" ReferenceTaxonStrategy
 Strategy *-- "0..*" TaxonGroupStrategy
-Strategy *-right- "0..*" StrategyDepartment
+Strategy *-down- "0..*" StrategyDepartment
+Strategy "1" *-- "0..*" Strategy: "parentStrategy"
+
+note on link
+  Lien récursif "parentStrategy"
+  à valider (ObsVentes)
+end note
 
 StrategyDepartment --> "1" Department
+
 
 ReferenceTaxonStrategy --> "1" ReferenceTaxon
 TaxonGroupStrategy --> "1" TaxonGroup
@@ -41,6 +48,7 @@ class PmfmStrategy {
 
 class AppliedStrategy {
   +id: integer
+  +location: Location
 }
 
 class AppliedPeriod {
