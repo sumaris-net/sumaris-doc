@@ -129,7 +129,7 @@
 | Propositions d'amélioration                               | 3                      |             
 | Bugs pagination                                           | 4                      |             
 | Coupure réseau (maintenance)                              | 2                      |             
-| Problèmes connexion lente                                 | 3                      |             
+| Problèmes connexions lentes                               | 3                      |             
 | **Tickets en doublons**                                   | **15**                 | 
 <!-- .element: class="font-size-extra-small" -->
 
