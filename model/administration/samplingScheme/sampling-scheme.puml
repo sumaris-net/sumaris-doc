@@ -1,6 +1,7 @@
 @startuml
 hide empty members
 
+
 class SamplingScheme <<Entity>> {
   +id: Integer
   +label: String
@@ -29,15 +30,44 @@ class SamplingStrataMeasurement <<Measurement>>{
 
 }
 
+
+class AppliedSamplingStrata <<Entity>> #yellow{
+  +id: integer
+  +location: Location;
+  +expectedEffort: integer[0..1]
+}
+
+class SamplingStrataAppliedPeriod <<Entity>>#yellow{
+  +startDate: Date
+  +endDate: [0..1]
+}
+class TaxonGroupSamplingStrata <<Entity>>#yellow{
+  +priorityLevel : Integer[0..1]
+}
+
 SamplingScheme "1" *-down- "*" SamplingStrata
 SamplingStrata "*" -up-> "1" Status
 SamplingStrata "*" -left-> "0..1" Department
 SamplingStrata "*" -left-> "0..1" Person
 
-SamplingStrata "1" *-right-> "*" SamplingStrataMeasurement
+SamplingStrata "1" *--> "*" SamplingStrataMeasurement
 
 SamplingStrata "*" -down-> "*" Grouping
 SamplingStrata "*" -down-> "*" Fishery
 SamplingStrata "*" -down-> "*" Vessel
+
+
+SamplingStrata "*" *-right- "*" AppliedSamplingStrata
+AppliedSamplingStrata "1" *-up- "1..*" SamplingStrataAppliedPeriod
+SamplingStrata "1" *-- "*" TaxonGroupSamplingStrata
+AppliedSamplingStrata "0..1" <-- "*" TaxonGroupSamplingStrata
+TaxonGroupSamplingStrata "*" --> "1" TaxonGroup
+
+legend right
+  <back:yellow>Entité en jaune</back> : Nouvelle entité à créer,
+  pour stocker les lignes de plans ObsVentes
+
+end legend
+
 
 @enduml

@@ -1,4 +1,4 @@
-# Compte-rendu point E-IS / Sinay
+# Compte-rendu visio E-IS / Sinay
 ## 15/04/2025
 
 Application de reconnaissance de l'espèce par IA depuis une photo
@@ -25,7 +25,6 @@ Application de reconnaissance de l'espèce par IA depuis une photo
 |                        |                  Thomas CARREAU                   |                                                  |
 | **Architecte BDD**     |                                                   |                 Benoît LAVENIER                  |
 | **Développeurs front** |                                                   |                 Benoît LAVENIER                  |
-|                        |                                                   |                  Pierre LECHAT                   |
 | **Expert halieutique** |                  Morgan MUYLAERT                  |                                                  |
 
 </span>
