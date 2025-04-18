@@ -23,7 +23,24 @@ sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_PETS.id=<id de la valeu
 sumaris.enumeration.QualitativeValue.SPECIES_LIST_ORIGIN_RANDOM.id=<id de la valeur qualitative "Tirage au sort" du PMFM "Origine de la liste des espèces">
 # navire inconnu
 sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
+# Gestion des images \
+sumaris.data.images.enable=true
 ```
+
+# Gestion de l'affichage des photos
+## A déclarer dans le fichier properties du pod
+server.url=https://opus-obsventes-pod.isival.ifremer.fr
+
+# Voir avec RIC le dimensionnement de l'espace de stockage
+# isival : /home/isi-projets/sih/gestion/work/opus/obsventes/data:/app/data
+# exploitation : /home/harmonie_donnees/opus/obsventes/data
+# Les répertoires photos et meas_files doivent être dans adagio et commun à tous les pod qui les utilisent
+# Prévoir du coup 2 points de montage :
+# - data propre à chaque volet (pod)
+# - "files" commun à tous les volets (pod) : voir avec Glenn
+
+## Paramètre système
+Saisie > Activer la gestion des images : Oui
 
 ## Schéma SIH2_ADAGIO_DBA
 
@@ -301,6 +318,50 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
             end;
 -```
 
+- Modification de la vue `IMAGE_ATTACHMENT`
+  ```sql
+  create or replace view IMAGE_ATTACHMENT as
+  select P.ID,
+         COMMENTS,
+         PATH,
+         CONTENT,
+         CONTENT_TYPE,
+         PHOTO_DATE as DATE_TIME,
+         null as CREATION_DATE,
+         null as CONTROL_DATE,
+         VALIDATION_DATE,
+         QUALIFICATION_DATE,
+         QUALIFICATION_COMMENTS,
+         UPDATE_DATE,
+         cast(QUALITY_FLAG_FK as number(10)) as QUALITY_FLAG_FK,
+         DEPARTMENT_FK as RECORDER_DEPARTMENT_FK,
+         OBJECT_ID,
+         OT.ID as OBJECT_TYPE_FK,
+         null as RECORDER_PERSON_FK
+  from SIH2_ADAGIO_DBA.PHOTO P
+  inner join SIH2_ADAGIO_DBA.M_OBJECT_TYPE OT on P.OBJECT_TYPE_FK = OT.CODE;
+-```
+
+- Modification du trigger `TR_IMAGE_ATTACHMENT`
+  ```sql
+  CREATE OR REPLACE TRIGGER TR_IMAGE_ATTACHMENT
+    instead of insert or update or delete
+    on IMAGE_ATTACHMENT
+    begin
+      case
+        WHEN INSERTING THEN
+          insert into SIH2_ADAGIO_DBA.PHOTO(ID, OBJECT_ID, COMMENTS, PATH, PHOTO_DATE, VALIDATION_DATE, QUALIFICATION_DATE, QUALIFICATION_COMMENTS, UPDATE_DATE, OBJECT_TYPE_FK, QUALITY_FLAG_FK, PHOTO_TYPE_FK, DEPARTMENT_FK, CONTENT, CONTENT_TYPE)
+          values (:new.ID, 0, :new.COMMENTS, :new.PATH, :new.DATE_TIME, :new.VALIDATION_DATE, :new.QUALIFICATION_DATE, :new.QUALIFICATION_COMMENTS, :new.UPDATE_DATE, (select mot.code from SIH2_ADAGIO_DBA.m_object_type mot where mot.id = :new.OBJECT_TYPE_FK), :new.QUALITY_FLAG_FK, 'UNK', :new.RECORDER_DEPARTMENT_FK, :new.CONTENT, :new.CONTENT_TYPE);
+        WHEN UPDATING THEN
+          update SIH2_ADAGIO_DBA.PHOTO P set P.OBJECT_ID = :new.OBJECT_ID, P.COMMENTS = :new.COMMENTS, P.PATH= :new.PATH, P.VALIDATION_DATE= :new.VALIDATION_DATE, P.QUALIFICATION_DATE= :new.QUALIFICATION_DATE, P.QUALIFICATION_COMMENTS= :new.QUALIFICATION_COMMENTS, P.UPDATE_DATE= :new.UPDATE_DATE, P.OBJECT_TYPE_FK= (select mot.code from SIH2_ADAGIO_DBA.m_object_type mot where mot.id = :new.OBJECT_TYPE_FK), P.QUALITY_FLAG_FK= :new.QUALITY_FLAG_FK, P.CONTENT= :new.CONTENT, P.CONTENT_TYPE= :new.CONTENT_TYPE
+          where P.ID = :new.ID;
+        WHEN DELETING THEN
+          delete SIH2_ADAGIO_DBA.PHOTO P where P.ID=:old.ID;
+      end case;
+    end;
+/
+-```
+
 ## Mise à jour du programme SIH-OBSVENTE
 
 ### Options pour le programme SIH-OBSVENTE
@@ -309,6 +370,7 @@ sumaris.enumeration.Vessel.UNKNOWN.id=<ID navire inconnu>
 ```properties 
 sumaris.landing.rows.divider.pmfmId=3274
 ```
+
 ```sql
 insert into program_property (id, label, name, program_fk, status_fk, creation_date) values (program_property_seq.nextval, 'sumaris.landing.rows.divider.pmfmId', 3274, 80 , 1, sysdate);
 ```

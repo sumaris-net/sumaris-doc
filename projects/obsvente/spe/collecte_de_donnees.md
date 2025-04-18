@@ -185,8 +185,8 @@ La création d'une sortie est accessible depuis le tableau de consultation des s
     * L'origine (ObsVentes ou ObsDeb) 
     * Le lieu*
     * La date de début*
-    * La date de fin*
-    * Le ou les observateurs*
+    * La date de fin
+    * Le ou les observateurs
 4. L'origine est automatiquement renseignée en fonction du programme de collecte
     - _MOE_ : A approfondir [#537](https://gitlab.ifremer.fr/sih-public/sumaris/sumaris-app/-/issues/537)
 5. La liste des espèces à observer (onglet "Echantillonnages") est automatiquement renseignée en fonction de la référence au plan sélectionnée (à confirmer pendant le dev)
