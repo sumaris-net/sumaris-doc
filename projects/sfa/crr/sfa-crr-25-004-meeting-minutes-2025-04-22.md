@@ -9,12 +9,12 @@ SIH updates follow-up
 >
 > - Juliette LUCAS (SFA)
 > - Emilie AUGUSTIN (SFA)
-> - Cindy ASSAN (SFA)
 > - Ludovic PECQUOT (EIS)
 > - Étienne de CHAVAGNAC (EIS)
 
 > Excused :
 >
+> - Cindy ASSAN (SFA)
 > - Benoît LAVENIER (EIS)
 > - Dorian MARCO (EIS)
 
@@ -43,7 +43,7 @@ SIH updates follow-up
 
 - **Batch #1**
    - _**SIH**_ application and pod to be installed on test server (VM) (EIS)
-   - Database to be duplicated on database server, for test purpose (EIS)
+   - Database to be duplicated on database server, for testing (EIS)
    - _**OPRDEB**_ to be activated, settings adjusted and re-tested (EIS)
    - _**SFA**_ name to be changed to _**Seychelles Fisheries Authority**_ (EIS)
    - Miscellaneous bug fixes according to remaining time (EIS)
@@ -61,9 +61,9 @@ SIH updates follow-up
 
 ---
 
-## Batch #1 (~~28/03/2025~~ ➜ 25/04/2025)
+## Batch #1 (~~28/03/2025~~ ➜ 24/04/2025)
 
-### SIH upgrade from 2.8.12 to 2.9.38
+### SIH upgrade from 2.8.12 to 2.10
 
 - No pending issues
 - Regression tests done
@@ -72,12 +72,9 @@ SIH updates follow-up
 ---
 
 > Actions :
-> - ~~Application server (10.9.8.55) specifications to be shared (SFA)~~
-> - ~~Application server ability to run both test and production to be stated (EIS)~~
-> - ~~Test server VM to be created and set up (SFA)~~
 > - _**SIH**_ application and pod to be installed on test server (VM) (EIS)
 > - Database to be duplicated on database server, for test purpose (EIS)
-> - ~~Non regression tests to be performed (EIS)~~
+
 ---
 
 ### Logbooks modifications
@@ -96,31 +93,14 @@ SIH updates follow-up
 
 ---
 
-> Questions :
-> - Shall we disable the following gears?
->    - _**GHT - Hoop/tangle net (crustaceans)**_
->       - Used in _**Spanner Crab**_ logbook
->    - _**HGD - Hand gathering skin diving**_
->       - Used in _**Lobster**_ logbook
-> - What species to be affected to _**PR - Charter recreational (not specified)**_?
-
----
-
 > Actions :
-> - ~~All logbook templates latest versions to be shared (SFA)~~
-> - ~~List of all gears in _**SIH**_ to be shared with _**SFA**_ (EIS)~~
-> - ~~List of unusable gears in _**SIH**_ to be fulfilled with target species (SFA)~~
+> - _**MZZ - Other fish**_ to be affected to _**PR - Charter recreational (not specified)**_ gear (EIS)
 
 ---
 
 ### _**Logbook**_ screen
 
 - Expenses tab creation for logbook programs
-
-> Actions :
-> - ~~_**Baits**_ tab to be added in _**Expenses**_ tab for all logbooks (EIS)~~
-> - ~~Baits list (common, as much as possible) for all logbooks to be shared (SFA)~~
-> - ~~Gears list (common, as much as possible) for all logbooks to be shared (SFA)~~
 
 ---
 
@@ -140,14 +120,20 @@ SIH updates follow-up
 ### Miscellaneous
 
 > Actions :
-> - ~~_**SFA**_ logo to be updated (EIS)~~
 > - _**SFA**_ name to be changed to _**Seychelles Fisheries Authority**_ (EIS)
-> - ~~Extraction for _**Dropline Fishery**_ logbook to be checked and fixed (EIS)~~
 > - Miscellaneous bug fixes according to remaining time (EIS)
 
 ---
 
 ## Batch #2 (~~30/04/2025~~ ➜ 16/05/2025)
+
+---
+
+#### Production server set-up
+
+> Actions :
+> Production server VM to be created and set up (SFA)
+> _**SIH**_ application and pod to be installed on production server (VM) (EIS)
 
 #### Adding biological sampling on _**Packets**_ screen
 
@@ -194,16 +180,10 @@ SIH updates follow-up
 
 ---
 
-> Actions :
-> - ~~List of _**P03**_ queries to be merged to be shared (EIS)~~
-> - ~~List of _**P03**_ queries to be merged (from _**EIS**_) to be validated (SFA)~~
-
----
-
 ## Next meeting
 
 ### Tuesday, **May 20<sup>th</sup>, 2025**
 
 | **Seychelles** | **France** |
 |:--------------:|:----------:|
-|     14:00      |   11:00    |
+|     13:00      |   11:00    |
