@@ -3,13 +3,13 @@
     {+
         {* <color:dddddd> | <size:16><b>Nouveau message} | * | * | * | * | *
         <color:ffffff>++ | . | . | . | . | <color:ffffff>++
-        . |  Type d'envoi * | * | * | * | .
+        . |  Type d'envoi* | * | * | * | .
         . | ^<color:#9a9a9a>E-mail                                                   ^ | * | * | * | .
-        . | Destinataire * | * | * | * | .
+        . | Destinataire* | * | * | * | .
         . | {+ <color:#9a9a9a>Responsables de programme DolphinFREE                                                                       </color> } | * | * | * | .
-        . | Objet * | * | * | * | .
+        . | Objet* | * | * | * | .
         . | {+ <color:#9a9a9a>Demande de droit d'accès au programme de collecte DolphinFREE (Observateur)           </color> } | * | * | * | .
-        . | Message * | * | * | * | .
+        . | Message* | * | * | * | .
         . | {+
                 <size:12>Votre message...                                                                                                                  </size>
                 .

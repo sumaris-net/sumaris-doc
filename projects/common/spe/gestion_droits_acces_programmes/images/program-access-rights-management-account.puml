@@ -9,13 +9,13 @@
         . | . | E-mail | * | * | * | * | .
         . | . | {+ <color:#9a9a9a>john.doe@ifremer.fr                                                                                                                                                            </color>} | * | * | * | * | .
         . | . | . | . | . | . | . | .
-        . | . | Nom * | * | * | * | * | .
+        . | . | Nom* | * | * | * | * | .
         . | . | {+ <size:12>DOE                                                                                                                                                                                    </size> } | * | * | * | * | .
         . | . | . | . | . | . | . | .
-        . | . | Prénom * | * | * | * | * | .
+        . | . | Prénom* | * | * | * | * | .
         . | . | {+ <size:12>John                                                                                                                                                                                    </size> } | * | * | * | * | .
         . | . | . | . | . | . | . | .
-        . | . | Organisme * | * | * | * | * | .
+        . | . | Organisme* | * | * | * | * | .
         . | . | {+ <color:#9a9a9a>Ifremer - Ifremer                                                                                                                                                                  </color>} | * | * | * | * | .
         . | . | . | . | . | . | . | .
         . | . | Programmes de collecte | * | * | * | * | .
@@ -31,10 +31,10 @@
         . | . | . | . | . | . | . | .
         . | . | <size:16><b>Informations techniques | * | * | * | * | .
         . | . | . | . | . | . | . | .
-        . | . | Profil utilisateur * | * | * | * | * | .
+        . | . | Profil utilisateur* | * | * | * | * | .
         . | . | {+ <color:#9a9a9a>Observateur                                                                                                                                                                        </color>} | * | * | * | * | .
         . | . | . | . | . | . | . | .
-        . | . | Clé publique pour la signature numérique * | * | * | * | * | .
+        . | . | Clé publique pour la signature numérique* | * | * | * | * | .
         . | . | {+ <color:#9a9a9a>ysSR6meONLX6YMx2CPzI1s0FoHv9VJJuM34LhogcRhhx                                                                                              </color>} | * | * | * | * | .
         . | . | . | . | . | . | . | .
         . | . | [<b>Sauvegarder] | . | [<size:14><&reload></size> Réinitialiser] | . | .
