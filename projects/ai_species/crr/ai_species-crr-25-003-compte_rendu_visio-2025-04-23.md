@@ -102,5 +102,5 @@ Mardi 7 mai 2025
 
 ## **Kick-off meeting**
 
-Mardi 14 mai 2025  
+Mercredi 14 mai 2025  
 14h - 16h (horaire à confirmer)
